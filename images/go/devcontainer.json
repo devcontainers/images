@@ -1,7 +1,10 @@
 {
     "build": {
         "dockerfile": "./Dockerfile",
-        "context": "."
+        "context": ".",
+        "args": {
+            "VARIANT": "1.18"
+        }
     },
     "features": { // TODO: Change to array syntax
         "devcontainers/features/common@v0.0.1": {
