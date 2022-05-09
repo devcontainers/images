@@ -1,6 +1,6 @@
-# [Choice] Go version (use -bullseye variants on local arm64/Apple Silicon): 1, 1.18, 1.17, 1-bullseye, 1.18-bullseye, 1.17-bullseye, 1-buster, 1.18-buster, 1.17-buster
-ARG VARIANT=1-bullseye
-FROM golang:${VARIANT}
+# [Choice] .NET version: 6.0-bullseye, 5.0-bullseye, 3.1-bullseye, 6.0-focal, 5.0-focal, 3.1-focal
+ARG VARIANT=6.0-bullseye-slim
+FROM mcr.microsoft.com/dotnet/sdk:${VARIANT}
 
 # Copy library scripts to execute
 # COPY library-scripts/*.sh library-scripts/*.env /tmp/library-scripts/
@@ -16,11 +16,6 @@ FROM golang:${VARIANT}
 # RUN bash /tmp/library-scripts/common-debian.sh "${INSTALL_ZSH}" "${USERNAME}" "${USER_UID}" "${USER_GID}" "${UPGRADE_PACKAGES}" "true" "true" \
 #     && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 
-# Install Go tools
-# ENV GO111MODULE=auto
-# RUN bash /tmp/library-scripts/go-debian.sh "none" "/usr/local/go" "${GOPATH}" "${USERNAME}" "false" \
-#     && apt-get clean -y && rm -rf /var/lib/apt/lists/*
-
 # [Choice] Node.js version: none, lts/*, 16, 14, 12, 10
 # ARG NODE_VERSION="none"
 # ENV NVM_DIR=/usr/local/share/nvm
@@ -31,9 +26,6 @@ FROM golang:${VARIANT}
 
 # Remove library scripts for final image
 # RUN rm -rf /tmp/library-scripts
-
-# [Optional] Uncomment the next line to use go get to install anything else you need
-# RUN go get -x <your-dependency-or-tool>
 
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \

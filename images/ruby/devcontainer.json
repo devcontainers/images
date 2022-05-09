@@ -3,14 +3,14 @@
         "dockerfile": "./Dockerfile",
         "context": ".",
         "args": {
-            "VARIANT": "11"
+            "VARIANT": "3"
         }
     },
     "features": { // TODO: Change to array syntax
         "devcontainers/features/common@v0.0.1": {
             "version": "latest"
         },
-        "devcontainers/features/go@v0.0.1": {
+        "devcontainers/features/ruby@v0.0.1": {
             "version": "latest"
         },
         "devcontainers/features/node@v0.0.1": {

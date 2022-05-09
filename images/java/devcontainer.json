@@ -3,14 +3,17 @@
         "dockerfile": "./Dockerfile",
         "context": ".",
         "args": {
-            "VARIANT": "11"
+            "VARIANT": "1.18"
         }
     },
     "features": { // TODO: Change to array syntax
-        "devcontainers/features/common@v0.0.1": {
+        "devcontainers/features/java@v0.0.1": {
             "version": "latest"
         },
-        "devcontainers/features/go@v0.0.1": {
+        "devcontainers/features/maven@v0.0.1": {
+            "version": "latest"
+        },
+        "devcontainers/features/gradle@v0.0.1": {
             "version": "latest"
         },
         "devcontainers/features/node@v0.0.1": {

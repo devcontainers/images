@@ -1,0 +1,11 @@
+{
+    "build": {
+        "dockerfile": "./Dockerfile",
+        "context": "."
+    },
+    "features": { // TODO: Change to array syntax
+        "devcontainers/features/node@v0.0.1": {
+            "version": "latest"
+        }
+    }
+}
