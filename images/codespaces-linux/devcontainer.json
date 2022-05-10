@@ -22,10 +22,10 @@
         "devcontainers/features/kubectl-helm-minikube@v0.0.1": {
             "version": "latest"
         },
-        "devcontainers/features/git-from-src@v0.0.1": {
+        "devcontainers/features/python@v0.0.1": {
             "version": "latest"
         },
-        "devcontainers/features/python@v0.0.1": {
+        "devcontainers/features/jupyterlab@v0.0.1": {
             "version": "latest"
         },
         "devcontainers/features/ruby@v0.0.1": {
