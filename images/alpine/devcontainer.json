@@ -1,0 +1,14 @@
+{
+    "build": {
+        "dockerfile": "./Dockerfile",
+        "context": ".",
+        "args": {
+            "VARIANT": "3.15"
+        }
+    },
+    "features": { // TODO: Change to array syntax
+        "devcontainers/features/common-alpine@v0.0.1": {
+            "version": "latest"
+        }
+    }
+}

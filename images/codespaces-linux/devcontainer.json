@@ -1,0 +1,44 @@
+{
+    "build": {
+        "dockerfile": "./Dockerfile",
+        "context": "."
+    },
+    "features": { // TODO: Change to array syntax
+        "devcontainers/features/common@v0.0.1": {
+            "version": "latest"
+        },
+        "devcontainers/features/sshd@v0.0.1": {
+            "version": "latest"
+        },
+        "devcontainers/features/git-lfs@v0.0.1": {
+            "version": "latest"
+        },
+        "devcontainers/features/git@v0.0.1": {
+            "version": "latest"
+        },
+        "devcontainers/features/docker-in-docker@v0.0.1": {
+            "version": "latest"
+        },
+        "devcontainers/features/kubectl-helm-minikube@v0.0.1": {
+            "version": "latest"
+        },
+        "devcontainers/features/git-from-src@v0.0.1": {
+            "version": "latest"
+        },
+        "devcontainers/features/python@v0.0.1": {
+            "version": "latest"
+        },
+        "devcontainers/features/ruby@v0.0.1": {
+            "version": "latest"
+        },
+        "devcontainers/features/node@v0.0.1": {
+            "version": "latest"
+        },
+        "devcontainers/features/gradle@v0.0.1": {
+            "version": "latest"
+        },
+        "devcontainers/features/go@v0.0.1": {
+            "version": "latest"
+        }
+    }
+}

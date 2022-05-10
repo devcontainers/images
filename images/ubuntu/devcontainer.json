@@ -1,0 +1,14 @@
+{
+    "build": {
+        "dockerfile": "./Dockerfile",
+        "context": ".",
+        "args": {
+            "VARIANT": "focal"
+        }
+    },
+    "features": { // TODO: Change to array syntax
+        "devcontainers/features/common@v0.0.1": {
+            "version": "latest"
+        }
+    }
+}
