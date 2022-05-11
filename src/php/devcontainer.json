@@ -13,5 +13,6 @@
         "devcontainers/features/node@v0.0.1": {
             "version": "latest"
         }
-    }
+    },
+    "postCreateCommand": "bash post-install.sh"
 }

@@ -3,7 +3,7 @@
         "dockerfile": "./Dockerfile",
         "context": ".",
         "args": {
-            "VARIANT": "11"
+            "VARIANT": "1.18"
         }
     },
     "features": { // TODO: Change to array syntax
