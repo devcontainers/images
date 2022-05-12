@@ -1,0 +1,9 @@
+{
+    "id": "post-features-setup",
+    "name": "Post features setup",
+    "description": "Configurations/setup needed after the features are installed",
+    "install": {
+        "app": "",
+        "file": "install.sh"
+    }
+}

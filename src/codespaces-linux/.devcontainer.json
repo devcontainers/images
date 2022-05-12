@@ -1,0 +1,67 @@
+{
+    "build": {
+        "dockerfile": "./Dockerfile",
+        "context": "."
+    },
+    "features": [
+        {
+            "id": "./feature-collection/common",
+            "options": {
+                "version": "latest"
+            }
+        },
+        {
+            "id": "./feature-collection/gradle",
+            "options": {
+                "version": "latest"
+            }
+        },
+        {
+            "id": "./feature-collection/docker-in-docker",
+            "options": {
+                "version": "latest"
+            }
+        },
+        {
+            "id": "./feature-collection/post-features-setup"
+        }
+    ]
+    // "features": { // TODO: Change to array syntax
+    //     "devcontainers/features/common@v0.0.1": {
+    //         "version": "latest"
+    //     },
+    //     "devcontainers/features/sshd@v0.0.1": {
+    //         "version": "latest"
+    //     },
+    //     "devcontainers/features/git-lfs@v0.0.1": {
+    //         "version": "latest"
+    //     },
+    //     "devcontainers/features/git@v0.0.1": {
+    //         "version": "latest"
+    //     },
+    //     "devcontainers/features/docker-in-docker@v0.0.1": {
+    //         "version": "latest"
+    //     },
+    //     "devcontainers/features/kubectl-helm-minikube@v0.0.1": {
+    //         "version": "latest"
+    //     },
+    //     "devcontainers/features/python@v0.0.1": {
+    //         "version": "none"
+    //     },
+    //     "devcontainers/features/jupyterlab@v0.0.1": {
+    //         "version": "latest"
+    //     },
+    //     "devcontainers/features/ruby@v0.0.1": {
+    //         "version": "none"
+    //     },
+    //     "devcontainers/features/node@v0.0.1": {
+    //         "version": "none"
+    //     },
+    //     "devcontainers/features/gradle@v0.0.1": {
+    //         "version": "latest"
+    //     },
+    //     "devcontainers/features/go@v0.0.1": {
+    //         "version": "latest"
+    //     },
+//     }
+}

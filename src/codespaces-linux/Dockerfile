@@ -42,10 +42,10 @@ COPY setup-python-tools.sh setup-user.sh first-run-notice.txt /tmp/scripts/
 
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     # Restore man command
-    && yes | unminimize 2>&1 \ 
+    && yes | unminimize 2>&1 \
     # Run common script and setup user
     # && bash /tmp/scripts/common-debian.sh "true" "${USERNAME}" "${USER_UID}" "${USER_GID}" "true" "true" "true" \
-    && bash /tmp/scripts/setup-user.sh "${USERNAME}" "${PATH}" \
+    # && bash /tmp/scripts/setup-user.sh "${USERNAME}" "${PATH}" \
     # Change owner of opt contents since Oryx can dynamically install and will run as "codespace"
     && chown ${USERNAME} /opt/* \
     && chsh -s /bin/bash ${USERNAME} \
@@ -73,40 +73,43 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 # Install Python, JupyterLab, common machine learning packages, and Ruby utilities
 # RUN bash /tmp/scripts/python-debian.sh "none" "/opt/python/latest" "${PIPX_HOME}" "${USERNAME}" "true" \
     # Install JupyterLab and common machine learning packages
-    # && PYTHON_BINARY="${PYTHON_ROOT}/current/bin/python" \
-    # && bash /tmp/scripts/jupyterlab-debian.sh "latest" "automatic" ${PYTHON_BINARY} \
-RUN bash /tmp/scripts/setup-python-tools.sh ${PYTHON_BINARY}
+    # && bash /tmp/scripts/jupyterlab-debian.sh "latest" "automatic" ${PYTHON_BINARY} "true" \
+# RUN PYTHON_BINARY="${PYTHON_ROOT}/current/bin/python" \
+#     && bash /tmp/scripts/setup-python-tools.sh ${PYTHON_BINARY}
     # Install rvm, rbenv, any missing base gems
     # && chown -R ${USERNAME} /opt/ruby/* \
     # && bash /tmp/scripts/ruby-debian.sh "none" "${USERNAME}" "true" "true" \
-    # Link composer
-    # && ln -s $(which composer.phar) /usr/local/bin/composer \
-    # && apt-get clean -y
+
+# Link composer
+RUN ln -s $(which composer.phar) /usr/local/bin/composer \
+    && apt-get clean -y
 
 # Setup Node.js, install NVM and NVS
-RUN (cd ${NVM_DIR} && git remote get-url origin && echo $(git log -n 1 --pretty=format:%H -- .)) > ${NVM_DIR}/.git-remote-and-commit \
-# bash /tmp/scripts/node-debian.sh "${NVM_DIR}" "none" "${USERNAME}" \
-    # && 
-    # Install nvs (alternate cross-platform Node.js version-management tool)
-    && git config --global --add safe.directory /home/codespace/.nvs \
-    && mkdir -p ${NVS_HOME} \
-    && chown -R ${USERNAME}: ${NVS_HOME} \
-    && sudo -u ${USERNAME} git clone -c advice.detachedHead=false --depth 1 https://github.com/jasongin/nvs ${NVS_HOME} 2>&1 \
-    && (cd ${NVS_HOME} && git remote get-url origin && echo $(git log -n 1 --pretty=format:%H -- .)) > ${NVS_HOME}/.git-remote-and-commit \
-    && sudo -u ${USERNAME} bash ${NVS_HOME}/nvs.sh install \
-    && rm ${NVS_HOME}/cache/*
-    # Clean up
-    # && rm -rf ${NVM_DIR}/.git ${NVS_HOME}/.git
+# RUN (cd ${NVM_DIR} && git remote get-url origin && echo $(git log -n 1 --pretty=format:%H -- .)) > ${NVM_DIR}/.git-remote-and-commit \
+# # bash /tmp/scripts/node-debian.sh "${NVM_DIR}" "none" "${USERNAME}" \
+#     # && 
+#     # Install nvs (alternate cross-platform Node.js version-management tool)
+#     && git config --global --add safe.directory /home/codespace/.nvs \
+#     && mkdir -p ${NVS_HOME} \
+#     && chown -R ${USERNAME}: ${NVS_HOME} \
+#     && sudo -u ${USERNAME} git clone -c advice.detachedHead=false --depth 1 https://github.com/jasongin/nvs ${NVS_HOME} 2>&1 \
+#     && (cd ${NVS_HOME} && git remote get-url origin && echo $(git log -n 1 --pretty=format:%H -- .)) > ${NVS_HOME}/.git-remote-and-commit \
+#     && sudo -u ${USERNAME} bash ${NVS_HOME}/nvs.sh install \
+#     && rm ${NVS_HOME}/cache/* \
+#     # Clean up
+#     && rm -rf ${NVM_DIR}/.git ${NVS_HOME}/.git
 
 # Install SDKMAN, OpenJDK8 (JDK 17 already present), gradle (maven already present)
 # RUN bash /tmp/scripts/gradle-debian.sh "latest" "${SDKMAN_DIR}" "${USERNAME}" "true" \
-RUN su ${USERNAME} -c ". ${SDKMAN_DIR}/bin/sdkman-init.sh \
-    && sdk install java 11-opt-java /opt/java/17.0 \
-    && sdk install java lts-opt-java /opt/java/lts"
+# RUN su ${USERNAME} -c ". ${SDKMAN_DIR}/bin/sdkman-init.sh \
+#     && sdk install java 11-opt-java /opt/java/17.0 \
+#     && sdk install java lts-opt-java /opt/java/lts"
 
-# Install Go, remove scripts now that we're done with them
+# Install Go
 # RUN bash /tmp/scripts/go-debian.sh "latest" "${GOROOT}" "${GOPATH}" "${USERNAME}" \
-#     && apt-get clean -y && rm -rf /tmp/scripts
+
+# Remove scripts now that we're done with them
+# RUN apt-get clean -y && rm -rf /tmp/scripts
 
 # Mount for docker-in-docker 
 VOLUME [ "/var/lib/docker" ]
