@@ -11,10 +11,10 @@
             "version": "latest"
         },
         "devcontainers/features/go@v0.0.1": {
-            "version": "latest"
+            "version": "none"
         },
         "devcontainers/features/node@v0.0.1": {
-            "version": "latest"
+            "version": "none"
         }
     }
 }

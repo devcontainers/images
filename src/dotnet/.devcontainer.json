@@ -11,7 +11,7 @@
             "version": "latest"
         },
         "devcontainers/features/node@v0.0.1": {
-            "version": "latest"
+            "version": "none"
         }
     }
 }
