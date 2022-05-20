@@ -8,11 +8,15 @@
     },
     "features": { // TODO: Change to array syntax
         "devcontainers/features/common@v0.0.1": {
-            "version": "latest"
+            "version": "latest",
+            "username": "vscode"
         },
         "devcontainers/features/node@v0.0.1": {
             "version": "none"
         }
     },
-    "postCreateCommand": "bash post-install.sh"
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [8080],
+    "postCreateCommand": "usermod -aG www-data vscode && sed -i -e 's/Listen 80/Listen 80\\nListen 8080/g' /etc/apache2/ports.conf",
+    "remoteUser": "vscode"
 }
