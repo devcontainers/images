@@ -61,6 +61,19 @@ RUN bash /tmp/scripts/setup-user.sh "${USERNAME}" "${PATH}" \
     && mkdir -p /usr/local/etc/vscode-dev-containers/ \
     && mv -f /tmp/scripts/first-run-notice.txt /usr/local/etc/vscode-dev-containers/
 
+RUN bash /tmp/scripts/setup-python-tools.sh "${PYTHON_ROOT}/current/bin/python"
+
+# Install nvs (alternate cross-platform Node.js version-management tool)
+RUN git config --global --add safe.directory /home/codespace/.nvs \
+    && mkdir -p ${NVS_HOME} \
+    && chown -R ${USERNAME}: ${NVS_HOME} \
+    && sudo -u ${USERNAME} git clone -c advice.detachedHead=false --depth 1 https://github.com/jasongin/nvs ${NVS_HOME} 2>&1 \
+    && (cd ${NVS_HOME} && git remote get-url origin && echo $(git log -n 1 --pretty=format:%H -- .)) > ${NVS_HOME}/.git-remote-and-commit \
+    && sudo -u ${USERNAME} bash ${NVS_HOME}/nvs.sh install \
+    && rm ${NVS_HOME}/cache/* \
+    # Clean up
+    && rm -rf ${NVM_DIR}/.git ${NVS_HOME}/.git
+
 # Link composer
 RUN ln -s $(which composer.phar) /usr/local/bin/composer \
     && apt-get clean -y

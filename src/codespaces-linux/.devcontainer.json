@@ -16,13 +16,16 @@
         "devcontainers/features/git-lfs@v0.0.1": {
             "version": "latest"
         },
-        "devcontainers/features/git@v0.0.1": {
+        "devcontainers/features/github-cli@v0.0.1": {
             "version": "latest"
         },
         "devcontainers/features/docker-in-docker@v0.0.1": {
             "version": "latest"
         },
         "devcontainers/features/kubectl-helm-minikube@v0.0.1": {
+            "version": "latest"
+        },
+        "devcontainers/features/git@v0.0.1": {
             "version": "latest"
         },
         "devcontainers/features/python@v0.0.1": {
