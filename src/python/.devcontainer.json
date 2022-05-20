@@ -11,7 +11,8 @@
             "version": "latest"
         },
         "devcontainers/features/python@v0.0.1": {
-            "version": "none"
+            "version": "none",
+            "installPath": "/usr/local"
         },
         "devcontainers/features/node@v0.0.1": {
             "version": "none"

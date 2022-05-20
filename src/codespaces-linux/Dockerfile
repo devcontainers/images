@@ -42,10 +42,11 @@ COPY setup-python-tools.sh setup-user.sh first-run-notice.txt /tmp/scripts/
 
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     # Restore man command
-    && yes | unminimize 2>&1 \
-    # Run common script and setup user
+    && yes | unminimize 2>&1 
     # && bash /tmp/scripts/common-debian.sh "true" "${USERNAME}" "${USER_UID}" "${USER_GID}" "true" "true" "true" \
-    # && bash /tmp/scripts/setup-user.sh "${USERNAME}" "${PATH}" \
+
+# Run setup user script
+RUN bash /tmp/scripts/setup-user.sh "${USERNAME}" "${PATH}" \
     # Change owner of opt contents since Oryx can dynamically install and will run as "codespace"
     && chown ${USERNAME} /opt/* \
     && chsh -s /bin/bash ${USERNAME} \

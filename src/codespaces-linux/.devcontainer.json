@@ -3,65 +3,61 @@
         "dockerfile": "./Dockerfile",
         "context": "."
     },
-    "features": [
-        {
-            "id": "./feature-collection/common",
-            "options": {
-                "version": "latest"
-            }
+    "features": { // TODO: Change to array syntax
+        "devcontainers/features/common@v0.0.1": {
+            "version": "latest",
+            "username": "codespace",
+            "uid": "1000",
+            "gid": "1000"
         },
-        {
-            "id": "./feature-collection/gradle",
-            "options": {
-                "version": "latest"
-            }
+        "devcontainers/features/sshd@v0.0.1": {
+            "version": "latest"
         },
-        {
-            "id": "./feature-collection/docker-in-docker",
-            "options": {
-                "version": "latest"
-            }
+        "devcontainers/features/git-lfs@v0.0.1": {
+            "version": "latest"
         },
-        {
-            "id": "./feature-collection/post-features-setup"
+        "devcontainers/features/git@v0.0.1": {
+            "version": "latest"
+        },
+        "devcontainers/features/docker-in-docker@v0.0.1": {
+            "version": "latest"
+        },
+        "devcontainers/features/kubectl-helm-minikube@v0.0.1": {
+            "version": "latest"
+        },
+        "devcontainers/features/python@v0.0.1": {
+            "version": "none",
+            "installPath": "/opt/python/latest"
+        },
+        "devcontainers/features/jupyterlab@v0.0.1": {
+            "version": "latest",
+            "pythonBinary": "/home/codespace/.python/current/bin/python"
+        },
+        "devcontainers/features/ruby@v0.0.1": {
+            "version": "none"
+        },
+        "devcontainers/features/node@v0.0.1": {
+            "version": "none"
+        },
+        "devcontainers/features/gradle@v0.0.1": {
+            "version": "latest"
+        },
+        "devcontainers/features/go@v0.0.1": {
+            "version": "latest"
         }
-    ]
-    // "features": { // TODO: Change to array syntax
-    //     "devcontainers/features/common@v0.0.1": {
-    //         "version": "latest"
-    //     },
-    //     "devcontainers/features/sshd@v0.0.1": {
-    //         "version": "latest"
-    //     },
-    //     "devcontainers/features/git-lfs@v0.0.1": {
-    //         "version": "latest"
-    //     },
-    //     "devcontainers/features/git@v0.0.1": {
-    //         "version": "latest"
-    //     },
-    //     "devcontainers/features/docker-in-docker@v0.0.1": {
-    //         "version": "latest"
-    //     },
-    //     "devcontainers/features/kubectl-helm-minikube@v0.0.1": {
-    //         "version": "latest"
-    //     },
-    //     "devcontainers/features/python@v0.0.1": {
-    //         "version": "none"
-    //     },
-    //     "devcontainers/features/jupyterlab@v0.0.1": {
-    //         "version": "latest"
-    //     },
-    //     "devcontainers/features/ruby@v0.0.1": {
-    //         "version": "none"
-    //     },
-    //     "devcontainers/features/node@v0.0.1": {
-    //         "version": "none"
-    //     },
-    //     "devcontainers/features/gradle@v0.0.1": {
-    //         "version": "latest"
-    //     },
-    //     "devcontainers/features/go@v0.0.1": {
-    //         "version": "latest"
-    //     },
-//     }
+    },
+    "remoteUser": "codespace",
+    "containerUser":"root",
+	"overrideCommand": false,
+	"mounts": ["source=codespaces-linux-var-lib-docker,target=/var/lib/docker,type=volume"],
+	"runArgs": [
+		"--cap-add=SYS_PTRACE",
+		"--security-opt",
+		"seccomp=unconfined",
+		"--privileged",
+		"--init"
+	],
+	
+	// "oryx build" will automatically install your dependencies and attempt to build your project
+	"postCreateCommand": "oryx build -p virtualenv_name=.venv --log-file /tmp/oryx-build.log --manifest-dir /tmp || echo 'Could not auto-build. Skipping.'"
 }
