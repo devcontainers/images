@@ -13,8 +13,7 @@ RUN groupadd -r conda --gid 900 \
 FROM mcr.microsoft.com/vscode/devcontainers/base:0-bullseye
 COPY --from=upstream /opt /opt/
 
-# Copy library scripts to execute
-# COPY .devcontainer/library-scripts/*.sh .devcontainer/add-notice.sh .devcontainer/library-scripts/*.env /tmp/library-scripts/
+# Copy scripts to execute
 COPY add-notice.sh /tmp/library-scripts/
 
 # Setup conda to mirror contents from https://github.com/ContinuumIO/docker-images/blob/master/anaconda3/debian/Dockerfile
@@ -45,21 +44,12 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
         wget \
     && apt-get upgrade -y \
     && bash /tmp/library-scripts/add-notice.sh \
-    # && mv -f "/tmp/library-scripts/meta.env" /usr/local/etc/vscode-dev-containers/meta.env \
     && ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh \
     && echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc \
     && echo "conda activate base" >> ~/.bashrc \
     && groupadd -r conda --gid 900 \
     && usermod -aG conda ${USERNAME} \
     && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts/add-notice.sh
-
-# [Choice] Node.js version: none, lts/*, 16, 14, 12, 10
-# ARG NODE_VERSION="none"
-# ENV NVM_DIR=/usr/local/share/nvm
-# ENV NVM_SYMLINK_CURRENT=true \
-#     PATH=${NVM_DIR}/current/bin:${PATH}
-# RUN bash /tmp/library-scripts/node-debian.sh "${NVM_DIR}" "${NODE_VERSION}" "${USERNAME}" \
-#     && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts
 
 # Copy environment.yml (if found) to a temp locaition so we update the environment. Also
 # copy "noop.txt" so the COPY instruction does not fail if no environment.yml exists.
