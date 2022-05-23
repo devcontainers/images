@@ -4,9 +4,7 @@ DEFINITION="$1"
 set -e
 
 export DOCKER_BUILDKIT=1
-
-# Build the image
+echo "Building image - ${DEFINITION}"
 chmod +x build/devcontainers-cli.tgz
-npx --yes build/devcontainers-cli.tgz build --workspace-folder src/${DEFINITION} --image-name vsc-${DEFINITION}
-
-docker images
+cd build
+npx --yes devcontainers-cli.tgz build --workspace-folder "../src/${DEFINITION}/" --image-name vsc-${DEFINITION}
