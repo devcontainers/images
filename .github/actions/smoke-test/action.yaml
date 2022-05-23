@@ -18,10 +18,7 @@ runs:
   steps:
     - name: Checkout main
       id: checkout_release
-      uses: actions/checkout@v2
-      with:
-        repository: 'devcontainers/images'
-        ref: 'main'
+      uses: actions/checkout@v3
 
     - name: Build image
       id: build_image
