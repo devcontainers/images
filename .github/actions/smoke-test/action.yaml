@@ -20,8 +20,8 @@ runs:
     - name: Build image
       id: build_image
       shell: bash
-      run: ${{ github.action_path }}/build.sh ${{ inputs.definition }}
+      run: chmod +x ${{ github.action_path }}/build.sh && ${{ github.action_path }}/build.sh ${{ inputs.definition }}
     - name: Test image
       id: test_image
       shell: bash
-      run: ${{ github.action_path }}/test.sh  ${{ inputs.definition }} ${{ inputs.image }} ${{ inputs.user }}
+      run: chmod +x ${{ github.action_path }}/test.sh && ${{ github.action_path }}/test.sh  ${{ inputs.definition }} ${{ inputs.image }} ${{ inputs.user }}
