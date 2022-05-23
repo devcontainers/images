@@ -16,15 +16,11 @@ inputs:
 runs:
   using: composite
   steps:
-    - name: Checkout main
-      id: checkout_release
-      uses: actions/checkout@v3
-
+    - uses: actions/checkout@v3
     - name: Build image
       id: build_image
       shell: bash
       run: ${{ github.action_path }}/build.sh ${{ inputs.definition }}
-
     - name: Test image
       id: test_image
       shell: bash
