@@ -30,4 +30,4 @@ runs:
     - name: Test image
       id: test_image
       shell: bash
-      run: ${{ github.action_path }}/test.sh  ${{ inputs.definition }} ${{ inputs.image }} ${{ inputs.user }}
+      run: chmod +x ${{ github.action_path }}/test.sh && ${{ github.action_path }}/test.sh  ${{ inputs.definition }} ${{ inputs.image }} ${{ inputs.user }}
