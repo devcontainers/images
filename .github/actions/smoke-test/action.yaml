@@ -21,9 +21,8 @@ runs:
       id: build_image
       shell: bash
       run: |
-        chmod +x build.sh
-        build.sh ${{ inputs.definition }}
-    - working-directory: ${{ github.action_path }}/build.sh
+        chmod +x ${{ github.action_path }}/build.sh
+        ${{ github.action_path }}/build.sh ${{ inputs.definition }}
     - name: Test image
       id: test_image
       shell: bash
