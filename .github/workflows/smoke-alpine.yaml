@@ -19,7 +19,7 @@ jobs:
     steps:
     - name: Smoke test
       id: smoke_test
-      uses: ../.github/actions/smoke-test
+      uses: ./.github/actions/smoke-test
       with:
         definition: alpine
         image: vsc-alpine
