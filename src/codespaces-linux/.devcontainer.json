@@ -4,6 +4,55 @@
         "context": "."
     },
     "features": { // TODO: Change to array syntax
+        "devcontainers/features/dotnet@v0.0.1": {
+            "version": "3"
+        },
+        "devcontainers/features/dotnet@v0.0.1": {
+            "version": "6"
+        },
+        "devcontainers/features/hugo@v0.0.1": {
+            "version": "latest"
+        },
+        "devcontainers/features/node@v0.0.1": {
+            "version": "14",
+            "nvmInstallPath": "/home/codespace/.nvm"
+        },
+        "devcontainers/features/node@v0.0.1": {
+            "version": "16",
+            "nvmInstallPath": "/home/codespace/.nvm"
+        },
+        "devcontainers/features/python@v0.0.1": {
+            "version": "3.9",
+            "installPath": "/opt/python/latest"
+        },
+        "devcontainers/features/python@v0.0.1": {
+            "version": "3.10",
+            "installPath": "/opt/python/latest"
+        },
+        // "devcontainers/features/php@v0.0.1": {
+        //     "version": "8.0"
+        // },
+        // "devcontainers/features/php@v0.0.1": {
+        //     "version": "8.1"
+        // },
+        "devcontainers/features/anaconda@v0.0.1": {
+            "version": "4"
+        },
+        "devcontainers/features/ruby@v0.0.1": {
+            "version": "3.0"
+        },
+        "devcontainers/features/ruby@v0.0.1": {
+            "version": "3.1"
+        },
+        "devcontainers/features/java@v0.0.1": {
+            "version": "11"
+        },
+        "devcontainers/features/java@v0.0.1": {
+            "version": "17"
+        },
+        "devcontainers/features/maven@v0.0.1": {
+            "version": "3"
+        },
         "devcontainers/features/common@v0.0.1": {
             "version": "latest",
             "username": "codespace",
@@ -28,25 +77,17 @@
         "devcontainers/features/git@v0.0.1": {
             "version": "latest"
         },
-        "devcontainers/features/python@v0.0.1": {
-            "version": "none",
-            "installPath": "/opt/python/latest"
-        },
         "devcontainers/features/jupyterlab@v0.0.1": {
             "version": "latest",
             "pythonBinary": "/home/codespace/.python/current/bin/python"
-        },
-        "devcontainers/features/ruby@v0.0.1": {
-            "version": "none"
-        },
-        "devcontainers/features/node@v0.0.1": {
-            "version": "none",
-            "nvmInstallPath": "/home/codespace/.nvm"
         },
         "devcontainers/features/gradle@v0.0.1": {
             "version": "latest"
         },
         "devcontainers/features/go@v0.0.1": {
+            "version": "latest"
+        },
+        "devcontainers/features/jekyll@v0.0.1": {
             "version": "latest"
         }
     },

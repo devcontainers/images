@@ -1,13 +1,75 @@
-#-------------------------------------------------------------------------------------------------------------
-# Copyright (c) Microsoft Corporation. All rights reserved.
-# Licensed under the MIT License. See https://go.microsoft.com/fwlink/?linkid=2090316 for license information.
-#-------------------------------------------------------------------------------------------------------------
-FROM mcr.microsoft.com/oryx/build:vso-focal-20220429.1 as kitchensink
+# # #-------------------------------------------------------------------------------------------------------------
+# # # Copyright (c) Microsoft Corporation. All rights reserved.
+# # # Licensed under the MIT License. See https://go.microsoft.com/fwlink/?linkid=2090316 for license information.
+# # #-------------------------------------------------------------------------------------------------------------
+FROM buildpack-deps:focal-scm
 
 ARG USERNAME=codespace
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 ARG HOMEDIR=/home/$USERNAME
+
+RUN groupadd -g 1000 $USERNAME
+RUN useradd -u 1000 -g $USERNAME $USERNAME
+RUN mkdir -p $HOMEDIR && chown -R $USERNAME:$USERNAME $HOMEDIR
+RUN chown -R $USERNAME:$USERNAME /opt/
+
+# Install basic build tools
+# Configure locale (required for Python)
+# NOTE: Do NOT move it from here as it could have global implications
+RUN LANG="C.UTF-8" \
+    && apt-get update \
+    && apt-get upgrade -y \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+        sudo \
+        git \
+        make \
+        unzip \
+        # The tools in this package are used when installing packages for Python
+        build-essential \
+        swig3.0 \
+        # Required for Microsoft SQL Server
+        unixodbc-dev \
+        # Required for PostgreSQL
+        libpq-dev \
+        # Required for mysqlclient
+        default-libmysqlclient-dev \
+        # Required for ts
+        moreutils \
+        rsync \
+        zip \
+        libgdiplus \
+        jq \
+        # By default pip is not available in the buildpacks image
+        python-pip-whl \
+        python3-pip \
+        #.NET Core related pre-requisites
+        libc6 \
+        libgcc1 \
+        libgssapi-krb5-2 \
+        libncurses5 \
+        liblttng-ust0 \
+        libssl-dev \
+        libstdc++6 \
+        zlib1g \
+        libuuid1 \
+        libunwind8 \
+        sqlite3 \
+        libsqlite3-dev \
+        software-properties-common \
+    && rm -rf /var/lib/apt/lists/* \
+    # This is the folder containing 'links' to benv and build script generator
+    && apt-get update \
+    && apt-get upgrade -y \
+    && add-apt-repository universe \
+    && apt-get install -y --no-install-recommends python2 \
+    && rm -rf /var/lib/apt/lists/* \
+    # 'get-pip.py' has been moved to ' https://bootstrap.pypa.io/pip/2.7/get-pip.py' from 'https://bootstrap.pypa.io/2.7/get-pip.py'
+    && curl  https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py \
+    && python2 get-pip.py \
+    && pip install pip --upgrade \
+    && pip3 install pip --upgrade \
+    && mkdir -p /opt/oryx
 
 # Default to bash shell (other shells available at /usr/bin/fish and /usr/bin/zsh)
 ENV SHELL=/bin/bash \
@@ -39,9 +101,32 @@ ENV PATH="${NVM_DIR}/current/bin:${NPM_GLOBAL}/bin:${PYTHON_ROOT}/current/bin:${
 # Install needed utilities and setup non-root user. Use a separate RUN statement to add your own dependencies.
 COPY setup-python-tools.sh setup-user.sh first-run-notice.txt /tmp/scripts/
 
-RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    # Restore man command
-    && yes | unminimize 2>&1 
+# Run setup user script
+RUN bash /tmp/scripts/setup-user.sh "${USERNAME}" "${PATH}" \
+    # Change owner of opt contents since Oryx can dynamically install and will run as "codespace"
+    && chown ${USERNAME} /opt/* \
+    && chsh -s /bin/bash ${USERNAME} \
+    # Verify expected build and debug tools are present
+    && apt-get -y install build-essential cmake cppcheck valgrind clang lldb llvm gdb python3-dev \
+    # Install tools and shells not in common script
+    && apt-get install -yq vim vim-doc xtail software-properties-common libsecret-1-dev \
+    # Install additional tools (useful for 'puppeteer' project)
+    && apt-get install -y --no-install-recommends libnss3 libnspr4 libatk-bridge2.0-0 libatk1.0-0 libx11-6 libpangocairo-1.0-0 \
+                                                  libx11-xcb1 libcups2 libxcomposite1 libxdamage1 libxfixes3 libpango-1.0-0 libgbm1 libgtk-3-0 \
+    # Clean up
+    && apt-get autoremove -y && apt-get clean -y \
+    # Move first run notice to right spot
+    && mkdir -p /usr/local/etc/vscode-dev-containers/ \
+    && mv -f /tmp/scripts/first-run-notice.txt /usr/local/etc/vscode-dev-containers/
+
+# install few more tools for VSO #TODO: Needs PHP and ruby
+# RUN gem install bundler rake ruby-debug-ide debase jekyll
+# RUN  yes | pecl install xdebug \
+#     && export PHP_LOCATION=$(dirname $(dirname $(which php))) \
+#     && echo "zend_extension=$(find ${PHP_LOCATION}/lib/php/extensions/ -name xdebug.so)" > ${PHP_LOCATION}/ini/conf.d/xdebug.ini \
+#     && echo "xdebug.mode = debug" >> ${PHP_LOCATION}/ini/conf.d/xdebug.ini \
+#     && echo "xdebug.start_with_request = yes" >> ${PHP_LOCATION}/ini/conf.d/xdebug.ini \
+#     && echo "xdebug.client_port = 9000" >> ${PHP_LOCATION}/ini/conf.d/xdebug.ini
 
 # Run setup user script
 RUN bash /tmp/scripts/setup-user.sh "${USERNAME}" "${PATH}" \
@@ -74,9 +159,9 @@ RUN git config --global --add safe.directory /home/codespace/.nvs \
     # Clean up
     && rm -rf ${NVM_DIR}/.git ${NVS_HOME}/.git
 
-# Link composer
-RUN ln -s $(which composer.phar) /usr/local/bin/composer \
-    && apt-get clean -y
+# # Link composer
+# RUN ln -s $(which composer.phar) /usr/local/bin/composer \
+#     && apt-get clean -y
 
 # Remove scripts now that we're done with them
 RUN apt-get clean -y && rm -rf /tmp/scripts
