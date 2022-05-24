@@ -14,8 +14,8 @@ check "oryx" oryx --version
 
 # Check .NET
 check "dotnet" dotnet --list-sdks
-check "oryx-install-dotnet-3.1.0" oryx prep --skip-detection --platforms-and-versions dotnet=3.1.0
-check "dotnet-3.1.0-installed" bash -c 'dotnet --info | grep -E "\s3\.1\.0\s"'
+check "oryx-install-dotnet-3.1" oryx prep --skip-detection --platforms-and-versions dotnet=3.1
+check "dotnet-3.1-installed" bash -c 'dotnet --info | grep -E "\s3\.1\.[0-9]*\s"'
 check "dotnet-6-installed-by-oryx" dotnet --info | grep "/opt/dotnet/6\.0\.[0-9]*/sdk"
 
 # Check Python
@@ -58,7 +58,7 @@ check "maven" mvn --version
 check "ruby" ruby --version
 check "rvm" bash -c ". /usr/local/rvm/scripts/rvm && rvm --version"
 check "rbenv" bash -c 'eval "$(rbenv init -)" && rbenv --version'
-check "rake" rake --version
+check "rake" gem list rake
 
 # Check Jekyll dynamic install
 mkdir jekyll-test
