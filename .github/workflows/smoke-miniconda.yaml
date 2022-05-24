@@ -1,0 +1,33 @@
+name: Smoke test "miniconda" build
+
+on: 
+  workflow_dispatch:
+
+  push:
+    branches: [main]
+    paths:
+      - 'src/miniconda/**'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'src/miniconda/**'
+jobs:
+  smoke-test:
+    name: Smoke test
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Checkout
+      id: checkout
+      uses: actions/checkout@v3
+
+    - name: Smoke test
+      env:
+        GITHUB_TOKEN: ${{ secrets.PAT }}
+      id: smoke_test
+      uses: ./.github/actions/smoke-test
+      with:
+        definition: miniconda
+        image: vsc-miniconda
+        user: vscode
