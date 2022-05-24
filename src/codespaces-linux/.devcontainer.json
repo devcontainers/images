@@ -39,8 +39,12 @@
         "devcontainers/features/ruby@v0.0.1": {
             "version": "none"
         },
-        "devcontainers/features/node@v0.0.1": {
+        "devcontainers/features/jekyll@v0.0.1": {
             "version": "none"
+        },
+        "devcontainers/features/node@v0.0.1": {
+            "version": "none",
+            "nvmInstallPath": "/home/codespace/.nvm"
         },
         "devcontainers/features/gradle@v0.0.1": {
             "version": "latest"
