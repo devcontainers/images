@@ -1,17 +1,17 @@
-name: Smoke test "alpine" build
+name: Smoke test "anaconda" build
 
 on: 
   workflow_dispatch:
-
+  
   push:
     branches: [main]
     paths:
-      - 'src/alpine/**'
+      - 'src/anaconda/**'
   pull_request:
     branches:
       - main
     paths:
-      - 'src/alpine/**'
+      - 'src/anaconda/**'
 jobs:
   smoke-test:
     name: Smoke test
@@ -21,11 +21,13 @@ jobs:
     - name: Checkout
       id: checkout
       uses: actions/checkout@v3
-      
+
     - name: Smoke test
+      env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
       id: smoke_test
       uses: ./.github/actions/smoke-test
       with:
-        definition: alpine
-        image: vsc-alpine
+        definition: anaconda
+        image: vsc-anaconda
         user: vscode
