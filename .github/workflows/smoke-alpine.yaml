@@ -26,4 +26,4 @@ jobs:
       with:
         definition: alpine
         image: vsc-alpine
-        user: vscode
+        user: root
