@@ -39,9 +39,6 @@
         "devcontainers/features/ruby@v0.0.1": {
             "version": "none"
         },
-        "devcontainers/features/jekyll@v0.0.1": {
-            "version": "latest"
-        },
         "devcontainers/features/node@v0.0.1": {
             "version": "none",
             "nvmInstallPath": "/home/codespace/.nvm"

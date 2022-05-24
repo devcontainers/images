@@ -65,7 +65,7 @@ mkdir jekyll-test
 cd jekyll-test
 touch _config.yml
 check "oryx-build-jekyll" oryx build --apptype static-sites --manifest-dir /tmp
-check "jekyll" jekyll --version
+check "jekyll" gem list jekyll
 cd ..
 rm -rf jekyll-test
 
