@@ -3,7 +3,7 @@
         "dockerfile": "./Dockerfile",
         "context": ".",
         "args": {
-            "VARIANT": "8.1"
+            "VARIANT": "7-apache-bullseye"
         }
     },
     "features": { // TODO: Change to array syntax
@@ -12,10 +12,11 @@
             "username": "vscode"
         },
         "devcontainers/features/node@v0.0.1": {
-            "version": "latest"
+            "version": "none"
         }
     },
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [8080],
-    "remoteUser": "vscode"
+    "remoteUser": "vscode",
+    "postCreateCommand": "usermod -aG www-data vscode && sed -i -e 's/Listen 80/Listen 80\\nListen 8080/g' /etc/apache2/ports.conf"
 }
