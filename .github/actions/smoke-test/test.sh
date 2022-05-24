@@ -31,7 +31,6 @@ docker build -t ${IMAGE}-uid -f uid.Dockerfile .
 # Start container
 echo "(*) Starting container..."
 container_name="vscdc-test-container-$DEFINITION"
-cd ../../../
 docker run -it -d --name ${container_name} --rm --init --privileged -v "$(pwd)/src/${DEFINITION}:/workspace" ${IMAGE}-uid /bin/sh -c 'while sleep 1000; do :; done'
 
 # Fake out existence of extensions, VS Code Server
