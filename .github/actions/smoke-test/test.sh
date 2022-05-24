@@ -31,14 +31,15 @@ docker build -t ${IMAGE}-uid -f uid.Dockerfile .
 # Start container
 echo "(*) Starting container..."
 container_name="vscdc-test-container-$DEFINITION"
-docker run -d --name ${container_name} --rm --init --privileged -v "$(pwd)/containers/${DEFINITION}:/workspace" ${IMAGE}-uid /bin/sh -c 'while sleep 1000; do :; done'
+cd ../../../
+docker run -it -d --name ${container_name} --rm --init --privileged -v "$(pwd)/src/${DEFINITION}:/workspace" ${IMAGE}-uid /bin/sh -c 'while sleep 1000; do :; done'
 
 # Fake out existence of extensions, VS Code Server
 echo "(*) Stubbing out extensions and VS Code Server..."
-dev_container_relative_path="containers/${DEFINITION}/.devcontainer"
+dev_container_relative_path="src/${DEFINITION}"
 mkdir -p "/tmp/${dev_container_relative_path}"
-cp -f "$(pwd)/${dev_container_relative_path}/devcontainer.json" "/tmp/${dev_container_relative_path}/"
-dev_container_tmp="/tmp/${dev_container_relative_path}/devcontainer.json"
+cp -f "$(pwd)/${dev_container_relative_path}/.devcontainer.json" "/tmp/${dev_container_relative_path}/"
+dev_container_tmp="/tmp/${dev_container_relative_path}/.devcontainer.json"
 sed -i'.bak' -e "s/\\/\\/.*/ /g" "${dev_container_tmp}"
 extensions="$(jq '.extensions' --compact-output "${dev_container_tmp}" | tr -d '[' | tr -d ']' | tr ',' '\n' 2>/dev/null || echo -n '')"
 docker exec -u "${USERNAME}" ${container_name} /bin/sh -c "\
