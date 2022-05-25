@@ -14,27 +14,25 @@
             "version": "latest"
         },
         "devcontainers/features/node@v0.0.1": {
-            "version": "14",
-            "nvmInstallPath": "/home/codespace/.nvm"
+            "version": "14"
         },
         "devcontainers/features/node@v0.0.1": {
-            "version": "16",
-            "nvmInstallPath": "/home/codespace/.nvm"
+            "version": "16"
         },
         "devcontainers/features/python@v0.0.1": {
-            "version": "3.9",
-            "installPath": "/opt/python/latest"
+            "version": "3.9"
         },
         "devcontainers/features/python@v0.0.1": {
-            "version": "3.10",
-            "installPath": "/opt/python/latest"
+            "version": "3.10"
         },
-        // "devcontainers/features/php@v0.0.1": {
-        //     "version": "8.0"
-        // },
-        // "devcontainers/features/php@v0.0.1": {
-        //     "version": "8.1"
-        // },
+        "devcontainers/features/php@v0.0.1": {
+            "version": "8.0",
+            "installComposer": true
+        },
+        "devcontainers/features/php@v0.0.1": {
+            "version": "8.1",
+            "installComposer": true
+        },
         "devcontainers/features/anaconda@v0.0.1": {
             "version": "4"
         },
@@ -77,10 +75,10 @@
         "devcontainers/features/git@v0.0.1": {
             "version": "latest"
         },
-        "devcontainers/features/jupyterlab@v0.0.1": {
-            "version": "latest",
-            "pythonBinary": "/home/codespace/.python/current/bin/python"
-        },
+        // "devcontainers/features/jupyterlab@v0.0.1": {
+        //     "version": "latest",
+        //     "pythonBinary": "/home/codespace/.python/current/bin/python"
+        // },
         "devcontainers/features/gradle@v0.0.1": {
             "version": "latest"
         },
@@ -90,6 +88,9 @@
         "devcontainers/features/jekyll@v0.0.1": {
             "version": "latest"
         }
+        // "devcontainers/features/oryx@v0.0.1": {
+        //     "version": "latest"
+        // }
     },
     "remoteUser": "codespace",
     "containerUser":"root",

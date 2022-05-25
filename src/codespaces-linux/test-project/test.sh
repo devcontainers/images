@@ -33,17 +33,17 @@ check "pydocstyle" pydocstyle --version
 check "bandit" bandit --version
 check "virtualenv" virtualenv --version
 
-# # Check Python packages
-# check "numpy" python -c 'import numpy'
-# check "pandas" python -c 'import pandas'
-# check "scipy" python -c 'import scipy'
-# check "matplotlib" python -c 'import matplotlib'
-# check "seaborn" python -c 'import seaborn'
-# check "scikit-learn" python -c 'import sklearn'
-# check "tensorflow" python -c 'import tensorflow'
-# check "keras" python -c 'import keras'
-# check "torch" python -c 'import torch'
-# check "requests" python -c 'import requests'
+# Check Python packages
+check "numpy" python -c 'import numpy'
+check "pandas" python -c 'import pandas'
+check "scipy" python -c 'import scipy'
+check "matplotlib" python -c 'import matplotlib'
+check "seaborn" python -c 'import seaborn'
+check "scikit-learn" python -c 'import sklearn'
+check "tensorflow" python -c 'import tensorflow'
+check "keras" python -c 'import keras'
+check "torch" python -c 'import torch'
+check "requests" python -c 'import requests'
 
 # Check JupyterLab
 check "jupyter-lab" jupyter-lab --version
@@ -71,14 +71,24 @@ rm -rf jekyll-test
 
 # Node.js
 check "node" node --version
-check "nvm" bash -c ". /home/codespace/.nvm/nvm.sh && nvm --version"
+check "nvm" bash -c ". /usr/local/share/nvm/nvm.sh && nvm --version"
 check "nvs" bash -c ". /home/codespace/.nvs/nvs.sh && nvs --version"
 check "yarn" yarn --version
 check "npm" npm --version
 
 # PHP
 check "php" php --version
+check "php composer" composer --version
 check "Xdebug" php --version | grep 'Xdebug'
+
+# Hugo
+check "hugo" hugo --version
+
+# Anaconda
+check "Anaconda" conda --version
+
+# Go
+check "go" go version
 
 # Check utilities
 checkOSPackages "additional-os-packages" vim xtail software-properties-common

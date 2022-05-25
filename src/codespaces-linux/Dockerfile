@@ -1,27 +1,25 @@
-# # #-------------------------------------------------------------------------------------------------------------
-# # # Copyright (c) Microsoft Corporation. All rights reserved.
-# # # Licensed under the MIT License. See https://go.microsoft.com/fwlink/?linkid=2090316 for license information.
-# # #-------------------------------------------------------------------------------------------------------------
-FROM buildpack-deps:focal-scm
+#-------------------------------------------------------------------------------------------------------------
+# Copyright (c) Microsoft Corporation. All rights reserved.
+# Licensed under the MIT License. See https://go.microsoft.com/fwlink/?linkid=2090316 for license information.
+#-------------------------------------------------------------------------------------------------------------
+FROM ubuntu:focal
 
 ARG USERNAME=codespace
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 ARG HOMEDIR=/home/$USERNAME
 
-RUN groupadd -g 1000 $USERNAME
-RUN useradd -u 1000 -g $USERNAME $USERNAME
-RUN mkdir -p $HOMEDIR && chown -R $USERNAME:$USERNAME $HOMEDIR
-RUN chown -R $USERNAME:$USERNAME /opt/
+COPY setup-user.sh first-run-notice.txt /tmp/scripts/
+
+RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+    # Restore man command
+    && yes | unminimize 2>&1 
 
 # Install basic build tools
-# Configure locale (required for Python)
-# NOTE: Do NOT move it from here as it could have global implications
 RUN LANG="C.UTF-8" \
     && apt-get update \
     && apt-get upgrade -y \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-        sudo \
         git \
         make \
         unzip \
@@ -57,6 +55,9 @@ RUN LANG="C.UTF-8" \
         sqlite3 \
         libsqlite3-dev \
         software-properties-common \
+        tk-dev \
+        uuid-dev \
+        curl \
     && rm -rf /var/lib/apt/lists/* \
     # This is the folder containing 'links' to benv and build script generator
     && apt-get update \
@@ -68,100 +69,52 @@ RUN LANG="C.UTF-8" \
     && curl  https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py \
     && python2 get-pip.py \
     && pip install pip --upgrade \
-    && pip3 install pip --upgrade \
-    && mkdir -p /opt/oryx
+    && pip3 install pip --upgrade
+
+RUN groupadd -g 1000 ${USERNAME}
+RUN useradd -u 1000 -g ${USERNAME} ${USERNAME}
+RUN chown -R ${USERNAME}:${USERNAME} /usr/local/
+RUN mkdir -p ${HOMEDIR} && chown -R ${USERNAME}:${USERNAME} ${HOMEDIR}/
+
+# Change owner of opt contents since Oryx can dynamically install and will run as "codespace"
+RUN chsh -s /bin/bash ${USERNAME} \
+    # Verify expected build and debug tools are present
+    && apt-get update \
+    && apt-get -y install build-essential cmake cppcheck valgrind clang lldb llvm gdb python3-dev \
+    # Install tools and shells not in common script
+    && apt-get install -yq vim vim-doc xtail software-properties-common libsecret-1-dev \
+    # Install additional tools (useful for 'puppeteer' project)
+    && apt-get install -y --no-install-recommends libnss3 libnspr4 libatk-bridge2.0-0 libatk1.0-0 libx11-6 libpangocairo-1.0-0 \
+                                                  libx11-xcb1 libcups2 libxcomposite1 libxdamage1 libxfixes3 libpango-1.0-0 libgbm1 libgtk-3-0 \
+    # Clean up
+    && apt-get autoremove -y && apt-get clean -y \
+    # Move first run notice to right spot
+    && mkdir -p "/usr/local/etc/vscode-dev-containers/" \
+    && mv -f /tmp/scripts/first-run-notice.txt /usr/local/etc/vscode-dev-containers/
+
+#TODO install ML with python
 
 # Default to bash shell (other shells available at /usr/bin/fish and /usr/bin/zsh)
 ENV SHELL=/bin/bash \
-    ORYX_ENV_TYPE=vsonline-present \
-    DOTNET_ROOT="${HOMEDIR}/.dotnet" \
-    JAVA_ROOT="${HOMEDIR}/.java" \
-    NODE_ROOT="${HOMEDIR}/.nodejs" \
-    PHP_ROOT="${HOMEDIR}/.php" \
-    PYTHON_ROOT="${HOMEDIR}/.python" \
-    RUBY_ROOT="${HOMEDIR}/.ruby" \
-    MAVEN_ROOT="${HOMEDIR}/.maven" \
-    HUGO_ROOT="${HOMEDIR}/.hugo" \
-    NVM_SYMLINK_CURRENT=true \
-    NVM_DIR="/home/${USERNAME}/.nvm" \
-    NVS_HOME="/home/${USERNAME}/.nvs" \
-    NPM_GLOBAL="/home/${USERNAME}/.npm-global" \
-    PIPX_HOME="/usr/local/py-utils" \
-    PIPX_BIN_DIR="/usr/local/py-utils/bin" \
-    RVM_PATH="/usr/local/rvm" \
-    RAILS_DEVELOPMENT_HOSTS=".githubpreview.dev" \ 
-    GOROOT="/usr/local/go" \
-    GOPATH="/go" \
-    SDKMAN_DIR="/usr/local/sdkman" \
-    JUPYTERLAB_PATH="${HOMEDIR}/.local/bin" \
+    NVM_DIR="/usr/local/share/nvm" \
+    NVS_HOME="${HOMEDIR}/.nvs" \
     DOCKER_BUILDKIT=1
 
-ENV PATH="${NVM_DIR}/current/bin:${NPM_GLOBAL}/bin:${PYTHON_ROOT}/current/bin:${ORIGINAL_PATH}:${DOTNET_ROOT}:${DOTNET_ROOT}/tools:${SDKMAN_DIR}/bin:${SDKMAN_DIR}/candidates/gradle/current/bin:${SDKMAN_DIR}/candidates/java/current/bin:/opt/maven/lts:${GOROOT}/bin:${GOPATH}/bin:${PIPX_BIN_DIR}:/opt/conda/condabin:${JAVA_ROOT}/current/bin:${NODE_ROOT}/current/bin:${PHP_ROOT}/current/bin:${RUBY_ROOT}/current/bin:${MAVEN_ROOT}/current/bin:${HUGO_ROOT}/current/bin:${JUPYTERLAB_PATH}:${ORYX_PATHS}"
-
-# Install needed utilities and setup non-root user. Use a separate RUN statement to add your own dependencies.
-COPY setup-python-tools.sh setup-user.sh first-run-notice.txt /tmp/scripts/
+ENV PATH = "$PATH:${NVS_HOME}"
 
 # Run setup user script
-RUN bash /tmp/scripts/setup-user.sh "${USERNAME}" "${PATH}" \
-    # Change owner of opt contents since Oryx can dynamically install and will run as "codespace"
-    && chown ${USERNAME} /opt/* \
-    && chsh -s /bin/bash ${USERNAME} \
-    # Verify expected build and debug tools are present
-    && apt-get -y install build-essential cmake cppcheck valgrind clang lldb llvm gdb python3-dev \
-    # Install tools and shells not in common script
-    && apt-get install -yq vim vim-doc xtail software-properties-common libsecret-1-dev \
-    # Install additional tools (useful for 'puppeteer' project)
-    && apt-get install -y --no-install-recommends libnss3 libnspr4 libatk-bridge2.0-0 libatk1.0-0 libx11-6 libpangocairo-1.0-0 \
-                                                  libx11-xcb1 libcups2 libxcomposite1 libxdamage1 libxfixes3 libpango-1.0-0 libgbm1 libgtk-3-0 \
-    # Clean up
-    && apt-get autoremove -y && apt-get clean -y \
-    # Move first run notice to right spot
-    && mkdir -p /usr/local/etc/vscode-dev-containers/ \
-    && mv -f /tmp/scripts/first-run-notice.txt /usr/local/etc/vscode-dev-containers/
-
-# install few more tools for VSO #TODO: Needs PHP and ruby
-# RUN gem install bundler rake ruby-debug-ide debase jekyll
-# RUN  yes | pecl install xdebug \
-#     && export PHP_LOCATION=$(dirname $(dirname $(which php))) \
-#     && echo "zend_extension=$(find ${PHP_LOCATION}/lib/php/extensions/ -name xdebug.so)" > ${PHP_LOCATION}/ini/conf.d/xdebug.ini \
-#     && echo "xdebug.mode = debug" >> ${PHP_LOCATION}/ini/conf.d/xdebug.ini \
-#     && echo "xdebug.start_with_request = yes" >> ${PHP_LOCATION}/ini/conf.d/xdebug.ini \
-#     && echo "xdebug.client_port = 9000" >> ${PHP_LOCATION}/ini/conf.d/xdebug.ini
-
-# Run setup user script
-RUN bash /tmp/scripts/setup-user.sh "${USERNAME}" "${PATH}" \
-    # Change owner of opt contents since Oryx can dynamically install and will run as "codespace"
-    && chown ${USERNAME} /opt/* \
-    && chsh -s /bin/bash ${USERNAME} \
-    # Verify expected build and debug tools are present
-    && apt-get -y install build-essential cmake cppcheck valgrind clang lldb llvm gdb python3-dev \
-    # Install tools and shells not in common script
-    && apt-get install -yq vim vim-doc xtail software-properties-common libsecret-1-dev \
-    # Install additional tools (useful for 'puppeteer' project)
-    && apt-get install -y --no-install-recommends libnss3 libnspr4 libatk-bridge2.0-0 libatk1.0-0 libx11-6 libpangocairo-1.0-0 \
-                                                  libx11-xcb1 libcups2 libxcomposite1 libxdamage1 libxfixes3 libpango-1.0-0 libgbm1 libgtk-3-0 \
-    # Clean up
-    && apt-get autoremove -y && apt-get clean -y \
-    # Move first run notice to right spot
-    && mkdir -p /usr/local/etc/vscode-dev-containers/ \
-    && mv -f /tmp/scripts/first-run-notice.txt /usr/local/etc/vscode-dev-containers/
-
-RUN bash /tmp/scripts/setup-python-tools.sh "${PYTHON_ROOT}/current/bin/python"
+RUN bash /tmp/scripts/setup-user.sh "${USERNAME}" "${PATH}" 
 
 # Install nvs (alternate cross-platform Node.js version-management tool)
-RUN git config --global --add safe.directory /home/codespace/.nvs \
-    && mkdir -p ${NVS_HOME} \
-    && chown -R ${USERNAME}: ${NVS_HOME} \
+RUN git config --global --add safe.directory ${NVS_HOME} \
+    && sudo mkdir -p ${NVS_HOME} \
+    && chown -R ${USERNAME}:${USERNAME} ${NVS_HOME} \
     && sudo -u ${USERNAME} git clone -c advice.detachedHead=false --depth 1 https://github.com/jasongin/nvs ${NVS_HOME} 2>&1 \
     && (cd ${NVS_HOME} && git remote get-url origin && echo $(git log -n 1 --pretty=format:%H -- .)) > ${NVS_HOME}/.git-remote-and-commit \
     && sudo -u ${USERNAME} bash ${NVS_HOME}/nvs.sh install \
     && rm ${NVS_HOME}/cache/* \
     # Clean up
     && rm -rf ${NVM_DIR}/.git ${NVS_HOME}/.git
-
-# # Link composer
-# RUN ln -s $(which composer.phar) /usr/local/bin/composer \
-#     && apt-get clean -y
 
 # Remove scripts now that we're done with them
 RUN apt-get clean -y && rm -rf /tmp/scripts
