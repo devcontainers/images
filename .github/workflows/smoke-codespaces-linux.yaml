@@ -1,4 +1,4 @@
-name: Smoke test "codespace-linux" build
+name: Smoke test "codespaces" build
 
 on: 
   workflow_dispatch:
@@ -6,12 +6,12 @@ on:
   push:
     branches: [main]
     paths:
-      - 'src/codespaces-linux/**'
+      - 'src/codespaces/**'
   pull_request:
     branches:
       - main
     paths:
-      - 'src/codespaces-linux/**'
+      - 'src/codespaces/**'
 jobs:
   smoke-test:
     name: Smoke test
@@ -28,6 +28,6 @@ jobs:
       id: smoke_test
       uses: ./.github/actions/smoke-test
       with:
-        definition: codespaces-linux
-        image: vsc-codespaces-linux
+        definition: codespaces
+        image: vsc-codespaces
         user: codespace
