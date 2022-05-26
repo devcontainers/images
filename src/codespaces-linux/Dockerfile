@@ -116,6 +116,10 @@ RUN git config --global --add safe.directory ${NVS_HOME} \
     # Clean up
     && rm -rf ${NVM_DIR}/.git ${NVS_HOME}/.git
 
+# This enabled the oryx tool to generate manifest-dir which is needed for running the postcreate tool
+RUN mkdir -p /usr/local/oryx\
+    && echo "vso-focal" > /usr/local/oryx/.imagetype
+
 # Remove scripts now that we're done with them
 RUN apt-get clean -y && rm -rf /tmp/scripts
 
