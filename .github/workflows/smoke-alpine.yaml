@@ -4,10 +4,11 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - 'main'
+    - main
   pull_request:
     paths:
-      - 'src/alpine/**'
+      - src/alpine/**
+      - .github/workflows/smoke-alpine.yaml
 jobs:
   smoke-test:
     name: Smoke test
