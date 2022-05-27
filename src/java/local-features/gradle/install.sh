@@ -13,7 +13,7 @@ GRADLE_VERSION=${1:-"latest"}
 USERNAME=${2:-"automatic"}
 UPDATE_RC=${3:-"true"}
 
-SDKMAN_DIR=${SDKMAN_DIR:-"/usr/local/sdkman"}
+export SDKMAN_DIR=${SDKMAN_DIR:-"/usr/local/sdkman"}
 
 set -e
 
