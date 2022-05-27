@@ -2,14 +2,10 @@ name: Smoke test "alpine" build
 
 on: 
   workflow_dispatch:
-
   push:
-    branches: [main]
-    paths:
-      - 'src/alpine/**'
-  pull_request:
     branches:
-      - main
+      - 'main'
+  pull_request:
     paths:
       - 'src/alpine/**'
 jobs:
