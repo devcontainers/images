@@ -6,18 +6,30 @@
             "VARIANT": "1.18"
         }
     },
-    "features": { // TODO: Change to array syntax
-        "devcontainers/features/java@v0.0.1": {
-            "version": "none"
+    "features": [
+        {
+            "id": "devcontainers/features/java@v0.0.1",
+            "options": {
+                "version": "none"
+            }
         },
-        "devcontainers/features/maven@v0.0.1": {
-            "version": "latest"
+        {
+            "id": "./local-features/maven",
+            "options": {
+                "version": "latest"
+            }
         },
-        "devcontainers/features/gradle@v0.0.1": {
-            "version": "latest"
+        {
+            "id": "./local-features/gradle",
+            "options": {
+                "version": "latest"
+            }
         },
-        "devcontainers/features/node@v0.0.1": {
-            "version": "none"
+        {
+            "id": "devcontainers/features/node@v0.0.1",
+            "options": {
+                "version": "none"
+            }
         }
-    }
+    ]
 }
