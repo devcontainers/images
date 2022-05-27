@@ -3,95 +3,170 @@
         "dockerfile": "./Dockerfile",
         "context": "."
     },
-    "features": { // TODO: Change to array syntax
-        "devcontainers/features/dotnet@v0.0.1": {
-            "version": "3"
+    "features": [
+        {
+            "id": "devcontainers/features/dotnet@v0.0.1",
+            "options": {
+                "version": "3"
+            }
         },
-        "devcontainers/features/dotnet@v0.0.1": {
-            "version": "6"
+        {
+            "id": "devcontainers/features/dotnet@v0.0.1",
+            "options": {
+                "version": "6"
+            }
         },
-        "devcontainers/features/hugo@v0.0.1": {
-            "version": "latest"
+        {
+            "id": "devcontainers/features/hugo@v0.0.1",
+            "options": {
+                "version": "latest"
+            }
         },
-        "devcontainers/features/node@v0.0.1": {
-            "version": "14"
+        {
+            "id": "devcontainers/features/node@v0.0.1",
+            "options": {
+                "version": "14"
+            }
         },
-        "devcontainers/features/node@v0.0.1": {
-            "version": "16"
+        {
+            "id": "devcontainers/features/node@v0.0.1",
+            "options": {
+                "version": "16"
+            }
         },
-        "devcontainers/features/python@v0.0.1": {
-            "version": "3.9"
+        {
+            "id": "devcontainers/features/python@v0.0.1",
+            "options": {
+                "version": "3.9"
+            }
         },
-        "devcontainers/features/python@v0.0.1": {
-            "version": "3.10"
+        {
+            "id": "devcontainers/features/python@v0.0.1",
+            "options": {
+                "version": "3.10"
+            }
         },
-        // "devcontainers/features/php@v0.0.1": {
-        //     "version": "8.0.16",
-        //     "installComposer": true
-        // },
-        // "devcontainers/features/php@v0.0.1": {
-        //     "version": "8.1.4",
-        //     "installComposer": true
-        // },
-        "devcontainers/features/anaconda@v0.0.1": {
-            "version": "4"
+        {
+            "id": "devcontainers/features/php@v0.0.1",
+            "options": {
+                "version": "8.0.16",
+                "installComposer": true
+            }
         },
-        "devcontainers/features/ruby@v0.0.1": {
-            "version": "3.0"
+                {
+            "id": "devcontainers/features/php@v0.0.1",
+            "options": {
+                "version": "8.1.4",
+                "installComposer": true
+            }
         },
-        "devcontainers/features/ruby@v0.0.1": {
-            "version": "3.1"
+        {
+            "id": "devcontainers/features/anaconda@v0.0.1",
+            "options": {
+                "version": "4"
+            }
         },
-        "devcontainers/features/java@v0.0.1": {
-            "version": "11"
+        {
+            "id": "devcontainers/features/ruby@v0.0.1",
+            "options": {
+                "version": "3.0"
+            }
         },
-        "devcontainers/features/java@v0.0.1": {
-            "version": "17"
+        {
+            "id": "devcontainers/features/ruby@v0.0.1",
+            "options": {
+                "version": "3.1"
+            }
         },
-        "devcontainers/features/maven@v0.0.1": {
-            "version": "3"
+        {
+            "id": "devcontainers/features/java@v0.0.1",
+            "options": {
+                "version": "11"
+            }
         },
-        "devcontainers/features/common@v0.0.1": {
-            "version": "latest",
-            "username": "codespace",
-            "uid": "1000",
-            "gid": "1000"
+        {
+            "id": "devcontainers/features/java@v0.0.1",
+            "options": {
+                "version": "17"
+            }
         },
-        "devcontainers/features/sshd@v0.0.1": {
-            "version": "latest"
+        {
+            "id": "./local-features/maven",
+            "options": {
+                "version": "3"
+            }
         },
-        "devcontainers/features/git-lfs@v0.0.1": {
-            "version": "latest"
+        {
+            "id": "devcontainers/features/common@v0.0.1",
+            "options": {
+                "version": "latest",
+                "username": "codespace",
+                "uid": "1000",
+                "gid": "1000"
+            }
         },
-        "devcontainers/features/github-cli@v0.0.1": {
-            "version": "latest"
+        {
+            "id": "devcontainers/features/sshd@v0.0.1",
+            "options": {
+                "version": "latest"
+            }
         },
-        "devcontainers/features/docker-in-docker@v0.0.1": {
-            "version": "latest"
+        {
+            "id": "devcontainers/features/git-lfs@v0.0.1",
+            "options": {
+                "version": "latest"
+            }
         },
-        "devcontainers/features/kubectl-helm-minikube@v0.0.1": {
-            "version": "latest"
+        {
+            "id": "devcontainers/features/github-cli@v0.0.1",
+            "options": {
+                "version": "latest"
+            }
         },
-        "devcontainers/features/git@v0.0.1": {
-            "version": "latest"
+        {
+            "id": "devcontainers/features/docker-in-docker@v0.0.1",
+            "options": {
+                "version": "latest"
+            }
+        },
+        {
+            "id": "devcontainers/features/kubectl-helm-minikube@v0.0.1",
+            "options": {
+                "version": "latest"
+            }
+        },
+        {
+            "id": "devcontainers/features/git@v0.0.1",
+            "options": {
+                "version": "latest"
+            }
         },
         // "devcontainers/features/jupyterlab@v0.0.1": {
         //     "version": "latest",
         //     "pythonBinary": "/home/codespace/.python/current/bin/python"
         // },
-        "devcontainers/features/gradle@v0.0.1": {
-            "version": "latest"
+        {
+            "id": "./local-features/gradle",
+            "options": {
+                "version": "latest"
+            }
         },
-        "devcontainers/features/go@v0.0.1": {
-            "version": "latest"
+        {
+            "id": "devcontainers/features/go@v0.0.1",
+            "options": {
+                "version": "latest"
+            }
         },
-        "devcontainers/features/jekyll@v0.0.1": {
-            "version": "latest"
+        {
+            "id": "./local-features/jekyll",
+            "options": {
+                "version": "latest"
+            }
+        },
+        {
+            "id": "devcontainers/features/oryx@v0.0.1"
         }
-        // "devcontainers/features/oryx@v0.0.1": {
-        //     "version": "latest"
-        // }
-    },
+    ],
     "remoteUser": "codespace",
     "containerUser":"root",
 	"overrideCommand": false,
