@@ -37,7 +37,8 @@
         {
             "id": "devcontainers/features/python@v0.0.1",
             "options": {
-                "version": "3.9"
+                "version": "3.9",
+                "overrideDefaultVersion": false,
             }
         },
         {
