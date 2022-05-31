@@ -25,13 +25,13 @@
         {
             "id": "devcontainers/features/node@v0.0.1",
             "options": {
-                "version": "14"
+                "version": "16"
             }
         },
         {
             "id": "devcontainers/features/node@v0.0.1",
             "options": {
-                "version": "16"
+                "version": "14"
             }
         },
         {
@@ -82,13 +82,13 @@
         {
             "id": "devcontainers/features/java@v0.0.1",
             "options": {
-                "version": "11"
+                "version": "17"
             }
         },
         {
             "id": "devcontainers/features/java@v0.0.1",
             "options": {
-                "version": "17"
+                "version": "11"
             }
         },
         {
