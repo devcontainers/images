@@ -32,6 +32,7 @@ check "mypy" mypy --version
 check "pydocstyle" pydocstyle --version
 check "bandit" bandit --version
 check "virtualenv" virtualenv --version
+echo $(echo "python versions" && cd /usr/local/python && ls -a)
 
 # Check Python packages
 check "numpy" python -c 'import numpy'
@@ -53,12 +54,14 @@ check "java" java -version
 check "sdkman" bash -c ". /usr/local/sdkman/bin/sdkman-init.sh && sdk version"
 check "gradle" gradle --version
 check "maven" mvn --version
+echo $(echo "java versions" && cd /usr/local/sdkman/candidates/java && ls -a)
 
 # Check Ruby tools
 check "ruby" ruby --version
 check "rvm" bash -c ". /usr/local/rvm/scripts/rvm && rvm --version"
 check "rbenv" bash -c 'eval "$(rbenv init -)" && rbenv --version'
 check "rake" gem list rake
+echo $(echo "ruby versions" && cd /usr/local/rvm/rubies && ls -a)
 
 # Check Jekyll dynamic install
 mkdir jekyll-test
@@ -72,17 +75,19 @@ rm -rf jekyll-test
 # Node.js
 check "node" node --version
 check "nvm" bash -c ". /usr/local/share/nvm/nvm.sh && nvm --version"
-check "nvs" bash -c ". /home/codespace/.nvs/nvs.sh && nvs --version"
+check "nvs" bash -c ". /usr/local/.nvs/nvs.sh && nvs --version"
 check "yarn" yarn --version
 check "npm" npm --version
+echo $(echo "node versions" && cd /usr/local/share/nvm/versions/node && ls -a)
 
 # PHP
 check "php" php --version
 check "php composer" composer --version
 check "Xdebug" php --version | grep 'Xdebug'
+echo $(echo "php versions" && cd /usr/local/php && ls -a)
 
 # Hugo
-check "hugo" hugo --version
+check "hugo" hugo version
 
 # Anaconda
 check "Anaconda" conda --version
