@@ -7,6 +7,7 @@ FROM ubuntu:focal
 ARG USERNAME=codespace
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
+ARG HOMEDIR=/home/$USERNAME
 
 COPY setup-user.sh first-run-notice.txt /tmp/scripts/
 
@@ -73,6 +74,7 @@ RUN LANG="C.UTF-8" \
 RUN groupadd -g 1000 ${USERNAME}
 RUN useradd -u 1000 -g ${USERNAME} ${USERNAME}
 RUN chown -R ${USERNAME}:${USERNAME} /usr/local/
+RUN mkdir -p ${HOMEDIR} && chown -R ${USERNAME}:${USERNAME} ${HOMEDIR}/
 
 # Change owner of opt contents since Oryx can dynamically install and will run as "codespace"
 RUN chsh -s /bin/bash ${USERNAME} \
@@ -95,7 +97,7 @@ RUN chsh -s /bin/bash ${USERNAME} \
 # Default to bash shell (other shells available at /usr/bin/fish and /usr/bin/zsh)
 ENV SHELL=/bin/bash \
     NVM_DIR="/usr/local/share/nvm" \
-    NVS_HOME="/usr/local/.nvs" \
+    NVS_HOME="${HOMEDIR}/.nvs" \
     DOCKER_BUILDKIT=1
 
 ENV PATH = "$PATH:${NVS_HOME}"
