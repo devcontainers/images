@@ -59,7 +59,7 @@
                 "overrideDefaultVersion": "false"
             }
         },
-                {
+        {
             "id": "devcontainers/features/php@v0.0.1",
             "options": {
                 "version": "8.1.4",
