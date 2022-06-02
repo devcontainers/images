@@ -7,7 +7,7 @@
 	"historyFolderName": "history",
 	"historyUrlPrefix": "https://github.com/devcontainers/images/tree/main/src/",
 	"repositoryUrl": "https://github.com/devcontainers/images",
-	"imageLabelPrefix": "com.visualstudio.code.devcontainers",
+	"imageLabelPrefix": "dev.containers",
 	"definitionBuildConfigFile": "manifest.json",
 	"devContainerJsonPreamble": "For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:\n// ",
 	"dockerFilePreamble": "See here for image contents: ",
