@@ -37,10 +37,10 @@ async function push(repo, release, updateLatest, registry, registryPath, stubReg
     // See https://docs.docker.com/engine/reference/commandline/buildx_create/
     console.log('(*) Setting up builder...');
     const builders = await asyncUtils.exec('docker buildx ls');
-    if(builders.indexOf('vscode-dev-containers') < 0) {
-        await asyncUtils.spawn('docker', ['buildx', 'create', '--use', '--name', 'vscode-dev-containers']);
+    if(builders.indexOf('devcontainers') < 0) {
+        await asyncUtils.spawn('docker', ['buildx', 'create', '--use', '--name', 'devcontainers']);
     } else {
-        await asyncUtils.spawn('docker', ['buildx', 'use', 'vscode-dev-containers']);
+        await asyncUtils.spawn('docker', ['buildx', 'use', 'devcontainers']);
     }
     // This step sets up the QEMU emulators for cross-platform builds. See https://github.com/docker/buildx#building-multi-platform-images
     await asyncUtils.spawn('docker', ['run', '--privileged', '--rm', 'tonistiigi/binfmt', '--install', 'all']);
@@ -59,11 +59,9 @@ async function push(repo, release, updateLatest, registry, registryPath, stubReg
 async function pushImage(definitionId, repo, release, updateLatest,
     registry, registryPath, stubRegistry, stubRegistryPath, prepOnly, pushImages, replaceImage) {
     const definitionPath = configUtils.getDefinitionPath(definitionId);
-    const dotDevContainerPath = path.join(definitionPath, '.devcontainer');
-    // Use base.Dockerfile for image build if found, otherwise use Dockerfile
-    const dockerFileExists = await asyncUtils.exists(path.join(dotDevContainerPath, 'Dockerfile'));
-    const baseDockerFileExists = await asyncUtils.exists(path.join(dotDevContainerPath, 'base.Dockerfile'));
-    const dockerFilePath = path.join(dotDevContainerPath, `${baseDockerFileExists ? 'base.' : ''}Dockerfile`);
+    const dotDevContainerPath = definitionPath;
+    // Use Dockerfile for image build
+    const dockerFilePath = path.join(dotDevContainerPath, 'Dockerfile');
     
     // Make sure there's a Dockerfile present
     if (!await asyncUtils.exists(dockerFilePath)) {
@@ -152,7 +150,7 @@ async function pushImage(definitionId, repo, release, updateLatest,
                         '--label', `${imageLabelPrefix}.release=${prepResult.meta.gitRepositoryRelease}`,
                         '--label', `${imageLabelPrefix}.source=${prepResult.meta.gitRepository}`,
                         '--label', `${imageLabelPrefix}.timestamp='${prepResult.meta.buildTimestamp}'`,
-                        '--builder', 'vscode-dev-containers',
+                        '--builder', 'devcontainers',
                         '--progress', 'plain',
                         '--platform', pushImages ? architectures.reduce((prev, current) => prev + ',' + current, '').substring(1) : localArchitecture,
                         pushImages ? '--push' : '--load',
@@ -167,18 +165,8 @@ async function pushImage(definitionId, repo, release, updateLatest,
         }
     }
 
-    // If base.Dockerfile found, update stub/devcontainer.json, otherwise create - just use the default (first) variant if one exists
-    if (baseDockerFileExists && dockerFileExists) {
-        await prep.updateStub(
-            dotDevContainerPath, definitionId, repo, release, baseDockerFileExists, stubRegistry, stubRegistryPath);
-        console.log('(*) Updating devcontainer.json...');
-        await asyncUtils.writeFile(devContainerJsonPath, devContainerJsonRaw.replace('"base.Dockerfile"', '"Dockerfile"'));
-        console.log('(*) Removing base.Dockerfile...');
-        await asyncUtils.rimraf(dockerFilePath);
-    } else {
-        await prep.createStub(
-            dotDevContainerPath, definitionId, repo, release, baseDockerFileExists, stubRegistry, stubRegistryPath);
-    }
+    await prep.createStub(
+        dotDevContainerPath, definitionId, repo, release, false, stubRegistry, stubRegistryPath);
 
     console.log('(*) Done!\n');
 }
@@ -193,14 +181,14 @@ async function flattenBaseImage(baseImageTag, flattenedBaseImageTag, pushImages)
     // Flatten
     const processOpts = { stdio: 'inherit', shell: true };
     console.log('(*) Preparing base image...');
-    await asyncUtils.spawn('docker', ['run', '-d', '--name', 'vscode-dev-containers-build-flatten', baseImageTag, 'bash'], processOpts);
-    const containerInspectOutput = await asyncUtils.spawn('docker', ['inspect', 'vscode-dev-containers-build-flatten'], { shell: true, stdio: 'pipe' });
+    await asyncUtils.spawn('docker', ['run', '-d', '--name', 'devcontainers-build-flatten', baseImageTag, 'bash'], processOpts);
+    const containerInspectOutput = await asyncUtils.spawn('docker', ['inspect', 'devcontainers-build-flatten'], { shell: true, stdio: 'pipe' });
     console.log('(*) Flattening (this could take a while)...');
     const config = JSON.parse(containerInspectOutput)[0].Config;
     const envString = config.Env.reduce((prev, current) => prev + ' ' + current, '');
     const importArgs = `-c 'ENV ${envString}' -c 'ENTRYPOINT ${JSON.stringify(config.Entrypoint)}' -c 'CMD ${JSON.stringify(config.Cmd)}'`;
-    await asyncUtils.exec(`docker export vscode-dev-containers-build-flatten | docker import ${importArgs} - ${flattenedBaseImageTag}`, processOpts);
-    await asyncUtils.spawn('docker', ['container', 'rm', '-f', 'vscode-dev-containers-build-flatten'], processOpts);
+    await asyncUtils.exec(`docker export devcontainers-build-flatten | docker import ${importArgs} - ${flattenedBaseImageTag}`, processOpts);
+    await asyncUtils.spawn('docker', ['container', 'rm', '-f', 'devcontainers-build-flatten'], processOpts);
 
     // Push if enabled
     if (pushImages) {

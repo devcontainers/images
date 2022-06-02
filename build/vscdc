@@ -13,14 +13,14 @@ const generateImageInformationFiles = require('./src/image-info').generateImageI
 const configUtils = require('./src/utils/config');
 const packageJson = require('../package.json');
 
-console.log('vscode-dev-containers CLI\nCopyright (c) Microsoft Corporation. All rights reserved.\n')
+console.log('devcontainers CLI\nCopyright (c) Microsoft Corporation. All rights reserved.\n')
 
 require('yargs')
     .command('pack', 'package dev container definitions', (yargs) => {
         yargs
             .options({
                 'release': {
-                    describe: 'vscode-dev-containers release tag or a branch',
+                    describe: 'devcontainerss release tag or a branch',
                     default: `v${packageJson.version}`
                 },
                 'registry': {
@@ -29,7 +29,7 @@ require('yargs')
                 },
                 'registry-path': {
                     describe: 'container registry path',
-                    default: configUtils.getConfig('containerRegistryPath', 'vscode/devcontainers')
+                    default: configUtils.getConfig('containerRegistryPath', 'devcontainers')
                 },
                 'stub-registry': {
                     describe: 'registry to add to stub',
@@ -42,8 +42,8 @@ require('yargs')
                         configUtils.getConfig('containerRegistryPath', ''))
                 },
                 'github-repo': {
-                    describe: 'vscode-dev-containers repo name',
-                    default: configUtils.getConfig('githubRepoName', 'microsoft/vscode-dev-containers')
+                    describe: 'devcontainerss repo name',
+                    default: configUtils.getConfig('githubRepoName', 'microsoft/devcontainerss')
                 },
                 'package-only': {
                     describe: 'whether to prep/build/push before packaging',
@@ -80,7 +80,7 @@ require('yargs')
             })
             .options({
                 'release': {
-                    describe: 'vscode-dev-containers release tag or branch',
+                    describe: 'devcontainerss release tag or branch',
                     default: `v${packageJson.version}`
                 },
                 'registry': {
@@ -102,8 +102,8 @@ require('yargs')
                         configUtils.getConfig('containerRegistryPath', ''))
                 },
                 'github-repo': {
-                    describe: 'vscode-dev-containers repo name',
-                    default: configUtils.getConfig('githubRepoName', 'microsoft/vscode-dev-containers')
+                    describe: 'devcontainerss repo name',
+                    default: configUtils.getConfig('githubRepoName', 'microsoft/devcontainerss')
                 },
                 'update-latest': {
                     describe: 'whether to tag latest and {MAJOR} if pushing',
@@ -142,23 +142,6 @@ require('yargs')
                 }
             })
     }, pushCommand)
-    .command('update-script-sources <release>', 'updates all script source URLs in Dockerfiles to a tag or branch', (yargs) => {
-        yargs
-            .positional('release', {
-                describe: 'release tag to branch use for script URLs',
-            })
-            .options({
-                'github-repo': {
-                    describe: 'vscode-dev-containers repo name',
-                    default: configUtils.getConfig('githubRepoName', 'microsoft/vscode-dev-containers')
-                },
-                'update-sha': {
-                    describe: 'update script SHAs to match file',
-                    type: 'boolean',
-                    default: true
-                }
-            })
-    }, updateScriptSourcesCommand)
     .command('cg [devcontainer]', 'generate cgmanifest.json', (yargs) => {
         yargs
             .positional('devcontainer', {
@@ -167,7 +150,7 @@ require('yargs')
             })
             .options({
                 'release': {
-                    describe: 'vscode-dev-containers release tag or branch',
+                    describe: 'devcontainerss release tag or branch',
                     default: 'main'
                 },
                 'registry': {
@@ -189,8 +172,8 @@ require('yargs')
                         configUtils.getConfig('containerRegistryPath', ''))
                 },
                 'github-repo': {
-                    describe: 'vscode-dev-containers repo name',
-                    default: configUtils.getConfig('githubRepoName', 'microsoft/vscode-dev-containers')
+                    describe: 'devcontainerss repo name',
+                    default: configUtils.getConfig('githubRepoName', 'microsoft/devcontainerss')
                 },
                 'build': {
                     describe: 'whether to to build the image first step',
@@ -231,7 +214,7 @@ require('yargs')
             })
             .options({
                 'release': {
-                    describe: 'vscode-dev-containers release tag or branch',
+                    describe: 'devcontainerss release tag or branch',
                     default: 'main'
                 },
                 'registry': {
@@ -253,8 +236,8 @@ require('yargs')
                         configUtils.getConfig('containerRegistryPath', ''))
                 },
                 'github-repo': {
-                    describe: 'vscode-dev-containers repo name',
-                    default: configUtils.getConfig('githubRepoName', 'microsoft/vscode-dev-containers')
+                    describe: 'devcontainerss repo name',
+                    default: configUtils.getConfig('githubRepoName', 'microsoft/devcontainerss')
                 },
                 'build': {
                     describe: 'whether to to build the image first step',
@@ -309,7 +292,6 @@ require('yargs')
                 }
             })
     }, patchCommand)
-    .command('copy-library-scripts', 'copy files from script-library folder into appropriate definitions', () => {}, copyLibraryScriptsCommand)
     .demandCommand()
     .help()
     .argv;
@@ -331,28 +313,6 @@ function packCommand(argv) {
         argv.stubRegistry, argv.stubRegistryPath, argv.prepAndPackageOnly, argv.packageOnly, argv.clean, argv.skipPush)
         .catch((reason) => {
             console.error(`(!) Packaging failed - ${reason}`);
-            if(reason.stack) {
-                console.error(`    ${reason.stack}`);
-            }
-            process.exit(1);
-        });
-}
-
-function updateScriptSourcesCommand(argv) {
-    prep.updateAllScriptSourcesInRepo(argv.githubRepo, argv.release, argv.updateSha)
-        .catch((reason) => {
-            console.error(`(!) Failed to update script sources - ${reason}`);
-            if(reason.stack) {
-                console.error(`    ${reason.stack}`);
-            }
-            process.exit(1);
-        });
-}
-
-function copyLibraryScriptsCommand() {
-    prep.copyLibraryScriptsForAllDefinitions()
-        .catch((reason) => {
-            console.error(`(!) Failed to copy library scripts to definitions  - ${reason}`);
             if(reason.stack) {
                 console.error(`    ${reason.stack}`);
             }

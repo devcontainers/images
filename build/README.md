@@ -1,4 +1,4 @@
-# Build and image generation for vscode-dev-containers
+# Build and image generation for devcontainers
 
 This folder contains scripts to build and push images into the Microsoft Container Registry (MCR) from this repository, generate or modify any associated content to use the built image, track dependencies, and create an npm package with the result that is shipped in the VS Code Remote - Containers and Codespaces extension.
 
@@ -49,19 +49,19 @@ Once you have your build configuration setup, you can use the `vscdc` CLI to tes
 1. First, build the image(s) using the CLI as follows:
 
    ```bash
-   build/vscdc push --no-push --registry mcr.microsoft.com --registry-path vscode/devcontainers --release main <you-definition-id-here>
+   build/vscdc push --no-push --registry mcr.microsoft.com --registry-path devcontainers --release main <you-definition-id-here>
    ```
 
 2. Use the Docker CLI to verify all of the expected images and tags and have the right contents:
 
     ```bash
-    docker run -it --init --privileged --rm mcr.microsoft.com/vscode/devcontainers/<expected-repository>:dev-<expected tag> bash
+    docker run -it --init --privileged --rm mcr.microsoft.com/devcontainers/<expected-repository>:dev-<expected tag> bash
     ```
 
 3. Finally, test cgmanifest/markdown generation by running:
 
    ```bash
-   build/vscdc cg --registry mcr.microsoft.com --registry-path vscode/devcontainers --release main <you-definition-id-here>
+   build/vscdc cg --registry mcr.microsoft.com --registry-path devcontainers --release main <you-definition-id-here>
    ```
 
 Once you're happy with the result, you can also verify that the `devcontainer.json` and the associated concent that will be generated for your definition is correct.
@@ -72,7 +72,7 @@ Once you're happy with the result, you can also verify that the `devcontainer.js
     build/vscdc pack --prep-and-package-only --release main
     ```
 
-    A new file called `vscode-dev-containers-<version>-dev.tgz` should be in the root of the repository once this is done.
+    A new file called `devcontainers-<version>-dev.tgz` should be in the root of the repository once this is done.
 
 2. Unzip generated the `tgz` somewhere in your filesystem.
 
@@ -97,7 +97,7 @@ In your `Dockerfile`:
 
 ```Dockerfile
 ARG VARIANT=3
-FROM mcr.microsoft.com/vscode/devcontainers/python:${VARIANT}
+FROM mcr.microsoft.com/devcontainers/python:${VARIANT}
 ```
 
 In `devcontainer.json`:
@@ -112,7 +112,7 @@ In `devcontainer.json`:
 
 ## Using the script library
 
-The `/script-library` folder in this repository contains a number of scripts to install tools or configure container contents. Of particular note is `common-debain.sh` that should generally be run in any definition that does not extend from an existing `mcr.microsoft.com/vscode/devcontainers` image.
+The `/script-library` folder in this repository contains a number of scripts to install tools or configure container contents. Of particular note is `common-debain.sh` that should generally be run in any definition that does not extend from an existing `mcr.microsoft.com/devcontainers` image.
 
 Since Dockerfiles can only COPY files relative to the Dockerfile itself, we cannot easily copy contents from a folder several levels up. This step could be scripted, but this becomes cumbersome when creating the definitions to begin with. Instead, the scripts can be added into a `.devcontainer/library-scripts` folder in the definition. A GitHub Actions workflow will automatically update files with the same name in this folder whenever something in `/script-library` is updated.
 
@@ -139,7 +139,7 @@ To add one:
     Or if `common-debian.sh` was already run in your upstream image, you can copy it directly to the correct spot:
 
     ```Dockerfile
-    COPY library-scripts/meta.env /usr/local/etc/vscode-dev-containers/
+    COPY library-scripts/meta.env /usr/local/etc/devcontainers/
     ```
 
 The build system will then automatically populate the file with the correct contents on build.
@@ -171,14 +171,14 @@ The **`build.rootDistro`** property can be `debian`, `alpine`, or `redhat` curre
 The **`build.latest`** and **`build.tags`** properties affect how tags are applied. For example, here is how several dev container folders map:
 
 ```text
-debian => mcr.microsoft.com/vscode/devcontainers/base:debian
-alpine => mcr.microsoft.com/vscode/devcontainers/base:alpine
-ubnutu => mcr.microsoft.com/vscode/devcontainers/base:ubuntu
+debian => mcr.microsoft.com/devcontainers/base:debian
+alpine => mcr.microsoft.com/devcontainers/base:alpine
+ubnutu => mcr.microsoft.com/devcontainers/base:ubuntu
 ```
 
 This results in just one "repository" in the registry much like you would see for other images in Docker Hub.
 
-- mcr.microsoft.com/vscode/devcontainers/base
+- mcr.microsoft.com/devcontainers/base
 
 The package version is then automatically added to these various tags in the `${VERSION}` location for an item in the `tags` property array as a part of the release. For example, release 0.40.0 would result in:
 
@@ -245,12 +245,12 @@ FROM python:${VARIANT}
 
 This configuration would cause separate image variants, each with a different `VARIANT` build argument value passed in, that are then tagged as follows:
 
-- mcr.microsoft.com/vscode/devcontainers/python:3
-- mcr.microsoft.com/vscode/devcontainers/python:3.6
-- mcr.microsoft.com/vscode/devcontainers/python:3.7
-- mcr.microsoft.com/vscode/devcontainers/python:3.8
+- mcr.microsoft.com/devcontainers/python:3
+- mcr.microsoft.com/devcontainers/python:3.6
+- mcr.microsoft.com/devcontainers/python:3.7
+- mcr.microsoft.com/devcontainers/python:3.8
 
-In addition `mcr.microsoft.com/vscode/devcontainers/python` would point to `mcr.microsoft.com/vscode/devcontainers/python:3` since it is the first in the list.
+In addition `mcr.microsoft.com/devcontainers/python` would point to `mcr.microsoft.com/devcontainers/python:3` since it is the first in the list.
 
 #### The `build.variantTags` property
 
@@ -286,11 +286,11 @@ For example:
 
 In this case, the image built for the `bullseye` variant will be tagged as follows:
 
-- mcr.microsoft.com/vscode/devcontaienrs/base:latest
-- mcr.microsoft.com/vscode/devcontaienrs/base:bullseye
-- mcr.microsoft.com/vscode/devcontaienrs/base:debian
-- mcr.microsoft.com/vscode/devcontaienrs/base:debian-11
-- mcr.microsoft.com/vscode/devcontaienrs/base:debian11
+- mcr.microsoft.com/devcontaienrs/base:latest
+- mcr.microsoft.com/devcontaienrs/base:bullseye
+- mcr.microsoft.com/devcontaienrs/base:debian
+- mcr.microsoft.com/devcontaienrs/base:debian-11
+- mcr.microsoft.com/devcontaienrs/base:debian11
 
 #### The `build.variantBuildArgs` property
 In some cases, you may need to vary build arguments in the definition's `base.Dockerfile` by variant (beyond the `VARIANT` build arg itself). This can be done using the `build.variantBuildArgs` property. For example, consider the following:
@@ -522,11 +522,11 @@ Since the same dependencies can be in more than one definition, default settings
 
 ## Build process details and background
 
-Currently the vscode-dev-containers repo contains pure Dockerfiles that need to be built when used. While this works well from the perspective of providing samples, some of the images install a significant number of runtimes or tools which can take a long time to build.
+Currently the devcontainers repo contains pure Dockerfiles that need to be built when used. While this works well from the perspective of providing samples, some of the images install a significant number of runtimes or tools which can take a long time to build.
 
 We can resolve this by pre-building some of these images, but in-so-doing we want to make sure we:
 
-1. Ensure vscode-dev-containers continues to be a good source of samples
+1. Ensure devcontainers continues to be a good source of samples
 2. Improve the performance using the most popular (or in some cases slowest to build) container images
 3. Make it easy for users to add additional software to the images
 4. Make it easy for contributors to build, customize, and contribute new definitions
@@ -553,7 +553,7 @@ In the unlikely event a break fix needed to be deployed and not tagged latest, w
 
 This has a few advantages:
 
-1. Tags are generated for each version of the repository that is cut. This allows us to refer directly to the exact version of the source code used to build the container image to avoid confusion. e.g. `https://github.com/microsoft/vscode-dev-containers/tree/v0.35.0/containers/javascript-node-8`
+1. Tags are generated for each version of the repository that is cut. This allows us to refer directly to the exact version of the source code used to build the container image to avoid confusion. e.g. `https://github.com/microsoft/devcontainers/tree/v0.35.0/containers/javascript-node-8`
 2. Similarly, as containers are deprecated and removed from the repository, you can still refer back to the container source and README.
 3. Upstream changes that break existing images can be handled as needed.
 4. Developers can opt to use the image tag 0.35 to get the latest break fix version if desired or 0 to always get the latest non-breaking update.
@@ -576,7 +576,7 @@ Since the images would continue to exist after this point and the source code is
 When a release is cut, there are a few things that need to happen. One is obviously releasing the appropriate image. However, to continue to help customers understand how to customize their images, we would want to reference a user modifiable "stub" Dockerfile instead of an image directly. This also is important to help deal with shortcomings and workarounds that require something like specifying a build argument. For example:
 
 ```Dockerfile
-FROM mcr.microsoft.com/vscode/devcontainer/javascript-node:0-10
+FROM mcr.microsoft.com/devcontainer/javascript-node:0-10
 
 # ** [Optional] Uncomment this section to install additional packages. **
 #
@@ -603,9 +603,9 @@ Consequently, this user stub Dockerfile needs to be versioned with the `devconta
 
 The `definition-manifest.json` file dictates how the build process should behave as [dscribed above](#setting-up-a-container-to-be-built). In this case, `devcontainer.json` points to `base.Dockerfile`, but this is the Dockerfile used to generate the actual image rather than the stub Dockerfile. The stub that references the image is in `base.Dockerfile`.  To make things easy, we can also automatically generate this stub at release time if only a Dockerfile is present. If no `base.Dockerfile` is found, the build process falls back to using `Dockerfile`.
 
-Testing, then, is as simple as it is now - open the folder in `vscode-dev-containers` in a container and edit / test as required. Anyone simply copying the folder contents then gets a fully working version of the container even if in-flight and there is no image for it yet.
+Testing, then, is as simple as it is now - open the folder in `devcontainers` in a container and edit / test as required. Anyone simply copying the folder contents then gets a fully working version of the container even if in-flight and there is no image for it yet.
 
-In the vscode-dev-containers repo itself, the `FROM` statement in `Dockerfile` would always point to `latest` or `dev` since it what is in main may not have even been released yet. This would get dynamically updated as a part of the release process - which we will cover next.
+In the devcontainers repo itself, the `FROM` statement in `Dockerfile` would always point to `latest` or `dev` since it what is in main may not have even been released yet. This would get dynamically updated as a part of the release process - which we will cover next.
 
 ```Dockerfile
 FROM mcr.microsoft.com/vs/devcontainer/javascript-node:dev-10
@@ -623,7 +623,7 @@ When a release is cut, this SHA is generated and the source code for the related
 
 #### Release process
 
-When a release is cut, the contents of vscode-dev-containers repo are staged. The build process then does the following for the appropriate dev containers:
+When a release is cut, the contents of devcontainers repo are staged. The build process then does the following for the appropriate dev containers:
 
 1. Build an image using the `base.Dockerfile` and push it to a container registry with the appropriate version tags. If no `base.Dockerfile` is found, `Dockerfile` is used instead.  If the `variants` property is set, one image is built per variant, with the variant value being passed in as the `VARIANT` build argument.
 
@@ -633,22 +633,22 @@ When a release is cut, the contents of vscode-dev-containers repo are staged. Th
 
     ```Dockerfile
     # For information on the contents of the image referenced below, see the Dockerfile at
-    # https://github.com/microsoft/vscode-dev-containers/tree/v0.35.0/containers/javascript-node-10/.devcontainer/base.Dockerfile
-    FROM mcr.microsoft.com/vscode/devcontainer/javascript-node:0-10
+    # https://github.com/microsoft/devcontainers/tree/v0.35.0/containers/javascript-node-10/.devcontainer/base.Dockerfile
+    FROM mcr.microsoft.com/devcontainer/javascript-node:0-10
     ```
 
     This also works when the `VARIANT` ARG is used. The MAJOR part of the release version is placed in front of the argument in the FROM statement:
 
     ```Dockerfile
     ARG VARIANT="3"
-    FROM mcr.microsoft.com/vscode/devcontainer/python:0-${VARIANT}
+    FROM mcr.microsoft.com/devcontainer/python:0-${VARIANT}
     ```
 
 4. `devcontainer.json` is updated to point to `Dockerfile` instead of `base.Dockerfile` (if required) and a comment is added that points to the definition in this repository (along with its associated README for this specific version).
 
     ```json
     // For format details, see https://aka.ms/vscode-remote/devcontainer.json or the definition README at
-    // https://github.com/microsoft/vscode-dev-containers/tree/v0.35.0/containers/javascript-node-10
+    // https://github.com/microsoft/devcontainers/tree/v0.35.0/containers/javascript-node-10
     {
         "name": "Node.js 10",
         "dockerFile": "Dockerfile",
@@ -660,19 +660,19 @@ When a release is cut, the contents of vscode-dev-containers repo are staged. Th
 
 After everything builds successfully, the packaging process kicks off and performs the following:
 
-1. Runs through all Dockerfiles in the `containers` folder and makes sure any references to `mcr.microsoft.com/vscode/devcontainers` in other non-built dockerfiles reference the MAJOR version as described in step 3 above.
+1. Runs through all Dockerfiles in the `containers` folder and makes sure any references to `mcr.microsoft.com/devcontainers` in other non-built dockerfiles reference the MAJOR version as described in step 3 above.
 
 2. Runs through all Dockerfiles and looks for [common script](#common-scripts) references and updates the URL to the tagged version and adds the expected SHA as another arg. The result is that sections of the Dockerfile that look like this:
 
     ```Dockerfile
-    ARG COMMON_SCRIPT_SOURCE="https://raw.githubusercontent.com/microsoft/vscode-dev-containers/main/script-library/common-debian.sh"
+    ARG COMMON_SCRIPT_SOURCE="https://raw.githubusercontent.com/microsoft/devcontainers/main/script-library/common-debian.sh"
     ARG COMMON_SCRIPT_SHA="dev-mode"
     ```
 
     are transformed into this:
 
     ```Dockerfile
-    ARG COMMON_SCRIPT_SOURCE="https://raw.githubusercontent.com/microsoft/vscode-dev-containers/v0.112.0/script-library/common-debian.sh"
+    ARG COMMON_SCRIPT_SOURCE="https://raw.githubusercontent.com/microsoft/devcontainers/v0.112.0/script-library/common-debian.sh"
     ARG COMMON_SCRIPT_SHA="28e3d552a08e0d82935ad7335837f354809bec9856a3e0c2855f17bfe3a19523"
     ```
 
@@ -713,7 +713,7 @@ docker buildx build --build-arg VARIANT=6.0.100-bullseye-slim-arm64v8 --platform
 Once the build is complete, run the image using the below example. Note that the dotnet directory is mounted. The dotnet directory includes test scripts which will be used in the subsequent steps.
 
 ```bash
-docker run -v $REPODIR/vscode-dev-containers/containers/dotnet/:/workspace --platform linux/arm64 -it dotnet-arm64 bash
+docker run -v $REPODIR/devcontainers/containers/dotnet/:/workspace --platform linux/arm64 -it dotnet-arm64 bash
 ```
 
 Once in the running container, verify that the architecture is ARM64 by running the command:

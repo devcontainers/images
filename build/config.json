@@ -1,37 +1,26 @@
 {
 	"containerRegistry": "devcon.azurecr.io",
-	"containerRegistryPath": "public/vscode/devcontainers",
+	"containerRegistryPath": "public/devcontainers",
 	"stubRegistry": "mcr.microsoft.com",
-	"stubRegistryPath": "vscode/devcontainers",
-
-	"githubRepoName": "microsoft/vscode-dev-containers",
-	"containersPathInRepo": "containers",
+	"stubRegistryPath": "devcontainers",
+	"githubRepoName": "devcontainers/images",
 	"historyFolderName": "history",
-	"repoContainersToBuildPath": "repository-containers/images",
-	"scriptLibraryPathInRepo": "script-library",
-	"scriptLibraryFolderNameInDefinition": "library-scripts",
-	"historyUrlPrefix": "https://github.com/microsoft/vscode-dev-containers/tree/main/containers/",
-	"repositoryUrl": "https://github.com/microsoft/vscode-dev-containers/",
+	"historyUrlPrefix": "https://github.com/devcontainers/images/tree/main/src/",
+	"repositoryUrl": "https://github.com/devcontainers/images",
 	"imageLabelPrefix": "com.visualstudio.code.devcontainers",
-	"definitionBuildConfigFile": "definition-manifest.json",
-
+	"definitionBuildConfigFile": "manifest.json",
 	"devContainerJsonPreamble": "For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:\n// ",
 	"dockerFilePreamble": "See here for image contents: ",
 
 	"filesToStage": [
-		"+(containers|repository-containers)/**/!(test-project|history)/*",
-		"script-library/**/*",
-		"LICENSE",
-		"package.json",
-		"yarn.lock",
-		".npmignore",
-		"devcontainer-collection.json"
+		"+(src)/**/!(test-project|history)/*",
+		"LICENSE"
 	],
 
 	"needsDedicatedPage": [ 
-		"codespaces-linux",
+		"codespaces",
 		"php",
-		"python-3"
+		"python"
 	],
 
 	"flattenBaseImage": [],

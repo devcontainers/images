@@ -25,7 +25,7 @@ async function loadConfig(repoPath) {
     const definitionBuildConfigFile = getConfig('definitionBuildConfigFile', 'definition-manifest.json');
 
     // Get list of definition folders
-    const containersPath = path.join(repoPath, getConfig('containersPathInRepo', 'containers'));
+    const containersPath = path.join(repoPath, 'src');
     const definitions = await asyncUtils.readdir(containersPath, { withFileTypes: true });
     await asyncUtils.forEach(definitions, async (definitionFolder) => {
         // If directory entry is a file (like README.md, skip
@@ -52,19 +52,6 @@ async function loadConfig(repoPath) {
         if (await asyncUtils.exists(manifestPath)) {
             await loadDefinitionManifest(manifestPath, definitionId);
         }
-    });
-
-    // Load repo containers to build
-    const repoContainersToBuildPath = path.join(repoPath, getConfig('repoContainersToBuildPath', 'repository-containers/build'));
-    const repoContainerManifestFiles = glob.sync(`${repoContainersToBuildPath}/**/${definitionBuildConfigFile}`);
-    await asyncUtils.forEach(repoContainerManifestFiles, async (manifestFilePath) => {
-        const definitionPath = path.resolve(path.dirname(manifestFilePath));
-        const definitionId = path.relative(repoContainersToBuildPath, definitionPath);
-        allDefinitionPaths[definitionId] = {
-            path: definitionPath,
-            relativeToRootPath: path.relative(repoPath, definitionPath)
-        }
-        await loadDefinitionManifest(manifestFilePath, definitionId);
     });
 
     // Populate image variants and tag lookup
@@ -588,7 +575,7 @@ function getFallbackPoolUrl(package) {
 
 async function getStagingFolder(release) {
     if (!stagingFolders[release]) {
-        const stagingFolder = path.join(os.tmpdir(), 'vscode-dev-containers', release);
+        const stagingFolder = path.join(os.tmpdir(), 'devcontainers', release);
         console.log(`(*) Copying files to ${stagingFolder}\n`);
         await asyncUtils.rimraf(stagingFolder); // Clean out folder if it exists
         await asyncUtils.mkdirp(stagingFolder); // Create the folder
