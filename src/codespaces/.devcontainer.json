@@ -106,7 +106,6 @@
         {
             "id": "devcontainers/features/common@v0.0.1",
             "options": {
-                "version": "latest",
                 "username": "codespace",
                 "uid": "1000",
                 "gid": "1000"
