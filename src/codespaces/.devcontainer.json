@@ -7,14 +7,17 @@
         {
             "id": "devcontainers/features/dotnet@v0.0.1",
             "options": {
-                "version": "3"
+                "version": "3",
+                "installUsingApt": "false",
+                "overrideDefaultVersion": "false"
             }
         },
         {
             "id": "devcontainers/features/dotnet@v0.0.1",
             "options": {
-                "version": "6"
-            }
+                "version": "6",
+                "installUsingApt": "false",
+                "overrideDefaultVersion": "true"
         },
         {
             "id": "devcontainers/features/hugo@v0.0.1",
@@ -38,27 +41,30 @@
             "id": "devcontainers/features/python@v0.0.1",
             "options": {
                 "version": "3.9",
-                "overrideDefaultVersion": false,
+                "overrideDefaultVersion": "false",
             }
         },
         {
             "id": "devcontainers/features/python@v0.0.1",
             "options": {
-                "version": "3.10"
+                "version": "3.10",
+                "overrideDefaultVersion": "true"
             }
         },
         {
             "id": "devcontainers/features/php@v0.0.1",
             "options": {
                 "version": "8.0.16",
-                "installComposer": true
+                "installComposer": "true",
+                "overrideDefaultVersion": "false"
             }
         },
-                {
+        {
             "id": "devcontainers/features/php@v0.0.1",
             "options": {
                 "version": "8.1.4",
-                "installComposer": true
+                "installComposer": "true",
+                "overrideDefaultVersion": "true"
             }
         },
         {
@@ -100,7 +106,6 @@
         {
             "id": "devcontainers/features/common@v0.0.1",
             "options": {
-                "version": "latest",
                 "username": "codespace",
                 "uid": "1000",
                 "gid": "1000"
