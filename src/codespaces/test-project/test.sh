@@ -15,8 +15,8 @@ check "oryx" oryx --version
 # Check .NET
 check "dotnet" dotnet --list-sdks
 check "oryx-install-dotnet-3.1" oryx prep --skip-detection --platforms-and-versions dotnet=2.1.806
-check "dotnet-2-installed-by-oryx" cd /tmp/oryx/platforms/dotnet/ && ls | grep 2.1.806
-echo $(echo "dotnet versions" && cd /usr/local/dotnet && ls -a)
+check "dotnet-2-installed-by-oryx" ls /tmp/oryx/platforms/dotnet/ | grep 2.1.806
+echo $(echo "dotnet versions" ls -a /usr/local/dotnet)
 
 # Check Python
 check "python" python --version
@@ -32,7 +32,7 @@ check "mypy" mypy --version
 check "pydocstyle" pydocstyle --version
 check "bandit" bandit --version
 check "virtualenv" virtualenv --version
-echo $(echo "python versions" && cd /usr/local/python && ls -a)
+echo $(echo "python versions" ls -a /usr/local/python)
 
 # Check Python packages
 check "numpy" python -c 'import numpy'
@@ -54,21 +54,19 @@ check "java" java -version
 check "sdkman" bash -c ". /usr/local/sdkman/bin/sdkman-init.sh && sdk version"
 check "gradle" gradle --version
 check "maven" mvn --version
-echo $(echo "java versions" && cd /usr/local/sdkman/candidates/java && ls -a)
+echo $(echo "java versions" ls -a /usr/local/sdkman/candidates/java)
 
 # Check Ruby tools
 check "ruby" ruby --version
 check "rvm" bash -c ". /usr/local/rvm/scripts/rvm && rvm --version"
 check "rbenv" bash -c 'eval "$(rbenv init -)" && rbenv --version'
 check "rake" gem list rake
-echo $(echo "ruby versions" && cd /usr/local/rvm/rubies && ls -a)
+echo $(echo "ruby versions" ls -a /usr/local/rvm/rubies)
 
 # Check Jekyll dynamic install
 mkdir jekyll-test
 cd jekyll-test
 touch _config.yml
-chown -R codespace /usr/local/
-chown -R codespace /tmp
 check "oryx-build-jekyll" oryx build --apptype static-sites --manifest-dir /tmp
 check "jekyll" gem list jekyll
 cd ..
@@ -80,14 +78,14 @@ check "nvm" bash -c ". /usr/local/share/nvm/nvm.sh && nvm --version"
 check "nvs" bash -c ". /home/codespace/.nvs/nvs.sh && nvs --version"
 check "yarn" yarn --version
 check "npm" npm --version
-echo $(echo "node versions" && cd /usr/local/share/nvm/versions/node && ls -a)
+echo $(echo "node versions" ls -a /usr/local/share/nvm/versions/node)
 
 # PHP
 check "php" php --version
 check "php composer" composer --version
 check "pecl" pecl version
 check "Xdebug" php --version | grep 'Xdebug'
-echo $(echo "php versions" && cd /usr/local/php && ls -a)
+echo $(echo "php versions" ls -a /usr/local/php)
 
 # Hugo
 check "hugo" hugo version
