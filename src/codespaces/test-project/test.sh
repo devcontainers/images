@@ -113,5 +113,6 @@ check "zsh" zsh --version
 yarn
 check "run-puppeteer" node puppeteer.js
 
+echo $PATH
 # Report result
 reportResults
