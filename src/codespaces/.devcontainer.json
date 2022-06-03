@@ -171,7 +171,8 @@
             }
         },
         {
-            "id": "devcontainers/features/oryx@v0.0.1"
+            "id": "devcontainers/features/oryx@v0.0.1",
+            "options": {}
         }
     ],
     "remoteUser": "codespace",
