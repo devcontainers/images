@@ -18,6 +18,7 @@
                 "version": "6",
                 "installUsingApt": "false",
                 "overrideDefaultVersion": "true"
+            }
         },
         {
             "id": "devcontainers/features/hugo@v0.0.1",
