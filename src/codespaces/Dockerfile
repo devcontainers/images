@@ -114,7 +114,7 @@ ENV SHELL=/bin/bash \
     ORYX_SDK_STORAGE_BASE_URL="https://oryx-cdn.microsoft.io" \
     ENABLE_DYNAMIC_INSTALL="true"
 
-ENV PATH="${PATH}:${NVM_DIR}/current/bin:${PYTHON_ROOT}/current/bin:${SDKMAN_DIR}/bin:${SDKMAN_DIR}/candidates/gradle/current/bin:${SDKMAN_DIR}/candidates/java/current/bin:${SDKMAN_DIR}/candidates/maven/current/bin:${GOROOT}/bin:${GOPATH}/bin:${PIPX_BIN_DIR}:${ANACONDA}/bin:${PHP_ROOT}/current/bin:${PHP_ROOT}/current:${HUGO_ROOT}/bin:${ORYX}:${RVM_PATH}/gems/default/bin:${RVM_PATH}/gems/default@global/bin:/${RVM_PATH}/rubies/default/bin:${NVS_HOME}:${DOTNET_ROOT}/current"
+ENV PATH="${PATH}:${NVM_DIR}/current/bin:${PYTHON_ROOT}/current/bin:${SDKMAN_DIR}/bin:${SDKMAN_DIR}/candidates/gradle/current/bin:${SDKMAN_DIR}/candidates/java/current/bin:${SDKMAN_DIR}/candidates/maven/current/bin:${GOROOT}/bin:${GOPATH}/bin:${PIPX_BIN_DIR}:${ANACONDA}/bin:${PHP_ROOT}/current/bin:${HUGO_ROOT}/bin:${ORYX}:${RVM_PATH}/gems/default/bin:${RVM_PATH}/gems/default@global/bin:/${RVM_PATH}/rubies/default/bin:${NVS_HOME}:${DOTNET_ROOT}/current"
 
 # Run setup user script
 RUN bash /tmp/scripts/setup-user.sh "${USERNAME}" "${PATH}" 
