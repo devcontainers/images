@@ -123,7 +123,7 @@ async function processStub(userDockerFile, definitionId, repo, release, baseDock
     const devContainerImageVersion = configUtils.majorFromRelease(release, definitionId);
     const relativePath = configUtils.getDefinitionPath(definitionId, true);
     let fromSection = `# ${dockerFilePreamble}https://github.com/${repo}/tree/${release}/${relativePath}/Dockerfile\n\n`;
-    // The VARIANT arg allows this value to be set from devcontainer.json, handle it if found
+    // The VARIANT arg allows this value to be set from .devcontainer.json, handle it if found
     if (/ARG\s+VARIANT\s*=/.exec(userDockerFile) !== null) {
         const variant = configUtils.getVariants(definitionId)[0];
         const tagWithVariant = configUtils.getTagsForVersion(definitionId, devContainerImageVersion, registry, registryPath, '${VARIANT}')[0];
@@ -142,12 +142,12 @@ async function processStub(userDockerFile, definitionId, repo, release, baseDock
 }
 
 async function updateConfigForRelease(definitionId, repo, release, registry, registryPath, stubRegistry, stubRegistryPath) {
-    // Look for context in devcontainer.json and use it to build the Dockerfile
+    // Look for context in .devcontainer.json and use it to build the Dockerfile
     console.log(`(*) Making version specific updates to ${definitionId}...`);
     const definitionPath = configUtils.getDefinitionPath(definitionId, false);
     const relativePath = configUtils.getDefinitionPath(definitionId, true);
     const dotDevContainerPath = definitionPath;
-    const devContainerJsonPath = path.join(dotDevContainerPath, 'devcontainer.json');
+    const devContainerJsonPath = path.join(dotDevContainerPath, '.devcontainer.json');
     const devContainerJsonRaw = await asyncUtils.readFile(devContainerJsonPath);
     const devContainerJsonModified =
         `// ${configUtils.getConfig('devContainerJsonPreamble')}https://github.com/${repo}/tree/${release}/${relativePath}\n` +

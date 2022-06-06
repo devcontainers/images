@@ -20,7 +20,7 @@ require('yargs')
         yargs
             .options({
                 'release': {
-                    describe: 'devcontainerss release tag or a branch',
+                    describe: 'devcontainers release tag or a branch',
                     default: `v${packageJson.version}`
                 },
                 'registry': {
@@ -42,8 +42,8 @@ require('yargs')
                         configUtils.getConfig('containerRegistryPath', ''))
                 },
                 'github-repo': {
-                    describe: 'devcontainerss repo name',
-                    default: configUtils.getConfig('githubRepoName', 'microsoft/devcontainerss')
+                    describe: 'devcontainers repo name',
+                    default: configUtils.getConfig('githubRepoName', 'microsoft/devcontainers')
                 },
                 'package-only': {
                     describe: 'whether to prep/build/push before packaging',
@@ -80,7 +80,7 @@ require('yargs')
             })
             .options({
                 'release': {
-                    describe: 'devcontainerss release tag or branch',
+                    describe: 'devcontainers release tag or branch',
                     default: `v${packageJson.version}`
                 },
                 'registry': {
@@ -102,8 +102,8 @@ require('yargs')
                         configUtils.getConfig('containerRegistryPath', ''))
                 },
                 'github-repo': {
-                    describe: 'devcontainerss repo name',
-                    default: configUtils.getConfig('githubRepoName', 'microsoft/devcontainerss')
+                    describe: 'devcontainers repo name',
+                    default: configUtils.getConfig('githubRepoName', 'microsoft/devcontainers')
                 },
                 'update-latest': {
                     describe: 'whether to tag latest and {MAJOR} if pushing',
@@ -150,7 +150,7 @@ require('yargs')
             })
             .options({
                 'release': {
-                    describe: 'devcontainerss release tag or branch',
+                    describe: 'devcontainers release tag or branch',
                     default: 'main'
                 },
                 'registry': {
@@ -172,8 +172,8 @@ require('yargs')
                         configUtils.getConfig('containerRegistryPath', ''))
                 },
                 'github-repo': {
-                    describe: 'devcontainerss repo name',
-                    default: configUtils.getConfig('githubRepoName', 'microsoft/devcontainerss')
+                    describe: 'devcontainers repo name',
+                    default: configUtils.getConfig('githubRepoName', 'microsoft/devcontainers')
                 },
                 'build': {
                     describe: 'whether to to build the image first step',
@@ -214,7 +214,7 @@ require('yargs')
             })
             .options({
                 'release': {
-                    describe: 'devcontainerss release tag or branch',
+                    describe: 'devcontainers release tag or branch',
                     default: 'main'
                 },
                 'registry': {
@@ -236,8 +236,8 @@ require('yargs')
                         configUtils.getConfig('containerRegistryPath', ''))
                 },
                 'github-repo': {
-                    describe: 'devcontainerss repo name',
-                    default: configUtils.getConfig('githubRepoName', 'microsoft/devcontainerss')
+                    describe: 'devcontainers repo name',
+                    default: configUtils.getConfig('githubRepoName', 'microsoft/devcontainers')
                 },
                 'build': {
                     describe: 'whether to to build the image first step',

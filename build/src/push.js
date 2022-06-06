@@ -68,9 +68,9 @@ async function pushImage(definitionId, repo, release, updateLatest,
         throw `Definition ${definitionId} does not exist! Invalid path: ${definitionPath}`;
     }
 
-    // Look for context in devcontainer.json and use it to build the Dockerfile
-    console.log('(*) Reading devcontainer.json...');
-    const devContainerJsonPath = path.join(dotDevContainerPath, 'devcontainer.json');
+    // Look for context in .devcontainer.json and use it to build the Dockerfile
+    console.log('(*) Reading .devcontainer.json...');
+    const devContainerJsonPath = path.join(dotDevContainerPath, '.devcontainer.json');
     const devContainerJsonRaw = await asyncUtils.readFile(devContainerJsonPath);
     const devContainerJson = jsonc.parse(devContainerJsonRaw);
 
@@ -123,7 +123,7 @@ async function pushImage(definitionId, repo, release, updateLatest,
                 const workingDir = path.resolve(dotDevContainerPath, context);
                 // Add tags to buildx command params
                 const buildParams = versionTags.reduce((prev, current) => prev.concat(['-t', current]), []);
-                // Note: build.args in devcontainer.json is intentionally ignored so you can vary image contents and defaults as needed
+                // Note: build.args in .devcontainer.json is intentionally ignored so you can vary image contents and defaults as needed
                 // Add VARIANT --build-arg if applicable
                 if(variant) {
                     buildParams.push('--build-arg', `VARIANT=${variant}`);
@@ -139,6 +139,17 @@ async function pushImage(definitionId, repo, release, updateLatest,
                     }
                 }
                 const spawnOpts = { stdio: 'inherit', cwd: workingDir, shell: true };
+                //  await asyncUtils.spawn('devcontainer', [
+                //         'build',
+                //         '--workspace-folder', definitionPath,
+                //         '--log-level ', 'info',
+                //         '--progress', 'plain',
+                //         '--no-cache ', 'true',
+                //         '--image-name', 'test'
+                //         // '--platform', pushImages ? architectures.reduce((prev, current) => prev + ',' + current, '').substring(1) : localArchitecture,
+                //         // pushImages ? '--push' : '--load',
+                //         // ...buildParams
+                //     ], spawnOpts);
                 await asyncUtils.spawn('docker', [
                         'buildx',
                         'build',
