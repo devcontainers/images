@@ -81,8 +81,10 @@ async function pushImage(definitionId, repo, release, updateLatest,
             // Build image
             console.log(`(*) Building image...`);
             // Determine tags to use
-            const versionTags = configUtils.getTagList(definitionId, release, updateLatest, registry, registryPath, variant);
-            console.log(`(*) Tags:${versionTags.reduce((prev, current) => prev += `\n     ${current}`, '')}`);
+            const imageNamesWithVersionTags = configUtils.getTagList(definitionId, release, updateLatest, registry, registryPath, variant);
+            const imageName = imageNamesWithVersionTags[0].split(':')[0];
+
+            console.log(`(*) Tags:${imageNamesWithVersionTags.reduce((prev, current) => prev += `\n     ${current}`, '')}`);
             // const buildSettings = configUtils.getBuildSettings(definitionId);
             
             //TODO::Add --platform
@@ -115,23 +117,26 @@ async function pushImage(definitionId, repo, release, updateLatest,
                         'build',
                         '--workspace-folder', definitionPath,
                         '--log-level ', 'info',
-                        '--image-name', definitionId
+                        '--image-name', imageName,
+                        '--no-cache', 'true'
                     ], spawnOpts);
+                
+                if (pushImages) {
+                    console.log(`(*) Pushing to registry.`);
+                    await asyncUtils.spawn('docker', ['image push', `${imageName}/${tag}`], spawnOpts);
+                } else {
+                    console.log(`(*) Skipping push to registry.`);
+                }
 
                 // Retagging definitionId to version tags
-                for (let tag of versionTags ) {
-                    await asyncUtils.spawn('docker', ['image tag', `${definitionId}:latest ${tag}`], spawnOpts);
+                for (let image of imageNamesWithVersionTags ) {
+                    await asyncUtils.spawn('docker', ['image tag', `${imageName}:latest ${image}`], spawnOpts);
 
                     if (pushImages) {
                         console.log(`(*) Pushing to registry.`);
-                        await asyncUtils.spawn('docker', ['image push', `${registry}/${tag}`], spawnOpts);
-                    } else {
-                        console.log(`(*) Skipping push to registry.`);
+                        await asyncUtils.spawn('docker', ['image push', `${registry}/${image}`], spawnOpts);
                     }
                 }
-
-                // Remove `definitionId` image
-                await asyncUtils.spawn('docker', ['image', `rm ${definitionId}:latest`], spawnOpts);
 
             } else {
                 console.log(`(*) Version already published. Skipping.`);
