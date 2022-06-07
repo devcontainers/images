@@ -22,7 +22,7 @@ const allDefinitionPaths = {};
 // Must be called first
 async function loadConfig(repoPath) {
     repoPath = repoPath || path.join(__dirname, '..', '..', '..');
-    const definitionBuildConfigFile = getConfig('definitionBuildConfigFile', 'definition-manifest.json');
+    const definitionBuildConfigFile = getConfig('definitionBuildConfigFile', 'manifest.json');
 
     // Get list of definition folders
     const containersPath = path.join(repoPath, 'src');
@@ -575,7 +575,7 @@ function getFallbackPoolUrl(package) {
 
 async function getStagingFolder(release) {
     if (!stagingFolders[release]) {
-        const stagingFolder = path.join(os.tmpdir(), 'dev-containers', release);
+        const stagingFolder = path.join(os.tmpdir(), 'devcontainers', release);
         console.log(`(*) Copying files to ${stagingFolder}\n`);
         await asyncUtils.rimraf(stagingFolder); // Clean out folder if it exists
         await asyncUtils.mkdirp(stagingFolder); // Create the folder

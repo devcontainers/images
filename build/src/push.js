@@ -35,15 +35,15 @@ async function push(repo, release, updateLatest, registry, registryPath, stubReg
     // builder avoids problems with the default config being different otherwise altered. It also can
     // be tweaked down the road to use a different driver like using separate machines per architecture.
     // See https://docs.docker.com/engine/reference/commandline/buildx_create/
-    console.log('(*) Setting up builder...');
-    const builders = await asyncUtils.exec('docker buildx ls');
-    if(builders.indexOf('devcontainers') < 0) {
-        await asyncUtils.spawn('docker', ['buildx', 'create', '--use', '--name', 'devcontainers']);
-    } else {
-        await asyncUtils.spawn('docker', ['buildx', 'use', 'devcontainers']);
-    }
-    // This step sets up the QEMU emulators for cross-platform builds. See https://github.com/docker/buildx#building-multi-platform-images
-    await asyncUtils.spawn('docker', ['run', '--privileged', '--rm', 'tonistiigi/binfmt', '--install', 'all']);
+    // console.log('(*) Setting up builder...');
+    // const builders = await asyncUtils.exec('docker buildx ls');
+    // if(builders.indexOf('devcontainers') < 0) {
+    //     await asyncUtils.spawn('docker', ['buildx', 'create', '--use', '--name', 'devcontainers']);
+    // } else {
+    //     await asyncUtils.spawn('docker', ['buildx', 'use', 'devcontainers']);
+    // }
+    // // This step sets up the QEMU emulators for cross-platform builds. See https://github.com/docker/buildx#building-multi-platform-images
+    // await asyncUtils.spawn('docker', ['run', '--privileged', '--rm', 'tonistiigi/binfmt', '--install', 'all']);
 
     // Build and push subset of images
     const definitionsToPush = definitionId ? [definitionId] : configUtils.getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip);
@@ -139,34 +139,39 @@ async function pushImage(definitionId, repo, release, updateLatest,
                     }
                 }
                 const spawnOpts = { stdio: 'inherit', cwd: workingDir, shell: true };
-                //  await asyncUtils.spawn('devcontainer', [
-                //         'build',
-                //         '--workspace-folder', definitionPath,
-                //         '--log-level ', 'info',
-                //         '--progress', 'plain',
-                //         '--no-cache ', 'true',
-                //         '--image-name', 'test'
-                //         // '--platform', pushImages ? architectures.reduce((prev, current) => prev + ',' + current, '').substring(1) : localArchitecture,
-                //         // pushImages ? '--push' : '--load',
-                //         // ...buildParams
-                //     ], spawnOpts);
-                await asyncUtils.spawn('docker', [
-                        'buildx',
+                 await asyncUtils.spawn('devcontainer', [
                         'build',
-                        workingDir,
-                        '-f', dockerFilePath, 
-                        '--label', `version=${prepResult.meta.version}`,
-                        `--label`, `${imageLabelPrefix}.id=${prepResult.meta.definitionId}`,
-                        '--label', `${imageLabelPrefix}.variant=${prepResult.meta.variant}`,
-                        '--label', `${imageLabelPrefix}.release=${prepResult.meta.gitRepositoryRelease}`,
-                        '--label', `${imageLabelPrefix}.source=${prepResult.meta.gitRepository}`,
-                        '--label', `${imageLabelPrefix}.timestamp='${prepResult.meta.buildTimestamp}'`,
-                        '--builder', 'devcontainers',
-                        '--progress', 'plain',
-                        '--platform', pushImages ? architectures.reduce((prev, current) => prev + ',' + current, '').substring(1) : localArchitecture,
-                        pushImages ? '--push' : '--load',
-                        ...buildParams
+                        '--workspace-folder', definitionPath,
+                        '--log-level ', 'info',
+                        '--no-cache ', 'true',
+                        '--image-name', definitionId
                     ], spawnOpts);
+
+                // Retagging definitionId to tags
+                for (let tag of versionTags ) {
+                    await asyncUtils.spawn('docker', ['tag', `${definitionId}:latest ${tag}`], spawnOpts);
+                }
+
+                // Remove `definitionId` image
+                await asyncUtils.spawn('docker', ['image', `rm ${definitionId}:latest`], spawnOpts);
+
+                // await asyncUtils.spawn('docker', [
+                //         'buildx',
+                //         'build',
+                //         workingDir,
+                //         '-f', dockerFilePath, 
+                //         '--label', `version=${prepResult.meta.version}`,
+                //         `--label`, `${imageLabelPrefix}.id=${prepResult.meta.definitionId}`,
+                //         '--label', `${imageLabelPrefix}.variant=${prepResult.meta.variant}`,
+                //         '--label', `${imageLabelPrefix}.release=${prepResult.meta.gitRepositoryRelease}`,
+                //         '--label', `${imageLabelPrefix}.source=${prepResult.meta.gitRepository}`,
+                //         '--label', `${imageLabelPrefix}.timestamp='${prepResult.meta.buildTimestamp}'`,
+                //         '--builder', 'devcontainers',
+                //         '--progress', 'plain',
+                //         '--platform', pushImages ? architectures.reduce((prev, current) => prev + ',' + current, '').substring(1) : localArchitecture,
+                //         pushImages ? '--push' : '--load',
+                //         ...buildParams
+                //     ], spawnOpts);
                 if (!pushImages) {
                     console.log(`(*) Skipping push to registry.`);
                 }
