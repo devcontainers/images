@@ -9,9 +9,6 @@ const asyncUtils = require('./utils/async');
 const configUtils = require('./utils/config');
 const prep = require('./prep');
 
-// TODO: Add --label
-// const imageLabelPrefix = configUtils.getConfig('imageLabelPrefix', 'dev.containers');
-
 async function push(repo, release, updateLatest, registry, registryPath, stubRegistry,
     stubRegistryPath, pushImages, prepOnly, definitionsToSkip, page, pageTotal, replaceImages, definitionId) {
 

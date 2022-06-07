@@ -20,14 +20,12 @@ const dockerFilePreamble = configUtils.getConfig('dockerFilePreamble');
 
 const historyUrlPrefix = configUtils.getConfig('historyUrlPrefix');
 const repositoryUrl = configUtils.getConfig('repositoryUrl');
+const imageLabelPrefix = configUtils.getConfig('imageLabelPrefix', 'dev.containers');
 
 // Prepares dockerfile for building or packaging
 async function prepDockerFile(devContainerDockerfilePath, definitionId, repo, release, registry, registryPath, stubRegistry, stubRegistryPath, isForBuild, variant) {
-    const devContainerJsonPath = path.dirname(devContainerDockerfilePath);
-
     // Read Dockerfile
     const devContainerDockerfileRaw = await asyncUtils.readFile(devContainerDockerfilePath);
-
     // Use exact version of building, MAJOR if not
     const version = isForBuild ? configUtils.getVersionFromRelease(release, definitionId) : configUtils.majorFromRelease(release, definitionId);
 
@@ -75,6 +73,9 @@ async function prepDockerFile(devContainerDockerfilePath, definitionId, repo, re
             // Modify Dockerfile contents to use flattened image tag
             prepResult.devContainerDockerfileModified = replaceFrom(prepResult.devContainerDockerfileModified, `FROM ${prepResult.flattenedBaseImageTag}`);
         }
+
+        // Add custom metadata to the image by adding labels
+        prepResult.devContainerDockerfileModified = addLabels(prepResult);
     } else {
         // Otherwise update any Dockerfiles that refer to an un-versioned tag of another dev container
         // to the MAJOR version from this release.
@@ -191,6 +192,18 @@ async function updateScriptSources(devContainerDockerfileRaw, repo, release, upd
 
 function replaceFrom(dockerFileContents, newFromSection) {
     return dockerFileContents.replace(/(#\s+\[Choice\].+\n)?(ARG\s+VARIANT\s*=\s*.+\n)?(FROM\s+[^\s\n]+)/, newFromSection);
+}
+
+function addLabels(prepResult) {
+    const versionLabel = `LABEL version="${prepResult.meta.version}"\n`
+    const idLabel = `LABEL ${imageLabelPrefix}.id="${prepResult.meta.definitionId}"\n`
+    const variantLabel = `LABEL ${imageLabelPrefix}.variant="${prepResult.meta.variant}"\n`
+    const releaseLabel = `LABEL ${imageLabelPrefix}.release="${prepResult.meta.gitRepositoryRelease}"\n`
+    const sourceLabel = `LABEL ${imageLabelPrefix}.source="${prepResult.meta.gitRepository}"\n`
+    const timestampLabel = `LABEL ${imageLabelPrefix}.timestamp="${prepResult.meta.buildTimestamp}"\n`
+
+    let dockerFileContentsWithLabels = prepResult.devContainerDockerfileModified +'\n' +versionLabel +idLabel +variantLabel +releaseLabel +sourceLabel +timestampLabel;
+    return dockerFileContentsWithLabels;
 }
 
 module.exports = {
