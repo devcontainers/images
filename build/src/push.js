@@ -123,7 +123,7 @@ async function pushImage(definitionId, repo, release, updateLatest,
                 
                 if (pushImages) {
                     console.log(`(*) Pushing to registry.`);
-                    await asyncUtils.spawn('docker', ['image push', `${imageName}/${tag}`], spawnOpts);
+                    await asyncUtils.spawn('docker', [`image push ${imageName}`], spawnOpts);
                 } else {
                     console.log(`(*) Skipping push to registry.`);
                 }
@@ -134,7 +134,7 @@ async function pushImage(definitionId, repo, release, updateLatest,
 
                     if (pushImages) {
                         console.log(`(*) Pushing to registry.`);
-                        await asyncUtils.spawn('docker', ['image push', `${registry}/${image}`], spawnOpts);
+                        await asyncUtils.spawn('docker', [`image push ${image}`], spawnOpts);
                     }
                 }
 

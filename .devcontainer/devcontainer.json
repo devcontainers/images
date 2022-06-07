@@ -1,0 +1,15 @@
+{
+    "features": {
+        "azure-cli": "latest"
+	},
+    "postCreateCommand": "npm install -g @devcontainers/cli",
+    "customizations": {
+        "codespaces": {
+            "repositories": {
+                "devcontainers/features": {
+                    "permissions": "write-all"
+                }
+            }
+        }
+    }
+}

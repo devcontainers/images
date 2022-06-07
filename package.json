@@ -13,7 +13,6 @@
 	],
   "devDependencies": {
     "mkdirp": "0.5.5",
-    "@devcontainers/cli": "^0.5.0",
     "copyfiles": "^2.4.1",
     "handlebars": "^4.7.7",
     "jsonc": "^2.0.0",
