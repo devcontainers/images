@@ -9,7 +9,8 @@ const asyncUtils = require('./utils/async');
 const configUtils = require('./utils/config');
 const prep = require('./prep');
 
-const imageLabelPrefix = configUtils.getConfig('imageLabelPrefix', 'dev.containers');
+// TODO: Add --label
+// const imageLabelPrefix = configUtils.getConfig('imageLabelPrefix', 'dev.containers');
 
 async function push(repo, release, updateLatest, registry, registryPath, stubRegistry,
     stubRegistryPath, pushImages, prepOnly, definitionsToSkip, page, pageTotal, replaceImages, definitionId) {
@@ -29,21 +30,6 @@ async function push(repo, release, updateLatest, registry, registryPath, stubReg
     // Stage content
     const stagingFolder = await configUtils.getStagingFolder(release);
     await configUtils.loadConfig(stagingFolder);
-
-    // Use or create a buildx / buildkit "builder" that using the docker-container driver which internally 
-    // uses QEMU to emulate different architectures for cross-platform builds. Setting up a separate
-    // builder avoids problems with the default config being different otherwise altered. It also can
-    // be tweaked down the road to use a different driver like using separate machines per architecture.
-    // See https://docs.docker.com/engine/reference/commandline/buildx_create/
-    // console.log('(*) Setting up builder...');
-    // const builders = await asyncUtils.exec('docker buildx ls');
-    // if(builders.indexOf('devcontainers') < 0) {
-    //     await asyncUtils.spawn('docker', ['buildx', 'create', '--use', '--name', 'devcontainers']);
-    // } else {
-    //     await asyncUtils.spawn('docker', ['buildx', 'use', 'devcontainers']);
-    // }
-    // // This step sets up the QEMU emulators for cross-platform builds. See https://github.com/docker/buildx#building-multi-platform-images
-    // await asyncUtils.spawn('docker', ['run', '--privileged', '--rm', 'tonistiigi/binfmt', '--install', 'all']);
 
     // Build and push subset of images
     const definitionsToPush = definitionId ? [definitionId] : configUtils.getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip);
@@ -97,84 +83,56 @@ async function pushImage(definitionId, repo, release, updateLatest,
             // Determine tags to use
             const versionTags = configUtils.getTagList(definitionId, release, updateLatest, registry, registryPath, variant);
             console.log(`(*) Tags:${versionTags.reduce((prev, current) => prev += `\n     ${current}`, '')}`);
-            const buildSettings = configUtils.getBuildSettings(definitionId);
-            let architectures = buildSettings.architectures;
-            switch (typeof architectures) {
-                case 'string': architectures = [architectures]; break;
-                case 'object': if (!Array.isArray(architectures)) { architectures = architectures[variant]; } break;
-                case 'undefined': architectures = ['linux/amd64']; break;
-            }
-            console.log(`(*) Target image architectures: ${architectures.reduce((prev, current) => prev += `\n     ${current}`, '')}`);
-            let localArchitecture = process.arch;
-            switch(localArchitecture) {
-                case 'arm': localArchitecture = 'linux/arm/v7'; break;
-                case 'aarch32': localArchitecture = 'linux/arm/v7'; break;
-                case 'aarch64': localArchitecture = 'linux/arm64'; break;
-                case 'x64': localArchitecture = 'linux/amd64'; break;
-                case 'x32': localArchitecture = 'linux/386'; break;
-                default: localArchitecture = `linux/${localArchitecture}`; break;
-            }
-            console.log(`(*) Local architecture: ${localArchitecture}`);
-            if (!pushImages) {
-                console.log(`(*) Push disabled: Only building local architecture (${localArchitecture}).`);
-            }
+            // const buildSettings = configUtils.getBuildSettings(definitionId);
+            
+            //TODO::Add --platform
+            // let architectures = buildSettings.architectures;
+            // switch (typeof architectures) {
+            //     case 'string': architectures = [architectures]; break;
+            //     case 'object': if (!Array.isArray(architectures)) { architectures = architectures[variant]; } break;
+            //     case 'undefined': architectures = ['linux/amd64']; break;
+            // }
+            // console.log(`(*) Target image architectures: ${architectures.reduce((prev, current) => prev += `\n     ${current}`, '')}`);
+            // let localArchitecture = process.arch;
+            // switch(localArchitecture) {
+            //     case 'arm': localArchitecture = 'linux/arm/v7'; break;
+            //     case 'aarch32': localArchitecture = 'linux/arm/v7'; break;
+            //     case 'aarch64': localArchitecture = 'linux/arm64'; break;
+            //     case 'x64': localArchitecture = 'linux/amd64'; break;
+            //     case 'x32': localArchitecture = 'linux/386'; break;
+            //     default: localArchitecture = `linux/${localArchitecture}`; break;
+            // }
+            // console.log(`(*) Local architecture: ${localArchitecture}`);
+            // if (!pushImages) {
+            //     console.log(`(*) Push disabled: Only building local architecture (${localArchitecture}).`);
+            // }
             if (replaceImage || !await isDefinitionVersionAlreadyPublished(definitionId, release, registry, registryPath, variant)) {
                 const context = devContainerJson.build ? devContainerJson.build.context || '.' : devContainerJson.context || '.';
                 const workingDir = path.resolve(dotDevContainerPath, context);
-                // Add tags to buildx command params
-                const buildParams = versionTags.reduce((prev, current) => prev.concat(['-t', current]), []);
-                // Note: build.args in .devcontainer.json is intentionally ignored so you can vary image contents and defaults as needed
-                // Add VARIANT --build-arg if applicable
-                if(variant) {
-                    buildParams.push('--build-arg', `VARIANT=${variant}`);
-                }
-                // Generate list of --build-arg values if applicable
-                for (let buildArg in buildSettings.buildArgs || {}) {
-                    buildParams.push('--build-arg', `${buildArg}=${buildSettings.buildArgs[buildArg]}`);
-                }
-                // Generate list of variant specific --build-arg values if applicable
-                if (buildSettings.variantBuildArgs) {
-                    for (let buildArg in buildSettings.variantBuildArgs[variant] || {}) {
-                        buildParams.push('--build-arg', `${buildArg}=${buildSettings.variantBuildArgs[variant][buildArg]}`);
-                    }
-                }
+
                 const spawnOpts = { stdio: 'inherit', cwd: workingDir, shell: true };
                  await asyncUtils.spawn('devcontainer', [
                         'build',
                         '--workspace-folder', definitionPath,
                         '--log-level ', 'info',
-                        '--no-cache ', 'true',
                         '--image-name', definitionId
                     ], spawnOpts);
 
-                // Retagging definitionId to tags
+                // Retagging definitionId to version tags
                 for (let tag of versionTags ) {
-                    await asyncUtils.spawn('docker', ['tag', `${definitionId}:latest ${tag}`], spawnOpts);
+                    await asyncUtils.spawn('docker', ['image tag', `${definitionId}:latest ${tag}`], spawnOpts);
+
+                    if (pushImages) {
+                        console.log(`(*) Pushing to registry.`);
+                        await asyncUtils.spawn('docker', ['image push', `${registry}/${tag}`], spawnOpts);
+                    } else {
+                        console.log(`(*) Skipping push to registry.`);
+                    }
                 }
 
                 // Remove `definitionId` image
                 await asyncUtils.spawn('docker', ['image', `rm ${definitionId}:latest`], spawnOpts);
 
-                // await asyncUtils.spawn('docker', [
-                //         'buildx',
-                //         'build',
-                //         workingDir,
-                //         '-f', dockerFilePath, 
-                //         '--label', `version=${prepResult.meta.version}`,
-                //         `--label`, `${imageLabelPrefix}.id=${prepResult.meta.definitionId}`,
-                //         '--label', `${imageLabelPrefix}.variant=${prepResult.meta.variant}`,
-                //         '--label', `${imageLabelPrefix}.release=${prepResult.meta.gitRepositoryRelease}`,
-                //         '--label', `${imageLabelPrefix}.source=${prepResult.meta.gitRepository}`,
-                //         '--label', `${imageLabelPrefix}.timestamp='${prepResult.meta.buildTimestamp}'`,
-                //         '--builder', 'devcontainers',
-                //         '--progress', 'plain',
-                //         '--platform', pushImages ? architectures.reduce((prev, current) => prev + ',' + current, '').substring(1) : localArchitecture,
-                //         pushImages ? '--push' : '--load',
-                //         ...buildParams
-                //     ], spawnOpts);
-                if (!pushImages) {
-                    console.log(`(*) Skipping push to registry.`);
-                }
             } else {
                 console.log(`(*) Version already published. Skipping.`);
             }

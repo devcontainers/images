@@ -6,10 +6,6 @@
 const path = require('path');
 const asyncUtils = require('./utils/async');
 const configUtils = require('./utils/config');
-const mkdirp = require('mkdirp');
-const glob = require('glob');
-const handlebars = require('handlebars');
-let metaEnvTemplate;
 
 const scriptSHA = {};
 

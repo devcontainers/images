@@ -1,5 +1,17 @@
 {
-  "dependencies": {
+  "name": "dev-containers",
+	"version": "0.0.1",
+	"description": "Dev Containers: Definitions",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/devcontainers/images.git"
+	},
+	"author": "Microsoft Corporation",
+	"license": "SEE LICENSE IN LICENSE.md",
+  "files": [
+		"src"
+	],
+  "devDependencies": {
     "mkdirp": "0.5.5",
     "@devcontainers/cli": "^0.5.0",
     "copyfiles": "^2.4.1",

@@ -36,7 +36,9 @@ jobs:
         creds: ${{ secrets.AZ_ACR_CREDS }}
 
     - name: Build and push dev tags
-      id: build_and_push
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
+      id: build_and_push     
       run: |
         set -e
 

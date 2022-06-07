@@ -15,7 +15,8 @@
 
 	"filesToStage": [
 		"src/**/!(test-project|history)/*",
-		"LICENSE"
+		"LICENSE",
+		"package.json"
 	],
 
 	"needsDedicatedPage": [ 
