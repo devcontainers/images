@@ -45,7 +45,7 @@ async function pushImage(definitionId, repo, release, updateLatest,
     const dotDevContainerPath = definitionPath;
     // Use Dockerfile for image build
     const dockerFilePath = path.join(dotDevContainerPath, 'Dockerfile');
-    
+
     // Make sure there's a Dockerfile present
     if (!await asyncUtils.exists(dockerFilePath)) {
         throw `Definition ${definitionId} does not exist! Invalid path: ${definitionPath}`;
@@ -83,7 +83,7 @@ async function pushImage(definitionId, repo, release, updateLatest,
 
             console.log(`(*) Tags:${imageNamesWithVersionTags.reduce((prev, current) => prev += `\n     ${current}`, '')}`);
             // const buildSettings = configUtils.getBuildSettings(definitionId);
-            
+
             //TODO::Add --platform
             // let architectures = buildSettings.architectures;
             // switch (typeof architectures) {
@@ -110,14 +110,14 @@ async function pushImage(definitionId, repo, release, updateLatest,
                 const workingDir = path.resolve(dotDevContainerPath, context);
 
                 const spawnOpts = { stdio: 'inherit', cwd: workingDir, shell: true };
-                 await asyncUtils.spawn('devcontainer', [
-                        'build',
-                        '--workspace-folder', definitionPath,
-                        '--log-level ', 'info',
-                        '--image-name', imageName,
-                        '--no-cache', 'true'
-                    ], spawnOpts);
-                
+                await asyncUtils.spawn('devcontainer', [
+                    'build',
+                    '--workspace-folder', definitionPath,
+                    '--log-level ', 'info',
+                    '--image-name', imageName,
+                    '--no-cache', 'true'
+                ], spawnOpts);
+
                 if (pushImages) {
                     console.log(`(*) Pushing to registry.`);
                     await asyncUtils.spawn('docker', [`image push ${imageName}`], spawnOpts);
@@ -126,7 +126,7 @@ async function pushImage(definitionId, repo, release, updateLatest,
                 }
 
                 // Retagging definitionId to version tags
-                for (let image of imageNamesWithVersionTags ) {
+                for (let image of imageNamesWithVersionTags) {
                     await asyncUtils.spawn('docker', ['image tag', `${imageName}:latest ${image}`], spawnOpts);
 
                     if (pushImages) {

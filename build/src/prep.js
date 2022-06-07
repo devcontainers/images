@@ -125,7 +125,7 @@ async function processStub(userDockerFile, definitionId, repo, release, baseDock
         const variant = configUtils.getVariants(definitionId)[0];
         const tagWithVariant = configUtils.getTagsForVersion(definitionId, devContainerImageVersion, registry, registryPath, '${VARIANT}')[0];
         // Handle scenario where "# [Choice]" comment exists
-        const choiceCaptureGroup=/(#\s+\[Choice\].+\n)ARG\s+VARIANT\s*=/.exec(userDockerFile);
+        const choiceCaptureGroup = /(#\s+\[Choice\].+\n)ARG\s+VARIANT\s*=/.exec(userDockerFile);
         if (choiceCaptureGroup) {
             fromSection += choiceCaptureGroup[1];
         }
@@ -202,7 +202,7 @@ function addLabels(prepResult) {
     const sourceLabel = `LABEL ${imageLabelPrefix}.source="${prepResult.meta.gitRepository}"\n`
     const timestampLabel = `LABEL ${imageLabelPrefix}.timestamp="${prepResult.meta.buildTimestamp}"\n`
 
-    let dockerFileContentsWithLabels = prepResult.devContainerDockerfileModified +'\n' +versionLabel +idLabel +variantLabel +releaseLabel +sourceLabel +timestampLabel;
+    let dockerFileContentsWithLabels = prepResult.devContainerDockerfileModified + '\n' + versionLabel + idLabel + variantLabel + releaseLabel + sourceLabel + timestampLabel;
     return dockerFileContentsWithLabels;
 }
 
