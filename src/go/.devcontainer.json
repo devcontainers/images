@@ -8,7 +8,11 @@
     },
     "features": { // TODO: Change to array syntax
         "devcontainers/features/common@v0.0.1": {
-            "version": "latest"
+            "install_Zsh": "true",
+            "username": "vscode",
+            "user_uid": "1000",
+            "user_gid": "1000",
+            "upgrade_packages": "true"
         },
         "devcontainers/features/go@v0.0.1": {
             "version": "none"
