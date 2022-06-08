@@ -94,27 +94,11 @@ RUN chsh -s /bin/bash ${USERNAME} \
 
 # Default to bash shell (other shells available at /usr/bin/fish and /usr/bin/zsh)
 ENV SHELL=/bin/bash \
-    ORYX_ENV_TYPE=vsonline-present \
-    PHP_ROOT="/usr/local/php" \
-    PYTHON_ROOT="/usr/local/python" \
-    DOTNET_ROOT="/usr/local/dotnet" \
-    HUGO_ROOT="/usr/local/hugo" \
-    NVM_SYMLINK_CURRENT=true \
     NVM_DIR="/usr/local/share/nvm" \
     NVS_HOME="/home/${USERNAME}/.nvs" \
-    PIPX_BIN_DIR="/usr/local/py-utils/bin" \
-    RVM_PATH="/usr/local/rvm" \
-    RAILS_DEVELOPMENT_HOSTS=".githubpreview.dev" \ 
-    GOROOT="/usr/local/go" \
-    GOPATH="/go" \
-    SDKMAN_DIR="/usr/local/sdkman" \
-    ANACONDA="/usr/local/anaconda" \
-    ORYX="/usr/local/oryx" \
     DOCKER_BUILDKIT=1 \
-    ORYX_SDK_STORAGE_BASE_URL="https://oryx-cdn.microsoft.io" \
-    ENABLE_DYNAMIC_INSTALL="true"
 
-ENV PATH="${PATH}:${NVM_DIR}/current/bin:${PYTHON_ROOT}/current/bin:${SDKMAN_DIR}/bin:${SDKMAN_DIR}/candidates/gradle/current/bin:${SDKMAN_DIR}/candidates/java/current/bin:${SDKMAN_DIR}/candidates/maven/current/bin:${GOROOT}/bin:${GOPATH}/bin:${PIPX_BIN_DIR}:${ANACONDA}/bin:${PHP_ROOT}/current/bin:${HUGO_ROOT}/bin:${ORYX}:${RVM_PATH}/gems/default/bin:${RVM_PATH}/gems/default@global/bin:/${RVM_PATH}/rubies/default/bin:${NVS_HOME}:${DOTNET_ROOT}/current"
+ENV PATH="${PATH}:${NVS_HOME}"
 
 # Run setup user script
 RUN bash /tmp/scripts/setup-user.sh "${USERNAME}" "${PATH}" 
