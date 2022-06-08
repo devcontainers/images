@@ -38,13 +38,22 @@ elif [ "${USERNAME}" = "none" ] || ! id -u ${USERNAME} > /dev/null 2>&1; then
     USERNAME=root
 fi
 
+sudo_if() {
+    COMMAND="$*"
+    if [ "$(id -u)" -eq 0 ] && [ "$USERNAME" != "root" ]; then
+        su - "$USERNAME" -c "$COMMAND"
+    else
+        "$COMMAND"
+    fi
+}
+
 export DEBIAN_FRONTEND=noninteractive
 
 PACKAGES="keras matplotlib numpy pandas plotly requests scikit-learn scipy seaborn tensorflow torch"
 
 if [[ -d "${PYTHON_INSTALL_PATH}" ]] && [[ -d "${PIPX_BIN_DIR}" ]]; then
     PATH="$PATH:$PYTHON_INSTALL_PATH:$PIPX_BIN_DIR"
-    "${PYTHON_INSTALL_PATH}/python" -m pip install --user --upgrade --no-cache-dir $PACKAGES
+    sudo_if "${PYTHON_INSTALL_PATH}/python3" -m pip install --user --upgrade --no-cache-dir $PACKAGES
 else
     "(*) Error: Need to install python."
 fi
