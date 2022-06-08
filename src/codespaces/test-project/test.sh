@@ -14,8 +14,8 @@ check "oryx" oryx --version
 
 # Check .NET
 check "dotnet" dotnet --list-sdks
-check "oryx-install-dotnet-3.1" oryx prep --skip-detection --platforms-and-versions dotnet=2.1.806
-check "dotnet-2-installed-by-oryx" ls /tmp/oryx/platforms/dotnet/ | grep 2.1.806
+check "oryx-install-dotnet-2.1" oryx prep --skip-detection --platforms-and-versions dotnet=2.1.12
+check "dotnet-2-installed-by-oryx" ls /tmp/oryx/platforms/dotnet/ | grep 2.1.12
 echo $(echo "dotnet versions" ls -a /usr/local/dotnet)
 
 # Check Python
@@ -67,7 +67,7 @@ echo $(echo "ruby versions" ls -a /usr/local/rvm/rubies)
 mkdir jekyll-test
 cd jekyll-test
 touch _config.yml
-check "oryx-build-jekyll" oryx build --apptype static-sites --manifest-dir /tmp
+check "oryx-build-jekyll" sudo oryx build --apptype static-sites --manifest-dir /tmp
 check "jekyll" gem list jekyll
 cd ..
 rm -rf jekyll-test
