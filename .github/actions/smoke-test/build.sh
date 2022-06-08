@@ -12,5 +12,5 @@ cd build
 chmod +x devcontainers-cli-0.3.0.tgz
 
 echo "(*) Building image - ${DEFINITION}"
-npx --yes devcontainers-cli-0.3.0.tgz build --workspace-folder ../src/${DEFINITION} --image-name vsc-${DEFINITION}
+npx --yes devcontainers-cli-0.3.0.tgz up --workspace-folder ../src/${DEFINITION}
 # devcontainer build --workspace-folder "src/${DEFINITION}/" --image-name vsc-${DEFINITION}
