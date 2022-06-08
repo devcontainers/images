@@ -24,5 +24,4 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         definition: alpine
-        image: vsc-alpine
         user: vscode

@@ -27,5 +27,4 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         definition: cpp
-        image: vsc-cpp
         user: vscode

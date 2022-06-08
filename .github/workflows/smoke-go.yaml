@@ -29,5 +29,4 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         definition: go
-        image: vsc-go
         user: vscode

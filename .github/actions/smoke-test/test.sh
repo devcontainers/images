@@ -1,17 +1,8 @@
 #/bin/bash
 DEFINITION="$1"
-IMAGE="$2"
-USERNAME="$3"
-
-# Run test script for image if one exists
+USERNAME="$2"
 
 export DOCKER_BUILDKIT=1
-
-if [ "${IMAGE}" = "none" ]; then
-    echo "Image not specified. Aborting test."
-    exit 0
-fi
-
 set -e
 
 # Run actual test
