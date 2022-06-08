@@ -6,9 +6,6 @@ source test-utils.sh codespace
 # Run common tests
 checkCommon
 
-# Check default extensions
-checkExtension "gitHub.vscode-pull-request-github"
-
 # Check Oryx
 check "oryx" oryx --version
 
