@@ -64,7 +64,7 @@ echo $(echo "ruby versions" ls -a /usr/local/rvm/rubies)
 mkdir jekyll-test
 cd jekyll-test
 touch _config.yml
-check "oryx-build-jekyll" sudo oryx build --apptype static-sites --manifest-dir /tmp
+check "oryx-build-jekyll" oryx build --apptype static-sites --manifest-dir /tmp
 check "jekyll" gem list jekyll
 cd ..
 rm -rf jekyll-test
