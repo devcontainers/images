@@ -53,6 +53,12 @@
             }
         },
         {
+            "id": "./local-features/machine-learning-packages",
+            "options": {
+
+            }
+        },
+        {
             "id": "devcontainers/features/php@v0.0.1",
             "options": {
                 "version": "8.0.16",

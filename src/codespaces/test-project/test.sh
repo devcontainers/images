@@ -35,16 +35,16 @@ check "virtualenv" virtualenv --version
 echo $(echo "python versions" ls -a /usr/local/python)
 
 # Check Python packages
-check "numpy" python -c 'import numpy'
-check "pandas" python -c 'import pandas'
-check "scipy" python -c 'import scipy'
-check "matplotlib" python -c 'import matplotlib'
-check "seaborn" python -c 'import seaborn'
-check "scikit-learn" python -c 'import sklearn'
-check "tensorflow" python -c 'import tensorflow'
-check "keras" python -c 'import keras'
-check "torch" python -c 'import torch'
-check "requests" python -c 'import requests'
+check "numpy" python -c "import numpy; print(numpy.__version__)"
+check "pandas" python -c "import pandas; print(pandas.__version__)"
+check "scipy" python -c "import scipy; print(scipy.__version__)"
+check "matplotlib" python -c "import matplotlib; print(matplotlib.__version__)"
+check "seaborn" python -c "import seaborn; print(seaborn.__version__)"
+check "scikit-learn" python -c "import sklearn; print(sklearn.__version__)"
+check "tensorflow" python -c "import tensorflow; print(tensorflow.__version__)"
+check "keras" python -c "import keras; print(keras.__version__)"
+check "torch" python -c "import torch; print(torch.__version__)"
+check "requests" python -c "import requests; print(requests.__version__)"
 
 # Check JupyterLab
 check "jupyter-lab" jupyter-lab --version
