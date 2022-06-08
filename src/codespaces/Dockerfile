@@ -96,7 +96,7 @@ RUN chsh -s /bin/bash ${USERNAME} \
 ENV SHELL=/bin/bash \
     NVM_DIR="/usr/local/share/nvm" \
     NVS_HOME="/home/${USERNAME}/.nvs" \
-    DOCKER_BUILDKIT=1 \
+    DOCKER_BUILDKIT=1
 
 ENV PATH="${PATH}:${NVS_HOME}"
 

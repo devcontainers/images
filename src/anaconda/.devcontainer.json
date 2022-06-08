@@ -4,7 +4,7 @@
         "context": "."
     },
     "features": { // TODO: Change to array syntax
-        "devcontainers/features/node@v0.0.1": {
+        "devcontainers/features/node@v0.0.2": {
             "version": "latest"
         }
     }

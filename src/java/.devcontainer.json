@@ -8,7 +8,7 @@
     },
     "features": [
         {
-            "id": "devcontainers/features/java@v0.0.1",
+            "id": "devcontainers/features/java@v0.0.2",
             "options": {
                 "version": "none"
             }
@@ -26,7 +26,7 @@
             }
         },
         {
-            "id": "devcontainers/features/node@v0.0.1",
+            "id": "devcontainers/features/node@v0.0.2",
             "options": {
                 "version": "none"
             }
