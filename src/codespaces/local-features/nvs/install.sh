@@ -56,12 +56,13 @@ check_packages() {
     fi
 }
 
-sudo_if() {
-    COMMAND="$*"
-    if [ "$(id -u)" -eq 0 ] && [ "$USERNAME" != "root" ]; then
-        su - "$USERNAME" -c "$COMMAND"
-    else
-        "$COMMAND"
+updaterc() {
+    echo "Updating /etc/bash.bashrc and /etc/zsh/zshrc..."
+    if [[ "$(cat /etc/bash.bashrc)" != *"$1"* ]]; then
+        echo -e "$1" >> /etc/bash.bashrc
+    fi
+    if [ -f "/etc/zsh/zshrc" ] && [[ "$(cat /etc/zsh/zshrc)" != *"$1"* ]]; then
+        echo -e "$1" >> /etc/zsh/zshrc
     fi
 }
 
@@ -71,16 +72,16 @@ export DEBIAN_FRONTEND=noninteractive
 check_packages git
 
 git config --global --add safe.directory ${NVS_HOME}
-sudo_if mkdir -p ${NVS_HOME} 
+mkdir -p ${NVS_HOME} 
 chown -R ${USERNAME} ${NVS_HOME}
-sudo_if -u ${USERNAME} git clone -c advice.detachedHead=false --depth 1 https://github.com/jasongin/nvs ${NVS_HOME} 2>&1
+git clone -c advice.detachedHead=false --depth 1 https://github.com/jasongin/nvs ${NVS_HOME} 2>&1
 (cd ${NVS_HOME} && git remote get-url origin && echo $(git log -n 1 --pretty=format:%H -- .)) > ${NVS_HOME}/.git-remote-and-commit
-sudo_if -u ${USERNAME} bash ${NVS_HOME}/nvs.sh install
+bash ${NVS_HOME}/nvs.sh install
 rm ${NVS_HOME}/cache/*
 
 # Clean up
 rm -rf ${NVS_HOME}/.git
 
-updaterc "export PATH=${PATH}:${NVS_HOME}"
+updaterc "if [[ \"\${PATH}\" != *\"${NVS_HOME}\"* ]]; then export PATH=${NVS_HOME}:\${PATH}; fi"
 
 echo "Done!"
