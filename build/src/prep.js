@@ -74,6 +74,14 @@ async function prepDockerFile(devContainerDockerfilePath, definitionId, repo, re
             prepResult.devContainerDockerfileModified = replaceFrom(prepResult.devContainerDockerfileModified, `FROM ${prepResult.flattenedBaseImageTag}`);
         }
 
+        // Add variant as an argument to the dockerfile
+        if (variant) {
+            addVariantArg(prepResult);
+        }
+
+        // Generate list of other arguments if applicable and add to the dockefile
+        addBuildArguments(prepResult);
+
         // Add custom metadata to the image by adding labels
         prepResult.devContainerDockerfileModified = addLabels(prepResult);
     } else {
@@ -204,6 +212,32 @@ function addLabels(prepResult) {
 
     let dockerFileContentsWithLabels = prepResult.devContainerDockerfileModified + '\n' + versionLabel + idLabel + variantLabel + releaseLabel + sourceLabel + timestampLabel;
     return dockerFileContentsWithLabels;
+}
+
+function addVariantArg(prepResult) {
+    const variantArg = `ARG VARIANT=${prepResult.meta.variant}\n`
+
+    let dockerFileContentsWithArguments = variantArg + prepResult.devContainerDockerfileModified;
+    console.log(dockerFileContentsWithArguments);
+    return dockerFileContentsWithArguments;
+}
+
+function addBuildArguments(prepResult) {
+    const buildSettings = configUtils.getBuildSettings(prepResult.meta.definitionId);
+    let argList = '';
+
+    for (let buildArg in buildSettings.buildArgs || {}) {
+        argList = argList + `ARG ${buildArg}="${buildSettings.buildArgs[buildArg]}"\n`;
+    }
+
+    if (buildSettings.variantBuildArgs) {
+        for (let buildArg in buildSettings.variantBuildArgs[variant] || {}) {
+            argList = argList + `ARG ${buildArg}="${buildSettings.variantBuildArgs[variant][buildArg]}"\n`;
+        }
+    }
+
+    let dockerFileContentsWithArguments = argList + prepResult.devContainerDockerfileModified;
+    return dockerFileContentsWithArguments;
 }
 
 module.exports = {
