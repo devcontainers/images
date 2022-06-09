@@ -4,11 +4,6 @@
 #-------------------------------------------------------------------------------------------------------------
 FROM ubuntu:focal
 
-# ARG USERNAME=codespace
-# ARG USER_UID=1000
-# ARG USER_GID=$USER_UID
-# ARG HOMEDIR=/home/$USERNAME
-
 COPY first-run-notice.txt /tmp/scripts/
 
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
@@ -71,11 +66,6 @@ RUN LANG="C.UTF-8" \
     && pip install pip --upgrade \
     && pip3 install pip --upgrade
 
-# RUN groupadd -g 1000 ${USERNAME}
-# RUN useradd -u 1000 -g ${USERNAME} ${USERNAME}
-# RUN chown -R ${USERNAME}:${USERNAME} /usr/local/
-# RUN mkdir -p ${HOMEDIR} && chown -R ${USERNAME}:${USERNAME} ${HOMEDIR}/
-
 # Verify expected build and debug tools are present
 RUN apt-get update \
     && apt-get -y install build-essential cmake cppcheck valgrind clang lldb llvm gdb python3-dev \
@@ -92,20 +82,13 @@ RUN apt-get update \
 
 # Default to bash shell (other shells available at /usr/bin/fish and /usr/bin/zsh)
 ENV SHELL=/bin/bash \
-    # NVM_DIR="/usr/local/share/nvm" \
-    # NVS_HOME="/home/${USERNAME}/.nvs" \
     DOCKER_BUILDKIT=1
-
-# ENV PATH="${PATH}:${NVS_HOME}"
 
 # Install and setup fish
 RUN apt-get install -yq fish \
     && FISH_PROMPT="function fish_prompt\n    set_color green\n    echo -n (whoami)\n    set_color normal\n    echo -n \":\"\n    set_color blue\n    echo -n (pwd)\n    set_color normal\n    echo -n \"> \"\nend\n"
     && printf "$FISH_PROMPT" >> /etc/fish/functions/fish_prompt.fish
     && printf "if type code-insiders > /dev/null 2>&1; and not type code > /dev/null 2>&1\n  alias code=code-insiders\nend" >> /etc/fish/conf.d/code_alias.fish
-
-# Run setup user script
-# RUN bash /tmp/scripts/setup-user.sh "${USERNAME}" "${PATH}" 
 
 # This enabled the oryx tool to generate manifest-dir which is needed for running the postcreate tool
 RUN mkdir -p /usr/local/oryx\
