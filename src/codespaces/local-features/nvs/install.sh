@@ -6,6 +6,7 @@
 #
 # Maintainer: The VS Code and Codespaces Teams
 USERNAME=${USERNAME:-"automatic"}
+NVS_HOME=${NVS_HOME:-"/usr/local/nvs"}
 
 set -eux
 
@@ -36,6 +37,25 @@ elif [ "${USERNAME}" = "none" ] || ! id -u ${USERNAME} > /dev/null 2>&1; then
     USERNAME=root
 fi
 
+# Function to run apt-get if needed
+apt_get_update_if_needed()
+{
+    if [ ! -d "/var/lib/apt/lists" ] || [ "$(ls /var/lib/apt/lists/ | wc -l)" = "0" ]; then
+        echo "Running apt-get update..."
+        apt-get update
+    else
+        echo "Skipping apt-get update."
+    fi
+}
+
+# Checks if packages are installed and installs them if not
+check_packages() {
+    if ! dpkg -s "$@" > /dev/null 2>&1; then
+        apt_get_update_if_needed
+        apt-get -y install --no-install-recommends "$@"
+    fi
+}
+
 sudo_if() {
     COMMAND="$*"
     if [ "$(id -u)" -eq 0 ] && [ "$USERNAME" != "root" ]; then
@@ -47,12 +67,20 @@ sudo_if() {
 
 export DEBIAN_FRONTEND=noninteractive
 
-PACKAGES="keras matplotlib numpy pandas plotly requests scikit-learn scipy seaborn tensorflow torch"
+# Install dependencies
+check_packages git
 
-if [[ "$(python --version)" != "" ]] && [[ "$(pip --version)" != "" ]]; then
-    sudo_if python -m pip install --user --upgrade --no-cache-dir $PACKAGES
-else
-    "(*) Error: Need to install python and pip."
-fi
+git config --global --add safe.directory ${NVS_HOME}
+sudo_if mkdir -p ${NVS_HOME} 
+chown -R ${USERNAME} ${NVS_HOME}
+sudo_if -u ${USERNAME} git clone -c advice.detachedHead=false --depth 1 https://github.com/jasongin/nvs ${NVS_HOME} 2>&1
+(cd ${NVS_HOME} && git remote get-url origin && echo $(git log -n 1 --pretty=format:%H -- .)) > ${NVS_HOME}/.git-remote-and-commit
+sudo_if -u ${USERNAME} bash ${NVS_HOME}/nvs.sh install
+rm ${NVS_HOME}/cache/*
+
+# Clean up
+rm -rf ${NVS_HOME}/.git
+
+updaterc "export PATH=${PATH}:${NVS_HOME}"
 
 echo "Done!"

@@ -12,7 +12,7 @@ check "oryx" oryx --version
 # Check .NET
 check "dotnet" dotnet --list-sdks
 check "oryx-install-dotnet-2.1" oryx prep --skip-detection --platforms-and-versions dotnet=2.1.12
-check "dotnet-2-installed-by-oryx" ls /tmp/oryx/platforms/dotnet/ | grep 2.1.12
+check "dotnet-2-installed-by-oryx" ls /tmp/oryx/platforms/dotnet/ | grep 2.1
 echo $(echo "dotnet versions" ls -a /usr/local/dotnet)
 
 # Check Python
@@ -75,6 +75,7 @@ check "nvm" bash -c ". /usr/local/share/nvm/nvm.sh && nvm --version"
 check "nvs" bash -c ". /home/codespace/.nvs/nvs.sh && nvs --version"
 check "yarn" yarn --version
 check "npm" npm --version
+check "nvs" nvs --version
 echo $(echo "node versions" ls -a /usr/local/share/nvm/versions/node)
 
 # PHP

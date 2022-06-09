@@ -5,6 +5,14 @@
     },
     "features": [
         {
+            "id": "devcontainers/features/common@v0.0.2",
+            "options": {
+                "username": "codespace",
+                "user_uid": "1000",
+                "user_gid": "1000"
+            }
+        },
+        {
             "id": "devcontainers/features/dotnet@v0.0.2",
             "options": {
                 "version": "3",
@@ -37,6 +45,10 @@
             "options": {
                 "version": "14"
             }
+        },
+        {
+            "id": "./local-features/nvs",
+            "options": {}
         },
         {
             "id": "devcontainers/features/python@v0.0.2",
@@ -108,14 +120,6 @@
             "id": "./local-features/maven",
             "options": {
                 "version": "3"
-            }
-        },
-        {
-            "id": "devcontainers/features/common@v0.0.2",
-            "options": {
-                "username": "codespace",
-                "user_uid": "1000",
-                "user_gid": "1000"
             }
         },
         {
