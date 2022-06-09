@@ -179,10 +179,14 @@
         {
             "id": "devcontainers/features/oryx@v0.0.2",
             "options": {}
-        }
+        },
+        {
+            "id": "./local-features/setup-user",
+            "options": {}
+        },
     ],
     "remoteUser": "codespace",
-    "containerUser": "root",
+    "containerUser": "codespace",
     "overrideCommand": false,
     "mounts": [
         "source=codespaces-linux-var-lib-docker,target=/var/lib/docker,type=volume"
