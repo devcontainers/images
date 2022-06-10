@@ -47,10 +47,25 @@ sudo_if() {
 
 export DEBIAN_FRONTEND=noninteractive
 
-PACKAGES="keras matplotlib numpy pandas plotly requests scikit-learn scipy seaborn tensorflow torch"
+install_python_package() {
+    PACKAGE=${1:-""}
+
+    echo "Installing $PACKAGE..."
+    sudo_if python -m pip install --user --upgrade --no-cache-dir $PACKAGE
+}
 
 if [[ "$(python --version)" != "" ]] && [[ "$(pip --version)" != "" ]]; then
-    sudo_if python -m pip install --user --upgrade --no-cache-dir $PACKAGES
+    install_python_package "numpy"
+    install_python_package "pandas"
+    install_python_package "scipy"
+    install_python_package "matplotlib"
+    install_python_package "seaborn"
+    install_python_package "scikit-learn"
+    install_python_package "tensorflow"
+    install_python_package "keras"
+    install_python_package "torch"
+    install_python_package "requests"
+    install_python_package "plotly"
 else
     "(*) Error: Need to install python and pip."
 fi
