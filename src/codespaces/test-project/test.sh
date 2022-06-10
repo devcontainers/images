@@ -72,10 +72,9 @@ rm -rf jekyll-test
 # Node.js
 check "node" node --version
 check "nvm" bash -c ". /usr/local/share/nvm/nvm.sh && nvm --version"
-check "nvs" bash -c ". /home/codespace/.nvs/nvs.sh && nvs --version"
+check "nvs" bash -c ". /usr/local/nvs/nvs.sh && nvs --version"
 check "yarn" yarn --version
 check "npm" npm --version
-check "nvs" nvs --version
 echo $(echo "node versions" ls -a /usr/local/share/nvm/versions/node)
 
 # PHP
