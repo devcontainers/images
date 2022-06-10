@@ -72,5 +72,5 @@ else
 fi
 
 echo "Installed ML packages"
-echo $(pip list)
+pip list
 echo "Done!"
