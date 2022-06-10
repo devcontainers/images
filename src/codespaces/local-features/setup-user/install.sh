@@ -40,7 +40,16 @@ export DEBIAN_FRONTEND=noninteractive
 
 echo "Defaults secure_path=\"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin:/usr/local/share:${PATH}\"" >> /etc/sudoers.d/$USERNAME
 
-export DYNAMIC_INSTALL_ROOT_DIR="/usr/local/oryx"
+sudo_if() {
+    COMMAND="$*"
+    if [ "$(id -u)" -eq 0 ] && [ "$USERNAME" != "root" ]; then
+        su - "$USERNAME" -c "$COMMAND"
+    else
+        "$COMMAND"
+    fi
+}
+
 export ORYX_PREFER_USER_INSTALLED_SDKS=true
+sudo_if chown -R codespace /tmp/oryx/platforms/
 
 echo "Done!"

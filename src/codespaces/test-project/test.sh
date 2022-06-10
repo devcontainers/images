@@ -30,6 +30,7 @@ check "pydocstyle" pydocstyle --version
 check "bandit" bandit --version
 check "virtualenv" virtualenv --version
 echo $(echo "python versions" ls -a /usr/local/python)
+echo $(echo "pip list" pip list)
 
 # Check Python packages
 check "numpy" python -c "import numpy; print(numpy.__version__)"
