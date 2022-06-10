@@ -49,7 +49,6 @@ jobs:
         # Build and push dev images
         yarn install
         npm install -g @devcontainers/cli
-        export NODE_OPTIONS="--max_old_space_size=4096"
         GIT_BRANCH=$(echo "${{ github.ref }}" | grep -oP 'refs/(heads|tags)/\K(.+)')
         if [ "$GIT_BRANCH" == "" ]; then 
             GIT_BRANCH=main

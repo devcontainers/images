@@ -579,6 +579,7 @@ async function getStagingFolder(release) {
         console.log(`(*) Copying files to ${stagingFolder}\n`);
         await asyncUtils.rimraf(stagingFolder); // Clean out folder if it exists
         await asyncUtils.mkdirp(stagingFolder); // Create the folder
+        console.log("(*) copying from ", __dirname);
         await asyncUtils.copyFiles(
             path.resolve(__dirname, '..', '..', '..'),
             getConfig('filesToStage'),
