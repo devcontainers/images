@@ -50,7 +50,7 @@ export DEBIAN_FRONTEND=noninteractive
 install_python_package() {
     PACKAGE=${1:-""}
 
-    sudo_if /usr/local/python/current/bin/python -m pip uninstall $PACKAGE
+    sudo_if /usr/local/python/current/bin/python -m pip uninstall --yes $PACKAGE
     echo "Installing $PACKAGE..."
     sudo_if /usr/local/python/current/bin/python -m pip install --user --upgrade --no-cache-dir $PACKAGE
 }
@@ -71,4 +71,6 @@ else
     "(*) Error: Need to install python and pip."
 fi
 
+echo "Installed ML packages"
+echo $(pip list)
 echo "Done!"
