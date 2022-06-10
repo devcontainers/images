@@ -81,7 +81,7 @@ jobs:
         if [ "$GIT_BRANCH" == "" ]; then 
             GIT_BRANCH=main
         fi
-        build/vscdc pack  --prep-and-package-only \
+        node --max-old-space-size=4096 build/vscdc pack  --prep-and-package-only \
                           --release $GIT_BRANCH \
                           --github-repo ${{ github.repository }} \
                           --registry ${{ secrets.REGISTRY }} \
