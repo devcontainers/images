@@ -61,14 +61,14 @@ check "rbenv" bash -c 'eval "$(rbenv init -)" && rbenv --version'
 check "rake" gem list rake
 echo $(echo "ruby versions" ls -a /usr/local/rvm/rubies)
 
-# Check Jekyll dynamic install
-mkdir jekyll-test
-cd jekyll-test
-touch _config.yml
-check "oryx-build-jekyll" oryx build --apptype static-sites --manifest-dir /tmp
-check "jekyll" gem list jekyll
-cd ..
-rm -rf jekyll-test
+# # Check Jekyll dynamic install
+# mkdir jekyll-test
+# cd jekyll-test
+# touch _config.yml
+# check "oryx-build-jekyll" oryx build --apptype static-sites --manifest-dir /tmp
+# check "jekyll" gem list jekyll
+# cd ..
+# rm -rf jekyll-test
 
 # Node.js
 check "node" node --version
@@ -112,6 +112,16 @@ yarn
 check "run-puppeteer" node puppeteer.js
 
 echo $PATH
+
+# Check Jekyll dynamic install
+mkdir jekyll-test
+cd jekyll-test
+touch _config.yml
+sudo chown -R codespace /usr/local/rvm/
+check "oryx-build-jekyll" oryx build --apptype static-sites --manifest-dir /tmp
+check "jekyll" gem list jekyll
+cd ..
+rm -rf jekyll-test
 
 # Report result
 reportResults

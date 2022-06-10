@@ -50,6 +50,7 @@ export DEBIAN_FRONTEND=noninteractive
 install_python_package() {
     PACKAGE=${1:-""}
 
+    sudo_if /usr/local/python/current/bin/python -m pip uninstall $PACKAGE
     echo "Installing $PACKAGE..."
     sudo_if /usr/local/python/current/bin/python -m pip install --user --upgrade --no-cache-dir $PACKAGE
 }

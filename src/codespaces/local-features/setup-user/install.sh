@@ -42,5 +42,6 @@ echo "Defaults secure_path=\"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/
 
 export ORYX_PREFER_USER_INSTALLED_SDKS=true
 sudo chown -R codespace /tmp/oryx/platforms/
+sudo chown -R /usr/local/nvs/
 
 echo "Done!"
