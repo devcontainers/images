@@ -1,4 +1,4 @@
-name: Smoke test "codespace-linux" build
+name: Smoke test "codespaces" build
 
 on: 
   workflow_dispatch:
