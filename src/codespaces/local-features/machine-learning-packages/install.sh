@@ -51,7 +51,7 @@ install_python_package() {
     PACKAGE=${1:-""}
 
     echo "Installing $PACKAGE..."
-    sudo_if /usr/local/python/bin/python -m pip install --user --upgrade --no-cache-dir $PACKAGE
+    sudo_if /usr/local/python/current/bin/python -m pip install --user --upgrade --no-cache-dir $PACKAGE
 }
 
 if [[ "$(python --version)" != "" ]] && [[ "$(pip --version)" != "" ]]; then
