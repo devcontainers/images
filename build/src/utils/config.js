@@ -578,13 +578,15 @@ async function getStagingFolder(release) {
         const stagingFolder = path.join(os.tmpdir(), 'dev-containers', release);
         console.log(`(*) Copying files to ${stagingFolder}\n`);
         await asyncUtils.rimraf(stagingFolder); // Clean out folder if it exists
+        console.log("cleaned out")
         await asyncUtils.mkdirp(stagingFolder); // Create the folder
         console.log("(*) copying from ", __dirname);
         await asyncUtils.copyFiles(
             path.resolve(__dirname, '..', '..', '..'),
             getConfig('filesToStage'),
             stagingFolder);
-
+        console.log("done copying! ");
+        
         stagingFolders[release] = stagingFolder;
     }
     return stagingFolders[release];
