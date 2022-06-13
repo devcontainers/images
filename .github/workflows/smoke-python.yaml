@@ -6,12 +6,12 @@ on:
   push:
     branches: [main]
     paths:
-      - 'containers/python/**'
+      - 'src/python/**'
   pull_request:
     branches:
       - main
     paths:
-      - 'containers/python/**'
+      - 'src/python/**'
 jobs:
   smoke-test:
     name: Smoke test
