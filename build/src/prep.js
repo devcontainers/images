@@ -6,7 +6,8 @@
 const path = require('path');
 const asyncUtils = require('./utils/async');
 const configUtils = require('./utils/config');
-
+const handlebars = require('handlebars');
+const mkdirp = require('mkdirp');
 const scriptSHA = {};
 
 const assetsPath = path.join(__dirname, '..', 'assets');
@@ -24,6 +25,7 @@ const imageLabelPrefix = configUtils.getConfig('imageLabelPrefix', 'dev.containe
 
 // Prepares dockerfile for building or packaging
 async function prepDockerFile(devContainerDockerfilePath, definitionId, repo, release, registry, registryPath, stubRegistry, stubRegistryPath, isForBuild, variant) {
+    const devContainerJsonPath = path.dirname(devContainerDockerfilePath);
     // Read Dockerfile
     const devContainerDockerfileRaw = await asyncUtils.readFile(devContainerDockerfilePath);
     // Use exact version of building, MAJOR if not
@@ -47,6 +49,13 @@ async function prepDockerFile(devContainerDockerfilePath, definitionId, repo, re
     };
 
     if (isForBuild) {
+        if (prepResult.meta) {
+            // Write meta.env
+            const metaEnvTemplate = handlebars.compile(await asyncUtils.readFile(path.join(__dirname, '..', 'assets', 'meta.env')));
+            await asyncUtils.writeFile(path.join(devContainerJsonPath, 'meta.env'), metaEnvTemplate(prepResult.meta));
+            prepResult.devContainerDockerfileModified += '\n' +'COPY meta.env /usr/local/etc/vscode-dev-containers/' + '\n';
+        }
+
         // If building, update FROM to target registry and version if definition has a parent
         const parentTag = configUtils.getParentTagForVersion(definitionId, version, registry, registryPath, variant);
         if (parentTag) {

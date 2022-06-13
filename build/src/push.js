@@ -110,7 +110,7 @@ async function pushImage(definitionId, repo, release, updateLatest,
                 const workingDir = path.resolve(dotDevContainerPath, context);
 
                 const spawnOpts = { stdio: 'inherit', cwd: workingDir, shell: true };
-                await asyncUtils.spawn('devcontainer', [
+                await asyncUtils.spawn('npx --yes devcontainers-cli-0.3.0.tgz', [
                     'build',
                     '--workspace-folder', definitionPath,
                     '--log-level ', 'info',
