@@ -5,7 +5,7 @@
 #-------------------------------------------------------------------------------------------------------------
 #
 # Maintainer: The VS Code and Codespaces Teams
-USERNAME=${USERNAME:-"codespace"}
+USERNAME=${USERNAME:-"automatic"}
 NVS_HOME=${NVS_HOME:-"/usr/local/nvs"}
 
 set -eux
@@ -19,6 +19,23 @@ fi
 rm -f /etc/profile.d/00-restore-env.sh
 echo "export PATH=${PATH//$(sh -lc 'echo $PATH')/\$PATH}" > /etc/profile.d/00-restore-env.sh
 chmod +x /etc/profile.d/00-restore-env.sh
+
+# Determine the appropriate non-root user
+if [ "${USERNAME}" = "auto" ] || [ "${USERNAME}" = "automatic" ]; then
+    USERNAME=""
+    POSSIBLE_USERS=("vscode" "node" "codespace" "$(awk -v val=1000 -F ":" '$3==val{print $1}' /etc/passwd)")
+    for CURRENT_USER in "${POSSIBLE_USERS[@]}"; do
+        if id -u ${CURRENT_USER} > /dev/null 2>&1; then
+            USERNAME=${CURRENT_USER}
+            break
+        fi
+    done
+    if [ "${USERNAME}" = "" ]; then
+        USERNAME=root
+    fi
+elif [ "${USERNAME}" = "none" ] || ! id -u ${USERNAME} > /dev/null 2>&1; then
+    USERNAME=root
+fi
 
 # Function to run apt-get if needed
 apt_get_update_if_needed()
@@ -54,9 +71,13 @@ export DEBIAN_FRONTEND=noninteractive
 # Install dependencies
 check_packages git
 
+if ! cat /etc/group | grep -e "^nvs:" > /dev/null 2>&1; then
+    groupadd -r nvs
+fi
+usermod -a -G nvs "${USERNAME}"
+
 git config --global --add safe.directory ${NVS_HOME}
 mkdir -p ${NVS_HOME} 
-sudo chown -R ${USERNAME}: ${NVS_HOME}
 
 git clone -c advice.detachedHead=false --depth 1 https://github.com/jasongin/nvs ${NVS_HOME} 2>&1
 (cd ${NVS_HOME} && git remote get-url origin && echo $(git log -n 1 --pretty=format:%H -- .)) > ${NVS_HOME}/.git-remote-and-commit
@@ -67,5 +88,9 @@ rm ${NVS_HOME}/cache/*
 rm -rf ${NVS_HOME}/.git
 
 updaterc "if [[ \"\${PATH}\" != *\"${NVS_HOME}\"* ]]; then export PATH=${NVS_HOME}:\${PATH}; fi"
+
+chown -R :nvs "${NVS_HOME}"
+chmod -R g+r+w "${NVS_HOME}"
+find "${NVS_HOME}" -type d | xargs -n 1 chmod g+s
 
 echo "Done!"

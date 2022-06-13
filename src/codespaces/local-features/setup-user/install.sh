@@ -40,7 +40,5 @@ export DEBIAN_FRONTEND=noninteractive
 
 echo "Defaults secure_path=\"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin:/usr/local/share:${PATH}\"" >> /etc/sudoers.d/$USERNAME
 
-export ORYX_PREFER_USER_INSTALLED_SDKS=true
-sudo chown -R codespace /tmp/oryx/platforms/
 
 echo "Done!"
