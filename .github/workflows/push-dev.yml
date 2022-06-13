@@ -33,8 +33,7 @@ jobs:
       id: az_login
       uses: azure/login@v1
       with:
-        creds: ${{ secrets.AZ_ACR_CREDS_skhandale }}
-        # creds: ${{ secrets.AZ_ACR_CREDS }}
+        creds: ${{ secrets.AZ_ACR_CREDS }}
 
     - name: Build and push dev tags
       id: build_and_push
