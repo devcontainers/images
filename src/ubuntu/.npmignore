@@ -3,6 +3,5 @@ test-project
 history
 manifest.json
 .npmignore
-devcontainers-cli-0.3.0.tgz
 meta.env
 common
