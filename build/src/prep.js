@@ -239,8 +239,8 @@ function addBuildArguments(prepResult) {
     }
 
     if (buildSettings.variantBuildArgs) {
-        for (let buildArg in buildSettings.variantBuildArgs[variant] || {}) {
-            argList = argList + `ARG ${buildArg}="${buildSettings.variantBuildArgs[variant][buildArg]}"\n`;
+        for (let buildArg in buildSettings.variantBuildArgs[prepResult.meta.variant] || {}) {
+            argList = argList + `ARG ${buildArg}="${buildSettings.variantBuildArgs[prepResult.meta.variant][buildArg]}"\n`;
         }
     }
 
