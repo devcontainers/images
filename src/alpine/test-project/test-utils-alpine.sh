@@ -129,7 +129,6 @@ checkCommon()
 
     # Actual tests
     checkOSPackages "common-os-packages" ${PACKAGE_LIST}
-    checkMultiple "vscode-server" 1 "[ -d $HOME/.vscode-server/bin ]" "[ -d $HOME/.vscode-server-insiders/bin ]" "[ -d $HOME/.vscode-test-server/bin ]" "[ -d $HOME/.vscode-remote/bin ]" "[ -d $HOME/.vscode-remote/bin ]"
     check "non-root-user" id ${USERNAME}
     check "sudo" sudo echo "sudo works."
     check "zsh" zsh --version

@@ -4,12 +4,7 @@
 #-------------------------------------------------------------------------------------------------------------
 FROM ubuntu:focal
 
-ARG USERNAME=codespace
-ARG USER_UID=1000
-ARG USER_GID=$USER_UID
-ARG HOMEDIR=/home/$USERNAME
-
-COPY setup-user.sh first-run-notice.txt /tmp/scripts/
+COPY first-run-notice.txt /tmp/scripts/
 
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     # Restore man command
@@ -71,15 +66,8 @@ RUN LANG="C.UTF-8" \
     && pip install pip --upgrade \
     && pip3 install pip --upgrade
 
-RUN groupadd -g 1000 ${USERNAME}
-RUN useradd -u 1000 -g ${USERNAME} ${USERNAME}
-RUN chown -R ${USERNAME}:${USERNAME} /usr/local/
-RUN mkdir -p ${HOMEDIR} && chown -R ${USERNAME}:${USERNAME} ${HOMEDIR}/
-
-# Change owner of opt contents since Oryx can dynamically install and will run as "codespace"
-RUN chsh -s /bin/bash ${USERNAME} \
-    # Verify expected build and debug tools are present
-    && apt-get update \
+# Verify expected build and debug tools are present
+RUN apt-get update \
     && apt-get -y install build-essential cmake cppcheck valgrind clang lldb llvm gdb python3-dev \
     # Install tools and shells not in common script
     && apt-get install -yq vim vim-doc xtail software-properties-common libsecret-1-dev \
@@ -92,29 +80,15 @@ RUN chsh -s /bin/bash ${USERNAME} \
     && mkdir -p "/usr/local/etc/vscode-dev-containers/" \
     && mv -f /tmp/scripts/first-run-notice.txt /usr/local/etc/vscode-dev-containers/
 
-#TODO install ML with python
-
 # Default to bash shell (other shells available at /usr/bin/fish and /usr/bin/zsh)
 ENV SHELL=/bin/bash \
-    NVM_DIR="/usr/local/share/nvm" \
-    NVS_HOME="${HOMEDIR}/.nvs" \
     DOCKER_BUILDKIT=1
 
-ENV PATH = "$PATH:${NVS_HOME}"
-
-# Run setup user script
-RUN bash /tmp/scripts/setup-user.sh "${USERNAME}" "${PATH}" 
-
-# Install nvs (alternate cross-platform Node.js version-management tool)
-RUN git config --global --add safe.directory ${NVS_HOME} \
-    && sudo mkdir -p ${NVS_HOME} \
-    && chown -R ${USERNAME}:${USERNAME} ${NVS_HOME} \
-    && sudo -u ${USERNAME} git clone -c advice.detachedHead=false --depth 1 https://github.com/jasongin/nvs ${NVS_HOME} 2>&1 \
-    && (cd ${NVS_HOME} && git remote get-url origin && echo $(git log -n 1 --pretty=format:%H -- .)) > ${NVS_HOME}/.git-remote-and-commit \
-    && sudo -u ${USERNAME} bash ${NVS_HOME}/nvs.sh install \
-    && rm ${NVS_HOME}/cache/* \
-    # Clean up
-    && rm -rf ${NVM_DIR}/.git ${NVS_HOME}/.git
+# Install and setup fish
+RUN apt-get install -yq fish \
+    && FISH_PROMPT="function fish_prompt\n    set_color green\n    echo -n (whoami)\n    set_color normal\n    echo -n \":\"\n    set_color blue\n    echo -n (pwd)\n    set_color normal\n    echo -n \"> \"\nend\n" \
+    && printf "$FISH_PROMPT" >> /etc/fish/functions/fish_prompt.fish \
+    && printf "if type code-insiders > /dev/null 2>&1; and not type code > /dev/null 2>&1\n  alias code=code-insiders\nend" >> /etc/fish/conf.d/code_alias.fish
 
 # This enabled the oryx tool to generate manifest-dir which is needed for running the postcreate tool
 RUN mkdir -p /usr/local/oryx\
@@ -137,5 +111,3 @@ RUN if [ -z $DeveloperBuild ]; then \
     else \
         curl -sSL https://aka.ms/getvsdbgsh | bash /dev/stdin -v latest -l /vsdbg ; \
     fi
-
-USER ${USERNAME}

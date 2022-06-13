@@ -7,9 +7,6 @@ source test-utils.sh vscode
 checkCommon
 
 # Actual tests
-checkExtension "felixfbecker.php-debug"
-checkExtension "felixfbecker.php-intellisense"
-checkExtension "mrmlnc.vscode-apache"
 check "php" php --version
 check "apache2ctl" which apache2ctl
 

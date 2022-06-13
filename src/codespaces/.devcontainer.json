@@ -5,94 +5,113 @@
     },
     "features": [
         {
-            "id": "devcontainers/features/dotnet@v0.0.1",
+            "id": "devcontainers/features/common@v0.0.2",
             "options": {
-                "version": "3",
-                "installUsingApt": "false",
-                "overrideDefaultVersion": "false"
+                "username": "codespace",
+                "user_uid": "1000",
+                "user_gid": "1000"
             }
         },
         {
-            "id": "devcontainers/features/dotnet@v0.0.1",
+            "id": "devcontainers/features/dotnet@v0.0.2",
             "options": {
-                "version": "6",
-                "installUsingApt": "false",
-                "overrideDefaultVersion": "true"
+                "version": "3",
+                "install_using_apt": "false",
+                "override_default_version": "false"
+            }
         },
         {
-            "id": "devcontainers/features/hugo@v0.0.1",
+            "id": "devcontainers/features/dotnet@v0.0.2",
+            "options": {
+                "version": "6",
+                "install_using_apt": "false",
+                "override_default_version": "true"
+            }
+        },
+        {
+            "id": "devcontainers/features/hugo@v0.0.2",
             "options": {
                 "version": "latest"
             }
         },
         {
-            "id": "devcontainers/features/node@v0.0.1",
+            "id": "devcontainers/features/node@v0.0.2",
             "options": {
                 "version": "16"
             }
         },
         {
-            "id": "devcontainers/features/node@v0.0.1",
+            "id": "devcontainers/features/node@v0.0.2",
             "options": {
                 "version": "14"
             }
         },
         {
-            "id": "devcontainers/features/python@v0.0.1",
+            "id": "./local-features/nvs",
+            "options": {}
+        },
+        {
+            "id": "devcontainers/features/python@v0.0.2",
             "options": {
                 "version": "3.9",
-                "overrideDefaultVersion": "false",
+                "override_default_version": "false",
+                "install_jupyterlab": "true"
             }
         },
         {
-            "id": "devcontainers/features/python@v0.0.1",
+            "id": "devcontainers/features/python@v0.0.2",
             "options": {
                 "version": "3.10",
-                "overrideDefaultVersion": "true"
+                "override_default_version": "true",
+                "install_jupyterlab": "true"
             }
         },
         {
-            "id": "devcontainers/features/php@v0.0.1",
+            "id": "./local-features/machine-learning-packages",
+            "options": {}
+        },
+        {
+            "id": "devcontainers/features/php@v0.0.2",
             "options": {
                 "version": "8.0.16",
-                "installComposer": "true",
-                "overrideDefaultVersion": "false"
+                "install_composer": "true",
+                "override_default_version": "false"
             }
         },
         {
-            "id": "devcontainers/features/php@v0.0.1",
+            "id": "devcontainers/features/php@v0.0.2",
             "options": {
                 "version": "8.1.4",
-                "installComposer": "true",
-                "overrideDefaultVersion": "true"
+                "install_composer": "true",
+                "override_default_version": "true"
             }
         },
         {
-            "id": "devcontainers/features/anaconda@v0.0.1",
+            "id": "devcontainers/features/anaconda@v0.0.2",
             "options": {
-                "version": "4"
+                "version": "latest"
             }
         },
         {
-            "id": "devcontainers/features/ruby@v0.0.1",
+            "id": "devcontainers/features/ruby@v0.0.2",
             "options": {
                 "version": "3.0"
             }
         },
         {
-            "id": "devcontainers/features/ruby@v0.0.1",
+            "id": "devcontainers/features/ruby@v0.0.2",
             "options": {
                 "version": "3.1"
             }
         },
         {
-            "id": "devcontainers/features/java@v0.0.1",
+            "id": "devcontainers/features/java@v0.0.2",
             "options": {
                 "version": "17"
             }
         },
         {
-            "id": "devcontainers/features/java@v0.0.1",
+            "id": "devcontainers/features/java@v0.0.2",
             "options": {
                 "version": "11"
             }
@@ -104,54 +123,41 @@
             }
         },
         {
-            "id": "devcontainers/features/common@v0.0.1",
-            "options": {
-                "version": "latest",
-                "username": "codespace",
-                "uid": "1000",
-                "gid": "1000"
-            }
-        },
-        {
-            "id": "devcontainers/features/sshd@v0.0.1",
+            "id": "devcontainers/features/sshd@v0.0.2",
             "options": {
                 "version": "latest"
             }
         },
         {
-            "id": "devcontainers/features/git-lfs@v0.0.1",
+            "id": "devcontainers/features/git-lfs@v0.0.2",
             "options": {
                 "version": "latest"
             }
         },
         {
-            "id": "devcontainers/features/github-cli@v0.0.1",
+            "id": "devcontainers/features/github-cli@v0.0.2",
             "options": {
                 "version": "latest"
             }
         },
         {
-            "id": "devcontainers/features/docker-in-docker@v0.0.1",
+            "id": "devcontainers/features/docker-in-docker@v0.0.2",
             "options": {
                 "version": "latest"
             }
         },
         {
-            "id": "devcontainers/features/kubectl-helm-minikube@v0.0.1",
+            "id": "devcontainers/features/kubectl-helm-minikube@v0.0.2",
             "options": {
                 "version": "latest"
             }
         },
         {
-            "id": "devcontainers/features/git@v0.0.1",
+            "id": "devcontainers/features/git@v0.0.2",
             "options": {
                 "version": "latest"
             }
         },
-        // "devcontainers/features/jupyterlab@v0.0.1": {
-        //     "version": "latest",
-        //     "pythonBinary": "/home/codespace/.python/current/bin/python"
-        // },
         {
             "id": "./local-features/gradle",
             "options": {
@@ -159,7 +165,7 @@
             }
         },
         {
-            "id": "devcontainers/features/go@v0.0.1",
+            "id": "devcontainers/features/go@v0.0.2",
             "options": {
                 "version": "latest"
             }
@@ -171,21 +177,25 @@
             }
         },
         {
-            "id": "devcontainers/features/oryx@v0.0.1"
+            "id": "devcontainers/features/oryx@v0.0.2",
+            "options": {}
+        },
+        {
+            "id": "./local-features/setup-user",
+            "options": {}
         }
     ],
-    "remoteUser": "codespace",
-    "containerUser":"root",
-	"overrideCommand": false,
-	"mounts": ["source=codespaces-linux-var-lib-docker,target=/var/lib/docker,type=volume"],
-	"runArgs": [
-		"--cap-add=SYS_PTRACE",
-		"--security-opt",
-		"seccomp=unconfined",
-		"--privileged",
-		"--init"
-	],
-	
-	// "oryx build" will automatically install your dependencies and attempt to build your project
-	"postCreateCommand": "oryx build -p virtualenv_name=.venv --log-file /tmp/oryx-build.log --manifest-dir /tmp || echo 'Could not auto-build. Skipping.'"
+    "remoteUser": "root",
+    "containerUser": "codespace",
+    "overrideCommand": false,
+    "mounts": [
+        "source=codespaces-linux-var-lib-docker,target=/var/lib/docker,type=volume"
+    ],
+    "runArgs": [
+        "--cap-add=SYS_PTRACE",
+        "--security-opt",
+        "seccomp=unconfined",
+        "--privileged",
+        "--init"
+    ]
 }

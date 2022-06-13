@@ -7,7 +7,6 @@ source test-utils.sh vscode
 checkCommon
 
 # Definition specific tests
-checkExtension "ms-dotnettools.csharp"
 check "dotnet" dotnet --info
 check "nuget" dotnet restore
 check "msbuild" dotnet msbuild

@@ -6,17 +6,14 @@ source test-utils.sh codespace
 # Run common tests
 checkCommon
 
-# Check default extensions
-checkExtension "gitHub.vscode-pull-request-github"
-
 # Check Oryx
 check "oryx" oryx --version
 
 # Check .NET
 check "dotnet" dotnet --list-sdks
-check "oryx-install-dotnet-3.1" oryx prep --skip-detection --platforms-and-versions dotnet=3.1
-check "dotnet-3.1-installed" bash -c 'dotnet --info | grep -E "\s3\.1\.[0-9]*\s"'
-check "dotnet-6-installed-by-oryx" dotnet --info | grep "/opt/dotnet/6\.0\.[0-9]*/sdk"
+check "oryx-install-dotnet-2.1" oryx prep --skip-detection --platforms-and-versions dotnet=2.1.12
+check "dotnet-2-installed-by-oryx" ls /tmp/oryx/platforms/dotnet/ | grep 2.1
+echo $(echo "dotnet versions" ls -a /usr/local/dotnet)
 
 # Check Python
 check "python" python --version
@@ -32,19 +29,20 @@ check "mypy" mypy --version
 check "pydocstyle" pydocstyle --version
 check "bandit" bandit --version
 check "virtualenv" virtualenv --version
-echo $(echo "python versions" && cd /usr/local/python && ls -a)
+echo $(echo "python versions" ls -a /usr/local/python)
+echo $(echo "pip list" pip list)
 
 # Check Python packages
-check "numpy" python -c 'import numpy'
-check "pandas" python -c 'import pandas'
-check "scipy" python -c 'import scipy'
-check "matplotlib" python -c 'import matplotlib'
-check "seaborn" python -c 'import seaborn'
-check "scikit-learn" python -c 'import sklearn'
-check "tensorflow" python -c 'import tensorflow'
-check "keras" python -c 'import keras'
-check "torch" python -c 'import torch'
-check "requests" python -c 'import requests'
+check "numpy" python -c "import numpy; print(numpy.__version__)"
+check "pandas" python -c "import pandas; print(pandas.__version__)"
+check "scipy" python -c "import scipy; print(scipy.__version__)"
+check "matplotlib" python -c "import matplotlib; print(matplotlib.__version__)"
+check "seaborn" python -c "import seaborn; print(seaborn.__version__)"
+check "scikit-learn" python -c "import sklearn; print(sklearn.__version__)"
+check "tensorflow" python -c "import tensorflow; print(tensorflow.__version__)"
+check "keras" python -c "import keras; print(keras.__version__)"
+check "torch" python -c "import torch; print(torch.__version__)"
+check "requests" python -c "import requests; print(requests.__version__)"
 
 # Check JupyterLab
 check "jupyter-lab" jupyter-lab --version
@@ -54,14 +52,14 @@ check "java" java -version
 check "sdkman" bash -c ". /usr/local/sdkman/bin/sdkman-init.sh && sdk version"
 check "gradle" gradle --version
 check "maven" mvn --version
-echo $(echo "java versions" && cd /usr/local/sdkman/candidates/java && ls -a)
+echo $(echo "java versions" ls -a /usr/local/sdkman/candidates/java)
 
 # Check Ruby tools
 check "ruby" ruby --version
 check "rvm" bash -c ". /usr/local/rvm/scripts/rvm && rvm --version"
 check "rbenv" bash -c 'eval "$(rbenv init -)" && rbenv --version'
 check "rake" gem list rake
-echo $(echo "ruby versions" && cd /usr/local/rvm/rubies && ls -a)
+echo $(echo "ruby versions" ls -a /usr/local/rvm/rubies)
 
 # Check Jekyll dynamic install
 mkdir jekyll-test
@@ -75,16 +73,17 @@ rm -rf jekyll-test
 # Node.js
 check "node" node --version
 check "nvm" bash -c ". /usr/local/share/nvm/nvm.sh && nvm --version"
-check "nvs" bash -c ". /usr/local/.nvs/nvs.sh && nvs --version"
+check "nvs" bash -c ". /usr/local/nvs/nvs.sh && nvs --version"
 check "yarn" yarn --version
 check "npm" npm --version
-echo $(echo "node versions" && cd /usr/local/share/nvm/versions/node && ls -a)
+echo $(echo "node versions" ls -a /usr/local/share/nvm/versions/node)
 
 # PHP
 check "php" php --version
 check "php composer" composer --version
+check "pecl" pecl version
 check "Xdebug" php --version | grep 'Xdebug'
-echo $(echo "php versions" && cd /usr/local/php && ls -a)
+echo $(echo "php versions" ls -a /usr/local/php)
 
 # Hugo
 check "hugo" hugo version
@@ -111,6 +110,8 @@ check "zsh" zsh --version
 # Check that we can run a puppeteer node app.
 yarn
 check "run-puppeteer" node puppeteer.js
+
+echo $PATH
 
 # Report result
 reportResults

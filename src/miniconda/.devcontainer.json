@@ -3,12 +3,18 @@
         "dockerfile": "./Dockerfile",
         "context": "."
     },
-    "features": { // TODO: Change to array syntax
-        "devcontainers/features/python@v0.0.1": {
-            "version": "none"
+    "features": [
+        {
+            "id": "devcontainers/features/python@v0.0.2",
+            "options": {
+                "version": "none"
+            }
         },
-        "devcontainers/features/node@v0.0.1": {
-            "version": "none"
+        {
+            "id": "devcontainers/features/node@v0.0.2",
+            "options": {
+                "version": "none"
+            }
         }
-    }
+    ]
 }
