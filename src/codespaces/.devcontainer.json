@@ -183,9 +183,9 @@
         {
             "id": "./local-features/setup-user",
             "options": {}
-        },
+        }
     ],
-    "remoteUser": "codespace",
+    "remoteUser": "root",
     "containerUser": "codespace",
     "overrideCommand": false,
     "mounts": [
