@@ -227,7 +227,6 @@ function addVariantArg(prepResult) {
     const variantArg = `ARG VARIANT=${prepResult.meta.variant}\n`
 
     let dockerFileContentsWithArguments = variantArg + prepResult.devContainerDockerfileModified;
-    console.log(dockerFileContentsWithArguments);
     return dockerFileContentsWithArguments;
 }
 
