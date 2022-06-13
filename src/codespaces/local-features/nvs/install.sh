@@ -56,7 +56,7 @@ check_packages git
 
 git config --global --add safe.directory ${NVS_HOME}
 mkdir -p ${NVS_HOME} 
-sudo chown -R ${USERNAME} ${NVS_HOME}/
+sudo chown -R ${USERNAME}: ${NVS_HOME}
 
 git clone -c advice.detachedHead=false --depth 1 https://github.com/jasongin/nvs ${NVS_HOME} 2>&1
 (cd ${NVS_HOME} && git remote get-url origin && echo $(git log -n 1 --pretty=format:%H -- .)) > ${NVS_HOME}/.git-remote-and-commit
