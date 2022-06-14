@@ -6,3 +6,4 @@ first-run-notice.txt
 setup-user.sh
 manifest.json
 .npmignore
+meta.env

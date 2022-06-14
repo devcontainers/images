@@ -4,3 +4,4 @@ history
 base-scripts
 manifest.json
 .npmignore
+meta.env
