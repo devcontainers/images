@@ -6,10 +6,9 @@
 
 | Metadata | Value |  
 |----------|-------|
-| *Contributors* | The [VS Code Python extension](https://marketplace.visualstudio.com/itemdetails?itemName=ms-python.python) team |
 | *Categories* | Core, Languages |
 | *Definition type* | Dockerfile |
-| *Published image* | mcr.microsoft.com/vscode/devcontainers/miniconda:3 |
+| *Published image* | mcr.microsoft.com/devcontainers/miniconda:3 |
 | *Published image architecture(s)* | x86-64 |
 | *Works in Codespaces* | Yes |
 | *Container host OS support* | Linux, macOS, Windows |
@@ -22,17 +21,17 @@ See **[history](history)** for information on the contents of published images.
 
 ### Configuration
 
-While the definition itself works unmodified, you can also directly reference pre-built versions of `.devcontainer/base.Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` to the following. An example `Dockerfile` is included in this repository.
+While the definition itself works unmodified, you can also directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` to the following. An example `Dockerfile` is included in this repository.
 
-- `mcr.microsoft.com/vscode/devcontainers/minconda` (or `minconda:3`)
+- `mcr.microsoft.com/devcontainers/minconda` (or `minconda:3`)
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/vscode/devcontainers/miniconda:0-3`
-- `mcr.microsoft.com/vscode/devcontainers/miniconda:0.201-3`
-- `mcr.microsoft.com/vscode/devcontainers/miniconda:0.201.4-3`
+- `mcr.microsoft.com/devcontainers/miniconda:0-3`
+- `mcr.microsoft.com/devcontainers/miniconda:0.201-3`
+- `mcr.microsoft.com/devcontainers/miniconda:0.201.4-3`
 
-See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/vscode/devcontainers/miniconda/tags/list).
+See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/miniconda/tags/list).
 
 Alternatively, you can use the contents of `base.Dockerfile` to fully customize your container's contents or to build it for a container host architecture not supported by the image.
 
@@ -63,7 +62,7 @@ If you've already opened your folder in a container, rebuild the container using
 
 #### Installing Node.js
 
-Given JavaScript front-end web client code written for use in conjunction with a Python back-end often requires the use of Node.js-based utilities to build, this container also includes `nvm` so that you can easily install Node.js. You can change the version of Node.js installed or disable its installation by updating the `args` property in `.devcontainer/devcontainer.json`.
+Given JavaScript front-end web client code written for use in conjunction with a Python back-end often requires the use of Node.js-based utilities to build, this container also includes `nvm` so that you can easily install Node.js. You can change the version of Node.js installed or disable its installation by updating the `args` property in `.devcontainer.json`.
 
 ```jsonc
 "args": {
@@ -125,7 +124,7 @@ RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then /opt/conda/bin/conda env up
    1. Clone this repository locally.
    2. Start VS Code and open your project folder or connect to a codespace.
    3. Use your local operating system's file explorer to drag-and-drop the locally cloned copy of the `.devcontainer` folder for this definition into the VS Code file explorer for your opened project or codespace.
-   4. Update `.devcontainer/devcontainer.json` to reference `"dockerfile": "base.Dockerfile"`.
+   4. Update `.devcontainer.json` to reference `"dockerfile": "base.Dockerfile"`.
 
 4. After following step 2 or 3, the contents of the `.devcontainer` folder in your project can be adapted to meet your needs.
 
@@ -149,4 +148,4 @@ This definition includes some test code that will help you verify it is working 
 
 Copyright (c) Microsoft Corporation. All rights reserved.
 
-Licensed under the MIT License. See [LICENSE](https://github.com/microsoft/vscode-dev-containers/blob/main/LICENSE)
+Licensed under the MIT License. See [LICENSE](https://github.com/devcontainers/images/blob/main/LICENSE)

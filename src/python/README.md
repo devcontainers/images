@@ -6,11 +6,10 @@
 
 | Metadata | Value |
 |----------|-------|
-| *Contributors* | The [VS Code Python extension](https://marketplace.visualstudio.com/itemdetails?itemName=ms-python.python) team |
 | *Categories* | Core, Languages |
 | *Definition type* | Dockerfile |
-| *Published image* | mcr.microsoft.com/vscode/devcontainers/python |
-| *Available image variants* | 3 / 3-bullseye, 3.6 / 3.6-bullseye, 3.7 / 3.7-bullseye, 3.8 / 3.8-bullseye, 3.9 / 3.9-bullseye, 3.10 / 3.10-bullseye, 3-buster, 3.6-buster, 3.7-buster, 3.8-buster, 3.9-buster, 3.10-buster ([full list](https://mcr.microsoft.com/v2/vscode/devcontainers/python/tags/list)) |
+| *Published image* | mcr.microsoft.com/devcontainers/python |
+| *Available image variants* | 3 / 3-bullseye, 3.6 / 3.6-bullseye, 3.7 / 3.7-bullseye, 3.8 / 3.8-bullseye, 3.9 / 3.9-bullseye, 3.10 / 3.10-bullseye, 3-buster, 3.6-buster, 3.7-buster, 3.8-buster, 3.9-buster, 3.10-buster ([full list](https://mcr.microsoft.com/v2/devcontainers/python/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bullseye` variants |
 | *Works in Codespaces* | Yes |
 | *Container Host OS Support* | Linux, macOS, Windows |
@@ -30,24 +29,24 @@ While the definition itself works unmodified, you can select the version of Pyth
 "args": { "VARIANT": "3.7" }
 ```
 
-You can also directly reference pre-built versions of `.devcontainer/base.Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` with one of the following:
+You can also directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` with one of the following:
 
-- `mcr.microsoft.com/vscode/devcontainers/python:3` (latest)
-- `mcr.microsoft.com/vscode/devcontainers/python:3.6` (or `3.6-bullseye`, `3.6-buster` to pin to an OS version)
-- `mcr.microsoft.com/vscode/devcontainers/python:3.7` (or `3.7-bullseye`, `3.7-buster` to pin to an OS version)
-- `mcr.microsoft.com/vscode/devcontainers/python:3.8` (or `3.8-bullseye`, `3.8-buster` to pin to an OS version)
-- `mcr.microsoft.com/vscode/devcontainers/python:3.9` (or `3.9-bullseye`, `3.9-buster` to pin to an OS version)
-- `mcr.microsoft.com/vscode/devcontainers/python:3.10` (or `3.10-bullseye`, `3.10-buster` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/python:3` (latest)
+- `mcr.microsoft.com/devcontainers/python:3.6` (or `3.6-bullseye`, `3.6-buster` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/python:3.7` (or `3.7-bullseye`, `3.7-buster` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/python:3.8` (or `3.8-bullseye`, `3.8-buster` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/python:3.9` (or `3.9-bullseye`, `3.9-buster` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/python:3.10` (or `3.10-bullseye`, `3.10-buster` to pin to an OS version)
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/vscode/devcontainers/python:0-3.9` (or `0-3.9-bullseye`, `0-3.9-buster`)
-- `mcr.microsoft.com/vscode/devcontainers/python:0.202-3.9` (or `0.202-3.9-bullseye`, `0.202-3.9-buster`)
-- `mcr.microsoft.com/vscode/devcontainers/python:0.202.0-3.9` (or `0.202.0-3.9-bullseye`, `0.202.0-3.9-buster`)
+- `mcr.microsoft.com/devcontainers/python:0-3.9` (or `0-3.9-bullseye`, `0-3.9-buster`)
+- `mcr.microsoft.com/devcontainers/python:0.202-3.9` (or `0.202-3.9-bullseye`, `0.202-3.9-buster`)
+- `mcr.microsoft.com/devcontainers/python:0.202.0-3.9` (or `0.202.0-3.9-bullseye`, `0.202.0-3.9-buster`)
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/microsoft/vscode-dev-containers/issues/532) versions of images (e.g. `0-14`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
-See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/vscode/devcontainers/python/tags/list).
+See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/python/tags/list).
 
 Alternatively, you can use the contents of `base.Dockerfile` to fully customize the your container's contents or build for a container architecture the image does not support.
 
@@ -55,7 +54,7 @@ Beyond Python and `git`, this image / `Dockerfile` includes a number of Python t
 
 ### Installing Node.js
 
-Given JavaScript front-end web client code written for use in conjunction with a Python back-end often requires the use of Node.js-based utilities to build, this container also includes `nvm` so that you can easily install Node.js. You can change the version of Node.js installed or disable its installation by updating the `args` property in `.devcontainer/devcontainer.json`.
+Given JavaScript front-end web client code written for use in conjunction with a Python back-end often requires the use of Node.js-based utilities to build, this container also includes `nvm` so that you can easily install Node.js. You can change the version of Node.js installed or disable its installation by updating the `args` property in `.devcontainer.json`.
 
 ```jsonc
 "args": {
@@ -159,7 +158,7 @@ RUN apt-get update && apt-get install --no-install-recommends -yq software-prope
    1. Clone this repository locally.
    2. Start VS Code and open your project folder or connect to a codespace.
    3. Use your local operating system's file explorer to drag-and-drop the locally cloned copy of the `.devcontainer` folder for this definition into the VS Code file explorer for your opened project or codespace.
-   4. Update `.devcontainer/devcontainer.json` to reference `"dockerfile": "base.Dockerfile"`.
+   4. Update `.devcontainer.json` to reference `"dockerfile": "base.Dockerfile"`.
 
 4. After following step 2 or 3, the contents of the `.devcontainer` folder in your project can be adapted to meet your needs.
 
@@ -181,5 +180,5 @@ This definition includes some test code that will help you verify it is working 
 
 Copyright (c) Microsoft Corporation. All rights reserved.
 
-Licensed under the MIT License. See [LICENSE](https://github.com/microsoft/vscode-dev-containers/blob/main/LICENSE)
+Licensed under the MIT License. See [LICENSE](https://github.com/devcontainers/images/blob/main/LICENSE)
 

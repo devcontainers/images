@@ -6,11 +6,10 @@
 
 | Metadata | Value |  
 |----------|-------|
-| *Contributors* | The VS Code Team |
 | *Categories* | Core, Other |
 | *Definition type* | Dockerfile |
-| *Published images* | mcr.microsoft.com/vscode/devcontainers/base:alpine |
-| *Available image variants* | 3.15, 3.14, 3.13 ([full list](https://mcr.microsoft.com/v2/vscode/devcontainers/base/tags/list)) |
+| *Published images* | mcr.microsoft.com/devcontainers/base:alpine |
+| *Available image variants* | 3.15, 3.14, 3.13 ([full list](https://mcr.microsoft.com/v2/devcontainers/base/tags/list)) |
 | *Published image architecture(s)* | x86-64, aarch64/arm64 |
 | *Works in Codespaces* | Yes |
 | *Container host OS support* | Linux, macOS, Windows |
@@ -27,20 +26,20 @@ See **[history](history)** for information on the contents of published images.
 "args": { "VARIANT": "3.15" }
 ```
 
-You can also directly reference pre-built versions of `.devcontainer/base.Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
+You can also directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
-- `mcr.microsoft.com/vscode/devcontainers/base:alpine` (latest)
-- `mcr.microsoft.com/vscode/devcontainers/base:alpine-3.13`
-- `mcr.microsoft.com/vscode/devcontainers/base:alpine-3.14`
-- `mcr.microsoft.com/vscode/devcontainers/base:alpine-3.15`
+- `mcr.microsoft.com/devcontainers/base:alpine` (latest)
+- `mcr.microsoft.com/devcontainers/base:alpine-3.13`
+- `mcr.microsoft.com/devcontainers/base:alpine-3.14`
+- `mcr.microsoft.com/devcontainers/base:alpine-3.15`
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/vscode/devcontainers/base:0-alpine`
-- `mcr.microsoft.com/vscode/devcontainers/base:0.204-alpine`
-- `mcr.microsoft.com/vscode/devcontainers/base:0.204.0-alpine`
+- `mcr.microsoft.com/devcontainers/base:0-alpine`
+- `mcr.microsoft.com/devcontainers/base:0.1-alpine`
+- `mcr.microsoft.com/devcontainers/base:0.1.0-alpine`
 
-See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/vscode/devcontainers/base/tags/list).
+See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/base/tags/list).
 
 Alternatively, you can use the contents of `base.Dockerfile` to fully customize your container's contents or to build it for a container host architecture not supported by the image.
 
@@ -65,7 +64,7 @@ See [Remote Development and Linux](https://aka.ms/vscode-remote/linux) for detai
    1. Clone this repository locally.
    2. Start VS Code and open your project folder or connect to a codespace.
    3. Use your local operating system's file explorer to drag-and-drop the locally cloned copy of the `.devcontainer` folder for this definition into the VS Code file explorer for your opened project or codespace.
-   4. Update `.devcontainer/devcontainer.json` to reference `"dockerfile": "base.Dockerfile"`.
+   4. Update `.devcontainer.json` to reference `"dockerfile": "base.Dockerfile"`.
 
 4. After following step 2 or 3, the contents of the `.devcontainer` folder in your project can be adapted to meet your needs.
 
@@ -75,4 +74,4 @@ See [Remote Development and Linux](https://aka.ms/vscode-remote/linux) for detai
 
 Copyright (c) Microsoft Corporation. All rights reserved.
 
-Licensed under the MIT License. See [LICENSE](https://github.com/Microsoft/vscode-dev-containers/blob/main/LICENSE)
+Licensed under the MIT License. See [LICENSE](https://github.com/devcontainers/images/blob/main/LICENSE)

@@ -6,11 +6,10 @@
 
 | Metadata | Value |  
 |----------|-------|
-| *Contributors* | The VS Code Team |
 | *Categories* | Core, Languages |
 | *Definition type* | Dockerfile |
-| *Published images* | mcr.microsoft.com/vscode/devcontainers/dotnet |
-| *Available image variants* | 3.1 / 3.1-focal, 5.0 / 5.0-focal, 6.0 /6.0-bullseye, 6.0-focal, 5.0-bullseye, 3.1-bullseye ([full list](https://mcr.microsoft.com/v2/vscode/devcontainers/dotnet/tags/list)) |
+| *Published images* | mcr.microsoft.com/devcontainers/dotnet |
+| *Available image variants* | 3.1 / 3.1-focal, 5.0 / 5.0-focal, 6.0 /6.0-bullseye, 6.0-focal, 5.0-bullseye, 3.1-bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/dotnet/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bullseye` variants |
 | *Works in Codespaces* | Yes |
 | *Container host OS support* | Linux, macOS, Windows |
@@ -30,20 +29,20 @@ While this definition should work unmodified, you can select the version of .NET
 
 Note that .NET 6.0 has switched its default OS to Debian 12 / bullseye. We also offer a `6.0-focal` image if you would prefer to use Ubuntu 20.04 / Focal.
 
-You can also directly reference pre-built versions of `.devcontainer/base.Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
+You can also directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
-- `mcr.microsoft.com/vscode/devcontainers/dotnet` (latest)
-- `mcr.microsoft.com/vscode/devcontainers/dotnet:3.1` (or `3.1-bullseye`, `3.1-focal` to pin to an OS version)
-- `mcr.microsoft.com/vscode/devcontainers/dotnet:5.0` (or `5.0-bullseye`, `5.0-focal` to pin to an OS version)
-- `mcr.microsoft.com/vscode/devcontainers/dotnet:6.0` (or `6.0-bullseye`, `6.0-focal` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/dotnet` (latest)
+- `mcr.microsoft.com/devcontainers/dotnet:3.1` (or `3.1-bullseye`, `3.1-focal` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/dotnet:5.0` (or `5.0-bullseye`, `5.0-focal` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/dotnet:6.0` (or `6.0-bullseye`, `6.0-focal` to pin to an OS version)
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/vscode/devcontainers/dotnet:0-3.1`
-- `mcr.microsoft.com/vscode/devcontainers/dotnet:0.202-3.1`
-- `mcr.microsoft.com/vscode/devcontainers/dotnet:0.202.0-3.1`
+- `mcr.microsoft.com/devcontainers/dotnet:0-3.1`
+- `mcr.microsoft.com/devcontainers/dotnet:0.202-3.1`
+- `mcr.microsoft.com/devcontainers/dotnet:0.202.0-3.1`
 
-See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/vscode/devcontainers/dotnet/tags/list).
+See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/dotnet/tags/list).
 
 Alternatively, you can use the contents of `base.Dockerfile` to fully customize your container's contents or to build it for a container host architecture not supported by the image.
 
@@ -73,7 +72,7 @@ To enable HTTPS in ASP.NET, you can mount an exported copy of your local dev cer
     dotnet dev-certs https --trust; dotnet dev-certs https -ep "${HOME}/.aspnet/https/aspnetapp.pfx" -p "SecurePwdGoesHere"
     ```
 
-2. Add the following in to `.devcontainer/devcontainer.json`:
+2. Add the following in to `.devcontainer.json`:
 
     ```json
     "remoteEnv": {
@@ -95,7 +94,7 @@ To enable HTTPS in ASP.NET, you can mount an exported copy of your local dev cer
 
     **If using only Remote - Containers with a local container**
 
-    Add the following to `.devcontainer/devcontainer.json`:
+    Add the following to `.devcontainer.json`:
 
     ```json
     "mounts": [ "source=${env:HOME}${env:USERPROFILE}/.aspnet/https,target=/home/vscode/.aspnet/https,type=bind" ]
@@ -105,7 +104,7 @@ If you've already opened your folder in a container, rebuild the container using
 
 ### Installing Node.js or the Azure CLI
 
-Given JavaScript front-end web client code written for use in conjunction with an ASP.NET back-end often requires the use of Node.js-based utilities to build, this container also includes `nvm` so that you can easily install Node.js. You can change the version of Node.js installed or disable its installation by updating the `args` property in `.devcontainer/devcontainer.json`.
+Given JavaScript front-end web client code written for use in conjunction with an ASP.NET back-end often requires the use of Node.js-based utilities to build, this container also includes `nvm` so that you can easily install Node.js. You can change the version of Node.js installed or disable its installation by updating the `args` property in `.devcontainer.json`.
 
 ```jsonc
 "args": {
@@ -114,7 +113,7 @@ Given JavaScript front-end web client code written for use in conjunction with a
 }
 ```
 
-If you would like to install the Azure CLI, you can reference [a dev container feature](https://aka.ms/vscode-remote/containers/dev-container-features) by adding the following to `.devcontainer/devcontainer.json`:
+If you would like to install the Azure CLI, you can reference [a dev container feature](https://aka.ms/vscode-remote/containers/dev-container-features) by adding the following to `.devcontainer.json`:
 
 ```json
 {
@@ -139,7 +138,7 @@ If you've already opened your folder in a container, rebuild the container using
    1. Clone this repository locally.
    2. Start VS Code and open your project folder or connect to a codespace.
    3. Use your local operating system's file explorer to drag-and-drop the locally cloned copy of the `.devcontainer` folder for this definition into the VS Code file explorer for your opened project or codespace.
-   4. Update `.devcontainer/devcontainer.json` to reference `"dockerfile": "base.Dockerfile"`.
+   4. Update `.devcontainer.json` to reference `"dockerfile": "base.Dockerfile"`.
 
 4. After following step 2 or 3, the contents of the `.devcontainer` folder in your project can be adapted to meet your needs.
 
@@ -163,4 +162,4 @@ This definition includes some test code that will help you verify it is working 
 
 Copyright (c) Microsoft Corporation. All rights reserved.
 
-Licensed under the MIT License. See [LICENSE](https://github.com/microsoft/vscode-dev-containers/blob/main/LICENSE).
+Licensed under the MIT License. See [LICENSE](https://github.com/devcontainers/images/blob/main/LICENSE).
