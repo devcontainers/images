@@ -89,7 +89,7 @@ rm -rf ${NVS_HOME}/.git
 
 updaterc "if [[ \"\${PATH}\" != *\"${NVS_HOME}\"* ]]; then export PATH=${NVS_HOME}:\${PATH}; fi"
 
-chown -R :nvs "${NVS_HOME}"
+chown -R "${USERNAME}:nvs" "${NVS_HOME}"
 chmod -R g+r+w "${NVS_HOME}"
 find "${NVS_HOME}" -type d | xargs -n 1 chmod g+s
 
