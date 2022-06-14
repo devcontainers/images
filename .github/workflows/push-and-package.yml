@@ -45,6 +45,8 @@ jobs:
 
     - name: Build and push
       id: build_and_push
+      env:
+        GITHUB_TOKEN: ${{ secrets.PAT }}
       run: |
         set -e
 
@@ -54,6 +56,7 @@ jobs:
 
         # Build and push images
         yarn install
+        npm install -g @devcontainers/cli
         build/vscdc push  --release ${{ steps.get_tag_name.outputs.tag }} \
                           --github-repo ${{ github.repository }} \
                           --registry ${{ secrets.REGISTRY }} \
