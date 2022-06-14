@@ -26,7 +26,7 @@ jobs:
 
     - name: Checkout
       id: checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v1
 
     - name: Get tag name
       id: get_tag_name  
@@ -37,11 +37,6 @@ jobs:
       uses: azure/login@v1
       with:
         creds: ${{ secrets.AZ_ACR_CREDS }}
-
-    - name: Setup node
-      uses: actions/setup-node@v2
-      with:
-        node-version: 14
 
     - name: Build and push
       id: build_and_push
@@ -71,16 +66,11 @@ jobs:
     steps:
     - name: Checkout
       id: checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v1
 
     - name: Get tag name
       id: get_tag_name
       run: echo "::set-output name=tag::$(echo "${{ github.ref }}" | grep -oP 'refs/tags/\K(.+)')"
-
-    - name: Setup node
-      uses: actions/setup-node@v2
-      with:
-        node-version: 14
 
     - name: Package
       id: package
