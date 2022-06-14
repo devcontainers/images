@@ -185,7 +185,7 @@
             "options": {}
         }
     ],
-    "remoteUser": "root",
+    "remoteUser": "codespace",
     "containerUser": "codespace",
     "overrideCommand": false,
     "mounts": [
