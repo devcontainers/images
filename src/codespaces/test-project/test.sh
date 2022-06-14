@@ -13,7 +13,7 @@ check "oryx" oryx --version
 check "dotnet" dotnet --list-sdks
 check "oryx-install-dotnet-2.1" oryx prep --skip-detection --platforms-and-versions dotnet=2.1.12
 check "dotnet-2-installed-by-oryx" ls /tmp/oryx/platforms/dotnet/ | grep 2.1
-echo $(echo "dotnet versions" ls -a /usr/local/dotnet)
+echo $(echo "dotnet versions" && ls -a /usr/local/dotnet)
 
 # Check Python
 check "python" python --version
@@ -29,7 +29,7 @@ check "mypy" mypy --version
 check "pydocstyle" pydocstyle --version
 check "bandit" bandit --version
 check "virtualenv" virtualenv --version
-echo $(echo "python versions" ls -a /usr/local/python)
+echo $(echo "python versions" && ls -a /usr/local/python)
 echo $(echo "pip list" pip list)
 
 # Check Python packages
@@ -52,14 +52,14 @@ check "java" java -version
 check "sdkman" bash -c ". /usr/local/sdkman/bin/sdkman-init.sh && sdk version"
 check "gradle" gradle --version
 check "maven" mvn --version
-echo $(echo "java versions" ls -a /usr/local/sdkman/candidates/java)
+echo $(echo "java versions" && ls -a /usr/local/sdkman/candidates/java)
 
 # Check Ruby tools
 check "ruby" ruby --version
 check "rvm" bash -c ". /usr/local/rvm/scripts/rvm && rvm --version"
 check "rbenv" bash -c 'eval "$(rbenv init -)" && rbenv --version'
 check "rake" gem list rake
-echo $(echo "ruby versions" ls -a /usr/local/rvm/rubies)
+echo $(echo "ruby versions" && ls -a /usr/local/rvm/rubies)
 
 # Check Jekyll dynamic install
 mkdir jekyll-test
@@ -76,14 +76,14 @@ check "nvm" bash -c ". /usr/local/share/nvm/nvm.sh && nvm --version"
 check "nvs" bash -c ". /usr/local/nvs/nvs.sh && nvs --version"
 check "yarn" yarn --version
 check "npm" npm --version
-echo $(echo "node versions" ls -a /usr/local/share/nvm/versions/node)
+echo $(echo "node versions" && ls -a /usr/local/share/nvm/versions/node)
 
 # PHP
 check "php" php --version
 check "php composer" composer --version
 check "pecl" pecl version
 check "Xdebug" php --version | grep 'Xdebug'
-echo $(echo "php versions" ls -a /usr/local/php)
+echo $(echo "php versions" && ls -a /usr/local/php)
 
 # Hugo
 check "hugo" hugo version
@@ -112,6 +112,7 @@ yarn
 check "run-puppeteer" node puppeteer.js
 
 echo $PATH
-
+cd /usr/local
+ls -la
 # Report result
 reportResults
