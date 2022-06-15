@@ -1,0 +1,135 @@
+name: Release Containers
+
+on:
+  push:
+    tags:
+    - 'v*'
+
+jobs:
+  build-and-push:
+    name: Build and push images
+    # strategy:
+      # matrix:
+      #   page: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      #   page-total: [10]
+      # fail-fast: false
+    runs-on: ubuntu-latest
+    steps:
+    - name: Free more space
+      id: free_space 
+      run: |
+        set -e
+        # Ensure enough space is available for build
+        sudo apt-get autoremove -y
+        sudo apt-get clean -y
+        sudo rm -rf /usr/share/dotnet
+
+    - name: Checkout
+      id: checkout
+      uses: actions/checkout@v1
+
+    - name: Get tag name
+      id: get_tag_name  
+      run: echo "::set-output name=tag::$(echo "${{ github.ref }}" | grep -oP 'refs/tags/\K(.+)')"
+
+    - name: Azure CLI login
+      id: az_login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZ_ACR_CREDS }}
+
+    - name: Build and push
+      id: build_and_push
+      env:
+        GITHUB_TOKEN: ${{ secrets.PAT }}
+      run: |
+        set -e
+
+        # ACR login
+        ACR_REGISTRY_NAME=$(echo ${{ secrets.REGISTRY }} | grep -oP '(.+)(?=\.azurecr\.io)')
+        az acr login --name $ACR_REGISTRY_NAME
+
+        # Build and push images
+        yarn install
+        npm install -g @devcontainers/cli
+        build/vscdc push  --release ${{ steps.get_tag_name.outputs.tag }} \
+                          --github-repo ${{ github.repository }} \
+                          --registry ${{ secrets.REGISTRY }} \
+                          --registry-path ${{ secrets.REGISTRY_BASE_PATH }} \
+                          --stub-registry ${{ secrets.STUB_REGISTRY }} \
+                          --stub-registry-path ${{ secrets.STUB_REGISTRY_BASE_PATH }}
+
+  package:
+    name: Package and release
+    needs: [build-and-push]
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      id: checkout
+      uses: actions/checkout@v2
+
+    - name: Get tag name
+      id: get_tag_name
+      run: echo "::set-output name=tag::$(echo "${{ github.ref }}" | grep -oP 'refs/tags/\K(.+)')"
+
+    - name: Package
+      id: package
+      run: |
+        set -e
+        yarn install
+        build/vscdc pack  --prep-and-package-only \
+                          --release ${{ steps.get_tag_name.outputs.tag }} \
+                          --github-repo ${{ github.repository }} \
+                          --registry ${{ secrets.REGISTRY }} \
+                          --registry-path ${{ secrets.REGISTRY_BASE_PATH }} \
+                          --stub-registry ${{ secrets.STUB_REGISTRY }} \
+                          --stub-registry-path ${{ secrets.STUB_REGISTRY_BASE_PATH }}
+
+        # Set an output with the resulting package name for upload
+        PKG_PREFIX=$(node -p "require('./package.json').name")
+        echo "::set-output name=package_name::$(ls $PKG_PREFIX-*.tgz)"
+
+    - name: Create release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ steps.get_tag_name.outputs.tag }}
+        release_name:  ${{ steps.get_tag_name.outputs.tag }}
+        draft: false
+        prerelease: false
+
+    - name: Upload package as release asset
+      id: upload_release_asset 
+      uses: actions/upload-release-asset@v1.0.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./${{ steps.package.outputs.package_name }}
+        asset_name: ${{ steps.package.outputs.package_name }}
+        asset_content_type: application/gzip
+
+  image-info:
+    name: Trigger info extraction
+    needs: [package]
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get tag name
+      id: get_tag_name
+      run: echo "::set-output name=tag::$(echo "${{ github.ref }}" | grep -oP 'refs/tags/\K(.+)')"
+      
+    - name: Trigger image info file generation 
+      id: image-info
+      run: |
+        set -e
+        echo '(*) Triggering CG manifest and image history generation using workflow_dispatch'
+
+        # Use alternate GitHub token due to https://github.community/t5/GitHub-Actions/Triggering-a-new-workflow-from-another-workflow/td-p/31676
+        curl -X POST \
+          -H "Authorization: token ${{ secrets.ALTERNATE_GITHUB_TOKEN }}" \
+          -H "Accept: application/vnd.github.v3+json" \
+          -H "Content-Type: application/json" \
+          https://api.github.com/repos/${{ github.repository }}/actions/workflows/version-history.yml/dispatches \
+          --data "{\"ref\": \"main\", \"inputs\": {\"release\": \"${{ steps.get_tag_name.outputs.tag }}\", \"cg\": \"false\", \"push\": \"true\", \"overwrite\": \"false\"}"
