@@ -13,7 +13,8 @@ runs:
   using: composite
   steps:
     - name: Free more space
-      id: free_space 
+      id: free_space
+      shell: bash
       run: |
         set -e
         # Ensure enough space is available for build
