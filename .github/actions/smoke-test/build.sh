@@ -8,7 +8,9 @@ echo "(*) Pulling latest '@devcontainer/cli"
 
 docker ps -a
 docker images
-
+docker system prune --force
+docker ps -a
+docker images
 # npm install -g @devcontainers/cli
 
 #Temporarily installing cli from source until https://github.com/devcontainers/cli/pull/6 is merged
