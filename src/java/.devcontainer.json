@@ -1,0 +1,35 @@
+{
+    "build": {
+        "dockerfile": "./Dockerfile",
+        "context": ".",
+        "args": {
+            "VARIANT": "1.18"
+        }
+    },
+    "features": [
+        {
+            "id": "devcontainers/features/java@v0.0.2",
+            "options": {
+                "version": "none"
+            }
+        },
+        {
+            "id": "./local-features/maven",
+            "options": {
+                "version": "latest"
+            }
+        },
+        {
+            "id": "./local-features/gradle",
+            "options": {
+                "version": "latest"
+            }
+        },
+        {
+            "id": "devcontainers/features/node@v0.0.2",
+            "options": {
+                "version": "none"
+            }
+        }
+    ]
+}

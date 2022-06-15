@@ -138,7 +138,7 @@ async function processStub(userDockerFile, definitionId, repo, release, baseDock
     const relativePath = configUtils.getDefinitionPath(definitionId, true);
     let fromSection = `# ${dockerFilePreamble}https://github.com/${repo}/tree/${release}/${relativePath}/Dockerfile\n\n`;
     // The VARIANT arg allows this value to be set from .devcontainer.json, handle it if found
-    if (/ARG\s+VARIANT\s*=/.exec(userDockerFile) !== null) {
+    if (/ARG\s+VARIANT\s*=/.exec(userDockerFile) !== null && configUtils.getVariants(definitionId) != null) {
         const variant = configUtils.getVariants(definitionId)[0];
         const tagWithVariant = configUtils.getTagsForVersion(definitionId, devContainerImageVersion, registry, registryPath, '${VARIANT}')[0];
         // Handle scenario where "# [Choice]" comment exists

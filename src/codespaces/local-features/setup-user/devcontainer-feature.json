@@ -1,0 +1,8 @@
+{
+    "id": "setup-user",
+    "name": "Setup Secure Path",
+    "install": {
+        "app": "",
+        "file": "install.sh"
+    }
+}

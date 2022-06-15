@@ -29,5 +29,4 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         definition: java
-        image: vsc-java
         user: vscode

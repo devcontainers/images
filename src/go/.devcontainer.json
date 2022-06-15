@@ -1,0 +1,33 @@
+{
+    "build": {
+        "dockerfile": "./Dockerfile",
+        "context": ".",
+        "args": {
+            "VARIANT": "1.18"
+        }
+    },
+    "features": [
+        {
+            "id": "devcontainers/features/common@v0.0.2",
+            "options": {
+                "install_Zsh": "true",
+                "username": "vscode",
+                "user_uid": "1000",
+                "user_gid": "1000",
+                "upgrade_packages": "true"
+            }
+        },
+        {
+            "id": "devcontainers/features/go@v0.0.2",
+            "options": {
+                "version": "none"
+            }
+        },
+        {
+            "id": "devcontainers/features/node@v0.0.2",
+            "options": {
+                "version": "none"
+            }
+        }
+    ]
+}

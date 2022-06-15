@@ -2,16 +2,13 @@ name: Smoke test "anaconda" build
 
 on: 
   workflow_dispatch:
-  
   push:
-    branches: [main]
-    paths:
-      - 'src/anaconda/**'
-  pull_request:
     branches:
-      - main
+    - main
+  pull_request:
     paths:
-      - 'src/anaconda/**'
+      - src/anaconda/**
+      - .github/workflows/smoke-anaconda.yaml
 jobs:
   smoke-test:
     name: Smoke test
@@ -29,5 +26,4 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         definition: anaconda
-        image: vsc-anaconda
         user: vscode

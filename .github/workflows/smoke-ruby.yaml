@@ -29,5 +29,4 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         definition: ruby
-        image: vsc-ruby
         user: vscode

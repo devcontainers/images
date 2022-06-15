@@ -1,0 +1,11 @@
+{
+    "customizations": {
+        "codespaces": {
+            "repositories": {
+                "devcontainers/features": {
+                    "permissions": "write-all"
+                }
+            }
+        }
+    }
+}
