@@ -81,6 +81,11 @@ async function pushImage(definitionId, repo, release, updateLatest,
             const imageNamesWithVersionTags = configUtils.getTagList(definitionId, release, updateLatest, registry, registryPath, variant);
             const imageName = imageNamesWithVersionTags[0].split(':')[0];
 
+            // Temporary change to dual publish an image to devcontainers and vscode/devcontainers
+            const vscodeContainerRegistyPath = configUtils.getConfig('vscodeContainerRegistryPath', 'public/vscode/devcontainers');
+            const vscodeImageNamesWithVersionTags = configUtils.getTagList(definitionId, release, updateLatest, registry, vscodeContainerRegistyPath, variant);
+            const vscodeImageName = vscodeImageNamesWithVersionTags[0].split(':')[0];
+
             console.log(`(*) Tags:${imageNamesWithVersionTags.reduce((prev, current) => prev += `\n     ${current}`, '')}`);
             // const buildSettings = configUtils.getBuildSettings(definitionId);
 
@@ -128,6 +133,19 @@ async function pushImage(definitionId, repo, release, updateLatest,
                 // Retagging definitionId to version tags
                 for (let image of imageNamesWithVersionTags) {
                     await asyncUtils.spawn('docker', ['image tag', `${imageName}:latest ${image}`], spawnOpts);
+
+                    if (pushImages) {
+                        console.log(`(*) Pushing to registry.`);
+                        await asyncUtils.spawn('docker', [`image push ${image}`], spawnOpts);
+                    }
+                }
+
+                // Temporary change to dual publish vscode/devcontainers' images by retagging a devcontainers image
+                await asyncUtils.spawn('docker', ['image tag', `${imageName}:latest ${vscodeImageName}:latest`], spawnOpts);
+
+                // Temporary: Retagging definitionId to version tags
+                for (let image of vscodeImageNamesWithVersionTags) {
+                    await asyncUtils.spawn('docker', ['image tag', `${vscodeImageName}:latest ${image}`], spawnOpts);
 
                     if (pushImages) {
                         console.log(`(*) Pushing to registry.`);
