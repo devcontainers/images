@@ -9,30 +9,30 @@ inputs:
     required: true
     default: 'vscode'
 
-runs:
-  using: composite
-  runs-on: ubuntu-latest
-  steps:
-    - name: Free more space
-      id: free_space 
-      run: |
-        set -e
-        # Ensure enough space is available for build
-        sudo apt-get autoremove -y
-        sudo apt-get clean -y
-        sudo rm -rf /usr/share/dotnet
-    - name: Checkout main
-      id: checkout_release
-      uses: actions/checkout@v3
-      with:
-        repository: 'devcontainers/images'
-        path: '__build'
-        ref: 'main'
-    - name: Build image
-      id: build_image
-      shell: bash
-      run: ${{ github.action_path }}/build.sh ${{ inputs.definition }}
-    - name: Test image
-      id: test_image
-      shell: bash
-      run: chmod +x ${{ github.action_path }}/test.sh && ${{ github.action_path }}/test.sh  ${{ inputs.definition }} ${{ inputs.user }}
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Free more space
+        id: free_space 
+        run: |
+          set -e
+          # Ensure enough space is available for build
+          sudo apt-get autoremove -y
+          sudo apt-get clean -y
+          sudo rm -rf /usr/share/dotnet
+      - name: Checkout main
+        id: checkout_release
+        uses: actions/checkout@v3
+        with:
+          repository: 'devcontainers/images'
+          path: '__build'
+          ref: 'main'
+      - name: Build image
+        id: build_image
+        shell: bash
+        run: ${{ github.action_path }}/build.sh ${{ inputs.definition }}
+      - name: Test image
+        id: test_image
+        shell: bash
+        run: chmod +x ${{ github.action_path }}/test.sh && ${{ github.action_path }}/test.sh  ${{ inputs.definition }} ${{ inputs.user }}
