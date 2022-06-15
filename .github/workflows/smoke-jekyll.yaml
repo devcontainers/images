@@ -27,4 +27,5 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         definition: jekyll
+        image: mcr.microsoft.com/vscode/devcontainers/jekyll:dev-bullseye
         user: vscode

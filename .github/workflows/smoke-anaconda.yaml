@@ -26,4 +26,5 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         definition: anaconda
+        image: mcr.microsoft.com/vscode/devcontainers/anaconda:dev-3
         user: vscode

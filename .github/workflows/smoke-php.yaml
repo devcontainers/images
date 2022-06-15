@@ -29,4 +29,5 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         definition: php
+        image: mcr.microsoft.com/vscode/devcontainers/php:dev-8
         user: vscode

@@ -29,5 +29,5 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         definition: python
-        image: python
+        image: mcr.microsoft.com/vscode/devcontainers/python:dev-3image: python
         user: vscode

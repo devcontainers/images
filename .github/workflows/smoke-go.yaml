@@ -29,4 +29,5 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         definition: go
+        image: mcr.microsoft.com/vscode/devcontainers/go:dev-1
         user: vscode

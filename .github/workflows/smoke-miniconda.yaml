@@ -29,4 +29,5 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         definition: miniconda
+        image: mcr.microsoft.com/vscode/devcontainers/miniconda:dev-3
         user: vscode
