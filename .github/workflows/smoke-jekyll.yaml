@@ -2,16 +2,15 @@ name: Smoke test "jekyll" build
 
 on: 
   workflow_dispatch:
-
   push:
-    branches: [main]
-    paths:
-      - 'src/jekyll/**'
-  pull_request:
     branches:
-      - main
+    - main
+  pull_request:
     paths:
-      - 'src/jekyll/**'
+      - src/jekyll/**
+      - .github/workflows/smoke-jekyll.yaml
+      - .github/actions/**
+      - build/**
 jobs:
   smoke-test:
     name: Smoke test
@@ -27,5 +26,5 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         definition: jekyll
-        image: mcr.microsoft.com/vscode/devcontainers/jekyll:dev-bullseye
+        image: mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
         user: vscode

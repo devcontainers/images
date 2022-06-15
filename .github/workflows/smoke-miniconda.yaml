@@ -2,16 +2,15 @@ name: Smoke test "miniconda" build
 
 on: 
   workflow_dispatch:
-
   push:
-    branches: [main]
-    paths:
-      - 'src/miniconda/**'
-  pull_request:
     branches:
-      - main
+    - main
+  pull_request:
     paths:
-      - 'src/miniconda/**'
+      - src/miniconda/**
+      - .github/workflows/smoke-miniconda.yaml
+      - .github/actions/**
+      - build/**
 jobs:
   smoke-test:
     name: Smoke test
@@ -29,5 +28,5 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         definition: miniconda
-        image: mcr.microsoft.com/vscode/devcontainers/miniconda:dev-3
+        image: mcr.microsoft.com/devcontainers/miniconda:dev-3
         user: vscode

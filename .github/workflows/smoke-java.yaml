@@ -2,16 +2,15 @@ name: Smoke test "java" build
 
 on: 
   workflow_dispatch:
-
   push:
-    branches: [main]
-    paths:
-      - 'src/java/**'
-  pull_request:
     branches:
-      - main
+    - main
+  pull_request:
     paths:
-      - 'src/java/**'
+      - src/java/**
+      - .github/workflows/smoke-java.yaml
+      - .github/actions/**
+      - build/**
 jobs:
   smoke-test:
     name: Smoke test
@@ -29,5 +28,5 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         definition: java
-        image: mcr.microsoft.com/vscode/devcontainers/java:dev-17
+        image: mcr.microsoft.com/devcontainers/java:dev-17
         user: vscode

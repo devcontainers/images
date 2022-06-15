@@ -2,16 +2,15 @@ name: Smoke test "codespaces" build
 
 on: 
   workflow_dispatch:
-
   push:
-    branches: [main]
-    paths:
-      - 'src/codespaces/**'
-  pull_request:
     branches:
-      - main
+    - main
+  pull_request:
     paths:
-      - 'src/codespaces/**'
+      - src/codespaces/**
+      - .github/codespaces/smoke-codespaces.yaml
+      - .github/actions/**
+      - build/**
 jobs:
   smoke-test:
     name: Smoke test
@@ -29,5 +28,5 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         definition: codespaces
-        image: mcr.microsoft.com/vscode/devcontainers/universal:dev-linux
+        image: mcr.microsoft.com/devcontainers/universal:dev-linux
         user: codespace

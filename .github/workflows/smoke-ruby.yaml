@@ -2,16 +2,15 @@ name: Smoke test "ruby" build
 
 on: 
   workflow_dispatch:
-
   push:
-    branches: [main]
-    paths:
-      - 'src/ruby/**'
-  pull_request:
     branches:
-      - main
+    - main
+  pull_request:
     paths:
-      - 'src/ruby/**'
+      - src/ruby/**
+      - .github/workflows/smoke-ruby.yaml
+      - .github/actions/**
+      - build/**
 jobs:
   smoke-test:
     name: Smoke test
@@ -29,5 +28,5 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         definition: ruby
-        image: mcr.microsoft.com/vscode/devcontainers/ruby:dev-3
+        image: mcr.microsoft.com/devcontainers/ruby:dev-3
         user: vscode

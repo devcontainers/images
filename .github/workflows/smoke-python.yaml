@@ -2,16 +2,15 @@ name: Smoke test "python" build
 
 on: 
   workflow_dispatch:
-
   push:
-    branches: [main]
-    paths:
-      - 'src/python/**'
-  pull_request:
     branches:
-      - main
+    - main
+  pull_request:
     paths:
-      - 'src/python/**'
+      - src/python/**
+      - .github/workflows/smoke-python.yaml
+      - .github/actions/**
+      - build/**
 jobs:
   smoke-test:
     name: Smoke test
@@ -29,5 +28,5 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         definition: python
-        image: mcr.microsoft.com/vscode/devcontainers/python:dev-3
+        image: mcr.microsoft.com/devcontainers/python:dev-3
         user: vscode

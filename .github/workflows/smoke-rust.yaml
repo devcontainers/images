@@ -2,16 +2,15 @@ name: Smoke test "rust" build
 
 on: 
   workflow_dispatch:
-
   push:
-    branches: [main]
-    paths:
-      - 'src/rust/**'
-  pull_request:
     branches:
-      - main
+    - main
+  pull_request:
     paths:
-      - 'src/rust/**'
+      - src/rust/**
+      - .github/workflows/smoke-rust.yaml
+      - .github/actions/**
+      - build/**
 jobs:
   smoke-test:
     name: Smoke test
@@ -29,5 +28,5 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         definition: rust
-        image: mcr.microsoft.com/vscode/devcontainers/rust:dev-bullseye
+        image: mcr.microsoft.com/devcontainers/rust:dev-bullseye
         user: vscode
