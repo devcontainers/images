@@ -12,7 +12,7 @@ check "oryx" oryx --version
 # Check .NET
 check "dotnet" dotnet --list-sdks
 check "oryx-install-dotnet-2.1" oryx prep --skip-detection --platforms-and-versions dotnet=2.1.12
-check "dotnet-2-installed-by-oryx" ls /tmp/oryx/platforms/dotnet/ | grep 2.1
+check "dotnet-2-installed-by-oryx" ls /usr/local/oryx-platforms/dotnet/ | grep 2.1
 echo $(echo "dotnet versions" && ls -a /usr/local/dotnet)
 
 # Check Python
