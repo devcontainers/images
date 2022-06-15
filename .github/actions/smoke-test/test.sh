@@ -6,12 +6,14 @@ USERNAME="$3"
 export DOCKER_BUILDKIT=1
 set -e
 
+# List docker images
+echo "(*) Listing docker images..."
 docker images
 
 # Start container
 echo "(*) Starting container..."
 container_name="vscdc-test-container-$DEFINITION"
-docker run -d --name ${container_name} --rm --init --privileged -v "$(pwd)/src/${DEFINITION}:/workspace" ${IMAGE}-uid /bin/sh -c 'while sleep 1000; do :; done'
+docker run -d --name ${container_name} --rm --init --privileged -v "$(pwd)/src/${DEFINITION}:/workspace" ${IMAGE} /bin/sh -c 'while sleep 1000; do :; done'
 
 # Run actual test
 echo "(*) Running test..."
