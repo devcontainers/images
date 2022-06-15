@@ -19,7 +19,7 @@ chmod +x build/vscdc
 build/vscdc push  ${DEFINITION} \
     --no-push \
     --release dev \
-    --github-repo "devcontainers" \
+    --github-repo "devcontainers/images" \
     --registry "mcr.microsoft.com" \
     --registry-path "devcontainers" \
     --stub-registry "mcr.microsoft.com" \
