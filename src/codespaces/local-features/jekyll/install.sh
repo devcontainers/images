@@ -10,7 +10,7 @@
 # Syntax: ./jekyll-debian.sh [Jekyll version] [Non-root user] [Add rc files flag]
 
 VERSION=${1:-"latest"}
-USERNAME=${2:-"automatic"}
+USERNAME=${2:-"codespace"}
 
 set -e
 
@@ -58,3 +58,5 @@ if ! jekyll --version > /dev/null ; then
     PATH="/usr/local/rvm/rubies/default/bin:${PATH}" /usr/local/rvm/rubies/default/bin/gem install jekyll -v "${VERSION}"
   fi
 fi
+
+chown -R "${USERNAME}:rvm" /usr/local/rvm/*
