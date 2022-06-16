@@ -3,14 +3,9 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License. See https://go.microsoft.com/fwlink/?linkid=2090316 for license information.
 #-------------------------------------------------------------------------------------------------------------
-#
-# Docs: https://github.com/microsoft/vscode-dev-containers/blob/main/script-library/docs/maven.md
-# Maintainer: The VS Code and Codespaces Teams
-#
-# Syntax: ./maven-debian.sh [maven version] [non-root user] [Update rc files flag]
 
 MAVEN_VERSION=${1:-"latest"}
-USERNAME=${2:-"automatic"}
+USERNAME=${2:-"codespace"}
 UPDATE_RC=${3:-"true"}
 
 export SDKMAN_DIR=${SDKMAN_DIR:-"/usr/local/sdkman"}
@@ -27,23 +22,6 @@ rm -f /etc/profile.d/00-restore-env.sh
 echo "export PATH=${PATH//$(sh -lc 'echo $PATH')/\$PATH}" > /etc/profile.d/00-restore-env.sh
 chmod +x /etc/profile.d/00-restore-env.sh
 
-# Determine the appropriate non-root user
-if [ "${USERNAME}" = "auto" ] || [ "${USERNAME}" = "automatic" ]; then
-    USERNAME=""
-    POSSIBLE_USERS=("vscode" "node" "codespace" "$(awk -v val=1000 -F ":" '$3==val{print $1}' /etc/passwd)")
-    for CURRENT_USER in ${POSSIBLE_USERS[@]}; do
-        if id -u ${CURRENT_USER} > /dev/null 2>&1; then
-            USERNAME=${CURRENT_USER}
-            break
-        fi
-    done
-    if [ "${USERNAME}" = "" ]; then
-        USERNAME=root
-    fi
-elif [ "${USERNAME}" = "none" ] || ! id -u ${USERNAME} > /dev/null 2>&1; then
-    USERNAME=root
-fi
-
 updaterc() {
     if [ "${UPDATE_RC}" = "true" ]; then
         echo "Updating /etc/bash.bashrc and /etc/zsh/zshrc..."
@@ -57,8 +35,7 @@ updaterc() {
 }
 
 # Function to run apt-get if needed
-apt_get_update_if_needed()
-{
+apt_get_update_if_needed() {
     if [ ! -d "/var/lib/apt/lists" ] || [ "$(ls /var/lib/apt/lists/ | wc -l)" = "0" ]; then
         echo "Running apt-get update..."
         apt-get update
@@ -85,7 +62,7 @@ sdk_install() {
     if [ "${requested_version}" = "none" ]; then return; fi
     # Blank will install latest stable version
     if [ "${requested_version}" = "lts" ] || [ "${requested_version}" = "default" ]; then
-         requested_version=""
+        requested_version=""
     elif echo "${requested_version}" | grep -oE "${full_version_check}" > /dev/null 2>&1; then
         echo "${requested_version}"
     else
@@ -121,7 +98,7 @@ if [ ! -d "${SDKMAN_DIR}" ]; then
     umask 0002
     # Install SDKMAN
     curl -sSL "https://get.sdkman.io?rcupdate=false" | bash
-    chown -R :sdkman ${SDKMAN_DIR}
+    chown -R "${USERNAME}:sdkman" ${SDKMAN_DIR}
     find ${SDKMAN_DIR} -type d | xargs -d '\n' chmod g+s
     # Add sourcing of sdkman into bashrc/zshrc files (unless disabled)
     updaterc "export SDKMAN_DIR=${SDKMAN_DIR}\n. \${SDKMAN_DIR}/bin/sdkman-init.sh"

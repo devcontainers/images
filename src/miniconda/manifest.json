@@ -7,14 +7,19 @@
 			"miniconda:${VERSION}-3"
 		]
 	},
-	"architectures": ["linux/amd64", "linux/arm64"],
+	"architectures": [
+		"linux/amd64",
+		"linux/arm64"
+	],
 	"dependencies": {
 		"image": "continuumio/miniconda3:latest",
 		"imageLink": "https://hub.docker.com/r/continuumio/miniconda3",
-		"debian": [{
-			"cgIgnore": false,
-			"name": "yarn"
-		}],
+		"debian": [
+			{
+				"cgIgnore": false,
+				"name": "yarn"
+			}
+		],
 		"git": {
 			"Oh My Zsh!": "/home/vscode/.oh-my-zsh",
 			"nvm": "/usr/local/share/nvm"
