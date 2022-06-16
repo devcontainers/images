@@ -102,13 +102,5 @@ check "zsh" zsh --version
 yarn
 check "run-puppeteer" node puppeteer.js
 
-cd /usr/local
-ls -la
-
-cd /usr/local/rvm/gems/ruby-3.1.2/gems/jekyll-4.2.2/
-ls -la
-
-cd /usr/local/rvm/gems/ruby-3.1.2/gems/
-ls -la
 # Report result
 reportResults
