@@ -501,7 +501,7 @@ async function getGoPackageInfo(imageTagOrContainerName, packages) {
 
     console.log(`(*) Gathering information about go modules and packages...`);
     const componentList = [];
-    const packageInstallOutput = await getCommandOutputFromContainer(imageTagOrContainerName, "cat /usr/local/etc/devcontainers/go.log");
+    const packageInstallOutput = await getCommandOutputFromContainer(imageTagOrContainerName, "cat /usr/local/etc/vscode-dev-containers/go.log");
     for(let package in packages) {
         if (typeof package === 'string') {
             const versionCommand = packages[package];
