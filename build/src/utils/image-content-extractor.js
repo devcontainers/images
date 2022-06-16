@@ -428,9 +428,7 @@ async function getGemPackageInfo(imageTagOrContainerName, packageList) {
     console.log(`(*) Gathering information about gems...`);
     const gemListOutput = await getCommandOutputFromContainer(imageTagOrContainerName, "bash -l -c 'set -e && gem list -d --local' 2>/dev/null");
     return packageList.map((gem) => {
-        console.log(gemListOutput);
         const gemVersionCaptureGroup = new RegExp(`^${gem}\\s\\(([^\\),]+)`,'m').exec(gemListOutput);
-        console.log(gemVersionCaptureGroup)
         if (gemVersionCaptureGroup !== null && gemVersionCaptureGroup[1] !== null) {
             const gemVersion = gemVersionCaptureGroup[1];
             return {
