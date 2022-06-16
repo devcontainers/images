@@ -8,7 +8,7 @@ The Node.js based build CLI (`build/vsdc`) has commands to:
 
 1. Build and push to a repository: `build/vsdc push`
 2. Build, push, and npm package assets that are modified as described above: `build/vsdc package`
-3. Generate cgmanifest.json and history markdown files: `build/vsdc cg`, `build/vsdc info`
+3. Generate manifest.json and history markdown files: `build/vsdc cg`, `build/vsdc info`
 4. Update all script source URLs in Dockerfiles to a tag or branch: `build/vsdc update-script-sources`
 5. Overwrite scripts in the `.devcontainer/library-scripts` folder with the most recent copy from the `scripts-library` folder: `build/vscdc copy-library-scripts` 
 
@@ -16,11 +16,11 @@ Run with the `--help` option to see inputs.
 
 This CLI is used in the GitHub Actions workflows in this repository.
 
-- `push-dev.yml`: Pushes a "dev" tag for each image to be generated in this repository and fires repository dispatch to trigger cgmanifest.json generation, and attaches an npm package with the definitions to the actions run.
+- `push-dev.yml`: Pushes a "dev" tag for each image to be generated in this repository and fires repository dispatch to trigger manifest.json generation, and attaches an npm package with the definitions to the actions run.
 - `push-and-package.yml`: Triggers when a release tag is pushed (`vX.Y.Z`). Builds and pushes a release version of the images, creates a release, and attaches an npm package with the definitions to the release. Note that this update the tag with source files that contain a SHA hash for script sources. You may need to run `git fetch --tags --force` locally after it runs.
 - `push-again.yml`: A manually triggered workflow that can be used to push an updated version of an image for an existing release. This should only be used in cases where the image push to the registry only partially succeeded (e.g. `linux/amd64` was pushed, but a connection error happened when pushing `linux/arm64` for the same image.)
 - `smoke-*.yaml` (using the `smoke-test` action in this repository) - Runs a build without pushing and executes `test-project/test.sh` (if present) inside the container to verify that there are no breaking changes to the image when the repository contents are updated.
-- `version-history.yml`: Listens for workflow dispatch events to trigger cgmanifest.json and history markdown generation.
+- `version-history.yml`: Listens for workflow dispatch events to trigger manifest.json and history markdown generation.
 
 ## Setting up a container to be built
 
@@ -58,7 +58,7 @@ Once you have your build configuration setup, you can use the `vscdc` CLI to tes
     docker run -it --init --privileged --rm mcr.microsoft.com/devcontainers/<expected-repository>:dev-<expected tag> bash
     ```
 
-3. Finally, test cgmanifest/markdown generation by running:
+3. Finally, test manifest/markdown generation by running:
 
    ```bash
    build/vscdc cg --registry mcr.microsoft.com --registry-path devcontainers --release main <you-definition-id-here>
@@ -381,7 +381,7 @@ Following this is a list of libraries installed in the image by its Dockerfile. 
 
 #### `dependencies.apt`, `dependencies.apk`
 
-These two properties are arrays of either strings or objects that reference apt or apk package names. Given most installed packages are there simply for visibility because they come with the distro, these are not tracked in `cgmanifest.json` by default. When something comes from a 3rd party repository, the object syntax can be used to set `"cgIgnore": false`. An `annotation` property can also be used to for a description that should appear in history markdown files.
+These two properties are arrays of either strings or objects that reference apt or apk package names. Given most installed packages are there simply for visibility because they come with the distro, these are not tracked in `manifest.json` by default. When something comes from a 3rd party repository, the object syntax can be used to set `"cgIgnore": false`. An `annotation` property can also be used to for a description that should appear in history markdown files.
 
 For example:
 
