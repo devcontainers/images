@@ -160,8 +160,8 @@
 			},
 			"Ruby": {
 				"cgIgnore": true,
-				"versionCommand": "ls /usr/local/rvm/gems/default/bin/ | grep -oE '[0-9]+\\.[0-9]+\\.[0-9]+'",
-				"path": "/usr/local/rvm/gems/default/bin//&lt;version&gt;"
+				"versionCommand": "ls /usr/local/rvm/rubies | grep -oE '[0-9]+\\.[0-9]+\\.[0-9]+'",
+				"path": "/usr/local/rvm/rubies/&lt;version&gt;"
 			},
 			"PHP": {
 				"cgIgnore": true,
