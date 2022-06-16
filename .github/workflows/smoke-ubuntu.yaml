@@ -2,16 +2,15 @@ name: Smoke test "ubuntu" build
 
 on: 
   workflow_dispatch:
-
   push:
-    branches: [main]
-    paths:
-      - 'src/ubuntu/**'
-  pull_request:
     branches:
-      - main
+    - main
+  pull_request:
     paths:
-      - 'src/ubuntu/**'
+      - src/ubuntu/**
+      - .github/workflows/smoke-ubuntu.yaml
+      - .github/actions/**
+      - build/**
 jobs:
   smoke-test:
     name: Smoke test
@@ -29,4 +28,5 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         definition: ubuntu
+        image: mcr.microsoft.com/devcontainers/base:dev-ubuntu
         user: vscode

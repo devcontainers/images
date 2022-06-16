@@ -4,13 +4,23 @@ DEFINITION="$1"
 set -e
 
 export DOCKER_BUILDKIT=1
-echo "(*) Pulling latest '@devcontainer/cli"
-# npm install -g @devcontainers/cli
 
-#Temporarily installing cli from source until https://github.com/devcontainers/cli/pull/6 is merged
-cd build 
-chmod +x devcontainers-cli-0.3.0-1.tgz
+# Symlink build scripts from main to improve security when testing PRs
+if [ -d "$GITHUB_WORKSPACE/__build/build" ]; then
+    cp -r "$GITHUB_WORKSPACE/__build/build" "$GITHUB_WORKSPACE/"
+else
+    echo "WARNING: Using build/vscdc from $GITHUB_REF instead of main."
+fi
+rm -rf node_modules
+yarn install
 
-echo "(*) Building image - ${DEFINITION}"
-npx --yes devcontainers-cli-0.3.0-1.tgz up --workspace-folder ../src/${DEFINITION}
-# devcontainer build --workspace-folder "src/${DEFINITION}/" --image-name vsc-${DEFINITION}
+# Run test build
+chmod +x build/vscdc
+build/vscdc push  ${DEFINITION} \
+    --no-push \
+    --release dev \
+    --github-repo "devcontainers/images" \
+    --registry "mcr.microsoft.com" \
+    --registry-path "devcontainers" \
+    --stub-registry "mcr.microsoft.com" \
+    --stub-registry-path "devcontainers"
