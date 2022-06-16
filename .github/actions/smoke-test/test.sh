@@ -16,10 +16,6 @@ docker images
 # The dev container CLI handles this automatically but we're not using it.
 local_uid=$(id -u)
 local_gid=$(id -g)
-if [ "${DEFINITION}" = "codespaces" ]; then
-    local_uid=1000
-    local_gid=1000
-fi
 
 echo "(*) Updating container user UID/GID..."
 echo -e "FROM ${IMAGE}\n \
