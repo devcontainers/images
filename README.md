@@ -1,8 +1,8 @@
-# Development Containers
+# Development Containers Images
 
 A **development container** is a running [Docker](https://www.docker.com) container with a well-defined tool/runtime stack and its prerequisites. It allows you to use a container as a full-featured development environment which can be used to run an application, to separate tools, libraries, or runtimes needed for working with a codebase, and to aid in continuous integration and testing.
 
-This repository contains a set of **dev container definitions** to help get you up and running with a containerized environment. The definitions describe the appropriate container image, and runtime arguments for starting the container which are built with [dev container features](https://github.com/devcontainers/features). Each provides a container configuration file (`.devcontainer.json`) and other needed files that you can drop into any existing folder as a starting point for containerizing your project.
+This repository contains a set of **dev container images** which are docker images built with [dev container features](https://github.com/devcontainers/features). These images are consumed by [templates].(https://github.com/devcontainers/templates) for creating [dev container definitions](:TODO)
 
 ## Contents
  
@@ -20,7 +20,8 @@ Each `RUN` statement creates a Docker image "layer". If one `RUN` statement adds
 
 ### How can I contribute?
 
-If you want to create your own image or add functionality on top of the image definitions available in this repository, then see [How to write Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) and [How to use dev container features](https://github.com/devcontainers/features). However, we won't add them to an offical repository as this repository is a limited set of selected images. Check out the [templates](https://github.com/devcontainers/templates) and [features](https://github.com/devcontainers/features) repos for more customizations and information on contributions.
+If you want to create your own image or add functionality on top of the images available in this repository, then see [How to write Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) and [How to use dev container features](https://github.com/devcontainers/features). 
+This repository contains a select set of images, and we encourage the community to host and share additional images, templates, and features rather than adding them here. You may learn more about this process in [the guidance](https://github.com/devcontainers/spec/pull/40) in our spec repo. You may also check out the [templates](https://github.com/devcontainers/templates) and [features](https://github.com/devcontainers/features) repos for additional customizations you may adopt or modify for your dev containers.
 
 ## Feedback
 
