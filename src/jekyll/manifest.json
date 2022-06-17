@@ -31,7 +31,7 @@
 		}
 	},
 	"dependencies": {
-		"image": "mcr.microsoft.com/vscode/devcontainers/ruby:${VARIANT}",
+		"image": "mcr.microsoft.com/devcontainers/ruby:${VARIANT}",
 		"imageLink": "https://github.com/microsoft/vscode-dev-containers",
 		"debian": [
 			{

@@ -10,7 +10,7 @@ RUN groupadd -r conda --gid 900 \
     && find /opt -type d | xargs -n 1 chmod g+s
 
 # Reset and copy updated files with updated privs to keep image size down
-FROM mcr.microsoft.com/vscode/devcontainers/base:0-bullseye
+FROM mcr.microsoft.com/devcontainers/base:0-bullseye
 COPY --from=upstream /opt /opt/
 
 # Copy scripts to execute
