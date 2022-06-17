@@ -652,9 +652,6 @@ When a release is cut, the contents of devcontainers repo are staged. The build 
     {
         "name": "Node.js 10",
         "dockerFile": "Dockerfile",
-        "extensions": [
-            "dbaeumer.vscode-eslint"
-        ]
     }
     ```
 

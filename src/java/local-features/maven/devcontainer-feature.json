@@ -16,9 +16,6 @@
             "description": "Select or enter a Maven version to install"
         }
     },
-    "extensions": [
-        "vscjava.vscode-java-pack"
-    ],
     "containerEnv": {
         "SDKMAN_DIR": "${SDKMAN_DIR:-\"/usr/local/sdkman\"}",
         "PATH": "${SDKMAN_DIR}/bin:${SDKMAN_DIR}/candidates/maven/current/bin:${PATH}"
