@@ -8,7 +8,7 @@ on:
         required: true
         default: 'main'
       cg:
-        description: 'Generate cgmanifest.json'
+        description: 'Generate manifest.json'
         required: true
         default: 'false'
       push:
@@ -75,7 +75,7 @@ jobs:
         cp -r "$GITHUB_WORKSPACE/ref/build" "$GITHUB_WORKSPACE/release/"
         yarn install
 
-        # Pull images and update cgmanifest.json, but output back to ref
+        # Pull images and update manifest.json, but output back to ref
         build/vscdc info  --no-build \
                           --markdown \
                           --prune \

@@ -179,7 +179,7 @@ async function getLinuxPackageInfo(imageTagOrContainerName, packageList, linuxDi
     return componentList;
 }
 
-// Gets a package pool URL out of a download URL - Needed for registering in cgmanifest.json
+// Gets a package pool URL out of a download URL - Needed for registering in manifest.json
 function getPoolUrlFromPackageVersionListOutput(packageUriCommandOutput, config, package, version) {
     // Handle regex reserved charters in regex strings and that ":" is treaded as "1%3a" on Debian/Ubuntu 
     const sanitizedPackage = package.replace(/\+/g, '\\+').replace(/\./g, '\\.');
@@ -429,10 +429,14 @@ async function getGemPackageInfo(imageTagOrContainerName, packageList) {
     const gemListOutput = await getCommandOutputFromContainer(imageTagOrContainerName, "bash -l -c 'set -e && gem list -d --local' 2>/dev/null");
     return packageList.map((gem) => {
         const gemVersionCaptureGroup = new RegExp(`^${gem}\\s\\(([^\\),]+)`,'m').exec(gemListOutput);
-        const gemVersion = gemVersionCaptureGroup[1];
-        return {
-            name: gem,
-            version: gemVersion
+        if (gemVersionCaptureGroup !== null && gemVersionCaptureGroup[1] !== null) {
+            const gemVersion = gemVersionCaptureGroup[1];
+            return {
+                name: gem,
+                version: gemVersion
+            }
+        } else {
+            return {};
         }
     });
 }
@@ -501,7 +505,7 @@ async function getGoPackageInfo(imageTagOrContainerName, packages) {
 
     console.log(`(*) Gathering information about go modules and packages...`);
     const componentList = [];
-    const packageInstallOutput = await getCommandOutputFromContainer(imageTagOrContainerName, "cat /usr/local/etc/devcontainers/go.log");
+    const packageInstallOutput = await getCommandOutputFromContainer(imageTagOrContainerName, "cat /usr/local/etc/vscode-dev-containers/go.log");
     for(let package in packages) {
         if (typeof package === 'string') {
             const versionCommand = packages[package];

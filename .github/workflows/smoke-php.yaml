@@ -2,16 +2,15 @@ name: Smoke test "php" build
 
 on: 
   workflow_dispatch:
-
   push:
-    branches: [main]
-    paths:
-      - 'src/php/**'
-  pull_request:
     branches:
-      - main
+    - main
+  pull_request:
     paths:
-      - 'src/php/**'
+      - src/php/**
+      - .github/workflows/smoke-php.yaml
+      - .github/actions/**
+      - build/**
 jobs:
   smoke-test:
     name: Smoke test
@@ -29,4 +28,5 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         definition: php
+        image: mcr.microsoft.com/devcontainers/php:dev-8
         user: vscode
