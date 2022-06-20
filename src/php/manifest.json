@@ -7,7 +7,7 @@
 		"8.0-apache-buster",
 		"7.4-apache-buster"
 	],
-	"definitionVersion": "0.203.3",
+	"imageVersion": "0.203.3",
 	"build": {
 		"latest": "8.1-apache-bullseye",
 		"rootDistro": "debian",

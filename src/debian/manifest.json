@@ -4,7 +4,7 @@
 		"bullseye",
 		"stretch"
 	],
-	"definitionVersion": "0.202.6",
+	"imageVersion": "0.202.6",
 	"build": {
 		"latest": "bullseye",
 		"rootDistro": "debian",

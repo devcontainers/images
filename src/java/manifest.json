@@ -5,7 +5,7 @@
 		"11-bullseye",
 		"11-buster"
 	],
-	"definitionVersion": "0.205.3",
+	"imageVersion": "0.205.3",
 	"build": {
 		"latest": "17-bullseye",
 		"rootDistro": "debian",

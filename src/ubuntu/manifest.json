@@ -4,7 +4,7 @@
 		"focal",
 		"bionic"
 	],
-	"definitionVersion": "0.203.0",
+	"imageVersion": "0.203.0",
 	"build": {
 		"latest": false,
 		"rootDistro": "debian",

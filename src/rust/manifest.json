@@ -3,7 +3,7 @@
 		"buster",
 		"bullseye"
 	],
-	"definitionVersion": "0.202.0",
+	"imageVersion": "0.202.0",
 	"build": {
 		"latest": "bullseye",
 		"rootDistro": "debian",

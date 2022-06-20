@@ -11,7 +11,7 @@
 		"3.7-buster",
 		"3.6-buster"
 	],
-	"definitionVersion": "0.203.5",
+	"imageVersion": "0.203.5",
 	"build": {
 		"latest": "3.10-bullseye",
 		"rootDistro": "debian",
