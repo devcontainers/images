@@ -66,7 +66,7 @@ require('yargs')
                     default: true
                 },
                 'skip-push': {
-                    describe: 'A space separated list of definition IDs to skip build and push.',
+                    describe: 'A space separated list of image names to skip build and push.',
                     type: 'array',
                     default: []
                 }
@@ -136,7 +136,7 @@ require('yargs')
                     default: false
                 },
                 'skip': {
-                    describe: 'A space separated list of definition IDs to skip building and pushing.',
+                    describe: 'A space separated list of image names to skip building and pushing.',
                     type: 'array',
                     default: []
                 }
@@ -145,7 +145,7 @@ require('yargs')
     .command('cg [devcontainer]', 'generate manifest.json', (yargs) => {
         yargs
             .positional('devcontainer', {
-                describe: 'limits manifest generation to single definition',
+                describe: 'limits manifest generation to single image',
                 default: null
             })
             .options({
@@ -209,7 +209,7 @@ require('yargs')
     .command('info [devcontainer]', 'generate image information files', (yargs) => {
         yargs
             .positional('devcontainer', {
-                describe: 'limits manifest generation to single definition',
+                describe: 'limits manifest generation to single image',
                 default: null
             })
             .options({

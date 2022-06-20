@@ -24,7 +24,7 @@ async function loadConfig(repoPath) {
     repoPath = repoPath || path.join(__dirname, '..', '..', '..');
     const definitionBuildConfigFile = getConfig('definitionBuildConfigFile', 'manifest.json');
 
-    // Get list of definition folders
+    // Get list of image folders
     const containersPath = path.join(repoPath, 'src');
     const definitions = await asyncUtils.readdir(containersPath, { withFileTypes: true });
     await asyncUtils.forEach(definitions, async (definitionFolder) => {
@@ -47,7 +47,7 @@ async function loadConfig(repoPath) {
             path: definitionPath,
             relativeToRootPath: path.relative(repoPath, definitionPath)
         }
-        // If definition-manifest.json exists, load it
+        // If manifest.json exists, load it
         const manifestPath = path.join(definitionPath, definitionBuildConfigFile);
         if (await asyncUtils.exists(manifestPath)) {
             await loadDefinitionManifest(manifestPath, definitionId);
@@ -66,7 +66,7 @@ async function loadConfig(repoPath) {
             definitionVariants.map((variant) => dependencies.image.replace('${VARIANT}', variant)) :
             [dependencies.image];
 
-        // Populate definition and variant lookup
+        // Populate image and variant lookup
         if (buildSettings.tags) {
             // Variants can be used as a VARAINT arg in tags, so support that too. However, these can
             // get overwritten in certain tag configs resulting in bad lookups, so **process them first**.
@@ -108,7 +108,7 @@ function getConfig(property, defaultVal) {
     return process.env[envVar] || config[property] || defaultVal;
 }
 
-// Loads definition-manifest.json and adds it to config
+// Loads manifest.json and adds it to config
 async function loadDefinitionManifest(manifestPath, definitionId) {
     const buildJson = await jsonc.read(manifestPath);
     if (buildJson.variants) {
@@ -120,12 +120,12 @@ async function loadDefinitionManifest(manifestPath, definitionId) {
     if (buildJson.dependencies) {
         config.definitionDependencies[definitionId] = buildJson.dependencies;
     }
-    if (buildJson.definitionVersion) {
-        config.definitionVersions[definitionId] = buildJson.definitionVersion;
+    if (buildJson.imageVersion) {
+        config.definitionVersions[definitionId] = buildJson.imageVersion;
     }
 }
 
-// Returns location of the definition based on Id
+// Returns location of the definition based on name
 function getDefinitionPath(definitionId, relative) {
     return relative ? allDefinitionPaths[definitionId].relativeToRootPath : allDefinitionPaths[definitionId].path
 }
@@ -158,7 +158,7 @@ function getLinuxDistroForDefinition(definitionId) {
     return config.definitionBuildSettings[definitionId].rootDistro || 'debian';
 }
 
-// Generate 'latest' flavor of a given definition's tag
+// Generate 'latest' flavor of a given image's tag
 function getLatestTag(definitionId, registry, registryPath) {
     if (typeof config.definitionBuildSettings[definitionId] === 'undefined') {
         return null;
@@ -179,14 +179,14 @@ function getVariants(definitionId) {
     return config.definitionVariants[definitionId] || null;
 }
 
-// Create all the needed variants of the specified version identifier for a given definition
+// Create all the needed variants of the specified version identifier for a given image
 function getTagsForVersion(definitionId, version, registry, registryPath, variant) {
     if (typeof config.definitionBuildSettings[definitionId] === 'undefined') {
         return null;
     }
 
-    // If the definition states that only versioned tags are returned and the version is 'dev', 
-    // add the definition Id to ensure that we do not incorrectly hijack a tag from another definition.
+    // If the image states that only versioned tags are returned and the version is 'dev', 
+    // add the image name to ensure that we do not incorrectly hijack a tag from another image.
     if (version === 'dev') {
         version = config.definitionBuildSettings[definitionId].versionedTagsOnly ? `dev-${definitionId.replace(/-/mg,'')}` : 'dev';
     }
@@ -231,7 +231,7 @@ function getTagsForVersion(definitionId, version, registry, registryPath, varian
 }
 
 /* 
-Generate complete list of tags for a given definition.
+Generate complete list of tags for a given image.
 
 versionPartHandling has a few different modes:
     - true/'all-latest' - latest, X.X.X, X.X, X
@@ -326,7 +326,7 @@ function getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip) {
     const noParentList = [];
     let total = 0;
     for (let definitionId in config.definitionBuildSettings) {
-        // If paged build, ensure this definition should be included
+        // If paged build, ensure this image should be included
         if (typeof config.definitionBuildSettings[definitionId] === 'object') {
             if (definitionsToSkip.indexOf(definitionId) < 0) {
                 let parentId = config.definitionBuildSettings[definitionId].parent;
@@ -437,7 +437,7 @@ function createMultiParentBucket(variantParentMap, parentBuckets, dupeBuckets) {
     return parentId;
 }
 
-// Add definition to correct parent bucket when sorting
+// Add image to correct parent bucket when sorting
 function bucketDefinition(definitionId, parentId, parentBuckets) {
     // Handle parents that have parents
     // TODO: Recursive parents rather than just parents-of-parents
@@ -457,7 +457,7 @@ function bucketDefinition(definitionId, parentId, parentBuckets) {
     }
 }
 
-// Get parent tag for a given child definition
+// Get parent tag for a given child image
 function getParentTagForVersion(definitionId, version, registry, registryPath, variant) {
     let parentId = config.definitionBuildSettings[definitionId].parent;
     if (parentId) {
@@ -470,7 +470,7 @@ function getParentTagForVersion(definitionId, version, registry, registryPath, v
         const parentVariantList = getVariants(parentId);
         let parentVariant;
         if(parentVariantList) {
-            // If a variant is specified in the parentVariant property in build, use it - otherwise default to the child definition's variant
+            // If a variant is specified in the parentVariant property in build, use it - otherwise default to the child image's variant
             parentVariant = config.definitionBuildSettings[definitionId].parentVariant || variant;
             if(typeof parentVariant !== 'string') {
                 // Use variant to figure out correct variant it not the same across all parents, or return first variant if child has no variant

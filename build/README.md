@@ -26,7 +26,7 @@ This CLI is used in the GitHub Actions workflows in this repository.
 >
 > However, if you have your own pre-built image or build process, you can simply reference it directly in you contributed container.
 
-Image build/push to MCR is managed using config in `manifest.json` files that are located in the container definition folder. The config lets you set dependencies between definitions and map actual image tags to multiple definitions. So, the steps to onboard an image are:
+Image build/push to MCR is managed using config in `manifest.json` files that are located in the images' folder. So, the steps to onboard an image are:
 
 1. **Important:** Update any `ARG` values in your `Dockerfile` to reflect what you want in the image. Use boolean `ARGS` with `if` statements to skip installing certain things in the image.
 
@@ -34,7 +34,7 @@ Image build/push to MCR is managed using config in `manifest.json` files that ar
 
 2. Create a [`Dockerfile`](#creating-a-dockerfile)
 
-3. Create [a `manifest.json` file](#the-definition-manifestjson-file)
+3. Create [a `manifest.json` file](#the-manifestjson-file)
 
 4. Set up [meta.env file](#Adding-a-meta.env-file)
 
@@ -47,7 +47,7 @@ Once you have your build configuration setup, you can use the `vscdc` CLI to tes
 1. First, build the image(s) using the CLI as follows:
 
    ```bash
-   build/vscdc push --no-push --registry mcr.microsoft.com --registry-path devcontainers --release main <you-definition-id-here>
+   build/vscdc push --no-push --registry mcr.microsoft.com --registry-path devcontainers --release main <you-image-name-here>
    ```
 
 2. Use the Docker CLI to verify all of the expected images and tags and have the right contents:
@@ -59,22 +59,8 @@ Once you have your build configuration setup, you can use the `vscdc` CLI to tes
 3. Finally, test manifest/markdown generation by running:
 
    ```bash
-   build/vscdc cg --registry mcr.microsoft.com --registry-path devcontainers --release main <you-definition-id-here>
+   build/vscdc cg --registry mcr.microsoft.com --registry-path devcontainers --release main <you-image-name-here>
    ```
-
-Once you're happy with the result, you can also verify that the `.devcontainer.json` and the associated concent that will be generated for your definition is correct.
-
-1. Generate a `.tgz` with all of the definitions zipped inside of it.
-
-    ```bash
-    build/vscdc pack --prep-and-package-only --release main
-    ```
-
-    A new file called `devcontainers-<version>-dev.tgz` should be in the root of the repository once this is done.
-
-2. Unzip generated the `tgz` somewhere in your filesystem.
-
-That's it!
 
 ## Creating a `Dockerfile`
 
@@ -159,31 +145,21 @@ In this case, Debian is also the one that is used for `latest` for the `base` re
 
 There's a special "dev" version that can be used to build main on CI - I ended up needing this to test and others would if they base an image off of one of the MCR images.  e.g. `dev-debian-9`.
 
-### The `build.parent` property
+### The `imageVersion` property
 
-The `build.parent` property that can be used to specify if the container image depends on an image created as a part of another dev container definition build. For example, the `typescript-node` definition uses the image from `javascript-node` and therefore includes the following:
+While in most cases it makes sense to version the contents of a image with the repository, there may be scenarios where you want to be able to version independently. A good example of this [is the `codespaces` image](../src/codespaces/) where upstream edits could cause breaking changes in this image.
 
-```json
-"build" {
-    "parent": "javascript-node"
-}
-```
-
-### The `definitionVersion` property
-
-While in most cases it makes sense to version the contents of a definition with the repository, there may be scenarios where you want to be able to version independently. A good example of this [is the `codespaces` definition](../src/codespaces/) where upstream edits could cause breaking changes in this image. Rather than increasing the major version of the extension and all definitions whenever this happens, the definition has its own version number.
-
-When this is necessary, the `definitionVersion` property in the `manifest.json` file can be set.
+When this is necessary, the `imageVersion` property in the `manifest.json` file can be set.
 
 ```json
-"definitionVersion": "1.0.0"
+"imageVersion": "1.0.0"
 ```
 
 ### The `variants` property
 
-In many cases, you will only need to create one image per dev container definition. Even if there is only one or two versions of a given runtime available at a given time, it can be useful to simply have different definitions to aid discoverability.
+In many cases, you will only need to create one image. Even if there is only one or two versions of a given runtime available at a given time, it can be useful to simply have different definitions to aid discoverability.
 
-In other cases, you may want to generate multiple images from the same definition but with one small change. This is where the variants property comes in. Consider this `manifest.json`:
+In other cases, you may want to generate multiple images but with one small change. This is where the variants property comes in. Consider this `manifest.json`:
 
 ```json
 "variants": [ "3", "3.6", "3.7", "3.8" ],
@@ -255,7 +231,7 @@ In this case, the image built for the `bullseye` variant will be tagged as follo
 - mcr.microsoft.com/devcontaienrs/base:debian11
 
 #### The `build.variantBuildArgs` property
-In some cases, you may need to vary build arguments in the definition's `Dockerfile` by variant (beyond the `VARIANT` build arg itself). This can be done using the `build.variantBuildArgs` property. For example, consider the following:
+In some cases, you may need to vary build arguments in the images' `Dockerfile` by variant (beyond the `VARIANT` build arg itself). This can be done using the `build.variantBuildArgs` property. For example, consider the following:
 
 ```jsonc
 "build": {
@@ -293,7 +269,7 @@ FROM openjdk:${TARGET_JAVA_VERSION}-jdk-${BASE_IMAGE_VERSION_CODENAME}
 The value of these arguments is then passed in for a given variant.
 
 #### Using `build.architecture` with variants
-Because of problems with different OS versions, you may need to specify different architectures to build for different variants of the same definition. This can be done using the `build.architecture` property with an object that maps a variant to an array of architectures. For example, the actual `debian` definition contains the following:
+Because of problems with different OS versions, you may need to specify different architectures to build for different variants of the same image. This can be done using the `build.architecture` property with an object that maps a variant to an array of architectures. For example, the actual `debian` image contains the following:
 
 ```jsonc
 "build": {
@@ -458,7 +434,7 @@ For example:
 }
 ```
 
-Since the same dependencies can be in more than one definition, default settings named dependencies can be set in the `otherDependencyDefaultSettings` property in [config.json](./config.json). When present in this file, only the name of the dependency and any overrides need to be specified for in `manifest.json`. For example, consider these examples that have default settings:
+Since the same dependencies can be in more than one image, default settings named dependencies can be set in the `otherDependencyDefaultSettings` property in [config.json](./config.json). When present in this file, only the name of the dependency and any overrides need to be specified for in `manifest.json`. For example, consider these examples that have default settings:
 
 ```jsonc
 "other": {
@@ -520,7 +496,7 @@ This has a few advantages:
 3. Upstream changes that break existing images can be handled as needed.
 4. Developers can opt to use the image tag 0.35 to get the latest break fix version if desired or 0 to always get the latest non-breaking update.
 
-When necessary, a specific version can also be specified for an individual image using a `definitionVersion` property, but this is generally the exception.
+When necessary, a specific version can also be specified for an individual image using a `imageVersion` property, but this is generally the exception.
 
 ### Release process and the contents of the npm package
 
@@ -536,7 +512,7 @@ FROM mcr.microsoft.com/devcontainer/javascript-node:0-10
 #    && apt-get -y install --no-install-recommends <your-package-list-here>
 ```
 
-This retains its value as a sample but minimizes the number of actual build steps. This template can evolve over time as new features are added Referencing The MAJOR version of the image in this Dockerfile allows us to push fixes or upstream updates that do not materially change the definition without developers having to change their projects.
+This retains its value as a sample but minimizes the number of actual build steps. This template can evolve over time as new features are added Referencing The MAJOR version of the image in this Dockerfile allows us to push fixes or upstream updates that do not materially change the image without developers having to change their projects.
 
 #### Repository contents
 
@@ -589,11 +565,10 @@ When a release is cut, the contents of devcontainers repo are staged. The build 
     FROM mcr.microsoft.com/devcontainer/python:0-${VARIANT}
     ```
 
-4. `.devcontainer.json` is updated to point to `Dockerfile` and a comment is added that points to the definition in this repository (along with its associated README for this specific version).
+4. `.devcontainer.json` is updated to point to `Dockerfile` and a comment is added that points to the image in this repository (along with its associated README for this specific version).
 
     ```json
-    // For format details, see https://aka.ms/vscode-remote/.devcontainer.json or the definition README at
-    // https://github.com/microsoft/devcontainers/tree/v0.35.0/containers/javascript-node-10
+    // For format details, see https://aka.ms/vscode-remote/.devcontainer.json
     {
         "name": "Node.js 10",
         "dockerFile": "Dockerfile",

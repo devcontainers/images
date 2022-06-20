@@ -56,7 +56,7 @@ async function prepDockerFile(devContainerDockerfilePath, definitionId, repo, re
             prepResult.devContainerDockerfileModified += '\n' +'COPY meta.env /usr/local/etc/vscode-dev-containers/' + '\n';
         }
 
-        // If building, update FROM to target registry and version if definition has a parent
+        // If building, update FROM to target registry and version if image has a parent
         const parentTag = configUtils.getParentTagForVersion(definitionId, version, registry, registryPath, variant);
         if (parentTag) {
             prepResult.devContainerDockerfileModified = replaceFrom(prepResult.devContainerDockerfileModified, `FROM ${parentTag}`);
