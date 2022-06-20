@@ -1,7 +1,5 @@
 #/bin/bash
 DEFINITION="$1"
-IMAGE="$2"
-USERNAME="$3"
 
 export DOCKER_BUILDKIT=1
 set -e

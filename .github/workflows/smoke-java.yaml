@@ -28,5 +28,3 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         definition: java
-        image: mcr.microsoft.com/devcontainers/java:dev-17
-        user: vscode

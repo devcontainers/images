@@ -28,5 +28,3 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         definition: rust
-        image: mcr.microsoft.com/devcontainers/rust:dev-bullseye
-        user: vscode

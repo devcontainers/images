@@ -28,5 +28,3 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         definition: codespaces
-        image: mcr.microsoft.com/devcontainers/universal:dev-linux
-        user: codespace
