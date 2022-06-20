@@ -26,5 +26,3 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         definition: cpp
-        image: mcr.microsoft.com/devcontainers/cpp:dev-debian
-        user: vscode

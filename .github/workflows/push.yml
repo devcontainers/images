@@ -1,4 +1,4 @@
-name: Release Containers
+name: Build and push images
 
 on:
   push:
@@ -61,61 +61,9 @@ jobs:
                           --stub-registry ${{ secrets.STUB_REGISTRY }} \
                           --stub-registry-path ${{ secrets.STUB_REGISTRY_BASE_PATH }}
 
-  package:
-    name: Package and release
-    needs: [build-and-push]
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout
-      id: checkout
-      uses: actions/checkout@v2
-
-    - name: Get tag name
-      id: get_tag_name
-      run: echo "::set-output name=tag::$(echo "${{ github.ref }}" | grep -oP 'refs/tags/\K(.+)')"
-
-    - name: Package
-      id: package
-      run: |
-        set -e
-        yarn install
-        build/vscdc pack  --prep-and-package-only \
-                          --release ${{ steps.get_tag_name.outputs.tag }} \
-                          --github-repo ${{ github.repository }} \
-                          --registry ${{ secrets.REGISTRY }} \
-                          --registry-path ${{ secrets.REGISTRY_BASE_PATH }} \
-                          --stub-registry ${{ secrets.STUB_REGISTRY }} \
-                          --stub-registry-path ${{ secrets.STUB_REGISTRY_BASE_PATH }}
-
-        # Set an output with the resulting package name for upload
-        PKG_PREFIX=$(node -p "require('./package.json').name")
-        echo "::set-output name=package_name::$(ls $PKG_PREFIX-*.tgz)"
-
-    - name: Create release
-      id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: ${{ steps.get_tag_name.outputs.tag }}
-        release_name:  ${{ steps.get_tag_name.outputs.tag }}
-        draft: false
-        prerelease: false
-
-    - name: Upload package as release asset
-      id: upload_release_asset 
-      uses: actions/upload-release-asset@v1.0.1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./${{ steps.package.outputs.package_name }}
-        asset_name: ${{ steps.package.outputs.package_name }}
-        asset_content_type: application/gzip
-
   image-info:
     name: Trigger info extraction
-    needs: [package]
+    needs: [build-and-push]
     runs-on: ubuntu-latest
     steps:
     - name: Get tag name

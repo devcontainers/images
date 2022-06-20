@@ -28,5 +28,3 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         definition: ruby
-        image: mcr.microsoft.com/devcontainers/ruby:dev-3
-        user: vscode

@@ -4,14 +4,6 @@ inputs:
     description: 'Definition to test'
     required: true
     default: 'debian'
-  image:
-    description: 'Image to run smoke test in'
-    required: true
-    default: 'none'
-  user:
-    description: 'User in container image to use for smoke test'
-    required: true
-    default: 'vscode'
 
 runs:
   using: composite
@@ -32,4 +24,4 @@ runs:
     - name: Test image
       id: test_image
       shell: bash
-      run: ${{ github.action_path }}/test.sh  ${{ inputs.definition }} ${{ inputs.image }} ${{ inputs.user }}
+      run: ${{ github.action_path }}/test.sh  ${{ inputs.definition }}

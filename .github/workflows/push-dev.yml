@@ -62,49 +62,10 @@ jobs:
                           --stub-registry ${{ secrets.STUB_REGISTRY }} \
                           --stub-registry-path ${{ secrets.STUB_REGISTRY_BASE_PATH }}
 
-  package:
-    name: Package
-    if: "!contains(github.event.head_commit.message, 'Automated update') && !contains(github.event.head_commit.message, 'CI ignore')"
-    needs: [build-and-push]
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout
-      id: checkout
-      uses: actions/checkout@v1
-
-    - name: Package
-      id: package
-      run: |
-        set -e
-        yarn install
-        GIT_BRANCH=$(echo "${{ github.ref }}" | grep -oP 'refs/(heads|tags)/\K(.+)')
-        if [ "$GIT_BRANCH" == "" ]; then 
-            GIT_BRANCH=main
-        fi
-        build/vscdc pack  --prep-and-package-only \
-                          --release $GIT_BRANCH \
-                          --github-repo ${{ github.repository }} \
-                          --registry ${{ secrets.REGISTRY }} \
-                          --registry-path ${{ secrets.REGISTRY_BASE_PATH }} \
-                          --stub-registry ${{ secrets.STUB_REGISTRY }} \
-                          --stub-registry-path ${{ secrets.STUB_REGISTRY_BASE_PATH }}
-
-        # Set an output with the resulting package name for upload
-        PKG_PREFIX=$(node -p "require('./package.json').name")
-        PKG_NAME=$PKG_PREFIX-${{ github.sha }}.tgz
-        mv ./$PKG_PREFIX-*.tgz ./$PKG_NAME
-        echo "::set-output name=package_name::$PKG_NAME"
-
-    - name: Upload package
-      uses: actions/upload-artifact@v1.0.0
-      with:
-        name: ${{ steps.package.outputs.package_name }}
-        path: ./${{ steps.package.outputs.package_name }}
-
   image-info:
     name: Trigger info extraction
     if: "!contains(github.event.head_commit.message, 'Automated update') && !contains(github.event.head_commit.message, 'CI ignore')"
-    needs: [package]
+    needs: [build-and-push]
     runs-on: ubuntu-latest
     steps:
     - name: Trigger image info file generation 
