@@ -20,7 +20,7 @@ Each `RUN` statement creates a Docker image "layer". If one `RUN` statement adds
 
 ### How can I contribute?
 
-If you want to create your own image or add functionality on top of the images available in this repository, then see [How to write Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) and [How to use dev container features](https://github.com/devcontainers/features). 
+If you want to create your own image or add functionality on top of the images available in this repository, then see [How to write Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) and the [dev container features reference](https://github.com/devcontainers/spec/blob/main/proposals/devcontainer-features.md). 
 
 This repository contains a select set of images, and we encourage the community to host and share additional images, templates, and features rather than adding them here. You may learn more about this process in [the guidance](https://github.com/devcontainers/spec/pull/40) in our spec repo. You may also check out the [templates](https://github.com/devcontainers/templates) and [features](https://github.com/devcontainers/features) repos for additional customizations you may adopt or modify for your dev containers.
 
