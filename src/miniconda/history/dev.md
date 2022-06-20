@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/miniconda)
 
-**Digest:** sha256:a7ff96870d17c16fabcbc76ae981e5d80607fe38aeeba41ad3ac12a90608b07c
+**Digest:** sha256:8ada68644e62695fec7357caea4649da8021552f43c146a8163b35aa3da42520
 
 **Tags:**
 ```
@@ -29,14 +29,14 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e9348575371aa8ec8811356d997942559c026d07 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8168ec0174e7e3212be20ecc74810155772abff1 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| pylint | 2.14.2 |
+| pylint | 2.14.3 |
 | flake8 | 4.0.1 |
 | autopep8 | 1.6.0 |
 | black | 22.3.0 |
@@ -82,8 +82,6 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | man-db | 2.9.4-2 |
 | manpages | 5.10-1 |
 | manpages-dev | 5.10-1 |
-| manpages-posix | 2017a-2 |
-| manpages-posix-dev | 2017a-2 |
 | nano | 5.4-2 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |

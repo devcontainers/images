@@ -12,7 +12,7 @@
 
 ## Variant: 17-bullseye
 
-**Digest:** sha256:a448ceaadc7d25de1b65e1b3e6232a49ed8c6cc76c421039ac58c14c4d38e34f
+**Digest:** sha256:0dd0bc2117556b917649811bdf3263c0d8ec095be85ffe52b912fb5e4fc6fb58
 
 **Tags:**
 ```
@@ -40,7 +40,7 @@ mcr.microsoft.com/devcontainers/java:dev-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e9348575371aa8ec8811356d997942559c026d07 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8168ec0174e7e3212be20ecc74810155772abff1 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -59,7 +59,7 @@ mcr.microsoft.com/devcontainers/java:dev-bullseye
 | curl | 7.74.0-1.3+deb11u1 |
 | dialog | 1.3-20201126-1 |
 | git | 1:2.30.2-1 |
-| gnupg2 | 2.2.27-2 |
+| gnupg2 | 2.2.27-2+deb11u1 |
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
@@ -69,16 +69,14 @@ mcr.microsoft.com/devcontainers/java:dev-bullseye
 | libicu67 | 67.1-7 |
 | libkrb5-3 | 1.18.3-6+deb11u1 |
 | liblttng-ust0 | 2.12.1-1 |
-| libssl1.1 | 1.1.1k-1+deb11u1 |
+| libssl1.1 | 1.1.1n-0+deb11u2 |
 | libstdc++6 | 10.2.1-6 |
-| locales | 2.31-13+deb11u2 |
+| locales | 2.31-13+deb11u3 |
 | lsb-release | 11.1.0 |
 | lsof | 4.93.2+dfsg-1.1 |
 | man-db | 2.9.4-2 |
 | manpages | 5.10-1 |
 | manpages-dev | 5.10-1 |
-| manpages-posix | 2017a-2 |
-| manpages-posix-dev | 2017a-2 |
 | nano | 5.4-2 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
@@ -93,12 +91,12 @@ mcr.microsoft.com/devcontainers/java:dev-bullseye
 | wget | 1.21-1+deb11u1 |
 | yarn | 1.22.19-1 |
 | zip | 3.0-12 |
-| zlib1g | 1:1.2.11.dfsg-2 |
+| zlib1g | 1:1.2.11.dfsg-2+deb11u1 |
 | zsh | 5.8-6+deb11u1 |
 
 ## Variant: 17-buster
 
-**Digest:** sha256:ed944ed4822206890de5b0a4dc308bd1809f6a9162c6257ce84969a5c5f48795
+**Digest:** sha256:aa3bbb27efca0c86e1a45723558117fdea56f2d75fd6086d12783647d11a96d6
 
 **Tags:**
 ```
@@ -123,7 +121,7 @@ mcr.microsoft.com/devcontainers/java:dev-17-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e9348575371aa8ec8811356d997942559c026d07 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8168ec0174e7e3212be20ecc74810155772abff1 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -142,7 +140,7 @@ mcr.microsoft.com/devcontainers/java:dev-17-buster
 | curl | 7.74.0-1.3+deb11u1 |
 | dialog | 1.3-20201126-1 |
 | git | 1:2.30.2-1 |
-| gnupg2 | 2.2.27-2 |
+| gnupg2 | 2.2.27-2+deb11u1 |
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
@@ -152,16 +150,14 @@ mcr.microsoft.com/devcontainers/java:dev-17-buster
 | libicu67 | 67.1-7 |
 | libkrb5-3 | 1.18.3-6+deb11u1 |
 | liblttng-ust0 | 2.12.1-1 |
-| libssl1.1 | 1.1.1k-1+deb11u1 |
+| libssl1.1 | 1.1.1n-0+deb11u2 |
 | libstdc++6 | 10.2.1-6 |
-| locales | 2.31-13+deb11u2 |
+| locales | 2.31-13+deb11u3 |
 | lsb-release | 11.1.0 |
 | lsof | 4.93.2+dfsg-1.1 |
 | man-db | 2.9.4-2 |
 | manpages | 5.10-1 |
 | manpages-dev | 5.10-1 |
-| manpages-posix | 2017a-2 |
-| manpages-posix-dev | 2017a-2 |
 | nano | 5.4-2 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
@@ -176,12 +172,12 @@ mcr.microsoft.com/devcontainers/java:dev-17-buster
 | wget | 1.21-1+deb11u1 |
 | yarn | 1.22.19-1 |
 | zip | 3.0-12 |
-| zlib1g | 1:1.2.11.dfsg-2 |
+| zlib1g | 1:1.2.11.dfsg-2+deb11u1 |
 | zsh | 5.8-6+deb11u1 |
 
 ## Variant: 11-bullseye
 
-**Digest:** sha256:0a5c5cd2372c29981a11a8ef4977ed6e876e1574c6e53abf331e28dc9ee694d5
+**Digest:** sha256:cf191d7a5284a93453c2c1abb18601fca47a20f49bc45190fedc916de34fd3c4
 
 **Tags:**
 ```
@@ -208,7 +204,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e9348575371aa8ec8811356d997942559c026d07 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8168ec0174e7e3212be20ecc74810155772abff1 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -227,7 +223,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bullseye
 | curl | 7.74.0-1.3+deb11u1 |
 | dialog | 1.3-20201126-1 |
 | git | 1:2.30.2-1 |
-| gnupg2 | 2.2.27-2 |
+| gnupg2 | 2.2.27-2+deb11u1 |
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
@@ -237,16 +233,14 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bullseye
 | libicu67 | 67.1-7 |
 | libkrb5-3 | 1.18.3-6+deb11u1 |
 | liblttng-ust0 | 2.12.1-1 |
-| libssl1.1 | 1.1.1k-1+deb11u1 |
+| libssl1.1 | 1.1.1n-0+deb11u2 |
 | libstdc++6 | 10.2.1-6 |
-| locales | 2.31-13+deb11u2 |
+| locales | 2.31-13+deb11u3 |
 | lsb-release | 11.1.0 |
 | lsof | 4.93.2+dfsg-1.1 |
 | man-db | 2.9.4-2 |
 | manpages | 5.10-1 |
 | manpages-dev | 5.10-1 |
-| manpages-posix | 2017a-2 |
-| manpages-posix-dev | 2017a-2 |
 | nano | 5.4-2 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
@@ -261,12 +255,12 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bullseye
 | wget | 1.21-1+deb11u1 |
 | yarn | 1.22.19-1 |
 | zip | 3.0-12 |
-| zlib1g | 1:1.2.11.dfsg-2 |
+| zlib1g | 1:1.2.11.dfsg-2+deb11u1 |
 | zsh | 5.8-6+deb11u1 |
 
 ## Variant: 11-buster
 
-**Digest:** sha256:e3ac55a1e104ddcc6d7dedf465ef96ca176c7f1265713baeb2d9d903b7c7c9d8
+**Digest:** sha256:75c8aad6dc1677a834e1c1732bd3950a6336f8d9ca30b77318fa3e462397a23a
 
 **Tags:**
 ```
@@ -292,7 +286,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e9348575371aa8ec8811356d997942559c026d07 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8168ec0174e7e3212be20ecc74810155772abff1 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -311,7 +305,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-buster
 | curl | 7.74.0-1.3+deb11u1 |
 | dialog | 1.3-20201126-1 |
 | git | 1:2.30.2-1 |
-| gnupg2 | 2.2.27-2 |
+| gnupg2 | 2.2.27-2+deb11u1 |
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
@@ -321,16 +315,14 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-buster
 | libicu67 | 67.1-7 |
 | libkrb5-3 | 1.18.3-6+deb11u1 |
 | liblttng-ust0 | 2.12.1-1 |
-| libssl1.1 | 1.1.1k-1+deb11u1 |
+| libssl1.1 | 1.1.1n-0+deb11u2 |
 | libstdc++6 | 10.2.1-6 |
-| locales | 2.31-13+deb11u2 |
+| locales | 2.31-13+deb11u3 |
 | lsb-release | 11.1.0 |
 | lsof | 4.93.2+dfsg-1.1 |
 | man-db | 2.9.4-2 |
 | manpages | 5.10-1 |
 | manpages-dev | 5.10-1 |
-| manpages-posix | 2017a-2 |
-| manpages-posix-dev | 2017a-2 |
 | nano | 5.4-2 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
@@ -345,6 +337,6 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-buster
 | wget | 1.21-1+deb11u1 |
 | yarn | 1.22.19-1 |
 | zip | 3.0-12 |
-| zlib1g | 1:1.2.11.dfsg-2 |
+| zlib1g | 1:1.2.11.dfsg-2+deb11u1 |
 | zsh | 5.8-6+deb11u1 |
 
