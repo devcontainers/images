@@ -1,7 +1,6 @@
 {
     "id": "maven",
     "name": "Maven (via SDKMAN!)",
-    "documentationURL": "https://github.com/microsoft/vscode-dev-containers/blob/main/script-library/docs/maven.md",
     "options": {
         "version": {
             "type": "string",

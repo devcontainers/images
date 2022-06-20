@@ -32,7 +32,7 @@
 	},
 	"dependencies": {
 		"image": "mcr.microsoft.com/devcontainers/ruby:${VARIANT}",
-		"imageLink": "https://github.com/microsoft/vscode-dev-containers",
+		"imageLink": "https://github.com/devcontainers/images",
 		"debian": [
 			{
 				"cgIgnore": false,

@@ -1054,7 +1054,7 @@
                 "Other": {
                     "Name": "Docker Image: mcr.microsoft.com/vscode/devcontainers/ruby",
                     "Version": "2.7-bullseye",
-                    "DownloadUrl": "https://github.com/microsoft/vscode-dev-containers"
+                    "DownloadUrl": "https://github.com/devcontainers/images"
                 }
             }
         },
@@ -1064,7 +1064,7 @@
                 "Other": {
                     "Name": "Docker Image: mcr.microsoft.com/vscode/devcontainers/ruby",
                     "Version": "2.7-buster",
-                    "DownloadUrl": "https://github.com/microsoft/vscode-dev-containers"
+                    "DownloadUrl": "https://github.com/devcontainers/images"
                 }
             }
         }

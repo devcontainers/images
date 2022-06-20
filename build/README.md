@@ -1,6 +1,6 @@
 # Build and image generation for devcontainers
 
-This folder contains scripts to build and push images into the Microsoft Container Registry (MCR) from this repository, generate or modify any associated content to use the built image, track dependencies, and create an npm package with the result that is shipped in the VS Code Remote - Containers and Codespaces extension.
+This folder contains scripts to build and push images into the Microsoft Container Registry (MCR) from this repository, generate or modify any associated content to use the built image, and track dependencies.
 
 ## Build CLI
 

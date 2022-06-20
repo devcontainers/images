@@ -46,7 +46,7 @@
 			"program": "${workspaceFolder}/vscdc",
 			"args": [
 				"info",
-				"codespaces-linux",
+				"codespaces",
 				"--no-build",
 				"--markdown",
 				"--cg",
