@@ -171,7 +171,7 @@ The `build.parent` property that can be used to specify if the container image d
 
 ### The `definitionVersion` property
 
-While in most cases it makes sense to version the contents of a definition with the repository, there may be scenarios where you want to be able to version independently. A good example of this [is the `codespaces-linux` definition](../containers/vsonline-linux) where upstream edits could cause breaking changes in this image. Rather than increasing the major version of the extension and all definitions whenever this happens, the definition has its own version number.
+While in most cases it makes sense to version the contents of a definition with the repository, there may be scenarios where you want to be able to version independently. A good example of this [is the `codespaces` definition](../src/codespaces/) where upstream edits could cause breaking changes in this image. Rather than increasing the major version of the extension and all definitions whenever this happens, the definition has its own version number.
 
 When this is necessary, the `definitionVersion` property in the `manifest.json` file can be set.
 
@@ -312,7 +312,7 @@ This configuration will build ARM64 and x86_64 for Debian 11/bullseye and Debian
 
 > **Note:** Whenever a new 3rd party OSS dependency is added to an image, be sure to also update NOTICES.txt in the root of this repository with its license terms. Packages installed from Linux distros directly via their package manager (not from 3rd party feeds) can be skipped as they are covered by the distribution image. Closed source dependencies are not allowed.
 
-The dependencies namespace is used for dependency management and generation of [history markdown files](). It has no affect on the build process.  Consider the Debian [manifest.json](../containers/debian/manifest.json) file.
+The dependencies namespace is used for dependency management and generation of [history markdown files](). It has no affect on the build process.  Consider the Debian [manifest.json](../src/debian/manifest.json) file.
 
 ```jsonc
 "dependencies": {
