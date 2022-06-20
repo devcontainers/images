@@ -9,8 +9,6 @@ The Node.js based build CLI (`build/vsdc`) has commands to:
 1. Build and push to a repository: `build/vsdc push`
 2. Build, push, and npm package assets that are modified as described above: `build/vsdc package`
 3. Generate manifest.json and history markdown files: `build/vsdc cg`, `build/vsdc info`
-4. Update all script source URLs in Dockerfiles to a tag or branch: `build/vsdc update-script-sources`
-5. Overwrite scripts in the `.devcontainer/library-scripts` folder with the most recent copy from the `scripts-library` folder: `build/vscdc copy-library-scripts` 
 
 Run with the `--help` option to see inputs.
 
@@ -28,19 +26,19 @@ This CLI is used in the GitHub Actions workflows in this repository.
 >
 > However, if you have your own pre-built image or build process, you can simply reference it directly in you contributed container.
 
-Image build/push to MCR is managed using config in `definition-manifest.json` files that are located in the container definition folder. The config lets you set dependencies between definitions and map actual image tags to multiple definitions. So, the steps to onboard an image are:
+Image build/push to MCR is managed using config in `manifest.json` files that are located in the container definition folder. The config lets you set dependencies between definitions and map actual image tags to multiple definitions. So, the steps to onboard an image are:
 
 1. **Important:** Update any `ARG` values in your `Dockerfile` to reflect what you want in the image. Use boolean `ARGS` with `if` statements to skip installing certain things in the image.
 
-    > **Note:** The `build.args` and `build.dockerfile` properties are **intentionally ignored** during image build so that you can vary image defaults and devcontainer.json defaults as appropriate. The only property considered is `build.context` since this may be required for the build to succeed.
+    > **Note:** The `build.args` and `build.dockerfile` properties are **intentionally ignored** during image build so that you can vary image defaults and .devcontainer.json defaults as appropriate. The only property considered is `build.context` since this may be required for the build to succeed.
 
-3. Create a [`base.Dockerfile` and stub Dockerfile](#creating-a-basedockerfile-and-stub-dockerfile)
+2. Create a [`Dockerfile`](#creating-a-dockerfile)
 
-4. Set up any [library scripts you want to use and a meta.env file](#using-the-script-library)
+3. Create [a `manifest.json` file](#the-definition-manifestjson-file)
 
-2. Create [a `definition-manifest.json` file](#the-definition-manifestjson-file)
+4. Set up [meta.env file](#Adding-a-meta.env-file)
 
-4. Update the `vscode` [config files for MCR](https://github.com/microsoft/vscode-internalbacklog/wiki/Remote-Container-Images-MCR-Setup) as appropriate (MS internal only).
+5. Update the `vscode` [config files for MCR](https://github.com/microsoft/vscode-internalbacklog/wiki/Remote-Container-Images-MCR-Setup) as appropriate (MS internal only).
 
 ## Testing the build
 
@@ -64,7 +62,7 @@ Once you have your build configuration setup, you can use the `vscdc` CLI to tes
    build/vscdc cg --registry mcr.microsoft.com --registry-path devcontainers --release main <you-definition-id-here>
    ```
 
-Once you're happy with the result, you can also verify that the `devcontainer.json` and the associated concent that will be generated for your definition is correct.
+Once you're happy with the result, you can also verify that the `.devcontainer.json` and the associated concent that will be generated for your definition is correct.
 
 1. Generate a `.tgz` with all of the definitions zipped inside of it.
 
@@ -76,22 +74,17 @@ Once you're happy with the result, you can also verify that the `devcontainer.js
 
 2. Unzip generated the `tgz` somewhere in your filesystem.
 
-3. Start VS Code and use  **Remote-Containers: Open Folder in Container...**  on the unzipped definition in the `package/containers` folder and verify everything starts correctly.
-
 That's it!
 
-## Creating a `base.Dockerfile` and "stub" `Dockerfile`
+## Creating a `Dockerfile`
 
-By default, the **Remote-Containers: Add Development Container Configuration File...** and related properties will use a basic getting started stub / sample Dockerfile. However, in some cases you may want to include some special instructions for developers. In this case, you can add a custom stub Dockerfile by creating the following files:
+In some cases you may want to include some special instructions for developers. In this case, you can add a custom stub Dockerfile by creating the following files:
 
-- `base.Dockerfile`: Dockerfile used to generate the image itself
-- `Dockerfile`: A stub Dockerfile that references the generated image and includes tips for using it.
+- `Dockerfile`: Dockerfile used to generate the image itself
 
-You can then reference `base.Dockerfile` in `devcontainer.json` to make editing the file that is used to create the image easy.
+You can then reference `Dockerfile` in `.devcontainer.json` to make editing the file that is used to create the image easy.
 
-When the definitions are packaged up for use, `base.Dockerfile` is excluded and the `devcontainer.json` file is automatically updated to `Dockerfile`. Any comment links are also modified appropriately.
-
-If you're using the [variants property](#the-variants-property) in `definition-manifest.json`, you can set up the custom stub so that you can specify the variant from `devcontainer.json` by adding an argument called `VARIANT` right before the `FROM` statement that uses it.
+If you're using the [variants property](#the-variants-property) in `manifest.json`, you can set up the custom stub so that you can specify the variant from `.devcontainer.json` by adding an argument called `VARIANT` right before the `FROM` statement that uses it.
 
 In your `Dockerfile`:
 
@@ -100,7 +93,7 @@ ARG VARIANT=3
 FROM mcr.microsoft.com/devcontainers/python:${VARIANT}
 ```
 
-In `devcontainer.json`:
+In `.devcontainer.json`:
 
 ```json
 "build": {
@@ -110,47 +103,16 @@ In `devcontainer.json`:
 }
 ```
 
-## Using the script library
-
-The `/script-library` folder in this repository contains a number of scripts to install tools or configure container contents. Of particular note is `common-debain.sh` that should generally be run in any definition that does not extend from an existing `mcr.microsoft.com/devcontainers` image.
-
-Since Dockerfiles can only COPY files relative to the Dockerfile itself, we cannot easily copy contents from a folder several levels up. This step could be scripted, but this becomes cumbersome when creating the definitions to begin with. Instead, the scripts can be added into a `.devcontainer/library-scripts` folder in the definition. A GitHub Actions workflow will automatically update files with the same name in this folder whenever something in `/script-library` is updated.
-
-This folder should be reserved for contents from the `script-library` folder for this reason.
-
 ### Adding a `meta.env` file
-The one addition to this folder that is not from the `script-library` folder is the `.devcontainer/library-scripts/meta.env` file. The build system will automatically update this file if found with some key information like the image version, repository, and history file. This will power a `devcontainer-info` command added by the `common-debian.sh` script.
+The build system will automatically populate the meta.env file with the correct contents on build if found with some key information like the image version, repository, and history file. This will power a `devcontainer-info` command added by the `common-debian.sh` script.
 
-To add one:
+## The `definition.json` file
 
-1. Add a `meta.env` file into the `library-scripts` folder with one line in it:
-
-    ```
-    VERSION='dev'
-    ```
-
-2. Next update your `base.Dockerfile` to copy it into the correct location. If you are running `common-debian.sh`, you can just copy it to the same folder as you copy the script before running it. For example:
-
-    ```Dockerfile
-    COPY library-scripts/*.sh library-scripts/meta.env /tmp/library-scripts/
-    RUN bash /tmp/library-scripts/common-debian.sh
-    ```
-
-    Or if `common-debian.sh` was already run in your upstream image, you can copy it directly to the correct spot:
-
-    ```Dockerfile
-    COPY library-scripts/meta.env /usr/local/etc/devcontainers/
-    ```
-
-The build system will then automatically populate the file with the correct contents on build.
-
-## The `definition-manifest.json` file
-
-Let's run through the `definition-manifest.json` file.
+Let's run through the `manifest.json` file.
 
 ### The `build` namespace
 
-The `build` namespace includes properties that defines how the definition maps to image tags. For example:
+The `build` namespace includes properties that defines how the templates maps to image tags. For example:
 
 ```json
 "build": {
@@ -211,7 +173,7 @@ The `build.parent` property that can be used to specify if the container image d
 
 While in most cases it makes sense to version the contents of a definition with the repository, there may be scenarios where you want to be able to version independently. A good example of this [is the `codespaces-linux` definition](../containers/vsonline-linux) where upstream edits could cause breaking changes in this image. Rather than increasing the major version of the extension and all definitions whenever this happens, the definition has its own version number.
 
-When this is necessary, the `definitionVersion` property in the `definition-manifest.json` file can be set.
+When this is necessary, the `definitionVersion` property in the `manifest.json` file can be set.
 
 ```json
 "definitionVersion": "1.0.0"
@@ -221,7 +183,7 @@ When this is necessary, the `definitionVersion` property in the `definition-mani
 
 In many cases, you will only need to create one image per dev container definition. Even if there is only one or two versions of a given runtime available at a given time, it can be useful to simply have different definitions to aid discoverability.
 
-In other cases, you may want to generate multiple images from the same definition but with one small change. This is where the variants property comes in. Consider this `definition-manifest.json`:
+In other cases, you may want to generate multiple images from the same definition but with one small change. This is where the variants property comes in. Consider this `manifest.json`:
 
 ```json
 "variants": [ "3", "3.6", "3.7", "3.8" ],
@@ -293,7 +255,7 @@ In this case, the image built for the `bullseye` variant will be tagged as follo
 - mcr.microsoft.com/devcontaienrs/base:debian11
 
 #### The `build.variantBuildArgs` property
-In some cases, you may need to vary build arguments in the definition's `base.Dockerfile` by variant (beyond the `VARIANT` build arg itself). This can be done using the `build.variantBuildArgs` property. For example, consider the following:
+In some cases, you may need to vary build arguments in the definition's `Dockerfile` by variant (beyond the `VARIANT` build arg itself). This can be done using the `build.variantBuildArgs` property. For example, consider the following:
 
 ```jsonc
 "build": {
@@ -319,10 +281,10 @@ In some cases, you may need to vary build arguments in the definition's `base.Do
 }
 ```
 
-...and the related `base.Dockerfile`:
+...and the related `Dockerfile`:
 
 ```Dockerfile
-# This base.Dockerfile uses separate build arguments instead of VARIANT
+# This Dockerfile uses separate build arguments instead of VARIANT
 ARG TARGET_JAVA_VERSION=11
 ARG BASE_IMAGE_VERSION_CODENAME=bullseye
 FROM openjdk:${TARGET_JAVA_VERSION}-jdk-${BASE_IMAGE_VERSION_CODENAME}
@@ -350,7 +312,7 @@ This configuration will build ARM64 and x86_64 for Debian 11/bullseye and Debian
 
 > **Note:** Whenever a new 3rd party OSS dependency is added to an image, be sure to also update NOTICES.txt in the root of this repository with its license terms. Packages installed from Linux distros directly via their package manager (not from 3rd party feeds) can be skipped as they are covered by the distribution image. Closed source dependencies are not allowed.
 
-The dependencies namespace is used for dependency management and generation of [history markdown files](). It has no affect on the build process.  Consider the Debian [definition-manifest.json](../containers/debian/definition-manifest.json) file.
+The dependencies namespace is used for dependency management and generation of [history markdown files](). It has no affect on the build process.  Consider the Debian [manifest.json](../containers/debian/manifest.json) file.
 
 ```jsonc
 "dependencies": {
@@ -496,7 +458,7 @@ For example:
 }
 ```
 
-Since the same dependencies can be in more than one definition, default settings named dependencies can be set in the `otherDependencyDefaultSettings` property in [config.json](./config.json). When present in this file, only the name of the dependency and any overrides need to be specified for in `definition-manifest.json`. For example, consider these examples that have default settings:
+Since the same dependencies can be in more than one definition, default settings named dependencies can be set in the `otherDependencyDefaultSettings` property in [config.json](./config.json). When present in this file, only the name of the dependency and any overrides need to be specified for in `manifest.json`. For example, consider these examples that have default settings:
 
 ```jsonc
 "other": {
@@ -560,17 +522,6 @@ This has a few advantages:
 
 When necessary, a specific version can also be specified for an individual image using a `definitionVersion` property, but this is generally the exception.
 
-### Deprecation of container definitions
-
-The versioning scheme above allows us to version dev containers and reference them even when they are removed from `main`. To keep the number of containers in `main` reasonable, we would deprecate and remove containers under the following scenarios:
-
-1. It refers to a runtime that is no longer supported - e.g. Node.js 8 is out of support as of the end of 2019, so we would deprecate `javascript-node-8`. Until that point, we would have containers for node 8, 10, and 12 (which just went LTS).
-2. The container is not used enough to maintain and has broken.
-3. The container refers to a product that has been deprecated.
-4. The container was contributed by a 3rd party, has issues, and the 3rd party is not responsive.
-
-Since the images would continue to exist after this point and the source code is available under the version label, we can safely remove the containers from main without impacting customers.
-
 ### Release process and the contents of the npm package
 
 When a release is cut, there are a few things that need to happen. One is obviously releasing the appropriate image. However, to continue to help customers understand how to customize their images, we would want to reference a user modifiable "stub" Dockerfile instead of an image directly. This also is important to help deal with shortcomings and workarounds that require something like specifying a build argument. For example:
@@ -589,19 +540,19 @@ This retains its value as a sample but minimizes the number of actual build step
 
 #### Repository contents
 
-Consequently, this user stub Dockerfile needs to be versioned with the `devcontainer.json` file and can technically version independently of the actual main Dockerfile and image. Given this tie, it makes sense to keep this file with `devcontainer.json` in the repository. The repository therefore would could contain:
+Consequently, this user stub Dockerfile needs to be versioned with the `.devcontainer.json` file and can technically version independently of the actual main Dockerfile and image. Given this tie, it makes sense to keep this file with `.devcontainer.json` in the repository. The repository therefore would could contain:
 
 ```text
 📁 .devcontainer
-     📄 base.Dockerfile
-     📄 devcontainer.json
+     📄 Dockerfile
+     📄 .devcontainer.json
      📄 Dockerfile
 📁 test-project
-📄 definition-manifest.json
+📄 manifest.json
 📄 README.md
 ```
 
-The `definition-manifest.json` file dictates how the build process should behave as [dscribed above](#setting-up-a-container-to-be-built). In this case, `devcontainer.json` points to `base.Dockerfile`, but this is the Dockerfile used to generate the actual image rather than the stub Dockerfile. The stub that references the image is in `base.Dockerfile`.  To make things easy, we can also automatically generate this stub at release time if only a Dockerfile is present. If no `base.Dockerfile` is found, the build process falls back to using `Dockerfile`.
+The `manifest.json` file dictates how the build process should behave as [described above](#setting-up-a-container-to-be-built). In this case, `.devcontainer.json` points to `Dockerfile`, but this is the Dockerfile used to generate the actual image rather than the stub Dockerfile. The stub that references the image is in `Dockerfile`.  To make things easy, we can also automatically generate this stub at release time if only a Dockerfile is present. If no `Dockerfile` is found, the build process falls back to using `Dockerfile`.
 
 Testing, then, is as simple as it is now - open the folder in `devcontainers` in a container and edit / test as required. Anyone simply copying the folder contents then gets a fully working version of the container even if in-flight and there is no image for it yet.
 
@@ -615,25 +566,19 @@ FROM mcr.microsoft.com/vs/devcontainer/javascript-node:dev-10
 
 The process also automatically swaps out referenced MCR images for MAJOR versions of built images in any Dockerfile that is added to the package. This allows us to push break fix and or security patches as break fix releases and people will get them. The build supports an option to not update `latest` and MAJOR versions, so we can also rev old MAJOR versions if we have to, but normally we'd roll forward instead.
 
-##### Common scripts
-
-Another problem the build solves is mass updates - there's a set of things we want in every image and right now it requires ~54 changes to add things. With this new process, images use a tagged version of scripts in `script-library`. The build generates a SHA for script so they can be safely used in Dockerfiles that are not built into images while still allowing people to just grab `.devcontainer` from main and use it if they prefer.
-
-When a release is cut, this SHA is generated and the source code for the related Git tag is updated to include source files with these values set. Consequently, you may need to run `git fetch --tags --force` to update a tag that already exists on your system.
-
 #### Release process
 
 When a release is cut, the contents of devcontainers repo are staged. The build process then does the following for the appropriate dev containers:
 
-1. Build an image using the `base.Dockerfile` and push it to a container registry with the appropriate version tags. If no `base.Dockerfile` is found, `Dockerfile` is used instead.  If the `variants` property is set, one image is built per variant, with the variant value being passed in as the `VARIANT` build argument.
+1. Build an image using the `Dockerfile` and push it to a container registry with the appropriate version tags. If the `variants` property is set, one image is built per variant, with the variant value being passed in as the `VARIANT` build argument.
 
-2. After the image is built and pushed, `base.Dockerfile` is deleted from staging if present. If no `base.Dockerrfile`, a `Dockerfile` is replaced with stub is used based on the configured rootDistro in `definition-manifest.json` (Alpine vs Debian).
+2. After the image is built and pushed, `Dockerfile` is deleted from staging if present.
 
 3. Next, `Dockerfile` is updated to point to the correct MAJOR version and a link is added to the Dockerfile used to build the referenced image.
 
     ```Dockerfile
     # For information on the contents of the image referenced below, see the Dockerfile at
-    # https://github.com/microsoft/devcontainers/tree/v0.35.0/containers/javascript-node-10/.devcontainer/base.Dockerfile
+    # https://github.com/microsoft/devcontainers/tree/v0.35.0/containers/javascript-node-10/.devcontainer/Dockerfile
     FROM mcr.microsoft.com/devcontainer/javascript-node:0-10
     ```
 
@@ -644,10 +589,10 @@ When a release is cut, the contents of devcontainers repo are staged. The build 
     FROM mcr.microsoft.com/devcontainer/python:0-${VARIANT}
     ```
 
-4. `devcontainer.json` is updated to point to `Dockerfile` instead of `base.Dockerfile` (if required) and a comment is added that points to the definition in this repository (along with its associated README for this specific version).
+4. `.devcontainer.json` is updated to point to `Dockerfile` and a comment is added that points to the definition in this repository (along with its associated README for this specific version).
 
     ```json
-    // For format details, see https://aka.ms/vscode-remote/devcontainer.json or the definition README at
+    // For format details, see https://aka.ms/vscode-remote/.devcontainer.json or the definition README at
     // https://github.com/microsoft/devcontainers/tree/v0.35.0/containers/javascript-node-10
     {
         "name": "Node.js 10",
@@ -659,34 +604,11 @@ After everything builds successfully, the packaging process kicks off and perfor
 
 1. Runs through all Dockerfiles in the `containers` folder and makes sure any references to `mcr.microsoft.com/devcontainers` in other non-built dockerfiles reference the MAJOR version as described in step 3 above.
 
-2. Runs through all Dockerfiles and looks for [common script](#common-scripts) references and updates the URL to the tagged version and adds the expected SHA as another arg. The result is that sections of the Dockerfile that look like this:
-
-    ```Dockerfile
-    ARG COMMON_SCRIPT_SOURCE="https://raw.githubusercontent.com/microsoft/devcontainers/main/script-library/common-debian.sh"
-    ARG COMMON_SCRIPT_SHA="dev-mode"
-    ```
-
-    are transformed into this:
-
-    ```Dockerfile
-    ARG COMMON_SCRIPT_SOURCE="https://raw.githubusercontent.com/microsoft/devcontainers/v0.112.0/script-library/common-debian.sh"
-    ARG COMMON_SCRIPT_SHA="28e3d552a08e0d82935ad7335837f354809bec9856a3e0c2855f17bfe3a19523"
-    ```
-
-    so that it sections later in the Dockerfile anchors to a specific version of the script and can verify the script SHA before running it:
-
-    ```Dockerfile
-    RUN curl -sSL  $COMMON_SCRIPT_SOURCE -o /tmp/common-setup.sh\
-        && if [ "$COMMON_SCRIPT_SHA" != "dev-mode" ]; then echo "$COMMON_SCRIPT_SHA /tmp/common-setup.sh" | sha256sum -c - ; fi \
-        && /bin/bash /tmp/common-setup.sh "$INSTALL_ZSH" "$USERNAME" "$USER_UID" "$USER_GID" \
-        && rm /tmp/common-setup.sh
-    ```
-
-3. These modified contents are then archived in an npm package exactly as they are today and shipped with the extension (and over time we could dynamically update this between extension releases).
+2. These modified contents are then archived in an npm package exactly as they are today and shipped with the extension (and over time we could dynamically update this between extension releases).
 
 ```text
 📁 .devcontainer
-     📄 devcontainer.json
+     📄 .devcontainer.json
      📄 Dockerfile
 ```
 
@@ -696,21 +618,20 @@ The below provides a mechanism to build and test against targeted platforms (e.g
 
 ### Build
 
-Run the docker build command using `buildx` from the .devcontainer in the dotnet directory within the project repo (`containers/dotnet/.devcontainer`). [buildx](https://docs.docker.com/buildx/working-with-buildx/) is a Docker CLI plugin that provides the ability to target multi-architectures (e.g. ARM64).
+Run the @devcontainers/cli build command in the dotnet directory within the project repo (`src/dotnet/`).
 
 Note a few of the arguments:
 
 - `--platform`: specifies the architecture to target, in this case we will be targeting Linux ARM64
-- `--build-arg`: for this example, we will be targeting specific dotnet versions (e.g. 6.0, 5.0, and 3.1) and Linux versions and distros.
 
 ```bash
-docker buildx build --build-arg VARIANT=6.0.100-bullseye-slim-arm64v8 --platform linux/arm64 -t dotnet-arm64  --load -f base.Dockerfile .
+devcontainer build --workspace-foler /src/dotnet --platform linux/arm64 -t dotnet-arm64.
 ```
 
 Once the build is complete, run the image using the below example. Note that the dotnet directory is mounted. The dotnet directory includes test scripts which will be used in the subsequent steps.
 
 ```bash
-docker run -v $REPODIR/devcontainers/containers/dotnet/:/workspace --platform linux/arm64 -it dotnet-arm64 bash
+docker up --workspace-foler /src/dotnet --platform linux/arm64 -it dotnet-arm64 bash
 ```
 
 Once in the running container, verify that the architecture is ARM64 by running the command:
@@ -723,7 +644,7 @@ For ARM64 on Linux, the architecture will show as `aarch64`.
 
 ### Test
 
-For Linux ARM64 and the Dotnet container requires that [VS Code attaches](https://code.visualstudio.com/docs/remote/attach-container) to the running container instance. Using VS Code and the [Remote-Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers), attach to the running instance of the image previously created, run the test script and they should all pass.
+For Linux ARM64 and the Dotnet container, attach to the running instance of the image previously created, run the test script and they should all pass.
 
 ```bash
 /workspace/test-project/test.sh

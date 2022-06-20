@@ -90,7 +90,7 @@ RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requ
     && rm -rf /tmp/pip-tmp
 ```
 
-Since `requirements.txt` is likely in the folder you opened rather than the `.devcontainer` folder, be sure to include `"context": ".."` to `devcontainer.json`. This allows the Dockerfile to access everything in the opened folder instead of just the contents of the `.devcontainer` folder.
+Since `requirements.txt` is likely in the folder you opened be sure to include `"context": ".."` to `.devcontainer.json`. This allows the Dockerfile to access everything in the opened folder.
 
 #### [Optional] Allowing the non-root vscode user to pip install globally without sudo
 
