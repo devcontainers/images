@@ -28,6 +28,18 @@ async function push(repo, release, updateLatest, registry, registryPath, stubReg
     const stagingFolder = await configUtils.getStagingFolder(release);
     await configUtils.loadConfig(stagingFolder);
 
+    // Use or create a buildx / buildkit "builder" that using the docker-container driver which internally 
+    // uses QEMU to emulate different architectures for cross-platform builds. Setting up a separate
+    // builder avoids problems with the default config being different otherwise altered. It also can
+    // be tweaked down the road to use a different driver like using separate machines per architecture.
+    // See https://docs.docker.com/engine/reference/commandline/buildx_create/
+    console.log('(*) Setting up builder...');
+    const builders = await asyncUtils.exec('docker buildx ls');
+    if(builders.indexOf('dev-containers') < 0) {
+        await asyncUtils.spawn('docker', ['buildx', 'create', '--use', '--name', 'dev-containers']);
+    } else {
+        await asyncUtils.spawn('docker', ['buildx', 'use', 'dev-containers']);
+    }
     // This step sets up the QEMU emulators for cross-platform builds. See https://github.com/docker/buildx#building-multi-platform-images
     await asyncUtils.spawn('docker', ['run', '--privileged', '--rm', 'tonistiigi/binfmt', '--install', 'all']);
 
