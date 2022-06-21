@@ -1,9 +1,7 @@
 name: Build and push images
 
-on:
-  push:
-    tags:
-    - 'v*'
+on: 
+  workflow_dispatch:
 
 jobs:
   build-and-push:
