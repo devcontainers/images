@@ -26,10 +26,6 @@ jobs:
       id: checkout
       uses: actions/checkout@v1
 
-    - name: Get tag name
-      id: get_tag_name  
-      run: echo "::set-output name=tag::$(echo "${{ github.ref }}" | grep -oP 'refs/tags/\K(.+)')"
-
     - name: Azure CLI login
       id: az_login
       uses: azure/login@v1
@@ -52,7 +48,7 @@ jobs:
         npm install -g @devcontainers/cli
         build/vscdc push  --page ${{ matrix.page }} \
                           --pageTotal ${{ matrix.page-total }} \
-                          --release ${{ steps.get_tag_name.outputs.tag }} \
+                          --release v0.0.1 \
                           --github-repo ${{ github.repository }} \
                           --registry ${{ secrets.REGISTRY }} \
                           --registry-path ${{ secrets.REGISTRY_BASE_PATH }} \
@@ -64,9 +60,6 @@ jobs:
     needs: [build-and-push]
     runs-on: ubuntu-latest
     steps:
-    - name: Get tag name
-      id: get_tag_name
-      run: echo "::set-output name=tag::$(echo "${{ github.ref }}" | grep -oP 'refs/tags/\K(.+)')"
       
     - name: Trigger image info file generation 
       id: image-info
@@ -80,4 +73,4 @@ jobs:
           -H "Accept: application/vnd.github.v3+json" \
           -H "Content-Type: application/json" \
           https://api.github.com/repos/${{ github.repository }}/actions/workflows/version-history.yml/dispatches \
-          --data "{\"ref\": \"main\", \"inputs\": {\"release\": \"${{ steps.get_tag_name.outputs.tag }}\", \"cg\": \"false\", \"push\": \"true\", \"overwrite\": \"false\"}"
+          --data "{\"ref\": \"main\", \"inputs\": {\"release\": \"v0.0.1\", \"cg\": \"false\", \"push\": \"true\", \"overwrite\": \"false\"}"
