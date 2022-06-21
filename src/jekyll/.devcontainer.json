@@ -1,9 +1,6 @@
 {
     "build": {
         "dockerfile": "./Dockerfile",
-        "context": ".",
-        "args": {
-            "VARIANT": "bullseye"
-        }
+        "context": "."
     }
 }
