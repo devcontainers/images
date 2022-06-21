@@ -28,6 +28,9 @@ async function push(repo, release, updateLatest, registry, registryPath, stubReg
     const stagingFolder = await configUtils.getStagingFolder(release);
     await configUtils.loadConfig(stagingFolder);
 
+    // This step sets up the QEMU emulators for cross-platform builds. See https://github.com/docker/buildx#building-multi-platform-images
+    await asyncUtils.spawn('docker', ['run', '--privileged', '--rm', 'tonistiigi/binfmt', '--install', 'all']);
+
     // Build and push subset of images
     const definitionsToPush = definitionId ? [definitionId] : configUtils.getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip);
     await asyncUtils.forEach(definitionsToPush, async (currentDefinitionId) => {
@@ -82,48 +85,45 @@ async function pushImage(definitionId, repo, release, updateLatest,
             const imageName = imageNamesWithVersionTags[0].split(':')[0];
 
             console.log(`(*) Tags:${imageNamesWithVersionTags.reduce((prev, current) => prev += `\n     ${current}`, '')}`);
-            // const buildSettings = configUtils.getBuildSettings(definitionId);
+            const buildSettings = configUtils.getBuildSettings(definitionId);
 
-            //TODO::Add --platform
-            // let architectures = buildSettings.architectures;
-            // switch (typeof architectures) {
-            //     case 'string': architectures = [architectures]; break;
-            //     case 'object': if (!Array.isArray(architectures)) { architectures = architectures[variant]; } break;
-            //     case 'undefined': architectures = ['linux/amd64']; break;
-            // }
-            // console.log(`(*) Target image architectures: ${architectures.reduce((prev, current) => prev += `\n     ${current}`, '')}`);
-            // let localArchitecture = process.arch;
-            // switch(localArchitecture) {
-            //     case 'arm': localArchitecture = 'linux/arm/v7'; break;
-            //     case 'aarch32': localArchitecture = 'linux/arm/v7'; break;
-            //     case 'aarch64': localArchitecture = 'linux/arm64'; break;
-            //     case 'x64': localArchitecture = 'linux/amd64'; break;
-            //     case 'x32': localArchitecture = 'linux/386'; break;
-            //     default: localArchitecture = `linux/${localArchitecture}`; break;
-            // }
-            // console.log(`(*) Local architecture: ${localArchitecture}`);
-            // if (!pushImages) {
-            //     console.log(`(*) Push disabled: Only building local architecture (${localArchitecture}).`);
-            // }
+            let architectures = buildSettings.architectures;
+            switch (typeof architectures) {
+                case 'string': architectures = [architectures]; break;
+                case 'object': if (!Array.isArray(architectures)) { architectures = architectures[variant]; } break;
+                case 'undefined': architectures = ['linux/amd64']; break;
+            }
+
+            console.log(`(*) Target image architectures: ${architectures.reduce((prev, current) => prev += `\n     ${current}`, '')}`);
+            let localArchitecture = process.arch;
+            switch(localArchitecture) {
+                case 'arm': localArchitecture = 'linux/arm/v7'; break;
+                case 'aarch32': localArchitecture = 'linux/arm/v7'; break;
+                case 'aarch64': localArchitecture = 'linux/arm64'; break;
+                case 'x64': localArchitecture = 'linux/amd64'; break;
+                case 'x32': localArchitecture = 'linux/386'; break;
+                default: localArchitecture = `linux/${localArchitecture}`; break;
+            }
+            
+            console.log(`(*) Local architecture: ${localArchitecture}`);
+            if (!pushImages) {
+                console.log(`(*) Push disabled: Only building local architecture (${localArchitecture}).`);
+            }
+
             if (replaceImage || !await isDefinitionVersionAlreadyPublished(definitionId, release, registry, registryPath, variant)) {
                 const context = devContainerJson.build ? devContainerJson.build.context || '.' : devContainerJson.context || '.';
                 const workingDir = path.resolve(dotDevContainerPath, context);
 
                 const spawnOpts = { stdio: 'inherit', cwd: workingDir, shell: true };
-                await asyncUtils.spawn('npx --yes devcontainers-cli-0.3.0-1.tgz', [
+                await asyncUtils.spawn('npx --yes devcontainers-cli-0.6.0.tgz', [
                     'build',
                     '--workspace-folder', definitionPath,
                     '--log-level ', 'info',
                     '--image-name', imageName,
-                    '--no-cache', 'true'
+                    '--no-cache', 'true',
+                    '--platform', pushImages ? architectures.reduce((prev, current) => prev + ',' + current, '').substring(1) : localArchitecture,
+                    pushImages ? '--push' : ''
                 ], spawnOpts);
-
-                if (pushImages) {
-                    console.log(`(*) Pushing to registry.`);
-                    await asyncUtils.spawn('docker', [`image push ${imageName}`], spawnOpts);
-                } else {
-                    console.log(`(*) Skipping push to registry.`);
-                }
 
                 // Retagging definitionId to version tags
                 for (let image of imageNamesWithVersionTags) {
@@ -132,6 +132,8 @@ async function pushImage(definitionId, repo, release, updateLatest,
                     if (pushImages) {
                         console.log(`(*) Pushing to registry.`);
                         await asyncUtils.spawn('docker', [`image push ${image}`], spawnOpts);
+                    } else {
+                        console.log(`(*) Skipping push to registry.`);
                     }
                 }
 
