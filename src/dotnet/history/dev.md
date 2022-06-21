@@ -172,7 +172,6 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-focal
 ```
 mcr.microsoft.com/devcontainers/dotnet:dev-5.0-bullseye-slim
 mcr.microsoft.com/devcontainers/dotnet:dev-5.0-bullseye
-mcr.microsoft.com/devcontainers/dotnetcore:dev-5.0-bullseye
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
@@ -249,7 +248,6 @@ mcr.microsoft.com/devcontainers/dotnetcore:dev-5.0-bullseye
 ```
 mcr.microsoft.com/devcontainers/dotnet:dev-5.0-focal
 mcr.microsoft.com/devcontainers/dotnet:dev-5.0
-mcr.microsoft.com/devcontainers/dotnetcore:dev-5.0
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
@@ -325,7 +323,6 @@ mcr.microsoft.com/devcontainers/dotnetcore:dev-5.0
 **Tags:**
 ```
 mcr.microsoft.com/devcontainers/dotnet:dev-3.1-bullseye
-mcr.microsoft.com/devcontainers/dotnetcore:dev-3.1-bullseye
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
@@ -402,7 +399,6 @@ mcr.microsoft.com/devcontainers/dotnetcore:dev-3.1-bullseye
 ```
 mcr.microsoft.com/devcontainers/dotnet:dev-3.1-focal
 mcr.microsoft.com/devcontainers/dotnet:dev-3.1
-mcr.microsoft.com/devcontainers/dotnetcore:dev-3.1
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
