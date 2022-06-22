@@ -147,18 +147,18 @@ async function pushImage(definitionId, repo, release, updateLatest,
                 ], spawnOpts);
 
                 console.log("(*) Docker images", imageName);
-                await asyncUtils.spawn('docker', [`images push`], spawnOpts);
+                await asyncUtils.spawn('docker', [`images`], spawnOpts);
 
-                if (pushImages) {
-                    console.log(`(*) Pushing to registry.`);
-                    await asyncUtils.spawn('docker', [`image push ${imageName}`], spawnOpts);
-                } else {
-                    console.log(`(*) Skipping push to registry.`);
-                }
+                // if (pushImages) {
+                //     console.log(`(*) Pushing to registry.`);
+                //     await asyncUtils.spawn('docker', [`image push ${imageName}`], spawnOpts);
+                // } else {
+                //     console.log(`(*) Skipping push to registry.`);
+                // }
 
                 // Retagging definitionId to version tags
                 for (let image of imageNamesWithVersionTags) {
-                    await asyncUtils.spawn('docker', ['image tag', `${imageName} ${image}`], spawnOpts);
+                    await asyncUtils.spawn('docker', ['image tag', `${imageName}:latest ${image}`], spawnOpts);
 
                     if (pushImages) {
                         console.log(`(*) Pushing to registry.`);
