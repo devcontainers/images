@@ -85,7 +85,7 @@ async function prepDockerFile(devContainerDockerfilePath, definitionId, repo, re
 
         // Add variant as an argument to the dockerfile
         if (variant) {
-            addVariantArg(prepResult);
+            replaceVariantArg(prepResult);
         }
 
         // Generate list of other arguments if applicable and add to the dockefile
@@ -223,11 +223,11 @@ function addLabels(prepResult) {
     return dockerFileContentsWithLabels;
 }
 
-function addVariantArg(prepResult) {
-    const variantArg = `ARG VARIANT=${prepResult.meta.variant}\n`
+function replaceVariantArg(prepResult) {
+    const variantArg = `ARG VARIANT="${prepResult.meta.variant}"\n`;
 
-    let dockerFileContentsWithArguments = variantArg + prepResult.devContainerDockerfileModified;
-    return dockerFileContentsWithArguments;
+    prepResult.devContainerDockerfileModified = (prepResult.devContainerDockerfileModified).replace(new RegExp(".*ARG VARIANT=.*"), variantArg);
+    return prepResult.devContainerDockerfileModified;
 }
 
 function addBuildArguments(prepResult) {

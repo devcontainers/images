@@ -122,7 +122,8 @@ async function pushImage(definitionId, repo, release, updateLatest,
                 console.log(`(*) Push disabled: Only building local architecture (${localArchitecture}).`);
             }
 
-            if (replaceImage || !await isDefinitionVersionAlreadyPublished(definitionId, release, registry, registryPath, variant)) {
+            // TODO: add back version already published ; removed for testing purpose.
+            // if (replaceImage || !await isDefinitionVersionAlreadyPublished(definitionId, release, registry, registryPath, variant)) {
                 const context = devContainerJson.build ? devContainerJson.build.context || '.' : devContainerJson.context || '.';
                 const workingDir = path.resolve(dotDevContainerPath, context);
 
@@ -137,9 +138,9 @@ async function pushImage(definitionId, repo, release, updateLatest,
                     pushImages ? '--push' : ''
                 ], spawnOpts);
 
-            } else {
-                console.log(`(*) Version already published. Skipping.`);
-            }
+            // } else {
+            //     console.log(`(*) Version already published. Skipping.`);
+            // }
         }
     }
 

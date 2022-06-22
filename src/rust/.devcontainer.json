@@ -1,10 +1,7 @@
 {
     "build": {
         "dockerfile": "./Dockerfile",
-        "context": ".",
-        "args": {
-            "VARIANT": "buster"
-        }
+        "context": "."
     },
     "features": [
         {
