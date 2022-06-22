@@ -143,6 +143,7 @@ async function pushImage(definitionId, repo, release, updateLatest,
                     '--image-name', imageName,
                     '--no-cache', 'true',
                     platformOption,
+                    pushImages ? '--push' : '', 
                 ], spawnOpts);
 
                 console.log("(*) Pushed image", imageName);
@@ -153,7 +154,7 @@ async function pushImage(definitionId, repo, release, updateLatest,
                 } else {
                     console.log(`(*) Skipping push to registry.`);
                 }
-                
+
                 // Retagging definitionId to version tags
                 for (let image of imageNamesWithVersionTags) {
                     await asyncUtils.spawn('docker', ['image tag', `${imageName} ${image}`], spawnOpts);
