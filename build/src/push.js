@@ -127,6 +127,7 @@ async function pushImage(definitionId, repo, release, updateLatest,
 
                 let platformOption = "";
                 // Codespaces image does not need to be multi-arch
+                // ubuntu:focal image supports multiarch but codespaces doesn't. Hence, the build fails similar to https://github.com/docker/buildx/issues/235
                 if (definitionId != "codespaces") {
                     platformOption = "--platform " + (pushImages ? architectures.reduce((prev, current) => prev + ',' + current, '').substring(1) : localArchitecture)
                 }
@@ -142,9 +143,17 @@ async function pushImage(definitionId, repo, release, updateLatest,
                     '--image-name', imageName,
                     '--no-cache', 'true',
                     platformOption,
-                    pushImages ? '--push' : ''
                 ], spawnOpts);
 
+                console.log("(*) Pushed image", imageName);
+
+                if (pushImages) {
+                    console.log(`(*) Pushing to registry.`);
+                    await asyncUtils.spawn('docker', [`image push ${imageName}`], spawnOpts);
+                } else {
+                    console.log(`(*) Skipping push to registry.`);
+                }
+                
                 // Retagging definitionId to version tags
                 for (let image of imageNamesWithVersionTags) {
                     await asyncUtils.spawn('docker', ['image tag', `${imageName} ${image}`], spawnOpts);
