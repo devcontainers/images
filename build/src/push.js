@@ -158,6 +158,8 @@ async function pushImage(definitionId, repo, release, updateLatest,
 
                 // Retagging definitionId to version tags
                 for (let image of imageNamesWithVersionTags) {
+                    await asyncUtils.spawn('docker', [`pull ${imageName}`], spawnOpts);
+                    await asyncUtils.spawn('docker', [`images`], spawnOpts);
                     await asyncUtils.spawn('docker', ['image tag', `${imageName}:latest ${image}`], spawnOpts);
 
                     if (pushImages) {
