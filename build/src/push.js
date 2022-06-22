@@ -138,6 +138,16 @@ async function pushImage(definitionId, repo, release, updateLatest,
                     pushImages ? '--push' : ''
                 ], spawnOpts);
 
+                // Retagging definitionId to version tags
+                for (let image of imageNamesWithVersionTags) {
+                    await asyncUtils.spawn('docker', ['image tag', `${imageName} ${image}`], spawnOpts);
+
+                    if (pushImages) {
+                        console.log(`(*) Pushing to registry.`);
+                        await asyncUtils.spawn('docker', [`image push ${image}`], spawnOpts);
+                    }
+                }
+
             // } else {
             //     console.log(`(*) Version already published. Skipping.`);
             // }

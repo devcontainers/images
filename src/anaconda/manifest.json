@@ -2,7 +2,7 @@
 	"definitionVersion": "0.202.6",
 	"build": {
 		"latest": true,
-		"parent": "miniconda",
+		"parent": "cpp",
 		"rootDistro": "debian",
 		"architectures": ["linux/amd64", "linux/arm64"],
 		"tags": [
