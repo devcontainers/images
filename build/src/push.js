@@ -143,7 +143,7 @@ async function pushImage(definitionId, repo, release, updateLatest,
                     '--image-name', imageName,
                     '--no-cache', 'true',
                     platformOption,
-                    // pushImages ? '--push' : '', 
+                    pushImages ? '--push false' : '', 
                 ], spawnOpts);
 
                 console.log("(*) Pushed image", imageName);
