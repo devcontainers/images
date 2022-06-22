@@ -143,10 +143,11 @@ async function pushImage(definitionId, repo, release, updateLatest,
                     '--image-name', imageName,
                     '--no-cache', 'true',
                     platformOption,
-                    pushImages ? '--push false' : '', 
+                    pushImages ? '--push' : '', 
                 ], spawnOpts);
 
-                console.log("(*) Pushed image", imageName);
+                console.log("(*) Docker images", imageName);
+                await asyncUtils.spawn('docker', [`images push`], spawnOpts);
 
                 if (pushImages) {
                     console.log(`(*) Pushing to registry.`);
