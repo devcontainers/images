@@ -35,10 +35,10 @@ async function push(repo, release, updateLatest, registry, registryPath, stubReg
     // See https://docs.docker.com/engine/reference/commandline/buildx_create/
     console.log('(*) Setting up builder...');
     const builders = await asyncUtils.exec('docker buildx ls');
-    if(builders.indexOf('dev-containers') < 0) {
-        await asyncUtils.spawn('docker', ['buildx', 'create', '--use', '--name', 'dev-containers']);
+    if(builders.indexOf('dev-containers-builder') < 0) {
+        await asyncUtils.spawn('docker', ['buildx', 'create', '--use', '--name', 'dev-containers-builder']);
     } else {
-        await asyncUtils.spawn('docker', ['buildx', 'use', 'dev-containers']);
+        await asyncUtils.spawn('docker', ['buildx', 'use', 'dev-containers-builder']);
     }
     // This step sets up the QEMU emulators for cross-platform builds. See https://github.com/docker/buildx#building-multi-platform-images
     await asyncUtils.spawn('docker', ['run', '--privileged', '--rm', 'tonistiigi/binfmt', '--install', 'all']);
@@ -143,7 +143,7 @@ async function pushImage(definitionId, repo, release, updateLatest,
                     '--image-name', imageName,
                     '--no-cache', 'true',
                     platformOption,
-                    pushImages ? '--push' : '', 
+                    // pushImages ? '--push' : '', 
                 ], spawnOpts);
 
                 console.log("(*) Pushed image", imageName);
