@@ -124,6 +124,13 @@ async function pushImage(definitionId, repo, release, updateLatest,
 
             // TODO: add back version already published ; removed for testing purpose.
             // if (replaceImage || !await isDefinitionVersionAlreadyPublished(definitionId, release, registry, registryPath, variant)) {
+
+                let platformOption = "";
+                // Codespaces image does not need to be multi-arch
+                if (definitionId != "codespaces") {
+                    platformOption = "--platform " + (pushImages ? architectures.reduce((prev, current) => prev + ',' + current, '').substring(1) : localArchitecture)
+                }
+
                 const context = devContainerJson.build ? devContainerJson.build.context || '.' : devContainerJson.context || '.';
                 const workingDir = path.resolve(dotDevContainerPath, context);
 
@@ -134,7 +141,7 @@ async function pushImage(definitionId, repo, release, updateLatest,
                     '--log-level ', 'info',
                     '--image-name', imageName,
                     '--no-cache', 'true',
-                    '--platform', pushImages ? architectures.reduce((prev, current) => prev + ',' + current, '').substring(1) : localArchitecture,
+                    platformOption,
                     pushImages ? '--push' : ''
                 ], spawnOpts);
 
