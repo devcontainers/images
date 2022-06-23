@@ -134,13 +134,15 @@ async function pushImage(definitionId, repo, release, updateLatest,
 
                 const context = devContainerJson.build ? devContainerJson.build.context || '.' : devContainerJson.context || '.';
                 const workingDir = path.resolve(dotDevContainerPath, context);
+                const buildParams = imageNamesWithVersionTags.reduce((prev, current) => prev.concat(['--image-name', current]), []);
 
                 const spawnOpts = { stdio: 'inherit', cwd: workingDir, shell: true };
-                await asyncUtils.spawn('npx --yes devcontainers-cli-0.6.0.tgz', [
+                await asyncUtils.spawn('npx --yes devcontainers-cli-0.6.2.tgz', [
                     'build',
                     '--workspace-folder', definitionPath,
                     '--log-level ', 'info',
                     '--image-name', imageName,
+                    ...buildParams,
                     '--no-cache', 'true',
                     platformOption,
                     pushImages ? '--push' : '', 
@@ -148,25 +150,6 @@ async function pushImage(definitionId, repo, release, updateLatest,
 
                 console.log("(*) Docker images", imageName);
                 await asyncUtils.spawn('docker', [`images`], spawnOpts);
-
-                // if (pushImages) {
-                //     console.log(`(*) Pushing to registry.`);
-                //     await asyncUtils.spawn('docker', [`image push ${imageName}`], spawnOpts);
-                // } else {
-                //     console.log(`(*) Skipping push to registry.`);
-                // }
-
-                // Retagging definitionId to version tags
-                for (let image of imageNamesWithVersionTags) {
-                    await asyncUtils.spawn('docker', [`pull ${imageName}`], spawnOpts);
-                    await asyncUtils.spawn('docker', [`images`], spawnOpts);
-                    await asyncUtils.spawn('docker', ['image tag', `${imageName}:latest ${image}`], spawnOpts);
-
-                    if (pushImages) {
-                        console.log(`(*) Pushing to registry.`);
-                        await asyncUtils.spawn('docker', [`image push ${image}`], spawnOpts);
-                    }
-                }
 
             // } else {
             //     console.log(`(*) Version already published. Skipping.`);

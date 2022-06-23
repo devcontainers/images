@@ -61,6 +61,7 @@ jobs:
                           --registry-path ${{ secrets.REGISTRY_BASE_PATH }} \
                           --stub-registry ${{ secrets.STUB_REGISTRY }} \
                           --stub-registry-path ${{ secrets.STUB_REGISTRY_BASE_PATH }}
+                          alpine
 
   image-info:
     name: Trigger info extraction
