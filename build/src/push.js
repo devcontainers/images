@@ -133,7 +133,7 @@ async function pushImage(definitionId, repo, release, updateLatest,
                 const imageNameParams = imageNamesWithVersionTags.reduce((prev, current) => prev.concat(['--image-name', current]), []);
                 imageNameParams.push('--image-name', imageName);
 
-                await createOrUseBuilder();
+                // await createOrUseBuilder();
                 const spawnOpts = { stdio: 'inherit', cwd: workingDir, shell: true };
                 await asyncUtils.spawn('npx --yes devcontainers-cli-0.6.3.tgz', [
                     'build',
