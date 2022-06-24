@@ -59,6 +59,7 @@ check "ruby" ruby --version
 check "rvm" bash -c ". /usr/local/rvm/scripts/rvm && rvm --version"
 check "rbenv" bash -c 'eval "$(rbenv init -)" && rbenv --version'
 check "rake" gem list rake
+check "jekyll" gem list jekyll
 echo $(echo "ruby versions" && ls -a /usr/local/rvm/rubies)
 
 # Node.js
