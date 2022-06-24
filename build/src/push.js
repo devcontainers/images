@@ -8,6 +8,7 @@ const jsonc = require('jsonc').jsonc;
 const asyncUtils = require('./utils/async');
 const configUtils = require('./utils/config');
 const prep = require('./prep');
+const builderName = 'dev-containers-builder';
 
 async function push(repo, release, updateLatest, registry, registryPath, stubRegistry,
     stubRegistryPath, pushImages, prepOnly, definitionsToSkip, page, pageTotal, replaceImages, definitionId) {
@@ -27,6 +28,17 @@ async function push(repo, release, updateLatest, registry, registryPath, stubReg
     // Stage content
     const stagingFolder = await configUtils.getStagingFolder(release);
     await configUtils.loadConfig(stagingFolder);
+
+    // Use or create a buildx / buildkit "builder" that using the docker-container driver which internally 
+    // uses QEMU to emulate different architectures for cross-platform builds. Setting up a separate
+    // builder avoids problems with the default config being different otherwise altered. It also can
+    // be tweaked down the road to use a different driver like using separate machines per architecture.
+    // See https://docs.docker.com/engine/reference/commandline/buildx_create/
+    console.log('(*) Setting up builder...');
+    createOrUseBuilder();
+
+    // This step sets up the QEMU emulators for cross-platform builds. See https://github.com/docker/buildx#building-multi-platform-images
+    await asyncUtils.spawn('docker', ['run', '--privileged', '--rm', 'tonistiigi/binfmt', '--install', 'all']);
 
     // Build and push subset of images
     const definitionsToPush = definitionId ? [definitionId] : configUtils.getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip);
@@ -82,60 +94,64 @@ async function pushImage(definitionId, repo, release, updateLatest,
             const imageName = imageNamesWithVersionTags[0].split(':')[0];
 
             console.log(`(*) Tags:${imageNamesWithVersionTags.reduce((prev, current) => prev += `\n     ${current}`, '')}`);
-            // const buildSettings = configUtils.getBuildSettings(definitionId);
+            const buildSettings = configUtils.getBuildSettings(definitionId);
 
-            //TODO::Add --platform
-            // let architectures = buildSettings.architectures;
-            // switch (typeof architectures) {
-            //     case 'string': architectures = [architectures]; break;
-            //     case 'object': if (!Array.isArray(architectures)) { architectures = architectures[variant]; } break;
-            //     case 'undefined': architectures = ['linux/amd64']; break;
-            // }
-            // console.log(`(*) Target image architectures: ${architectures.reduce((prev, current) => prev += `\n     ${current}`, '')}`);
-            // let localArchitecture = process.arch;
-            // switch(localArchitecture) {
-            //     case 'arm': localArchitecture = 'linux/arm/v7'; break;
-            //     case 'aarch32': localArchitecture = 'linux/arm/v7'; break;
-            //     case 'aarch64': localArchitecture = 'linux/arm64'; break;
-            //     case 'x64': localArchitecture = 'linux/amd64'; break;
-            //     case 'x32': localArchitecture = 'linux/386'; break;
-            //     default: localArchitecture = `linux/${localArchitecture}`; break;
-            // }
-            // console.log(`(*) Local architecture: ${localArchitecture}`);
-            // if (!pushImages) {
-            //     console.log(`(*) Push disabled: Only building local architecture (${localArchitecture}).`);
-            // }
+            let architectures = buildSettings.architectures;
+            switch (typeof architectures) {
+                case 'string': architectures = [architectures]; break;
+                case 'object': if (!Array.isArray(architectures)) { architectures = architectures[variant]; } break;
+                case 'undefined': architectures = ['linux/amd64']; break;
+            }
+
+            console.log(`(*) Target image architectures: ${architectures.reduce((prev, current) => prev += `\n     ${current}`, '')}`);
+            let localArchitecture = process.arch;
+            switch(localArchitecture) {
+                case 'arm': localArchitecture = 'linux/arm/v7'; break;
+                case 'aarch32': localArchitecture = 'linux/arm/v7'; break;
+                case 'aarch64': localArchitecture = 'linux/arm64'; break;
+                case 'x64': localArchitecture = 'linux/amd64'; break;
+                case 'x32': localArchitecture = 'linux/386'; break;
+                default: localArchitecture = `linux/${localArchitecture}`; break;
+            }
+            
+            console.log(`(*) Local architecture: ${localArchitecture}`);
+            if (!pushImages) {
+                console.log(`(*) Push disabled: Only building local architecture (${localArchitecture}).`);
+            }
 
             // TODO: add back version already published ; removed for testing purpose.
             // if (replaceImage || !await isDefinitionVersionAlreadyPublished(definitionId, release, registry, registryPath, variant)) {
+
+                let platformParams = "";
+                // Codespaces image does not need to be multi-arch
+                // ubuntu:focal image supports multiarch but codespaces doesn't. Hence, the build fails similar to https://github.com/docker/buildx/issues/235
+                if (definitionId != "codespaces") {
+                    platformParams = "--platform " + (pushImages ? architectures.reduce((prev, current) => prev + ',' + current, '').substring(1) : localArchitecture)
+                }
+
                 const context = devContainerJson.build ? devContainerJson.build.context || '.' : devContainerJson.context || '.';
                 const workingDir = path.resolve(dotDevContainerPath, context);
+                const imageNameParams = imageNamesWithVersionTags.reduce((prev, current) => prev.concat(['--image-name', current]), []);
+                imageNameParams.push('--image-name', imageName);
 
+                await createOrUseBuilder();
                 const spawnOpts = { stdio: 'inherit', cwd: workingDir, shell: true };
-                await asyncUtils.spawn('npx --yes devcontainers-cli-0.3.0-1.tgz', [
+                await asyncUtils.spawn('npx --yes devcontainers-cli-0.6.3.tgz', [
                     'build',
                     '--workspace-folder', definitionPath,
                     '--log-level ', 'info',
-                    '--image-name', imageName,
-                    '--no-cache', 'true'
+                    ...imageNameParams,
+                    '--no-cache', 'true',
+                    platformParams,
+                    pushImages ? '--push' : '', 
                 ], spawnOpts);
 
-                if (pushImages) {
-                    console.log(`(*) Pushing to registry.`);
-                    await asyncUtils.spawn('docker', [`image push ${imageName}`], spawnOpts);
-                } else {
+                if (!pushImages) {
                     console.log(`(*) Skipping push to registry.`);
                 }
 
-                // Retagging definitionId to version tags
-                for (let image of imageNamesWithVersionTags) {
-                    await asyncUtils.spawn('docker', ['image tag', `${imageName}:latest ${image}`], spawnOpts);
-
-                    if (pushImages) {
-                        console.log(`(*) Pushing to registry.`);
-                        await asyncUtils.spawn('docker', [`image push ${image}`], spawnOpts);
-                    }
-                }
+                console.log("(*) Docker images", imageName);
+                await asyncUtils.spawn('docker', [`images`], spawnOpts);
 
             // } else {
             //     console.log(`(*) Version already published. Skipping.`);
@@ -208,6 +224,15 @@ async function isImageAlreadyPublished(registryName, repositoryName, tagName) {
     }
     console.log('(*) Image version has not been published yet.')
     return false;
+}
+
+async function createOrUseBuilder() {
+    const builders = await asyncUtils.exec('docker buildx ls');
+    if(builders.indexOf(builderName) < 0) {
+        await asyncUtils.spawn('docker', ['buildx', 'create', '--use', '--name', builderName]);
+    } else {
+        await asyncUtils.spawn('docker', ['buildx', 'use', builderName]);
+    }
 }
 
 module.exports = {

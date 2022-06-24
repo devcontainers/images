@@ -2,13 +2,5 @@
     "build": {
         "dockerfile": "./Dockerfile",
         "context": "."
-    },
-    "features": [
-        {
-            "id": "devcontainers/features/node@v0.0.2",
-            "options": {
-                "version": "none"
-            }
-        }
-    ]
+    }
 }
