@@ -38,9 +38,7 @@ async function push(repo, release, updateLatest, registry, registryPath, stubReg
     createOrUseBuilder();
 
     // This step sets up the QEMU emulators for cross-platform builds. See https://github.com/docker/buildx#building-multi-platform-images
-    // if (definitionId !== 'anaconda'){
-        await asyncUtils.spawn('docker', ['run', '--privileged', '--rm', 'tonistiigi/binfmt', '--install', 'all']);
-    // }
+    await asyncUtils.spawn('docker', ['run', '--privileged', '--rm', 'tonistiigi/binfmt', '--install', 'all']);
 
     // Build and push subset of images
     const definitionsToPush = definitionId ? [definitionId] : configUtils.getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip);
