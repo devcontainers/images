@@ -8,6 +8,7 @@ const jsonc = require('jsonc').jsonc;
 const asyncUtils = require('./utils/async');
 const configUtils = require('./utils/config');
 const prep = require('./prep');
+const builderName = 'dev-containers-builder';
 
 async function push(repo, release, updateLatest, registry, registryPath, stubRegistry,
     stubRegistryPath, pushImages, prepOnly, definitionsToSkip, page, pageTotal, replaceImages, definitionId) {
@@ -34,12 +35,7 @@ async function push(repo, release, updateLatest, registry, registryPath, stubReg
     // be tweaked down the road to use a different driver like using separate machines per architecture.
     // See https://docs.docker.com/engine/reference/commandline/buildx_create/
     console.log('(*) Setting up builder...');
-    const builders = await asyncUtils.exec('docker buildx ls');
-    if(builders.indexOf('dev-containers-builder') < 0) {
-        await asyncUtils.spawn('docker', ['buildx', 'create', '--use', '--name', 'dev-containers-builder']);
-    } else {
-        await asyncUtils.spawn('docker', ['buildx', 'use', 'dev-containers-builder']);
-    }
+
     // This step sets up the QEMU emulators for cross-platform builds. See https://github.com/docker/buildx#building-multi-platform-images
     await asyncUtils.spawn('docker', ['run', '--privileged', '--rm', 'tonistiigi/binfmt', '--install', 'all']);
 
@@ -137,6 +133,7 @@ async function pushImage(definitionId, repo, release, updateLatest,
                 const imageNameParams = imageNamesWithVersionTags.reduce((prev, current) => prev.concat(['--image-name', current]), []);
                 imageNameParams.push('--image-name', imageName);
 
+                await createOrUseBuilder();
                 const spawnOpts = { stdio: 'inherit', cwd: workingDir, shell: true };
                 await asyncUtils.spawn('npx --yes devcontainers-cli-0.6.3.tgz', [
                     'build',
@@ -226,6 +223,15 @@ async function isImageAlreadyPublished(registryName, repositoryName, tagName) {
     }
     console.log('(*) Image version has not been published yet.')
     return false;
+}
+
+async function createOrUseBuilder(builders) {
+    const builders = await asyncUtils.exec('docker buildx ls');
+    if(builders.indexOf(builderName) < 0) {
+        await asyncUtils.spawn('docker', ['buildx', 'create', '--use', '--name', builderName]);
+    } else {
+        await asyncUtils.spawn('docker', ['buildx', 'use', builderName]);
+    }
 }
 
 module.exports = {
