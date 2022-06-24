@@ -138,7 +138,7 @@ async function pushImage(definitionId, repo, release, updateLatest,
                 imageNameParams.push('--image-name', imageName);
 
                 const spawnOpts = { stdio: 'inherit', cwd: workingDir, shell: true };
-                await asyncUtils.spawn('npx --yes devcontainers-cli-0.6.2.tgz', [
+                await asyncUtils.spawn('npx --yes devcontainers-cli-0.6.3..tgz', [
                     'build',
                     '--workspace-folder', definitionPath,
                     '--log-level ', 'info',
