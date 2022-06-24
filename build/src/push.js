@@ -125,48 +125,35 @@ async function pushImage(definitionId, repo, release, updateLatest,
             // TODO: add back version already published ; removed for testing purpose.
             // if (replaceImage || !await isDefinitionVersionAlreadyPublished(definitionId, release, registry, registryPath, variant)) {
 
-                let platformOption = "";
+                let platformParams = "";
                 // Codespaces image does not need to be multi-arch
                 // ubuntu:focal image supports multiarch but codespaces doesn't. Hence, the build fails similar to https://github.com/docker/buildx/issues/235
                 if (definitionId != "codespaces") {
-                    platformOption = "--platform " + (pushImages ? architectures.reduce((prev, current) => prev + ',' + current, '').substring(1) : localArchitecture)
+                    platformParams = "--platform " + (pushImages ? architectures.reduce((prev, current) => prev + ',' + current, '').substring(1) : localArchitecture)
                 }
 
                 const context = devContainerJson.build ? devContainerJson.build.context || '.' : devContainerJson.context || '.';
                 const workingDir = path.resolve(dotDevContainerPath, context);
+                const imageNameParams = imageNamesWithVersionTags.reduce((prev, current) => prev.concat(['--image-name', current]), []);
+                imageNameParams.push('--image-name', imageName);
 
                 const spawnOpts = { stdio: 'inherit', cwd: workingDir, shell: true };
-                await asyncUtils.spawn('npx --yes devcontainers-cli-0.6.0.tgz', [
+                await asyncUtils.spawn('npx --yes devcontainers-cli-0.6.2.tgz', [
                     'build',
                     '--workspace-folder', definitionPath,
                     '--log-level ', 'info',
-                    '--image-name', imageName,
+                    ...imageNameParams,
                     '--no-cache', 'true',
-                    platformOption,
+                    platformParams,
                     pushImages ? '--push' : '', 
                 ], spawnOpts);
 
+                if (!pushImages) {
+                    console.log(`(*) Skipping push to registry.`);
+                }
+
                 console.log("(*) Docker images", imageName);
                 await asyncUtils.spawn('docker', [`images`], spawnOpts);
-
-                // if (pushImages) {
-                //     console.log(`(*) Pushing to registry.`);
-                //     await asyncUtils.spawn('docker', [`image push ${imageName}`], spawnOpts);
-                // } else {
-                //     console.log(`(*) Skipping push to registry.`);
-                // }
-
-                // Retagging definitionId to version tags
-                for (let image of imageNamesWithVersionTags) {
-                    await asyncUtils.spawn('docker', [`pull ${imageName}`], spawnOpts);
-                    await asyncUtils.spawn('docker', [`images`], spawnOpts);
-                    await asyncUtils.spawn('docker', ['image tag', `${imageName}:latest ${image}`], spawnOpts);
-
-                    if (pushImages) {
-                        console.log(`(*) Pushing to registry.`);
-                        await asyncUtils.spawn('docker', [`image push ${image}`], spawnOpts);
-                    }
-                }
 
             // } else {
             //     console.log(`(*) Version already published. Skipping.`);
