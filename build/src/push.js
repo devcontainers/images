@@ -34,12 +34,12 @@ async function push(repo, release, updateLatest, registry, registryPath, stubReg
     // builder avoids problems with the default config being different otherwise altered. It also can
     // be tweaked down the road to use a different driver like using separate machines per architecture.
     // See https://docs.docker.com/engine/reference/commandline/buildx_create/
-    // console.log('(*) Setting up builder...');
+    console.log('(*) Setting up builder...');
 
     // This step sets up the QEMU emulators for cross-platform builds. See https://github.com/docker/buildx#building-multi-platform-images
-    // if (definitionId !== 'anacondaw'){
-    //     await asyncUtils.spawn('docker', ['run', '--privileged', '--rm', 'tonistiigi/binfmt', '--install', 'all']);
-    // }
+    if (definitionId !== 'anaconda'){
+        await asyncUtils.spawn('docker', ['run', '--privileged', '--rm', 'tonistiigi/binfmt', '--install', 'all']);
+    }
 
     // Build and push subset of images
     const definitionsToPush = definitionId ? [definitionId] : configUtils.getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip);
