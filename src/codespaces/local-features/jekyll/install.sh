@@ -52,6 +52,8 @@ fi
 # If we don't already have Jekyll installed, install it now.
 if ! jekyll --version > /dev/null ; then
   echo "Installing Jekyll..."
+  export GEM_HOME='/usr/local/rvm/gems/default'
+  export GEM_PATH='/usr/local/rvm/gems/default:/usr/local/rvm/gems/default@global'
   if [ "${VERSION}" = "latest" ]; then
     sudo_if gem install jekyll
   else
