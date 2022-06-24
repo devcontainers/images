@@ -54,9 +54,13 @@ if ! jekyll --version > /dev/null ; then
   echo "Installing Jekyll..."
   export GEM_HOME='/usr/local/rvm/gems/default'
   export GEM_PATH='/usr/local/rvm/gems/default:/usr/local/rvm/gems/default@global'
+
+  ROOT_GEM="$(which gem || echo "")"
+  sudo_if ${ROOT_GEM} install bundler
+  
   if [ "${VERSION}" = "latest" ]; then
-    sudo_if gem install jekyll
+    sudo_if ${ROOT_GEM} install jekyll
   else
-    sudo_if gem install jekyll -v "${VERSION}"
+    sudo_if ${ROOT_GEM} install jekyll -v "${VERSION}"
   fi
 fi
