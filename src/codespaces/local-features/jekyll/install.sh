@@ -43,6 +43,16 @@ sudo_if() {
     fi
 }
 
+updaterc() {
+    echo "Updating /etc/bash.bashrc and /etc/zsh/zshrc..."
+    if [[ "$(cat /etc/bash.bashrc)" != *"$1"* ]]; then
+        echo -e "$1" >> /etc/bash.bashrc
+    fi
+    if [ -f "/etc/zsh/zshrc" ] && [[ "$(cat /etc/zsh/zshrc)" != *"$1"* ]]; then
+        echo -e "$1" >> /etc/zsh/zshrc
+    fi
+}
+
 # If we don't yet have Ruby installed, exit.
 if ! /usr/local/rvm/rubies/default/bin/ruby --version > /dev/null ; then
   echo "You need to install Ruby before installing Jekyll."
@@ -52,8 +62,14 @@ fi
 # If we don't already have Jekyll installed, install it now.
 if ! jekyll --version > /dev/null ; then
   echo "Installing Jekyll..."
-  export GEM_HOME='/usr/local/rvm/gems/default'
-  export GEM_PATH='/usr/local/rvm/gems/default:/usr/local/rvm/gems/default@global'
+  
+  updaterc "$(cat << EOF
+  export GEM_HOME="/usr/local/rvm/gems/default"
+  export GEM_PATH="/usr/local/rvm/gems/default:/usr/local/rvm/gems/default@global"
+  if [[ "\${PATH}" != *"\${GEM_HOME}"* ]]; then export PATH="\${GEM_HOME}:\${PATH}"; fi
+  if [[ "\${PATH}" != *"\${GEM_PATH}"* ]]; then export PATH="\${GEM_PATH}:\${PATH}"; fi
+EOF
+)"
 
   ROOT_GEM="$(which gem || echo "")"
   sudo_if ${ROOT_GEM} install bundler
