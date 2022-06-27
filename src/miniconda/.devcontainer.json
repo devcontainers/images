@@ -3,18 +3,8 @@
         "dockerfile": "./Dockerfile",
         "context": "."
     },
-    "features": [
-        {
-            "id": "devcontainers/features/python@v0.0.2",
-            "options": {
-                "version": "none"
-            }
-        },
-        {
-            "id": "devcontainers/features/node@v0.0.2",
-            "options": {
-                "version": "none"
-            }
-        }
-    ]
+    "features": {
+        "devcontainers/features/python@v0.0.2": "none",
+        "devcontainers/features/node@v0.0.2": "none"
+    }
 }
