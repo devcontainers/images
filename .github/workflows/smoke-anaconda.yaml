@@ -9,6 +9,8 @@ on:
     paths:
       - src/anaconda/**
       - .github/workflows/smoke-anaconda.yaml
+      - .github/actions/**
+      - build/**
 jobs:
   smoke-test:
     name: Smoke test
@@ -26,4 +28,3 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         definition: anaconda
-        user: vscode

@@ -1,10 +1,7 @@
 {
     "build": {
         "dockerfile": "./Dockerfile",
-        "context": ".",
-        "args": {
-            "VARIANT": "focal"
-        }
+        "context": "."
     },
     "features": [
         {

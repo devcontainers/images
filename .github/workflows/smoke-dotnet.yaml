@@ -2,16 +2,15 @@ name: Smoke test "dotnet" build
 
 on: 
   workflow_dispatch:
-
   push:
-    branches: [main]
-    paths:
-      - 'src/dotnet/**'
-  pull_request:
     branches:
-      - main
+    - main
+  pull_request:
     paths:
-      - 'src/dotnet/**'
+      - src/dotnet/**
+      - .github/workflows/smoke-dotnet.yaml
+      - .github/actions/**
+      - build/**
 jobs:
   smoke-test:
     name: Smoke test
@@ -29,4 +28,3 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         definition: dotnet
-        user: vscode

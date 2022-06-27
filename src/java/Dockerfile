@@ -1,7 +1,7 @@
 # This base.Dockerfile uses separate build arguments instead of VARIANT
 ARG TARGET_JAVA_VERSION=11
 ARG BASE_IMAGE_VERSION_CODENAME=bullseye
-FROM mcr.microsoft.com/vscode/devcontainers/base:${BASE_IMAGE_VERSION_CODENAME}
+FROM mcr.microsoft.com/devcontainers/base:${BASE_IMAGE_VERSION_CODENAME}
 
 ARG TARGET_JAVA_VERSION
 ENV JAVA_HOME /usr/lib/jvm/msopenjdk-${TARGET_JAVA_VERSION}

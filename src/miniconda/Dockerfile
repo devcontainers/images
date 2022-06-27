@@ -7,11 +7,10 @@ RUN groupadd -r conda --gid 900 \
     && find /opt -type d | xargs -n 1 chmod g+s
 
 # Reset and copy updated files with updated privs to keep image size down
-FROM mcr.microsoft.com/vscode/devcontainers/base:0-bullseye
+FROM mcr.microsoft.com/devcontainers/base:0-bullseye
 COPY --from=upstream /opt /opt/
 
 # Copy library scripts to execute
-# COPY .devcontainer/library-scripts/*.sh .devcontainer/add-notice.sh .devcontainer/library-scripts/*.env /tmp/library-scripts/
 COPY add-notice.sh /tmp/library-scripts/
 
 # Setup conda to mirror contents from https://github.com/ContinuumIO/docker-images/blob/master/miniconda3/debian/Dockerfile
@@ -45,7 +44,6 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 
 # Copy environment.yml (if found) to a temp locaition so we update the environment. Also
 # copy "noop.txt" so the COPY instruction does not fail if no environment.yml exists.
-# COPY environment.yml* .devcontainer/noop.txt /tmp/conda-tmp/
 COPY environment.yml* noop.txt /tmp/conda-tmp/
 RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then umask 0002 && /opt/conda/bin/conda env update -n base -f /tmp/conda-tmp/environment.yml; fi \
     && rm -rf /tmp/conda-tmp

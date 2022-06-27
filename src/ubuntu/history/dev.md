@@ -11,7 +11,7 @@
 
 ## Variant: jammy
 
-**Digest:** sha256:eb88d9dfe79345d93dd04dcd4a7103119fa38079ed79e1ffe8381d45404e86b7
+**Digest:** sha256:d668e415f2e99870add1dd2fdea92dfde0a9ddf4f81c45afa0701dfcbf27b235
 
 **Tags:**
 ```
@@ -32,14 +32,14 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu22.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 50550c70eaa36e79fdf380bdc4ddad4a1ad581a0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4c82a2eedf0c43d47601ffa8b0303ed1326fab8f | /home/vscode/.oh-my-zsh |
 
 **Additional linux tools and packages**
 
 | Tool / library | Version |
 |----------------|---------|
-| apt-transport-https | 2.0.8 |
-| apt-utils | 2.0.8 |
+| apt-transport-https | 2.0.9 |
+| apt-utils | 2.0.9 |
 | ca-certificates | 20211016~20.04.1 |
 | curl | 7.68.0-1ubuntu2.11 |
 | dialog | 1.3-20190808-1 |
@@ -81,7 +81,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu22.04
 
 ## Variant: focal
 
-**Digest:** sha256:4647a50fb08d32f25d10b0e1fd62841f4ae6c327bd873d0464af79e9ddbcae7c
+**Digest:** sha256:e4d73821ca02ed6af6ad40dd64a3de8b8b461e380c2d80d9e444dea58d98ed1d
 
 **Tags:**
 ```
@@ -103,14 +103,14 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 50550c70eaa36e79fdf380bdc4ddad4a1ad581a0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4c82a2eedf0c43d47601ffa8b0303ed1326fab8f | /home/vscode/.oh-my-zsh |
 
 **Additional linux tools and packages**
 
 | Tool / library | Version |
 |----------------|---------|
-| apt-transport-https | 2.0.8 |
-| apt-utils | 2.0.8 |
+| apt-transport-https | 2.0.9 |
+| apt-utils | 2.0.9 |
 | ca-certificates | 20211016~20.04.1 |
 | curl | 7.68.0-1ubuntu2.11 |
 | dialog | 1.3-20190808-1 |
@@ -152,7 +152,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 ## Variant: bionic
 
-**Digest:** sha256:f426a73ed171fa4cc18302f32ec348d0c864fa9de120392c3cd42622ff2e5caa
+**Digest:** sha256:cc0a2ebf5f4572487b3a1778dcf7a3932e1a82f4c7635008d1e8e20074d7673c
 
 **Tags:**
 ```
@@ -173,14 +173,14 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu18.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 50550c70eaa36e79fdf380bdc4ddad4a1ad581a0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4c82a2eedf0c43d47601ffa8b0303ed1326fab8f | /home/vscode/.oh-my-zsh |
 
 **Additional linux tools and packages**
 
 | Tool / library | Version |
 |----------------|---------|
-| apt-transport-https | 2.0.8 |
-| apt-utils | 2.0.8 |
+| apt-transport-https | 2.0.9 |
+| apt-utils | 2.0.9 |
 | ca-certificates | 20211016~20.04.1 |
 | curl | 7.68.0-1ubuntu2.11 |
 | dialog | 1.3-20190808-1 |

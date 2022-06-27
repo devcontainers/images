@@ -9,15 +9,6 @@ checkCommon
 # Check Oryx
 check "oryx" oryx --version
 
-# Check Jekyll dynamic install
-mkdir jekyll-test
-cd jekyll-test
-touch _config.yml
-check "oryx-build-jekyll" oryx build --apptype static-sites --manifest-dir /tmp
-check "jekyll" gem list jekyll
-cd ..
-rm -rf jekyll-test
-
 # Check .NET
 check "dotnet" dotnet --list-sdks
 check "oryx-install-dotnet-2.1" oryx prep --skip-detection --platforms-and-versions dotnet=2.1.12
@@ -68,6 +59,7 @@ check "ruby" ruby --version
 check "rvm" bash -c ". /usr/local/rvm/scripts/rvm && rvm --version"
 check "rbenv" bash -c 'eval "$(rbenv init -)" && rbenv --version'
 check "rake" gem list rake
+check "jekyll" gem list jekyll
 echo $(echo "ruby versions" && ls -a /usr/local/rvm/rubies)
 
 # Node.js

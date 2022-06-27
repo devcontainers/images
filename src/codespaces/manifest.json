@@ -10,7 +10,7 @@
 		]
 	},
 	"dependencies": {
-		"annotation": "This document describes the base contents of the default GitHub Codespaces dev container image. Note that this image also includes detection logic to dynamically install additional language / runtime versions based on your repository's contents. Dynamically installed content can be found in sub-folders under `/opt`.",
+		"annotation": "This document describes the base contents of the default GitHub Codespaces dev container image. Note that this image also includes detection logic to dynamically install additional language / runtime versions based on your repository's contents. Dynamically installed content can be found in sub-folders under `/usr/local`.",
 		"image": "mcr.microsoft.com/oryx/build:vso-focal-20210728.1",
 		"imageLink": "https://github.com/microsoft/oryx",
 		"apt": [{
@@ -83,8 +83,8 @@
 		],
 		"git": {
 			"Oh My Zsh!": "/home/codespace/.oh-my-zsh",
-			"nvm": "/home/codespace/.nvm",
-			"nvs": "/home/codespace/.nvs",
+			"nvm": "/usr/local/share/nvm",
+			"nvs": "/usr/local/nvs",
 			"rbenv": "/usr/local/share/rbenv",
 			"ruby-build": "/usr/local/share/ruby-build"
 		},
@@ -106,14 +106,14 @@
 		},
 		"other": {
 			"git": {
-				"path": "/usr/local"
+				"path": "/usr/bin"
 			},
 			"Xdebug": {
-				"path": "/opt/php/lts"
+				"path": "/usr/local/php/current"
 			},
 			"Composer": {
 				"cgIgnore": true,
-				"path": "/opt/php-composer"
+				"path": "/usr/local/php/current/bin"
 			},
 			"kubectl": null,
 			"Helm": null,
@@ -123,13 +123,16 @@
 			"GitHub CLI": null,
 			"yarn": {
 				"cgIgnore": true,
-				"path": "/opt/yarn"
+				"path": "/usr/bin"
 			},
 			"Maven": {
 				"cgIgnore": true,
-				"path": "/opt/maven"
+				"path": "/usr/local/sdkman/candidates/maven/current/bin"
 			},
-			"Gradle": null,
+			"Gradle": {
+				"cgIgnore": true,
+				"path": "/usr/local/sdkman/candidates/gradle/current/bin"
+			},
 			"Docker (Moby) CLI & Engine": {
 				"cgIgnore": true
 			}
@@ -137,33 +140,33 @@
 		"languages": {
 			"Node.js": {
 				"cgIgnore": true,
-				"versionCommand": "ls /opt/nodejs | grep -oE '[0-9]+\\.[0-9]+\\.[0-9]+'",
-				"path": "/opt/nodejs/&lt;version&gt;"
+				"versionCommand": "ls /usr/local/share/nvm/versions/node | grep -oE '[0-9]+\\.[0-9]+\\.[0-9]+'",
+				"path": "/usr/local/share/nvm/versions/node/&lt;version&gt;"
 			},
 			"Python": {
 				"cgIgnore": true,
-				"versionCommand": "ls /opt/python | grep -oE '[0-9]+\\.[0-9]+\\.[0-9]+'",
-				"path": "/opt/python/&lt;version&gt;"
+				"versionCommand": "ls /usr/local/python | grep -oE '[0-9]+\\.[0-9]+\\.[0-9]+'",
+				"path": "/usr/local/python/&lt;version&gt;"
 			},
 			"Java": {
 				"cgIgnore": true,
-				"versionCommand": "ls /opt/java | grep -oE '[0-9]+\\.[0-9]+\\.[0-9]+'",
-				"path": "/opt/java/&lt;version&gt;"
+				"versionCommand": "ls /usr/local/sdkman/candidates/java | grep -oE '[0-9]+\\.[0-9]+\\.[0-9]+'",
+				"path": "/usr/local/sdkman/candidates/java/&lt;version&gt;"
 			},
 			".NET": {
 				"cgIgnore": true,
-				"versionCommand": "ls /opt/dotnet | grep -oE '[0-9]+\\.[0-9]+\\.[0-9]+'",
-				"path": "/home/codespaces/.dotnet<br />/opt/dotnet"
+				"versionCommand": "ls /usr/local/dotnet | grep -oE '[0-9]+\\.[0-9]+\\.[0-9]+'",
+				"path": "/usr/local/dotnet"
 			},
 			"Ruby": {
 				"cgIgnore": true,
-				"versionCommand": "ls /opt/ruby | grep -oE '[0-9]+\\.[0-9]+\\.[0-9]+'",
-				"path": "/opt/ruby/&lt;version&gt;"
+				"versionCommand": "ls /usr/local/rvm/rubies | grep -oE '[0-9]+\\.[0-9]+\\.[0-9]+'",
+				"path": "/usr/local/rvm/rubies/&lt;version&gt;"
 			},
 			"PHP": {
 				"cgIgnore": true,
-				"versionCommand": "ls /opt/php | grep -oE '[0-9]+\\.[0-9]+\\.[0-9]+'",
-				"path": "/opt/php/&lt;version&gt;"
+				"versionCommand": "ls /usr/local/php | grep -oE '[0-9]+\\.[0-9]+\\.[0-9]+'",
+				"path": "/usr/local/php/&lt;version&gt;"
 			},
 			"GCC": {
 				"cgIgnore": true

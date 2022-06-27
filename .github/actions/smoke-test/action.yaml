@@ -4,26 +4,24 @@ inputs:
     description: 'Definition to test'
     required: true
     default: 'debian'
-  user:
-    description: 'User in container image to use for smoke test'
-    required: true
-    default: 'vscode'
 
 runs:
   using: composite
   steps:
     - name: Checkout main
       id: checkout_release
-      uses: actions/checkout@v3
+      uses: actions/checkout@v2
       with:
         repository: 'devcontainers/images'
         path: '__build'
         ref: 'main'
+
     - name: Build image
       id: build_image
       shell: bash
       run: ${{ github.action_path }}/build.sh ${{ inputs.definition }}
+
     - name: Test image
       id: test_image
       shell: bash
-      run: chmod +x ${{ github.action_path }}/test.sh && ${{ github.action_path }}/test.sh  ${{ inputs.definition }} ${{ inputs.user }}
+      run: ${{ github.action_path }}/test.sh  ${{ inputs.definition }}

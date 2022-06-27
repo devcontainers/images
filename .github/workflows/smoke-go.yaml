@@ -2,16 +2,15 @@ name: Smoke test "go" build
 
 on: 
   workflow_dispatch:
-
   push:
-    branches: [main]
-    paths:
-      - 'src/go/**'
-  pull_request:
     branches:
-      - main
+    - main
+  pull_request:
     paths:
-      - 'src/go/**'
+      - src/go/**
+      - .github/workflows/smoke-go.yaml
+      - .github/actions/**
+      - build/**
 jobs:
   smoke-test:
     name: Smoke test
@@ -29,4 +28,3 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         definition: go
-        user: vscode

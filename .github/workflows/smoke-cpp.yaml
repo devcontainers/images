@@ -2,16 +2,15 @@ name: Smoke test "cpp" build
 
 on: 
   workflow_dispatch:
-
   push:
-    branches: [main]
-    paths:
-      - 'src/cpp/**'
-  pull_request:
     branches:
-      - main
+    - main
+  pull_request:
     paths:
-      - 'src/cpp/**'
+      - src/cpp/**
+      - .github/workflows/smoke-cpp.yaml
+      - .github/actions/**
+      - build/**
 jobs:
   smoke-test:
     name: Smoke test
@@ -27,4 +26,3 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         definition: cpp
-        user: vscode

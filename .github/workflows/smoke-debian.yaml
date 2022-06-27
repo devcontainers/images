@@ -2,16 +2,15 @@ name: Smoke test "debian" build
 
 on: 
   workflow_dispatch:
-
   push:
-    branches: [main]
-    paths:
-      - 'src/debian/**'
-  pull_request:
     branches:
-      - main
+    - main
+  pull_request:
     paths:
-      - 'src/debian/**'
+      - src/debian/**
+      - .github/workflows/smoke-debian.yaml
+      - .github/actions/**
+      - build/**
 jobs:
   smoke-test:
     name: Smoke test
@@ -27,4 +26,3 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         definition: debian
-        user: vscode

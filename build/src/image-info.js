@@ -12,19 +12,19 @@ let releaseNotesHeaderTemplate, releaseNotesVariantPartTemplate;
 handlebars.registerHelper('anchor', (value) => value.toLowerCase().replace(/[^\w\- ]/g, '').replace(/ /g, '-'));
 
 async function generateImageInformationFiles(repo, release, registry, registryPath, 
-    stubRegistry, stubRegistryPath, buildFirst, pruneBetweenDefinitions, generateCgManifest, generateMarkdown, overwrite, outputPath, definitionId) {
+    stubRegistry, stubRegistryPath, buildFirst, pruneBetweenDefinitions, generateManifest, generateMarkdown, overwrite, outputPath, definitionId) {
     // Load config files
     await configUtils.loadConfig();
 
     const alreadyRegistered = {};
-    const cgManifest = {
+    const manifest = {
         "Registrations": [],
         "Version": 1
     }
 
-    // cgmanifest file path and whether it exists
-    const cgManifestPath = path.join(outputPath, 'cgmanifest.json');
-    const cgManifestExists = await asyncUtils.exists(cgManifestPath);
+    // manifest file path and whether it exists
+    const manifestPath = path.join(outputPath, 'manifest.json');
+    const manifestExists = await asyncUtils.exists(manifestPath);
 
     console.log('(*) Generating image information files...');
     const definitions = definitionId ? [definitionId] : configUtils.getSortedDefinitionBuildList();
@@ -39,7 +39,7 @@ async function generateImageInformationFiles(repo, release, registry, registryPa
         // Skip if not overwriting and all files exist
         if(! overwrite && 
             (! generateMarkdown || markdownExists) && 
-            (! generateCgManifest || cgManifestExists)) {
+            (! generateManifest || manifestExists)) {
             console.log(`(*) Skipping ${currentDefinitionId}. Not in overwrite mode and content already exists.`);
             return;
         }
@@ -55,8 +55,8 @@ async function generateImageInformationFiles(repo, release, registry, registryPa
         }
 
         // Add component registrations if we're using them
-        if (generateCgManifest) {
-            cgManifest.Registrations = cgManifest.Registrations.concat(definitionInfo.registrations);     
+        if (generateManifest) {
+            manifest.Registrations = manifest.Registrations.concat(definitionInfo.registrations);     
         }
         // Prune images if setting enabled
         if (pruneBetweenDefinitions) {
@@ -64,12 +64,12 @@ async function generateImageInformationFiles(repo, release, registry, registryPa
         }
     });
 
-    // Write final cgmanifest.json file if needed
-    if(generateCgManifest && (overwrite || ! cgManifestExists)) {
-        console.log('(*) Writing cgmanifest.json...');
+    // Write final manifest.json file if needed
+    if(generateManifest && (overwrite || ! manifestExists)) {
+        console.log('(*) Writing manifest.json...');
         await asyncUtils.writeFile(
-            path.join(outputPath, 'cgmanifest.json'),
-            JSON.stringify(cgManifest, undefined, 4));    
+            path.join(outputPath, 'manifest.json'),
+            JSON.stringify(manifest, undefined, 4));    
     }
     console.log('(*) Done!');    
 }
