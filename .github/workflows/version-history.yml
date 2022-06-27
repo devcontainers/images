@@ -47,7 +47,7 @@ jobs:
         path: 'ref'
         ref: ${{ github.ref }}
   
-  - name: Checkout
+    - name: Checkout
       id: checkout_main
       uses: actions/checkout@v2
       with:
