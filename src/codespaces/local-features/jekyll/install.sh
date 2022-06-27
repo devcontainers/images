@@ -24,8 +24,8 @@ fi
 if ! jekyll --version > /dev/null ; then
     echo "Installing Jekyll..."
     
-    GEMS_DIR=/usr/local/rvm/rubies/default/bin/gem
-    PATH=$GEMS_DIR:$PATH
+    GEMS_DIR=/usr/local/rvm/rubies/default/bin
+    PATH=$GEMS_DIR/gem:$PATH
     if [ "${VERSION}" = "latest" ]; then
         gem install jekyll
     else
