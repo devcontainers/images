@@ -9,28 +9,25 @@ USERNAME=${2:-"codespace"}
 
 set -e
 
-# Use sudo to run as non-root user is not already running
-sudo_if() {
-    COMMAND="$*"
-    if [ "$(id -u)" -eq 0 ] && [ "$USERNAME" != "root" ]; then
-        su - "$USERNAME" -c "$COMMAND"
-    else
-        "$COMMAND"
-    fi
-}
-
 # If we don't yet have Ruby installed, exit.
-if ! /usr/local/rvm/rubies/default/bin/ruby --version > /dev/null; then
-  echo "You need to install Ruby before installing Jekyll."
-  exit 1
+if ! /usr/local/rvm/rubies/default/bin/ruby --version > /dev/null ; then
+    echo "You need to install Ruby before installing Jekyll."
+    exit 1
 fi
 
 # If we don't already have Jekyll installed, install it now.
-if ! jekyll --version > /dev/null; then
-  echo "Installing Jekyll..."
-  if [ "${VERSION}" = "latest" ]; then
-    sudo_if gem install jekyll
-  else
-    sudo_if gem install jekyll -v "${VERSION}"
-  fi
+if ! jekyll --version > /dev/null ; then
+    echo "Installing Jekyll..."
+    
+    GEMS_DIR=/usr/local/rvm/rubies/default/bin
+    PATH=$GEMS_DIR/gem:$PATH
+    if [ "${VERSION}" = "latest" ]; then
+        gem install jekyll
+    else
+        gem install jekyll -v "${VERSION}"
+    fi
+
+    chown -R "${USERNAME}:rvm" "${GEMS_DIR}/"
+    chmod -R g+r+w "${GEMS_DIR}/"
+    find "${GEMS_DIR}" -type d | xargs -n 1 chmod g+s
 fi

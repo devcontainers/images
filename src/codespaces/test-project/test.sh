@@ -58,7 +58,9 @@ echo $(echo "java versions" && ls -a /usr/local/sdkman/candidates/java)
 check "ruby" ruby --version
 check "rvm" bash -c ". /usr/local/rvm/scripts/rvm && rvm --version"
 check "rbenv" bash -c 'eval "$(rbenv init -)" && rbenv --version'
-check "rake" gem list rake
+check "gems" gem --version
+check "rake" rake --version
+check "jekyll" jekyll --version
 echo $(echo "ruby versions" && ls -a /usr/local/rvm/rubies)
 
 # Node.js

@@ -1,9 +1,6 @@
 {
     "build": {
         "dockerfile": "./Dockerfile",
-        "context": ".",
-        "args": {
-            "VARIANT": "3.15"
-        }
+        "context": "."
     }
 }
