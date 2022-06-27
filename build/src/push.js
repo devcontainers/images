@@ -131,9 +131,9 @@ async function pushImage(definitionId, repo, release, updateLatest,
                 // builder avoids problems with the default config being different otherwise altered. It also can
                 // be tweaked down the road to use a different driver like using separate machines per architecture.
                 // See https://docs.docker.com/engine/reference/commandline/buildx_create/
-                console.log('(*) Setting up builder...');
+                // console.log('(*) Setting up builder...');
 
-                await createOrUseBuilder(architectures);
+                // await createOrUseBuilder(architectures);
                 const spawnOpts = { stdio: 'inherit', cwd: workingDir, shell: true };
                 await asyncUtils.spawn('npx --yes devcontainers-cli-0.6.3.tgz', [
                     'build',
@@ -225,20 +225,33 @@ async function isImageAlreadyPublished(registryName, repositoryName, tagName) {
     return false;
 }
 
-async function createOrUseBuilder(architectures) {
-    const builders = await asyncUtils.exec('docker buildx ls');
-    if (builders.indexOf(builderName) < 0) {
-        let node_arch = architectures[0].split('/');
-        await asyncUtils.spawn('docker', ['buildx', 'create', '--use', '--name', builderName, `node-${node_arch[1]}`]);
+// async function createOrUseBuilder(architectures) {
+//     const builders = await asyncUtils.exec('docker buildx ls');
+//     if (builders.indexOf(builderName) < 0) {
+//         let node_arch = architectures[0].split('/');
+//         await asyncUtils.spawn('docker', ['buildx', 'create', '--use', '--name', builderName, `node-${node_arch[1]}`]);
 
-        for (let i = 1; i < architectures.length; i++) {
-            node_arch = architectures[i].split('/');
-            await asyncUtils.spawn('docker', ['buildx', 'create', '--append', '--name', builderName, `node-${node_arch[1]}`]);
-        }
-    } else {
-        await asyncUtils.spawn('docker', ['buildx', 'use', builderName]);
-    }
-}
+//         for (let i = 1; i < architectures.length; i++) {
+//             node_arch = architectures[i].split('/');
+//             await asyncUtils.spawn('docker', ['buildx', 'create', '--append', '--name', builderName, `node-${node_arch[1]}`]);
+//         }
+//     } else {
+//         await asyncUtils.spawn('docker', ['buildx', 'use', builderName]);
+//     }
+// }
+
+// async function createOrUseBuilder(architectures) {
+//     const builders = await asyncUtils.exec('docker buildx ls');
+//     if (builders.indexOf(builderName) < 0) {
+//         let node_arch = architectures[0].split('/');
+//         await asyncUtils.spawn('docker', ['buildx', 'create', '--use', '--name', builderName]);
+
+        
+//     } else {
+//         await asyncUtils.spawn('docker', ['buildx', 'use', builderName]);
+//     }
+// }
+
 
 module.exports = {
     push: push
