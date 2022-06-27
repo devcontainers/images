@@ -3,11 +3,6 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License. See https://go.microsoft.com/fwlink/?linkid=2090316 for license information.
 #-------------------------------------------------------------------------------------------------------------
-#
-# Docs: https://github.com/microsoft/vscode-dev-containers/blob/main/script-library/docs/hugo.md
-# Maintainer: The VS Code and Codespaces Teams
-#
-# Syntax: ./jekyll-debian.sh [Jekyll version] [Non-root user] [Add rc files flag]
 
 VERSION=${1:-"latest"}
 USERNAME=${2:-"codespace"}

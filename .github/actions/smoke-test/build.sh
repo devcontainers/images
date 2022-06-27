@@ -1,5 +1,5 @@
 #!/bin/bash
-DEFINITION="$1"
+IMAGE="$1"
 
 set -e
 
@@ -11,7 +11,7 @@ echo "(*) Pulling latest '@devcontainer/cli"
 cd build 
 chmod +x devcontainers-cli-0.6.3.tgz
 
-echo "(*) Building image - ${DEFINITION}"
-npx --yes devcontainers-cli-0.6.3.tgz up --workspace-folder ../src/${DEFINITION}
-# devcontainer build --workspace-folder "src/${DEFINITION}/" --image-name vsc-${DEFINITION}
+echo "(*) Building image - ${IMAGE}"
+npx --yes devcontainers-cli-0.6.3.tgz up --workspace-folder ../src/${IMAGE}
+# devcontainer build --workspace-folder "src/${IMAGE}/" --image-name vsc-${IMAGE}
 

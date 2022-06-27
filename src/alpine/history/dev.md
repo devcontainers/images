@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/alpine)
 
-**Definition variations:**
+**Image variations:**
 - [3.15](#variant-315)
 - [3.14](#variant-314)
 - [3.13](#variant-313)

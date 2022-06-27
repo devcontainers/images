@@ -27,4 +27,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.PAT }}
       uses: ./.github/actions/smoke-test
       with:
-        definition: dotnet
+        image: dotnet

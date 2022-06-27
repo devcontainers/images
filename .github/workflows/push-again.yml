@@ -7,8 +7,8 @@ on:
         description: 'Release branch or tag'
         required: true
         default: 'main'
-      definition:
-        description: 'Definition ID'
+      image:
+        description: 'Image ID'
         required: true
 
 jobs:
@@ -70,4 +70,4 @@ jobs:
                           --registry-path ${{ secrets.REGISTRY_BASE_PATH }} \
                           --stub-registry ${{ secrets.STUB_REGISTRY }} \
                           --stub-registry-path ${{ secrets.STUB_REGISTRY_BASE_PATH }} \
-                          ${{ github.event.inputs.definition }}
+                          ${{ github.event.inputs.image }}

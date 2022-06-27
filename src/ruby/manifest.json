@@ -1,46 +1,71 @@
 {
-	"variants": ["3.1-bullseye", "3.0-bullseye", "2.7-bullseye", "3.1-buster", "3.0-buster", "2.7-buster"],
-	"definitionVersion": "0.203.3",
+	"variants": [
+		"3.1-bullseye",
+		"3.0-bullseye",
+		"2.7-bullseye",
+		"3.1-buster",
+		"3.0-buster",
+		"2.7-buster"
+	],
+	"imageVersion": "0.203.3",
 	"build": {
 		"latest": "3.1-bullseye",
 		"rootDistro": "debian",
 		"architectures": {
-			"3.1-bullseye": ["linux/amd64", "linux/arm64"],
-			"3.0-bullseye": ["linux/amd64", "linux/arm64"],
-			"2.7-bullseye": ["linux/amd64", "linux/arm64"],
-			"3.1-buster": ["linux/amd64"],
-			"3.0-buster": ["linux/amd64"],
-			"2.7-buster": ["linux/amd64"]
+			"3.1-bullseye": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"3.0-bullseye": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"2.7-bullseye": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"3.1-buster": [
+				"linux/amd64"
+			],
+			"3.0-buster": [
+				"linux/amd64"
+			],
+			"2.7-buster": [
+				"linux/amd64"
+			]
 		},
 		"tags": [
 			"ruby:${VERSION}-${VARIANT}"
 		],
 		"variantTags": {
-			"3.1-bullseye": [ 
+			"3.1-bullseye": [
 				"ruby:${VERSION}-3",
 				"ruby:${VERSION}-3.1",
 				"ruby:${VERSION}-3-bullseye",
 				"ruby:${VERSION}-bullseye"
 			],
-			"3.0-bullseye": [ 
+			"3.0-bullseye": [
 				"ruby:${VERSION}-3.0"
 			],
-			"2.7-bullseye": [ 
+			"2.7-bullseye": [
 				"ruby:${VERSION}-2",
 				"ruby:${VERSION}-2.7",
 				"ruby:${VERSION}-2-bullseye"
-			 ],
-			"3.1-buster": [ 
+			],
+			"3.1-buster": [
 				"ruby:${VERSION}-3-buster",
 				"ruby:${VERSION}-buster"
 			],
-			"2.7-buster": [ "ruby:${VERSION}-2-buster" ]
+			"2.7-buster": [
+				"ruby:${VERSION}-2-buster"
+			]
 		}
 	},
 	"dependencies": {
 		"image": "ruby:${VARIANT}",
 		"imageLink": "https://hub.docker.com/_/ruby",
-		"debian": [{
+		"debian": [
+			{
 				"cgIgnore": false,
 				"name": "yarn"
 			},
@@ -57,7 +82,7 @@
 			"ruby-debug-ide",
 			"debase"
 		],
-		"other":{
+		"other": {
 			"rvm": null
 		},
 		"languages": {

@@ -10,7 +10,6 @@ RUN groupadd -r conda --gid 900 \
 FROM mcr.microsoft.com/devcontainers/base:0-bullseye
 COPY --from=upstream /opt /opt/
 
-# Copy library scripts to execute
 COPY add-notice.sh /tmp/library-scripts/
 
 # Setup conda to mirror contents from https://github.com/ContinuumIO/docker-images/blob/master/miniconda3/debian/Dockerfile

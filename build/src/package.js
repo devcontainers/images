@@ -40,7 +40,7 @@ async function package(repo, release, updateLatest, registry, registryPath, stub
     const packageJsonModified = packageJsonRaw.replace(/"version".?:.?".+"/, `"version": "${packageJsonVersion}"`);
     await asyncUtils.writeFile(packageJsonPath, packageJsonModified);
 
-    // Update all definition config files for release (devcontainer.json, Dockerfile, library-scripts)
+    // Update all config files for release (.devcontainer.json, Dockerfile)
     const allDefinitions = configUtils.getAllDefinitionPaths();
     for (let currentDefinitionId in allDefinitions) {
         if (typeof currentDefinitionId === 'string') {

@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/java)
 
-**Definition variations:**
+**Image variations:**
 - [17-bullseye](#variant-17-bullseye)
 - [17-buster](#variant-17-buster)
 - [11-bullseye](#variant-11-bullseye)
