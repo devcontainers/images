@@ -29,6 +29,9 @@ async function push(repo, release, updateLatest, registry, registryPath, stubReg
     const stagingFolder = await configUtils.getStagingFolder(release);
     await configUtils.loadConfig(stagingFolder);
 
+    // console.log('(*) Setting up builder...');
+    await createOrUseBuilder();
+
     // This step sets up the QEMU emulators for cross-platform builds. See https://github.com/docker/buildx#building-multi-platform-images
     await asyncUtils.spawn('docker', ['run', '--privileged', '--rm', 'tonistiigi/binfmt', '--install', 'all']);
 
@@ -240,17 +243,14 @@ async function isImageAlreadyPublished(registryName, repositoryName, tagName) {
 //     }
 // }
 
-// async function createOrUseBuilder(architectures) {
-//     const builders = await asyncUtils.exec('docker buildx ls');
-//     if (builders.indexOf(builderName) < 0) {
-//         let node_arch = architectures[0].split('/');
-//         await asyncUtils.spawn('docker', ['buildx', 'create', '--use', '--name', builderName]);
-
-        
-//     } else {
-//         await asyncUtils.spawn('docker', ['buildx', 'use', builderName]);
-//     }
-// }
+async function createOrUseBuilder() {
+    const builders = await asyncUtils.exec('docker buildx ls');
+    if (builders.indexOf(builderName) < 0) {
+        await asyncUtils.spawn('docker', ['buildx', 'create', '--use', '--name', builderName]);
+    } else {
+        await asyncUtils.spawn('docker', ['buildx', 'use', builderName]);
+    }
+}
 
 
 module.exports = {
