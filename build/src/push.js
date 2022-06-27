@@ -228,10 +228,12 @@ async function isImageAlreadyPublished(registryName, repositoryName, tagName) {
 async function createOrUseBuilder(architectures) {
     const builders = await asyncUtils.exec('docker buildx ls');
     if (builders.indexOf(builderName) < 0) {
-        await asyncUtils.spawn('docker', ['buildx', 'create', '--use', '--name', builderName, architectures[0]]);
+        let node_arch = architectures[0].split('/');
+        await asyncUtils.spawn('docker', ['buildx', 'create', '--use', '--name', builderName, `node-${node_arch[1]}`]);
 
         for (let i = 1; i < architectures.length; i++) {
-            await asyncUtils.spawn('docker', ['buildx', 'create', '--append', '--name', builderName, architectures[i]]);
+            node_arch = architectures[i].split('/');
+            await asyncUtils.spawn('docker', ['buildx', 'create', '--append', '--name', builderName, `node-${node_arch[1]}`]);
         }
     } else {
         await asyncUtils.spawn('docker', ['buildx', 'use', builderName]);
