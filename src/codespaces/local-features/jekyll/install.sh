@@ -55,28 +55,23 @@ updaterc() {
 
 # If we don't yet have Ruby installed, exit.
 if ! /usr/local/rvm/rubies/default/bin/ruby --version > /dev/null ; then
-  echo "You need to install Ruby before installing Jekyll."
-  exit 1
+    echo "You need to install Ruby before installing Jekyll."
+    exit 1
 fi
 
 # If we don't already have Jekyll installed, install it now.
 if ! jekyll --version > /dev/null ; then
-  echo "Installing Jekyll..."
-  
-  updaterc "$(cat << EOF
-  export GEM_HOME="/usr/local/rvm/gems/default"
-  export GEM_PATH="/usr/local/rvm/gems/default:/usr/local/rvm/gems/default@global"
-  if [[ "\${PATH}" != *"\${GEM_HOME}"* ]]; then export PATH="\${GEM_HOME}:\${PATH}"; fi
-  if [[ "\${PATH}" != *"\${GEM_PATH}"* ]]; then export PATH="\${GEM_PATH}:\${PATH}"; fi
-EOF
-)"
+    echo "Installing Jekyll..."
+    
+    GEMS_DIR=/usr/local/rvm/rubies/default/bin/gem
+    PATH=$GEMS_DIR:$PATH
+    if [ "${VERSION}" = "latest" ]; then
+        gem install jekyll
+    else
+        gem install jekyll -v "${VERSION}"
+    fi
 
-  ROOT_GEM="$(which gem || echo "")"
-  sudo_if ${ROOT_GEM} install bundler
-  
-  if [ "${VERSION}" = "latest" ]; then
-    sudo_if ${ROOT_GEM} install jekyll
-  else
-    sudo_if ${ROOT_GEM} install jekyll -v "${VERSION}"
-  fi
+    chown -R "${USERNAME}:rvm" "${GEMS_DIR}/"
+    chmod -R g+r+w "${GEMS_DIR}/"
+    find "${GEMS_DIR}" -type d | xargs -n 1 chmod g+s
 fi
