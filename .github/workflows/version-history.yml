@@ -62,10 +62,8 @@ jobs:
         ACR_REGISTRY_NAME=$(echo ${{ secrets.REGISTRY }} | grep -oP '(.+)(?=\.azurecr\.io)')
         az acr login --name $ACR_REGISTRY_NAME
 
-        # Go to the release, copy the build tool from ref since this is the version for the workflow
-        cd "$GITHUB_WORKSPACE/release"
-        rm -rf build node_modules
-        cp -r "$GITHUB_WORKSPACE/ref/build" "$GITHUB_WORKSPACE/release/"
+        cd "$GITHUB_WORKSPACE/ref/build"
+        rm -rf node_modules
         yarn install
 
         # Pull images and update manifest.json, but output back to ref

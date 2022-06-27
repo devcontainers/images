@@ -260,7 +260,7 @@ require('yargs')
                     default: false
                 },
                 'output-path': {
-                    describe: 'path to where extracted information should be stored',
+                    describe: 'path to where extracted rmation should be stored',
                     default: path.resolve(__dirname, '..', configUtils.getConfig('informationFileOutputPath', '.'))
                 },
                 'overwrite': {
