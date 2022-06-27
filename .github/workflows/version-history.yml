@@ -46,13 +46,6 @@ jobs:
       with:
         path: 'ref'
         ref: ${{ github.ref }}
-        
-    - name: Checkout release
-      id: checkout_release
-      uses: actions/checkout@v2
-      with:
-        path: 'release'
-        ref: ${{ github.event.inputs.release }}
 
     - name: Azure CLI login
       id: az_login
