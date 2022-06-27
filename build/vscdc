@@ -16,7 +16,7 @@ const packageJson = require('../package.json');
 console.log('devcontainers CLI\nCopyright (c) Microsoft Corporation. All rights reserved.\n')
 
 require('yargs')
-    .command('pack', 'package dev container definitions', (yargs) => {
+    .command('pack', 'package dev container images', (yargs) => {
         yargs
             .options({
                 'release': {
@@ -181,7 +181,7 @@ require('yargs')
                     default: true
                 },
                 'prune': {
-                    describe: 'whether to prune images between definitions',
+                    describe: 'whether to prune images',
                     type: 'boolean',
                     default: false
                 },
@@ -255,7 +255,7 @@ require('yargs')
                     default: true
                 },
                 'prune': {
-                    describe: 'whether to prune images between definitions',
+                    describe: 'whether to prune images',
                     type: 'boolean',
                     default: false
                 },

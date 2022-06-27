@@ -20,7 +20,7 @@ on:
         required: true
         default: 'true'
       image:
-        description: 'Definition ID (Optional)'
+        description: 'Image name (Optional)'
         required: false
         default: ''
 

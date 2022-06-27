@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/ubuntu)
 
-**Definition variations:**
+**Image variations:**
 - [jammy](#variant-jammy)
 - [focal](#variant-focal)
 - [bionic](#variant-bionic)

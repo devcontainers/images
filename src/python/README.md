@@ -7,7 +7,7 @@
 | Metadata | Value |
 |----------|-------|
 | *Categories* | Core, Languages |
-| *Definition type* | Dockerfile |
+| *Image type* | Dockerfile |
 | *Published image* | mcr.microsoft.com/devcontainers/python |
 | *Available image variants* | 3 / 3-bullseye, 3.6 / 3.6-bullseye, 3.7 / 3.7-bullseye, 3.8 / 3.8-bullseye, 3.9 / 3.9-bullseye, 3.10 / 3.10-bullseye, 3-buster, 3.6-buster, 3.7-buster, 3.8-buster, 3.9-buster, 3.10-buster ([full list](https://mcr.microsoft.com/v2/devcontainers/python/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bullseye` variants |

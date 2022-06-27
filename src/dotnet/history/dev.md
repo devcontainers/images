@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/dotnet)
 
-**Definition variations:**
+**Image variations:**
 - [6.0-bullseye-slim](#variant-60-bullseye-slim)
 - [6.0-focal](#variant-60-focal)
 - [5.0-bullseye-slim](#variant-50-bullseye-slim)

@@ -7,7 +7,7 @@
 | Metadata | Value |  
 |----------|-------|
 | *Categories* | Core, Other |
-| *Definition type* | Dockerfile |
+| *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/base:alpine |
 | *Available image variants* | 3.15, 3.14, 3.13 ([full list](https://mcr.microsoft.com/v2/devcontainers/base/tags/list)) |
 | *Published image architecture(s)* | x86-64, aarch64/arm64 |

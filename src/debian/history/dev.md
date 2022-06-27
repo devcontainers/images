@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/debian)
 
-**Definition variations:**
+**Image variations:**
 - [buster](#variant-buster)
 - [bullseye](#variant-bullseye)
 - [stretch](#variant-stretch)

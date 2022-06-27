@@ -7,7 +7,7 @@
 | Metadata | Value |  
 |----------|-------|
 | *Categories* | Core, Other |
-| *Definition type* | Dockerfile |
+| *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/base:ubuntu |
 | *Available image variants* | ubuntu-22.04 / jammy, ubuntu-20.04 / focal, ubuntu-18.04 / bionic ([full list](https://mcr.microsoft.com/v2/devcontainers/base/tags/list)) |
 | *Published image architecture(s)* | x86-64, aarch64/arm64 for `ubuntu-22.04` (`jammy`) and `ubuntu-18.04` (`bionic`) variants  |

@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/jekyll)
 
-**Definition variations:**
+**Image variations:**
 - [2.7-bullseye](#variant-27-bullseye)
 - [2.7-buster](#variant-27-buster)
 

@@ -8,7 +8,7 @@
 **Source release/branch:** [{{release}}](https://github.com/{{repository}}/tree/{{release}}/src/{{image}})
 
 {{#if hasVariants}}
-**Definition variations:**
+**Image variations:**
 {{#each variants}}
 - [{{this}}](#variant-{{anchor this}})
 {{/each}}

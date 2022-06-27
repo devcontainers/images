@@ -7,7 +7,7 @@
 | Metadata | Value |  
 |----------|-------|
 | *Categories* | Core, Languages |
-| *Definition type* | Dockerfile |
+| *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/rust |
 | *Available image variants* | buster, bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/rust/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bullseye` variant |

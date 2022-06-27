@@ -7,7 +7,7 @@
 | Metadata | Value |  
 |----------|-------|
 | *Categories* | Community, Languages, Frameworks |
-| *Definition type* | Dockerfile |
+| *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/jekyll |
 | *Available image variants* | bullseye, buster ([full list](https://mcr.microsoft.com/v2/devcontainers/ruby/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bullseye` variant |

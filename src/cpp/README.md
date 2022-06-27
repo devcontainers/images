@@ -7,7 +7,7 @@
 | Metadata | Value |  
 |----------|-------|
 | *Categories* | Core, Languages |
-| *Definition type* | Dockerfile |
+| *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/cpp |
 | *Available image variants* | debian-11, debian-10, ubuntu-22.04, ubuntu-20.04, ubuntu-18.04 ([full list](https://mcr.microsoft.com/v2/devcontainers/cpp/tags/list)) |
 | *Published image architecture(s)* | x86-64, aarch64/arm64 for `debian-11`, `ubuntu-22.04`, and `ubuntu-18.04` variants |

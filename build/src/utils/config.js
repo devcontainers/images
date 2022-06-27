@@ -22,7 +22,7 @@ const allDefinitionPaths = {};
 // Must be called first
 async function loadConfig(repoPath) {
     repoPath = repoPath || path.join(__dirname, '..', '..', '..');
-    const definitionBuildConfigFile = getConfig('definitionBuildConfigFile', 'manifest.json');
+    const imageBuildConfigFile = getConfig('imageBuildConfigFile', 'manifest.json');
 
     // Get list of image folders
     const containersPath = path.join(repoPath, 'src');
@@ -48,7 +48,7 @@ async function loadConfig(repoPath) {
             relativeToRootPath: path.relative(repoPath, definitionPath)
         }
         // If manifest.json exists, load it
-        const manifestPath = path.join(definitionPath, definitionBuildConfigFile);
+        const manifestPath = path.join(definitionPath, imageBuildConfigFile);
         if (await asyncUtils.exists(manifestPath)) {
             await loadDefinitionManifest(manifestPath, definitionId);
         }

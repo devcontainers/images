@@ -7,7 +7,7 @@
 | Metadata | Value |  
 |----------|-------|
 | *Categories* | Core, Languages |
-| *Definition type* | Dockerfile |
+| *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/ruby |
 | *Available image variants* | 3 / 3-bullseye, 3.1 / 3.1-bullseye, 3.0 / 3.0-bullseye, 2 / 2-bullseye, 2.7 / 2.7-bullseye, 2.6 / 2.7-bullseye, 3-buster, 3.1-buster, 3.0-buster, 2-buster, 2.7-buster ([full list](https://mcr.microsoft.com/v2/devcontainers/ruby/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bullseye` variants |

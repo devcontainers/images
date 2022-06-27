@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/php)
 
-**Definition variations:**
+**Image variations:**
 - [8.1-apache-bullseye](#variant-81-apache-bullseye)
 - [8.0-apache-bullseye](#variant-80-apache-bullseye)
 - [7.4-apache-bullseye](#variant-74-apache-bullseye)

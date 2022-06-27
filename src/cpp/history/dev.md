@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/cpp)
 
-**Definition variations:**
+**Image variations:**
 - [bullseye](#variant-bullseye)
 - [buster](#variant-buster)
 - [jammy](#variant-jammy)

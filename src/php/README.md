@@ -7,7 +7,7 @@
 | Metadata | Value |  
 |----------|-------|
 | *Categories* | Languages |
-| *Definition type* | Dockerfile |
+| *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/php |
 | *Available image variants* | 8 / 8-bullseye, 8.1 / 8.1-bullseye, 8.0 / 8.0-bullseye, 7 / 7-bullseye, 7.4 / 7.4-bullseye, 8-buster, 8.1-buster, 8.0-buster, 7-buster, 7.5-buster ([full list](https://mcr.microsoft.com/v2/devcontainers/php/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bullseye` variants |

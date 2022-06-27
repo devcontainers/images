@@ -7,7 +7,7 @@
 | Metadata | Value |  
 |----------|-------|
 | *Categories* | Core, Languages |
-| *Definition type* | Dockerfile |
+| *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/java |
 | *Available image variants* | 11 / 11-bullseye, 17 / 17-bullseye, 11-buster, 17-buster ([full list](https://mcr.microsoft.com/v2/devcontainers/java/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bullseye` variants |

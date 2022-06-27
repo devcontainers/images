@@ -14,8 +14,8 @@ Run with the `--help` option to see inputs.
 
 This CLI is used in the GitHub Actions workflows in this repository.
 
-- `push-dev.yml`: Pushes a "dev" tag for each image to be generated in this repository and fires repository dispatch to trigger manifest.json generation, and attaches an npm package with the definitions to the actions run.
-- `push-and-package.yml`: Triggers when a release tag is pushed (`vX.Y.Z`). Builds and pushes a release version of the images, creates a release, and attaches an npm package with the definitions to the release. Note that this update the tag with source files that contain a SHA hash for script sources. You may need to run `git fetch --tags --force` locally after it runs.
+- `push-dev.yml`: Pushes a "dev" tag for each image to be generated in this repository and fires repository dispatch to trigger manifest.json generation, and attaches an npm package with the images to the actions run.
+- `push-and-package.yml`: Triggers when a release tag is pushed (`vX.Y.Z`). Builds and pushes a release version of the images, creates a release, and attaches an npm package with the images to the release. Note that this update the tag with source files that contain a SHA hash for script sources. You may need to run `git fetch --tags --force` locally after it runs.
 - `push-again.yml`: A manually triggered workflow that can be used to push an updated version of an image for an existing release. This should only be used in cases where the image push to the registry only partially succeeded (e.g. `linux/amd64` was pushed, but a connection error happened when pushing `linux/arm64` for the same image.)
 - `smoke-*.yaml` (using the `smoke-test` action in this repository) - Runs a build without pushing and executes `test-project/test.sh` (if present) inside the container to verify that there are no breaking changes to the image when the repository contents are updated.
 - `version-history.yml`: Listens for workflow dispatch events to trigger manifest.json and history markdown generation.
@@ -114,7 +114,7 @@ The `build` namespace includes properties that defines how the templates maps to
 
 The **`build.architectures`** property specifies how many chip architectures should be built for the image. By default only 64-bit x86 (`linux/amd64`) is built. Note that there are a suprising number of problems when adding another architecture. For example, adding `linux/arm64` does not work well with Debian 10/buster or Ubuntu 20.04/focal because of an OS issue with libssl, so each architecture needs to be tested carefully.
 
-The **`build.rootDistro`** property can be `debian`, `alpine`, or `redhat` currently, but stick with Debian or Ubuntu for definitions wherever possible. Ubuntu-based containers should use `debian`. 
+The **`build.rootDistro`** property can be `debian`, `alpine`, or `redhat` currently, but stick with Debian or Ubuntu for images wherever possible. Ubuntu-based containers should use `debian`. 
 
 The **`build.latest`** and **`build.tags`** properties affect how tags are applied. For example, here is how several dev container folders map:
 
@@ -157,7 +157,7 @@ When this is necessary, the `imageVersion` property in the `manifest.json` file 
 
 ### The `variants` property
 
-In many cases, you will only need to create one image. Even if there is only one or two versions of a given runtime available at a given time, it can be useful to simply have different definitions to aid discoverability.
+In many cases, you will only need to create one image. Even if there is only one or two versions of a given runtime available at a given time, it can be useful to simply have different images to aid discoverability.
 
 In other cases, you may want to generate multiple images but with one small change. This is where the variants property comes in. Consider this `manifest.json`:
 
@@ -467,7 +467,7 @@ We can resolve this by pre-building some of these images, but in-so-doing we wan
 1. Ensure devcontainers continues to be a good source of samples
 2. Improve the performance using the most popular (or in some cases slowest to build) container images
 3. Make it easy for users to add additional software to the images
-4. Make it easy for contributors to build, customize, and contribute new definitions
+4. Make it easy for contributors to build, customize, and contribute new images
 
 We won't be able to build all images in the repository or publish them under a Microsoft registry, but we would want to allow contributors to build their own images for contributions if they wanted to do so by keeping the ability to use a stand alone Dockerfile, image reference, or docker-compose file like today.
 

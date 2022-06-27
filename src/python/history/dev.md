@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/python)
 
-**Definition variations:**
+**Image variations:**
 - [3.10-bullseye](#variant-310-bullseye)
 - [3.9-bullseye](#variant-39-bullseye)
 - [3.8-bullseye](#variant-38-bullseye)

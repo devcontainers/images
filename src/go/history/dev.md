@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/go)
 
-**Definition variations:**
+**Image variations:**
 - [1.18-bullseye](#variant-118-bullseye)
 - [1.18-buster](#variant-118-buster)
 - [1.17-bullseye](#variant-117-bullseye)

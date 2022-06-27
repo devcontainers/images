@@ -7,7 +7,7 @@
 | Metadata | Value |  
 |----------|-------|
 | *Categories* | Services, GitHub |
-| *Definition type* | Dockerfile |
+| *Image type* | Dockerfile |
 | *Published image* | mcr.microsoft.com/devcontainers/universal:linux<br />mcr.microsoft.com/devcontainers/universal:focal |
 | *Published image architecture(s)* | x86-64 |
 | *Container host OS support* | Linux, macOS, Windows |
@@ -67,7 +67,7 @@ Access to the Anaconda repository is covered by the [Anaconda Terms of Service](
 
 ## Using this image
 
-While the definition itself works unmodified, you can also directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to:
+While the image itself works unmodified, you can also directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to:
 
 `mcr.microsoft.com/devcontainers/universal:1-linux`
 

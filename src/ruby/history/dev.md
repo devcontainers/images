@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/ruby)
 
-**Definition variations:**
+**Image variations:**
 - [3.1-bullseye](#variant-31-bullseye)
 - [3.0-bullseye](#variant-30-bullseye)
 - [2.7-bullseye](#variant-27-bullseye)
