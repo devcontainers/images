@@ -136,8 +136,12 @@ async function pushImage(definitionId, repo, release, updateLatest,
 
                 const context = devContainerJson.build ? devContainerJson.build.context || '.' : devContainerJson.context || '.';
                 const workingDir = path.resolve(dotDevContainerPath, context);
-                const imageNameParams = imageNamesWithVersionTags.reduce((prev, current) => prev.concat(['--image-name', current]), []);
+                let imageNameParams = imageNamesWithVersionTags.reduce((prev, current) => prev.concat(['--image-name', current]), []);
                 imageNameParams.push('--image-name', imageName);
+
+                const vscodeImageNameParams = vscodeImageNamesWithVersionTags.reduce((prev, current) => prev.concat(['--image-name', current]), []);
+                vscodeImageNameParams.push('--image-name', vscodeImageName);
+                imageNameParams = imageNameParams.concat(vscodeImageNameParams);
 
                 const spawnOpts = { stdio: 'inherit', cwd: workingDir, shell: true };
                 await asyncUtils.spawn('npx --yes devcontainers-cli-0.6.3.tgz', [
