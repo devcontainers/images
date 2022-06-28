@@ -21,8 +21,7 @@
 			}
 		],
 		"git": {
-			"Oh My Zsh!": "/home/vscode/.oh-my-zsh",
-			"nvm": "/usr/local/share/nvm"
+			"Oh My Zsh!": "/home/vscode/.oh-my-zsh"
 		},
 		"other": {
 			"conda": {
