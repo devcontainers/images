@@ -2,8 +2,6 @@ name: Build and push "dev" images
 
 on: 
   workflow_dispatch:
-    branches:
-      - 'main'
 
 jobs:
   build-and-push:

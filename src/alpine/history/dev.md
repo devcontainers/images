@@ -11,7 +11,7 @@
 
 ## Variant: 3.15
 
-**Digest:** sha256:00dd546e7de2403348c6217b179526d42acc424f72408ad99944ed2fff2d0099
+**Digest:** sha256:8deb8529d9e73874045c5a9c15598d5a27fda44dd5d7d2abb7c0e147b361f314
 
 **Tags:**
 ```
@@ -77,7 +77,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 ## Variant: 3.14
 
-**Digest:** sha256:2b644e9bfc05575336c5fe32411d665989257f3cf85ad9389e88428097d68d70
+**Digest:** sha256:bb944f7d6f602c991f6a4161f9f4ce80867be66c9f4cf89282c85bf4cedcc97a
 
 **Tags:**
 ```
@@ -86,7 +86,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.14
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
-**Linux distribution:** Alpine Linux v3.15
+**Linux distribution:** Alpine Linux v3.14
 
 **Architectures:** linux/amd64, linux/arm64
 
@@ -103,46 +103,46 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.14
 
 | Tool / library | Version |
 |----------------|---------|
-| git | 2.34.2-r0 |
-| openssh-client-default | 8.8_p1-r1 |
-| gnupg | 2.2.31-r1 |
+| git | 2.32.2-r0 |
+| openssh-client-default | 8.6_p1-r3 |
+| gnupg | 2.2.31-r0 |
 | procps | 3.3.17-r0 |
 | lsof | 4.94.0-r0 |
-| htop | 3.1.1-r0 |
+| htop | 3.0.5-r2 |
 | net-tools | 1.60_git20140218-r2 |
 | psmisc | 23.4-r0 |
-| curl | 7.80.0-r1 |
-| wget | 1.21.2-r2 |
-| rsync | 3.2.3-r5 |
+| curl | 7.79.1-r1 |
+| wget | 1.21.1-r1 |
+| rsync | 3.2.3-r4 |
 | ca-certificates | 20211220-r0 |
 | unzip | 6.0-r9 |
 | zip | 3.0-r9 |
-| nano | 5.9-r0 |
+| nano | 5.7-r2 |
 | vim | 8.2.4836-r0 |
-| less | 590-r0 |
+| less | 581-r1 |
 | jq | 1.6-r1 |
-| libgcc | 10.3.1_git20211027-r0 |
-| libstdc++ | 10.3.1_git20211027-r0 |
-| krb5-libs | 1.19.3-r0 |
+| libgcc | 10.3.1_git20210424-r2 |
+| libstdc++ | 10.3.1_git20210424-r2 |
+| krb5-libs | 1.18.5-r0 |
 | libintl | 0.21-r0 |
 | libssl1.1 | 1.1.1n-r0 |
 | lttng-ust | 2.12.0-r3 |
 | tzdata | 2022a-r0 |
 | userspace-rcu | 0.12.2-r0 |
 | zlib | 1.2.12-r0 |
-| sudo | 1.9.8_p2-r1 |
-| coreutils | 9.0-r2 |
+| sudo | 1.9.7_p1-r1 |
+| coreutils | 8.32-r2 |
 | sed | 4.8-r0 |
 | grep | 3.7-r0 |
-| which | 2.21-r2 |
-| ncdu | 1.16-r0 |
-| shadow | 4.8.1-r1 |
-| strace | 5.14-r0 |
-| man-pages | 5.13-r0 |
+| which | 2.21-r1 |
+| ncdu | 1.15.1-r0 |
+| shadow | 4.8.1-r0 |
+| strace | 5.12-r0 |
+| man-pages | 5.11-r0 |
 
 ## Variant: 3.13
 
-**Digest:** sha256:c158200e7cbabd7bff01e9cc374a293d61a63d4718b4f5969818ce91697aa705
+**Digest:** sha256:07abbc6c0a6d196cd94310b1733c3095e349e5e4bb619b7215a7f52c3cc65ab2
 
 **Tags:**
 ```
@@ -151,7 +151,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.13
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
-**Linux distribution:** Alpine Linux v3.15
+**Linux distribution:** Alpine Linux v3.13
 
 **Architectures:** linux/amd64, linux/arm64
 
@@ -168,40 +168,40 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.13
 
 | Tool / library | Version |
 |----------------|---------|
-| git | 2.34.2-r0 |
-| openssh-client-default | 8.8_p1-r1 |
-| gnupg | 2.2.31-r1 |
-| procps | 3.3.17-r0 |
+| git | 2.30.3-r0 |
+| openssh-client | 8.4_p1-r4 |
+| gnupg | 2.2.31-r0 |
+| procps | 3.3.16-r0 |
 | lsof | 4.94.0-r0 |
-| htop | 3.1.1-r0 |
+| htop | 3.0.5-r1 |
 | net-tools | 1.60_git20140218-r2 |
-| psmisc | 23.4-r0 |
-| curl | 7.80.0-r1 |
-| wget | 1.21.2-r2 |
-| rsync | 3.2.3-r5 |
+| psmisc | 23.3-r0 |
+| curl | 7.79.1-r1 |
+| wget | 1.21.1-r1 |
+| rsync | 3.2.3-r4 |
 | ca-certificates | 20211220-r0 |
 | unzip | 6.0-r9 |
 | zip | 3.0-r9 |
-| nano | 5.9-r0 |
+| nano | 5.4-r3 |
 | vim | 8.2.4836-r0 |
-| less | 590-r0 |
+| less | 563-r0 |
 | jq | 1.6-r1 |
-| libgcc | 10.3.1_git20211027-r0 |
-| libstdc++ | 10.3.1_git20211027-r0 |
-| krb5-libs | 1.19.3-r0 |
-| libintl | 0.21-r0 |
+| libgcc | 10.2.1_pre1-r3 |
+| libstdc++ | 10.2.1_pre1-r3 |
+| krb5-libs | 1.18.5-r0 |
+| libintl | 0.20.2-r2 |
 | libssl1.1 | 1.1.1n-r0 |
-| lttng-ust | 2.12.0-r3 |
+| lttng-ust | 2.12.0-r2 |
 | tzdata | 2022a-r0 |
-| userspace-rcu | 0.12.2-r0 |
+| userspace-rcu | 0.12.1-r0 |
 | zlib | 1.2.12-r0 |
-| sudo | 1.9.8_p2-r1 |
-| coreutils | 9.0-r2 |
+| sudo | 1.9.5p2-r0 |
+| coreutils | 8.32-r2 |
 | sed | 4.8-r0 |
 | grep | 3.7-r0 |
-| which | 2.21-r2 |
-| ncdu | 1.16-r0 |
-| shadow | 4.8.1-r1 |
-| strace | 5.14-r0 |
-| man-pages | 5.13-r0 |
+| which | 2.21-r1 |
+| ncdu | 1.15.1-r0 |
+| shadow | 4.8.1-r0 |
+| strace | 5.10-r0 |
+| man-pages | 5.10-r0 |
 
