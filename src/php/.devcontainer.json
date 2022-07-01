@@ -15,6 +15,10 @@
             }
         },
         {
+            "id": "./local-features/apache-config",
+            "options": {}
+        },
+        {
             "id": "devcontainers/features/node@v0.0.2",
             "options": {
                 "version": "none"
@@ -30,7 +34,6 @@
 			"settings": { 
 				"php.validate.executablePath": "/usr/local/bin/php"
 			},
-			
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"xdebug.php-debug",
