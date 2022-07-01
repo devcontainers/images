@@ -18,7 +18,7 @@
 
 ## Variant: 3.10-bullseye
 
-**Digest:** sha256:25b542712692440c5d7bb448eda2733229621dc0aea1f09f0437c75c12fd53c0
+**Digest:** sha256:079e8384c297c0ccb0e59183d141ee2b9495a5c3498ed1e2b523926bda0eb489
 
 **Tags:**
 ```
@@ -54,16 +54,16 @@ mcr.microsoft.com/devcontainers/python:dev-bullseye
 
 | Tool / package | Version |
 |----------------|---------|
-| pylint | 2.14.3 |
+| pylint | 2.14.4 |
 | flake8 | 4.0.1 |
 | autopep8 | 1.6.0 |
-| black | 22.3.0 |
+| black | 22.6.0 |
 | yapf | 0.32.0 |
 | mypy | 0.961 |
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.8.0 |
 | bandit | 1.7.4 |
-| virtualenv | 20.15.0 |
+| virtualenv | 20.15.1 |
 | pipx | 1.1.0 |
 
 **Additional linux tools and packages**
@@ -113,7 +113,7 @@ mcr.microsoft.com/devcontainers/python:dev-bullseye
 
 ## Variant: 3.9-bullseye
 
-**Digest:** sha256:0670fe771fc2a61f8a30112683260f2decab08da61d2d2217baf9a1ef0969cbc
+**Digest:** sha256:5ef41f86279e40a930abcd187c97564611c6ed27799c5de14cb6fdeacfce3a70
 
 **Tags:**
 ```
@@ -146,16 +146,16 @@ mcr.microsoft.com/devcontainers/python:dev-3.9
 
 | Tool / package | Version |
 |----------------|---------|
-| pylint | 2.14.3 |
+| pylint | 2.14.4 |
 | flake8 | 4.0.1 |
 | autopep8 | 1.6.0 |
-| black | 22.3.0 |
+| black | 22.6.0 |
 | yapf | 0.32.0 |
 | mypy | 0.961 |
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.8.0 |
 | bandit | 1.7.4 |
-| virtualenv | 20.15.0 |
+| virtualenv | 20.15.1 |
 | pipx | 1.1.0 |
 
 **Additional linux tools and packages**
@@ -205,7 +205,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9
 
 ## Variant: 3.8-bullseye
 
-**Digest:** sha256:ada47401fe5dcd71461083b9d3e10eeb93f6edba35e7525f6df308fc4d52de1e
+**Digest:** sha256:0e047b70d05bef8ddd68ee542221db5fead45b4672856c2e1f42adb67afa5fce
 
 **Tags:**
 ```
@@ -238,16 +238,16 @@ mcr.microsoft.com/devcontainers/python:dev-3.8
 
 | Tool / package | Version |
 |----------------|---------|
-| pylint | 2.14.3 |
+| pylint | 2.14.4 |
 | flake8 | 4.0.1 |
 | autopep8 | 1.6.0 |
-| black | 22.3.0 |
+| black | 22.6.0 |
 | yapf | 0.32.0 |
 | mypy | 0.961 |
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.8.0 |
 | bandit | 1.7.4 |
-| virtualenv | 20.15.0 |
+| virtualenv | 20.15.1 |
 | pipx | 1.1.0 |
 
 **Additional linux tools and packages**
@@ -297,7 +297,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8
 
 ## Variant: 3.7-bullseye
 
-**Digest:** sha256:5c5124a95802b9b4ccc7dab59698dac70f283408afe671004e4c200c48e853cf
+**Digest:** sha256:33358d2336bb71a9485e93cfcff86252ead64b555c08d87661209e4074b47923
 
 **Tags:**
 ```
@@ -330,16 +330,16 @@ mcr.microsoft.com/devcontainers/python:dev-3.7
 
 | Tool / package | Version |
 |----------------|---------|
-| pylint | 2.14.3 |
+| pylint | 2.14.4 |
 | flake8 | 4.0.1 |
 | autopep8 | 1.6.0 |
-| black | 22.3.0 |
+| black | 22.6.0 |
 | yapf | 0.32.0 |
 | mypy | 0.961 |
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.8.0 |
 | bandit | 1.7.4 |
-| virtualenv | 20.15.0 |
+| virtualenv | 20.15.1 |
 | pipx | 1.1.0 |
 
 **Additional linux tools and packages**
@@ -389,7 +389,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.7
 
 ## Variant: 3.6-bullseye
 
-**Digest:** sha256:1942d62cb59e4ebb2088bfa3db8343f6cc06fff8e3f328e85e2802e4323b638f
+**Digest:** sha256:4b5db1077bb10a9146ccfe17f50fedd223c8aaf35e6eceab58fbd04f990f300e
 
 **Tags:**
 ```
@@ -425,13 +425,13 @@ mcr.microsoft.com/devcontainers/python:dev-3.6
 | pylint | 2.13.9 |
 | flake8 | 4.0.1 |
 | autopep8 | 1.6.0 |
-| black | 22.3.0 |
+| black | 22.6.0 |
 | yapf | 0.32.0 |
 | mypy | 0.961 |
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.8.0 |
 | bandit | 1.7.1 |
-| virtualenv | 20.15.0 |
+| virtualenv | 20.15.1 |
 | pipx | 1.0.0 |
 
 **Additional linux tools and packages**
@@ -481,7 +481,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.6
 
 ## Variant: 3.10-buster
 
-**Digest:** sha256:9e7149b06d18c315bed4c03d02ee82d0ec7dab1adc24503c8656d850efb8bd81
+**Digest:** sha256:3fd1cae89ee97128fe69e684859aeaee9beb921dce41f755b8d1713c899907dc
 
 **Tags:**
 ```
@@ -515,16 +515,16 @@ mcr.microsoft.com/devcontainers/python:dev-buster
 
 | Tool / package | Version |
 |----------------|---------|
-| pylint | 2.14.3 |
+| pylint | 2.14.4 |
 | flake8 | 4.0.1 |
 | autopep8 | 1.6.0 |
-| black | 22.3.0 |
+| black | 22.6.0 |
 | yapf | 0.32.0 |
 | mypy | 0.961 |
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.8.0 |
 | bandit | 1.7.4 |
-| virtualenv | 20.15.0 |
+| virtualenv | 20.15.1 |
 | pipx | 1.1.0 |
 
 **Additional linux tools and packages**
@@ -575,7 +575,7 @@ mcr.microsoft.com/devcontainers/python:dev-buster
 
 ## Variant: 3.9-buster
 
-**Digest:** sha256:69e2b14e91698c94328d19f4e3689d7fdaf0a3e5a6ae1b2fd0d68902ef2e69d8
+**Digest:** sha256:2ec33257b5b5cdc93ed97e2aaa9b4c306ab7d56ebf25085eb69315ef35c1aba7
 
 **Tags:**
 ```
@@ -607,16 +607,16 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-buster
 
 | Tool / package | Version |
 |----------------|---------|
-| pylint | 2.14.3 |
+| pylint | 2.14.4 |
 | flake8 | 4.0.1 |
 | autopep8 | 1.6.0 |
-| black | 22.3.0 |
+| black | 22.6.0 |
 | yapf | 0.32.0 |
 | mypy | 0.961 |
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.8.0 |
 | bandit | 1.7.4 |
-| virtualenv | 20.15.0 |
+| virtualenv | 20.15.1 |
 | pipx | 1.1.0 |
 
 **Additional linux tools and packages**
@@ -667,7 +667,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-buster
 
 ## Variant: 3.8-buster
 
-**Digest:** sha256:8cb35ceabc73cd63e8d3c55f456f191e1e698bd28c4b773bd4823c5d96b17afc
+**Digest:** sha256:31c1f903754e623ecfc9c65a6957df1b66852b188ae447734eeb3e0325f92fb5
 
 **Tags:**
 ```
@@ -699,16 +699,16 @@ mcr.microsoft.com/devcontainers/python:dev-3.8-buster
 
 | Tool / package | Version |
 |----------------|---------|
-| pylint | 2.14.3 |
+| pylint | 2.14.4 |
 | flake8 | 4.0.1 |
 | autopep8 | 1.6.0 |
-| black | 22.3.0 |
+| black | 22.6.0 |
 | yapf | 0.32.0 |
 | mypy | 0.961 |
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.8.0 |
 | bandit | 1.7.4 |
-| virtualenv | 20.15.0 |
+| virtualenv | 20.15.1 |
 | pipx | 1.1.0 |
 
 **Additional linux tools and packages**
@@ -759,7 +759,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8-buster
 
 ## Variant: 3.7-buster
 
-**Digest:** sha256:2de8155a39517aabc39f4b31a2e88e29edb2127774a844ee742121d002d5f2e6
+**Digest:** sha256:974f0dc76a039da99f59a3e4b60a3b7aa33749e50549b4793a7be33a19945c32
 
 **Tags:**
 ```
@@ -791,16 +791,16 @@ mcr.microsoft.com/devcontainers/python:dev-3.7-buster
 
 | Tool / package | Version |
 |----------------|---------|
-| pylint | 2.14.3 |
+| pylint | 2.14.4 |
 | flake8 | 4.0.1 |
 | autopep8 | 1.6.0 |
-| black | 22.3.0 |
+| black | 22.6.0 |
 | yapf | 0.32.0 |
 | mypy | 0.961 |
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.8.0 |
 | bandit | 1.7.4 |
-| virtualenv | 20.15.0 |
+| virtualenv | 20.15.1 |
 | pipx | 1.1.0 |
 
 **Additional linux tools and packages**
@@ -851,7 +851,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.7-buster
 
 ## Variant: 3.6-buster
 
-**Digest:** sha256:dd91abf6a3605495e980f4514b31784b1605bfc63f54c832c757ba02858a4ddf
+**Digest:** sha256:2200eba36bcbd39f1f9195a397f70d5f19a2fef516a7a15874df0cee7f2362a7
 
 **Tags:**
 ```
@@ -886,13 +886,13 @@ mcr.microsoft.com/devcontainers/python:dev-3.6-buster
 | pylint | 2.13.9 |
 | flake8 | 4.0.1 |
 | autopep8 | 1.6.0 |
-| black | 22.3.0 |
+| black | 22.6.0 |
 | yapf | 0.32.0 |
 | mypy | 0.961 |
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.8.0 |
 | bandit | 1.7.1 |
-| virtualenv | 20.15.0 |
+| virtualenv | 20.15.1 |
 | pipx | 1.0.0 |
 
 **Additional linux tools and packages**

@@ -11,7 +11,7 @@
 
 ## Variant: 3.15
 
-**Digest:** sha256:8deb8529d9e73874045c5a9c15598d5a27fda44dd5d7d2abb7c0e147b361f314
+**Digest:** sha256:3fa7ab3f36ea3a4c1dcff282688cdc4840e199fe9c4f0e8807ca12fd4939ff8e
 
 **Tags:**
 ```
@@ -46,7 +46,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 | htop | 3.1.1-r0 |
 | net-tools | 1.60_git20140218-r2 |
 | psmisc | 23.4-r0 |
-| curl | 7.80.0-r1 |
+| curl | 7.80.0-r2 |
 | wget | 1.21.2-r2 |
 | rsync | 3.2.3-r5 |
 | ca-certificates | 20211220-r0 |
@@ -77,7 +77,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 ## Variant: 3.14
 
-**Digest:** sha256:bb944f7d6f602c991f6a4161f9f4ce80867be66c9f4cf89282c85bf4cedcc97a
+**Digest:** sha256:f2a30ce00b8037429f20fae0e536c26a381d3e431a2c6e75256d9b5d5d4b0e21
 
 **Tags:**
 ```
@@ -111,7 +111,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.14
 | htop | 3.0.5-r2 |
 | net-tools | 1.60_git20140218-r2 |
 | psmisc | 23.4-r0 |
-| curl | 7.79.1-r1 |
+| curl | 7.79.1-r2 |
 | wget | 1.21.1-r1 |
 | rsync | 3.2.3-r4 |
 | ca-certificates | 20211220-r0 |
@@ -142,7 +142,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.14
 
 ## Variant: 3.13
 
-**Digest:** sha256:07abbc6c0a6d196cd94310b1733c3095e349e5e4bb619b7215a7f52c3cc65ab2
+**Digest:** sha256:15a15a4fa79f218eee160c3accecbdab1278c80899e281aba094a7cb914d6e49
 
 **Tags:**
 ```
@@ -176,7 +176,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.13
 | htop | 3.0.5-r1 |
 | net-tools | 1.60_git20140218-r2 |
 | psmisc | 23.3-r0 |
-| curl | 7.79.1-r1 |
+| curl | 7.79.1-r2 |
 | wget | 1.21.1-r1 |
 | rsync | 3.2.3-r4 |
 | ca-certificates | 20211220-r0 |

@@ -14,7 +14,7 @@
 
 ## Variant: 8.1-apache-bullseye
 
-**Digest:** sha256:9657cf302c088fa75d17ca11ec09b0bb20ef89054012ed259eb838d570ef670e
+**Digest:** sha256:db2fb9f63187cb73d902987ee4c03f1b14e0ab362faaaa84cee9e4c4e6cfa47a
 
 **Tags:**
 ```
@@ -52,7 +52,7 @@ mcr.microsoft.com/devcontainers/php:dev-bullseye
 | Tool | Version | Path |
 |------|---------|------|
 | [Xdebug](https://xdebug.org/) | 3.1.5 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.3.7 | /usr/local |
+| [Composer](https://getcomposer.org/) | 2.3.8 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -101,7 +101,7 @@ mcr.microsoft.com/devcontainers/php:dev-bullseye
 
 ## Variant: 8.0-apache-bullseye
 
-**Digest:** sha256:840efffed2e7e94915fa04cae75c09e97f35ca2210256d7b1a4680fc4c99a2af
+**Digest:** sha256:05ad6af9eb7fb77e8f7d5ad27df14d71eae0ef3088b204c8edd7238c893d7184
 
 **Tags:**
 ```
@@ -136,7 +136,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-bullseye
 | Tool | Version | Path |
 |------|---------|------|
 | [Xdebug](https://xdebug.org/) | 3.1.5 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.3.7 | /usr/local |
+| [Composer](https://getcomposer.org/) | 2.3.8 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -185,7 +185,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-bullseye
 
 ## Variant: 7.4-apache-bullseye
 
-**Digest:** sha256:62d6c9d9458ab719179c1efe0d5a611b5ce3bbe894f5b476c45a1ef66d0117f8
+**Digest:** sha256:b30d8265efc3bd445530b0d371f5ce9c8d58c7671a07883df9f15bf44d9b453f
 
 **Tags:**
 ```
@@ -222,7 +222,7 @@ mcr.microsoft.com/devcontainers/php:dev-7.4-bullseye
 | Tool | Version | Path |
 |------|---------|------|
 | [Xdebug](https://xdebug.org/) | 3.1.5 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.3.7 | /usr/local |
+| [Composer](https://getcomposer.org/) | 2.3.8 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -271,7 +271,7 @@ mcr.microsoft.com/devcontainers/php:dev-7.4-bullseye
 
 ## Variant: 8.1-apache-buster
 
-**Digest:** sha256:0cb206af8749b899cce6f8088fc29fc3bf5a23c787950d0c3d539942467adc87
+**Digest:** sha256:fba14469bf98b4fa249eb2ea96db8a3e454f1bfa09bc79f02dc0ce030e877ac7
 
 **Tags:**
 ```
@@ -307,7 +307,7 @@ mcr.microsoft.com/devcontainers/php:dev-buster
 | Tool | Version | Path |
 |------|---------|------|
 | [Xdebug](https://xdebug.org/) | 3.1.5 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.3.7 | /usr/local |
+| [Composer](https://getcomposer.org/) | 2.3.8 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -357,7 +357,7 @@ mcr.microsoft.com/devcontainers/php:dev-buster
 
 ## Variant: 8.0-apache-buster
 
-**Digest:** sha256:fb10523101f0d1fe0b766ac8b24597954cd703025f4cb630e7b22bae38e259b1
+**Digest:** sha256:92cf73bebc6bc02a81a9aacab35b6db9dbda9cf0e5737e4aa647c41f8ffe83ce
 
 **Tags:**
 ```
@@ -391,7 +391,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-buster
 | Tool | Version | Path |
 |------|---------|------|
 | [Xdebug](https://xdebug.org/) | 3.1.5 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.3.7 | /usr/local |
+| [Composer](https://getcomposer.org/) | 2.3.8 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -441,7 +441,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-buster
 
 ## Variant: 7.4-apache-buster
 
-**Digest:** sha256:29bcd731e37f9851579374e3c2086d098b716e9c04aa0e8448237c77127dc5f9
+**Digest:** sha256:2920ec05f81b945d0dbf233ffe355756583e2fe9bb2bb710d4c50b6fceedc551
 
 **Tags:**
 ```
@@ -476,7 +476,7 @@ mcr.microsoft.com/devcontainers/php:dev-7.4-buster
 | Tool | Version | Path |
 |------|---------|------|
 | [Xdebug](https://xdebug.org/) | 3.1.5 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.3.7 | /usr/local |
+| [Composer](https://getcomposer.org/) | 2.3.8 | /usr/local |
 
 **Additional linux tools and packages**
 

@@ -14,7 +14,7 @@
 
 ## Variant: 6.0-bullseye-slim
 
-**Digest:** sha256:4e6d7ce705dfd0dcb520126d5e3067dc1ead5d0a14aec75d65e98c477f46c2af
+**Digest:** sha256:6d12603b8fd5634fb7a107019384d93f38d046cf924acdcba3ee765a82e0c408
 
 **Tags:**
 ```
@@ -91,7 +91,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-bullseye
 
 ## Variant: 6.0-focal
 
-**Digest:** sha256:fd2fd33720eb175a3e8fcf8943cf9e30b1a7a3b023397ac5dc8d3d0774bc8b7c
+**Digest:** sha256:2f40b881535ebfc1dabf3ac64685e40fd0a3425b3036acb88f8b5c255cc64333
 
 **Tags:**
 ```
@@ -167,7 +167,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-focal
 
 ## Variant: 5.0-bullseye-slim
 
-**Digest:** sha256:45e0156092aa1ec600164ca7857f634c68a4919036a2495818755845a1fdfc79
+**Digest:** sha256:ff85d1e7170d9ef0849d131033575f96fd793c094e4f78cd040ee02ae17faa00
 
 **Tags:**
 ```
@@ -244,7 +244,7 @@ mcr.microsoft.com/devcontainers/dotnetcore:dev-5.0-bullseye
 
 ## Variant: 5.0-focal
 
-**Digest:** sha256:1ae0fa3ca2eaf0a961bbafeb4cd8fb0008ecf4800df7237f138d7d86f8c294b4
+**Digest:** sha256:7ada8b4be7d32382ff6d29c04e3d51afbd36c6e66d2a7ef0d1628e9c73f1f9fc
 
 **Tags:**
 ```
@@ -322,7 +322,7 @@ mcr.microsoft.com/devcontainers/dotnetcore:dev-5.0
 
 ## Variant: 3.1-bullseye
 
-**Digest:** sha256:94943ad807254e06ee044f48b97d81e9752c6e722d405b15a7ba263ab79eb732
+**Digest:** sha256:6c0c07c85e06bb0ea1b7b7d185cccb059a83ac981187372fe06458d411a900fd
 
 **Tags:**
 ```
@@ -398,7 +398,7 @@ mcr.microsoft.com/devcontainers/dotnetcore:dev-3.1-bullseye
 
 ## Variant: 3.1-focal
 
-**Digest:** sha256:6cdc33828dd96673e5d3750aeebd6ba9438bddfd7cefad52e5318f44d9a12ed5
+**Digest:** sha256:ada87f4a28277406962aa2894489323f87acfe6f7968b9b08788f9cd283f0f59
 
 **Tags:**
 ```

@@ -10,7 +10,7 @@
 
 ## Variant: buster
 
-**Digest:** sha256:8e07b33be092f2231be7d4b4b6b9cc05f0b3788075e6823961616993d3ec8ada
+**Digest:** sha256:fb4f54580d2ae986f8a3a19657cadb9ec14db2a92279b7348068deac86240ed9
 
 **Tags:**
 ```
@@ -31,7 +31,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Rust](https://github.com/rust-lang/rust) | 1.61.0 | /usr/local/cargo<br />/usr/local/rustup |
+| [Rust](https://github.com/rust-lang/rust) | 1.62.0 | /usr/local/cargo<br />/usr/local/rustup |
 
 **Tools installed using git**
 
@@ -45,9 +45,9 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 |--------------|---------|
 | rls | 1.41.0 |
 | rustfmt | 1.4.38 |
-| rust-analysis | 1.61.0 |
-| rust-src | 1.61.0 |
-| clippy | 1.61.0 |
+| rust-analysis | 1.62.0 |
+| rust-src | 1.62.0 |
+| clippy | 1.62.0 |
 
 **Additional linux tools and packages**
 
@@ -100,7 +100,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 
 ## Variant: bullseye
 
-**Digest:** sha256:0bb24fc17808279213613447e88262968f8dd541ed44bdf64653f6963af3eb51
+**Digest:** sha256:6490e1e50a0720364ad5bf9e6467436477fc2e1424a665d01e6cc9443abafbf9
 
 **Tags:**
 ```
@@ -120,7 +120,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Rust](https://github.com/rust-lang/rust) | 1.61.0 | /usr/local/cargo<br />/usr/local/rustup |
+| [Rust](https://github.com/rust-lang/rust) | 1.62.0 | /usr/local/cargo<br />/usr/local/rustup |
 
 **Tools installed using git**
 
@@ -134,9 +134,9 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 |--------------|---------|
 | rls | 1.41.0 |
 | rustfmt | 1.4.38 |
-| rust-analysis | 1.61.0 |
-| rust-src | 1.61.0 |
-| clippy | 1.61.0 |
+| rust-analysis | 1.62.0 |
+| rust-src | 1.62.0 |
+| clippy | 1.62.0 |
 
 **Additional linux tools and packages**
 

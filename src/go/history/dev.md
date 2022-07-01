@@ -12,7 +12,7 @@
 
 ## Variant: 1.18-bullseye
 
-**Digest:** sha256:f196fcef5a12a313486ac33c5833f4aeab2a3857775f7084251c834cb11165ab
+**Digest:** sha256:a5eced6aca1705136c383c6a901a16e7320f0cc88135d6f62c59461ecd3f39d2
 
 **Tags:**
 ```
@@ -35,7 +35,7 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | 1.18.3<br />warning: GOPATH set to GOROOT (/usr/local/go) has no effect | /usr/local/go |
+| [Go](https://golang.org/dl) | warning: GOPATH set to GOROOT (/usr/local/go) has no effect<br />1.18.3 | /usr/local/go |
 
 **Tools installed using git**
 
@@ -80,7 +80,7 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 | libicu67 | 67.1-7 |
 | libkrb5-3 | 1.18.3-6+deb11u1 |
 | liblttng-ust0 | 2.12.1-1 |
-| libssl1.1 | 1.1.1n-0+deb11u2 |
+| libssl1.1 | 1.1.1n-0+deb11u3 |
 | libstdc++6 | 10.2.1-6 |
 | locales | 2.31-13+deb11u3 |
 | lsb-release | 11.1.0 |
@@ -109,7 +109,7 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 
 ## Variant: 1.18-buster
 
-**Digest:** sha256:356b003eeae3b1f1a0eb13251100e21cc7ddb20c69b839872aa8c51edba75420
+**Digest:** sha256:c04944fd51c2f6cd082466629ea24009dd7eaa11d3dd188daaebb1daa93b737b
 
 **Tags:**
 ```
@@ -176,7 +176,7 @@ mcr.microsoft.com/devcontainers/go:dev-buster
 | libicu63 | 63.1-6+deb10u3 |
 | libkrb5-3 | 1.17-3+deb10u3 |
 | liblttng-ust0 | 2.10.3-1 |
-| libssl1.1 | 1.1.1n-0+deb10u2 |
+| libssl1.1 | 1.1.1n-0+deb10u3 |
 | libstdc++6 | 8.3.0-6 |
 | locales | 2.28-10+deb10u1 |
 | lsb-release | 10.2019051400 |
@@ -205,7 +205,7 @@ mcr.microsoft.com/devcontainers/go:dev-buster
 
 ## Variant: 1.17-bullseye
 
-**Digest:** sha256:e485ad089abb678f421a57e0a0a32608667bd4f20eaa7ec45830b73872bdee57
+**Digest:** sha256:91f193af223e763166b6d1be4324bfab0de158eeae2ff8107258f44e10047e66
 
 **Tags:**
 ```
@@ -270,7 +270,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.17
 | libicu67 | 67.1-7 |
 | libkrb5-3 | 1.18.3-6+deb11u1 |
 | liblttng-ust0 | 2.12.1-1 |
-| libssl1.1 | 1.1.1n-0+deb11u2 |
+| libssl1.1 | 1.1.1n-0+deb11u3 |
 | libstdc++6 | 10.2.1-6 |
 | locales | 2.31-13+deb11u3 |
 | lsb-release | 11.1.0 |
@@ -299,7 +299,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.17
 
 ## Variant: 1.17-buster
 
-**Digest:** sha256:a13f33455bc656927170eadc4279a116d07a2f8ad7117235b431f8f142f301b5
+**Digest:** sha256:e177fdc39ec9f8dc4e62de746101752b0d229225e3749c192172b06aeafab6b4
 
 **Tags:**
 ```

@@ -5,7 +5,7 @@ This document describes the base contents of the default GitHub Codespaces dev c
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/codespaces)
 
-**Digest:** sha256:c1df78e63c63219cf25b776b9500a52e9bbb82ef36e5c0c4b8f24de4a89aa708
+**Digest:** sha256:bb32231bf9a8af1ff6d25345541e10487517891f5b2aa1cd9508383ee930bd4d
 
 **Tags:**
 ```
@@ -45,22 +45,22 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | bf45ef070e82356ed36a0f4d98f8ec651c8f0d98 | /usr/local/nvs |
 | [rbenv](https://github.com/rbenv/rbenv.git) | c6cc0a1959da3403f524fcbb0fdfb6e08a4d8ae6 | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | fd36eb0d4eb3a1eb1307fca0f27ab68013a4a188 | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 58cda904b73ceb6472d0069cdbe96d195ba974b5 | /usr/local/share/ruby-build |
 
 **Pip / pipx installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| pylint | 2.14.3 |
+| pylint | 2.14.4 |
 | flake8 | 4.0.1 |
 | autopep8 | 1.6.0 |
-| black | 22.3.0 |
+| black | 22.6.0 |
 | yapf | 0.32.0 |
 | mypy | 0.961 |
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.8.0 |
 | bandit | 1.7.4 |
-| virtualenv | 20.15.0 |
+| virtualenv | 20.15.1 |
 | pipx | 1.1.0 |
 
 **Go tools and modules**
@@ -89,9 +89,9 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.36.1 | /usr/bin |
+| [git](https://github.com/git/git) | 2.37.0 | /usr/bin |
 | [Xdebug](https://xdebug.org/) | 3.1.5 | /usr/local/php/current |
-| [Composer](https://getcomposer.org/) | 2.3.7 | /usr/local/php/current/bin |
+| [Composer](https://getcomposer.org/) | 2.3.8 | /usr/local/php/current/bin |
 | [kubectl](https://github.com/kubernetes/kubectl) | WARNING: This version information is deprecated and will be replaced with the output from kubectl version --short.  Use --output=yaml|json to get the full version.<br />1.24.2 | /usr/local/bin |
 | [Helm](https://github.com/helm/helm) | 3.9.0 | /usr/local/bin |
 | [Docker Compose](https://github.com/docker/compose) | 1.29.2 | /usr/local/bin |
@@ -119,7 +119,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | g++ | 4:9.3.0-1ubuntu2 |
 | gcc | 4:9.3.0-1ubuntu2 |
 | gdb | 9.2-0ubuntu1~20.04.1 |
-| git | 1:2.36.1-0ppa1~ubuntu20.04.1 |
+| git | 1:2.37.0-0ppa1~ubuntu20.04.1 |
 | git-lfs (Git Large File Support) | 3.2.0 |
 | gnupg2 | 2.2.19-3ubuntu2.1 |
 | htop | 2.2.0-2build1 |
