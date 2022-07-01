@@ -2,6 +2,7 @@
 ARG VARIANT=2.7-bullseye
 FROM mcr.microsoft.com/devcontainers/ruby:${VARIANT}
 
+USER root
 # ENV Variables required by Jekyll
 ENV LANG=en_US.UTF-8 \
     LANGUAGE=en_US:en \

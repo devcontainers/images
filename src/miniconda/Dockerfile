@@ -1,5 +1,6 @@
 FROM continuumio/miniconda3 as upstream
 
+USER root
 # Update, change owner
 RUN groupadd -r conda --gid 900 \
     && chown -R :conda /opt/conda \
