@@ -1,23 +1,22 @@
 {
-    "build": {
-        "dockerfile": "./Dockerfile",
-        "context": "."
-    },
-    "features": [
-        {
-            "id": "devcontainers/features/python@v0.0.2",
-            "options": {
-                "version": "none"
-            }
-        }
-    ],
-
+	"build": {
+		"dockerfile": "./Dockerfile",
+		"context": "."
+	},
+	"features": [
+		{
+			"id": "devcontainers/features/python@v0.0.2",
+			"options": {
+				"version": "none"
+			}
+		}
+	],
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
 		"vscode": {
 			// Set *default* container specific settings.json values on container create.
-			"settings": { 
+			"settings": {
 				"python.defaultInterpreterPath": "/opt/conda/bin/python",
 				"python.linting.enabled": true,
 				"python.linting.pylintEnabled": true,
@@ -31,7 +30,6 @@
 				"python.linting.pydocstylePath": "/usr/local/py-utils/bin/pydocstyle",
 				"python.linting.pylintPath": "/usr/local/py-utils/bin/pylint"
 			},
-			
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"ms-python.python",
@@ -39,7 +37,6 @@
 			]
 		}
 	},
-
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 

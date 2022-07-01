@@ -1,8 +1,8 @@
 {
-    "build": {
-        "dockerfile": "./Dockerfile",
-        "context": "."
-    },
+	"build": {
+		"dockerfile": "./Dockerfile",
+		"context": "."
+	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [
