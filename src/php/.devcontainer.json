@@ -25,31 +25,29 @@
             }
         }
     ],
+    // Configure tool-specific properties.
+    "customizations": {
+        // Configure properties specific to VS Code.
+        "vscode": {
+            // Set *default* container specific settings.json values on container create.
+            "settings": {
+                "php.validate.executablePath": "/usr/local/bin/php"
+            },
+            // Add the IDs of extensions you want installed when the container is created.
+            "extensions": [
+                "xdebug.php-debug",
+                "bmewburn.vscode-intelephense-client",
+                "mrmlnc.vscode-apache"
+            ]
+        }
+    },
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    "forwardPorts": [
+        8080
+    ],
+    // Use 'postCreateCommand' to run commands after the container is created.
+    // "postCreateCommand": "sudo chmod a+x \"$(pwd)\" && sudo rm -rf /var/www/html && sudo ln -s \"$(pwd)\" /var/www/html"
 
-	// Configure tool-specific properties.
-	"customizations": {
-		// Configure properties specific to VS Code.
-		"vscode": {
-			// Set *default* container specific settings.json values on container create.
-			"settings": { 
-				"php.validate.executablePath": "/usr/local/bin/php"
-			},
-
-			// Add the IDs of extensions you want installed when the container is created.
-			"extensions": [
-				"xdebug.php-debug",
-				"bmewburn.vscode-intelephense-client",
-				"mrmlnc.vscode-apache"
-			]
-		}
-	},
-
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [8080],
-
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "sudo chmod a+x \"$(pwd)\" && sudo rm -rf /var/www/html && sudo ln -s \"$(pwd)\" /var/www/html"
-
-	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "vscode"
+    // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+    "remoteUser": "vscode"
 }
