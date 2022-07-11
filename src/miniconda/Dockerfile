@@ -1,6 +1,5 @@
 FROM continuumio/miniconda3 as upstream
 
-USER root
 # Update, change owner
 RUN groupadd -r conda --gid 900 \
     && chown -R :conda /opt/conda \
@@ -9,6 +8,7 @@ RUN groupadd -r conda --gid 900 \
 
 # Reset and copy updated files with updated privs to keep image size down
 FROM mcr.microsoft.com/devcontainers/base:0-bullseye
+USER root
 COPY --from=upstream /opt /opt/
 
 COPY add-notice.sh /tmp/library-scripts/
