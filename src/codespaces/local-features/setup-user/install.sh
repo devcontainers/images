@@ -32,18 +32,23 @@ ln -snf /usr/local/dotnet /opt/dotnet
 ln -snf /usr/local/dotnet/current /opt/dotnet/lts
 
 NODE_PATH="/home/codespace/.nodejs/current"
+mkdir -p $NODE_PATH
 ln -snf /usr/local/share/nvm/current $NODE_PATH
 
 PHP_PATH="/home/codespace/.php/current"
+mkdir -p $PHP_PATH
 ln -snf /usr/local/php/current $PHP_PATH
 
 PYTHON_PATH="/home/codespace/.python/current"
+mkdir -p $PYTHON_PATH
 ln -snf /usr/local/python/current $PYTHON_PATH
 
 JAVA_PATH="/home/codespace/.java/current"
+mkdir -p $JAVA_PATH
 ln -snf /usr/local/sdkman/candidates/java/current $JAVA_PATH
 
 RUBY_PATH="/home/codespace/.ruby/current"
+mkdir -p $RUBY_PATH
 ln -snf /usr/local/rvm/rubies/default $RUBY_PATH
 
 echo "Defaults secure_path=\"${DOTNET_PATH}:${NODE_PATH}:${PHP_PATH}:${PYTHON_PATH}:${JAVA_PATH}:${RUBY_PATH}:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin:/usr/local/share:${PATH}\"" >> /etc/sudoers.d/$USERNAME
