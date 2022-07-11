@@ -14,7 +14,7 @@
 
 ## Variant: 6.0-bullseye-slim
 
-**Digest:** sha256:6d12603b8fd5634fb7a107019384d93f38d046cf924acdcba3ee765a82e0c408
+**Digest:** sha256:b4d073f1f5a123dcb40c01f7b929b2cde4d4cdc93164c79c550c95921a6271ef
 
 **Tags:**
 ```
@@ -54,7 +54,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-bullseye
 | curl | 7.74.0-1.3+deb11u1 |
 | dialog | 1.3-20201126-1 |
 | git | 1:2.30.2-1 |
-| gnupg2 | 2.2.27-2+deb11u1 |
+| gnupg2 | 2.2.27-2+deb11u2 |
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
@@ -72,10 +72,10 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-bullseye
 | man-db | 2.9.4-2 |
 | manpages | 5.10-1 |
 | manpages-dev | 5.10-1 |
-| nano | 5.4-2 |
+| nano | 5.4-2+deb11u1 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
-| openssh-client | 1:8.4p1-5 |
+| openssh-client | 1:8.4p1-5+deb11u1 |
 | procps | 2:3.3.17-5 |
 | psmisc | 23.4-2 |
 | rsync | 3.2.3-4+deb11u1 |
@@ -91,7 +91,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-bullseye
 
 ## Variant: 6.0-focal
 
-**Digest:** sha256:2f40b881535ebfc1dabf3ac64685e40fd0a3425b3036acb88f8b5c255cc64333
+**Digest:** sha256:d276f3e1ea42c910e0e2f095f64680ac5a5a125f0854ab0c3f504911f2a5bd4e
 
 **Tags:**
 ```
@@ -129,7 +129,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-focal
 | curl | 7.68.0-1ubuntu2.12 |
 | dialog | 1.3-20190808-1 |
 | git | 1:2.25.1-1ubuntu3.4 |
-| gnupg2 | 2.2.19-3ubuntu2.1 |
+| gnupg2 | 2.2.19-3ubuntu2.2 |
 | htop | 2.2.0-2build1 |
 | iproute2 | 5.5.0-1ubuntu1 |
 | jq | 1.6-1ubuntu0.20.04.1 |
@@ -140,7 +140,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-focal
 | libicu66 | 66.1-2ubuntu2.1 |
 | libkrb5-3 | 1.17-6ubuntu4.1 |
 | liblttng-ust0 | 2.11.0-1 |
-| libssl1.1 | 1.1.1f-1ubuntu2.15 |
+| libssl1.1 | 1.1.1f-1ubuntu2.16 |
 | libstdc++6 | 10.3.0-1ubuntu1~20.04 |
 | locales | 2.31-0ubuntu9.9 |
 | lsb-release | 11.1.0ubuntu2 |
@@ -167,7 +167,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-focal
 
 ## Variant: 5.0-bullseye-slim
 
-**Digest:** sha256:ff85d1e7170d9ef0849d131033575f96fd793c094e4f78cd040ee02ae17faa00
+**Digest:** sha256:40e8981374528f73eb5639c05593810f1e87e6e09c1f4d96d38942c35f54e22d
 
 **Tags:**
 ```
@@ -207,7 +207,7 @@ mcr.microsoft.com/devcontainers/dotnetcore:dev-5.0-bullseye
 | curl | 7.74.0-1.3+deb11u1 |
 | dialog | 1.3-20201126-1 |
 | git | 1:2.30.2-1 |
-| gnupg2 | 2.2.27-2+deb11u1 |
+| gnupg2 | 2.2.27-2+deb11u2 |
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
@@ -225,10 +225,10 @@ mcr.microsoft.com/devcontainers/dotnetcore:dev-5.0-bullseye
 | man-db | 2.9.4-2 |
 | manpages | 5.10-1 |
 | manpages-dev | 5.10-1 |
-| nano | 5.4-2 |
+| nano | 5.4-2+deb11u1 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
-| openssh-client | 1:8.4p1-5 |
+| openssh-client | 1:8.4p1-5+deb11u1 |
 | procps | 2:3.3.17-5 |
 | psmisc | 23.4-2 |
 | rsync | 3.2.3-4+deb11u1 |
@@ -244,7 +244,7 @@ mcr.microsoft.com/devcontainers/dotnetcore:dev-5.0-bullseye
 
 ## Variant: 5.0-focal
 
-**Digest:** sha256:7ada8b4be7d32382ff6d29c04e3d51afbd36c6e66d2a7ef0d1628e9c73f1f9fc
+**Digest:** sha256:34dca1b1214ec7405cc8837a06ece87e78b1711f9cf1533fae16106056ef390d
 
 **Tags:**
 ```
@@ -284,7 +284,7 @@ mcr.microsoft.com/devcontainers/dotnetcore:dev-5.0
 | curl | 7.68.0-1ubuntu2.12 |
 | dialog | 1.3-20190808-1 |
 | git | 1:2.25.1-1ubuntu3.4 |
-| gnupg2 | 2.2.19-3ubuntu2.1 |
+| gnupg2 | 2.2.19-3ubuntu2.2 |
 | htop | 2.2.0-2build1 |
 | iproute2 | 5.5.0-1ubuntu1 |
 | jq | 1.6-1ubuntu0.20.04.1 |
@@ -295,7 +295,7 @@ mcr.microsoft.com/devcontainers/dotnetcore:dev-5.0
 | libicu66 | 66.1-2ubuntu2.1 |
 | libkrb5-3 | 1.17-6ubuntu4.1 |
 | liblttng-ust0 | 2.11.0-1 |
-| libssl1.1 | 1.1.1f-1ubuntu2.15 |
+| libssl1.1 | 1.1.1f-1ubuntu2.16 |
 | libstdc++6 | 10.3.0-1ubuntu1~20.04 |
 | locales | 2.31-0ubuntu9.9 |
 | lsb-release | 11.1.0ubuntu2 |
@@ -322,7 +322,7 @@ mcr.microsoft.com/devcontainers/dotnetcore:dev-5.0
 
 ## Variant: 3.1-bullseye
 
-**Digest:** sha256:6c0c07c85e06bb0ea1b7b7d185cccb059a83ac981187372fe06458d411a900fd
+**Digest:** sha256:a53b53b15d474ed2915dec7c440186ba0ccdc126a8d05ca94723004db12b5c73
 
 **Tags:**
 ```
@@ -361,7 +361,7 @@ mcr.microsoft.com/devcontainers/dotnetcore:dev-3.1-bullseye
 | curl | 7.74.0-1.3+deb11u1 |
 | dialog | 1.3-20201126-1 |
 | git | 1:2.30.2-1 |
-| gnupg2 | 2.2.27-2+deb11u1 |
+| gnupg2 | 2.2.27-2+deb11u2 |
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
@@ -379,10 +379,10 @@ mcr.microsoft.com/devcontainers/dotnetcore:dev-3.1-bullseye
 | man-db | 2.9.4-2 |
 | manpages | 5.10-1 |
 | manpages-dev | 5.10-1 |
-| nano | 5.4-2 |
+| nano | 5.4-2+deb11u1 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
-| openssh-client | 1:8.4p1-5 |
+| openssh-client | 1:8.4p1-5+deb11u1 |
 | procps | 2:3.3.17-5 |
 | psmisc | 23.4-2 |
 | rsync | 3.2.3-4+deb11u1 |
@@ -398,7 +398,7 @@ mcr.microsoft.com/devcontainers/dotnetcore:dev-3.1-bullseye
 
 ## Variant: 3.1-focal
 
-**Digest:** sha256:ada87f4a28277406962aa2894489323f87acfe6f7968b9b08788f9cd283f0f59
+**Digest:** sha256:1caf8b3d54aa994cc6071338f4701fed854b1598e29ed69caf274dac5e756cb6
 
 **Tags:**
 ```
@@ -438,7 +438,7 @@ mcr.microsoft.com/devcontainers/dotnetcore:dev-3.1
 | curl | 7.68.0-1ubuntu2.12 |
 | dialog | 1.3-20190808-1 |
 | git | 1:2.25.1-1ubuntu3.4 |
-| gnupg2 | 2.2.19-3ubuntu2.1 |
+| gnupg2 | 2.2.19-3ubuntu2.2 |
 | htop | 2.2.0-2build1 |
 | iproute2 | 5.5.0-1ubuntu1 |
 | jq | 1.6-1ubuntu0.20.04.1 |
@@ -449,7 +449,7 @@ mcr.microsoft.com/devcontainers/dotnetcore:dev-3.1
 | libicu66 | 66.1-2ubuntu2.1 |
 | libkrb5-3 | 1.17-6ubuntu4.1 |
 | liblttng-ust0 | 2.11.0-1 |
-| libssl1.1 | 1.1.1f-1ubuntu2.15 |
+| libssl1.1 | 1.1.1f-1ubuntu2.16 |
 | libstdc++6 | 10.3.0-1ubuntu1~20.04 |
 | locales | 2.31-0ubuntu9.9 |
 | lsb-release | 11.1.0ubuntu2 |

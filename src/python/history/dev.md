@@ -18,7 +18,7 @@
 
 ## Variant: 3.10-bullseye
 
-**Digest:** sha256:079e8384c297c0ccb0e59183d141ee2b9495a5c3498ed1e2b523926bda0eb489
+**Digest:** sha256:f4ab4be923f50cb796b20ce105a9b3f38cdf3847fd4c49e6bc416f402c6807a2
 
 **Tags:**
 ```
@@ -76,7 +76,7 @@ mcr.microsoft.com/devcontainers/python:dev-bullseye
 | curl | 7.74.0-1.3+deb11u1 |
 | dialog | 1.3-20201126-1 |
 | git | 1:2.30.2-1 |
-| gnupg2 | 2.2.27-2+deb11u1 |
+| gnupg2 | 2.2.27-2+deb11u2 |
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
@@ -94,10 +94,10 @@ mcr.microsoft.com/devcontainers/python:dev-bullseye
 | man-db | 2.9.4-2 |
 | manpages | 5.10-1 |
 | manpages-dev | 5.10-1 |
-| nano | 5.4-2 |
+| nano | 5.4-2+deb11u1 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
-| openssh-client | 1:8.4p1-5 |
+| openssh-client | 1:8.4p1-5+deb11u1 |
 | procps | 2:3.3.17-5 |
 | psmisc | 23.4-2 |
 | rsync | 3.2.3-4+deb11u1 |
@@ -113,7 +113,7 @@ mcr.microsoft.com/devcontainers/python:dev-bullseye
 
 ## Variant: 3.9-bullseye
 
-**Digest:** sha256:5ef41f86279e40a930abcd187c97564611c6ed27799c5de14cb6fdeacfce3a70
+**Digest:** sha256:792d64a7324c47c74c147975bbfbd3f81521202e0b560511a4e1fd15485536f9
 
 **Tags:**
 ```
@@ -168,7 +168,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9
 | curl | 7.74.0-1.3+deb11u1 |
 | dialog | 1.3-20201126-1 |
 | git | 1:2.30.2-1 |
-| gnupg2 | 2.2.27-2+deb11u1 |
+| gnupg2 | 2.2.27-2+deb11u2 |
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
@@ -186,10 +186,10 @@ mcr.microsoft.com/devcontainers/python:dev-3.9
 | man-db | 2.9.4-2 |
 | manpages | 5.10-1 |
 | manpages-dev | 5.10-1 |
-| nano | 5.4-2 |
+| nano | 5.4-2+deb11u1 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
-| openssh-client | 1:8.4p1-5 |
+| openssh-client | 1:8.4p1-5+deb11u1 |
 | procps | 2:3.3.17-5 |
 | psmisc | 23.4-2 |
 | rsync | 3.2.3-4+deb11u1 |
@@ -205,7 +205,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9
 
 ## Variant: 3.8-bullseye
 
-**Digest:** sha256:0e047b70d05bef8ddd68ee542221db5fead45b4672856c2e1f42adb67afa5fce
+**Digest:** sha256:5c847b27e36eacefe7b6e226cc81a998a91bdca72578e117f92af7ce90c81e11
 
 **Tags:**
 ```
@@ -260,7 +260,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8
 | curl | 7.74.0-1.3+deb11u1 |
 | dialog | 1.3-20201126-1 |
 | git | 1:2.30.2-1 |
-| gnupg2 | 2.2.27-2+deb11u1 |
+| gnupg2 | 2.2.27-2+deb11u2 |
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
@@ -278,10 +278,10 @@ mcr.microsoft.com/devcontainers/python:dev-3.8
 | man-db | 2.9.4-2 |
 | manpages | 5.10-1 |
 | manpages-dev | 5.10-1 |
-| nano | 5.4-2 |
+| nano | 5.4-2+deb11u1 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
-| openssh-client | 1:8.4p1-5 |
+| openssh-client | 1:8.4p1-5+deb11u1 |
 | procps | 2:3.3.17-5 |
 | psmisc | 23.4-2 |
 | rsync | 3.2.3-4+deb11u1 |
@@ -297,7 +297,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8
 
 ## Variant: 3.7-bullseye
 
-**Digest:** sha256:33358d2336bb71a9485e93cfcff86252ead64b555c08d87661209e4074b47923
+**Digest:** sha256:261b9a26d59ceefaeb2f35a3f55c41b4c4fd705af3645a8c8d09b2cc72de2410
 
 **Tags:**
 ```
@@ -352,7 +352,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.7
 | curl | 7.74.0-1.3+deb11u1 |
 | dialog | 1.3-20201126-1 |
 | git | 1:2.30.2-1 |
-| gnupg2 | 2.2.27-2+deb11u1 |
+| gnupg2 | 2.2.27-2+deb11u2 |
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
@@ -370,10 +370,10 @@ mcr.microsoft.com/devcontainers/python:dev-3.7
 | man-db | 2.9.4-2 |
 | manpages | 5.10-1 |
 | manpages-dev | 5.10-1 |
-| nano | 5.4-2 |
+| nano | 5.4-2+deb11u1 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
-| openssh-client | 1:8.4p1-5 |
+| openssh-client | 1:8.4p1-5+deb11u1 |
 | procps | 2:3.3.17-5 |
 | psmisc | 23.4-2 |
 | rsync | 3.2.3-4+deb11u1 |
@@ -389,7 +389,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.7
 
 ## Variant: 3.6-bullseye
 
-**Digest:** sha256:4b5db1077bb10a9146ccfe17f50fedd223c8aaf35e6eceab58fbd04f990f300e
+**Digest:** sha256:4ae531a2c66ad2a441513ebb527ef29178031d7369c1c92045754d0fab547537
 
 **Tags:**
 ```
@@ -444,7 +444,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.6
 | curl | 7.74.0-1.3+deb11u1 |
 | dialog | 1.3-20201126-1 |
 | git | 1:2.30.2-1 |
-| gnupg2 | 2.2.27-2+deb11u1 |
+| gnupg2 | 2.2.27-2+deb11u2 |
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
@@ -462,10 +462,10 @@ mcr.microsoft.com/devcontainers/python:dev-3.6
 | man-db | 2.9.4-2 |
 | manpages | 5.10-1 |
 | manpages-dev | 5.10-1 |
-| nano | 5.4-2 |
+| nano | 5.4-2+deb11u1 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
-| openssh-client | 1:8.4p1-5 |
+| openssh-client | 1:8.4p1-5+deb11u1 |
 | procps | 2:3.3.17-5 |
 | psmisc | 23.4-2 |
 | rsync | 3.2.3-4+deb11u1 |
@@ -481,7 +481,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.6
 
 ## Variant: 3.10-buster
 
-**Digest:** sha256:3fd1cae89ee97128fe69e684859aeaee9beb921dce41f755b8d1713c899907dc
+**Digest:** sha256:256275edcfa73fd98040bd31da3c7adc63b59f4872d11edbc41a3efdd69acfe6
 
 **Tags:**
 ```
@@ -537,7 +537,7 @@ mcr.microsoft.com/devcontainers/python:dev-buster
 | curl | 7.64.0-4+deb10u2 |
 | dialog | 1.3-20190211-1 |
 | git | 1:2.20.1-2+deb10u3 |
-| gnupg2 | 2.2.12-1+deb10u1 |
+| gnupg2 | 2.2.12-1+deb10u2 |
 | htop | 2.2.0-1+b1 |
 | iproute2 | 4.20.0-2+deb10u1 |
 | jq | 1.5+dfsg-2+b1 |
@@ -575,7 +575,7 @@ mcr.microsoft.com/devcontainers/python:dev-buster
 
 ## Variant: 3.9-buster
 
-**Digest:** sha256:2ec33257b5b5cdc93ed97e2aaa9b4c306ab7d56ebf25085eb69315ef35c1aba7
+**Digest:** sha256:3115697af578889f6b8c28d8a890926b9e42d983152e0ad2949a1b85d02e325d
 
 **Tags:**
 ```
@@ -629,7 +629,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-buster
 | curl | 7.64.0-4+deb10u2 |
 | dialog | 1.3-20190211-1 |
 | git | 1:2.20.1-2+deb10u3 |
-| gnupg2 | 2.2.12-1+deb10u1 |
+| gnupg2 | 2.2.12-1+deb10u2 |
 | htop | 2.2.0-1+b1 |
 | iproute2 | 4.20.0-2+deb10u1 |
 | jq | 1.5+dfsg-2+b1 |
@@ -667,7 +667,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-buster
 
 ## Variant: 3.8-buster
 
-**Digest:** sha256:31c1f903754e623ecfc9c65a6957df1b66852b188ae447734eeb3e0325f92fb5
+**Digest:** sha256:7546fbc0a15acc2919cf88528c735ccafba97c1278ea9e22d47d2ed160cabc7d
 
 **Tags:**
 ```
@@ -721,7 +721,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8-buster
 | curl | 7.64.0-4+deb10u2 |
 | dialog | 1.3-20190211-1 |
 | git | 1:2.20.1-2+deb10u3 |
-| gnupg2 | 2.2.12-1+deb10u1 |
+| gnupg2 | 2.2.12-1+deb10u2 |
 | htop | 2.2.0-1+b1 |
 | iproute2 | 4.20.0-2+deb10u1 |
 | jq | 1.5+dfsg-2+b1 |
@@ -759,7 +759,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8-buster
 
 ## Variant: 3.7-buster
 
-**Digest:** sha256:974f0dc76a039da99f59a3e4b60a3b7aa33749e50549b4793a7be33a19945c32
+**Digest:** sha256:61fb905d34abee066674088a7791228d8ff9cc21d4d3087214211249697e66be
 
 **Tags:**
 ```
@@ -813,7 +813,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.7-buster
 | curl | 7.64.0-4+deb10u2 |
 | dialog | 1.3-20190211-1 |
 | git | 1:2.20.1-2+deb10u3 |
-| gnupg2 | 2.2.12-1+deb10u1 |
+| gnupg2 | 2.2.12-1+deb10u2 |
 | htop | 2.2.0-1+b1 |
 | iproute2 | 4.20.0-2+deb10u1 |
 | jq | 1.5+dfsg-2+b1 |
@@ -851,7 +851,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.7-buster
 
 ## Variant: 3.6-buster
 
-**Digest:** sha256:2200eba36bcbd39f1f9195a397f70d5f19a2fef516a7a15874df0cee7f2362a7
+**Digest:** sha256:c5bfc7430097c444321f01fbf46f3b4190b26f3a9f7e602031a0891f4c6e21cf
 
 **Tags:**
 ```
@@ -905,7 +905,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.6-buster
 | curl | 7.64.0-4+deb10u2 |
 | dialog | 1.3-20190211-1 |
 | git | 1:2.20.1-2+deb10u3 |
-| gnupg2 | 2.2.12-1+deb10u1 |
+| gnupg2 | 2.2.12-1+deb10u2 |
 | htop | 2.2.0-1+b1 |
 | iproute2 | 4.20.0-2+deb10u1 |
 | jq | 1.5+dfsg-2+b1 |

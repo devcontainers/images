@@ -14,7 +14,7 @@
 
 ## Variant: 8.1-apache-bullseye
 
-**Digest:** sha256:db2fb9f63187cb73d902987ee4c03f1b14e0ab362faaaa84cee9e4c4e6cfa47a
+**Digest:** sha256:f87a9acfbfca14ae5d52f22d048bb8bb1cd535ffe21ccdada76a978277cfe49a
 
 **Tags:**
 ```
@@ -38,7 +38,7 @@ mcr.microsoft.com/devcontainers/php:dev-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [PHP](https://xdebug.org/) | 8.1.7 | /usr/local |
+| [PHP](https://xdebug.org/) | 8.1.8 | /usr/local |
 
 **Tools installed using git**
 
@@ -52,7 +52,7 @@ mcr.microsoft.com/devcontainers/php:dev-bullseye
 | Tool | Version | Path |
 |------|---------|------|
 | [Xdebug](https://xdebug.org/) | 3.1.5 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.3.8 | /usr/local |
+| [Composer](https://getcomposer.org/) | 2.3.9 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -64,7 +64,7 @@ mcr.microsoft.com/devcontainers/php:dev-bullseye
 | curl | 7.74.0-1.3+deb11u1 |
 | dialog | 1.3-20201126-1 |
 | git | 1:2.30.2-1 |
-| gnupg2 | 2.2.27-2+deb11u1 |
+| gnupg2 | 2.2.27-2+deb11u2 |
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
@@ -82,10 +82,10 @@ mcr.microsoft.com/devcontainers/php:dev-bullseye
 | man-db | 2.9.4-2 |
 | manpages | 5.10-1 |
 | manpages-dev | 5.10-1 |
-| nano | 5.4-2 |
+| nano | 5.4-2+deb11u1 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
-| openssh-client | 1:8.4p1-5 |
+| openssh-client | 1:8.4p1-5+deb11u1 |
 | procps | 2:3.3.17-5 |
 | psmisc | 23.4-2 |
 | rsync | 3.2.3-4+deb11u1 |
@@ -101,7 +101,7 @@ mcr.microsoft.com/devcontainers/php:dev-bullseye
 
 ## Variant: 8.0-apache-bullseye
 
-**Digest:** sha256:05ad6af9eb7fb77e8f7d5ad27df14d71eae0ef3088b204c8edd7238c893d7184
+**Digest:** sha256:96f7e510c429fbd39516d6fe25d349acae856315744da29f0a1bae5c0fa20d59
 
 **Tags:**
 ```
@@ -122,7 +122,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [PHP](https://xdebug.org/) | 8.0.20 | /usr/local |
+| [PHP](https://xdebug.org/) | 8.0.21 | /usr/local |
 
 **Tools installed using git**
 
@@ -136,7 +136,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-bullseye
 | Tool | Version | Path |
 |------|---------|------|
 | [Xdebug](https://xdebug.org/) | 3.1.5 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.3.8 | /usr/local |
+| [Composer](https://getcomposer.org/) | 2.3.9 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -148,7 +148,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-bullseye
 | curl | 7.74.0-1.3+deb11u1 |
 | dialog | 1.3-20201126-1 |
 | git | 1:2.30.2-1 |
-| gnupg2 | 2.2.27-2+deb11u1 |
+| gnupg2 | 2.2.27-2+deb11u2 |
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
@@ -166,10 +166,10 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-bullseye
 | man-db | 2.9.4-2 |
 | manpages | 5.10-1 |
 | manpages-dev | 5.10-1 |
-| nano | 5.4-2 |
+| nano | 5.4-2+deb11u1 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
-| openssh-client | 1:8.4p1-5 |
+| openssh-client | 1:8.4p1-5+deb11u1 |
 | procps | 2:3.3.17-5 |
 | psmisc | 23.4-2 |
 | rsync | 3.2.3-4+deb11u1 |
@@ -185,7 +185,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-bullseye
 
 ## Variant: 7.4-apache-bullseye
 
-**Digest:** sha256:b30d8265efc3bd445530b0d371f5ce9c8d58c7671a07883df9f15bf44d9b453f
+**Digest:** sha256:00e5de82a97397024de58272437057b9a1d9f06096ba4e33742626459ef3d0d2
 
 **Tags:**
 ```
@@ -222,7 +222,7 @@ mcr.microsoft.com/devcontainers/php:dev-7.4-bullseye
 | Tool | Version | Path |
 |------|---------|------|
 | [Xdebug](https://xdebug.org/) | 3.1.5 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.3.8 | /usr/local |
+| [Composer](https://getcomposer.org/) | 2.3.9 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -234,7 +234,7 @@ mcr.microsoft.com/devcontainers/php:dev-7.4-bullseye
 | curl | 7.74.0-1.3+deb11u1 |
 | dialog | 1.3-20201126-1 |
 | git | 1:2.30.2-1 |
-| gnupg2 | 2.2.27-2+deb11u1 |
+| gnupg2 | 2.2.27-2+deb11u2 |
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
@@ -252,10 +252,10 @@ mcr.microsoft.com/devcontainers/php:dev-7.4-bullseye
 | man-db | 2.9.4-2 |
 | manpages | 5.10-1 |
 | manpages-dev | 5.10-1 |
-| nano | 5.4-2 |
+| nano | 5.4-2+deb11u1 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
-| openssh-client | 1:8.4p1-5 |
+| openssh-client | 1:8.4p1-5+deb11u1 |
 | procps | 2:3.3.17-5 |
 | psmisc | 23.4-2 |
 | rsync | 3.2.3-4+deb11u1 |
@@ -271,7 +271,7 @@ mcr.microsoft.com/devcontainers/php:dev-7.4-bullseye
 
 ## Variant: 8.1-apache-buster
 
-**Digest:** sha256:fba14469bf98b4fa249eb2ea96db8a3e454f1bfa09bc79f02dc0ce030e877ac7
+**Digest:** sha256:4ae3632c095879362641422d294520300cf3a9a80b0e469fa6d814de1bf3a277
 
 **Tags:**
 ```
@@ -293,7 +293,7 @@ mcr.microsoft.com/devcontainers/php:dev-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [PHP](https://xdebug.org/) | 8.1.7 | /usr/local |
+| [PHP](https://xdebug.org/) | 8.1.8 | /usr/local |
 
 **Tools installed using git**
 
@@ -307,7 +307,7 @@ mcr.microsoft.com/devcontainers/php:dev-buster
 | Tool | Version | Path |
 |------|---------|------|
 | [Xdebug](https://xdebug.org/) | 3.1.5 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.3.8 | /usr/local |
+| [Composer](https://getcomposer.org/) | 2.3.9 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -319,7 +319,7 @@ mcr.microsoft.com/devcontainers/php:dev-buster
 | curl | 7.64.0-4+deb10u2 |
 | dialog | 1.3-20190211-1 |
 | git | 1:2.20.1-2+deb10u3 |
-| gnupg2 | 2.2.12-1+deb10u1 |
+| gnupg2 | 2.2.12-1+deb10u2 |
 | htop | 2.2.0-1+b1 |
 | iproute2 | 4.20.0-2+deb10u1 |
 | jq | 1.5+dfsg-2+b1 |
@@ -357,7 +357,7 @@ mcr.microsoft.com/devcontainers/php:dev-buster
 
 ## Variant: 8.0-apache-buster
 
-**Digest:** sha256:92cf73bebc6bc02a81a9aacab35b6db9dbda9cf0e5737e4aa647c41f8ffe83ce
+**Digest:** sha256:751cc58467c00e2aab9f1fd62e5625daff48f57bf390f5d4beff924f639ec627
 
 **Tags:**
 ```
@@ -377,7 +377,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [PHP](https://xdebug.org/) | 8.0.20 | /usr/local |
+| [PHP](https://xdebug.org/) | 8.0.21 | /usr/local |
 
 **Tools installed using git**
 
@@ -391,7 +391,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-buster
 | Tool | Version | Path |
 |------|---------|------|
 | [Xdebug](https://xdebug.org/) | 3.1.5 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.3.8 | /usr/local |
+| [Composer](https://getcomposer.org/) | 2.3.9 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -403,7 +403,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-buster
 | curl | 7.64.0-4+deb10u2 |
 | dialog | 1.3-20190211-1 |
 | git | 1:2.20.1-2+deb10u3 |
-| gnupg2 | 2.2.12-1+deb10u1 |
+| gnupg2 | 2.2.12-1+deb10u2 |
 | htop | 2.2.0-1+b1 |
 | iproute2 | 4.20.0-2+deb10u1 |
 | jq | 1.5+dfsg-2+b1 |
@@ -441,7 +441,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-buster
 
 ## Variant: 7.4-apache-buster
 
-**Digest:** sha256:2920ec05f81b945d0dbf233ffe355756583e2fe9bb2bb710d4c50b6fceedc551
+**Digest:** sha256:5399f05b40e3d0dd2257d6c498bf393d360e9a4fbda0dc496e3c3031c4a24f08
 
 **Tags:**
 ```
@@ -476,7 +476,7 @@ mcr.microsoft.com/devcontainers/php:dev-7.4-buster
 | Tool | Version | Path |
 |------|---------|------|
 | [Xdebug](https://xdebug.org/) | 3.1.5 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.3.8 | /usr/local |
+| [Composer](https://getcomposer.org/) | 2.3.9 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -488,7 +488,7 @@ mcr.microsoft.com/devcontainers/php:dev-7.4-buster
 | curl | 7.64.0-4+deb10u2 |
 | dialog | 1.3-20190211-1 |
 | git | 1:2.20.1-2+deb10u3 |
-| gnupg2 | 2.2.12-1+deb10u1 |
+| gnupg2 | 2.2.12-1+deb10u2 |
 | htop | 2.2.0-1+b1 |
 | iproute2 | 4.20.0-2+deb10u1 |
 | jq | 1.5+dfsg-2+b1 |

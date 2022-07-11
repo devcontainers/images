@@ -11,7 +11,7 @@
 
 ## Variant: buster
 
-**Digest:** sha256:6ec060504aefe64adf0d28a864fd7e49d92db6543cf338df0957393ee95039ae
+**Digest:** sha256:34b8248bdff6d0ddd872eec3d53c886267f5ac14c6f1bc45ef1f8fb3e7306932
 
 **Tags:**
 ```
@@ -44,7 +44,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian10
 | curl | 7.64.0-4+deb10u2 |
 | dialog | 1.3-20190211-1 |
 | git | 1:2.20.1-2+deb10u3 |
-| gnupg2 | 2.2.12-1+deb10u1 |
+| gnupg2 | 2.2.12-1+deb10u2 |
 | htop | 2.2.0-1+b1 |
 | iproute2 | 4.20.0-2+deb10u1 |
 | jq | 1.5+dfsg-2+b1 |
@@ -81,7 +81,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian10
 
 ## Variant: bullseye
 
-**Digest:** sha256:885424f11cc8ca5fb3dcd1f92d57d2e399da1f282e73bf86ad9ac508d13e66a9
+**Digest:** sha256:c640167d55a7a3397ce482092df37babbd17a59317e894ba5b6d0c20ceb98a63
 
 **Tags:**
 ```
@@ -116,7 +116,7 @@ mcr.microsoft.com/devcontainers/base:dev
 | curl | 7.74.0-1.3+deb11u1 |
 | dialog | 1.3-20201126-1 |
 | git | 1:2.30.2-1 |
-| gnupg2 | 2.2.27-2+deb11u1 |
+| gnupg2 | 2.2.27-2+deb11u2 |
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
@@ -134,10 +134,10 @@ mcr.microsoft.com/devcontainers/base:dev
 | man-db | 2.9.4-2 |
 | manpages | 5.10-1 |
 | manpages-dev | 5.10-1 |
-| nano | 5.4-2 |
+| nano | 5.4-2+deb11u1 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
-| openssh-client | 1:8.4p1-5 |
+| openssh-client | 1:8.4p1-5+deb11u1 |
 | procps | 2:3.3.17-5 |
 | psmisc | 23.4-2 |
 | rsync | 3.2.3-4+deb11u1 |
@@ -152,7 +152,7 @@ mcr.microsoft.com/devcontainers/base:dev
 
 ## Variant: stretch
 
-**Digest:** sha256:e17be7c0d725a41967554fcfe4e2c6ef2ffc500518ec2676f3f1e0e4eabf4846
+**Digest:** sha256:345380fe3a5d70d25f3e60e7531270f523fe6ab8648a8d506f6ac1dd7491ea2d
 
 **Tags:**
 ```
