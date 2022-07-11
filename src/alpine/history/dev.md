@@ -11,7 +11,7 @@
 
 ## Variant: 3.15
 
-**Digest:** sha256:3fa7ab3f36ea3a4c1dcff282688cdc4840e199fe9c4f0e8807ca12fd4939ff8e
+**Digest:** sha256:d923848d7180ce01e4bae455bcc047261e2ab30f063c0dc693969192d122942b
 
 **Tags:**
 ```
@@ -40,7 +40,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 |----------------|---------|
 | git | 2.34.2-r0 |
 | openssh-client-default | 8.8_p1-r1 |
-| gnupg | 2.2.31-r1 |
+| gnupg | 2.2.31-r2 |
 | procps | 3.3.17-r0 |
 | lsof | 4.94.0-r0 |
 | htop | 3.1.1-r0 |
@@ -77,7 +77,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 ## Variant: 3.14
 
-**Digest:** sha256:f2a30ce00b8037429f20fae0e536c26a381d3e431a2c6e75256d9b5d5d4b0e21
+**Digest:** sha256:44e258e131824b14e349929edd2d29cea4c0aaf901241768000081129d2e547a
 
 **Tags:**
 ```
@@ -105,7 +105,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.14
 |----------------|---------|
 | git | 2.32.2-r0 |
 | openssh-client-default | 8.6_p1-r3 |
-| gnupg | 2.2.31-r0 |
+| gnupg | 2.2.31-r1 |
 | procps | 3.3.17-r0 |
 | lsof | 4.94.0-r0 |
 | htop | 3.0.5-r2 |
@@ -142,7 +142,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.14
 
 ## Variant: 3.13
 
-**Digest:** sha256:15a15a4fa79f218eee160c3accecbdab1278c80899e281aba094a7cb914d6e49
+**Digest:** sha256:d57d1ea41ce3a2a61f3af10448cbc849b45c8220af087a4dd27a9de0dc4a9fd0
 
 **Tags:**
 ```
@@ -170,7 +170,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.13
 |----------------|---------|
 | git | 2.30.3-r0 |
 | openssh-client | 8.4_p1-r4 |
-| gnupg | 2.2.31-r0 |
+| gnupg | 2.2.31-r1 |
 | procps | 3.3.16-r0 |
 | lsof | 4.94.0-r0 |
 | htop | 3.0.5-r1 |

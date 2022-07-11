@@ -10,7 +10,7 @@
 
 ## Variant: buster
 
-**Digest:** sha256:fb4f54580d2ae986f8a3a19657cadb9ec14db2a92279b7348068deac86240ed9
+**Digest:** sha256:ff7cf09832a7249632c32cf16b8e0c2746ba5b8b083b7ab562cdd42a4239f8f5
 
 **Tags:**
 ```
@@ -60,7 +60,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 | dialog | 1.3-20190211-1 |
 | gcc | 4:8.3.0-1 |
 | git | 1:2.20.1-2+deb10u3 |
-| gnupg2 | 2.2.12-1+deb10u1 |
+| gnupg2 | 2.2.12-1+deb10u2 |
 | htop | 2.2.0-1+b1 |
 | iproute2 | 4.20.0-2+deb10u1 |
 | jq | 1.5+dfsg-2+b1 |
@@ -100,7 +100,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 
 ## Variant: bullseye
 
-**Digest:** sha256:6490e1e50a0720364ad5bf9e6467436477fc2e1424a665d01e6cc9443abafbf9
+**Digest:** sha256:effea4f6841f7addce33efca575fe1111e4759d5651a2f1788ec4b4f9e4cc55f
 
 **Tags:**
 ```
@@ -149,7 +149,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 | dialog | 1.3-20201126-1 |
 | gcc | 4:10.2.1-1 |
 | git | 1:2.30.2-1 |
-| gnupg2 | 2.2.27-2+deb11u1 |
+| gnupg2 | 2.2.27-2+deb11u2 |
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
@@ -169,10 +169,10 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 | man-db | 2.9.4-2 |
 | manpages | 5.10-1 |
 | manpages-dev | 5.10-1 |
-| nano | 5.4-2 |
+| nano | 5.4-2+deb11u1 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
-| openssh-client | 1:8.4p1-5 |
+| openssh-client | 1:8.4p1-5+deb11u1 |
 | procps | 2:3.3.17-5 |
 | psmisc | 23.4-2 |
 | python3-minimal | 3.9.2-3 |

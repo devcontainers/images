@@ -76,7 +76,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "881c1b04a40f258b23880f9ef3ba89b6ed5c8ecf"
+                    "commitHash": "98f8d00e89fb6a8019c2045cfa1edbe9d92d3405"
                 }
             }
         },
@@ -349,7 +349,7 @@
                 "Type": "go",
                 "Go": {
                     "Name": "golang.org/x/tools/gopls",
-                    "Version": "0.8.4"
+                    "Version": "0.9.0"
                 }
             }
         },
@@ -358,7 +358,7 @@
                 "Type": "go",
                 "Go": {
                     "Name": "honnef.co/go/tools",
-                    "Version": "0.3.0"
+                    "Version": "0.3.2"
                 }
             }
         },
@@ -403,7 +403,7 @@
                 "Type": "go",
                 "Go": {
                     "Name": "github.com/go-delve/delve",
-                    "Version": "1.8.3"
+                    "Version": "1.9.0"
                 }
             }
         },
@@ -462,7 +462,7 @@
                 "Git": {
                     "Name": "ruby-build",
                     "repositoryUrl": "https://github.com/rbenv/ruby-build.git",
-                    "commitHash": "58cda904b73ceb6472d0069cdbe96d195ba974b5"
+                    "commitHash": "98c03377c13a8c0bc9e415ab04e3e38d8331516d"
                 }
             }
         },
@@ -714,7 +714,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Composer",
-                    "Version": "2.3.8",
+                    "Version": "2.3.9",
                     "DownloadUrl": "https://getcomposer.org/"
                 }
             }

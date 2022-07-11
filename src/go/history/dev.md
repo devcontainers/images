@@ -12,7 +12,7 @@
 
 ## Variant: 1.18-bullseye
 
-**Digest:** sha256:a5eced6aca1705136c383c6a901a16e7320f0cc88135d6f62c59461ecd3f39d2
+**Digest:** sha256:6f85f93bd832ab5b9cdb096a45309cc1a37aecbb90f6cf2c820ce1e160b9b8e2
 
 **Tags:**
 ```
@@ -48,13 +48,13 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 
 | Tool / module | Version |
 |---------------|---------|
-| golang.org/x/tools/gopls | 0.8.4 |
-| honnef.co/go/tools | 0.3.0 |
+| golang.org/x/tools/gopls | 0.9.0 |
+| honnef.co/go/tools | 0.3.2 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
 | github.com/mgechev/revive | 1.2.1 |
 | github.com/uudashr/gopkgs | 2.0.1+incompatible |
 | github.com/ramya-rao-a/go-outline | 0.0.0-20210608161538-9736a4bde949 |
-| github.com/go-delve/delve | 1.8.3 |
+| github.com/go-delve/delve | 1.9.0 |
 | github.com/golangci/golangci-lint | 1.46.2 |
 
 **Additional linux tools and packages**
@@ -69,7 +69,7 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 | g++ | 4:10.2.1-1 |
 | gcc | 4:10.2.1-1 |
 | git | 1:2.30.2-1 |
-| gnupg2 | 2.2.27-2+deb11u1 |
+| gnupg2 | 2.2.27-2+deb11u2 |
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
@@ -89,10 +89,10 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 | man-db | 2.9.4-2 |
 | manpages | 5.10-1 |
 | manpages-dev | 5.10-1 |
-| nano | 5.4-2 |
+| nano | 5.4-2+deb11u1 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
-| openssh-client | 1:8.4p1-5 |
+| openssh-client | 1:8.4p1-5+deb11u1 |
 | pkg-config | 0.29.2-1 |
 | procps | 2:3.3.17-5 |
 | psmisc | 23.4-2 |
@@ -109,7 +109,7 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 
 ## Variant: 1.18-buster
 
-**Digest:** sha256:c04944fd51c2f6cd082466629ea24009dd7eaa11d3dd188daaebb1daa93b737b
+**Digest:** sha256:2843f56aa497893edc9a7ca5570aead798bbd38e9ca4ee6cb45ee4eef179d277
 
 **Tags:**
 ```
@@ -130,7 +130,7 @@ mcr.microsoft.com/devcontainers/go:dev-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | warning: GOPATH set to GOROOT (/usr/local/go) has no effect<br />1.18.3 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.18.3<br /><br />warning: GOPATH set to GOROOT (/usr/local/go) has no effect | /usr/local/go |
 
 **Tools installed using git**
 
@@ -143,13 +143,13 @@ mcr.microsoft.com/devcontainers/go:dev-buster
 
 | Tool / module | Version |
 |---------------|---------|
-| golang.org/x/tools/gopls | 0.8.4 |
-| honnef.co/go/tools | 0.3.0 |
+| golang.org/x/tools/gopls | 0.9.0 |
+| honnef.co/go/tools | 0.3.2 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
 | github.com/mgechev/revive | 1.2.1 |
 | github.com/uudashr/gopkgs | 2.0.1+incompatible |
 | github.com/ramya-rao-a/go-outline | 0.0.0-20210608161538-9736a4bde949 |
-| github.com/go-delve/delve | 1.8.3 |
+| github.com/go-delve/delve | 1.9.0 |
 | github.com/golangci/golangci-lint | 1.46.2 |
 
 **Additional linux tools and packages**
@@ -164,7 +164,7 @@ mcr.microsoft.com/devcontainers/go:dev-buster
 | g++ | 4:8.3.0-1 |
 | gcc | 4:8.3.0-1 |
 | git | 1:2.20.1-2+deb10u3 |
-| gnupg2 | 2.2.12-1+deb10u1 |
+| gnupg2 | 2.2.12-1+deb10u2 |
 | htop | 2.2.0-1+b1 |
 | iproute2 | 4.20.0-2+deb10u1 |
 | jq | 1.5+dfsg-2+b1 |
@@ -205,7 +205,7 @@ mcr.microsoft.com/devcontainers/go:dev-buster
 
 ## Variant: 1.17-bullseye
 
-**Digest:** sha256:91f193af223e763166b6d1be4324bfab0de158eeae2ff8107258f44e10047e66
+**Digest:** sha256:3f69cfef0a6a1c861cf45d26c548b4ffbec1cc2f65bf86198547cafb889fa1a9
 
 **Tags:**
 ```
@@ -238,13 +238,13 @@ mcr.microsoft.com/devcontainers/go:dev-1.17
 
 | Tool / module | Version |
 |---------------|---------|
-| golang.org/x/tools/gopls | 0.8.4 |
-| honnef.co/go/tools | 0.3.0 |
+| golang.org/x/tools/gopls | 0.9.0 |
+| honnef.co/go/tools | 0.3.2 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
 | github.com/mgechev/revive | 1.2.1 |
 | github.com/uudashr/gopkgs | 2.0.1+incompatible |
 | github.com/ramya-rao-a/go-outline | 0.0.0-20210608161538-9736a4bde949 |
-| github.com/go-delve/delve | 1.8.3 |
+| github.com/go-delve/delve | 1.9.0 |
 | github.com/golangci/golangci-lint | 1.46.2 |
 
 **Additional linux tools and packages**
@@ -259,7 +259,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.17
 | g++ | 4:10.2.1-1 |
 | gcc | 4:10.2.1-1 |
 | git | 1:2.30.2-1 |
-| gnupg2 | 2.2.27-2+deb11u1 |
+| gnupg2 | 2.2.27-2+deb11u2 |
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
@@ -279,10 +279,10 @@ mcr.microsoft.com/devcontainers/go:dev-1.17
 | man-db | 2.9.4-2 |
 | manpages | 5.10-1 |
 | manpages-dev | 5.10-1 |
-| nano | 5.4-2 |
+| nano | 5.4-2+deb11u1 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
-| openssh-client | 1:8.4p1-5 |
+| openssh-client | 1:8.4p1-5+deb11u1 |
 | pkg-config | 0.29.2-1 |
 | procps | 2:3.3.17-5 |
 | psmisc | 23.4-2 |
@@ -299,7 +299,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.17
 
 ## Variant: 1.17-buster
 
-**Digest:** sha256:e177fdc39ec9f8dc4e62de746101752b0d229225e3749c192172b06aeafab6b4
+**Digest:** sha256:d6d510ae61102b8c41ee5cf97e5d83f36449d2df7cb8c7f47827966e97686b06
 
 **Tags:**
 ```
@@ -331,13 +331,13 @@ mcr.microsoft.com/devcontainers/go:dev-1.17-buster
 
 | Tool / module | Version |
 |---------------|---------|
-| golang.org/x/tools/gopls | 0.8.4 |
-| honnef.co/go/tools | 0.3.0 |
+| golang.org/x/tools/gopls | 0.9.0 |
+| honnef.co/go/tools | 0.3.2 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
 | github.com/mgechev/revive | 1.2.1 |
 | github.com/uudashr/gopkgs | 2.0.1+incompatible |
 | github.com/ramya-rao-a/go-outline | 0.0.0-20210608161538-9736a4bde949 |
-| github.com/go-delve/delve | 1.8.3 |
+| github.com/go-delve/delve | 1.9.0 |
 | github.com/golangci/golangci-lint | 1.46.2 |
 
 **Additional linux tools and packages**
@@ -352,7 +352,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.17-buster
 | g++ | 4:8.3.0-1 |
 | gcc | 4:8.3.0-1 |
 | git | 1:2.20.1-2+deb10u3 |
-| gnupg2 | 2.2.12-1+deb10u1 |
+| gnupg2 | 2.2.12-1+deb10u2 |
 | htop | 2.2.0-1+b1 |
 | iproute2 | 4.20.0-2+deb10u1 |
 | jq | 1.5+dfsg-2+b1 |

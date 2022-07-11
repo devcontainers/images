@@ -5,7 +5,7 @@ This document describes the base contents of the default GitHub Codespaces dev c
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/codespaces)
 
-**Digest:** sha256:bb32231bf9a8af1ff6d25345541e10487517891f5b2aa1cd9508383ee930bd4d
+**Digest:** sha256:8ec1abecae8e8442e82a110b0f6016ebf8678e6faddec4754f6a27e71b21ae58
 
 **Tags:**
 ```
@@ -26,7 +26,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 14.19.3<br />16.15.1 | /usr/local/share/nvm/versions/node/&lt;version&gt; |
+| [Node.js](https://nodejs.org/en/) | 14.20.0<br />16.16.0 | /usr/local/share/nvm/versions/node/&lt;version&gt; |
 | [Python](https://www.python.org/) | 3.10.5<br />3.9.13 | /usr/local/python/&lt;version&gt; |
 | [Java](https://adoptopenjdk.net/) | 11.0.15<br />17.0.3 | /usr/local/sdkman/candidates/java/&lt;version&gt; |
 | [.NET](https://dotnet.microsoft.com/) | 3.1.420<br />6.0.301 | /usr/local/dotnet |
@@ -45,7 +45,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | bf45ef070e82356ed36a0f4d98f8ec651c8f0d98 | /usr/local/nvs |
 | [rbenv](https://github.com/rbenv/rbenv.git) | c6cc0a1959da3403f524fcbb0fdfb6e08a4d8ae6 | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 58cda904b73ceb6472d0069cdbe96d195ba974b5 | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 98c03377c13a8c0bc9e415ab04e3e38d8331516d | /usr/local/share/ruby-build |
 
 **Pip / pipx installed tools and packages**
 
@@ -67,13 +67,13 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool / module | Version |
 |---------------|---------|
-| golang.org/x/tools/gopls | 0.8.4 |
-| honnef.co/go/tools | 0.3.0 |
+| golang.org/x/tools/gopls | 0.9.0 |
+| honnef.co/go/tools | 0.3.2 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
 | github.com/mgechev/revive | 1.2.1 |
 | github.com/uudashr/gopkgs | 2.0.1+incompatible |
 | github.com/ramya-rao-a/go-outline | 0.0.0-20210608161538-9736a4bde949 |
-| github.com/go-delve/delve | 1.8.3 |
+| github.com/go-delve/delve | 1.9.0 |
 | github.com/golangci/golangci-lint | 1.46.2 |
 
 **Ruby gems and tools**
@@ -91,7 +91,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.37.0 | /usr/bin |
 | [Xdebug](https://xdebug.org/) | 3.1.5 | /usr/local/php/current |
-| [Composer](https://getcomposer.org/) | 2.3.8 | /usr/local/php/current/bin |
+| [Composer](https://getcomposer.org/) | 2.3.9 | /usr/local/php/current/bin |
 | [kubectl](https://github.com/kubernetes/kubectl) | WARNING: This version information is deprecated and will be replaced with the output from kubectl version --short.  Use --output=yaml|json to get the full version.<br />1.24.2 | /usr/local/bin |
 | [Helm](https://github.com/helm/helm) | 3.9.0 | /usr/local/bin |
 | [Docker Compose](https://github.com/docker/compose) | 1.29.2 | /usr/local/bin |
@@ -121,7 +121,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | gdb | 9.2-0ubuntu1~20.04.1 |
 | git | 1:2.37.0-0ppa1~ubuntu20.04.1 |
 | git-lfs (Git Large File Support) | 3.2.0 |
-| gnupg2 | 2.2.19-3ubuntu2.1 |
+| gnupg2 | 2.2.19-3ubuntu2.2 |
 | htop | 2.2.0-2build1 |
 | iproute2 | 5.5.0-1ubuntu1 |
 | iptables | 1.8.4-3ubuntu2 |
@@ -140,11 +140,11 @@ mcr.microsoft.com/devcontainers/universal:dev
 | libkrb5-3 | 1.17-6ubuntu4.1 |
 | liblttng-ust0 | 2.11.0-1 |
 | libnspr4 | 2:4.25-1 |
-| libnss3 | 2:3.49.1-1ubuntu1.7 |
+| libnss3 | 2:3.49.1-1ubuntu1.8 |
 | libpango-1.0-0 | 1.44.7-2ubuntu4 |
 | libpangocairo-1.0-0 | 1.44.7-2ubuntu4 |
 | libsecret-1-dev | 0.20.4-0ubuntu1 |
-| libssl1.1 | 1.1.1f-1ubuntu2.15 |
+| libssl1.1 | 1.1.1f-1ubuntu2.16 |
 | libstdc++6 | 10.3.0-1ubuntu1~20.04 |
 | libx11-6 | 2:1.6.9-2ubuntu1.2 |
 | libx11-xcb1 | 2:1.6.9-2ubuntu1.2 |

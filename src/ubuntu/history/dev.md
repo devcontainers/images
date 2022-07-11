@@ -11,7 +11,7 @@
 
 ## Variant: jammy
 
-**Digest:** sha256:3ff0ec3aea04f2d883e22489a801221a5f3e7622b9e5a2159d6f1698850b3bf6
+**Digest:** sha256:5bd4820297a619d3a3433acac9687a7be0c861237f699dc6f8c0815eb3942a29
 
 **Tags:**
 ```
@@ -44,7 +44,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu22.04
 | curl | 7.81.0-1ubuntu1.3 |
 | dialog | 1.3-20211214-1 |
 | git | 1:2.34.1-1ubuntu1.2 |
-| gnupg2 | 2.2.27-3ubuntu2 |
+| gnupg2 | 2.2.27-3ubuntu2.1 |
 | htop | 3.0.5-7build2 |
 | iproute2 | 5.15.0-1ubuntu2 |
 | jq | 1.6-2.1ubuntu3 |
@@ -78,7 +78,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu22.04
 
 ## Variant: focal
 
-**Digest:** sha256:a615de0b2b98c457d6add575183523433dd13a47cb4cb333413d29e09fc474bd
+**Digest:** sha256:ca924bfd93190b482df94168368365395e67c32d63c56a90bf2b7d2b0f32f1d4
 
 **Tags:**
 ```
@@ -112,7 +112,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 | curl | 7.68.0-1ubuntu2.12 |
 | dialog | 1.3-20190808-1 |
 | git | 1:2.25.1-1ubuntu3.4 |
-| gnupg2 | 2.2.19-3ubuntu2.1 |
+| gnupg2 | 2.2.19-3ubuntu2.2 |
 | htop | 2.2.0-2build1 |
 | iproute2 | 5.5.0-1ubuntu1 |
 | jq | 1.6-1ubuntu0.20.04.1 |
@@ -123,7 +123,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 | libicu66 | 66.1-2ubuntu2.1 |
 | libkrb5-3 | 1.17-6ubuntu4.1 |
 | liblttng-ust0 | 2.11.0-1 |
-| libssl1.1 | 1.1.1f-1ubuntu2.15 |
+| libssl1.1 | 1.1.1f-1ubuntu2.16 |
 | libstdc++6 | 10.3.0-1ubuntu1~20.04 |
 | locales | 2.31-0ubuntu9.9 |
 | lsb-release | 11.1.0ubuntu2 |
@@ -149,7 +149,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 ## Variant: bionic
 
-**Digest:** sha256:de1262379b3af4315491754e229d6c4a8457a3e55273aa5211d05ecc2574687c
+**Digest:** sha256:9aa59002e28d7831c8015a0915859be5146c74b732550091c297e93fa23429c6
 
 **Tags:**
 ```
@@ -182,7 +182,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu18.04
 | curl | 7.58.0-2ubuntu3.19 |
 | dialog | 1.3-20171209-1 |
 | git | 1:2.17.1-1ubuntu0.11 |
-| gnupg2 | 2.2.4-1ubuntu1.5 |
+| gnupg2 | 2.2.4-1ubuntu1.6 |
 | htop | 2.1.0-3 |
 | iproute2 | 4.15.0-2ubuntu1.3 |
 | jq | 1.5+dfsg-2 |
@@ -194,7 +194,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu18.04
 | libkrb5-3 | 1.16-2ubuntu0.2 |
 | liblttng-ust0 | 2.10.1-1 |
 | libssl1.0.0 | 1.0.2n-1ubuntu5.10 |
-| libssl1.1 | 1.1.1-1ubuntu2.1~18.04.19 |
+| libssl1.1 | 1.1.1-1ubuntu2.1~18.04.20 |
 | libstdc++6 | 8.4.0-1ubuntu1~18.04 |
 | locales | 2.27-3ubuntu1.6 |
 | lsb-release | 9.20170808ubuntu1 |
