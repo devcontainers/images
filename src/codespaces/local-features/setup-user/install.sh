@@ -20,6 +20,32 @@ chmod +x /etc/profile.d/00-restore-env.sh
 
 export DEBIAN_FRONTEND=noninteractive
 
-echo "Defaults secure_path=\"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin:/usr/local/share:${PATH}\"" >> /etc/sudoers.d/$USERNAME
+# Enable the oryx tool to generate manifest-dir which is needed for running the postcreate tool
+mkdir -p /opt/oryx && echo "vso-focal" > /opt/oryx/.imagetype
+
+# For the codespaces image, oryx build tool installs the detected platforms in /home/codespace/*. Hence, linking the required current platforms to the /home/codespace/ path and adding it to the PATH
+DOTNET_PATH="/home/codespace/.dotnet"
+ln -snf /usr/local/dotnet/current $DOTNET_PATH
+
+# Oryx tool expects dotnet to be installed at /opt/dotnet but the features download it at /usr/local/*. Hence, linking.
+ln -snf /usr/local/dotnet /opt/dotnet
+ln -snf /usr/local/dotnet/current /opt/dotnet/lts
+
+NODE_PATH="/home/codespace/.nodejs/current"
+ln -snf /usr/local/share/nvm/current $NODE_PATH
+
+PHP_PATH="/home/codespace/.php/current"
+ln -snf /usr/local/php/current $PHP_PATH
+
+PYTHON_PATH="/home/codespace/.python/current"
+ln -snf /usr/local/python/current $PYTHON_PATH
+
+JAVA_PATH="/home/codespace/.java/current"
+ln -snf /usr/local/sdkman/candidates/java/current $JAVA_PATH
+
+RUBY_PATH="/home/codespace/.ruby/current"
+ln -snf /usr/local/rvm/rubies/default $RUBY_PATH
+
+echo "Defaults secure_path=\"${DOTNET_PATH}:${NODE_PATH}:${PHP_PATH}:${PYTHON_PATH}:${JAVA_PATH}:${RUBY_PATH}:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin:/usr/local/share:${PATH}\"" >> /etc/sudoers.d/$USERNAME
 
 echo "Done!"

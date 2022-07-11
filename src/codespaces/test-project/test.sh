@@ -6,13 +6,8 @@ source test-utils.sh codespace
 # Run common tests
 checkCommon
 
-# Check Oryx
-check "oryx" oryx --version
-
 # Check .NET
 check "dotnet" dotnet --list-sdks
-check "oryx-install-dotnet-2.1" oryx prep --skip-detection --platforms-and-versions dotnet=2.1.12
-check "dotnet-2-installed-by-oryx" ls /usr/local/oryx-platforms/dotnet/ | grep 2.1
 echo $(echo "dotnet versions" && ls -a /usr/local/dotnet)
 
 # Check Python
@@ -103,6 +98,42 @@ check "zsh" zsh --version
 # Check that we can run a puppeteer node app.
 yarn
 check "run-puppeteer" node puppeteer.js
+
+# Check Oryx
+check "oryx" oryx --version
+
+# Install platforms with oryx build tool
+check "oryx-install-dotnet-2.1" oryx prep --skip-detection --platforms-and-versions dotnet=2.1.12
+check "dotnet-2-installed-by-oryx" ls /opt/dotnet/ | grep 2.1
+check "dotnet-version-on-path-is-2.1.12" dotnet --version | grep 2.1
+
+check "oryx-install-nodejs-12.22.11" oryx prep --skip-detection --platforms-and-versions nodejs=12.22.11
+check "nodejs-12.22.11-installed-by-oryx" ls /opt/nodejs/ | grep 12.22.11
+check "nodejs-version-on-path-is-2.1.12" node --version | grep v12.22.11
+echo "oryx-nodejs version"
+echo $(which node)
+echo $(node --version)
+
+check "oryx-install-php-7.3.25" oryx prep --skip-detection --platforms-and-versions php=7.3.25
+check "php-7.3.25-installed-by-oryx" ls /opt/php/ | grep 7.3.25
+check "php-version-on-path-is-2.1.12" php --version | grep 7.3.25
+echo "oryx-php version"
+echo $(which php)
+echo $(php --version)
+
+check "oryx-install-java-12.0.2" oryx prep --skip-detection --platforms-and-versions java=12.0.2
+check "java-12.0.2-installed-by-oryx" ls /opt/java/ | grep 12.0.2
+check "java-version-on-path-is-12.0.2" java --version | grep 12.0.2
+echo "oryx-java version"
+echo $(which java)
+echo $(java --version)
+
+check "oryx-install-ruby-2.5.8" oryx prep --skip-detection --platforms-and-versions ruby=2.5.8
+check "ruby-2.5.8-installed-by-oryx" ls /opt/ruby/ | grep 2.5.8
+check "ruby-version-on-path-is-2.5.8" ruby --version | grep 2.5.8
+echo "oryx-ruby version"
+echo $(which ruby)
+echo $(ruby --version)
 
 # Report result
 reportResults
