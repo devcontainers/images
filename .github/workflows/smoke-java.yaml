@@ -27,4 +27,4 @@ jobs:
       id: smoke_test_java
       uses: ./.github/actions/smoke-test
       with:
-        definition: java
+        image: java

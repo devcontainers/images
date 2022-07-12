@@ -137,7 +137,11 @@ async function pushImage(definitionId, repo, release, updateLatest,
                 const context = devContainerJson.build ? devContainerJson.build.context || '.' : devContainerJson.context || '.';
                 const workingDir = path.resolve(dotDevContainerPath, context);
                 let imageNameParams = imageNamesWithVersionTags.reduce((prev, current) => prev.concat(['--image-name', current]), []);
-                imageNameParams.push('--image-name', imageName);
+
+                // Do not build and push the "latest" tag when pushing the "dev" images
+                if (configUtils.getVersionFromRelease(release, definitionId) !== 'dev' || !pushImages) {
+                    imageNameParams.push('--image-name', imageName);
+                }
 
                 const vscodeImageNameParams = vscodeImageNamesWithVersionTags.reduce((prev, current) => prev.concat(['--image-name', current]), []);
                 vscodeImageNameParams.push('--image-name', vscodeImageName);

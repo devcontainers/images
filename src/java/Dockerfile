@@ -1,8 +1,9 @@
-# This base.Dockerfile uses separate build arguments instead of VARIANT
+# This Dockerfile uses separate build arguments instead of VARIANT
 ARG TARGET_JAVA_VERSION=11
 ARG BASE_IMAGE_VERSION_CODENAME=bullseye
 FROM mcr.microsoft.com/devcontainers/base:${BASE_IMAGE_VERSION_CODENAME}
 
+USER root
 ARG TARGET_JAVA_VERSION
 ENV JAVA_HOME /usr/lib/jvm/msopenjdk-${TARGET_JAVA_VERSION}
 ENV PATH "${JAVA_HOME}/bin:${PATH}"

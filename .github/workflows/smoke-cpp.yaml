@@ -25,4 +25,4 @@ jobs:
       id: smoke_test
       uses: ./.github/actions/smoke-test
       with:
-        definition: cpp
+        image: cpp
