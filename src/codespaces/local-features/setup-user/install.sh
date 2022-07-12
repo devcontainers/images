@@ -23,23 +23,19 @@ export DEBIAN_FRONTEND=noninteractive
 # Enable the oryx tool to generate manifest-dir which is needed for running the postcreate tool
 mkdir -p /opt/oryx && echo "vso-focal" > /opt/oryx/.imagetype
 
-HOME_DIR="/home/codespace/"
-chown -R codespace:codespace $HOME_DIR
-chmod -R g+r+w "${HOME_DIR}"
-find "${HOME_DIR}" -type d | xargs -n 1 chmod g+s
 
 OPT_DIR="/opt/"
-chown -R codespace:codespace $OPT_DIR
+chown -R codespace:codespace ${OPT_DIR}
 chmod -R g+r+w "${OPT_DIR}"
 find "${OPT_DIR}" -type d | xargs -n 1 chmod g+s
 
 # For the codespaces image, oryx build tool installs the detected platforms in /home/codespace/*. Hence, linking the required current platforms to the /home/codespace/ path and adding it to the PATH
 DOTNET_PATH="/home/codespace/.dotnet"
 ln -snf /usr/local/dotnet/current $DOTNET_PATH
-
-# Oryx tool expects dotnet to be installed at /opt/dotnet but the features download it at /usr/local/*. Hence, linking.
-ln -snf /usr/local/dotnet /opt/dotnet
-ln -snf /usr/local/dotnet/current /opt/dotnet/lts
+mkdir -p /opt/dotnet/lts
+cp -R /usr/local/dotnet/current/dotnet /opt/dotnet/lts
+cp -R /usr/local/dotnet/current/LICENSE.txt /opt/dotnet/lts
+cp -R /usr/local/dotnet/current/ThirdPartyNotices.txt /opt/dotnet/lts
 
 NODE_PATH="/home/codespace/.nodejs/current"
 mkdir -p $NODE_PATH
@@ -60,6 +56,11 @@ ln -snf /usr/local/sdkman/candidates/java/current $JAVA_PATH
 RUBY_PATH="/home/codespace/.ruby/current"
 mkdir -p $RUBY_PATH
 ln -snf /usr/local/rvm/rubies/default $RUBY_PATH
+
+HOME_DIR="/home/codespace/"
+chown -R codespace:codespace ${HOME_DIR}
+chmod -R g+r+w "${HOME_DIR}"
+find "${HOME_DIR}" -type d | xargs -n 1 chmod g+s
 
 echo "Defaults secure_path=\"${DOTNET_PATH}:${NODE_PATH}:${PHP_PATH}:${PYTHON_PATH}:${JAVA_PATH}:${RUBY_PATH}:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin:/usr/local/share:${PATH}\"" >> /etc/sudoers.d/$USERNAME
 

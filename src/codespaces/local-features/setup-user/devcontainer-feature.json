@@ -1,6 +1,9 @@
 {
     "id": "setup-user",
     "name": "Setup Secure Path",
+    "containerEnv": {
+        "PATH": "/home/codespace/.dotnet:/home/codespace/.nodejs/current:/home/codespace/.php/current:/home/codespace/.python/current:/home/codespace/.java/current:/home/codespace/.ruby/current:${PATH}"
+    },
     "install": {
         "app": "",
         "file": "install.sh"
