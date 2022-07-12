@@ -29,7 +29,7 @@ chmod -R g+r+w "${HOME_DIR}"
 find "${HOME_DIR}" -type d | xargs -n 1 chmod g+s
 
 OPT_DIR="/opt/"
-chown -R codespace:codespace OPT_DIR
+chown -R codespace:codespace $OPT_DIR
 chmod -R g+r+w "${OPT_DIR}"
 find "${OPT_DIR}" -type d | xargs -n 1 chmod g+s
 
