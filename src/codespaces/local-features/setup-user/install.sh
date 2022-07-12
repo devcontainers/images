@@ -23,8 +23,15 @@ export DEBIAN_FRONTEND=noninteractive
 # Enable the oryx tool to generate manifest-dir which is needed for running the postcreate tool
 mkdir -p /opt/oryx && echo "vso-focal" > /opt/oryx/.imagetype
 
-chown -R codespace:codespace /home/codespace/
-chown -R codespace:codespace /opt/
+HOME_DIR="/home/codespace/"
+chown -R codespace:codespace $HOME_DIR
+chmod -R g+r+w "${HOME_DIR}"
+find "${HOME_DIR}" -type d | xargs -n 1 chmod g+s
+
+OPT_DIR="/opt/"
+chown -R codespace:codespace OPT_DIR
+chmod -R g+r+w "${OPT_DIR}"
+find "${OPT_DIR}" -type d | xargs -n 1 chmod g+s
 
 # For the codespaces image, oryx build tool installs the detected platforms in /home/codespace/*. Hence, linking the required current platforms to the /home/codespace/ path and adding it to the PATH
 DOTNET_PATH="/home/codespace/.dotnet"

@@ -135,5 +135,7 @@ echo "oryx-ruby version"
 echo $(which ruby)
 echo $(ruby --version)
 
+echo $(ls -la /opt)
+
 # Report result
 reportResults
