@@ -138,14 +138,14 @@ async function pushImage(definitionId, repo, release, updateLatest,
                 const workingDir = path.resolve(dotDevContainerPath, context);
                 let imageNameParams = imageNamesWithVersionTags.reduce((prev, current) => prev.concat(['--image-name', current]), []);
 
+                const vscodeImageNameParams = vscodeImageNamesWithVersionTags.reduce((prev, current) => prev.concat(['--image-name', current]), []);
+                imageNameParams = imageNameParams.concat(vscodeImageNameParams);
+
                 // Do not build and push the "latest" tag when pushing the "dev" images
                 if (configUtils.getVersionFromRelease(release, definitionId) !== 'dev' || !pushImages) {
                     imageNameParams.push('--image-name', imageName);
+                    imageNameParams.push('--image-name', vscodeImageName);
                 }
-
-                const vscodeImageNameParams = vscodeImageNamesWithVersionTags.reduce((prev, current) => prev.concat(['--image-name', current]), []);
-                vscodeImageNameParams.push('--image-name', vscodeImageName);
-                imageNameParams = imageNameParams.concat(vscodeImageNameParams);
 
                 const spawnOpts = { stdio: 'inherit', cwd: workingDir, shell: true };
                 await asyncUtils.spawn('npx --yes devcontainers-cli-0.6.3.tgz', [
