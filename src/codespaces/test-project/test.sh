@@ -102,5 +102,35 @@ check "run-puppeteer" node puppeteer.js
 # Check Oryx
 check "oryx" oryx --version
 
+# Install platforms with oryx build tool
+mkdir -p /opt/dotnet/2.1.801
+check "oryx-install-dotnet-2.1" oryx prep --skip-detection --platforms-and-versions dotnet=2.1.12
+check "dotnet-2-installed-by-oryx" ls /opt/dotnet/ | grep 2.1
+check "dotnet-version-on-path-is-2.1.12" dotnet --version | grep 2.1
+
+mkdir -p /opt/nodejs/12.22.11
+check "oryx-install-nodejs-12.22.11" oryx prep --skip-detection --platforms-and-versions nodejs=12.22.11
+check "nodejs-12.22.11-installed-by-oryx" ls /opt/nodejs/ | grep 12.22.11
+check "nodejs-version-on-path-is-2.1.12" node --version | grep v12.22.11
+echo "oryx-nodejs version"
+echo $(which node)
+echo $(node --version)
+
+mkdir -p /opt/php/7.3.25
+check "oryx-install-php-7.3.25" oryx prep --skip-detection --platforms-and-versions php=7.3.25
+check "php-7.3.25-installed-by-oryx" ls /opt/php/ | grep 7.3.25
+check "php-version-on-path-is-2.1.12" php --version | grep 7.3.25
+echo "oryx-php version"
+echo $(which php)
+echo $(php --version)
+
+mkdir -p /opt/java/12.0.2
+check "oryx-install-java-12.0.2" oryx prep --skip-detection --platforms-and-versions java=12.0.2
+check "java-12.0.2-installed-by-oryx" ls /opt/java/ | grep 12.0.2
+check "java-version-on-path-is-12.0.2" java --version | grep 12.0.2
+echo "oryx-java version"
+echo $(which java)
+echo $(java --version)
+
 # Report result
 reportResults
