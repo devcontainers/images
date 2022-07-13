@@ -20,17 +20,11 @@ chmod +x /etc/profile.d/00-restore-env.sh
 
 export DEBIAN_FRONTEND=noninteractive
 
-# Enable the oryx tool to generate manifest-dir which is needed for running the postcreate tool
+# Enables the oryx tool to generate manifest-dir which is needed for running the postcreate tool
 mkdir -p /opt/oryx && echo "vso-focal" > /opt/oryx/.imagetype
 
-# For the codespaces image, oryx build tool installs the detected platforms in /home/codespace/*. Hence, linking the required current platforms to the /home/codespace/ path and adding it to the PATH
-DOTNET_PATH="/home/codespace/.dotnet"
-ln -snf /usr/local/dotnet/current $DOTNET_PATH
-mkdir -p /opt/dotnet/lts
-cp -R /usr/local/dotnet/current/dotnet /opt/dotnet/lts
-cp -R /usr/local/dotnet/current/LICENSE.txt /opt/dotnet/lts
-cp -R /usr/local/dotnet/current/ThirdPartyNotices.txt /opt/dotnet/lts
-
+# For the codespaces image, oryx build tool installs the detected platforms in /home/codespace/*. Hence, linking current platforms to the /home/codespace/ path and adding it to the PATH.
+# This ensures that whatever platfornm versions oryx detects and installs are set as root.
 NODE_PATH="/home/codespace/.nodejs/current"
 mkdir -p /home/codespace/.nodejs
 ln -snf /usr/local/share/nvm/current $NODE_PATH
@@ -50,6 +44,13 @@ ln -snf /usr/local/sdkman/candidates/java/current $JAVA_PATH
 RUBY_PATH="/home/codespace/.ruby/current"
 mkdir -p /home/codespace/.ruby
 ln -snf /usr/local/rvm/rubies/default $RUBY_PATH
+
+DOTNET_PATH="/home/codespace/.dotnet"
+ln -snf /usr/local/dotnet/current $DOTNET_PATH
+mkdir -p /opt/dotnet/lts
+cp -R /usr/local/dotnet/current/dotnet /opt/dotnet/lts
+cp -R /usr/local/dotnet/current/LICENSE.txt /opt/dotnet/lts
+cp -R /usr/local/dotnet/current/ThirdPartyNotices.txt /opt/dotnet/lts
 
 HOME_DIR="/home/codespace/"
 chown -R codespace:codespace ${HOME_DIR}
