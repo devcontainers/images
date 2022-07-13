@@ -178,12 +178,12 @@
                 "version": "latest"
             }
         },
-        {
-            "id": "devcontainers/features/kubectl-helm-minikube@v0.0.2",
-            "options": {
-                "version": "latest"
-            }
-        },
+        // { // temp until the feature bug is fixed
+        //     "id": "devcontainers/features/kubectl-helm-minikube@v0.0.2",
+        //     "options": {
+        //         "version": "latest"
+        //     }
+        // },
         {
             "id": "devcontainers/features/git@v0.0.2",
             "options": {
