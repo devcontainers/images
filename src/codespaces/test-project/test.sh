@@ -128,18 +128,5 @@ echo "oryx-java version"
 echo $(which java)
 echo $(java --version)
 
-check "oryx-install-ruby-2.5.8" oryx prep --skip-detection --platforms-and-versions ruby=2.5.8
-check "ruby-2.5.8-installed-by-oryx" ls /opt/ruby/ | grep 2.5.8
-check "ruby-version-on-path-is-2.5.8" ruby --version | grep 2.5.8
-echo "oryx-ruby version"
-echo $(which ruby)
-echo $(ruby --version)
-
-echo $(ls -la /opt)
-
-echo $PATH
-
-echo $(ls -la /usr/local)
-
 # Report result
 reportResults
