@@ -23,12 +23,6 @@ export DEBIAN_FRONTEND=noninteractive
 # Enable the oryx tool to generate manifest-dir which is needed for running the postcreate tool
 mkdir -p /opt/oryx && echo "vso-focal" > /opt/oryx/.imagetype
 
-
-OPT_DIR="/opt/"
-chown -R codespace:codespace ${OPT_DIR}
-chmod -R g+r+w "${OPT_DIR}"
-find "${OPT_DIR}" -type d | xargs -n 1 chmod g+s
-
 # For the codespaces image, oryx build tool installs the detected platforms in /home/codespace/*. Hence, linking the required current platforms to the /home/codespace/ path and adding it to the PATH
 DOTNET_PATH="/home/codespace/.dotnet"
 ln -snf /usr/local/dotnet/current $DOTNET_PATH
@@ -38,23 +32,23 @@ cp -R /usr/local/dotnet/current/LICENSE.txt /opt/dotnet/lts
 cp -R /usr/local/dotnet/current/ThirdPartyNotices.txt /opt/dotnet/lts
 
 NODE_PATH="/home/codespace/.nodejs/current"
-mkdir -p $NODE_PATH
+mkdir -p /home/codespace/.nodejs
 ln -snf /usr/local/share/nvm/current $NODE_PATH
 
 PHP_PATH="/home/codespace/.php/current"
-mkdir -p $PHP_PATH
+mkdir -p /home/codespace/.php
 ln -snf /usr/local/php/current $PHP_PATH
 
 PYTHON_PATH="/home/codespace/.python/current"
-mkdir -p $PYTHON_PATH
+mkdir -p /home/codespace/.python
 ln -snf /usr/local/python/current $PYTHON_PATH
 
 JAVA_PATH="/home/codespace/.java/current"
-mkdir -p $JAVA_PATH
+mkdir -p /home/codespace/.java
 ln -snf /usr/local/sdkman/candidates/java/current $JAVA_PATH
 
 RUBY_PATH="/home/codespace/.ruby/current"
-mkdir -p $RUBY_PATH
+mkdir -p /home/codespace/.ruby
 ln -snf /usr/local/rvm/rubies/default $RUBY_PATH
 
 HOME_DIR="/home/codespace/"
@@ -62,6 +56,11 @@ chown -R codespace:codespace ${HOME_DIR}
 chmod -R g+r+w "${HOME_DIR}"
 find "${HOME_DIR}" -type d | xargs -n 1 chmod g+s
 
-echo "Defaults secure_path=\"${DOTNET_PATH}:${NODE_PATH}:${PHP_PATH}:${PYTHON_PATH}:${JAVA_PATH}:${RUBY_PATH}:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin:/usr/local/share:${PATH}\"" >> /etc/sudoers.d/$USERNAME
+OPT_DIR="/opt/"
+chown -R codespace:codespace ${OPT_DIR}
+chmod -R g+r+w "${OPT_DIR}"
+find "${OPT_DIR}" -type d | xargs -n 1 chmod g+s
+
+echo "Defaults secure_path=\"${DOTNET_PATH}:${NODE_PATH}/bin:${PHP_PATH}/bin:${PYTHON_PATH}/bin:${JAVA_PATH}/bin:${RUBY_PATH}/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin:/usr/local/share:${PATH}\"" >> /etc/sudoers.d/$USERNAME
 
 echo "Done!"
