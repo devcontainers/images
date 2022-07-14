@@ -1,16 +1,12 @@
 {
-	"build": {
-		"dockerfile": "./Dockerfile",
-		"context": "."
-	},
-	"features": [
-		{
-			"id": "devcontainers/features/python@v0.0.2",
-			"options": {
-				"version": "none"
-			}
-		}
-	],
+    "build": {
+        "dockerfile": "./Dockerfile",
+        "context": "."
+    },
+    "features": {
+        "devcontainers/features/python@v0.0.2": "none",
+        "devcontainers/features/node@v0.0.2": "none"
+    },
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
