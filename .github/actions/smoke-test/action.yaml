@@ -1,7 +1,7 @@
 name: 'VSCDC smoke test'
 inputs:
-  definition:
-    description: 'Definition to test'
+  image:
+    description: 'Image to test'
     required: true
     default: 'debian'
 
@@ -19,9 +19,9 @@ runs:
     - name: Build image
       id: build_image
       shell: bash
-      run: ${{ github.action_path }}/build.sh ${{ inputs.definition }}
+      run: ${{ github.action_path }}/build.sh ${{ inputs.image }}
 
     - name: Test image
       id: test_image
       shell: bash
-      run: ${{ github.action_path }}/test.sh  ${{ inputs.definition }}
+      run: ${{ github.action_path }}/test.sh  ${{ inputs.image }}

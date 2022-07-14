@@ -1,23 +1,27 @@
 {
-	"definitionVersion": "0.202.3",
+	"imageVersion": "0.202.3",
 	"build": {
 		"latest": true,
 		"rootDistro": "debian",
+		"architectures": [
+			"linux/amd64",
+			"linux/arm64"
+		],
 		"tags": [
 			"miniconda:${VERSION}-3"
 		]
 	},
-	"architectures": ["linux/amd64", "linux/arm64"],
 	"dependencies": {
 		"image": "continuumio/miniconda3:latest",
 		"imageLink": "https://hub.docker.com/r/continuumio/miniconda3",
-		"debian": [{
-			"cgIgnore": false,
-			"name": "yarn"
-		}],
+		"debian": [
+			{
+				"cgIgnore": false,
+				"name": "yarn"
+			}
+		],
 		"git": {
-			"Oh My Zsh!": "/home/vscode/.oh-my-zsh",
-			"nvm": "/usr/local/share/nvm"
+			"Oh My Zsh!": "/home/vscode/.oh-my-zsh"
 		},
 		"pipx": [
 			"pylint",

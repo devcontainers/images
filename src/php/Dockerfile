@@ -2,12 +2,6 @@
 ARG VARIANT=7-apache-bullseye
 FROM php:${VARIANT}
 
-# Install needed packages and setup non-root user. Use a separate RUN statement to add your own dependencies.
-ARG USERNAME=vscode
-RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends lynx \
-    && apt-get clean -y && rm -rf /var/lib/apt/lists/*
-
 # Install xdebug
 RUN yes | pecl install xdebug \
     && echo "zend_extension=$(find /usr/local/lib/php/extensions/ -name xdebug.so)" > /usr/local/etc/php/conf.d/xdebug.ini \

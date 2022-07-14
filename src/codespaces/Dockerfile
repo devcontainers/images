@@ -2,6 +2,7 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License. See https://go.microsoft.com/fwlink/?linkid=2090316 for license information.
 #-------------------------------------------------------------------------------------------------------------
+
 FROM ubuntu:focal
 
 COPY first-run-notice.txt /tmp/scripts/
@@ -91,8 +92,8 @@ RUN apt-get install -yq fish \
     && printf "if type code-insiders > /dev/null 2>&1; and not type code > /dev/null 2>&1\n  alias code=code-insiders\nend" >> /etc/fish/conf.d/code_alias.fish
 
 # This enabled the oryx tool to generate manifest-dir which is needed for running the postcreate tool
-RUN mkdir -p /usr/local/oryx\
-    && echo "vso-focal" > /usr/local/oryx/.imagetype
+RUN mkdir -p /opt/oryx \
+    && echo "vso-focal" > /opt/oryx/.imagetype
 
 # Remove scripts now that we're done with them
 RUN apt-get clean -y && rm -rf /tmp/scripts

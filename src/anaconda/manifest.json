@@ -1,9 +1,12 @@
 {
-	"definitionVersion": "0.202.6",
+	"imageVersion": "0.202.6",
 	"build": {
 		"latest": true,
 		"rootDistro": "debian",
-		"architectures": ["linux/amd64", "linux/arm64"],
+		"architectures": [
+			"linux/amd64",
+			"linux/arm64"
+		],
 		"tags": [
 			"anaconda:${VERSION}-3"
 		]
@@ -11,13 +14,14 @@
 	"dependencies": {
 		"image": "continuumio/anaconda3:latest",
 		"imageLink": "https://hub.docker.com/r/continuumio/anaconda3",
-		"debian": [{
-			"cgIgnore": false,
-			"name": "yarn"
-		}],
+		"debian": [
+			{
+				"cgIgnore": false,
+				"name": "yarn"
+			}
+		],
 		"git": {
-			"Oh My Zsh!": "/home/vscode/.oh-my-zsh",
-			"nvm": "/usr/local/share/nvm"
+			"Oh My Zsh!": "/home/vscode/.oh-my-zsh"
 		},
 		"other": {
 			"conda": {
@@ -26,8 +30,8 @@
 			},
 			"anaconda": {
 				"cgIgnore": true,
-				"path":"/opt/conda",
-				"versionCommand":  "conda list anaconda$ | grep -oP 'anaconda\\s+\\K[^\\s]+'"
+				"path": "/opt/conda",
+				"versionCommand": "conda list anaconda$ | grep -oP 'anaconda\\s+\\K[^\\s]+'"
 			}
 		},
 		"languages": {

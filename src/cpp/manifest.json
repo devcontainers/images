@@ -1,22 +1,41 @@
 {
-	"variants": ["bullseye", "buster", "jammy", "focal", "bionic"],
-	"definitionVersion": "0.205.0",
+	"variants": [
+		"bullseye",
+		"buster",
+		"jammy",
+		"focal",
+		"bionic"
+	],
+	"imageVersion": "0.205.0",
 	"build": {
 		"latest": "bullseye",
 		"parent": {
 			"bullseye": "debian",
-			"buster": "debian", 
+			"buster": "debian",
 			"jammy": "ubuntu",
 			"focal": "ubuntu",
 			"bionic": "ubuntu"
 		},
 		"rootDistro": "debian",
 		"architectures": {
-			"bullseye": ["linux/amd64", "linux/arm64"],
-			"buster": ["linux/amd64"],
-			"jammy": ["linux/amd64", "linux/arm64"],
-			"focal": ["linux/amd64"],
-			"bionic": ["linux/amd64", "linux/arm64"]
+			"bullseye": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"buster": [
+				"linux/amd64"
+			],
+			"jammy": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"focal": [
+				"linux/amd64"
+			],
+			"bionic": [
+				"linux/amd64",
+				"linux/arm64"
+			]
 		},
 		"tags": [
 			"cpp:${VERSION}-${VARIANT}"

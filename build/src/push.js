@@ -35,7 +35,7 @@ async function push(repo, release, updateLatest, registry, registryPath, stubReg
     // be tweaked down the road to use a different driver like using separate machines per architecture.
     // See https://docs.docker.com/engine/reference/commandline/buildx_create/
     console.log('(*) Setting up builder...');
-    createOrUseBuilder();
+    await createOrUseBuilder();
 
     // This step sets up the QEMU emulators for cross-platform builds. See https://github.com/docker/buildx#building-multi-platform-images
     await asyncUtils.spawn('docker', ['run', '--privileged', '--rm', 'tonistiigi/binfmt', '--install', 'all']);
@@ -132,9 +132,12 @@ async function pushImage(definitionId, repo, release, updateLatest,
                 const context = devContainerJson.build ? devContainerJson.build.context || '.' : devContainerJson.context || '.';
                 const workingDir = path.resolve(dotDevContainerPath, context);
                 const imageNameParams = imageNamesWithVersionTags.reduce((prev, current) => prev.concat(['--image-name', current]), []);
-                imageNameParams.push('--image-name', imageName);
 
-                await createOrUseBuilder();
+                // Do not build and push the "latest" tag when pushing the "dev" images
+                if (configUtils.getVersionFromRelease(release, definitionId) !== 'dev' || !pushImages) {
+                    imageNameParams.push('--image-name', imageName);
+                }
+
                 const spawnOpts = { stdio: 'inherit', cwd: workingDir, shell: true };
                 await asyncUtils.spawn('npx --yes devcontainers-cli-0.6.4.tgz', [
                     'build',
@@ -228,12 +231,13 @@ async function isImageAlreadyPublished(registryName, repositoryName, tagName) {
 
 async function createOrUseBuilder() {
     const builders = await asyncUtils.exec('docker buildx ls');
-    if(builders.indexOf(builderName) < 0) {
+    if (builders.indexOf(builderName) < 0) {
         await asyncUtils.spawn('docker', ['buildx', 'create', '--use', '--name', builderName]);
     } else {
         await asyncUtils.spawn('docker', ['buildx', 'use', builderName]);
     }
 }
+
 
 module.exports = {
     push: push

@@ -19,8 +19,8 @@ on:
         description: 'Overwrite existing files'
         required: true
         default: 'true'
-      definition:
-        description: 'Definition ID (Optional)'
+      image:
+        description: 'Image name (Optional)'
         required: false
         default: ''
 
@@ -46,12 +46,12 @@ jobs:
       with:
         path: 'ref'
         ref: ${{ github.ref }}
-        
-    - name: Checkout release
-      id: checkout_release
+  
+    - name: Checkout
+      id: checkout_main
       uses: actions/checkout@v2
       with:
-        path: 'release'
+        path: 'temp-build'
         ref: ${{ github.event.inputs.release }}
 
     - name: Azure CLI login
@@ -68,11 +68,11 @@ jobs:
         # ACR login
         ACR_REGISTRY_NAME=$(echo ${{ secrets.REGISTRY }} | grep -oP '(.+)(?=\.azurecr\.io)')
         az acr login --name $ACR_REGISTRY_NAME
-
-        # Go to the release, copy the build tool from ref since this is the version for the workflow
-        cd "$GITHUB_WORKSPACE/release"
+        # Go to the temp-build, copy the build tool from ref since this is the version for the workflow
+        cd "$GITHUB_WORKSPACE/temp-build"
         rm -rf build node_modules
-        cp -r "$GITHUB_WORKSPACE/ref/build" "$GITHUB_WORKSPACE/release/"
+        cp -r "$GITHUB_WORKSPACE/ref/build" "$GITHUB_WORKSPACE/temp-build/"
+
         yarn install
 
         # Pull images and update manifest.json, but output back to ref
@@ -87,7 +87,7 @@ jobs:
                           --output-path "$GITHUB_WORKSPACE/ref" \
                           $(if [ "${{ github.event.inputs.overwrite }}" = "false" ]; then echo '--no-overwrite'; else echo '--overwrite'; fi) \
                           $(if [ "${{ github.event.inputs.cg }}" = "false" ]; then echo '--no-cg'; else echo '--cg'; fi) \
-                          ${{ github.event.inputs.definition }}
+                          ${{ github.event.inputs.image }}
 
     - name: Push image information
       id: push_image_info
