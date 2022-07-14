@@ -6,13 +6,14 @@ source test-utils.sh vscode
 # Run common tests
 checkCommon
 
-# Actual tests
-check "php" php --version
-check "apache2ctl" which apache2ctl
-
+# Image specific tests
+check "jekyll" jekyll --version
+check "gem" gem --version
+check "ruby" ruby --version
+check "bundler" bundler --version
+check "github-pages" github-pages --version
 check "nvm" bash -c ". /usr/local/share/nvm/nvm.sh && nvm install 10"
 check "nvm-node" bash -c ". /usr/local/share/nvm/nvm.sh && node --version"
-check "yarn" bash -c ". /usr/local/share/nvm/nvm.sh && yarn --version"
 
 # Report result
 reportResults
