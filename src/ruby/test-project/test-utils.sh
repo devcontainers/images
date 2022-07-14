@@ -146,19 +146,3 @@ fixTestProjectFolderPrivs() {
         fi
     fi
 }
-
-checkVersionCount() {
-    LABEL=$1
-    count=$2
-    expectedCount=$3
-    echo -e "\n🧪 Testing $LABEL"
-
-    if [ $count == $expectedCount ]; then
-        echo "✅  Passed!"
-        return 0
-    else
-        echoStderr "❌ $LABEL check failed."
-        FAILED+=("$LABEL")
-        return 1
-    fi
-}
