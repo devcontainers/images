@@ -153,7 +153,7 @@ checkVersionCount() {
     expectedCount=$3
     echo -e "\n🧪 Testing $LABEL"
 
-    if [ $count == $expectedCount ]; then
+    if [ "$count" == "$expectedCount" ]; then
         echo "✅  Passed!"
         return 0
     else

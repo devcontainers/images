@@ -12,7 +12,7 @@ check "oryx" oryx --version
 # Check .NET
 check "dotnet" dotnet --list-sdks
 count=$(ls /usr/local/dotnet | wc -l)
-expected=3 # 2 version folders + 1 current folder which links to either one of the version
+expectedCount=3 # 2 version folders + 1 current folder which links to either one of the version
 checkVersionCount "two versions of dotnet are present" $count $expectedCount
 echo $(echo "list of installed dotnet versions" && ls -a /usr/local/dotnet)
 
@@ -31,7 +31,7 @@ check "pydocstyle" pydocstyle --version
 check "bandit" bandit --version
 check "virtualenv" virtualenv --version
 count=$(ls /usr/local/python | wc -l)
-expected=3 # 2 version folders + 1 current folder which links to either one of the version
+expectedCount=3 # 2 version folders + 1 current folder which links to either one of the version
 checkVersionCount "two versions of python are present" $count $expectedCount
 echo $(echo "python versions" && ls -a /usr/local/python)
 echo $(echo "pip list" pip list)
@@ -57,7 +57,7 @@ check "sdkman" bash -c ". /usr/local/sdkman/bin/sdkman-init.sh && sdk version"
 check "gradle" gradle --version
 check "maven" mvn --version
 count=$(ls /usr/local/sdkman/candidates/java | wc -l)
-expected=3 # 2 version folders + 1 current folder which links to either one of the version
+expectedCount=3 # 2 version folders + 1 current folder which links to either one of the version
 checkVersionCount "two versions of java are present" $count $expectedCount
 echo $(echo "java versions" && ls -a /usr/local/sdkman/candidates/java)
 
@@ -69,7 +69,7 @@ check "gems" gem --version
 check "rake" rake --version
 check "jekyll" jekyll --version
 count=$(ls /usr/local/rvm/gems | wc -l)
-expected=6 # 2 version folders + 2 global folders for each version + 1 default folder which links to either one of the version + 1 cache folder
+expectedCount=6 # 2 version folders + 2 global folders for each version + 1 default folder which links to either one of the version + 1 cache folder
 checkVersionCount "two versions of ruby are present" $count $expectedCount
 echo $(echo "ruby versions" && ls -a /usr/local/rvm/rubies)
 
@@ -80,7 +80,7 @@ check "nvs" bash -c ". /usr/local/nvs/nvs.sh && nvs --version"
 check "yarn" yarn --version
 check "npm" npm --version
 count=$(ls /usr/local/share/nvm/versions/node | wc -l)
-expected=2
+expectedCount=2
 checkVersionCount "two versions of node are present" $count $expectedCount
 echo $(echo "node versions" && ls -a /usr/local/share/nvm/versions/node)
 
@@ -90,7 +90,7 @@ check "php composer" composer --version
 check "pecl" pecl version
 check "Xdebug" php --version | grep 'Xdebug'
 count=$(ls /usr/local/php | wc -l)
-expected=3 # 2 version folders + 1 current folder which links to either one of the version
+expectedCount=3 # 2 version folders + 1 current folder which links to either one of the version
 checkVersionCount "two versions of php are present" $count $expectedCount
 echo $(echo "php versions" && ls -a /usr/local/php)
 
