@@ -168,7 +168,7 @@
 			},
 			"PHP": {
 				"cgIgnore": true,
-				"versionCommand": "ls /usr/local/.php | grep -oE '[0-9]+\\.[0-9]+\\.[0-9]+'",
+				"versionCommand": "ls /usr/local/php | grep -oE '[0-9]+\\.[0-9]+\\.[0-9]+'",
 				"path": "/usr/local/php/&lt;version&gt;"
 			},
 			"GCC": {
