@@ -91,10 +91,6 @@ RUN apt-get install -yq fish \
     && printf "$FISH_PROMPT" >> /etc/fish/functions/fish_prompt.fish \
     && printf "if type code-insiders > /dev/null 2>&1; and not type code > /dev/null 2>&1\n  alias code=code-insiders\nend" >> /etc/fish/conf.d/code_alias.fish
 
-# This enabled the oryx tool to generate manifest-dir which is needed for running the postcreate tool
-RUN mkdir -p /opt/oryx \
-    && echo "vso-focal" > /opt/oryx/.imagetype
-
 # Remove scripts now that we're done with them
 RUN apt-get clean -y && rm -rf /tmp/scripts
 

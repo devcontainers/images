@@ -3,31 +3,14 @@
         "dockerfile": "./Dockerfile",
         "context": "."
     },
-    "features": [
-        {
-            "id": "devcontainers/features/java@v0.0.2",
-            "options": {
-                "version": "none"
-            }
-        },
-        {
-            "id": "./local-features/maven",
-            "options": {
-                "version": "latest"
-            }
-        },
-        {
-            "id": "./local-features/gradle",
-            "options": {
-                "version": "latest"
-            }
-        },
-        {
-            "id": "devcontainers/features/node@v0.0.2",
-            "options": {
-                "version": "none"
-            }
-        }
+    "features": {
+        "devcontainers/features/java@v0.0.2": "none",
+        "./local-features/maven": "latest",
+        "./local-features/gradle": "latest",
+        "devcontainers/features/node@v0.0.2": "none"
+    },
+    "overrideFeatureInstallOrder": [
+        "devcontainers/features/java@v0.0.2"
     ],
     // Configure tool-specific properties.
     "customizations": {

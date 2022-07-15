@@ -6,7 +6,7 @@ source test-utils.sh vscode
 # Run common tests
 checkCommon
 
-# Definition specific tests
+# Image specific tests
 check "dotnet" dotnet --info
 check "nuget" dotnet restore
 check "msbuild" dotnet msbuild
