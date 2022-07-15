@@ -560,9 +560,9 @@
             "Component": {
                 "Type": "other",
                 "Other": {
-                    "Name": "Docker Image: mcr.microsoft.com/oryx/build",
-                    "Version": "vso-focal-20210728.1",
-                    "DownloadUrl": "https://github.com/microsoft/oryx"
+                    "Name": "Docker Image: ubuntu",
+                    "Version": "focal",
+                    "DownloadUrl": "https://hub.docker.com/_/ubuntu"
                 }
             }
         },
