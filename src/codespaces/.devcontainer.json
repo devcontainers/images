@@ -100,7 +100,7 @@
         "./local-features/gradle": "latest",
         "devcontainers/features/go@v0.0.2": {
             "version": "latest"
-        }
+        },
         "./local-features/jekyll": "latest",
         "devcontainers/features/oryx@v0.0.2": "latest",
         "./local-features/setup-user": "latest"
