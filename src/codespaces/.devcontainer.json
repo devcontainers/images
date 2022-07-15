@@ -53,13 +53,13 @@
             "version": "16",
             "additional_versions": "14"
         },
-        "./local-features/nvs": "latest",
+        "nvs": "latest",
         "devcontainers/features/python@v0.0.2": {
             "version": "3.10",
             "additional_versions": "3.9",
             "install_jupyterlab": "true"
         },
-        "./local-features/machine-learning-packages": "latest",
+        // "./local-features/machine-learning-packages": "latest",
         "devcontainers/features/php@v0.0.2": {
             "version": "8.1.4",
             "additional_versions": "8.0.16",
@@ -76,9 +76,9 @@
             "version": "17",
             "additional_versions": "11"
         },
-        "./local-features/maven": {
-            "version": "3"
-        },
+        // "./local-features/maven": {
+        //     "version": "3"
+        // },
         "devcontainers/features/sshd@v0.0.2": {
             "version": "latest"
         },
@@ -97,13 +97,13 @@
         "devcontainers/features/git@v0.0.2": {
             "version": "latest"
         },
-        "./local-features/gradle": "latest",
+        // "./local-features/gradle": "latest",
         "devcontainers/features/go@v0.0.2": {
             "version": "latest"
         }
-        "./local-features/jekyll": "latest",
-        "devcontainers/features/oryx@v0.0.2": "latest",
-        "./local-features/setup-user": "latest"
+        // "./local-features/jekyll": "latest",
+        // "devcontainers/features/oryx@v0.0.2": "latest",
+        // "./local-features/setup-user": "latest"
     },
     "overrideFeatureInstallOrder": [
         "devcontainers/features/common@v0.0.2",
