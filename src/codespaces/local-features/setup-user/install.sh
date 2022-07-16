@@ -21,7 +21,9 @@ chmod +x /etc/profile.d/00-restore-env.sh
 export DEBIAN_FRONTEND=noninteractive
 
 # Enables the oryx tool to generate manifest-dir which is needed for running the postcreate tool
+DEBIAN_FLAVOR="focal-scm"
 mkdir -p /opt/oryx && echo "vso-focal" > /opt/oryx/.imagetype
+echo "DEBIAN|${DEBIAN_FLAVOR}" | tr '[a-z]' '[A-Z]' > /opt/oryx/.ostype
 
 # For the codespaces image, oryx build tool installs the detected platforms in /home/codespace/*. Hence, linking current platforms to the /home/codespace/ path and adding it to the PATH.
 # This ensures that whatever platfornm versions oryx detects and installs are set as root.
