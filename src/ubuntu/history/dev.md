@@ -11,7 +11,7 @@
 
 ## Variant: jammy
 
-**Digest:** sha256:5bd4820297a619d3a3433acac9687a7be0c861237f699dc6f8c0815eb3942a29
+**Digest:** sha256:36519e0cc5edda5e0f5ce4c361a1b446ed334ad6e93df486e0875569e984d71c
 
 **Tags:**
 ```
@@ -32,7 +32,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu22.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4c82a2eedf0c43d47601ffa8b0303ed1326fab8f | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 249c708ed3a4a7a63d16a6e911a46b6fb9623cbd | /home/vscode/.oh-my-zsh |
 
 **Additional linux tools and packages**
 
@@ -43,7 +43,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu22.04
 | ca-certificates | 20211016 |
 | curl | 7.81.0-1ubuntu1.3 |
 | dialog | 1.3-20211214-1 |
-| git | 1:2.34.1-1ubuntu1.2 |
+| git | 1:2.34.1-1ubuntu1.4 |
 | gnupg2 | 2.2.27-3ubuntu2.1 |
 | htop | 3.0.5-7build2 |
 | iproute2 | 5.15.0-1ubuntu2 |
@@ -78,7 +78,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu22.04
 
 ## Variant: focal
 
-**Digest:** sha256:ca924bfd93190b482df94168368365395e67c32d63c56a90bf2b7d2b0f32f1d4
+**Digest:** sha256:e0855e14e085eb32d7d8e640622fa74fa98a984d21599a5804ac6a239b443ef4
 
 **Tags:**
 ```
@@ -100,7 +100,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4c82a2eedf0c43d47601ffa8b0303ed1326fab8f | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 249c708ed3a4a7a63d16a6e911a46b6fb9623cbd | /home/vscode/.oh-my-zsh |
 
 **Additional linux tools and packages**
 
@@ -111,7 +111,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 | ca-certificates | 20211016~20.04.1 |
 | curl | 7.68.0-1ubuntu2.12 |
 | dialog | 1.3-20190808-1 |
-| git | 1:2.25.1-1ubuntu3.4 |
+| git | 1:2.25.1-1ubuntu3.5 |
 | gnupg2 | 2.2.19-3ubuntu2.2 |
 | htop | 2.2.0-2build1 |
 | iproute2 | 5.5.0-1ubuntu1 |
@@ -149,7 +149,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 ## Variant: bionic
 
-**Digest:** sha256:9aa59002e28d7831c8015a0915859be5146c74b732550091c297e93fa23429c6
+**Digest:** sha256:6aaf8e0c905e1f82dec16335e83c230f522a0eb3913611ab3823cbf6ec71eaf8
 
 **Tags:**
 ```
@@ -170,7 +170,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu18.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4c82a2eedf0c43d47601ffa8b0303ed1326fab8f | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 249c708ed3a4a7a63d16a6e911a46b6fb9623cbd | /home/vscode/.oh-my-zsh |
 
 **Additional linux tools and packages**
 
@@ -181,7 +181,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu18.04
 | ca-certificates | 20211016~18.04.1 |
 | curl | 7.58.0-2ubuntu3.19 |
 | dialog | 1.3-20171209-1 |
-| git | 1:2.17.1-1ubuntu0.11 |
+| git | 1:2.17.1-1ubuntu0.12 |
 | gnupg2 | 2.2.4-1ubuntu1.6 |
 | htop | 2.1.0-3 |
 | iproute2 | 4.15.0-2ubuntu1.3 |
