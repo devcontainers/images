@@ -99,6 +99,8 @@ jobs:
       id: push_image_info
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      permissions:
+        pull-requests:write
       run: |
         set -e
 
