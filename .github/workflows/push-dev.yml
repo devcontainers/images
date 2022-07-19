@@ -52,3 +52,4 @@ jobs:
         cg: "true"
         push: "true"
         overwrite: "true"
+      secrets: inherit
