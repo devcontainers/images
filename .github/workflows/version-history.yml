@@ -46,7 +46,7 @@ jobs:
       uses: actions/checkout@v3
       with:
         path: 'ref'
-        ref: ${{ github.ref }}
+        ref: 'main'
   
     - name: Checkout
       id: checkout_main
@@ -115,12 +115,11 @@ jobs:
         git config pull.rebase false
         branch=automated-update-for-image-history-$GITHUB_RUN_ID
         # temp test
-        git checkout main
         git checkout -b $branch
         message='Automated update for image history'
 
         # Pull in anything that may have come in
-        git pull "https://github-actions:$GITHUB_TOKEN@github.com/${{ github.repository }}" "HEAD:main"
+        git pull "https://github-actions:$GITHUB_TOKEN@github.com/${{ github.repository }}" "$branch"
 
         # Add / update and commit
         git add -A
