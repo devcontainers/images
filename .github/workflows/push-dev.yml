@@ -44,7 +44,7 @@ jobs:
       uses: actions/checkout@v1
 
     - name: Trigger image info file generation
-      uses: ./github/workflows/version-history.yml
+      uses: ./github/actions/version-history
       with:
         release: "$GIT_BRANCH"
         cg: "true"
