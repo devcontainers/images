@@ -119,14 +119,18 @@ jobs:
         message='Automated update for image history'
 
         # Pull in anything that may have come in
-        git pull "https://github-actions:$GITHUB_TOKEN@github.com/${{ github.repository }}" "$branch"
+        echo "Pulling from main"
+        git pull "https://github-actions:$GITHUB_TOKEN@github.com/${{ github.repository }}" "HEAD:main"
 
         # Add / update and commit
+        echo "committing"
         git add -A
         git commit -m "$message" || export NO_UPDATES=true
 
         # Push (unless disabled for testing)
         if [ "$NO_UPDATES" != "true" ] && [ "${{ github.event.inputs.push }}" = "true" ]; then
+            echo "pushing to a branch"
             git push origin "$branch"
+            echo "creating PR"
             gh pr create --title "$message" --body "$message"
         fi
