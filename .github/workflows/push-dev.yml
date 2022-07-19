@@ -39,6 +39,10 @@ jobs:
     if: "!contains(github.event.head_commit.message, 'Automated update') && !contains(github.event.head_commit.message, 'CI ignore')"
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout
+      id: checkout
+      uses: actions/checkout@v1
+
     - name: Trigger image info file generation
       uses: ./github/workflows/version-history.yml
       with:
