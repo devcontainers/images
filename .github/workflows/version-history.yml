@@ -98,7 +98,7 @@ jobs:
     - name: Create PR for image information
       id: push_image_info
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.ALTERNATE_GITHUB_TOKEN }}
       run: |
         set -e
 
@@ -110,8 +110,8 @@ jobs:
             GIT_BRANCH=main
         fi
 
-        git config user.name github-actions
-        git config user.email github-actions@github.com
+        git config --global user.name github-actions
+        git config --global user.email github-actions@github.com
         git config pull.rebase false
         branch=automated-update-for-image-history-$GITHUB_RUN_ID
         git checkout -b $branch
