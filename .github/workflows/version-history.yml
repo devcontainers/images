@@ -28,7 +28,7 @@ on:
 jobs:
   image_info:
     name: Update version history
-    if: ${{ github.ref == 'refs/heads/main' }}
+    # if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     steps:
 
