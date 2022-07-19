@@ -102,12 +102,6 @@ jobs:
       run: |
         set -e
 
-        git config user.name github-actions
-        git config user.email github-actions@github.com
-        git config pull.rebase false
-        branch=automated-update-for-image-history-$GITHUB_RUN_ID
-        message='Automated update for image history'
-
         # Push updates to ref
         cd "$GITHUB_WORKSPACE/ref"
 
@@ -115,6 +109,13 @@ jobs:
         if [ "$GIT_BRANCH" == "" ]; then 
             GIT_BRANCH=main
         fi
+
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git config pull.rebase false
+        branch=automated-update-for-image-history-$GITHUB_RUN_ID
+        git checkout -b $branch
+        message='Automated update for image history'
 
         # Pull in anything that may have come in
         git pull "https://github-actions:$GITHUB_TOKEN@github.com/${{ github.repository }}" "HEAD:$GIT_BRANCH"
