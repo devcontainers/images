@@ -95,12 +95,18 @@ jobs:
                           $(if [ "${{ github.event.inputs.cg }}" = "false" ]; then echo '--no-cg'; else echo '--cg'; fi) \
                           ${{ github.event.inputs.image }}
 
-    - name: Push image information
+    - name: Create PR for image information
       id: push_image_info
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         set -e
+
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git config pull.rebase false
+        branch=automated-update-for-image-history-$GITHUB_RUN_ID
+        message='Automated update for image history'
 
         # Push updates to ref
         cd "$GITHUB_WORKSPACE/ref"
@@ -110,18 +116,15 @@ jobs:
             GIT_BRANCH=main
         fi
 
-        git config --global user.email "vscr-feedback@microsoft.com"
-        git config --global user.name "CI"
-        git config pull.rebase false
-
         # Pull in anything that may have come in
-        git pull "https://ci:$GITHUB_TOKEN@github.com/${{ github.repository }}" "HEAD:$GIT_BRANCH"
+        git pull "https://github-actions:$GITHUB_TOKEN@github.com/${{ github.repository }}" "HEAD:$GIT_BRANCH"
 
         # Add / update and commit
         git add -A
-        git commit -m 'Automated update for image history' || export NO_UPDATES=true
+        git commit -m "$message" || export NO_UPDATES=true
 
         # Push (unless disabled for testing)
         if [ "$NO_UPDATES" != "true" ] && [ "${{ github.event.inputs.push }}" = "true" ]; then
-            git push "https://ci:$GITHUB_TOKEN@github.com/${{ github.repository }}" "HEAD:$GIT_BRANCH"
+            git push origin "$branch"
+            gh pr create --title "$message" --body "$message"
         fi
