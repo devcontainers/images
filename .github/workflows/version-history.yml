@@ -124,6 +124,8 @@ jobs:
 
         # Add / update and commit
         echo "committing"
+        date > generated.txt
+
         git add -A
         git commit -m "$message" || export NO_UPDATES=true
 
