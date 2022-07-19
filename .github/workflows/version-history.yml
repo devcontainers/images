@@ -62,11 +62,16 @@ jobs:
 
     - name: Get image info
       id: Get_image_info
+      env:
+        REGISTRY: ${{ secrets.REGISTRY }}
+        REGISTRY_BASE_PATH: ${{ secrets.REGISTRY_BASE_PATH }}
+        STUB_REGISTRY: ${{ secrets.STUB_REGISTRY }}
+        STUB_REGISTRY_BASE_PATH: ${{ secrets.STUB_REGISTRY_BASE_PATH }}
       run: |
         set -e
 
         # ACR login
-        ACR_REGISTRY_NAME=$(echo ${{ secrets.REGISTRY }} | grep -oP '(.+)(?=\.azurecr\.io)')
+        ACR_REGISTRY_NAME=$(echo "$REGISTRY" | grep -oP '(.+)(?=\.azurecr\.io)')
         az acr login --name $ACR_REGISTRY_NAME
         # Go to the temp-build, copy the build tool from ref since this is the version for the workflow
         cd "$GITHUB_WORKSPACE/temp-build"
@@ -80,10 +85,10 @@ jobs:
                           --markdown \
                           --prune \
                           --release ${{ github.event.inputs.release }} \
-                          --registry ${{ secrets.REGISTRY }} \
-                          --registry-path ${{ secrets.REGISTRY_BASE_PATH }} \
-                          --stub-registry ${{ secrets.STUB_REGISTRY }} \
-                          --stub-registry-path ${{ secrets.STUB_REGISTRY_BASE_PATH }} \
+                          --registry "$REGISTRY" \
+                          --registry-path "$REGISTRY_BASE_PATH" \
+                          --stub-registry "$STUB_REGISTRY" \
+                          --stub-registry-path "$STUB_REGISTRY_BASE_PATH" \
                           --output-path "$GITHUB_WORKSPACE/ref" \
                           $(if [ "${{ github.event.inputs.overwrite }}" = "false" ]; then echo '--no-overwrite'; else echo '--overwrite'; fi) \
                           $(if [ "${{ github.event.inputs.cg }}" = "false" ]; then echo '--no-cg'; else echo '--cg'; fi) \
@@ -91,6 +96,8 @@ jobs:
 
     - name: Push image information
       id: push_image_info
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         set -e
 
@@ -107,7 +114,7 @@ jobs:
         git config pull.rebase false
 
         # Pull in anything that may have come in
-        git pull "https://ci:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" "HEAD:$GIT_BRANCH"
+        git pull "https://ci:$GITHUB_TOKEN@github.com/${{ github.repository }}" "HEAD:$GIT_BRANCH"
 
         # Add / update and commit
         git add -A
@@ -115,5 +122,5 @@ jobs:
 
         # Push (unless disabled for testing)
         if [ "$NO_UPDATES" != "true" ] && [ "${{ github.event.inputs.push }}" = "true" ]; then
-            git push "https://ci:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" "HEAD:$GIT_BRANCH"
+            git push "https://ci:$GITHUB_TOKEN@github.com/${{ github.repository }}" "HEAD:$GIT_BRANCH"
         fi

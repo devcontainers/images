@@ -38,11 +38,15 @@ jobs:
       id: build_and_push
       env:
         GITHUB_TOKEN: ${{ secrets.PAT }}
+        REGISTRY: ${{ secrets.REGISTRY }}
+        REGISTRY_BASE_PATH: ${{ secrets.REGISTRY_BASE_PATH }}
+        STUB_REGISTRY: ${{ secrets.STUB_REGISTRY }}
+        STUB_REGISTRY_BASE_PATH: ${{ secrets.STUB_REGISTRY_BASE_PATH }}
       run: |
         set -e
 
         # ACR login
-        ACR_REGISTRY_NAME=$(echo ${{ secrets.REGISTRY }} | grep -oP '(.+)(?=\.azurecr\.io)')
+        ACR_REGISTRY_NAME=$(echo "$REGISTRY" | grep -oP '(.+)(?=\.azurecr\.io)')
         az acr login --name $ACR_REGISTRY_NAME
 
         # Build and push dev images
@@ -56,10 +60,10 @@ jobs:
                           --pageTotal ${{ matrix.page-total }} \
                           --release $GIT_BRANCH \
                           --github-repo ${{ github.repository }} \
-                          --registry ${{ secrets.REGISTRY }} \
-                          --registry-path ${{ secrets.REGISTRY_BASE_PATH }} \
-                          --stub-registry ${{ secrets.STUB_REGISTRY }} \
-                          --stub-registry-path ${{ secrets.STUB_REGISTRY_BASE_PATH }}
+                          --registry "$REGISTRY" \
+                          --registry-path "$REGISTRY_BASE_PATH" \
+                          --stub-registry "$STUB_REGISTRY" \
+                          --stub-registry-path "$STUB_REGISTRY_BASE_PATH"
 
   image-info:
     name: Trigger info extraction
@@ -69,6 +73,8 @@ jobs:
     steps:
     - name: Trigger image info file generation 
       id: image-info
+      env:
+        ALTERNATE_GITHUB_TOKEN: ${{ secrets.ALTERNATE_GITHUB_TOKEN }}
       run: |
         set -e
         echo '(*) Triggering CG manifest and image history generation using workflow_dispatch'
@@ -78,7 +84,7 @@ jobs:
         fi
         # Use alternate GitHub token due to https://github.community/t5/GitHub-Actions/Triggering-a-new-workflow-from-another-workflow/td-p/31676
         curl -X POST \
-          -H "Authorization: token ${{ secrets.ALTERNATE_GITHUB_TOKEN }}" \
+          -H "Authorization: token $ALTERNATE_GITHUB_TOKEN" \
           -H "Accept: application/vnd.github.v3+json" \
           -H "Content-Type: application/json" \
           https://api.github.com/repos/${{ github.repository }}/actions/workflows/version-history.yml/dispatches \
