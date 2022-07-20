@@ -2,7 +2,7 @@
 
 **Image version:** dev
 
-**Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/alpine)
+**Source release/branch:** [samruddhikhandale/sec-testing](https://github.com/devcontainers/images/tree/samruddhikhandale/sec-testing/src/alpine)
 
 **Image variations:**
 - [3.15](#variant-315)
