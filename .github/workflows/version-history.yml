@@ -96,7 +96,7 @@ jobs:
                           --output-path "$GITHUB_WORKSPACE/ref" \
                           $(if [ "${{ github.event.inputs.overwrite }}" = "false" ]; then echo '--no-overwrite'; else echo '--overwrite'; fi) \
                           $(if [ "${{ github.event.inputs.cg }}" = "false" ]; then echo '--no-cg'; else echo '--cg'; fi) \
-                          ${{ github.event.inputs.image }}
+                          alpine
 
     - name: Create PR for image information
       id: push_image_info
