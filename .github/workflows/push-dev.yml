@@ -46,7 +46,7 @@ jobs:
         ref: ${{ github.ref }}
 
     - name: Trigger image info file generation
-      uses: ./.github/actions/version-history
+      uses: devcontainers/images/.github/workflows/version-history.yaml
       with:
         release: "$GIT_BRANCH"
         cg: "true"
