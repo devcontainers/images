@@ -98,7 +98,7 @@ jobs:
                           $(if [ "${{ github.event.inputs.cg }}" = "false" ]; then echo '--no-cg'; else echo '--cg'; fi) \
                           ${{ github.event.inputs.image }}
 
-    - name: Create PR for image information
+    - name: Create PR with updated image information
       id: push_image_info
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
