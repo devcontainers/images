@@ -108,8 +108,8 @@ jobs:
         # Push updates to ref
         cd "$GITHUB_WORKSPACE/ref"
 
-        git config --global user.email github-actions@github.com
-        git config --global user.name github-actions
+        git config --global user.email "vscr-feedback@microsoft.com"
+        git config --global user.name "CI"
         git config pull.rebase false
         branch=automated-update-for-image-history-$GITHUB_RUN_ID
         git checkout -b $branch
