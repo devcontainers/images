@@ -6,7 +6,7 @@ on:
 jobs:
   build-and-push:
     name: Build and push
-    if: "github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'Automated update') && !contains(github.event.head_commit.message, 'CI ignore')"
+    # if: "github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'Automated update') && !contains(github.event.head_commit.message, 'CI ignore')"
     strategy:
       matrix:
         page: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
@@ -27,42 +27,42 @@ jobs:
       id: checkout
       uses: actions/checkout@v1
 
-    - name: Azure CLI login
-      id: az_login
-      uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZ_ACR_CREDS }}
+    # - name: Azure CLI login
+    #   id: az_login
+    #   uses: azure/login@v1
+    #   with:
+    #     creds: ${{ secrets.AZ_ACR_CREDS }}
 
-    - name: Build and push dev tags
-      id: build_and_push
-      env:
-        GITHUB_TOKEN: ${{ secrets.PAT }}
-        REGISTRY: ${{ secrets.REGISTRY }}
-        REGISTRY_BASE_PATH: ${{ secrets.REGISTRY_BASE_PATH }}
-        STUB_REGISTRY: ${{ secrets.STUB_REGISTRY }}
-        STUB_REGISTRY_BASE_PATH: ${{ secrets.STUB_REGISTRY_BASE_PATH }}
-      run: |
-        set -e
+    # - name: Build and push dev tags
+    #   id: build_and_push
+    #   env:
+    #     GITHUB_TOKEN: ${{ secrets.PAT }}
+    #     REGISTRY: ${{ secrets.REGISTRY }}
+    #     REGISTRY_BASE_PATH: ${{ secrets.REGISTRY_BASE_PATH }}
+    #     STUB_REGISTRY: ${{ secrets.STUB_REGISTRY }}
+    #     STUB_REGISTRY_BASE_PATH: ${{ secrets.STUB_REGISTRY_BASE_PATH }}
+    #   run: |
+    #     set -e
 
-        # ACR login
-        ACR_REGISTRY_NAME=$(echo "$REGISTRY" | grep -oP '(.+)(?=\.azurecr\.io)')
-        az acr login --name $ACR_REGISTRY_NAME
+    #     # ACR login
+    #     ACR_REGISTRY_NAME=$(echo "$REGISTRY" | grep -oP '(.+)(?=\.azurecr\.io)')
+    #     az acr login --name $ACR_REGISTRY_NAME
 
-        # Build and push dev images
-        yarn install
-        npm install -g @devcontainers/cli@0.8.0
-        GIT_BRANCH=$(echo "${{ github.ref }}" | grep -oP 'refs/(heads|tags)/\K(.+)')
-        if [ "$GIT_BRANCH" == "" ]; then 
-            GIT_BRANCH=main
-        fi
-        build/vscdc push  --page ${{ matrix.page }} \
-                          --pageTotal ${{ matrix.page-total }} \
-                          --release $GIT_BRANCH \
-                          --github-repo ${{ github.repository }} \
-                          --registry "$REGISTRY" \
-                          --registry-path "$REGISTRY_BASE_PATH" \
-                          --stub-registry "$STUB_REGISTRY" \
-                          --stub-registry-path "$STUB_REGISTRY_BASE_PATH"
+    #     # Build and push dev images
+    #     yarn install
+    #     npm install -g @devcontainers/cli@0.8.0
+    #     GIT_BRANCH=$(echo "${{ github.ref }}" | grep -oP 'refs/(heads|tags)/\K(.+)')
+    #     if [ "$GIT_BRANCH" == "" ]; then 
+    #         GIT_BRANCH=main
+    #     fi
+    #     build/vscdc push  --page ${{ matrix.page }} \
+    #                       --pageTotal ${{ matrix.page-total }} \
+    #                       --release $GIT_BRANCH \
+    #                       --github-repo ${{ github.repository }} \
+    #                       --registry "$REGISTRY" \
+    #                       --registry-path "$REGISTRY_BASE_PATH" \
+    #                       --stub-registry "$STUB_REGISTRY" \
+    #                       --stub-registry-path "$STUB_REGISTRY_BASE_PATH"
 
   image-info:
     name: Trigger info extraction

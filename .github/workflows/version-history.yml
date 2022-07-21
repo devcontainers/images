@@ -32,7 +32,7 @@ on:
 jobs:
   image_info:
     name: Update version history
-    if: ${{ github.ref == 'refs/heads/main' }}
+    # if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -123,6 +123,7 @@ jobs:
         git pull "https://github-actions:$GITHUB_TOKEN@github.com/${{ github.repository }}" "HEAD:main"
 
         # Add / update and commit
+        date > generated.txt
         git add -A
         git commit -m "$message" || export NO_UPDATES=true
 
