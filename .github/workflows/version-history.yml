@@ -1,7 +1,7 @@
 name: Update version history
 
 on:
-  workflow_dispatch:
+  workflow_call:
     inputs:
       release:
         description: 'Release branch or tag'
@@ -23,6 +23,7 @@ on:
         description: 'Image name (Optional)'
         required: false
         default: ''
+    secrets: inherit
 
 
 jobs:
