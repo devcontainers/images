@@ -75,3 +75,4 @@ jobs:
       push: "true"
       overwrite: "true"
       image: "alpine"
+    secrets: inherit
