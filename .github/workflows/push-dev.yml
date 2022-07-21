@@ -68,7 +68,7 @@ jobs:
     name: Trigger info extraction
     if: "!contains(github.event.head_commit.message, 'Automated update') && !contains(github.event.head_commit.message, 'CI ignore')"
     needs: [build-and-push]
-    uses: ./.github/workflows/version-history.yml@samruddhikhandale/re-usable-workflow
+    uses: devcontainers/images/.github/workflows/version-history.yml@samruddhikhandale/re-usable-workflow
     with:
       release: "$GIT_BRANCH"
       cg: "true"
