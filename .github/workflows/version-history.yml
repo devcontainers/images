@@ -48,19 +48,19 @@ jobs:
         sudo apt-get clean -y
         sudo rm -rf /usr/share/dotnet
 
-    - name: Checkout ref
-      id: checkout_ref
+    - name: Checkout
+      id: checkout
       uses: actions/checkout@v2
       with:
         path: 'ref'
         ref: ${{ github.ref }}
   
-    - name: Checkout
-      id: checkout_main
-      uses: actions/checkout@v2
-      with:
-        path: 'temp-build'
-        ref: ${{ inputs.release }}
+    # - name: Checkout
+    #   id: checkout_main
+    #   uses: actions/checkout@v2
+    #   with:
+    #     path: 'temp-build'
+    #     ref: ${{ inputs.release }}
 
     - name: Azure CLI login
       id: az_login
@@ -82,9 +82,9 @@ jobs:
         ACR_REGISTRY_NAME=$(echo "$REGISTRY" | grep -oP '(.+)(?=\.azurecr\.io)')
         az acr login --name $ACR_REGISTRY_NAME
         # Go to the temp-build, copy the build tool from ref since this is the version for the workflow
-        cd "$GITHUB_WORKSPACE/temp-build"
-        rm -rf build node_modules
-        cp -r "$GITHUB_WORKSPACE/ref/build" "$GITHUB_WORKSPACE/temp-build/"
+        # cd "$GITHUB_WORKSPACE/temp-build"
+        # rm -rf build node_modules
+        # cp -r "$GITHUB_WORKSPACE/ref/build" "$GITHUB_WORKSPACE/temp-build/"
 
         yarn install
 

@@ -70,7 +70,7 @@ jobs:
     needs: [build-and-push]
     uses: devcontainers/images/.github/workflows/version-history.yml@samruddhikhandale/re-usable-workflow
     with:
-      release: "$GIT_BRANCH"
+      release: "samruddhikhandale/re-usable-workflow"
       cg: "true"
       push: "true"
       overwrite: "true"
