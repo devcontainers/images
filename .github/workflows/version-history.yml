@@ -60,7 +60,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         path: 'temp-build'
-        ref: ${{ github.event.inputs.release }}
+        ref: ${{ inputs.release }}
 
     - name: Azure CLI login
       id: az_login
@@ -92,15 +92,15 @@ jobs:
         build/vscdc info  --no-build \
                           --markdown \
                           --prune \
-                          --release ${{ github.event.inputs.release }} \
+                          --release ${{ inputs.release }} \
                           --registry "$REGISTRY" \
                           --registry-path "$REGISTRY_BASE_PATH" \
                           --stub-registry "$STUB_REGISTRY" \
                           --stub-registry-path "$STUB_REGISTRY_BASE_PATH" \
                           --output-path "$GITHUB_WORKSPACE/ref" \
-                          $(if [ "${{ github.event.inputs.overwrite }}" = "false" ]; then echo '--no-overwrite'; else echo '--overwrite'; fi) \
-                          $(if [ "${{ github.event.inputs.cg }}" = "false" ]; then echo '--no-cg'; else echo '--cg'; fi) \
-                          ${{ github.event.inputs.image }}
+                          $(if [ "${{ inputs.overwrite }}" = "false" ]; then echo '--no-overwrite'; else echo '--overwrite'; fi) \
+                          $(if [ "${{ inputs.cg }}" = "false" ]; then echo '--no-cg'; else echo '--cg'; fi) \
+                          ${{ inputs.image }}
 
     - name: Create PR with updated image information
       id: push_image_info
@@ -128,7 +128,7 @@ jobs:
         git commit -m "$message" || export NO_UPDATES=true
 
         # Push (unless disabled for testing)
-        if [ "$NO_UPDATES" != "true" ] && [ "${{ github.event.inputs.push }}" = "true" ]; then
+        if [ "$NO_UPDATES" != "true" ] && [ "${{ inputs.push }}" = "true" ]; then
             git push origin "$branch"
             gh pr create --title "$message" --body "$message"
         fi
