@@ -7,22 +7,27 @@ on:
         description: 'Release branch or tag'
         required: true
         default: 'main'
+        type: string
       cg:
         description: 'Generate manifest.json'
         required: true
         default: 'false'
+        type: string
       push:
         description: 'Update repository with results'
         required: true
         default: 'true'
+        type: string
       overwrite:
         description: 'Overwrite existing files'
         required: true
         default: 'true'
+        type: string
       image:
         description: 'Image name (Optional)'
         required: false
         default: ''
+        type: string
     secrets: inherit
 
 
