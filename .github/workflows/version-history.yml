@@ -49,7 +49,6 @@ jobs:
       id: checkout
       uses: actions/checkout@v2
       with:
-        path: 'ref'
         ref: ${{ github.ref }}
   
     # - name: Checkout
@@ -79,7 +78,7 @@ jobs:
         ACR_REGISTRY_NAME=$(echo "$REGISTRY" | grep -oP '(.+)(?=\.azurecr\.io)')
         az acr login --name $ACR_REGISTRY_NAME
         # Go to the temp-build, copy the build tool from ref since this is the version for the workflow
-        cd "$GITHUB_WORKSPACE/ref"
+        # cd "$GITHUB_WORKSPACE/ref"
         # rm -rf build node_modules
         # cp -r "$GITHUB_WORKSPACE/ref/build" "$GITHUB_WORKSPACE/temp-build/"
 
@@ -94,7 +93,7 @@ jobs:
                           --registry-path "$REGISTRY_BASE_PATH" \
                           --stub-registry "$STUB_REGISTRY" \
                           --stub-registry-path "$STUB_REGISTRY_BASE_PATH" \
-                          --output-path "$GITHUB_WORKSPACE/ref" \
+                          --output-path "$GITHUB_WORKSPACE" \
                           $(if [ "${{ inputs.overwrite }}" = "false" ]; then echo '--no-overwrite'; else echo '--overwrite'; fi) \
                           $(if [ "${{ inputs.cg }}" = "false" ]; then echo '--no-cg'; else echo '--cg'; fi) \
                           ${{ inputs.image }}
@@ -107,7 +106,7 @@ jobs:
         set -e
 
         # Push updates to ref
-        cd "$GITHUB_WORKSPACE/ref"
+        # cd "$GITHUB_WORKSPACE/ref"
 
         git config --global user.email github-actions@github.com
         git config --global user.name github-actions
