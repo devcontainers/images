@@ -46,10 +46,6 @@ jobs:
     - name: Checkout
       id: checkout
       uses: actions/checkout@v2
-      with:
-        path: 'ref'
-        ref: ${{ github.ref }}
-  
 
     - name: Azure CLI login
       id: az_login
@@ -70,11 +66,10 @@ jobs:
         # ACR login
         ACR_REGISTRY_NAME=$(echo "$REGISTRY" | grep -oP '(.+)(?=\.azurecr\.io)')
         az acr login --name $ACR_REGISTRY_NAME
-        cd "$GITHUB_WORKSPACE/ref"
 
         yarn install
 
-        # Pull images and update manifest.json, but output back to ref
+        # Pull images and update manifest.json
         build/vscdc info  --no-build \
                           --markdown \
                           --prune \
@@ -83,7 +78,7 @@ jobs:
                           --registry-path "$REGISTRY_BASE_PATH" \
                           --stub-registry "$STUB_REGISTRY" \
                           --stub-registry-path "$STUB_REGISTRY_BASE_PATH" \
-                          --output-path "$GITHUB_WORKSPACE/ref" \
+                          --output-path "$GITHUB_WORKSPACE" \
                           $(if [ "${{ inputs.overwrite }}" = "false" ]; then echo '--no-overwrite'; else echo '--overwrite'; fi) \
                           $(if [ "${{ inputs.cg }}" = "false" ]; then echo '--no-cg'; else echo '--cg'; fi) \
 
@@ -94,8 +89,7 @@ jobs:
       run: |
         set -e
 
-        # Push updates to ref
-        cd "$GITHUB_WORKSPACE/ref"
+        # Configure git and Push updates
 
         git config --global user.email github-actions@github.com
         git config --global user.name github-actions
