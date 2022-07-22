@@ -82,7 +82,7 @@ jobs:
         ACR_REGISTRY_NAME=$(echo "$REGISTRY" | grep -oP '(.+)(?=\.azurecr\.io)')
         az acr login --name $ACR_REGISTRY_NAME
         # Go to the temp-build, copy the build tool from ref since this is the version for the workflow
-        # cd "$GITHUB_WORKSPACE/temp-build"
+        cd "$GITHUB_WORKSPACE/ref"
         # rm -rf build node_modules
         # cp -r "$GITHUB_WORKSPACE/ref/build" "$GITHUB_WORKSPACE/temp-build/"
 
