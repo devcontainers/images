@@ -1,29 +1,28 @@
 name: Update version history
 
 on:
-  workflow_dispatch:
+  workflow_call:
     inputs:
       release:
         description: 'Release branch or tag'
         required: true
         default: 'main'
+        type: string
       cg:
         description: 'Generate manifest.json'
         required: true
         default: 'false'
+        type: string
       push:
         description: 'Update repository with results'
         required: true
         default: 'true'
+        type: string
       overwrite:
         description: 'Overwrite existing files'
         required: true
         default: 'true'
-      image:
-        description: 'Image name (Optional)'
-        required: false
-        default: ''
-
+        type: string
 
 jobs:
   image_info:
@@ -44,19 +43,13 @@ jobs:
         sudo apt-get clean -y
         sudo rm -rf /usr/share/dotnet
 
-    - name: Checkout ref
-      id: checkout_ref
+    - name: Checkout
+      id: checkout
       uses: actions/checkout@v2
       with:
         path: 'ref'
         ref: ${{ github.ref }}
   
-    - name: Checkout
-      id: checkout_main
-      uses: actions/checkout@v2
-      with:
-        path: 'temp-build'
-        ref: ${{ github.event.inputs.release }}
 
     - name: Azure CLI login
       id: az_login
@@ -77,10 +70,7 @@ jobs:
         # ACR login
         ACR_REGISTRY_NAME=$(echo "$REGISTRY" | grep -oP '(.+)(?=\.azurecr\.io)')
         az acr login --name $ACR_REGISTRY_NAME
-        # Go to the temp-build, copy the build tool from ref since this is the version for the workflow
-        cd "$GITHUB_WORKSPACE/temp-build"
-        rm -rf build node_modules
-        cp -r "$GITHUB_WORKSPACE/ref/build" "$GITHUB_WORKSPACE/temp-build/"
+        cd "$GITHUB_WORKSPACE/ref"
 
         yarn install
 
@@ -88,20 +78,19 @@ jobs:
         build/vscdc info  --no-build \
                           --markdown \
                           --prune \
-                          --release ${{ github.event.inputs.release }} \
+                          --release ${{ inputs.release }} \
                           --registry "$REGISTRY" \
                           --registry-path "$REGISTRY_BASE_PATH" \
                           --stub-registry "$STUB_REGISTRY" \
                           --stub-registry-path "$STUB_REGISTRY_BASE_PATH" \
                           --output-path "$GITHUB_WORKSPACE/ref" \
-                          $(if [ "${{ github.event.inputs.overwrite }}" = "false" ]; then echo '--no-overwrite'; else echo '--overwrite'; fi) \
-                          $(if [ "${{ github.event.inputs.cg }}" = "false" ]; then echo '--no-cg'; else echo '--cg'; fi) \
-                          ${{ github.event.inputs.image }}
+                          $(if [ "${{ inputs.overwrite }}" = "false" ]; then echo '--no-overwrite'; else echo '--overwrite'; fi) \
+                          $(if [ "${{ inputs.cg }}" = "false" ]; then echo '--no-cg'; else echo '--cg'; fi) \
 
     - name: Create PR with updated image information
       id: push_image_info
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.ALTERNATE_GITHUB_TOKEN }}
       run: |
         set -e
 
@@ -115,15 +104,12 @@ jobs:
         git checkout -b $branch
         message='Automated update for image history'
 
-        # Pull in anything that may have come in
-        git pull "https://github-actions:$GITHUB_TOKEN@github.com/${{ github.repository }}" "HEAD:main"
-
         # Add / update and commit
         git add -A
         git commit -m "$message" || export NO_UPDATES=true
 
         # Push (unless disabled for testing)
-        if [ "$NO_UPDATES" != "true" ] && [ "${{ github.event.inputs.push }}" = "true" ]; then
+        if [ "$NO_UPDATES" != "true" ] && [ "${{ inputs.push }}" = "true" ]; then
             git push origin "$branch"
             gh pr create --title "$message" --body "$message"
         fi
