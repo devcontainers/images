@@ -55,12 +55,12 @@ jobs:
         path: 'ref'
         ref: ${{ github.ref }}
   
-    # - name: Checkout
-    #   id: checkout_main
-    #   uses: actions/checkout@v2
-    #   with:
-    #     path: 'temp-build'
-    #     ref: ${{ inputs.release }}
+    - name: Checkout
+      id: checkout_main
+      uses: actions/checkout@v2
+      with:
+        path: 'temp-build'
+        ref: ${{ inputs.release }}
 
     - name: Azure CLI login
       id: az_login
@@ -82,9 +82,9 @@ jobs:
         ACR_REGISTRY_NAME=$(echo "$REGISTRY" | grep -oP '(.+)(?=\.azurecr\.io)')
         az acr login --name $ACR_REGISTRY_NAME
         # Go to the temp-build, copy the build tool from ref since this is the version for the workflow
-        cd "$GITHUB_WORKSPACE/ref"
-        # rm -rf build node_modules
-        # cp -r "$GITHUB_WORKSPACE/ref/build" "$GITHUB_WORKSPACE/temp-build/"
+        cd "$GITHUB_WORKSPACE/temp-build"
+        rm -rf build node_modules
+        cp -r "$GITHUB_WORKSPACE/ref/build" "$GITHUB_WORKSPACE/temp-build/"
 
         yarn install
 
@@ -118,17 +118,19 @@ jobs:
         branch=automated-update-for-image-history-$GITHUB_RUN_ID
         git checkout -b $branch
         message='Automated update for image history'
-
+        echo "created branch"
         # Pull in anything that may have come in
         git pull "https://github-actions:$GITHUB_TOKEN@github.com/${{ github.repository }}" "HEAD:main"
-
+        echo "pulled from main"
         # Add / update and commit
         date > generated.txt
         git add -A
         git commit -m "$message" || export NO_UPDATES=true
-
+        echo "committed to main"
         # Push (unless disabled for testing)
         if [ "$NO_UPDATES" != "true" ] && [ "${{ inputs.push }}" = "true" ]; then
+            echo "pushing to main"
             git push origin "$branch"
+            echo "creating PR"
             gh pr create --title "$message" --body "$message"
         fi
