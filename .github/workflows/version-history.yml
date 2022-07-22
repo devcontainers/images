@@ -127,10 +127,10 @@ jobs:
 
         echo "GIT BRaNCH - $GIT_BRANCH"
         # Pull in anything that may have come in
-        git pull origin main
+        git pull origin $GIT_BRANCH
         echo "tested basic"
-        git pull "https://github-actions:$GITHUB_TOKEN@github.com/${{ github.repository }}" "HEAD:$GIT_BRANCH"
-        echo "pulled from main"
+        # git pull "https://github-actions:$GITHUB_TOKEN@github.com/${{ github.repository }}" "HEAD:$GIT_BRANCH"
+        # echo "pulled from main"
         # Add / update and commit
         date > generated.txt
         git add -A
