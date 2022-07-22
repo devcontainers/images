@@ -2,7 +2,7 @@
 
 **Image version:** dev
 
-**Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/alpine)
+**Source release/branch:** [samruddhikhandale/re-usable-workflow](https://github.com/devcontainers/images/tree/samruddhikhandale/re-usable-workflow/src/alpine)
 
 **Image variations:**
 - [3.15](#variant-315)
