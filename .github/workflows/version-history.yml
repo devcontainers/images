@@ -55,12 +55,12 @@ jobs:
         path: 'ref'
         ref: ${{ github.ref }}
   
-    - name: Checkout
-      id: checkout_main
-      uses: actions/checkout@v2
-      with:
-        path: 'temp-build'
-        ref: ${{ inputs.release }}
+    # - name: Checkout
+    #   id: checkout_main
+    #   uses: actions/checkout@v2
+    #   with:
+    #     path: 'temp-build'
+    #     ref: ${{ inputs.release }}
 
     - name: Azure CLI login
       id: az_login
@@ -82,9 +82,9 @@ jobs:
         ACR_REGISTRY_NAME=$(echo "$REGISTRY" | grep -oP '(.+)(?=\.azurecr\.io)')
         az acr login --name $ACR_REGISTRY_NAME
         # Go to the temp-build, copy the build tool from ref since this is the version for the workflow
-        cd "$GITHUB_WORKSPACE/temp-build"
-        rm -rf build node_modules
-        cp -r "$GITHUB_WORKSPACE/ref/build" "$GITHUB_WORKSPACE/temp-build/"
+        cd "$GITHUB_WORKSPACE/ref"
+        # rm -rf build node_modules
+        # cp -r "$GITHUB_WORKSPACE/ref/build" "$GITHUB_WORKSPACE/temp-build/"
 
         yarn install
 
@@ -120,14 +120,14 @@ jobs:
         message='Automated update for image history'
         echo "created branch"
 
-        GIT_BRANCH=$(echo "${{ github.ref }}" | grep -oP 'refs/(heads|tags)/\K(.+)')
-        if [ "$GIT_BRANCH" == "" ]; then 
-            GIT_BRANCH=main
-        fi
+        # GIT_BRANCH=$(echo "${{ github.ref }}" | grep -oP 'refs/(heads|tags)/\K(.+)')
+        # if [ "$GIT_BRANCH" == "" ]; then 
+        #     GIT_BRANCH=main
+        # fi
 
-        echo "GIT BRaNCH - $GIT_BRANCH"
+        # echo "GIT BRaNCH - $GIT_BRANCH"
         # Pull in anything that may have come in
-        git pull origin $GIT_BRANCH
+        # git pull origin $GIT_BRANCH
         echo "tested basic"
         # git pull "https://github-actions:$GITHUB_TOKEN@github.com/${{ github.repository }}" "HEAD:$GIT_BRANCH"
         # echo "pulled from main"
