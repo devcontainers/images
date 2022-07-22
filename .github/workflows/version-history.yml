@@ -119,8 +119,15 @@ jobs:
         git checkout -b $branch
         message='Automated update for image history'
         echo "created branch"
+
+        GIT_BRANCH=$(echo "${{ github.ref }}" | grep -oP 'refs/(heads|tags)/\K(.+)')
+        if [ "$GIT_BRANCH" == "" ]; then 
+            GIT_BRANCH=main
+        fi
+
+        echo "GIT BRaNCH - $GIT_BRANCH"
         # Pull in anything that may have come in
-        git pull "https://github-actions:$GITHUB_TOKEN@github.com/${{ github.repository }}" "HEAD:main"
+        git pull "https://github-actions:$GITHUB_TOKEN@github.com/${{ github.repository }}" "HEAD:$GIT_BRANCH"
         echo "pulled from main"
         # Add / update and commit
         date > generated.txt
