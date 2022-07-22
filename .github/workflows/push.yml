@@ -58,19 +58,10 @@ jobs:
   image-info:
     name: Trigger info extraction
     needs: [build-and-push]
-    runs-on: ubuntu-latest
-    steps:
-      
-    - name: Trigger image info file generation 
-      id: image-info
-      run: |
-        set -e
-        echo '(*) Triggering CG manifest and image history generation using workflow_dispatch'
-
-        # Use alternate GitHub token due to https://github.community/t5/GitHub-Actions/Triggering-a-new-workflow-from-another-workflow/td-p/31676
-        curl -X POST \
-          -H "Authorization: token ${{ secrets.ALTERNATE_GITHUB_TOKEN }}" \
-          -H "Accept: application/vnd.github.v3+json" \
-          -H "Content-Type: application/json" \
-          https://api.github.com/repos/${{ github.repository }}/actions/workflows/version-history.yml/dispatches \
-          --data "{\"ref\": \"main\", \"inputs\": {\"release\": \"v0.0.1\", \"cg\": \"false\", \"push\": \"true\", \"overwrite\": \"false\"}"
+    uses: devcontainers/images/.github/workflows/version-history.yml@main
+    with:
+      release: "v0.0.1"
+      cg: "false"
+      push: "true"
+      overwrite: "false"
+    secrets: inherit
