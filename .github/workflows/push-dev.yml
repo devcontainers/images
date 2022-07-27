@@ -70,7 +70,7 @@ jobs:
     name: Trigger info extraction
     # needs: [build-and-push]
     runs-on: ubuntu-latest
-    uses: devcontainers/images/.github/workflows/version-history.yml@main
+    uses: devcontainers/images/.github/workflows/version-history.yml@samruddhikhandale/push-test
     with:
       release: $(echo "${{ github.ref }}" | grep -oP 'refs/(heads|tags)/\K(.+)')
       cg: "true"
