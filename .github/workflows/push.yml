@@ -76,7 +76,7 @@ jobs:
       run: echo "::set-output name=tag::$(echo "${{ github.ref }}" | grep -oP 'refs/tags/\K(.+)')"
 
     - name: Trigger image info file generation
-      uses: devcontainers/images/.github/workflows/version-history.yml@main
+      uses: devcontainers/images/.github/workflows/version-history.yml@samruddhikhandale/push-test
       with:
         release: ${{ steps.get_tag_name.outputs.tag }}
         cg: "false"
