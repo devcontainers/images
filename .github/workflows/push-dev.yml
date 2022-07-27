@@ -68,11 +68,9 @@ jobs:
 
   image-info:
     name: Trigger info extraction
-    # needs: [build-and-push]
-    runs-on: ubuntu-latest
     uses: devcontainers/images/.github/workflows/version-history.yml@samruddhikhandale/push-test
     with:
-      release: ${{ github.ref }}
+      release: "${{ github.ref }}"
       cg: "true"
       push: "true"
       overwrite: "true"
