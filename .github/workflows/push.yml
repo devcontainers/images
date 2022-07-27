@@ -1,14 +1,12 @@
 name: Build and push images
 
 on: 
-  push:
-    tags:
-    - 'v*'
+  workflow_dispatch:
 
 jobs:
   build-and-push:
     name: Build and push images
-    if: ${{ github.ref == 'refs/heads/main' }}
+    # if: ${{ github.ref == 'refs/heads/main' }}
     strategy:
       matrix:
         page: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
@@ -55,30 +53,24 @@ jobs:
         az acr login --name $ACR_REGISTRY_NAME
 
         # Build and push images
-        yarn install
-        npm install -g @devcontainers/cli@0.8.0
-        build/vscdc push  --page ${{ matrix.page }} \
-                          --pageTotal ${{ matrix.page-total }} \
-                          --release ${{ steps.get_tag_name.outputs.tag }} \
-                          --github-repo ${{ github.repository }} \
-                          --registry "$REGISTRY" \
-                          --registry-path "$REGISTRY_BASE_PATH" \
-                          --stub-registry "$STUB_REGISTRY" \
-                          --stub-registry-path "$STUB_REGISTRY_BASE_PATH"
+        # yarn install
+        # npm install -g @devcontainers/cli@0.8.0
+        # build/vscdc push  --page ${{ matrix.page }} \
+        #                   --pageTotal ${{ matrix.page-total }} \
+        #                   --release ${{ steps.get_tag_name.outputs.tag }} \
+        #                   --github-repo ${{ github.repository }} \
+        #                   --registry "$REGISTRY" \
+        #                   --registry-path "$REGISTRY_BASE_PATH" \
+        #                   --stub-registry "$STUB_REGISTRY" \
+        #                   --stub-registry-path "$STUB_REGISTRY_BASE_PATH"
 
   image-info:
     name: Trigger info extraction
-    needs: [build-and-push]
+    # needs: [build-and-push]
     runs-on: ubuntu-latest
-    steps:
-    - name: Get tag name
-      id: get_tag_name
-      run: echo "::set-output name=tag::$(echo "${{ github.ref }}" | grep -oP 'refs/tags/\K(.+)')"
-
-    - name: Trigger image info file generation
-      uses: devcontainers/images/.github/workflows/version-history.yml@samruddhikhandale/push-test
+    uses: devcontainers/images/.github/workflows/version-history.yml@samruddhikhandale/push-test
       with:
-        release: ${{ steps.get_tag_name.outputs.tag }}
+        release: ${{ github.ref }}
         cg: "false"
         push: "true"
         overwrite: "false"

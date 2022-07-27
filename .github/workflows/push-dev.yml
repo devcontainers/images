@@ -72,7 +72,7 @@ jobs:
     runs-on: ubuntu-latest
     uses: devcontainers/images/.github/workflows/version-history.yml@samruddhikhandale/push-test
     with:
-      release: $(echo "${{ github.ref }}" | grep -oP 'refs/(heads|tags)/\K(.+)')
+      release: ${{ github.ref }}
       cg: "true"
       push: "true"
       overwrite: "true"

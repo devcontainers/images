@@ -68,12 +68,13 @@ jobs:
         az acr login --name $ACR_REGISTRY_NAME
 
         yarn install
+        release=$(echo "${{ github.ref }}" | grep -oP 'refs/(heads|tags)/\K(.+)')
 
         # Pull images and update manifest.json
         build/vscdc info  --no-build \
                           --markdown \
                           --prune \
-                          --release ${{ inputs.release }} \
+                          --release $release \
                           --registry "$REGISTRY" \
                           --registry-path "$REGISTRY_BASE_PATH" \
                           --stub-registry "$STUB_REGISTRY" \
