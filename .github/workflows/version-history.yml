@@ -85,12 +85,13 @@ jobs:
                           --stub-registry-path "$STUB_REGISTRY_BASE_PATH" \
                           --output-path "$GITHUB_WORKSPACE" \
                           "$overwrite_string" \
-                          "$cg_string"
+                          "$cg_string" \
+                          "alpine"
 
     - name: Create PR with updated image information
       id: push_image_info
       env:
-        GITHUB_TOKEN: ${{ secrets.ALTERNATE_GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         set -e
 
@@ -108,7 +109,7 @@ jobs:
         git commit -m "$message" || export NO_UPDATES=true
 
         # Push (unless disabled for testing)
-        if [ "$NO_UPDATES" != "true" ] && [ ${{ inputs.push }} = "true" ]; then
+        if [ "$NO_UPDATES" != "true" ] && [ "${{ inputs.push }}" = "true" ]; then
             git push origin "$branch"
             gh pr create --title "$message" --body "$message"
         fi
