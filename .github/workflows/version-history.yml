@@ -83,7 +83,7 @@ jobs:
                           --stub-registry-path "$STUB_REGISTRY_BASE_PATH" \
                           --output-path "$GITHUB_WORKSPACE" \
                           "$OVERWRITE_STRING" \
-                          "$CG_STRING" \
+                          "$CG_STRING"
 
     - name: Create PR with updated image information
       id: push_image_info
@@ -97,6 +97,7 @@ jobs:
         git config --global user.email github-actions@github.com
         git config --global user.name github-actions
         git config pull.rebase false
+
         branch=automated-update-for-image-history-$GITHUB_RUN_ID
         git checkout -b $branch
         message='Automated update for image history'
