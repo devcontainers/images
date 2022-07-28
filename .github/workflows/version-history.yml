@@ -80,8 +80,8 @@ jobs:
                           --stub-registry "$STUB_REGISTRY" \
                           --stub-registry-path "$STUB_REGISTRY_BASE_PATH" \
                           --output-path "$GITHUB_WORKSPACE" \
-                          $(if [ "${{ inputs.overwrite }}" = "false" ]; then echo '--no-overwrite'; else echo '--overwrite'; fi) \
-                          $(if [ "${{ inputs.cg }}" = "false" ]; then echo '--no-cg'; else echo '--cg'; fi) \
+                          $(if [ ${{ inputs.overwrite }} = "false" ]; then echo '--no-overwrite'; else echo '--overwrite'; fi) \
+                          $(if [ ${{ inputs.cg }} = "false" ]; then echo '--no-cg'; else echo '--cg'; fi) \
 
     - name: Create PR with updated image information
       id: push_image_info
@@ -90,7 +90,7 @@ jobs:
       run: |
         set -e
 
-        # Configure git and Push updates
+        # Configure git and Push updates test=$(if [ "$input" = "false" ]; then echo '--no-overwrite'; else echo '--overwrite'; fi)
 
         git config --global user.email github-actions@github.com
         git config --global user.name github-actions
@@ -104,7 +104,7 @@ jobs:
         git commit -m "$message" || export NO_UPDATES=true
 
         # Push (unless disabled for testing)
-        if [ "$NO_UPDATES" != "true" ] && [ "${{ inputs.push }}" = "true" ]; then
+        if [ "$NO_UPDATES" != "true" ] && [ ${{ inputs.push }} = "true" ]; then
             git push origin "$branch"
             gh pr create --title "$message" --body "$message"
         fi
