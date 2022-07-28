@@ -68,24 +68,27 @@ jobs:
         az acr login --name $ACR_REGISTRY_NAME
 
         yarn install
+        RELEASE_STRING=$(echo "${{ github.ref }}" | grep -oP 'refs/(heads|tags)/\K(.+)')
+        OVERWRITE_STRING=$(if [ "${{ inputs.overwrite }}" = "false" ]; then echo '--no-overwrite'; else echo '--overwrite'; fi)
+        CG_STRING=$(if [ ${{ inputs.cg }} = "false" ]; then echo '--no-cg'; else echo '--cg'; fi)
 
         # Pull images and update manifest.json
         build/vscdc info  --no-build \
                           --markdown \
                           --prune \
-                          --release ${{ inputs.release }} \
+                          --release "$RELEASE_STRING" \
                           --registry "$REGISTRY" \
                           --registry-path "$REGISTRY_BASE_PATH" \
                           --stub-registry "$STUB_REGISTRY" \
                           --stub-registry-path "$STUB_REGISTRY_BASE_PATH" \
                           --output-path "$GITHUB_WORKSPACE" \
-                          $(if [ "${{ inputs.overwrite }}" = "false" ]; then echo '--no-overwrite'; else echo '--overwrite'; fi) \
-                          $(if [ "${{ inputs.cg }}" = "false" ]; then echo '--no-cg'; else echo '--cg'; fi) \
+                          "$OVERWRITE_STRING" \
+                          "$CG_STRING" \
 
     - name: Create PR with updated image information
       id: push_image_info
       env:
-        GITHUB_TOKEN: ${{ secrets.ALTERNATE_GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         set -e
 
