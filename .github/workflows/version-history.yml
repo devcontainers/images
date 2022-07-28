@@ -27,7 +27,7 @@ on:
 jobs:
   image_info:
     name: Update version history
-    if: ${{ github.ref == 'refs/heads/main' }}
+    # if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -69,7 +69,7 @@ jobs:
 
         yarn install
         release=$(echo "${{ github.ref }}" | grep -oP 'refs/(heads|tags)/\K(.+)')
-
+        echo "release $release"
         # Pull images and update manifest.json
         build/vscdc info  --no-build \
                           --markdown \
