@@ -74,10 +74,9 @@
         },
         "devcontainers/features/java@v0.0.2": {
             "version": "17",
-            "additional_versions": "11"
-        },
-        "./local-features/maven": {
-            "version": "3"
+            "additional_versions": "11",
+            "install_gradle": "true",
+            "install_maven": "true"
         },
         "devcontainers/features/sshd@v0.0.2": {
             "version": "latest"
@@ -97,7 +96,6 @@
         "devcontainers/features/git@v0.0.2": {
             "version": "latest"
         },
-        "./local-features/gradle": "latest",
         "devcontainers/features/go@v0.0.2": {
             "version": "latest"
         },
@@ -117,14 +115,12 @@
         "devcontainers/features/anaconda@v0.0.2",
         "devcontainers/features/ruby@v0.0.2",
         "devcontainers/features/java@v0.0.2",
-        "./local-features/maven",
         "devcontainers/features/sshd@v0.0.2",
         "devcontainers/features/git-lfs@v0.0.2",
         "devcontainers/features/github-cli@v0.0.2",
         "devcontainers/features/docker-in-docker@v0.0.2",
         "devcontainers/features/kubectl-helm-minikube@v0.0.2",
         "devcontainers/features/git@v0.0.2",
-        "./local-features/gradle",
         "devcontainers/features/go@v0.0.2",
         "./local-features/jekyll",
         "devcontainers/features/oryx@v0.0.2",
