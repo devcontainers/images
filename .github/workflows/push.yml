@@ -28,7 +28,7 @@ jobs:
     needs: [build-and-push]
     uses: devcontainers/images/.github/workflows/version-history.yml@samruddhikhandale/push-test
       with:
-        release: "${{ github.ref }}"
+        release: "refs/tags/v0.0.1"
         cg: "false"
         push: "true"
         overwrite: "false"

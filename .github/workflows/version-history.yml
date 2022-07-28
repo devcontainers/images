@@ -74,7 +74,7 @@ jobs:
         build/vscdc info  --no-build \
                           --markdown \
                           --prune \
-                          --release $release \
+                          --release "$release" \
                           --registry "$REGISTRY" \
                           --registry-path "$REGISTRY_BASE_PATH" \
                           --stub-registry "$STUB_REGISTRY" \
