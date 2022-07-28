@@ -70,6 +70,10 @@ jobs:
         yarn install
         release=$(echo "${{ github.ref }}" | grep -oP 'refs/(heads|tags)/\K(.+)')
         echo "release $release"
+
+        overwrite_string=$(if [ "${{ inputs.overwrite }}" = "false" ]; then echo '--no-overwrite'; else echo '--overwrite'; fi)
+        cg_string=$(if [ ${{ inputs.cg }} = "false" ]; then echo '--no-cg'; else echo '--cg'; fi)
+
         # Pull images and update manifest.json
         build/vscdc info  --no-build \
                           --markdown \
@@ -80,8 +84,8 @@ jobs:
                           --stub-registry "$STUB_REGISTRY" \
                           --stub-registry-path "$STUB_REGISTRY_BASE_PATH" \
                           --output-path "$GITHUB_WORKSPACE" \
-                          $(if [ ${{ inputs.overwrite }} = "false" ]; then echo '--no-overwrite'; else echo '--overwrite'; fi) \
-                          $(if [ ${{ inputs.cg }} = "false" ]; then echo '--no-cg'; else echo '--cg'; fi) \
+                          "$overwrite_string" \
+                          "$cg_string"
 
     - name: Create PR with updated image information
       id: push_image_info
