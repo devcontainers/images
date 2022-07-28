@@ -2,7 +2,7 @@
 
 **Image version:** dev
 
-**Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/alpine)
+**Source release/branch:** [samruddhikhandale/push-test](https://github.com/devcontainers/images/tree/samruddhikhandale/push-test/src/alpine)
 
 **Image variations:**
 - [3.15](#variant-315)
@@ -11,7 +11,7 @@
 
 ## Variant: 3.15
 
-**Digest:** sha256:50a2a9ebc8ccb83ea5c3017cbe91ecd75309b0baf219c12a626a0417c20a8c8e
+**Digest:** sha256:a7aab5079c8305f138ebdce2f51157dca0771fd0cfdc2d32f01554d6d0ae8f56
 
 **Tags:**
 ```
@@ -60,11 +60,11 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 | libstdc++ | 10.3.1_git20211027-r0 |
 | krb5-libs | 1.19.3-r0 |
 | libintl | 0.21-r0 |
-| libssl1.1 | 1.1.1n-r0 |
+| libssl1.1 | 1.1.1q-r0 |
 | lttng-ust | 2.12.0-r3 |
 | tzdata | 2022a-r0 |
 | userspace-rcu | 0.12.2-r0 |
-| zlib | 1.2.12-r0 |
+| zlib | 1.2.12-r1 |
 | sudo | 1.9.8_p2-r1 |
 | coreutils | 9.0-r2 |
 | sed | 4.8-r0 |
@@ -77,7 +77,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 ## Variant: 3.14
 
-**Digest:** sha256:94f5eaa64b220211f391be1a88482da78f80937a9fc40d4af6bf4afbca235e59
+**Digest:** sha256:1dfe53240aaa6a38c24ab200230e28fb431972c3d4a09a56d6c7b991fbfad52a
 
 **Tags:**
 ```
@@ -125,11 +125,11 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.14
 | libstdc++ | 10.3.1_git20210424-r2 |
 | krb5-libs | 1.18.5-r0 |
 | libintl | 0.21-r0 |
-| libssl1.1 | 1.1.1n-r0 |
+| libssl1.1 | 1.1.1q-r0 |
 | lttng-ust | 2.12.0-r3 |
 | tzdata | 2022a-r0 |
 | userspace-rcu | 0.12.2-r0 |
-| zlib | 1.2.12-r0 |
+| zlib | 1.2.12-r1 |
 | sudo | 1.9.7_p1-r1 |
 | coreutils | 8.32-r2 |
 | sed | 4.8-r0 |
@@ -142,7 +142,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.14
 
 ## Variant: 3.13
 
-**Digest:** sha256:74df8c8fd0dbc9933f26ecbf731dccc75828864683dbd1b0855f08794793cc12
+**Digest:** sha256:2286f19e205f4978620d1b6b4ee9aae0dc66fefc34330704f6e668bf69562ce5
 
 **Tags:**
 ```
@@ -190,11 +190,11 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.13
 | libstdc++ | 10.2.1_pre1-r3 |
 | krb5-libs | 1.18.5-r0 |
 | libintl | 0.20.2-r2 |
-| libssl1.1 | 1.1.1n-r0 |
+| libssl1.1 | 1.1.1q-r0 |
 | lttng-ust | 2.12.0-r2 |
 | tzdata | 2022a-r0 |
 | userspace-rcu | 0.12.1-r0 |
-| zlib | 1.2.12-r0 |
+| zlib | 1.2.12-r1 |
 | sudo | 1.9.5p2-r0 |
 | coreutils | 8.32-r2 |
 | sed | 4.8-r0 |
