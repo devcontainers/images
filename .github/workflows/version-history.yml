@@ -68,7 +68,7 @@ jobs:
         az acr login --name $ACR_REGISTRY_NAME
 
         yarn install
-        release=$(echo "${{ github.ref }}" | grep -oP 'refs/(heads|tags)/\K(.+)')
+        release=$(echo "${{ inputs.release }}" | grep -oP 'refs/(heads|tags)/\K(.+)')
         echo "release $release"
 
         overwrite_string=$(if [ "${{ inputs.overwrite }}" = "false" ]; then echo '--no-overwrite'; else echo '--overwrite'; fi)
