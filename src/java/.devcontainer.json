@@ -5,8 +5,6 @@
     },
     "features": {
         "ghcr.io/devcontainers/features/java:1": "none",
-        "./local-features/maven": "latest",
-        "./local-features/gradle": "latest",
         "ghcr.io/devcontainers/features/node:1": "none"
     },
     "overrideFeatureInstallOrder": [

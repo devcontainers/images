@@ -74,10 +74,9 @@
         },
         "ghcr.io/devcontainers/features/java:1": {
             "version": "17",
-            "additional_versions": "11"
-        },
-        "./local-features/maven": {
-            "version": "3"
+            "additional_versions": "11",
+            "install_gradle": "true",
+            "install_maven": "true"
         },
         "ghcr.io/devcontainers/features/sshd:1": {
             "version": "latest"
@@ -97,7 +96,6 @@
         "ghcr.io/devcontainers/features/git:1": {
             "version": "latest"
         },
-        "./local-features/gradle": "latest",
         "ghcr.io/devcontainers/features/go:1": {
             "version": "latest"
         },
@@ -117,14 +115,12 @@
         "ghcr.io/devcontainers/features/anaconda:1",
         "ghcr.io/devcontainers/features/ruby:1",
         "ghcr.io/devcontainers/features/java:1",
-        "./local-features/maven",
         "ghcr.io/devcontainers/features/sshd:1",
         "ghcr.io/devcontainers/features/git-lfs:1",
         "ghcr.io/devcontainers/features/github-cli:1",
         "ghcr.io/devcontainers/features/docker-in-docker:1",
         "ghcr.io/devcontainers/features/kubectl-helm-minikube:1",
         "ghcr.io/devcontainers/features/git:1",
-        "./local-features/gradle",
         "ghcr.io/devcontainers/features/go:1",
         "./local-features/jekyll",
         "ghcr.io/devcontainers/features/oryx:1",
