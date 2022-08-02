@@ -4,13 +4,13 @@
         "context": "."
     },
     "features": {
-        "devcontainers/features/java@v0.0.2": "none",
+        "ghcr.io/devcontainers/features/java:1": "none",
         "./local-features/maven": "latest",
         "./local-features/gradle": "latest",
-        "devcontainers/features/node@v0.0.2": "none"
+        "ghcr.io/devcontainers/features/node:1": "none"
     },
     "overrideFeatureInstallOrder": [
-        "devcontainers/features/java@v0.0.2"
+        "ghcr.io/devcontainers/features/java:1"
     ],
     // Configure tool-specific properties.
     "customizations": {

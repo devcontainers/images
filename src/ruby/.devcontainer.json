@@ -4,18 +4,18 @@
         "context": "."
     },
     "features": {
-        "devcontainers/features/common@v0.0.2": {
+        "ghcr.io/devcontainers/features/common:1": {
             "install_Zsh": "true",
             "username": "vscode",
             "user_uid": "1000",
             "user_gid": "1000",
             "upgrade_packages": "true"
         },
-        "devcontainers/features/ruby@v0.0.2": "none",
-        "devcontainers/features/node@v0.0.2": "none"
+        "ghcr.io/devcontainers/features/ruby:1": "none",
+        "ghcr.io/devcontainers/features/node:1": "none"
     },
     "overrideFeatureInstallOrder": [
-        "devcontainers/features/common@v0.0.2"
+        "ghcr.io/devcontainers/features/common:1"
     ],
     // Configure tool-specific properties.
     "customizations": {
