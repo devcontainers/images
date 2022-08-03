@@ -20,8 +20,6 @@ jobs:
       id: free_space 
       run: |
         set -e
-        echo "Check base_ref"
-        echo "${{ github.event.base_ref }}"
         # Ensure enough space is available for build
         sudo apt-get autoremove -y
         sudo apt-get clean -y
