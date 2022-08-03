@@ -27,7 +27,7 @@ on:
 jobs:
   image_info:
     name: Update version history
-    if: ${{ github.ref == 'refs/heads/main' }}
+    if: ${{ github.ref == 'refs/heads/main' }} || ${{ github.event.base_ref == 'refs/heads/test-version-1' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
