@@ -8,6 +8,7 @@ on:
 jobs:
   build-and-push:
     name: Build and push images
+    if: contains($(git branch -r --contains ${{ github.ref }}), 'origin/main')
     strategy:
       matrix:
         page: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
@@ -20,7 +21,7 @@ jobs:
       run: |
         set -e
         echo "Check base_ref"
-        echo "${{ github.base_ref }}"
+        echo "${{ github.event.base_ref }}"
         # Ensure enough space is available for build
         sudo apt-get autoremove -y
         sudo apt-get clean -y
