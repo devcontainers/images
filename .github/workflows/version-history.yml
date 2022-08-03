@@ -27,7 +27,7 @@ on:
 jobs:
   image_info:
     name: Update version history
-    if: ${{ github.ref == 'refs/heads/main' }} || ${{ github.event.base_ref == 'refs/heads/samruddhikhandale/test-version-1' }}
+    if: ${{ github.ref == 'refs/heads/main' || github.event.base_ref == 'refs/heads/samruddhikhandale/test-version-1' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -37,6 +37,8 @@ jobs:
     - name: Free more space
       id: free_space 
       run: |
+        echo "github.event.base_ref ${{ github.event.base_ref }}"
+        echo "github.ref ${{ github.event.ref }}"
         set -e
         # Ensure enough space is available for build
         sudo apt-get autoremove -y

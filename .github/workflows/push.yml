@@ -21,9 +21,9 @@ jobs:
       run: |
         set -e
         # Ensure enough space is available for build
-        sudo apt-get autoremove -y
-        sudo apt-get clean -y
-        sudo rm -rf /usr/share/dotnet
+        # sudo apt-get autoremove -y
+        # sudo apt-get clean -y
+        # sudo rm -rf /usr/share/dotnet
 
     - name: Checkout
       id: checkout
