@@ -82,7 +82,7 @@ If you would like to install the Azure CLI, you can reference [a dev container f
 ```json
 {
   "features": {
-    "azure-cli": "latest"
+    "ghcr.io/devcontainers/features/azure-cli:1": "latest"
   }
 }
 ```

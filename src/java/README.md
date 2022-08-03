@@ -50,7 +50,7 @@ Also, you can use a [Node feature](https://github.com/devcontainers/features/tre
 ```json
 {
   "features": {
-    "node": "latest"
+    "ghcr.io/devcontainers/features/node:1": "latest"
   }
 }
 ```
