@@ -1,4 +1,4 @@
-name: 'VSCDC Smoke test'
+name: 'VSCDC smoke test'
 inputs:
   image:
     description: 'Image to test'
