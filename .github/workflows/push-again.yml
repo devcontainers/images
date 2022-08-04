@@ -63,7 +63,7 @@ jobs:
         # Setup build CLI
         cd "$GITHUB_WORKSPACE/ref"
         yarn install
-        npm install -g @devcontainers/cli@0.8.0
+        npm install -g @devcontainers/cli@0.8.1
 
         # Go to the release, symlink the build tool from ref since this is the version for the workflow
         cd "$GITHUB_WORKSPACE/release"
