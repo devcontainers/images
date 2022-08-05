@@ -14,7 +14,7 @@
         "ghcr.io/devcontainers/features/rust:1": "latest"
     },
     "overrideFeatureInstallOrder": [
-        "ghcr.io/devcontainers/features/common-utils:1"
+        "common-utils"
     ],
 	// Configure tool-specific properties.
 	"customizations": {

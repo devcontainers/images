@@ -7,9 +7,6 @@
         "ghcr.io/devcontainers/features/java:1": "none",
         "ghcr.io/devcontainers/features/node:1": "none"
     },
-    "overrideFeatureInstallOrder": [
-        "ghcr.io/devcontainers/features/java:1"
-    ],
     // Configure tool-specific properties.
     "customizations": {
         // Configure properties specific to VS Code.
