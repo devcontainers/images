@@ -4,7 +4,7 @@
         "context": "."
     },
     "features": {
-        "ghcr.io/devcontainers/features/common:1": {
+        "ghcr.io/devcontainers/features/common-utils:1": {
             "install_Zsh": "true",
             "username": "vscode",
             "user_uid": "1000",
@@ -15,7 +15,7 @@
         "ghcr.io/devcontainers/features/node:1": "none"
     },
     "overrideFeatureInstallOrder": [
-        "ghcr.io/devcontainers/features/common:1"
+        "ghcr.io/devcontainers/features/common-utils:1"
     ],
     // Configure tool-specific properties.
     "customizations": {

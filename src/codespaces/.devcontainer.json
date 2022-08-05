@@ -36,7 +36,7 @@
         }
     },
     "features": {
-        "ghcr.io/devcontainers/features/common:1": {
+        "ghcr.io/devcontainers/features/common-utils:1": {
             "username": "codespace",
             "user_uid": "1000",
             "user_gid": "1000"
@@ -104,7 +104,7 @@
         "./local-features/setup-user": "latest"
     },
     "overrideFeatureInstallOrder": [
-        "ghcr.io/devcontainers/features/common:1",
+        "ghcr.io/devcontainers/features/common-utils:1",
         "ghcr.io/devcontainers/features/dotnet:1",
         "ghcr.io/devcontainers/features/hugo:1",
         "ghcr.io/devcontainers/features/node:1",
