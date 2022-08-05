@@ -4,7 +4,11 @@
         "context": "."
     },
     "features": {
-        "ghcr.io/devcontainers/features/java:1": "none",
+        "ghcr.io/devcontainers/features/java:1": {
+            "version": "none",
+            "install_gradle": "true",
+            "install_maven": "true"
+        },
         "ghcr.io/devcontainers/features/node:1": "none"
     },
     // Configure tool-specific properties.
