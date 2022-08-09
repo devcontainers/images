@@ -4,7 +4,7 @@
 		"3.14",
 		"3.13"
 	],
-	"imageVersion": "0.204.3",
+	"imageVersion": "0.204.6",
 	"build": {
 		"latest": false,
 		"rootDistro": "alpine",
