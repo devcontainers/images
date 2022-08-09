@@ -4,8 +4,8 @@
         "context": "."
     },
     "features": {
-        "devcontainers/features/python@v0.0.2": "none",
-        "devcontainers/features/node@v0.0.2": "none"
+        "ghcr.io/devcontainers/features/python:1": "none",
+        "ghcr.io/devcontainers/features/node:1": "none"
     },
 	// Configure tool-specific properties.
 	"customizations": {
