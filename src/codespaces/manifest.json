@@ -1,5 +1,5 @@
 {
-	"imageVersion": "2.0.0",
+	"imageVersion": "2.0.6",
 	"build": {
 		"latest": true,
 		"rootDistro": "debian",

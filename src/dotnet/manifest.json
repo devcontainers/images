@@ -7,7 +7,7 @@
 		"3.1-bullseye",
 		"3.1-focal"
 	],
-	"imageVersion": "0.203.0",
+	"imageVersion": "0.203.3",
 	"build": {
 		"latest": "6.0-bullseye-slim",
 		"rootDistro": "debian",
