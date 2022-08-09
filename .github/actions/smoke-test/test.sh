@@ -6,8 +6,8 @@ set -e
 
 # Run actual test
 echo "(*) Running test..."
-
-devcontainer exec --workspace-folder $(pwd)/src/$IMAGE  --id-label "name=${IMAGE}" /bin/sh -c 'set -e && if [ -f "test-project/test.sh" ]; then cd test-project && if [ "$(id -u)" = "0" ]; then chmod +x test.sh; else sudo chmod +x test.sh; fi && ./test.sh; else ls -a; fi'
+id_label="test-container=${IMAGE}"
+devcontainer exec --workspace-folder $(pwd)/src/$IMAGE  --id-label ${id_label} /bin/sh -c 'set -e && if [ -f "test-project/test.sh" ]; then cd test-project && if [ "$(id -u)" = "0" ]; then chmod +x test.sh; else sudo chmod +x test.sh; fi && ./test.sh; else ls -a; fi'
 
 # Clean up
-docker rm -f $(docker container ls -f "label=name=${IMAGE}" -q)
+docker rm -f $(docker container ls -f "label=${id_label}" -q)
