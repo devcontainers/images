@@ -51,7 +51,7 @@ check "jupyter-lab" jupyter-lab --version
 # Check Java tools
 check "java" java -version
 check "sdkman" bash -c ". /usr/local/sdkman/bin/sdkman-init.sh && sdk version"
-check "gradle" gradle --version
+check "gradle" gradle -g /tmp --version
 check "maven" mvn --version
 count=$(ls /usr/local/sdkman/candidates/java | wc -l)
 expectedCount=3 # 2 version folders + 1 current folder which links to either one of the version

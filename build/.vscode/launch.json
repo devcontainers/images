@@ -26,22 +26,6 @@
 		{
 			"type": "node",
 			"request": "launch",
-			"name": "Run Pack Script",
-			"program": "${workspaceFolder}/vscdc",
-			"args": [
-				"pack",
-				"--no-clean",
-				"--prep-and-package-only",
-				"--release", "main",
-				"--github-repo", "devcontainers/images",
-				"--registry", "clantz.azurecr.io",
-				"--registryPath", "devcontainers",
-				"--stubRegistry", "clantz.azurecr.io",
-				"--stubRegistryPath", "devcontainers"
-			]
-		}, {
-			"type": "node",
-			"request": "launch",
 			"name": "Run CG/Info Script",
 			"program": "${workspaceFolder}/vscdc",
 			"args": [

@@ -4,14 +4,13 @@
         "context": "."
     },
     "features": {
-        "devcontainers/features/java@v0.0.2": "none",
-        "./local-features/maven": "latest",
-        "./local-features/gradle": "latest",
-        "devcontainers/features/node@v0.0.2": "none"
+        "ghcr.io/devcontainers/features/java:1": {
+            "version": "none",
+            "install_gradle": "true",
+            "install_maven": "true"
+        },
+        "ghcr.io/devcontainers/features/node:1": "none"
     },
-    "overrideFeatureInstallOrder": [
-        "devcontainers/features/java@v0.0.2"
-    ],
     // Configure tool-specific properties.
     "customizations": {
         // Configure properties specific to VS Code.

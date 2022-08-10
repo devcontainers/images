@@ -110,7 +110,7 @@ async function pushImage(definitionId, repo, release, updateLatest,
 
             console.log(`(*) Target image architectures: ${architectures.reduce((prev, current) => prev += `\n     ${current}`, '')}`);
             let localArchitecture = process.arch;
-            switch(localArchitecture) {
+            switch (localArchitecture) {
                 case 'arm': localArchitecture = 'linux/arm/v7'; break;
                 case 'aarch32': localArchitecture = 'linux/arm/v7'; break;
                 case 'aarch64': localArchitecture = 'linux/arm64'; break;
@@ -118,14 +118,13 @@ async function pushImage(definitionId, repo, release, updateLatest,
                 case 'x32': localArchitecture = 'linux/386'; break;
                 default: localArchitecture = `linux/${localArchitecture}`; break;
             }
-            
+
             console.log(`(*) Local architecture: ${localArchitecture}`);
             if (!pushImages) {
                 console.log(`(*) Push disabled: Only building local architecture (${localArchitecture}).`);
             }
 
-            // TODO: add back version already published ; removed for testing purpose.
-            // if (replaceImage || !await isDefinitionVersionAlreadyPublished(definitionId, release, registry, registryPath, variant)) {
+            if (replaceImage || !await isDefinitionVersionAlreadyPublished(definitionId, release, registry, registryPath, variant)) {
 
                 let platformParams = "";
                 // Codespaces image does not need to be multi-arch
@@ -155,7 +154,7 @@ async function pushImage(definitionId, repo, release, updateLatest,
                     ...imageNameParams,
                     '--no-cache', 'true',
                     platformParams,
-                    pushImages ? '--push' : '', 
+                    pushImages ? '--push' : '',
                 ], spawnOpts);
 
                 if (!pushImages) {
@@ -165,9 +164,9 @@ async function pushImage(definitionId, repo, release, updateLatest,
                 console.log("(*) Docker images", imageName);
                 await asyncUtils.spawn('docker', [`images`], spawnOpts);
 
-            // } else {
-            //     console.log(`(*) Version already published. Skipping.`);
-            // }
+            } else {
+                console.log(`(*) Version already published. Skipping.`);
+            }
         }
     }
 

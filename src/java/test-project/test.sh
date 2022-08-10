@@ -15,7 +15,7 @@ rm -rf mv maven-wrapper-maven-wrapper-0.5.5
 
 # Image specific tests
 check "java" java -version
-check "gradle" gradle --version
+check "gradle" gradle -g /tmp --version
 check "maven" mvn --version
 check "build-and-test-jar" ./mvnw -q package
 check "test-project" java -jar target/my-app-1.0-SNAPSHOT.jar

@@ -6,7 +6,7 @@
 		"focal",
 		"bionic"
 	],
-	"imageVersion": "0.205.0",
+	"imageVersion": "0.205.2",
 	"build": {
 		"latest": "bullseye",
 		"parent": {
