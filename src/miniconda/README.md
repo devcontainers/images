@@ -58,7 +58,7 @@ Given JavaScript front-end web client code written for use in conjunction with a
 ```json
 {
   "features": {
-    "node": "latest"
+    "ghcr.io/devcontainers/features/node:1": "latest"
   }
 }
 ```

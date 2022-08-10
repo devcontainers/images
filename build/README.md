@@ -7,22 +7,21 @@ This folder contains scripts to build and push images into the Microsoft Contain
 The Node.js based build CLI (`build/vsdc`) has commands to:
 
 1. Build and push to a repository: `build/vsdc push`
-2. Build, push, and npm package assets that are modified as described above: `build/vsdc package`
-3. Generate manifest.json and history markdown files: `build/vsdc cg`, `build/vsdc info`
+2. Generate manifest.json and history markdown files: `build/vsdc cg`, `build/vsdc info`
 
 Run with the `--help` option to see inputs.
 
 This CLI is used in the GitHub Actions workflows in this repository.
 
-- `push-dev.yml`: Pushes a "dev" tag for each image to be generated in this repository and fires repository dispatch to trigger manifest.json generation, and attaches an npm package with the images to the actions run.
-- `push-and-package.yml`: Triggers when a release tag is pushed (`vX.Y.Z`). Builds and pushes a release version of the images, creates a release, and attaches an npm package with the images to the release. Note that this update the tag with source files that contain a SHA hash for script sources. You may need to run `git fetch --tags --force` locally after it runs.
+- `push-dev.yml`: Pushes a "dev" tag for each image to be generated in this repository and fires repository dispatch to trigger manifest.json generation.
+- `push.yml`: Triggers when a release tag is pushed (`vX.Y.Z`). Builds and pushes a release version of the images. Note that this update the tag with source files that contain a SHA hash for script sources. You may need to run `git fetch --tags --force` locally after it runs.
 - `push-again.yml`: A manually triggered workflow that can be used to push an updated version of an image for an existing release. This should only be used in cases where the image push to the registry only partially succeeded (e.g. `linux/amd64` was pushed, but a connection error happened when pushing `linux/arm64` for the same image.)
 - `smoke-*.yaml` (using the `smoke-test` action in this repository) - Runs a build without pushing and executes `test-project/test.sh` (if present) inside the container to verify that there are no breaking changes to the image when the repository contents are updated.
 - `version-history.yml`: Listens for workflow dispatch events to trigger manifest.json and history markdown generation.
 
 ## Setting up a container to be built
 
-> **Note:** Only Microsoft VS Code team members can currently onboard an image to this process since it requires access the Microsoft Container Registry. [See here for details](https://github.com/microsoft/vscode-internalbacklog/wiki/Remote-Container-Images-MCR-Setup).
+> **Note:** Only @devcontainers/maintainers can currently onboard an image to this process since it requires access the Microsoft Container Registry. [See here for details](https://github.com/microsoft/vscode-internalbacklog/wiki/Remote-Container-Images-MCR-Setup).
 >
 > However, if you have your own pre-built image or build process, you can simply reference it directly in you contributed container.
 
@@ -47,7 +46,7 @@ Once you have your build configuration setup, you can use the `vscdc` CLI to tes
 1. First, build the image(s) using the CLI as follows:
 
    ```bash
-   build/vscdc push --no-push --registry mcr.microsoft.com --registry-path devcontainers --release main <you-image-name-here>
+   build/vscdc push --no-push --registry mcr.microsoft.com --registry-path devcontainers --release main <your-image-name-here>
    ```
 
 2. Use the Docker CLI to verify all of the expected images and tags and have the right contents:
@@ -519,16 +518,14 @@ This retains its value as a sample but minimizes the number of actual build step
 Consequently, this user stub Dockerfile needs to be versioned with the `.devcontainer.json` file and can technically version independently of the actual main Dockerfile and image. Given this tie, it makes sense to keep this file with `.devcontainer.json` in the repository. The repository therefore would could contain:
 
 ```text
-📁 .devcontainer
-     📄 Dockerfile
-     📄 .devcontainer.json
-     📄 Dockerfile
-📁 test-project
+📄 Dockerfile
+📄 .devcontainer.json
 📄 manifest.json
 📄 README.md
+📁 test-project
 ```
 
-The `manifest.json` file dictates how the build process should behave as [described above](#setting-up-a-container-to-be-built). In this case, `.devcontainer.json` points to `Dockerfile`, but this is the Dockerfile used to generate the actual image rather than the stub Dockerfile. The stub that references the image is in `Dockerfile`.  To make things easy, we can also automatically generate this stub at release time if only a Dockerfile is present. If no `Dockerfile` is found, the build process falls back to using `Dockerfile`.
+The `manifest.json` file dictates how the build process should behave as [described above](#setting-up-a-container-to-be-built). In this case, `.devcontainer.json` points to `Dockerfile` used to generate the actual image.
 
 Testing, then, is as simple as it is now - open the folder in `devcontainers` in a container and edit / test as required. Anyone simply copying the folder contents then gets a fully working version of the container even if in-flight and there is no image for it yet.
 
@@ -574,18 +571,6 @@ When a release is cut, the contents of devcontainers repo are staged. The build 
         "dockerFile": "Dockerfile",
     }
     ```
-
-After everything builds successfully, the packaging process kicks off and performs the following:
-
-1. Runs through all Dockerfiles in the `containers` folder and makes sure any references to `mcr.microsoft.com/devcontainers` in other non-built dockerfiles reference the MAJOR version as described in step 3 above.
-
-2. These modified contents are then archived in an npm package exactly as they are today and shipped with the extension (and over time we could dynamically update this between extension releases).
-
-```text
-📁 .devcontainer
-     📄 .devcontainer.json
-     📄 Dockerfile
-```
 
 ## Linux ARM64 Specific Builds
 
