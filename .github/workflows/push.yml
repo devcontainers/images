@@ -42,7 +42,7 @@ jobs:
     - name: Build and push
       id: build_and_push
       env:
-        GITHUB_TOKEN: ${{ secrets.PAT }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         REGISTRY: ${{ secrets.REGISTRY }}
         REGISTRY_BASE_PATH: ${{ secrets.REGISTRY_BASE_PATH }}
         STUB_REGISTRY: ${{ secrets.STUB_REGISTRY }}
