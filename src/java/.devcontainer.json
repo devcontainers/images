@@ -6,8 +6,8 @@
     "features": {
         "ghcr.io/devcontainers/features/java:1": {
             "version": "none",
-            "install_gradle": "true",
-            "install_maven": "true"
+            "installGradle": "true",
+            "installMaven": "true"
         },
         "ghcr.io/devcontainers/features/node:1": "none"
     },
