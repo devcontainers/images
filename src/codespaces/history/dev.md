@@ -5,7 +5,7 @@ This document describes the base contents of the default GitHub Codespaces dev c
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/codespaces)
 
-**Digest:** sha256:3e198032a689c7ddd9245e155cb12c129c22e803c141b84c18c52a674cab8b0a
+**Digest:** sha256:c0df1ca46056421073ccdebb3df0faf871a94b928a1bef12b4b0028d552defbf
 
 **Tags:**
 ```
@@ -41,7 +41,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 835a0a5d17765243cabee782acb5905a9aab33c3 | /home/codespace/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3668ec2a82250020ca0c285ef8b277f1385a8085 | /home/codespace/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | bf45ef070e82356ed36a0f4d98f8ec651c8f0d98 | /usr/local/nvs |
 | [rbenv](https://github.com/rbenv/rbenv.git) | c4395e58201966d9f90c12bd6b7342e389e7a4cb | /usr/local/share/rbenv |
@@ -67,7 +67,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool / module | Version |
 |---------------|---------|
-| golang.org/x/tools/gopls | 0.9.1 |
+| golang.org/x/tools/gopls | 0.9.3 |
 | honnef.co/go/tools | 0.3.2 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
 | github.com/mgechev/revive | 1.2.3 |
@@ -89,11 +89,11 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.37.1 | /usr/bin |
+| [git](https://github.com/git/git) | 2.37.2 | /usr/bin |
 | [Xdebug](https://xdebug.org/) | 3.1.5 | /usr/local/php/current |
 | [Composer](https://getcomposer.org/) | 2.3.10 | /usr/local/php/current/bin |
 | [kubectl](https://github.com/kubernetes/kubectl) | WARNING: This version information is deprecated and will be replaced with the output from kubectl version --short.  Use --output=yaml|json to get the full version.<br />1.24.3 | /usr/local/bin |
-| [Helm](https://github.com/helm/helm) | 3.9.2 | /usr/local/bin |
+| [Helm](https://github.com/helm/helm) | 3.9.3 | /usr/local/bin |
 | [Docker Compose](https://github.com/docker/compose) | 1.29.2 | /usr/local/bin |
 | [SDKMAN!](https://github.com/sdkman/sdkman-cli) | 5.16.0 | /usr/local/sdkman |
 | [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
@@ -119,7 +119,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | g++ | 4:9.3.0-1ubuntu2 |
 | gcc | 4:9.3.0-1ubuntu2 |
 | gdb | 9.2-0ubuntu1~20.04.1 |
-| git | 1:2.37.1-0ppa1~ubuntu20.04.1 |
+| git | 1:2.37.2-0ppa1~ubuntu20.04.1 |
 | git-lfs (Git Large File Support) | 3.2.0 |
 | gnupg2 | 2.2.19-3ubuntu2.2 |
 | htop | 2.2.0-2build1 |

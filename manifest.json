@@ -6,7 +6,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "835a0a5d17765243cabee782acb5905a9aab33c3"
+                    "commitHash": "3668ec2a82250020ca0c285ef8b277f1385a8085"
                 }
             }
         },
@@ -76,7 +76,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "030c53833b977f1580b2a4817bb22edbdde606d4"
+                    "commitHash": "d293ac220dd126165d24907b6f07e6b658b3329f"
                 }
             }
         },
@@ -166,7 +166,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "97134d1eed19b72a9c4bf90a2effa847221608bf"
+                    "commitHash": "835a0a5d17765243cabee782acb5905a9aab33c3"
                 }
             }
         },
@@ -359,7 +359,7 @@
                 "Type": "go",
                 "Go": {
                     "Name": "golang.org/x/tools/gopls",
-                    "Version": "0.9.1"
+                    "Version": "0.9.3"
                 }
             }
         },
@@ -432,7 +432,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "835a0a5d17765243cabee782acb5905a9aab33c3"
+                    "commitHash": "3668ec2a82250020ca0c285ef8b277f1385a8085"
                 }
             }
         },
@@ -481,7 +481,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "git",
-                    "Version": "2.37.1",
+                    "Version": "2.37.2",
                     "DownloadUrl": "https://github.com/git/git"
                 }
             }
@@ -511,7 +511,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Helm",
-                    "Version": "3.9.2",
+                    "Version": "3.9.3",
                     "DownloadUrl": "https://github.com/helm/helm"
                 }
             }
@@ -930,7 +930,7 @@
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "rustfmt",
-                    "Version": "1.4.38"
+                    "Version": "1.5.1"
                 }
             }
         },
@@ -939,7 +939,7 @@
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "rust-analysis",
-                    "Version": "1.62.1"
+                    "Version": "1.63.0"
                 }
             }
         },
@@ -948,7 +948,7 @@
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "rust-src",
-                    "Version": "1.62.1"
+                    "Version": "1.63.0"
                 }
             }
         },
@@ -957,7 +957,7 @@
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "clippy",
-                    "Version": "1.62.1"
+                    "Version": "1.63.0"
                 }
             }
         },
