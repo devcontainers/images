@@ -26,9 +26,9 @@ The container includes the `zsh` (and Oh My Zsh!) and `fish` shells that you can
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. However, **note that only the most recent image is pre-cached in Codespaces**. For example:
 
-- `mcr.microsoft.com/devcontainers/universal:1-focal`
-- `mcr.microsoft.com/devcontainers/universal:1.3-focal`
-- `mcr.microsoft.com/devcontainers/universal:1.3.3-focal`
+- `mcr.microsoft.com/devcontainers/universal:2-focal`
+- `mcr.microsoft.com/devcontainers/universal:2.0-focal`
+- `mcr.microsoft.com/devcontainers/universal:2.0.6-focal`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/universal/tags/list).
 

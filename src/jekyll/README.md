@@ -35,7 +35,7 @@ You can decide how often you want updates by referencing a [semantic version](ht
 
 - `mcr.microsoft.com/devcontainers/jekyll:0` (or `0-bullseye`, `0-buster` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/jekyll:0.1` (or `0.1-bullseye`, `0.1-buster` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/jekyll:0.1.0` (or `0.1.0-bullseye`, `0.1.0-buster` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/jekyll:0.1.6` (or `0.1.6-bullseye`, `0.1.6-buster` to pin to an OS version)
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/microsoft/vscode-dev-containers/issues/532) versions of images (e.g. `0-bullseye`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 

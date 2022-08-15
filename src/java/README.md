@@ -28,8 +28,8 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
 - `mcr.microsoft.com/devcontainers/java:0-11` (or `0-11-bullseye`, `0-11-buster` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/java:0.203-11` (or `0.203-11-bullseye`, `0.203-11-buster` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/java:0.203.0-11` (or `0.203.0-11-bullseye`, `0.203.0-11-buster` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/java:0.205-11` (or `0.205-11-bullseye`, `0.205-11-buster` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/java:0.205.0-11` (or `0.205.0-11-bullseye`, `0.205.0-11-buster` to pin to an OS version)
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/microsoft/vscode-dev-containers/issues/532) versions of images (e.g. `0-11`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
