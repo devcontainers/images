@@ -518,8 +518,10 @@ This retains its value as a sample but minimizes the number of actual build step
 Consequently, this user stub Dockerfile needs to be versioned with the `devcontainer.json` file and can technically version independently of the actual main Dockerfile and image. Given this tie, it makes sense to keep this file with `devcontainer.json` in the repository. The repository therefore would could contain:
 
 ```text
-📄 Dockerfile
-📄 devcontainer.json
+📁 .devcontainer
+     📄 base.Dockerfile
+     📄 devcontainer.json
+     📄 Dockerfile
 📄 manifest.json
 📄 README.md
 📁 test-project
