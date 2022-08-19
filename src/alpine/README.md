@@ -19,7 +19,7 @@ See **[history](history)** for information on the contents of published images.
 
 ## Using this image
 
-You can also directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
+You can also directly reference pre-built versions of `Dockerfile` by using the `image` property in `devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
 - `mcr.microsoft.com/devcontainers/base:alpine` (latest)
 - `mcr.microsoft.com/devcontainers/base:alpine-3.13`

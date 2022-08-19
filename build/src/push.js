@@ -54,7 +54,7 @@ async function push(repo, release, updateLatest, registry, registryPath, stubReg
 async function pushImage(definitionId, repo, release, updateLatest,
     registry, registryPath, stubRegistry, stubRegistryPath, prepOnly, pushImages, replaceImage) {
     const definitionPath = configUtils.getDefinitionPath(definitionId);
-    const dotDevContainerPath = definitionPath;
+    const dotDevContainerPath = path.join(definitionPath, '.devcontainer');
     // Use Dockerfile for image build
     const dockerFilePath = path.join(dotDevContainerPath, 'Dockerfile');
 
@@ -63,9 +63,9 @@ async function pushImage(definitionId, repo, release, updateLatest,
         throw `Definition ${definitionId} does not exist! Invalid path: ${definitionPath}`;
     }
 
-    // Look for context in .devcontainer.json and use it to build the Dockerfile
-    console.log('(*) Reading .devcontainer.json...');
-    const devContainerJsonPath = path.join(dotDevContainerPath, '.devcontainer.json');
+    // Look for context in devcontainer.json and use it to build the Dockerfile
+    console.log('(*) Reading devcontainer.json...');
+    const devContainerJsonPath = path.join(dotDevContainerPath, 'devcontainer.json');
     const devContainerJsonRaw = await asyncUtils.readFile(devContainerJsonPath);
     const devContainerJson = jsonc.parse(devContainerJsonRaw);
 
@@ -162,7 +162,7 @@ async function pushImage(definitionId, repo, release, updateLatest,
     }
 
     await prep.createStub(
-        dotDevContainerPath, definitionId, repo, release, false, stubRegistry, stubRegistryPath);
+        dotDevContainerPath, definitionId, repo, release, stubRegistry, stubRegistryPath);
 
     console.log('(*) Done!\n');
 }

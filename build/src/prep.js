@@ -117,27 +117,27 @@ async function prepDockerFile(devContainerDockerfilePath, definitionId, repo, re
     return prepResult;
 }
 
-async function createStub(dotDevContainerPath, definitionId, repo, release, baseDockerFileExists, stubRegistry, stubRegistryPath) {
+async function createStub(dotDevContainerPath, definitionId, repo, release, stubRegistry, stubRegistryPath) {
     const userDockerFilePath = path.join(dotDevContainerPath, 'Dockerfile');
     console.log('(*) Generating user Dockerfile...');
     const templateDockerfile = await configUtils.objectByDefinitionLinuxDistro(definitionId, stubPromises);
-    const userDockerFile = await processStub(templateDockerfile, definitionId, repo, release, baseDockerFileExists, stubRegistry, stubRegistryPath);
+    const userDockerFile = await processStub(templateDockerfile, definitionId, repo, release, stubRegistry, stubRegistryPath);
     await asyncUtils.writeFile(userDockerFilePath, userDockerFile);
 }
 
-async function updateStub(dotDevContainerPath, definitionId, repo, release, baseDockerFileExists, registry, registryPath) {
+async function updateStub(dotDevContainerPath, definitionId, repo, release, registry, registryPath) {
     console.log('(*) Updating user Dockerfile...');
     const userDockerFilePath = path.join(dotDevContainerPath, 'Dockerfile');
     const userDockerFile = await asyncUtils.readFile(userDockerFilePath);
-    const userDockerFileModified = await processStub(userDockerFile, definitionId, repo, release, baseDockerFileExists, registry, registryPath);
+    const userDockerFileModified = await processStub(userDockerFile, definitionId, repo, release, registry, registryPath);
     await asyncUtils.writeFile(userDockerFilePath, userDockerFileModified);
 }
 
-async function processStub(userDockerFile, definitionId, repo, release, baseDockerFileExists, registry, registryPath) {
+async function processStub(userDockerFile, definitionId, repo, release, registry, registryPath) {
     const devContainerImageVersion = configUtils.majorFromRelease(release, definitionId);
     const relativePath = configUtils.getDefinitionPath(definitionId, true);
-    let fromSection = `# ${dockerFilePreamble}https://github.com/${repo}/tree/${release}/${relativePath}/Dockerfile\n\n`;
-    // The VARIANT arg allows this value to be set from .devcontainer.json, handle it if found
+    let fromSection = `# ${dockerFilePreamble}https://github.com/${repo}/tree/${release}/${relativePath}/.devcontainer/Dockerfile\n\n`;
+    // The VARIANT arg allows this value to be set from devcontainer.json, handle it if found
     if (/ARG\s+VARIANT\s*=/.exec(userDockerFile) !== null && configUtils.getVariants(definitionId) != null) {
         const variant = configUtils.getVariants(definitionId)[0];
         const tagWithVariant = configUtils.getTagsForVersion(definitionId, devContainerImageVersion, registry, registryPath, '${VARIANT}')[0];
@@ -156,12 +156,12 @@ async function processStub(userDockerFile, definitionId, repo, release, baseDock
 }
 
 async function updateConfigForRelease(definitionId, repo, release, registry, registryPath, stubRegistry, stubRegistryPath) {
-    // Look for context in .devcontainer.json and use it to build the Dockerfile
+    // Look for context in devcontainer.json and use it to build the Dockerfile
     console.log(`(*) Making version specific updates to ${definitionId}...`);
     const definitionPath = configUtils.getDefinitionPath(definitionId, false);
     const relativePath = configUtils.getDefinitionPath(definitionId, true);
-    const dotDevContainerPath = definitionPath;
-    const devContainerJsonPath = path.join(dotDevContainerPath, '.devcontainer.json');
+    const dotDevContainerPath = path.join(definitionPath, '.devcontainer');
+    const devContainerJsonPath = path.join(dotDevContainerPath, 'devcontainer.json');
     const devContainerJsonRaw = await asyncUtils.readFile(devContainerJsonPath);
     const devContainerJsonModified =
         `// ${configUtils.getConfig('devContainerJsonPreamble')}https://github.com/${repo}/tree/${release}/${relativePath}\n` +

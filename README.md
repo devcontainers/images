@@ -23,9 +23,9 @@ This repository contains a set of **dev container images** which are Docker imag
 The Development Containers Specification seeks to find ways to enrich existing formats with common development specific settings, tools, and configuration while still providing a simplified, un-orchestrated single container option – so that they can be used as coding environments or for continuous integration and testing. You may review the spec and learn more about it in the [devcontainers/spec](https://github.com/devcontainers/spec) repo and [containers.dev](https://containers.dev/).
 
 This repository supplies images that may be used in dev container configurations that follow the spec.
-### What is the goal of `.devcontainer.json`?
+### What is the goal of `devcontainer.json`?
 
-A `.devcontainer.json` file is similar to `launch.json` for debugging, but designed to launch (or attach to) a development container instead. At its simplest, all you need is a `.devcontainer.json` file in your project that references an image, `Dockerfile`, or `docker-compose.yml`, and a few properties.
+A `devcontainer.json` file is similar to `launch.json` for debugging, but designed to launch (or attach to) a development container instead. At its simplest, all you need is a `devcontainer.json` file in your project that references an image, `Dockerfile`, or `docker-compose.yml`, and a few properties.
 
 ### Why do Dockerfiles in this repo use `RUN` statements with commands separated by `&&`?
 

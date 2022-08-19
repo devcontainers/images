@@ -21,7 +21,7 @@ See **[history](history)** for information on the contents of published images.
 
 ### Configuration
 
-You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` with one of the following:
+You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` with one of the following:
 
 - `mcr.microsoft.com/devcontainers/python:3` (latest)
 - `mcr.microsoft.com/devcontainers/python:3.6` (or `3.6-bullseye`, `3.6-buster` to pin to an OS version)
@@ -48,7 +48,7 @@ Beyond Python and `git`, this image / `Dockerfile` includes a number of Python t
 
 Given JavaScript front-end web client code written for use in conjunction with a Python back-end often requires the use of Node.js-based utilities to build, this container also includes `nvm` so that you can easily install Node.js. 
 
-Also, you can use a [Node feature](https://github.com/devcontainers/features/tree/main/src/node) to install any version of Node by adding the following to `.devcontainer.json`:
+Also, you can use a [Node feature](https://github.com/devcontainers/features/tree/main/src/node) to install any version of Node by adding the following to `devcontainer.json`:
 
 ```json
 {
@@ -90,11 +90,11 @@ RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requ
     && rm -rf /tmp/pip-tmp
 ```
 
-Since `requirements.txt` is likely in the folder you opened be sure to include `"context": ".."` to `.devcontainer.json`. This allows the Dockerfile to access everything in the opened folder.
+Since `requirements.txt` is likely in the folder you opened be sure to include `"context": ".."` to `devcontainer.json`. This allows the Dockerfile to access everything in the opened folder.
 
 #### [Optional] Allowing the non-root vscode user to pip install globally without sudo
 
-You can opt into using the `vscode` non-root user in the container by adding `"remoteUser": "vscode"` to `.devcontainer.json`. However, by default, this you will need to use `sudo` to perform global pip installs.
+You can opt into using the `vscode` non-root user in the container by adding `"remoteUser": "vscode"` to `devcontainer.json`. However, by default, this you will need to use `sudo` to perform global pip installs.
 
 ```bash
 sudo pip install <your-package-here>

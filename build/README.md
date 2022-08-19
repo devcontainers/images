@@ -29,7 +29,7 @@ Image build/push to MCR is managed using config in `manifest.json` files that ar
 
 1. **Important:** Update any `ARG` values in your `Dockerfile` to reflect what you want in the image. Use boolean `ARGS` with `if` statements to skip installing certain things in the image.
 
-    > **Note:** The `build.args` and `build.dockerfile` properties are **intentionally ignored** during image build so that you can vary image defaults and .devcontainer.json defaults as appropriate. The only property considered is `build.context` since this may be required for the build to succeed.
+    > **Note:** The `build.args` and `build.dockerfile` properties are **intentionally ignored** during image build so that you can vary image defaults and devcontainer.json defaults as appropriate. The only property considered is `build.context` since this may be required for the build to succeed.
 
 2. Create a [`Dockerfile`](#creating-a-dockerfile)
 
@@ -67,9 +67,9 @@ In some cases you may want to include some special instructions for developers. 
 
 - `Dockerfile`: Dockerfile used to generate the image itself
 
-You can then reference `Dockerfile` in `.devcontainer.json` to make editing the file that is used to create the image easy.
+You can then reference `Dockerfile` in `devcontainer.json` to make editing the file that is used to create the image easy.
 
-If you're using the [variants property](#the-variants-property) in `manifest.json`, you can set up the custom stub so that you can specify the variant from `.devcontainer.json` by adding an argument called `VARIANT` right before the `FROM` statement that uses it.
+If you're using the [variants property](#the-variants-property) in `manifest.json`, you can set up the custom stub so that you can specify the variant from `devcontainer.json` by adding an argument called `VARIANT` right before the `FROM` statement that uses it.
 
 In your `Dockerfile`:
 
@@ -78,7 +78,7 @@ ARG VARIANT=3
 FROM mcr.microsoft.com/devcontainers/python:${VARIANT}
 ```
 
-In `.devcontainer.json`:
+In `devcontainer.json`:
 
 ```json
 "build": {
@@ -515,17 +515,17 @@ This retains its value as a sample but minimizes the number of actual build step
 
 #### Repository contents
 
-Consequently, this user stub Dockerfile needs to be versioned with the `.devcontainer.json` file and can technically version independently of the actual main Dockerfile and image. Given this tie, it makes sense to keep this file with `.devcontainer.json` in the repository. The repository therefore would could contain:
+Consequently, this user stub Dockerfile needs to be versioned with the `devcontainer.json` file and can technically version independently of the actual main Dockerfile and image. Given this tie, it makes sense to keep this file with `devcontainer.json` in the repository. The repository therefore would could contain:
 
 ```text
 📄 Dockerfile
-📄 .devcontainer.json
+📄 devcontainer.json
 📄 manifest.json
 📄 README.md
 📁 test-project
 ```
 
-The `manifest.json` file dictates how the build process should behave as [described above](#setting-up-a-container-to-be-built). In this case, `.devcontainer.json` points to `Dockerfile` used to generate the actual image.
+The `manifest.json` file dictates how the build process should behave as [described above](#setting-up-a-container-to-be-built). In this case, `devcontainer.json` points to `Dockerfile` used to generate the actual image.
 
 Testing, then, is as simple as it is now - open the folder in `devcontainers` in a container and edit / test as required. Anyone simply copying the folder contents then gets a fully working version of the container even if in-flight and there is no image for it yet.
 
@@ -562,10 +562,10 @@ When a release is cut, the contents of devcontainers repo are staged. The build 
     FROM mcr.microsoft.com/devcontainer/python:0-${VARIANT}
     ```
 
-4. `.devcontainer.json` is updated to point to `Dockerfile` and a comment is added that points to the image in this repository (along with its associated README for this specific version).
+4. `devcontainer.json` is updated to point to `Dockerfile` and a comment is added that points to the image in this repository (along with its associated README for this specific version).
 
     ```json
-    // For format details, see https://aka.ms/vscode-remote/.devcontainer.json
+    // For format details, see https://aka.ms/vscode-remote/devcontainer.json
     {
         "name": "Node.js 10",
         "dockerFile": "Dockerfile",
