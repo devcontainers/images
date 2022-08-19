@@ -25,7 +25,7 @@ The Development Containers Specification seeks to find ways to enrich existing f
 This repository supplies images that may be used in dev container configurations that follow the spec.
 ### What is the goal of `devcontainer.json`?
 
-A `devcontainer.json` file is similar to `launch.json` for debugging, but designed to launch (or attach to) a development container instead. At its simplest, all you need is a `devcontainer.json` file in your project that references an image, `Dockerfile`, or `docker-compose.yml`, and a few properties.
+A `devcontainer.json` file is similar to `launch.json` for debugging, but designed to launch (or attach to) a development container instead. At its simplest, all you need is a `.devcontainer/devcontainer.json` file in your project that references an image, `Dockerfile`, or `docker-compose.yml`, and a few properties.
 
 ### Why do Dockerfiles in this repo use `RUN` statements with commands separated by `&&`?
 
