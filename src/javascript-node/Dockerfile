@@ -15,7 +15,7 @@ RUN \
     && chown ${USERNAME}:npm ${NPM_GLOBAL} /usr/local/etc/npmrc \
     && chmod g+s ${NPM_GLOBAL} \
     && npm config -g set prefix ${NPM_GLOBAL} \
-    && sudo -u ${USERNAME} npm config -g set prefix ${NPM_GLOBAL} \
+    && su ${USERNAME} -c "npm config -g set prefix ${NPM_GLOBAL}" \
     # Install eslint
     && su ${USERNAME} -c "umask 0002 && npm install -g eslint" \
     && npm cache clean --force > /dev/null 2>&1
