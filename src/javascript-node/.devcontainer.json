@@ -20,7 +20,7 @@
         }
     },
     "overrideFeatureInstallOrder": [
-        "common-utils"
+        "ghcr.io/devcontainers/features/common-utils"
     ],
 
 	// Configure tool-specific properties.
