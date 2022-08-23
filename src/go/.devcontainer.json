@@ -19,7 +19,7 @@
         }
     },
     "overrideFeatureInstallOrder": [
-        "common-utils"
+        "ghcr.io/devcontainers/features/common-utils"
     ],
     "runArgs": [
         "--cap-add=SYS_PTRACE",

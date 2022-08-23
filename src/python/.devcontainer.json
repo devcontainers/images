@@ -15,7 +15,7 @@
         "ghcr.io/devcontainers/features/node:1": "none"
     },
     "overrideFeatureInstallOrder": [
-        "common-utils"
+        "ghcr.io/devcontainers/features/common-utils"
     ],
 	// Configure tool-specific properties.
 	"customizations": {
