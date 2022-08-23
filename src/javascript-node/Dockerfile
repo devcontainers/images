@@ -3,6 +3,7 @@ ARG VARIANT=16-bullseye
 FROM node:${VARIANT}
 
 ARG USERNAME=node
+ARG NPM_GLOBAL=/usr/local/share/npm-global
 
 RUN \
     # Configure global npm install location, use group to adapt to UID/GID changes
