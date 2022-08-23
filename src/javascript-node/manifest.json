@@ -1,0 +1,51 @@
+{
+	"variants": ["18-bullseye", "16-bullseye", "14-bullseye", "18-buster", "16-buster", "14-buster"],
+	"definitionVersion": "0.204.2",
+	"build": {
+		"latest": "18-bullseye",
+		"rootDistro": "debian",
+		"architectures": {
+			"18-bullseye": ["linux/amd64", "linux/arm64"],
+			"16-bullseye": ["linux/amd64", "linux/arm64"],
+			"14-bullseye": ["linux/amd64", "linux/arm64"],
+			"18-buster": ["linux/amd64"],
+			"16-buster": ["linux/amd64"],
+			"14-buster": ["linux/amd64"]
+		},
+		"tags": [
+			"javascript-node:${VERSION}-${VARIANT}"
+		],
+		"variantTags": {
+			"18-bullseye": [ 
+				"javascript-node:${VERSION}-18",
+				"javascript-node:${VERSION}-bullseye"
+			],
+			"16-bullseye": [ "javascript-node:${VERSION}-16" ],
+			"14-bullseye": [ "javascript-node:${VERSION}-14" ],
+			"18-buster": [ 
+				"javascript-node:${VERSION}-buster"
+			]
+		}
+	}, 
+	"dependencies": {
+		"image": "node:${VARIANT}",
+		"imageLink": "https://hub.docker.com/_/node",
+		"apt": [{
+			"cgIgnore": false,
+			"name": "yarn"
+		}],
+		"git": {
+			"Oh My Zsh!": "/home/node/.oh-my-zsh",
+			"nvm": "/usr/local/share/nvm"
+		},
+		"npm": [
+			"eslint"
+		],
+		"languages": {
+			"Node.js": {
+				"cgIgnore": true,
+				"path": "/usr/local"
+			}
+		}
+	}
+}
