@@ -2,6 +2,12 @@
 ARG VARIANT=16-bullseye
 FROM node:${VARIANT}
 
+ARG USERNAME=node
+
+# Install eslint
+RUN su ${USERNAME} -c "umask 0002 && npm install -g eslint" \
+    && npm cache clean --force > /dev/null 2>&1
+
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
