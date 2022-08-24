@@ -10,7 +10,7 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published image* | mcr.microsoft.com/devcontainers/javascript-node |
-| *Available image variants* | 18 / 18-bullseye, 16 / 16-bullseye, 14 / 14-bullseye, 18-buster, 16-buster, 14-buster ([full list](https://mcr.microsoft.com/v2/vscode/devcontainers/javascript-node/tags/list)) |
+| *Available image variants* | 18 / 18-bullseye, 16 / 16-bullseye, 14 / 14-bullseye, 18-buster, 16-buster, 14-buster ([full list](https://mcr.microsoft.com/v2/devcontainers/javascript-node/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bullseye` variants |
 | *Works in Codespaces* | Yes |
 | *Container host OS support* | Linux, macOS, Windows |
