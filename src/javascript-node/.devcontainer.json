@@ -3,19 +3,19 @@
 	"build": {
 		"dockerfile": "Dockerfile"
 	},
-    "features": {
-        "ghcr.io/devcontainers/features/common-utils:1": {
-            "installZsh": "true",
-            "username": "node",
-            "upgradePackages": "true"
-        },
-        "ghcr.io/devcontainers/features/node:1": {
-            "version": "none"
-        }
-    },
-    "overrideFeatureInstallOrder": [
-        "ghcr.io/devcontainers/features/common-utils"
-    ],
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:1": {
+			"installZsh": "true",
+			"username": "node",
+			"upgradePackages": "true"
+		},
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "none"
+		}
+	},
+	"overrideFeatureInstallOrder": [
+		"ghcr.io/devcontainers/features/common-utils"
+	],
 
 	// Configure tool-specific properties.
 	"customizations": {
