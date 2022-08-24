@@ -6,8 +6,7 @@ source test-utils.sh node
 # Run common tests
 checkCommon
 
-# Definition specific tests
-checkExtension "dbaeumer.vscode-eslint"
+# Image specific tests
 check "node" node --version
 sudo rm -f yarn.lock
 check "yarn" yarn install
