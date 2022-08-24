@@ -14,7 +14,7 @@
 
 ## Variant: 3.1-bullseye
 
-**Digest:** sha256:cccdf5908ef3a85f0f9d4df6623289a57e54b5665246a3829ec8f7c78b18bc43
+**Digest:** sha256:54fa3f643e35826547141223d3e20c0dbaea79abcebaa3228a07b45f77833d56
 
 **Tags:**
 ```
@@ -102,7 +102,7 @@ mcr.microsoft.com/devcontainers/ruby:dev-bullseye
 
 ## Variant: 3.0-bullseye
 
-**Digest:** sha256:6e5abe65a78732af67e0bc35cb2aa437e2435b804fafcee924fb9483e887af03
+**Digest:** sha256:af0f3f269901cecdad4658e53e2ee359be63f0d200c83511f41915ae114d4a50
 
 **Tags:**
 ```
@@ -187,7 +187,7 @@ mcr.microsoft.com/devcontainers/ruby:dev-3.0
 
 ## Variant: 2.7-bullseye
 
-**Digest:** sha256:3cbda50333094075b1f6bb47bfcfa82425d6313da2fabdb2ed3f556b131d3d8f
+**Digest:** sha256:e8886a98e50dc445912caedffa00f815937353de549a5d13be90b8a9a04831ea
 
 **Tags:**
 ```
@@ -274,7 +274,7 @@ mcr.microsoft.com/devcontainers/ruby:dev-2-bullseye
 
 ## Variant: 3.1-buster
 
-**Digest:** sha256:56059424cfb732aef196e4c71c5668b33fb91bb99e950a808dcabd7950151f74
+**Digest:** sha256:3e87c06a11d7f7cf126e0b7d727977a60ba5ddc3473b3b779b467a6a47e6eaaa
 
 **Tags:**
 ```
@@ -361,7 +361,7 @@ mcr.microsoft.com/devcontainers/ruby:dev-buster
 
 ## Variant: 3.0-buster
 
-**Digest:** sha256:7ad27c357d353c8e5df180c87dff5069461558db42511ec77f1c80126f9d264f
+**Digest:** sha256:18b3d7614bea0d79c8d80975ae0bf0195d1c611335e8a6970c9bb319ef7f6ca4
 
 **Tags:**
 ```
@@ -446,7 +446,7 @@ mcr.microsoft.com/devcontainers/ruby:dev-3.0-buster
 
 ## Variant: 2.7-buster
 
-**Digest:** sha256:855af567125fb7a32d01b91c922655f0c88c10520add6b73cf27308a804b516a
+**Digest:** sha256:1d856848f3f07408a6a18e7fd45a2429d3719fd492ef3482b80c65b7290256be
 
 **Tags:**
 ```

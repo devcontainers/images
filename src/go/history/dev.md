@@ -12,7 +12,7 @@
 
 ## Variant: 1.19-bullseye
 
-**Digest:** sha256:57fb85f5b03910f2e48f918b8ddf4839f536f10591ddfa902d66e065862bf33b
+**Digest:** sha256:8e9cd6f59806dc96c5fde1aaef6eba85c13b7365049da35fe7ca0ac38bfda8ba
 
 **Tags:**
 ```
@@ -55,7 +55,7 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 | github.com/uudashr/gopkgs | 2.0.1+incompatible |
 | github.com/ramya-rao-a/go-outline | 0.0.0-20210608161538-9736a4bde949 |
 | github.com/go-delve/delve | 1.9.1 |
-| github.com/golangci/golangci-lint | 1.48.0 |
+| github.com/golangci/golangci-lint | 1.49.0 |
 
 **Additional linux tools and packages**
 
@@ -109,7 +109,7 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 
 ## Variant: 1.19-buster
 
-**Digest:** sha256:f0cb4c7b7277e0c9da6ea81bd61d514bae125c0d682df43b57f97b84ce5bb230
+**Digest:** sha256:c27c25ac1cd6ebce5d416e15e000da386c336486906841e136bb02a69370b4df
 
 **Tags:**
 ```
@@ -150,7 +150,7 @@ mcr.microsoft.com/devcontainers/go:dev-buster
 | github.com/uudashr/gopkgs | 2.0.1+incompatible |
 | github.com/ramya-rao-a/go-outline | 0.0.0-20210608161538-9736a4bde949 |
 | github.com/go-delve/delve | 1.9.1 |
-| github.com/golangci/golangci-lint | 1.48.0 |
+| github.com/golangci/golangci-lint | 1.49.0 |
 
 **Additional linux tools and packages**
 
@@ -205,7 +205,7 @@ mcr.microsoft.com/devcontainers/go:dev-buster
 
 ## Variant: 1.18-bullseye
 
-**Digest:** sha256:c51b158cfd9066e9d14f3b17e9bb33396fd6d5e02002c66d267edb27309d5312
+**Digest:** sha256:ab41998f4935d2d7cfbc4c1096566fb83ec026741639b2fb20dfd432f9cf0a2b
 
 **Tags:**
 ```
@@ -245,7 +245,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.18
 | github.com/uudashr/gopkgs | 2.0.1+incompatible |
 | github.com/ramya-rao-a/go-outline | 0.0.0-20210608161538-9736a4bde949 |
 | github.com/go-delve/delve | 1.9.1 |
-| github.com/golangci/golangci-lint | 1.48.0 |
+| github.com/golangci/golangci-lint | 1.49.0 |
 
 **Additional linux tools and packages**
 
@@ -299,7 +299,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.18
 
 ## Variant: 1.18-buster
 
-**Digest:** sha256:a44de79dec53c4304cb823376c89a6b86a957f1735f9718fdfb4d51a8c4300c1
+**Digest:** sha256:6ade1231874769b2261abc8aa656a9f6ed0975e61be17de9933a31a0e6a86b37
 
 **Tags:**
 ```
@@ -338,7 +338,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.18-buster
 | github.com/uudashr/gopkgs | 2.0.1+incompatible |
 | github.com/ramya-rao-a/go-outline | 0.0.0-20210608161538-9736a4bde949 |
 | github.com/go-delve/delve | 1.9.1 |
-| github.com/golangci/golangci-lint | 1.48.0 |
+| github.com/golangci/golangci-lint | 1.49.0 |
 
 **Additional linux tools and packages**
 
