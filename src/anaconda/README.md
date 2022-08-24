@@ -28,7 +28,7 @@ You can decide how often you want updates by referencing a [semantic version](ht
 
 - `mcr.microsoft.com/devcontainers/anaconda:0-3`
 - `mcr.microsoft.com/devcontainers/anaconda:0.202-3`
-- `mcr.microsoft.com/devcontainers/anaconda:0.202.0-3`
+- `mcr.microsoft.com/devcontainers/anaconda:0.202.6-3`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/anaconda/tags/list).
 

@@ -33,8 +33,8 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
 - `mcr.microsoft.com/devcontainers/cpp:0-bullseye`
-- `mcr.microsoft.com/devcontainers/cpp:0.204-bullseye`
-- `mcr.microsoft.com/devcontainers/cpp:0.204.0-bullseye`
+- `mcr.microsoft.com/devcontainers/cpp:0.205-bullseye`
+- `mcr.microsoft.com/devcontainers/cpp:0.205.0-bullseye`
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/microsoft/vscode-dev-containers/issues/532) versions of images (e.g. `0-debian-11`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 

@@ -5,7 +5,7 @@ This document describes the base contents of the default GitHub Codespaces dev c
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/codespaces)
 
-**Digest:** sha256:299ad7b561437e09d3ec5bc66bb589a9f67e9d1b0c34649198fa0b8d06f6fe1a
+**Digest:** sha256:accfa8c8370cdfa361d05609426cc4b9ae6e720d0bff294448e4761da2e392b5
 
 **Tags:**
 ```
@@ -26,9 +26,9 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 14.20.0<br />16.16.0 | /usr/local/share/nvm/versions/node/&lt;version&gt; |
+| [Node.js](https://nodejs.org/en/) | 14.20.0<br />16.17.0 | /usr/local/share/nvm/versions/node/&lt;version&gt; |
 | [Python](https://www.python.org/) | 3.10.6<br />3.9.13 | /usr/local/python/&lt;version&gt; |
-| [Java](https://adoptopenjdk.net/) | 11.0.15<br />17.0.3 | /usr/local/sdkman/candidates/java/&lt;version&gt; |
+| [Java](https://adoptopenjdk.net/) | 11.0.16<br />17.0.4 | /usr/local/sdkman/candidates/java/&lt;version&gt; |
 | [.NET](https://dotnet.microsoft.com/) | 3<br />6 | /usr/local/dotnet |
 | [Ruby](https://www.ruby-lang.org/en/) | 3.0.4<br />3.1.2 | /usr/local/rvm/rubies/&lt;version&gt; |
 | [PHP](https://xdebug.org/) | 8.0.16<br />8.1.4 | /usr/local/php/&lt;version&gt; |
@@ -41,40 +41,40 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97134d1eed19b72a9c4bf90a2effa847221608bf | /home/codespace/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6d48309cd7da1b91038cf08be7865fb5bb9bc5ea | /home/codespace/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | bf45ef070e82356ed36a0f4d98f8ec651c8f0d98 | /usr/local/nvs |
 | [rbenv](https://github.com/rbenv/rbenv.git) | c4395e58201966d9f90c12bd6b7342e389e7a4cb | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 44c91aa270ebc1d7449e516e7a49ff1ecaf2550c | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | bd08de2e607119a7033c828e2fa0efbc41180d64 | /usr/local/share/ruby-build |
 
 **Pip / pipx installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
 | pylint | 2.14.5 |
-| flake8 | 5.0.3 |
-| autopep8 | 1.6.0 |
+| flake8 | 5.0.4 |
+| autopep8 | 1.7.0 |
 | black | 22.6.0 |
 | yapf | 0.32.0 |
 | mypy | 0.971 |
 | pydocstyle | 6.1.1 |
-| pycodestyle | 2.9.0 |
+| pycodestyle | 2.9.1 |
 | bandit | 1.7.4 |
-| virtualenv | 20.16.2 |
+| virtualenv | 20.16.3 |
 | pipx | 1.1.0 |
 
 **Go tools and modules**
 
 | Tool / module | Version |
 |---------------|---------|
-| golang.org/x/tools/gopls | 0.9.1 |
+| golang.org/x/tools/gopls | 0.9.4 |
 | honnef.co/go/tools | 0.3.2 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
-| github.com/mgechev/revive | 1.2.1 |
+| github.com/mgechev/revive | 1.2.3 |
 | github.com/uudashr/gopkgs | 2.0.1+incompatible |
 | github.com/ramya-rao-a/go-outline | 0.0.0-20210608161538-9736a4bde949 |
-| github.com/go-delve/delve | 1.9.0 |
-| github.com/golangci/golangci-lint | 1.47.3 |
+| github.com/go-delve/delve | 1.9.1 |
+| github.com/golangci/golangci-lint | 1.48.0 |
 
 **Ruby gems and tools**
 
@@ -89,18 +89,18 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.37.1 | /usr/bin |
+| [git](https://github.com/git/git) | 2.37.2 | /usr/bin |
 | [Xdebug](https://xdebug.org/) | 3.1.5 | /usr/local/php/current |
-| [Composer](https://getcomposer.org/) | 2.3.10 | /usr/local/php/current/bin |
-| [kubectl](https://github.com/kubernetes/kubectl) | WARNING: This version information is deprecated and will be replaced with the output from kubectl version --short.  Use --output=yaml|json to get the full version.<br />1.24.3 | /usr/local/bin |
-| [Helm](https://github.com/helm/helm) | 3.9.2 | /usr/local/bin |
+| [Composer](https://getcomposer.org/) | 2.4.1 | /usr/local/php/current/bin |
+| [kubectl](https://github.com/kubernetes/kubectl) | WARNING: This version information is deprecated and will be replaced with the output from kubectl version --short.  Use --output=yaml|json to get the full version.<br />1.24.4 | /usr/local/bin |
+| [Helm](https://github.com/helm/helm) | 3.9.3 | /usr/local/bin |
 | [Docker Compose](https://github.com/docker/compose) | 1.29.2 | /usr/local/bin |
-| [SDKMAN!](https://github.com/sdkman/sdkman-cli) | 5.15.0 | /usr/local/sdkman |
+| [SDKMAN!](https://github.com/sdkman/sdkman-cli) | 5.16.0 | /usr/local/sdkman |
 | [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
-| [GitHub CLI](https://github.com/cli/cli) | 2.14.3 | 
+| [GitHub CLI](https://github.com/cli/cli) | 2.14.5 | 
 | [yarn](https://yarnpkg.com/) | 1.22.19 | /usr/bin |
 | [Maven](https://maven.apache.org/) | 3.8.6 | /usr/local/sdkman/candidates/maven/current/bin |
-| [Gradle](https://gradle.org/) | 7.4.2 | /usr/local/sdkman/candidates/gradle/current/bin |
+| [Gradle](https://gradle.org/) | 7.5.1 | /usr/local/sdkman/candidates/gradle/current/bin |
 | Docker (Moby) CLI &amp; Engine | 20.10.17+azure | 
 
 **Additional linux tools and packages**
@@ -119,7 +119,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | g++ | 4:9.3.0-1ubuntu2 |
 | gcc | 4:9.3.0-1ubuntu2 |
 | gdb | 9.2-0ubuntu1~20.04.1 |
-| git | 1:2.37.1-0ppa1~ubuntu20.04.1 |
+| git | 1:2.37.2-0ppa1~ubuntu20.04.1 |
 | git-lfs (Git Large File Support) | 3.2.0 |
 | gnupg2 | 2.2.19-3ubuntu2.2 |
 | htop | 2.2.0-2build1 |
@@ -161,7 +161,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | manpages | 5.05-1 |
 | manpages-dev | 5.05-1 |
 | moby-cli (Docker CLI) | 20.10.17+azure-ubuntu20.04u1 |
-| moby-engine (Docker Engine) | 20.10.17+azure-ubuntu20.04u1 |
+| moby-engine (Docker Engine) | 20.10.17+azure-ubuntu20.04u3 |
 | nano | 4.8-1ubuntu1 |
 | ncdu | 1.14.1-1 |
 | net-tools | 1.60+git20180626.aebd88e-1ubuntu1 |
@@ -173,7 +173,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | psmisc | 23.3-1 |
 | python3-dev | 3.8.2-0ubuntu2 |
 | python3-minimal | 3.8.2-0ubuntu2 |
-| rsync | 3.1.3-8ubuntu0.3 |
+| rsync | 3.1.3-8ubuntu0.4 |
 | sed | 4.7-1 |
 | software-properties-common | 0.99.9.8 |
 | strace | 5.5-3ubuntu1 |

@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:9008dd659b5f3156c5032014bc92f8a1fd6050e9d37fa55900f110484319d58c
+**Digest:** sha256:e68b707bf5a23bcad2ed217926553ab3847d495b26c1d91b9ab3c6c62a416182
 
 **Tags:**
 ```
@@ -31,7 +31,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 249c708ed3a4a7a63d16a6e911a46b6fb9623cbd | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 835a0a5d17765243cabee782acb5905a9aab33c3 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -77,7 +77,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | rsync | 3.2.3-4+deb11u1 |
 | strace | 5.10-1 |
 | sudo | 1.9.5p2-3 |
-| unzip | 6.0-26 |
+| unzip | 6.0-26+deb11u1 |
 | vim-tiny | 2:8.2.2434-3+deb11u1 |
 | wget | 1.21-1+deb11u1 |
 | zip | 3.0-12 |

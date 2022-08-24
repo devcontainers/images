@@ -121,7 +121,7 @@ check "run-puppeteer" node puppeteer.js
 check "oryx" oryx --version
 
 # Install platforms with oryx build tool
-check "oryx-install-dotnet-2.1" oryx prep --skip-detection --platforms-and-versions dotnet=2.1.12
+check "oryx-install-dotnet-2.1" oryx prep --skip-detection --platforms-and-versions dotnet=2.1.30
 check "dotnet-2-installed-by-oryx" ls /opt/dotnet/ | grep 2.1
 check "dotnet-version-on-path-is-2.1.12" dotnet --version | grep 2.1
 

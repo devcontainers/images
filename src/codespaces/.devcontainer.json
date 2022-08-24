@@ -6,45 +6,45 @@
     "features": {
         "ghcr.io/devcontainers/features/common-utils:1": {
             "username": "codespace",
-            "user_uid": "1000",
-            "user_gid": "1000"
+            "uid": "1000",
+            "gid": "1000"
         },
         "ghcr.io/devcontainers/features/dotnet:1": {
             "version": "6",
-            "install_using_apt": "false",
-            "additional_versions": "3"
+            "installUsingApt": "false",
+            "additionalVersions": "3"
         },
         "ghcr.io/devcontainers/features/hugo:1": {
             "version": "latest"
         },
         "ghcr.io/devcontainers/features/node:1": {
             "version": "16",
-            "additional_versions": "14"
+            "additionalVersions": "14"
         },
         "./local-features/nvs": "latest",
         "ghcr.io/devcontainers/features/python:1": {
             "version": "3.10",
-            "additional_versions": "3.9",
-            "install_jupyterlab": "true"
+            "additionalVersions": "3.9",
+            "installJupyterlab": "true"
         },
         "./local-features/machine-learning-packages": "latest",
         "ghcr.io/devcontainers/features/php:1": {
             "version": "8.1.4",
-            "additional_versions": "8.0.16",
-            "install_composer": "true"
+            "additionalVersions": "8.0.16",
+            "installComposer": "true"
         },
         "ghcr.io/devcontainers/features/anaconda:1": {
             "version": "latest"
         },
         "ghcr.io/devcontainers/features/ruby:1": {
             "version": "3.1",
-            "additional_versions": "3.0"
+            "additionalVersions": "3.0"
         },
         "ghcr.io/devcontainers/features/java:1": {
             "version": "17",
-            "additional_versions": "11",
-            "install_gradle": "true",
-            "install_maven": "true"
+            "additionalVersions": "11",
+            "installGradle": "true",
+            "installMaven": "true"
         },
         "ghcr.io/devcontainers/features/sshd:1": {
             "version": "latest"
@@ -72,26 +72,26 @@
         "./local-features/setup-user": "latest"
     },
     "overrideFeatureInstallOrder": [
-        "common-utils",
-        "dotnet",
-        "hugo",
-        "node",
+        "ghcr.io/devcontainers/features/common-utils",
+        "ghcr.io/devcontainers/features/dotnet",
+        "ghcr.io/devcontainers/features/hugo",
+        "ghcr.io/devcontainers/features/node",
         "./local-features/nvs",
-        "python",
+        "ghcr.io/devcontainers/features/python",
         "./local-features/machine-learning-packages",
-        "php",
-        "anaconda",
-        "ruby",
-        "java",
-        "sshd",
-        "git-lfs",
-        "github-cli",
-        "docker-in-docker",
-        "kubectl-helm-minikube",
-        "git",
-        "go",
+        "ghcr.io/devcontainers/features/php",
+        "ghcr.io/devcontainers/features/anaconda",
+        "ghcr.io/devcontainers/features/ruby",
+        "ghcr.io/devcontainers/features/java",
+        "ghcr.io/devcontainers/features/sshd",
+        "ghcr.io/devcontainers/features/git-lfs",
+        "ghcr.io/devcontainers/features/github-cli",
+        "ghcr.io/devcontainers/features/docker-in-docker",
+        "ghcr.io/devcontainers/features/kubectl-helm-minikube",
+        "ghcr.io/devcontainers/features/git",
+        "ghcr.io/devcontainers/features/go",
         "./local-features/jekyll",
-        "oryx",
+        "ghcr.io/devcontainers/features/oryx",
         "./local-features/setup-user"
     ],
     "remoteUser": "codespace",
