@@ -179,7 +179,7 @@ async function getLinuxPackageInfo(imageTagOrContainerName, packageList, linuxDi
     return componentList;
 }
 
-// Gets a package pool URL out of a download URL - Needed for registering in manifest.json
+// Gets a package pool URL out of a download URL - Needed for registering in cgmanifest.json
 function getPoolUrlFromPackageVersionListOutput(packageUriCommandOutput, config, package, version) {
     // Handle regex reserved charters in regex strings and that ":" is treaded as "1%3a" on Debian/Ubuntu 
     const sanitizedPackage = package.replace(/\+/g, '\\+').replace(/\./g, '\\.');
