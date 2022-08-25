@@ -1,4 +1,5 @@
 {
+	"version": "0.205.2",
 	"variants": [
 		"bullseye",
 		"buster",
@@ -6,7 +7,6 @@
 		"focal",
 		"bionic"
 	],
-	"imageVersion": "0.205.2",
 	"build": {
 		"latest": "bullseye",
 		"parent": {

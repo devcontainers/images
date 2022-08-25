@@ -144,14 +144,14 @@ In this case, Debian is also the one that is used for `latest` for the `base` re
 
 There's a special "dev" version that can be used to build main on CI - I ended up needing this to test and others would if they base an image off of one of the MCR images.  e.g. `dev-debian-9`.
 
-### The `imageVersion` property
+### The `version` property
 
-While in most cases it makes sense to version the contents of a image with the repository, there may be scenarios where you want to be able to version independently. A good example of this [is the `codespaces` image](../src/codespaces/) where upstream edits could cause breaking changes in this image.
+While in most cases it makes sense to version the contents of a image with the repository, there may be scenarios where you want to be able to version independently. A good example of this [is the `universal` image](../src/universal/) where upstream edits could cause breaking changes in this image.
 
-When this is necessary, the `imageVersion` property in the `manifest.json` file can be set.
+When this is necessary, the `version` property in the `manifest.json` file can be set.
 
 ```json
-"imageVersion": "1.0.0"
+"version": "1.0.0"
 ```
 
 ### The `variants` property
@@ -495,7 +495,7 @@ This has a few advantages:
 3. Upstream changes that break existing images can be handled as needed.
 4. Developers can opt to use the image tag 0.35 to get the latest break fix version if desired or 0 to always get the latest non-breaking update.
 
-When necessary, a specific version can also be specified for an individual image using a `imageVersion` property, but this is generally the exception.
+When necessary, a specific version can also be specified for an individual image using a `version` property, but this is generally the exception.
 
 ### Release process and the contents of the npm package
 
