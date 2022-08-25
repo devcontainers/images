@@ -5,7 +5,7 @@ This document describes the base contents of the default GitHub Codespaces dev c
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/codespaces)
 
-**Digest:** sha256:accfa8c8370cdfa361d05609426cc4b9ae6e720d0bff294448e4761da2e392b5
+**Digest:** sha256:fb8d4893e67fe105c389c7d69a85e1cd7c894a0c5f0c71b5aca44be407c949cf
 
 **Tags:**
 ```
@@ -74,7 +74,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | github.com/uudashr/gopkgs | 2.0.1+incompatible |
 | github.com/ramya-rao-a/go-outline | 0.0.0-20210608161538-9736a4bde949 |
 | github.com/go-delve/delve | 1.9.1 |
-| github.com/golangci/golangci-lint | 1.48.0 |
+| github.com/golangci/golangci-lint | 1.49.0 |
 
 **Ruby gems and tools**
 
@@ -92,12 +92,12 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [git](https://github.com/git/git) | 2.37.2 | /usr/bin |
 | [Xdebug](https://xdebug.org/) | 3.1.5 | /usr/local/php/current |
 | [Composer](https://getcomposer.org/) | 2.4.1 | /usr/local/php/current/bin |
-| [kubectl](https://github.com/kubernetes/kubectl) | WARNING: This version information is deprecated and will be replaced with the output from kubectl version --short.  Use --output=yaml|json to get the full version.<br />1.24.4 | /usr/local/bin |
-| [Helm](https://github.com/helm/helm) | 3.9.3 | /usr/local/bin |
+| [kubectl](https://github.com/kubernetes/kubectl) | WARNING: This version information is deprecated and will be replaced with the output from kubectl version --short.  Use --output=yaml|json to get the full version.<br />1.25.0 | /usr/local/bin |
+| [Helm](https://github.com/helm/helm) | 3.9.4 | /usr/local/bin |
 | [Docker Compose](https://github.com/docker/compose) | 1.29.2 | /usr/local/bin |
 | [SDKMAN!](https://github.com/sdkman/sdkman-cli) | 5.16.0 | /usr/local/sdkman |
 | [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
-| [GitHub CLI](https://github.com/cli/cli) | 2.14.5 | 
+| [GitHub CLI](https://github.com/cli/cli) | 2.14.6 | 
 | [yarn](https://yarnpkg.com/) | 1.22.19 | /usr/bin |
 | [Maven](https://maven.apache.org/) | 3.8.6 | /usr/local/sdkman/candidates/maven/current/bin |
 | [Gradle](https://gradle.org/) | 7.5.1 | /usr/local/sdkman/candidates/gradle/current/bin |
