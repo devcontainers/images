@@ -162,21 +162,11 @@
         },
         {
             "Component": {
-                "Type": "git",
-                "Git": {
-                    "Name": "Oh My Zsh!",
-                    "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "835a0a5d17765243cabee782acb5905a9aab33c3"
-                }
-            }
-        },
-        {
-            "Component": {
                 "Type": "other",
                 "Other": {
-                    "Name": "Docker Image: continuumio/anaconda3",
-                    "Version": "latest",
-                    "DownloadUrl": "https://hub.docker.com/r/continuumio/anaconda3"
+                    "Name": "Docker Image: alpine",
+                    "Version": "3.13",
+                    "DownloadUrl": "https://hub.docker.com/_/alpine"
                 }
             }
         },
@@ -430,16 +420,6 @@
             "Component": {
                 "Type": "git",
                 "Git": {
-                    "Name": "Oh My Zsh!",
-                    "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "6d48309cd7da1b91038cf08be7865fb5bb9bc5ea"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "git",
-                "Git": {
                     "Name": "nvm",
                     "repositoryUrl": "https://github.com/nvm-sh/nvm.git",
                     "commitHash": "3fea5493a431ac64470d4230d4b51438cf213bd1"
@@ -560,8 +540,18 @@
             "Component": {
                 "Type": "other",
                 "Other": {
+                    "Name": "Gradle",
+                    "Version": "7.5.1",
+                    "DownloadUrl": "https://gradle.org/"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
                     "Name": "Go",
-                    "Version": "warning: GOPATH set to GOROOT (/usr/local/go) has no effect\n1.19",
+                    "Version": "1.19",
                     "DownloadUrl": "https://golang.org/dl"
                 }
             }
@@ -591,11 +581,11 @@
         },
         {
             "Component": {
-                "Type": "other",
-                "Other": {
-                    "Name": "Docker Image: mcr.microsoft.com/dotnet/sdk",
-                    "Version": "6.0-bullseye-slim",
-                    "DownloadUrl": "https://hub.docker.com/_/microsoft-dotnet-sdk"
+                "Type": "git",
+                "Git": {
+                    "Name": "nvm",
+                    "repositoryUrl": "https://github.com/nvm-sh/nvm.git",
+                    "commitHash": "3fea5493a431ac64470d4230d4b51438cf213bd1"
                 }
             }
         },
@@ -614,17 +604,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Image: mcr.microsoft.com/dotnet/sdk",
-                    "Version": "5.0-bullseye-slim",
-                    "DownloadUrl": "https://hub.docker.com/_/microsoft-dotnet-sdk"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "other",
-                "Other": {
-                    "Name": "Docker Image: mcr.microsoft.com/dotnet/sdk",
-                    "Version": "5.0-focal",
+                    "Version": "6.0-bullseye-slim",
                     "DownloadUrl": "https://hub.docker.com/_/microsoft-dotnet-sdk"
                 }
             }
@@ -703,9 +683,9 @@
             "Component": {
                 "Type": "other",
                 "Other": {
-                    "Name": "Docker Image: continuumio/miniconda3",
-                    "Version": "latest",
-                    "DownloadUrl": "https://hub.docker.com/r/continuumio/miniconda3"
+                    "Name": "Eclipse Temurin",
+                    "Version": "1.8.0_345",
+                    "DownloadUrl": "https://adoptium.net/"
                 }
             }
         },
@@ -918,6 +898,26 @@
         },
         {
             "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: continuumio/anaconda3",
+                    "Version": "latest",
+                    "DownloadUrl": "https://hub.docker.com/r/continuumio/anaconda3"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: continuumio/miniconda3",
+                    "Version": "latest",
+                    "DownloadUrl": "https://hub.docker.com/r/continuumio/miniconda3"
+                }
+            }
+        },
+        {
+            "Component": {
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "rls",
@@ -984,7 +984,10 @@
         {
             "Component": {
                 "Type": "RubyGems",
-                "RubyGems": {}
+                "RubyGems": {
+                    "Name": "debase",
+                    "Version": "0.2.5.beta2"
+                }
             }
         },
         {
