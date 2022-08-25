@@ -16,7 +16,7 @@ jobs:
     name: Smoke test
     runs-on: ubuntu-latest
     steps:
-    
+
     - name: Checkout
       id: checkout
       uses: actions/checkout@v3
