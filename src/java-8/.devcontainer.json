@@ -4,11 +4,11 @@
 		"dockerfile": "Dockerfile"
 	},
 	"features": {
-        "ghcr.io/devcontainers/features/java:1": {
-            "version": "8"
-        },
-        "ghcr.io/devcontainers/features/node:1": "none"
-    },
+		"ghcr.io/devcontainers/features/java:1": {
+			"version": "8"
+		},
+		"ghcr.io/devcontainers/features/node:1": "none"
+	},
 
 	// Configure tool-specific properties.
 	"customizations": {
