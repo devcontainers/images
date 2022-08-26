@@ -280,7 +280,7 @@ async function getPipPackageInfo(imageTagOrContainerName, packageList, usePipx) 
 }
 
 async function getPipVersionLookup(imageTagOrContainerName) {
-    const packageVersionListOutput = await getCommandOutputFromContainer(imageTagOrContainerName, 'pip list --format json');
+    const packageVersionListOutput = await getCommandOutputFromContainer(imageTagOrContainerName, 'pip list --disable-pip-version-check --no-python-version-warning --format json');
 
     const packageVersionList = JSON.parse(packageVersionListOutput);
 
