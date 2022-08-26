@@ -120,8 +120,8 @@ async function loadDefinitionManifest(manifestPath, definitionId) {
     if (buildJson.dependencies) {
         config.definitionDependencies[definitionId] = buildJson.dependencies;
     }
-    if (buildJson.imageVersion) {
-        config.definitionVersions[definitionId] = buildJson.imageVersion;
+    if (buildJson.version) {
+        config.definitionVersions[definitionId] = buildJson.version;
     }
 }
 

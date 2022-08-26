@@ -1,9 +1,9 @@
 {
+	"version": "0.202.2",
 	"variants": [
 		"buster",
 		"bullseye"
 	],
-	"imageVersion": "0.202.2",
 	"build": {
 		"latest": "bullseye",
 		"rootDistro": "debian",

@@ -20,7 +20,7 @@
 	],
 
 	"needsDedicatedPage": [ 
-		"codespaces",
+		"universal",
 		"php",
 		"python"
 	],

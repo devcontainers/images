@@ -12,7 +12,6 @@
 | *Published images* | mcr.microsoft.com/devcontainers/go |
 | *Available image variants* | 1 / 1-bullseye, 1.18 / 1.18-bullseye, 1.19 / 1.19-bullseye, 1-buster, 1.18-buster, 1.19-buster  ([full list](https://mcr.microsoft.com/v2/devcontainers/go/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bullseye` variants |
-| *Works in Codespaces* | Yes |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
 | *Languages, platforms* | Go |
