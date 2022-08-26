@@ -107,6 +107,19 @@
 			"github.com/go-delve/delve": null,
 			"github.com/golangci/golangci-lint": null
 		},
+		"pip": [
+			"numpy",
+			"pandas",
+			"scipy",
+			"matplotlib",
+			"seaborn",
+			"scikit-learn",
+			"tensorflow",
+			"keras",
+			"torch",
+			"requests",
+			"plotly"
+		],
 		"other": {
 			"git": {
 				"path": "/usr/bin"
@@ -180,6 +193,12 @@
 			"Go": null,
 			"Jekyll": {
 				"cgIgnore": true
+			},
+			"Jupyter Lab": {
+				"cgIgnore": true,
+				"versionCommand": "jupyter-lab --version",
+				"path": "/usr/local/conda/bin/jupyter-lab",
+				"downloadUrl": "https://jupyter.org/"
 			}
 		}
 	}
