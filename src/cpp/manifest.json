@@ -10,11 +10,11 @@
 	"build": {
 		"latest": "bullseye",
 		"parent": {
-			"bullseye": "debian",
-			"buster": "debian",
-			"jammy": "ubuntu",
-			"focal": "ubuntu",
-			"bionic": "ubuntu"
+			"bullseye": "base-debian",
+			"buster": "base-debian",
+			"jammy": "base-ubuntu",
+			"focal": "base-ubuntu",
+			"bionic": "base-ubuntu"
 		},
 		"rootDistro": "debian",
 		"architectures": {
