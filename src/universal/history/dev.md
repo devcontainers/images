@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:fb8d4893e67fe105c389c7d69a85e1cd7c894a0c5f0c71b5aca44be407c949cf
+**Digest:** sha256:e9fa3b03afd446a13fd7191ce7118e228fef23ac482b429f38f4c4083017bdac
 
 **Tags:**
 ```
@@ -15,7 +15,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
-**Linux distribution:** Ubuntu 20.04.4 LTS (debian-like distro)
+**Linux distribution:** Ubuntu 20.04.5 LTS (debian-like distro)
 
 **Architectures:** linux/amd64
 
@@ -36,6 +36,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | Clang | 10.0.0-4ubuntu1 | 
 | [Go](https://golang.org/dl) | warning: GOPATH set to GOROOT (/usr/local/go) has no effect<br />1.19 | /usr/local/go |
 | [Jekyll](https://jekyllrb.com/) | 4.2.2 | 
+| [Jupyter Lab](https://jupyter.org/) | 3.2.1 | /usr/local/conda/bin/jupyter-lab |
 
 **Tools installed using git**
 
@@ -45,13 +46,24 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | bf45ef070e82356ed36a0f4d98f8ec651c8f0d98 | /usr/local/nvs |
 | [rbenv](https://github.com/rbenv/rbenv.git) | c4395e58201966d9f90c12bd6b7342e389e7a4cb | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | bd08de2e607119a7033c828e2fa0efbc41180d64 | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 1f6b94cc9392ada220be3cd4d104b9e9ee883517 | /usr/local/share/ruby-build |
 
 **Pip / pipx installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| pylint | 2.14.5 |
+| numpy | 1.23.2 |
+| pandas | 1.4.3 |
+| scipy | 1.9.1 |
+| matplotlib | 3.5.3 |
+| seaborn | 0.11.2 |
+| scikit-learn | 1.1.2 |
+| tensorflow | 2.9.1 |
+| keras | 2.9.0 |
+| torch | 1.12.1 |
+| requests | 2.28.1 |
+| plotly | 5.10.0 |
+| pylint | 2.15.0 |
 | flake8 | 5.0.4 |
 | autopep8 | 1.7.0 |
 | black | 22.6.0 |
@@ -60,7 +72,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.9.1 |
 | bandit | 1.7.4 |
-| virtualenv | 20.16.3 |
+| virtualenv | 20.16.4 |
 | pipx | 1.1.0 |
 
 **Go tools and modules**
@@ -97,7 +109,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [Docker Compose](https://github.com/docker/compose) | 1.29.2 | /usr/local/bin |
 | [SDKMAN!](https://github.com/sdkman/sdkman-cli) | 5.16.0 | /usr/local/sdkman |
 | [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
-| [GitHub CLI](https://github.com/cli/cli) | 2.14.6 | 
+| [GitHub CLI](https://github.com/cli/cli) | 2.14.7 | 
 | [yarn](https://yarnpkg.com/) | 1.22.19 | /usr/bin |
 | [Maven](https://maven.apache.org/) | 3.8.6 | /usr/local/sdkman/candidates/maven/current/bin |
 | [Gradle](https://gradle.org/) | 7.5.1 | /usr/local/sdkman/candidates/gradle/current/bin |

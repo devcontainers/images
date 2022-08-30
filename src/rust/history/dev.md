@@ -10,7 +10,7 @@
 
 ## Variant: buster
 
-**Digest:** sha256:439171d503625f4271716d55160461c84366347d7b2478a339c18d740ef58013
+**Digest:** sha256:965a8b9dc5ff1243d910620cdeabb84d71edeaa4a427e5ca1309fa76fcec64a1
 
 **Tags:**
 ```
@@ -56,7 +56,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 | apt-transport-https | 1.8.2.3 |
 | apt-utils | 1.8.2.3 |
 | ca-certificates | 20200601~deb10u2 |
-| curl | 7.64.0-4+deb10u2 |
+| curl | 7.64.0-4+deb10u3 |
 | dialog | 1.3-20190211-1 |
 | gcc | 4:8.3.0-1 |
 | git | 1:2.20.1-2+deb10u3 |
@@ -100,7 +100,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 
 ## Variant: bullseye
 
-**Digest:** sha256:f95b77b85aa9b1e7a8c5a2647ac02a67cbe43b3abbf0844b0eff5af364571f54
+**Digest:** sha256:269e5785754657177fd3118ab033cb8e7a83ac8452609d48efbf7b7362c0e67b
 
 **Tags:**
 ```
@@ -183,6 +183,6 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 | vim-tiny | 2:8.2.2434-3+deb11u1 |
 | wget | 1.21-1+deb11u1 |
 | zip | 3.0-12 |
-| zlib1g | 1:1.2.11.dfsg-2+deb11u1 |
+| zlib1g | 1:1.2.11.dfsg-2+deb11u2 |
 | zsh | 5.8-6+deb11u1 |
 

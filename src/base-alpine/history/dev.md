@@ -1,17 +1,83 @@
-# [alpine](https://github.com/devcontainers/images/tree/main/src/base-alpine)
+# [base-alpine](https://github.com/devcontainers/images/tree/main/src/base-alpine)
 
 **Image version:** dev
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/base-alpine)
 
 **Image variations:**
+- [3.16](#variant-316)
 - [3.15](#variant-315)
 - [3.14](#variant-314)
 - [3.13](#variant-313)
 
+## Variant: 3.16
+
+**Digest:** sha256:5f3086aab975f3c0b689237d02e444893326219fe8d810790437733a69f770ae
+
+**Tags:**
+```
+mcr.microsoft.com/devcontainers/base:dev-alpine-3.16
+mcr.microsoft.com/devcontainers/base:dev-alpine3.16
+```
+> *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
+
+**Linux distribution:** Alpine Linux v3.16
+
+**Architectures:** linux/amd64, linux/arm64
+
+**Available (non-root) user:** vscode
+
+### Contents
+**Tools installed using git**
+
+| Tool | Commit | Path |
+|------|--------|------|
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6d48309cd7da1b91038cf08be7865fb5bb9bc5ea | /home/vscode/.oh-my-zsh |
+
+**Additional linux tools and packages**
+
+| Tool / library | Version |
+|----------------|---------|
+| git | 2.36.2-r0 |
+| openssh-client-default | 9.0_p1-r2 |
+| gnupg | 2.2.35-r4 |
+| procps | 3.3.17-r1 |
+| lsof | 4.95.0-r0 |
+| htop | 3.2.0-r1 |
+| net-tools | 2.10-r0 |
+| psmisc | 23.5-r0 |
+| curl | 7.83.1-r2 |
+| wget | 1.21.3-r0 |
+| rsync | 3.2.4-r2 |
+| ca-certificates | 20220614-r0 |
+| unzip | 6.0-r9 |
+| zip | 3.0-r9 |
+| nano | 6.3-r0 |
+| vim | 8.2.5000-r0 |
+| less | 590-r0 |
+| jq | 1.6-r1 |
+| libgcc | 11.2.1_git20220219-r2 |
+| libstdc++ | 11.2.1_git20220219-r2 |
+| krb5-libs | 1.19.3-r0 |
+| libintl | 0.21-r2 |
+| libssl1.1 | 1.1.1q-r0 |
+| lttng-ust | 2.13.2-r0 |
+| tzdata | 2022c-r0 |
+| userspace-rcu | 0.13.1-r0 |
+| zlib | 1.2.12-r3 |
+| sudo | 1.9.10-r0 |
+| coreutils | 9.1-r0 |
+| sed | 4.8-r0 |
+| grep | 3.7-r0 |
+| which | 2.21-r2 |
+| ncdu | 1.17-r0 |
+| shadow | 4.10-r3 |
+| strace | 5.17-r0 |
+| man-pages | 5.13-r1 |
+
 ## Variant: 3.15
 
-**Digest:** sha256:30fdcee8150bcde4fc54be2eae9b9453d0c61537aea75708402f224446223ff5
+**Digest:** sha256:8d7f4045442da517e303b609ecc8a389e319e07e22e63cb2d297579a47955426
 
 **Tags:**
 ```
@@ -77,7 +143,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 ## Variant: 3.14
 
-**Digest:** sha256:dcde03382e47d5ddef75bdf6dadd86ca5ba509184eacf34037c31993b5da0a7d
+**Digest:** sha256:c7a0a1aa8d8afb62666abdebfeabb212aa3bc1f888ac5a08024008f705a5aa88
 
 **Tags:**
 ```
@@ -142,7 +208,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.14
 
 ## Variant: 3.13
 
-**Digest:** sha256:12bf110211236013bbf9949a69eb6675ba3233da14bd852abafed1974c5c4a0f
+**Digest:** sha256:79b4ed614d516dbc139d3372231060af94cd4955ebc74fdf9c103137721f4f55
 
 **Tags:**
 ```
