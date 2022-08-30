@@ -14,7 +14,7 @@
 
 ## Variant: 6.0-bullseye-slim
 
-**Digest:** sha256:233963a69c247928f2b77688bf077161309a4100ebab83669c3c8c150329028d
+**Digest:** sha256:d8f27952d482015069e4274adbc88192ccc8ba2a754ef26c59be23d18251464e
 
 **Tags:**
 ```
@@ -86,12 +86,12 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-bullseye
 | wget | 1.21-1+deb11u1 |
 | yarn | 1.22.19-1 |
 | zip | 3.0-12 |
-| zlib1g | 1:1.2.11.dfsg-2+deb11u1 |
+| zlib1g | 1:1.2.11.dfsg-2+deb11u2 |
 | zsh | 5.8-6+deb11u1 |
 
 ## Variant: 6.0-focal
 
-**Digest:** sha256:7e67424c0401b2858c446815a99d60c06b92061fd73e127310d0c46360a982ca
+**Digest:** sha256:9bf01b919268a43a340ae0d4df4702273b1b33059ad7e4486f3903599928a910
 
 **Tags:**
 ```
@@ -99,7 +99,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-focal
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
-**Linux distribution:** Ubuntu 20.04.4 LTS (debian-like distro)
+**Linux distribution:** Ubuntu 20.04.5 LTS (debian-like distro)
 
 **Architectures:** linux/amd64
 
@@ -167,7 +167,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-focal
 
 ## Variant: 5.0-bullseye-slim
 
-**Digest:** sha256:5a266149c472e6228ef2773d89e40587557d5fe09fabcdd1479a52576a3afe85
+**Digest:** sha256:d0f464d7fc49208b7e0f868b12133cfdc63fa8b5b6bddc3e39c357430045ba65
 
 **Tags:**
 ```
@@ -239,12 +239,12 @@ mcr.microsoft.com/devcontainers/dotnetcore:dev-5.0-bullseye
 | wget | 1.21-1+deb11u1 |
 | yarn | 1.22.19-1 |
 | zip | 3.0-12 |
-| zlib1g | 1:1.2.11.dfsg-2+deb11u1 |
+| zlib1g | 1:1.2.11.dfsg-2+deb11u2 |
 | zsh | 5.8-6+deb11u1 |
 
 ## Variant: 5.0-focal
 
-**Digest:** sha256:65704a6073a31eb237a1a82a11ba7bb1a1b4d416c2886196375842b36f0c6d8b
+**Digest:** sha256:1d09cda73f149d6127700050a403b8c624bead55229fb54d088aea0039cd024e
 
 **Tags:**
 ```
@@ -254,7 +254,7 @@ mcr.microsoft.com/devcontainers/dotnetcore:dev-5.0
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
-**Linux distribution:** Ubuntu 20.04.4 LTS (debian-like distro)
+**Linux distribution:** Ubuntu 20.04.5 LTS (debian-like distro)
 
 **Architectures:** linux/amd64
 
@@ -322,7 +322,7 @@ mcr.microsoft.com/devcontainers/dotnetcore:dev-5.0
 
 ## Variant: 3.1-bullseye
 
-**Digest:** sha256:b5894a9e4070a1280c0821f2125c373463f95296e84c50be3ffae16889ea8099
+**Digest:** sha256:7ea4e092a83ca4a4ea68d23dc2cfcac8b253b9b4027afcfab6eaf4a69fce9da2
 
 **Tags:**
 ```
@@ -393,12 +393,12 @@ mcr.microsoft.com/devcontainers/dotnetcore:dev-3.1-bullseye
 | wget | 1.21-1+deb11u1 |
 | yarn | 1.22.19-1 |
 | zip | 3.0-12 |
-| zlib1g | 1:1.2.11.dfsg-2+deb11u1 |
+| zlib1g | 1:1.2.11.dfsg-2+deb11u2 |
 | zsh | 5.8-6+deb11u1 |
 
 ## Variant: 3.1-focal
 
-**Digest:** sha256:ea7e840f58155f28a7be7f09ba810fd43b30559fec3ae401e8aba7bc8fc10ddc
+**Digest:** sha256:37aeed169dcba748b031233ed49eabd3a027964a1a40dc46f37fa6f8017ec9ec
 
 **Tags:**
 ```
@@ -408,7 +408,7 @@ mcr.microsoft.com/devcontainers/dotnetcore:dev-3.1
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
-**Linux distribution:** Ubuntu 20.04.4 LTS (debian-like distro)
+**Linux distribution:** Ubuntu 20.04.5 LTS (debian-like distro)
 
 **Architectures:** linux/amd64
 

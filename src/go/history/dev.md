@@ -12,7 +12,7 @@
 
 ## Variant: 1.19-bullseye
 
-**Digest:** sha256:8e9cd6f59806dc96c5fde1aaef6eba85c13b7365049da35fe7ca0ac38bfda8ba
+**Digest:** sha256:b5a2a48c9415935dfecccfe61620f7a45bec04e12730a7f838c3381a543be08e
 
 **Tags:**
 ```
@@ -104,12 +104,12 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 | wget | 1.21-1+deb11u1 |
 | yarn | 1.22.19-1 |
 | zip | 3.0-12 |
-| zlib1g | 1:1.2.11.dfsg-2+deb11u1 |
+| zlib1g | 1:1.2.11.dfsg-2+deb11u2 |
 | zsh | 5.8-6+deb11u1 |
 
 ## Variant: 1.19-buster
 
-**Digest:** sha256:c27c25ac1cd6ebce5d416e15e000da386c336486906841e136bb02a69370b4df
+**Digest:** sha256:0d922a39b01f593d2821d032fcdc692e218f9a6725e1a45136076038a13e666e
 
 **Tags:**
 ```
@@ -159,7 +159,7 @@ mcr.microsoft.com/devcontainers/go:dev-buster
 | apt-transport-https | 1.8.2.3 |
 | apt-utils | 1.8.2.3 |
 | ca-certificates | 20200601~deb10u2 |
-| curl | 7.64.0-4+deb10u2 |
+| curl | 7.64.0-4+deb10u3 |
 | dialog | 1.3-20190211-1 |
 | g++ | 4:8.3.0-1 |
 | gcc | 4:8.3.0-1 |
@@ -205,7 +205,7 @@ mcr.microsoft.com/devcontainers/go:dev-buster
 
 ## Variant: 1.18-bullseye
 
-**Digest:** sha256:ab41998f4935d2d7cfbc4c1096566fb83ec026741639b2fb20dfd432f9cf0a2b
+**Digest:** sha256:be8243c858d7c4bd463b15bcd8a835ce0ac43f3c19d57b8164cd4ea7ea1b95d3
 
 **Tags:**
 ```
@@ -294,12 +294,12 @@ mcr.microsoft.com/devcontainers/go:dev-1.18
 | wget | 1.21-1+deb11u1 |
 | yarn | 1.22.19-1 |
 | zip | 3.0-12 |
-| zlib1g | 1:1.2.11.dfsg-2+deb11u1 |
+| zlib1g | 1:1.2.11.dfsg-2+deb11u2 |
 | zsh | 5.8-6+deb11u1 |
 
 ## Variant: 1.18-buster
 
-**Digest:** sha256:6ade1231874769b2261abc8aa656a9f6ed0975e61be17de9933a31a0e6a86b37
+**Digest:** sha256:d2cd85003a1fd8ba10d533e4b2d2f833599439f7b14b021155b383579005cc21
 
 **Tags:**
 ```
@@ -347,7 +347,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.18-buster
 | apt-transport-https | 1.8.2.3 |
 | apt-utils | 1.8.2.3 |
 | ca-certificates | 20200601~deb10u2 |
-| curl | 7.64.0-4+deb10u2 |
+| curl | 7.64.0-4+deb10u3 |
 | dialog | 1.3-20190211-1 |
 | g++ | 4:8.3.0-1 |
 | gcc | 4:8.3.0-1 |
