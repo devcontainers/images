@@ -132,11 +132,6 @@ async function pushImage(definitionId, repo, release, updateLatest,
                 const workingDir = path.resolve(dotDevContainerPath, context);
                 const imageNameParams = imageNamesWithVersionTags.reduce((prev, current) => prev.concat(['--image-name', current]), []);
 
-                // Do not build and push the "latest" tag when pushing the "dev" images
-                if (configUtils.getVersionFromRelease(release, definitionId) !== 'dev' || !pushImages) {
-                    imageNameParams.push('--image-name', imageName);
-                }
-
                 const spawnOpts = { stdio: 'inherit', cwd: workingDir, shell: true };
                 await asyncUtils.spawn('devcontainer', [
                     'build',
