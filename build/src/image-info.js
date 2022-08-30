@@ -23,7 +23,7 @@ async function generateImageInformationFiles(repo, release, registry, registryPa
     }
 
     // manifest file path and whether it exists
-    const manifestPath = path.join(outputPath, 'manifest.json');
+    const manifestPath = path.join(outputPath, 'cgmanifest.json');
     const manifestExists = await asyncUtils.exists(manifestPath);
 
     console.log('(*) Generating image information files...');
@@ -64,11 +64,11 @@ async function generateImageInformationFiles(repo, release, registry, registryPa
         }
     });
 
-    // Write final manifest.json file if needed
+    // Write final cgmanifest.json file if needed
     if(generateManifest && (overwrite || ! manifestExists)) {
-        console.log('(*) Writing manifest.json...');
+        console.log('(*) Writing cgmanifest.json...');
         await asyncUtils.writeFile(
-            path.join(outputPath, 'manifest.json'),
+            path.join(outputPath, 'cgmanifest.json'),
             JSON.stringify(manifest, undefined, 4));    
     }
     console.log('(*) Done!');    
@@ -105,7 +105,7 @@ async function getDefinitionImageContent(repo, release, registry, registryPath, 
         }
 
         // Extract content information
-        const contents = await imageContentUtils.getAllContentInfo(imageTag, dependencies);
+        const contents = await imageContentUtils.getAllContentInfo(imageTag, dependencies, definitionId);
         
         // Update markdown content
         markdown = markdown + await generateReleaseNotesPart(contents, release, stubRegistry, stubRegistryPath, definitionId, variant);

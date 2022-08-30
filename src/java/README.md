@@ -19,6 +19,8 @@ See **[history](history)** for information on the contents of published images.
 
 ## Using this image
 
+> **Note:** A version of this [image for **JDK 8**](../java-8) is also available!
+
 You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
 - `mcr.microsoft.com/devcontainers/java` (latest)
@@ -39,18 +41,32 @@ Alternatively, you can use the contents of `Dockerfile` to fully customize your 
 
 ### Installing Maven or Gradle
 
-This image has latest version of Maven and Gradle installed by default.
+You can use the [Java Feature](https://github.com/devcontainers/features/tree/main/src/java) to install `maven` and `gradle` in `.devcontainer.json`:
+
+```json
+{
+  "features": {
+     "ghcr.io/devcontainers/features/java:1": {
+        "version": "none",
+        "installGradle": "true",
+        "installMaven": "true"
+    }
+  }
+}
+```
 
 ### Installing Node.js
 
 Given JavaScript front-end web client code written for use in conjunction with a Java back-end often requires the use of Node.js-based utilities to build, this container also includes `nvm` so that you can easily install Node.js.
 
-Also, you can use a [Node feature](https://github.com/devcontainers/features/tree/main/src/node) to install any version of Node by adding the following to `.devcontainer.json`:
+Also, you can use a [Node Feature](https://github.com/devcontainers/features/tree/main/src/node) to install any version of Node by adding the following to `.devcontainer.json`:
 
 ```json
 {
   "features": {
-    "ghcr.io/devcontainers/features/node:1": "latest"
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "latest"
+    }
   }
 }
 ```

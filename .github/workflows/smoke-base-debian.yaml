@@ -1,0 +1,30 @@
+name: Smoke test "base-debian" build
+
+on: 
+  workflow_dispatch:
+  push:
+    branches:
+    - main
+  pull_request:
+    paths:
+      - src/base-debian/**
+      - .github/workflows/smoke-base-debian.yaml
+      - .github/actions/**
+      - build/**
+jobs:
+  smoke-test:
+    name: Smoke test
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Checkout
+      id: checkout
+      uses: actions/checkout@v3
+
+    - name: Smoke test
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      id: smoke_test
+      uses: ./.github/actions/smoke-test
+      with:
+        image: base-debian

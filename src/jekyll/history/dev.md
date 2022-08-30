@@ -10,7 +10,7 @@
 
 ## Variant: 2.7-bullseye
 
-**Digest:** sha256:bf402589785a89a64ff953ae65798379ea51350503bc7d4837674a0116e9b017
+**Digest:** sha256:169a50e9bb8dc6964e5181940f15c51fbb92024c32ecfe628784e16f138b4b4d
 
 **Tags:**
 ```
@@ -47,7 +47,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 
 | Tool / gem | Version |
 |------------|---------|
-| bundler | 2.3.20 |
+| bundler | 2.3.21 |
 | jekyll | 4.2.2 |
 | github-pages | 227 |
 
@@ -104,7 +104,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 
 ## Variant: 2.7-buster
 
-**Digest:** sha256:5f7d699f374e953432f3c3b8b90c2b98fde896c7a144add3482d56db625515e2
+**Digest:** sha256:648a5464f36a7b7e3f1adff23c3437ba2ac0cd96be82609c17175a97d3ba3105
 
 **Tags:**
 ```
@@ -140,7 +140,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-buster
 
 | Tool / gem | Version |
 |------------|---------|
-| bundler | 2.3.20 |
+| bundler | 2.3.21 |
 | jekyll | 4.2.2 |
 | github-pages | 227 |
 

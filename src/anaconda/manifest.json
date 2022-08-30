@@ -1,5 +1,5 @@
 {
-	"imageVersion": "0.202.8",
+	"version": "0.202.8",
 	"build": {
 		"latest": true,
 		"rootDistro": "debian",

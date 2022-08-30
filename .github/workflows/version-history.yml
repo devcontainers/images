@@ -9,7 +9,7 @@ on:
         default: 'main'
         type: string
       cg:
-        description: 'Generate manifest.json'
+        description: 'Generate cgmanifest.json'
         required: true
         default: 'false'
         type: string
@@ -72,7 +72,7 @@ jobs:
         OVERWRITE_STRING=$(if [ "${{ inputs.overwrite }}" = "false" ]; then echo '--no-overwrite'; else echo '--overwrite'; fi)
         CG_STRING=$(if [ ${{ inputs.cg }} = "false" ]; then echo '--no-cg'; else echo '--cg'; fi)
 
-        # Pull images and update manifest.json
+        # Pull images and update cgmanifest.json
         build/vscdc info  --no-build \
                           --markdown \
                           --prune \

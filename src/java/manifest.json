@@ -1,11 +1,11 @@
 {
+	"version": "0.205.5",
 	"variants": [
 		"17-bullseye",
 		"17-buster",
 		"11-bullseye",
 		"11-buster"
 	],
-	"imageVersion": "0.205.5",
 	"build": {
 		"latest": "17-bullseye",
 		"rootDistro": "debian",

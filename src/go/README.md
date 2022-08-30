@@ -12,7 +12,6 @@
 | *Published images* | mcr.microsoft.com/devcontainers/go |
 | *Available image variants* | 1 / 1-bullseye, 1.18 / 1.18-bullseye, 1.19 / 1.19-bullseye, 1-buster, 1.18-buster, 1.19-buster  ([full list](https://mcr.microsoft.com/v2/devcontainers/go/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bullseye` variants |
-| *Works in Codespaces* | Yes |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
 | *Languages, platforms* | Go |
@@ -41,12 +40,14 @@ See [history](history) for information on the contents of each version and [here
 
 #### Installing Node.js
 
-Given JavaScript front-end web client code written for use in conjunction with a Python back-end often requires the use of Node.js-based utilities to build, you can use a [Node feature](https://github.com/devcontainers/features/tree/main/src/node) to install any version of Node by adding the following to `.devcontainer.json`:
+Given JavaScript front-end web client code written for use in conjunction with a Python back-end often requires the use of Node.js-based utilities to build, you can use a [Node Feature](https://github.com/devcontainers/features/tree/main/src/node) to install any version of Node by adding the following to `.devcontainer.json`:
 
 ```json
 {
   "features": {
-    "ghcr.io/devcontainers/features/node:1": "latest"
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "latest"
+    }
   }
 }
 ```
