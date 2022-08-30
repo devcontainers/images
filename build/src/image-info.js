@@ -105,7 +105,7 @@ async function getDefinitionImageContent(repo, release, registry, registryPath, 
         }
 
         // Extract content information
-        const contents = await imageContentUtils.getAllContentInfo(imageTag, dependencies);
+        const contents = await imageContentUtils.getAllContentInfo(imageTag, dependencies, definitionId);
         
         // Update markdown content
         markdown = markdown + await generateReleaseNotesPart(contents, release, stubRegistry, stubRegistryPath, definitionId, variant);

@@ -5,6 +5,6 @@ trigger:
 - main
 
 steps:
-- task: ComponentGovernanceComponentDetection@0
+- task: ms.vss-governance-buildtask.governance-build-task-component-detection.ComponentGovernanceComponentDetection@0
   inputs:
     ignoreDirectories: 'src'

@@ -77,12 +77,14 @@ To enable HTTPS in ASP.NET, you can mount an exported copy of your local dev cer
 
 Given JavaScript front-end web client code written for use in conjunction with an ASP.NET back-end often requires the use of Node.js-based utilities to build, this container also includes `nvm` so that you can easily install Node.js. 
 
-If you would like to install the Azure CLI, you can reference [a dev container feature](https://github.com/devcontainers/features) by adding the following to `.devcontainer.json`:
+If you would like to install the Azure CLI, you can reference [a dev container Feature](https://github.com/devcontainers/features) by adding the following to `.devcontainer.json`:
 
 ```json
 {
   "features": {
-    "ghcr.io/devcontainers/features/azure-cli:1": "latest"
+    "ghcr.io/devcontainers/features/azure-cli:1": {
+      "version": "latest"
+    }
   }
 }
 ```

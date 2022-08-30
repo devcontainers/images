@@ -52,12 +52,14 @@ The `appPort` property [publishes](https://docs.docker.com/config/containers/con
 
 #### Installing Node.js
 
-Given JavaScript front-end web client code written for use in conjunction with a Python back-end often requires the use of Node.js-based utilities to build, you can use a [Node feature](https://github.com/devcontainers/features/tree/main/src/node) to install any version of Node by adding the following to `.devcontainer.json`:
+Given JavaScript front-end web client code written for use in conjunction with a Python back-end often requires the use of Node.js-based utilities to build, you can use a [Node Feature](https://github.com/devcontainers/features/tree/main/src/node) to install any version of Node by adding the following to `.devcontainer.json`:
 
 ```json
 {
   "features": {
-    "ghcr.io/devcontainers/features/node:1": "latest"
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "latest"
+    }
   }
 }
 ```
