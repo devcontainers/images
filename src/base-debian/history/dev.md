@@ -11,7 +11,7 @@
 
 ## Variant: buster
 
-**Digest:** sha256:ff354037528e76b404babc14767e01adba8ad28338692ed0f2ffa5b4b889e154
+**Digest:** sha256:5ab0e3e8a49bd529dca31146c4f8fbdd4d5dcb8cda7c083c5357ca5405de15a7
 
 **Tags:**
 ```
@@ -41,7 +41,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian10
 | apt-transport-https | 1.8.2.3 |
 | apt-utils | 1.8.2.3 |
 | ca-certificates | 20200601~deb10u2 |
-| curl | 7.64.0-4+deb10u2 |
+| curl | 7.64.0-4+deb10u3 |
 | dialog | 1.3-20190211-1 |
 | git | 1:2.20.1-2+deb10u3 |
 | gnupg2 | 2.2.12-1+deb10u2 |
@@ -81,7 +81,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian10
 
 ## Variant: bullseye
 
-**Digest:** sha256:87e1e8b4ed35e6f2187cb1661830e8cc4b09486b0d882b1f03177e461bfe2d36
+**Digest:** sha256:004fbed19c83b21152809fe60f0fd4bd944786b4577f1c1dc0017833ebc131ff
 
 **Tags:**
 ```
@@ -147,12 +147,12 @@ mcr.microsoft.com/devcontainers/base:dev
 | vim-tiny | 2:8.2.2434-3+deb11u1 |
 | wget | 1.21-1+deb11u1 |
 | zip | 3.0-12 |
-| zlib1g | 1:1.2.11.dfsg-2+deb11u1 |
+| zlib1g | 1:1.2.11.dfsg-2+deb11u2 |
 | zsh | 5.8-6+deb11u1 |
 
 ## Variant: stretch
 
-**Digest:** sha256:e4296f19e7c6329551c89ad0ece045a984eb3f31277950e938131ce254486d93
+**Digest:** sha256:35d689d877e0bd96a324fff02c1add9c887e306a9c7727da30002403ab67608e
 
 **Tags:**
 ```
