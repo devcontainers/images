@@ -99,6 +99,8 @@ async function pushImage(definitionId, repo, release, updateLatest,
             const vscodeImageName = vscodeImageNamesWithVersionTags[0].split(':')[0];
 
             console.log(`(*) Tags:${imageNamesWithVersionTags.reduce((prev, current) => prev += `\n     ${current}`, '')}`);
+            console.log(`(*) VS Code Tags:${vscodeImageNamesWithVersionTags.reduce((prev, current) => prev += `\n     ${current}`, '')}`);
+
             const buildSettings = configUtils.getBuildSettings(definitionId);
 
             let architectures = buildSettings.architectures;
