@@ -9,7 +9,7 @@
 | *Categories* | Core, Other |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/base:alpine |
-| *Available image variants* | alpine-3.15, alpine-3.14, alpine-3.13 ([full list](https://mcr.microsoft.com/v2/devcontainers/base/tags/list)) |
+| *Available image variants* | alpine-3.16, alpine-3.15, alpine-3.14, alpine-3.13 ([full list](https://mcr.microsoft.com/v2/devcontainers/base/tags/list)) |
 | *Published image architecture(s)* | x86-64, aarch64/arm64 |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Alpine Linux |
@@ -25,6 +25,7 @@ You can also directly reference pre-built versions of `Dockerfile` by using the 
 - `mcr.microsoft.com/devcontainers/base:alpine-3.13`
 - `mcr.microsoft.com/devcontainers/base:alpine-3.14`
 - `mcr.microsoft.com/devcontainers/base:alpine-3.15`
+- `mcr.microsoft.com/devcontainers/base:alpine-3.16`
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
