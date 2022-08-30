@@ -47,6 +47,7 @@ jobs:
         REGISTRY_BASE_PATH: ${{ secrets.REGISTRY_BASE_PATH }}
         STUB_REGISTRY: ${{ secrets.STUB_REGISTRY }}
         STUB_REGISTRY_BASE_PATH: ${{ secrets.STUB_REGISTRY_BASE_PATH }}
+        VSCODE_REGISTRY_BASE_PATH: ${{ secrets.VSCODE_REGISTRY_BASE_PATH }}
       run: |
         set -e
 
@@ -64,7 +65,8 @@ jobs:
                           --registry "$REGISTRY" \
                           --registry-path "$REGISTRY_BASE_PATH" \
                           --stub-registry "$STUB_REGISTRY" \
-                          --stub-registry-path "$STUB_REGISTRY_BASE_PATH"
+                          --stub-registry-path "$STUB_REGISTRY_BASE_PATH" \
+                          --vscode-registry-path "$VSCODE_REGISTRY_BASE_PATH"
 
   image-info:
     name: Trigger info extraction

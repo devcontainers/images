@@ -81,6 +81,10 @@ require('yargs')
                     describe: 'A space separated list of image names to skip building and pushing.',
                     type: 'array',
                     default: []
+                },
+                'vscode-registry-path': {
+                    describe: 'VS Code container registry path',
+                    default: configUtils.getConfig('vscodeContainerRegistryPath', '')
                 }
             })
     }, pushCommand)
@@ -240,7 +244,7 @@ require('yargs')
 
 function pushCommand(argv) {
     push(argv.githubRepo, argv.release, argv.updateLatest, argv.registry, argv.registryPath, argv.stubRegistry,
-        argv.stubRegistryPath, argv.push, argv.prepOnly, argv.skip, argv.page, argv.pageTotal, argv.replaceImages, argv.devcontainer)
+        argv.stubRegistryPath, argv.push, argv.prepOnly, argv.skip, argv.page, argv.pageTotal, argv.replaceImages, argv.devcontainer, argv.vscodeRegistryPath)
         .catch((reason) => {
             console.error(`(!) Push failed - ${reason}`);
             if(reason.stack) {

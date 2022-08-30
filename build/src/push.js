@@ -11,7 +11,7 @@ const prep = require('./prep');
 const builderName = 'dev-containers-builder';
 
 async function push(repo, release, updateLatest, registry, registryPath, stubRegistry,
-    stubRegistryPath, pushImages, prepOnly, definitionsToSkip, page, pageTotal, replaceImages, definitionId) {
+    stubRegistryPath, pushImages, prepOnly, definitionsToSkip, page, pageTotal, replaceImages, definitionId, vscodeRegistryPath) {
 
     // Optional argument defaults
     prepOnly = typeof prepOnly === 'undefined' ? false : prepOnly;
@@ -45,14 +45,14 @@ async function push(repo, release, updateLatest, registry, registryPath, stubReg
     await asyncUtils.forEach(definitionsToPush, async (currentDefinitionId) => {
         console.log(`**** Pushing ${currentDefinitionId} ${release} ****`);
         await pushImage(
-            currentDefinitionId, repo, release, updateLatest, registry, registryPath, stubRegistry, stubRegistryPath, prepOnly, pushImages, replaceImages);
+            currentDefinitionId, repo, release, updateLatest, registry, registryPath, stubRegistry, stubRegistryPath, prepOnly, pushImages, replaceImages, vscodeRegistryPath);
     });
 
     return stagingFolder;
 }
 
 async function pushImage(definitionId, repo, release, updateLatest,
-    registry, registryPath, stubRegistry, stubRegistryPath, prepOnly, pushImages, replaceImage) {
+    registry, registryPath, stubRegistry, stubRegistryPath, prepOnly, pushImages, replaceImage, vscodeRegistryPath) {
     const definitionPath = configUtils.getDefinitionPath(definitionId);
     const dotDevContainerPath = definitionPath;
     // Use Dockerfile for image build
@@ -93,9 +93,8 @@ async function pushImage(definitionId, repo, release, updateLatest,
             const imageNamesWithVersionTags = configUtils.getTagList(definitionId, release, updateLatest, registry, registryPath, variant);
             const imageName = imageNamesWithVersionTags[0].split(':')[0];
 
-            // Temporary change to dual publish an image to devcontainers and vscode/devcontainers
-            const vscodeContainerRegistyPath = configUtils.getConfig('vscodeContainerRegistryPath', 'public/vscode/devcontainers');
-            const vscodeImageNamesWithVersionTags = configUtils.getTagList(definitionId, release, updateLatest, registry, vscodeContainerRegistyPath, variant);
+            // Dual publish image to devcontainers and vscode/devcontainers
+            const vscodeImageNamesWithVersionTags = configUtils.getTagList(definitionId, release, updateLatest, registry, vscodeRegistryPath, variant);
             const vscodeImageName = vscodeImageNamesWithVersionTags[0].split(':')[0];
 
             console.log(`(*) Tags:${imageNamesWithVersionTags.reduce((prev, current) => prev += `\n     ${current}`, '')}`);
