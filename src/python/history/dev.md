@@ -18,7 +18,7 @@
 
 ## Variant: 3.10-bullseye
 
-**Digest:** sha256:e43a3b0ad2951ab5ecc8373dcda5e80c0efa6ec48af80aa07e125e957e3ff6fe
+**Digest:** sha256:f110b2c96e05e0a2bdb37fca0a46c1e1ee1107899908c68e071ba67dc1c576f9
 
 **Tags:**
 ```
@@ -54,7 +54,7 @@ mcr.microsoft.com/devcontainers/python:dev-bullseye
 
 | Tool / package | Version |
 |----------------|---------|
-| pylint | 2.14.5 |
+| pylint | 2.15.0 |
 | flake8 | 5.0.4 |
 | autopep8 | 1.7.0 |
 | black | 22.6.0 |
@@ -63,7 +63,7 @@ mcr.microsoft.com/devcontainers/python:dev-bullseye
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.9.1 |
 | bandit | 1.7.4 |
-| virtualenv | 20.16.3 |
+| virtualenv | 20.16.4 |
 | pipx | 1.1.0 |
 
 **Additional linux tools and packages**
@@ -108,12 +108,12 @@ mcr.microsoft.com/devcontainers/python:dev-bullseye
 | wget | 1.21-1+deb11u1 |
 | yarn | 1.22.19-1 |
 | zip | 3.0-12 |
-| zlib1g | 1:1.2.11.dfsg-2+deb11u1 |
+| zlib1g | 1:1.2.11.dfsg-2+deb11u2 |
 | zsh | 5.8-6+deb11u1 |
 
 ## Variant: 3.9-bullseye
 
-**Digest:** sha256:26ad08920bca90e0b6bc2366de6783e147a1887022f0295b65cecdfd1f2a5b15
+**Digest:** sha256:ea3be6ce226851c872a554a406f7bb1314dd067e27994c04c44b30a70d9274a0
 
 **Tags:**
 ```
@@ -146,7 +146,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9
 
 | Tool / package | Version |
 |----------------|---------|
-| pylint | 2.14.5 |
+| pylint | 2.15.0 |
 | flake8 | 5.0.4 |
 | autopep8 | 1.7.0 |
 | black | 22.6.0 |
@@ -155,7 +155,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.9.1 |
 | bandit | 1.7.4 |
-| virtualenv | 20.16.3 |
+| virtualenv | 20.16.4 |
 | pipx | 1.1.0 |
 
 **Additional linux tools and packages**
@@ -200,12 +200,12 @@ mcr.microsoft.com/devcontainers/python:dev-3.9
 | wget | 1.21-1+deb11u1 |
 | yarn | 1.22.19-1 |
 | zip | 3.0-12 |
-| zlib1g | 1:1.2.11.dfsg-2+deb11u1 |
+| zlib1g | 1:1.2.11.dfsg-2+deb11u2 |
 | zsh | 5.8-6+deb11u1 |
 
 ## Variant: 3.8-bullseye
 
-**Digest:** sha256:3badd24258ad37c2339338ebb95258d3ee3f3626d5046f1f0c81ddff621cf75a
+**Digest:** sha256:8f4c20b2b419db5ebea8abbc62ab96db169ecbc01c0a1b8750380643654784f1
 
 **Tags:**
 ```
@@ -238,7 +238,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8
 
 | Tool / package | Version |
 |----------------|---------|
-| pylint | 2.14.5 |
+| pylint | 2.15.0 |
 | flake8 | 5.0.4 |
 | autopep8 | 1.7.0 |
 | black | 22.6.0 |
@@ -247,7 +247,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.9.1 |
 | bandit | 1.7.4 |
-| virtualenv | 20.16.3 |
+| virtualenv | 20.16.4 |
 | pipx | 1.1.0 |
 
 **Additional linux tools and packages**
@@ -292,12 +292,12 @@ mcr.microsoft.com/devcontainers/python:dev-3.8
 | wget | 1.21-1+deb11u1 |
 | yarn | 1.22.19-1 |
 | zip | 3.0-12 |
-| zlib1g | 1:1.2.11.dfsg-2+deb11u1 |
+| zlib1g | 1:1.2.11.dfsg-2+deb11u2 |
 | zsh | 5.8-6+deb11u1 |
 
 ## Variant: 3.7-bullseye
 
-**Digest:** sha256:7fdd4889c7aae269b984a6d1965540b5861ec2a31d655c5c52b8e1241ac64e85
+**Digest:** sha256:8e6a6cc4815e82efb5a74d4e0791e8e0aba2550ecf322921a0e426bc710549a1
 
 **Tags:**
 ```
@@ -330,7 +330,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.7
 
 | Tool / package | Version |
 |----------------|---------|
-| pylint | 2.14.5 |
+| pylint | 2.15.0 |
 | flake8 | 5.0.4 |
 | autopep8 | 1.7.0 |
 | black | 22.6.0 |
@@ -339,7 +339,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.7
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.9.1 |
 | bandit | 1.7.4 |
-| virtualenv | 20.16.3 |
+| virtualenv | 20.16.4 |
 | pipx | 1.1.0 |
 
 **Additional linux tools and packages**
@@ -384,12 +384,12 @@ mcr.microsoft.com/devcontainers/python:dev-3.7
 | wget | 1.21-1+deb11u1 |
 | yarn | 1.22.19-1 |
 | zip | 3.0-12 |
-| zlib1g | 1:1.2.11.dfsg-2+deb11u1 |
+| zlib1g | 1:1.2.11.dfsg-2+deb11u2 |
 | zsh | 5.8-6+deb11u1 |
 
 ## Variant: 3.6-bullseye
 
-**Digest:** sha256:83cdaf1aee73b14e7e8e28218485146a96d88d8a1846c57c4d7dbd1d3ca6b53b
+**Digest:** sha256:86ac46da5f3657fd804c7cbc620f457467cb7797049d345bbff079ba2ced250c
 
 **Tags:**
 ```
@@ -431,7 +431,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.6
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.9.1 |
 | bandit | 1.7.1 |
-| virtualenv | 20.16.3 |
+| virtualenv | 20.16.4 |
 | pipx | 1.0.0 |
 
 **Additional linux tools and packages**
@@ -476,12 +476,12 @@ mcr.microsoft.com/devcontainers/python:dev-3.6
 | wget | 1.21-1+deb11u1 |
 | yarn | 1.22.19-1 |
 | zip | 3.0-12 |
-| zlib1g | 1:1.2.11.dfsg-2+deb11u1 |
+| zlib1g | 1:1.2.11.dfsg-2+deb11u2 |
 | zsh | 5.8-6+deb11u1 |
 
 ## Variant: 3.10-buster
 
-**Digest:** sha256:d13a83075f34a2b98b80cc77efcb23d5f7e169e6fa0b32887535ef03da907f2f
+**Digest:** sha256:1efce3c650e5267845edc3abba274112f04ff93e9b34c5a372cefed9ed509822
 
 **Tags:**
 ```
@@ -515,7 +515,7 @@ mcr.microsoft.com/devcontainers/python:dev-buster
 
 | Tool / package | Version |
 |----------------|---------|
-| pylint | 2.14.5 |
+| pylint | 2.15.0 |
 | flake8 | 5.0.4 |
 | autopep8 | 1.7.0 |
 | black | 22.6.0 |
@@ -524,7 +524,7 @@ mcr.microsoft.com/devcontainers/python:dev-buster
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.9.1 |
 | bandit | 1.7.4 |
-| virtualenv | 20.16.3 |
+| virtualenv | 20.16.4 |
 | pipx | 1.1.0 |
 
 **Additional linux tools and packages**
@@ -534,7 +534,7 @@ mcr.microsoft.com/devcontainers/python:dev-buster
 | apt-transport-https | 1.8.2.3 |
 | apt-utils | 1.8.2.3 |
 | ca-certificates | 20200601~deb10u2 |
-| curl | 7.64.0-4+deb10u2 |
+| curl | 7.64.0-4+deb10u3 |
 | dialog | 1.3-20190211-1 |
 | git | 1:2.20.1-2+deb10u3 |
 | gnupg2 | 2.2.12-1+deb10u2 |
@@ -575,7 +575,7 @@ mcr.microsoft.com/devcontainers/python:dev-buster
 
 ## Variant: 3.9-buster
 
-**Digest:** sha256:f8c2ada8934f9343c49965333183acc1ad0901e9a08420d8592fbf50bbc2cf3d
+**Digest:** sha256:6076c6a075d4d54d3a9321ed509f384a31b95c7e80afa34e13a8c14c4fd81690
 
 **Tags:**
 ```
@@ -607,7 +607,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-buster
 
 | Tool / package | Version |
 |----------------|---------|
-| pylint | 2.14.5 |
+| pylint | 2.15.0 |
 | flake8 | 5.0.4 |
 | autopep8 | 1.7.0 |
 | black | 22.6.0 |
@@ -616,7 +616,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-buster
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.9.1 |
 | bandit | 1.7.4 |
-| virtualenv | 20.16.3 |
+| virtualenv | 20.16.4 |
 | pipx | 1.1.0 |
 
 **Additional linux tools and packages**
@@ -626,7 +626,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-buster
 | apt-transport-https | 1.8.2.3 |
 | apt-utils | 1.8.2.3 |
 | ca-certificates | 20200601~deb10u2 |
-| curl | 7.64.0-4+deb10u2 |
+| curl | 7.64.0-4+deb10u3 |
 | dialog | 1.3-20190211-1 |
 | git | 1:2.20.1-2+deb10u3 |
 | gnupg2 | 2.2.12-1+deb10u2 |
@@ -667,7 +667,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-buster
 
 ## Variant: 3.8-buster
 
-**Digest:** sha256:26a58bf254267d703d0fb83d66f0222cc114589eb5096d28e963571cc6d8414f
+**Digest:** sha256:5249ba0d7a11fe6fd0ca6fa797f3dedadb286e397eadd130307e22164d3eb4a7
 
 **Tags:**
 ```
@@ -699,7 +699,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8-buster
 
 | Tool / package | Version |
 |----------------|---------|
-| pylint | 2.14.5 |
+| pylint | 2.15.0 |
 | flake8 | 5.0.4 |
 | autopep8 | 1.7.0 |
 | black | 22.6.0 |
@@ -708,7 +708,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8-buster
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.9.1 |
 | bandit | 1.7.4 |
-| virtualenv | 20.16.3 |
+| virtualenv | 20.16.4 |
 | pipx | 1.1.0 |
 
 **Additional linux tools and packages**
@@ -718,7 +718,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8-buster
 | apt-transport-https | 1.8.2.3 |
 | apt-utils | 1.8.2.3 |
 | ca-certificates | 20200601~deb10u2 |
-| curl | 7.64.0-4+deb10u2 |
+| curl | 7.64.0-4+deb10u3 |
 | dialog | 1.3-20190211-1 |
 | git | 1:2.20.1-2+deb10u3 |
 | gnupg2 | 2.2.12-1+deb10u2 |
@@ -759,7 +759,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8-buster
 
 ## Variant: 3.7-buster
 
-**Digest:** sha256:9024de8c679c0edd27929dba269641bfa721b4b2168d72e7075233206914800d
+**Digest:** sha256:119795d272abe1777da7671fa777ba5141342b2761ca9fd3cae5624a71c61d58
 
 **Tags:**
 ```
@@ -791,7 +791,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.7-buster
 
 | Tool / package | Version |
 |----------------|---------|
-| pylint | 2.14.5 |
+| pylint | 2.15.0 |
 | flake8 | 5.0.4 |
 | autopep8 | 1.7.0 |
 | black | 22.6.0 |
@@ -800,7 +800,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.7-buster
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.9.1 |
 | bandit | 1.7.4 |
-| virtualenv | 20.16.3 |
+| virtualenv | 20.16.4 |
 | pipx | 1.1.0 |
 
 **Additional linux tools and packages**
@@ -810,7 +810,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.7-buster
 | apt-transport-https | 1.8.2.3 |
 | apt-utils | 1.8.2.3 |
 | ca-certificates | 20200601~deb10u2 |
-| curl | 7.64.0-4+deb10u2 |
+| curl | 7.64.0-4+deb10u3 |
 | dialog | 1.3-20190211-1 |
 | git | 1:2.20.1-2+deb10u3 |
 | gnupg2 | 2.2.12-1+deb10u2 |
@@ -851,7 +851,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.7-buster
 
 ## Variant: 3.6-buster
 
-**Digest:** sha256:aef44568d4940762f7d354cf4baed699ae07ed0bf63d6c5162000291f59e4b97
+**Digest:** sha256:4d797e6dbf78c50d7b21534caffb4eb26072956a095661a9555c983ce58c52fc
 
 **Tags:**
 ```
@@ -892,7 +892,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.6-buster
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.9.1 |
 | bandit | 1.7.1 |
-| virtualenv | 20.16.3 |
+| virtualenv | 20.16.4 |
 | pipx | 1.0.0 |
 
 **Additional linux tools and packages**
@@ -902,7 +902,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.6-buster
 | apt-transport-https | 1.8.2.3 |
 | apt-utils | 1.8.2.3 |
 | ca-certificates | 20200601~deb10u2 |
-| curl | 7.64.0-4+deb10u2 |
+| curl | 7.64.0-4+deb10u3 |
 | dialog | 1.3-20190211-1 |
 | git | 1:2.20.1-2+deb10u3 |
 | gnupg2 | 2.2.12-1+deb10u2 |

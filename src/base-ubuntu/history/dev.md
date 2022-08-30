@@ -11,7 +11,7 @@
 
 ## Variant: jammy
 
-**Digest:** sha256:be4a59d17af2069998767c98041f44474c634970ca8d645069755ed974158939
+**Digest:** sha256:9a77a808d862206c8fc0d4361c3c9942a67ae4bfea5f8065c8e2fd72891c9cdd
 
 **Tags:**
 ```
@@ -78,7 +78,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu22.04
 
 ## Variant: focal
 
-**Digest:** sha256:fb57e6803b40387da00352f5826532e74b2f0632da465ad71575965f47c082ce
+**Digest:** sha256:5a403e88b5c90c6f09a7e00e9ae7a088c0da105e82f6e9569dce054dff719206
 
 **Tags:**
 ```
@@ -89,7 +89,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
-**Linux distribution:** Ubuntu 20.04.4 LTS (debian-like distro)
+**Linux distribution:** Ubuntu 20.04.5 LTS (debian-like distro)
 
 **Architectures:** linux/amd64
 
@@ -149,7 +149,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 ## Variant: bionic
 
-**Digest:** sha256:a43aeab1cf29bfca5fcffab9b5910e5aa3fdbf3fbaed8fbe58f91fd04c5faa33
+**Digest:** sha256:06e5cac7eb6c61b5b75a9d9e82b95856dfb5a6f631c993fef20f399be2895d0d
 
 **Tags:**
 ```

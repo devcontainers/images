@@ -14,7 +14,7 @@
 
 ## Variant: 8.1-apache-bullseye
 
-**Digest:** sha256:1caeb8e97c82a5cf44f010f631c4d944df601b409baa768d933fff6bc9e58f58
+**Digest:** sha256:fa37aed1ce79964e6a1995eb58f1a575db9b2a08d96e970c2cb384b4849e477a
 
 **Tags:**
 ```
@@ -96,12 +96,12 @@ mcr.microsoft.com/devcontainers/php:dev-bullseye
 | wget | 1.21-1+deb11u1 |
 | yarn | 1.22.19-1 |
 | zip | 3.0-12 |
-| zlib1g | 1:1.2.11.dfsg-2+deb11u1 |
+| zlib1g | 1:1.2.11.dfsg-2+deb11u2 |
 | zsh | 5.8-6+deb11u1 |
 
 ## Variant: 8.0-apache-bullseye
 
-**Digest:** sha256:c7cb4910e0b5e21703a3b7987cb000ec56d2eef00c892792e2f2fed0c4ff10d9
+**Digest:** sha256:eb2fbaec1e1087bfd28917609286a92813494248d2e481cea68860acfd3830bc
 
 **Tags:**
 ```
@@ -180,12 +180,12 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-bullseye
 | wget | 1.21-1+deb11u1 |
 | yarn | 1.22.19-1 |
 | zip | 3.0-12 |
-| zlib1g | 1:1.2.11.dfsg-2+deb11u1 |
+| zlib1g | 1:1.2.11.dfsg-2+deb11u2 |
 | zsh | 5.8-6+deb11u1 |
 
 ## Variant: 7.4-apache-bullseye
 
-**Digest:** sha256:c65699d2c0a085ea73544f5089c8398e8a9a4078849f275eebe66cdae626d0d0
+**Digest:** sha256:39620df3f767a668d73ff18722d72444a2f6cccab69d94dffdbf81666c393e35
 
 **Tags:**
 ```
@@ -266,12 +266,12 @@ mcr.microsoft.com/devcontainers/php:dev-7.4-bullseye
 | wget | 1.21-1+deb11u1 |
 | yarn | 1.22.19-1 |
 | zip | 3.0-12 |
-| zlib1g | 1:1.2.11.dfsg-2+deb11u1 |
+| zlib1g | 1:1.2.11.dfsg-2+deb11u2 |
 | zsh | 5.8-6+deb11u1 |
 
 ## Variant: 8.1-apache-buster
 
-**Digest:** sha256:8c7dd4404451f77121b4363105646155c6f3bf9e6f0687e01f5395a9aa49d7e9
+**Digest:** sha256:62028c81068eb27336dc419743492fa402559060c505bd6697e3e68bd5f20c1d
 
 **Tags:**
 ```
@@ -316,7 +316,7 @@ mcr.microsoft.com/devcontainers/php:dev-buster
 | apt-transport-https | 1.8.2.3 |
 | apt-utils | 1.8.2.3 |
 | ca-certificates | 20200601~deb10u2 |
-| curl | 7.64.0-4+deb10u2 |
+| curl | 7.64.0-4+deb10u3 |
 | dialog | 1.3-20190211-1 |
 | git | 1:2.20.1-2+deb10u3 |
 | gnupg2 | 2.2.12-1+deb10u2 |
@@ -357,7 +357,7 @@ mcr.microsoft.com/devcontainers/php:dev-buster
 
 ## Variant: 8.0-apache-buster
 
-**Digest:** sha256:fc9fb066cb6bb7baa02132325c9e9bc737110ab2035dcbf7181b19e82a277bd8
+**Digest:** sha256:d28ebd6e4f871f85f3b3e6e65c848e06dc837722b67df873cd6465c5551ce9c5
 
 **Tags:**
 ```
@@ -400,7 +400,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-buster
 | apt-transport-https | 1.8.2.3 |
 | apt-utils | 1.8.2.3 |
 | ca-certificates | 20200601~deb10u2 |
-| curl | 7.64.0-4+deb10u2 |
+| curl | 7.64.0-4+deb10u3 |
 | dialog | 1.3-20190211-1 |
 | git | 1:2.20.1-2+deb10u3 |
 | gnupg2 | 2.2.12-1+deb10u2 |
@@ -441,7 +441,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-buster
 
 ## Variant: 7.4-apache-buster
 
-**Digest:** sha256:1b8cd698b1b4701c68961faf901cefdb091d8ebce0ab13f84c73743196cf1e3a
+**Digest:** sha256:e9b3c03bdcafe4b19bf0b9ba98637c89e2fabf43708bddd1946b8b111d8c8454
 
 **Tags:**
 ```
@@ -485,7 +485,7 @@ mcr.microsoft.com/devcontainers/php:dev-7.4-buster
 | apt-transport-https | 1.8.2.3 |
 | apt-utils | 1.8.2.3 |
 | ca-certificates | 20200601~deb10u2 |
-| curl | 7.64.0-4+deb10u2 |
+| curl | 7.64.0-4+deb10u3 |
 | dialog | 1.3-20190211-1 |
 | git | 1:2.20.1-2+deb10u3 |
 | gnupg2 | 2.2.12-1+deb10u2 |
