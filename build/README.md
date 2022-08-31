@@ -46,7 +46,7 @@ Once you have your build configuration setup, you can use the `vscdc` CLI to tes
 1. First, build the image(s) using the CLI as follows:
 
    ```bash
-   build/vscdc push --no-push --registry mcr.microsoft.com --registry-path devcontainers --release main <your-image-name-here>VS Code Tags
+   build/vscdc push --no-push --registry mcr.microsoft.com --registry-path devcontainers --release main <your-image-name-here>
    ```
 
 2. Use the Docker CLI to verify all of the expected images and tags and have the right contents:
