@@ -30,7 +30,7 @@ You can decide how often you want updates by referencing a [semantic version](ht
 - `mcr.microsoft.com/devcontainers/typescript-node:0.204-16` (or `0.204-16-bullseye`, `0.204-16-buster`)
 - `mcr.microsoft.com/devcontainers/typescript-node:0.204.0-16` (or `0.204.0-16-bullseye`, `0.204.0-16-buster`)
 
-However, we only do security patching on the latest [non-breaking, in support](https://github.com/microsoft/vscode-dev-containers/issues/532) versions of images (e.g. `0-1.16`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
+However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `0-1.16`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
 Beyond Node.js and `git`, this image / `Dockerfile` includes `eslint`, `zsh`, [Oh My Zsh!](https://ohmyz.sh/), a non-root `node` user with `sudo` access, and a set of common dependencies for development. [Node Version Manager](https://github.com/nvm-sh/nvm) (`nvm`) is also included in case you need to use a different version of Node.js than the one included in the image.
 

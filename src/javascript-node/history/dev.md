@@ -1,28 +1,26 @@
-# [ruby](https://github.com/devcontainers/images/tree/main/src/ruby)
+# [javascript-node](https://github.com/devcontainers/images/tree/main/src/javascript-node)
 
 **Image version:** dev
 
-**Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/ruby)
+**Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/javascript-node)
 
 **Image variations:**
-- [3.1-bullseye](#variant-31-bullseye)
-- [3.0-bullseye](#variant-30-bullseye)
-- [2.7-bullseye](#variant-27-bullseye)
-- [3.1-buster](#variant-31-buster)
-- [3.0-buster](#variant-30-buster)
-- [2.7-buster](#variant-27-buster)
+- [18-bullseye](#variant-18-bullseye)
+- [16-bullseye](#variant-16-bullseye)
+- [14-bullseye](#variant-14-bullseye)
+- [18-buster](#variant-18-buster)
+- [16-buster](#variant-16-buster)
+- [14-buster](#variant-14-buster)
 
-## Variant: 3.1-bullseye
+## Variant: 18-bullseye
 
-**Digest:** sha256:d66107a7fde71df24e938989d2dbf9a88b5e6b5a3edf9937042a10a1491f9cf5
+**Digest:** sha256:dcb6d83c8d061ac26d3fe75ac5622e70cde2871c0102142e63a31992c1fb813f
 
 **Tags:**
 ```
-mcr.microsoft.com/devcontainers/ruby:dev-3.1-bullseye
-mcr.microsoft.com/devcontainers/ruby:dev-3
-mcr.microsoft.com/devcontainers/ruby:dev-3.1
-mcr.microsoft.com/devcontainers/ruby:dev-3-bullseye
-mcr.microsoft.com/devcontainers/ruby:dev-bullseye
+mcr.microsoft.com/devcontainers/javascript-node:dev-18-bullseye
+mcr.microsoft.com/devcontainers/javascript-node:dev-18
+mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
@@ -30,29 +28,27 @@ mcr.microsoft.com/devcontainers/ruby:dev-bullseye
 
 **Architectures:** linux/amd64, linux/arm64
 
-**Available (non-root) user:** vscode
+**Available (non-root) user:** node
 
 ### Contents
 **Languages and runtimes**
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Ruby](https://www.ruby-lang.org/en/) | 3.1.2p20 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 18.8.0 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6d48309cd7da1b91038cf08be7865fb5bb9bc5ea | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6d48309cd7da1b91038cf08be7865fb5bb9bc5ea | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
-| [rbenv](https://github.com/rbenv/rbenv.git) | c4395e58201966d9f90c12bd6b7342e389e7a4cb | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 1f6b94cc9392ada220be3cd4d104b9e9ee883517 | /usr/local/share/ruby-build |
 
-**Other tools and utilities**
+**Npm globally installed tools and packages**
 
-| Tool | Version | Path |
-|------|---------|------|
-| [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
+| Tool / package | Version |
+|----------------|---------|
+| eslint | 8.23.0 |
 
 **Additional linux tools and packages**
 
@@ -60,7 +56,6 @@ mcr.microsoft.com/devcontainers/ruby:dev-bullseye
 |----------------|---------|
 | apt-transport-https | 2.2.4 |
 | apt-utils | 2.2.4 |
-| build-essential | 12.9 |
 | ca-certificates | 20210119 |
 | curl | 7.74.0-1.3+deb11u2 |
 | dialog | 1.3-20201126-1 |
@@ -95,19 +90,18 @@ mcr.microsoft.com/devcontainers/ruby:dev-bullseye
 | unzip | 6.0-26+deb11u1 |
 | vim-tiny | 2:8.2.2434-3+deb11u1 |
 | wget | 1.21-1+deb11u1 |
-| yarn | 1.22.19-1 |
 | zip | 3.0-12 |
 | zlib1g | 1:1.2.11.dfsg-2+deb11u2 |
 | zsh | 5.8-6+deb11u1 |
 
-## Variant: 3.0-bullseye
+## Variant: 16-bullseye
 
-**Digest:** sha256:89b58d2523bcb61174e1686c5fc536d3ebe2d5b856d1729d364df283fa6ae4b3
+**Digest:** sha256:40365bb3e540ecb86fd1899b6d123e6a8a56b1d39b2086618da8f2e6b40849cf
 
 **Tags:**
 ```
-mcr.microsoft.com/devcontainers/ruby:dev-3.0-bullseye
-mcr.microsoft.com/devcontainers/ruby:dev-3.0
+mcr.microsoft.com/devcontainers/javascript-node:dev-16-bullseye
+mcr.microsoft.com/devcontainers/javascript-node:dev-16
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
@@ -115,29 +109,27 @@ mcr.microsoft.com/devcontainers/ruby:dev-3.0
 
 **Architectures:** linux/amd64, linux/arm64
 
-**Available (non-root) user:** vscode
+**Available (non-root) user:** node
 
 ### Contents
 **Languages and runtimes**
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Ruby](https://www.ruby-lang.org/en/) | 3.0.4p208 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 16.17.0 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6d48309cd7da1b91038cf08be7865fb5bb9bc5ea | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6d48309cd7da1b91038cf08be7865fb5bb9bc5ea | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
-| [rbenv](https://github.com/rbenv/rbenv.git) | c4395e58201966d9f90c12bd6b7342e389e7a4cb | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 1f6b94cc9392ada220be3cd4d104b9e9ee883517 | /usr/local/share/ruby-build |
 
-**Other tools and utilities**
+**Npm globally installed tools and packages**
 
-| Tool | Version | Path |
-|------|---------|------|
-| [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
+| Tool / package | Version |
+|----------------|---------|
+| eslint | 8.23.0 |
 
 **Additional linux tools and packages**
 
@@ -145,7 +137,6 @@ mcr.microsoft.com/devcontainers/ruby:dev-3.0
 |----------------|---------|
 | apt-transport-https | 2.2.4 |
 | apt-utils | 2.2.4 |
-| build-essential | 12.9 |
 | ca-certificates | 20210119 |
 | curl | 7.74.0-1.3+deb11u2 |
 | dialog | 1.3-20201126-1 |
@@ -180,21 +171,18 @@ mcr.microsoft.com/devcontainers/ruby:dev-3.0
 | unzip | 6.0-26+deb11u1 |
 | vim-tiny | 2:8.2.2434-3+deb11u1 |
 | wget | 1.21-1+deb11u1 |
-| yarn | 1.22.19-1 |
 | zip | 3.0-12 |
 | zlib1g | 1:1.2.11.dfsg-2+deb11u2 |
 | zsh | 5.8-6+deb11u1 |
 
-## Variant: 2.7-bullseye
+## Variant: 14-bullseye
 
-**Digest:** sha256:69b9671f8b9223abf3485aa6b39053fb366fbdf602dbe103a8f5331caee4c1f7
+**Digest:** sha256:f62c03c02725c1ed3282fd24f810565f1f19be56d6b47f314231d42196ecfed4
 
 **Tags:**
 ```
-mcr.microsoft.com/devcontainers/ruby:dev-2.7-bullseye
-mcr.microsoft.com/devcontainers/ruby:dev-2
-mcr.microsoft.com/devcontainers/ruby:dev-2.7
-mcr.microsoft.com/devcontainers/ruby:dev-2-bullseye
+mcr.microsoft.com/devcontainers/javascript-node:dev-14-bullseye
+mcr.microsoft.com/devcontainers/javascript-node:dev-14
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
@@ -202,29 +190,27 @@ mcr.microsoft.com/devcontainers/ruby:dev-2-bullseye
 
 **Architectures:** linux/amd64, linux/arm64
 
-**Available (non-root) user:** vscode
+**Available (non-root) user:** node
 
 ### Contents
 **Languages and runtimes**
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Ruby](https://www.ruby-lang.org/en/) | 2.7.6p219 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 14.20.0 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6d48309cd7da1b91038cf08be7865fb5bb9bc5ea | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6d48309cd7da1b91038cf08be7865fb5bb9bc5ea | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
-| [rbenv](https://github.com/rbenv/rbenv.git) | c4395e58201966d9f90c12bd6b7342e389e7a4cb | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 1f6b94cc9392ada220be3cd4d104b9e9ee883517 | /usr/local/share/ruby-build |
 
-**Other tools and utilities**
+**Npm globally installed tools and packages**
 
-| Tool | Version | Path |
-|------|---------|------|
-| [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
+| Tool / package | Version |
+|----------------|---------|
+| eslint | 8.23.0 |
 
 **Additional linux tools and packages**
 
@@ -232,7 +218,6 @@ mcr.microsoft.com/devcontainers/ruby:dev-2-bullseye
 |----------------|---------|
 | apt-transport-https | 2.2.4 |
 | apt-utils | 2.2.4 |
-| build-essential | 12.9 |
 | ca-certificates | 20210119 |
 | curl | 7.74.0-1.3+deb11u2 |
 | dialog | 1.3-20201126-1 |
@@ -267,20 +252,18 @@ mcr.microsoft.com/devcontainers/ruby:dev-2-bullseye
 | unzip | 6.0-26+deb11u1 |
 | vim-tiny | 2:8.2.2434-3+deb11u1 |
 | wget | 1.21-1+deb11u1 |
-| yarn | 1.22.19-1 |
 | zip | 3.0-12 |
 | zlib1g | 1:1.2.11.dfsg-2+deb11u2 |
 | zsh | 5.8-6+deb11u1 |
 
-## Variant: 3.1-buster
+## Variant: 18-buster
 
-**Digest:** sha256:12a31adef9e7d9c52d7473edee71dddb6b656e09b167e45e7b261ebb6fe8a7db
+**Digest:** sha256:3ecd77d66222dbe9539310983348674e3ab42f5874f98badb9525fb70468977a
 
 **Tags:**
 ```
-mcr.microsoft.com/devcontainers/ruby:dev-3.1-buster
-mcr.microsoft.com/devcontainers/ruby:dev-3-buster
-mcr.microsoft.com/devcontainers/ruby:dev-buster
+mcr.microsoft.com/devcontainers/javascript-node:dev-18-buster
+mcr.microsoft.com/devcontainers/javascript-node:dev-buster
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
@@ -288,29 +271,27 @@ mcr.microsoft.com/devcontainers/ruby:dev-buster
 
 **Architectures:** linux/amd64
 
-**Available (non-root) user:** vscode
+**Available (non-root) user:** node
 
 ### Contents
 **Languages and runtimes**
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Ruby](https://www.ruby-lang.org/en/) | 3.1.2p20 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 18.8.0 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6d48309cd7da1b91038cf08be7865fb5bb9bc5ea | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6d48309cd7da1b91038cf08be7865fb5bb9bc5ea | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
-| [rbenv](https://github.com/rbenv/rbenv.git) | c4395e58201966d9f90c12bd6b7342e389e7a4cb | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 1f6b94cc9392ada220be3cd4d104b9e9ee883517 | /usr/local/share/ruby-build |
 
-**Other tools and utilities**
+**Npm globally installed tools and packages**
 
-| Tool | Version | Path |
-|------|---------|------|
-| [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
+| Tool / package | Version |
+|----------------|---------|
+| eslint | 8.23.0 |
 
 **Additional linux tools and packages**
 
@@ -318,7 +299,6 @@ mcr.microsoft.com/devcontainers/ruby:dev-buster
 |----------------|---------|
 | apt-transport-https | 1.8.2.3 |
 | apt-utils | 1.8.2.3 |
-| build-essential | 12.6 |
 | ca-certificates | 20200601~deb10u2 |
 | curl | 7.64.0-4+deb10u3 |
 | dialog | 1.3-20190211-1 |
@@ -354,18 +334,17 @@ mcr.microsoft.com/devcontainers/ruby:dev-buster
 | unzip | 6.0-23+deb10u2 |
 | vim-tiny | 2:8.1.0875-5+deb10u2 |
 | wget | 1.20.1-1.1 |
-| yarn | 1.22.19-1 |
 | zip | 3.0-11+b1 |
 | zlib1g | 1:1.2.11.dfsg-1+deb10u1 |
 | zsh | 5.7.1-1+deb10u1 |
 
-## Variant: 3.0-buster
+## Variant: 16-buster
 
-**Digest:** sha256:42002063d4c19e948e2f82370eac92e502f4c4c93dd609fcacd27b6b749ebdb2
+**Digest:** sha256:bc78dcc7de6ee7d448d52a2eef07fedeacf2e4d3c2e0e7be0585810503581bce
 
 **Tags:**
 ```
-mcr.microsoft.com/devcontainers/ruby:dev-3.0-buster
+mcr.microsoft.com/devcontainers/javascript-node:dev-16-buster
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
@@ -373,29 +352,27 @@ mcr.microsoft.com/devcontainers/ruby:dev-3.0-buster
 
 **Architectures:** linux/amd64
 
-**Available (non-root) user:** vscode
+**Available (non-root) user:** node
 
 ### Contents
 **Languages and runtimes**
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Ruby](https://www.ruby-lang.org/en/) | 3.0.4p208 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 16.17.0 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6d48309cd7da1b91038cf08be7865fb5bb9bc5ea | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6d48309cd7da1b91038cf08be7865fb5bb9bc5ea | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
-| [rbenv](https://github.com/rbenv/rbenv.git) | c4395e58201966d9f90c12bd6b7342e389e7a4cb | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 1f6b94cc9392ada220be3cd4d104b9e9ee883517 | /usr/local/share/ruby-build |
 
-**Other tools and utilities**
+**Npm globally installed tools and packages**
 
-| Tool | Version | Path |
-|------|---------|------|
-| [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
+| Tool / package | Version |
+|----------------|---------|
+| eslint | 8.23.0 |
 
 **Additional linux tools and packages**
 
@@ -403,7 +380,6 @@ mcr.microsoft.com/devcontainers/ruby:dev-3.0-buster
 |----------------|---------|
 | apt-transport-https | 1.8.2.3 |
 | apt-utils | 1.8.2.3 |
-| build-essential | 12.6 |
 | ca-certificates | 20200601~deb10u2 |
 | curl | 7.64.0-4+deb10u3 |
 | dialog | 1.3-20190211-1 |
@@ -439,19 +415,17 @@ mcr.microsoft.com/devcontainers/ruby:dev-3.0-buster
 | unzip | 6.0-23+deb10u2 |
 | vim-tiny | 2:8.1.0875-5+deb10u2 |
 | wget | 1.20.1-1.1 |
-| yarn | 1.22.19-1 |
 | zip | 3.0-11+b1 |
 | zlib1g | 1:1.2.11.dfsg-1+deb10u1 |
 | zsh | 5.7.1-1+deb10u1 |
 
-## Variant: 2.7-buster
+## Variant: 14-buster
 
-**Digest:** sha256:45731dc0038493e6a533efc3dff328c777972a355042ff09b9705c3cc2a07b37
+**Digest:** sha256:4a149afe735555cf13744f9078f68902e84380aefc82ac30323d882b0c67a4f6
 
 **Tags:**
 ```
-mcr.microsoft.com/devcontainers/ruby:dev-2.7-buster
-mcr.microsoft.com/devcontainers/ruby:dev-2-buster
+mcr.microsoft.com/devcontainers/javascript-node:dev-14-buster
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
@@ -459,29 +433,27 @@ mcr.microsoft.com/devcontainers/ruby:dev-2-buster
 
 **Architectures:** linux/amd64
 
-**Available (non-root) user:** vscode
+**Available (non-root) user:** node
 
 ### Contents
 **Languages and runtimes**
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Ruby](https://www.ruby-lang.org/en/) | 2.7.6p219 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 14.20.0 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6d48309cd7da1b91038cf08be7865fb5bb9bc5ea | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6d48309cd7da1b91038cf08be7865fb5bb9bc5ea | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
-| [rbenv](https://github.com/rbenv/rbenv.git) | c4395e58201966d9f90c12bd6b7342e389e7a4cb | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 1f6b94cc9392ada220be3cd4d104b9e9ee883517 | /usr/local/share/ruby-build |
 
-**Other tools and utilities**
+**Npm globally installed tools and packages**
 
-| Tool | Version | Path |
-|------|---------|------|
-| [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
+| Tool / package | Version |
+|----------------|---------|
+| eslint | 8.23.0 |
 
 **Additional linux tools and packages**
 
@@ -489,7 +461,6 @@ mcr.microsoft.com/devcontainers/ruby:dev-2-buster
 |----------------|---------|
 | apt-transport-https | 1.8.2.3 |
 | apt-utils | 1.8.2.3 |
-| build-essential | 12.6 |
 | ca-certificates | 20200601~deb10u2 |
 | curl | 7.64.0-4+deb10u3 |
 | dialog | 1.3-20190211-1 |
@@ -525,7 +496,6 @@ mcr.microsoft.com/devcontainers/ruby:dev-2-buster
 | unzip | 6.0-23+deb10u2 |
 | vim-tiny | 2:8.1.0875-5+deb10u2 |
 | wget | 1.20.1-1.1 |
-| yarn | 1.22.19-1 |
 | zip | 3.0-11+b1 |
 | zlib1g | 1:1.2.11.dfsg-1+deb10u1 |
 | zsh | 5.7.1-1+deb10u1 |
