@@ -24,7 +24,7 @@ In addition to Ruby and Bundler, this development container installs Jekyll and 
 - If your Jekyll project contains a `Gemfile` in the root folder, the development container will install all gems at startup by running `bundle install`. This is the [recommended](https://jekyllrb.com/docs/step-by-step/10-deployment/#gemfile) approach as it allows you to specify the exact Jekyll version your project requires and list all additional Jekyll plugins.
 - If there's no `Gemfile`, the development container will install Jekyll automatically, picking the latest version. You might need to manually install the other dependencies your project relies on, including all relevant Jekyll plugins.
 
-You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
+You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
 
 - `mcr.microsoft.com/devcontainers/jekyll` (latest)
@@ -47,7 +47,7 @@ Alternatively, you can use the contents of `Dockerfile` to fully customize your 
 
 Given JavaScript front-end web client code written for use in conjunction with a Jekyll site often requires the use of Node.js-based utilities to build, this container also includes `nvm` so that you can easily install Node.js.
 
-Also, you can use a [Node Feature](https://github.com/devcontainers/features/tree/main/src/node) to install any version of Node by adding the following to `.devcontainer.json`:
+Also, you can use a [Node feature](https://github.com/devcontainers/features/tree/main/src/node) to install any version of Node by adding the following to `devcontainer.json`:
 
 ```json
 {

@@ -53,7 +53,7 @@ jobs:
 
         # Build and push dev images
         yarn install
-        npm install -g @devcontainers/cli@0.14.1
+        npm install -g @devcontainers/cli
         GIT_BRANCH=$(echo "${{ github.ref }}" | grep -oP 'refs/(heads|tags)/\K(.+)')
         if [ "$GIT_BRANCH" == "" ]; then 
             GIT_BRANCH=main
