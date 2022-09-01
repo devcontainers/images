@@ -1,4 +1,5 @@
 {
+	"version": "0.203.6",
 	"variants": [
 		"3.1-bullseye",
 		"3.0-bullseye",
@@ -7,7 +8,6 @@
 		"3.0-buster",
 		"2.7-buster"
 	],
-	"imageVersion": "0.203.5",
 	"build": {
 		"latest": "3.1-bullseye",
 		"rootDistro": "debian",

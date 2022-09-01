@@ -84,7 +84,7 @@ require('yargs')
                 }
             })
     }, pushCommand)
-    .command('cg [devcontainer]', 'generate manifest.json', (yargs) => {
+    .command('cg [devcontainer]', 'generate cgmanifest.json', (yargs) => {
         yargs
             .positional('devcontainer', {
                 describe: 'limits manifest generation to single image',
@@ -128,7 +128,7 @@ require('yargs')
                     default: false
                 },
                 'cg': {
-                    describe: 'whether to generate manifest.json',
+                    describe: 'whether to generate cgmanifest.json',
                     type: 'boolean',
                     default: true
                 },
@@ -142,7 +142,7 @@ require('yargs')
                     default: path.resolve(__dirname, '..', configUtils.getConfig('informationFileOutputPath', '.'))
                 },
                 'overwrite': {
-                    describe: 'whether to overwrite manifest.json or markdown files',
+                    describe: 'whether to overwrite cgmanifest.json or markdown files',
                     type: 'boolean',
                     default: true
                 }
@@ -187,7 +187,7 @@ require('yargs')
                     default: true
                 },
                 'cg': {
-                    describe: 'whether to generate manifest.json',
+                    describe: 'whether to generate cgmanifest.json',
                     type: 'boolean',
                     default: false
                 },
@@ -206,7 +206,7 @@ require('yargs')
                     default: path.resolve(__dirname, '..', configUtils.getConfig('informationFileOutputPath', '.'))
                 },
                 'overwrite': {
-                    describe: 'whether to overwrite manifest.json or markdown files',
+                    describe: 'whether to overwrite cgmanifest.json or markdown files',
                     type: 'boolean',
                     default: false
                 }

@@ -7,17 +7,17 @@ This folder contains scripts to build and push images into the Microsoft Contain
 The Node.js based build CLI (`build/vsdc`) has commands to:
 
 1. Build and push to a repository: `build/vsdc push`
-2. Generate manifest.json and history markdown files: `build/vsdc cg`, `build/vsdc info`
+2. Generate cgmanifest.json and history markdown files: `build/vsdc cg`, `build/vsdc info`
 
 Run with the `--help` option to see inputs.
 
 This CLI is used in the GitHub Actions workflows in this repository.
 
-- `push-dev.yml`: Pushes a "dev" tag for each image to be generated in this repository and fires repository dispatch to trigger manifest.json generation.
+- `push-dev.yml`: Pushes a "dev" tag for each image to be generated in this repository and fires repository dispatch to trigger cgmanifest.json generation.
 - `push.yml`: Triggers when a release tag is pushed (`vX.Y.Z`). Builds and pushes a release version of the images. Note that this update the tag with source files that contain a SHA hash for script sources. You may need to run `git fetch --tags --force` locally after it runs.
 - `push-again.yml`: A manually triggered workflow that can be used to push an updated version of an image for an existing release. This should only be used in cases where the image push to the registry only partially succeeded (e.g. `linux/amd64` was pushed, but a connection error happened when pushing `linux/arm64` for the same image.)
 - `smoke-*.yaml` (using the `smoke-test` action in this repository) - Runs a build without pushing and executes `test-project/test.sh` (if present) inside the container to verify that there are no breaking changes to the image when the repository contents are updated.
-- `version-history.yml`: Listens for workflow dispatch events to trigger manifest.json and history markdown generation.
+- `version-history.yml`: Listens for workflow dispatch events to trigger cgmanifest.json and history markdown generation.
 
 ## Setting up a container to be built
 
@@ -144,14 +144,14 @@ In this case, Debian is also the one that is used for `latest` for the `base` re
 
 There's a special "dev" version that can be used to build main on CI - I ended up needing this to test and others would if they base an image off of one of the MCR images.  e.g. `dev-debian-9`.
 
-### The `imageVersion` property
+### The `version` property
 
-While in most cases it makes sense to version the contents of a image with the repository, there may be scenarios where you want to be able to version independently. A good example of this [is the `codespaces` image](../src/codespaces/) where upstream edits could cause breaking changes in this image.
+While in most cases it makes sense to version the contents of a image with the repository, there may be scenarios where you want to be able to version independently. A good example of this [is the `universal` image](../src/universal/) where upstream edits could cause breaking changes in this image.
 
-When this is necessary, the `imageVersion` property in the `manifest.json` file can be set.
+When this is necessary, the `version` property in the `manifest.json` file can be set.
 
 ```json
-"imageVersion": "1.0.0"
+"version": "1.0.0"
 ```
 
 ### The `variants` property
@@ -318,7 +318,7 @@ Following this is a list of libraries installed in the image by its Dockerfile. 
 
 #### `dependencies.apt`, `dependencies.apk`
 
-These two properties are arrays of either strings or objects that reference apt or apk package names. Given most installed packages are there simply for visibility because they come with the distro, these are not tracked in `manifest.json` by default. When something comes from a 3rd party repository, the object syntax can be used to set `"cgIgnore": false`. An `annotation` property can also be used to for a description that should appear in history markdown files.
+These two properties are arrays of either strings or objects that reference apt or apk package names. Given most installed packages are there simply for visibility because they come with the distro, these are not tracked in `cgmanifest.json` by default. When something comes from a 3rd party repository, the object syntax can be used to set `"cgIgnore": false`. An `annotation` property can also be used to for a description that should appear in history markdown files.
 
 For example:
 
@@ -495,7 +495,7 @@ This has a few advantages:
 3. Upstream changes that break existing images can be handled as needed.
 4. Developers can opt to use the image tag 0.35 to get the latest break fix version if desired or 0 to always get the latest non-breaking update.
 
-When necessary, a specific version can also be specified for an individual image using a `imageVersion` property, but this is generally the exception.
+When necessary, a specific version can also be specified for an individual image using a `version` property, but this is generally the exception.
 
 ### Release process and the contents of the npm package
 

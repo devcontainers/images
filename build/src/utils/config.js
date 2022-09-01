@@ -120,8 +120,8 @@ async function loadDefinitionManifest(manifestPath, definitionId) {
     if (buildJson.dependencies) {
         config.definitionDependencies[definitionId] = buildJson.dependencies;
     }
-    if (buildJson.imageVersion) {
-        config.definitionVersions[definitionId] = buildJson.imageVersion;
+    if (buildJson.version) {
+        config.definitionVersions[definitionId] = buildJson.version;
     }
 }
 
@@ -392,7 +392,8 @@ function getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip) {
     if (allPages.length > pageTotal) {
         // If too many pages, add extra pages to last one
         console.log(`(!) Not enough pages to for target page size. Adding excess definitions to last page.`);
-        for (let i = pageTotal; i < allPages.length; i++) {
+        let i = pageTotal;
+        while (i < allPages.length) {
             allPages[pageTotal - 1] = allPages[pageTotal - 1].concat(allPages[i]);
             allPages.splice(i, 1);
         }

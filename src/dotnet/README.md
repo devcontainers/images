@@ -21,7 +21,7 @@ See **[history](history)** for information on the contents of published images.
 
 Note that .NET 6.0 has switched its default OS to Debian 12 / bullseye. We also offer a `6.0-focal` image if you would prefer to use Ubuntu 20.04 / Focal.
 
-You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
+You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
 - `mcr.microsoft.com/devcontainers/dotnet` (latest)
 - `mcr.microsoft.com/devcontainers/dotnet:3.1` (or `3.1-bullseye`, `3.1-focal` to pin to an OS version)
@@ -82,7 +82,9 @@ If you would like to install the Azure CLI, you can reference [a dev container f
 ```json
 {
   "features": {
-    "ghcr.io/devcontainers/features/azure-cli:1": "latest"
+    "ghcr.io/devcontainers/features/azure-cli:1": {
+      "version": "latest"
+    }
   }
 }
 ```

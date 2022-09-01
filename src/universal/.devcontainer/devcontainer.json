@@ -1,0 +1,134 @@
+{
+    "build": {
+        "dockerfile": "./Dockerfile",
+        "context": "."
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:1": {
+            "username": "codespace",
+            "uid": "1000",
+            "gid": "1000"
+        },
+        "ghcr.io/devcontainers/features/dotnet:1": {
+            "version": "6",
+            "installUsingApt": "false",
+            "additionalVersions": "3"
+        },
+        "ghcr.io/devcontainers/features/hugo:1": {
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "16",
+            "additionalVersions": "14"
+        },
+        "./local-features/nvs": "latest",
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "3.10",
+            "additionalVersions": "3.9",
+            "installJupyterlab": "true"
+        },
+        "./local-features/machine-learning-packages": "latest",
+        "ghcr.io/devcontainers/features/php:1": {
+            "version": "8.1.4",
+            "additionalVersions": "8.0.16",
+            "installComposer": "true"
+        },
+        "ghcr.io/devcontainers/features/anaconda:1": {
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/ruby:1": {
+            "version": "3.1",
+            "additionalVersions": "3.0"
+        },
+        "ghcr.io/devcontainers/features/java:1": {
+            "version": "17",
+            "additionalVersions": "11",
+            "installGradle": "true",
+            "installMaven": "true"
+        },
+        "ghcr.io/devcontainers/features/sshd:1": {
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/git-lfs:1": {
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/github-cli:1": {
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/docker-in-docker:1": {
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/git:1": {
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/go:1": {
+            "version": "latest"
+        },
+        "./local-features/jekyll": "latest",
+        "ghcr.io/devcontainers/features/oryx:1": "latest",
+        "./local-features/setup-user": "latest"
+    },
+    "overrideFeatureInstallOrder": [
+        "ghcr.io/devcontainers/features/common-utils",
+        "ghcr.io/devcontainers/features/dotnet",
+        "ghcr.io/devcontainers/features/hugo",
+        "ghcr.io/devcontainers/features/node",
+        "./local-features/nvs",
+        "ghcr.io/devcontainers/features/python",
+        "./local-features/machine-learning-packages",
+        "ghcr.io/devcontainers/features/php",
+        "ghcr.io/devcontainers/features/anaconda",
+        "ghcr.io/devcontainers/features/ruby",
+        "ghcr.io/devcontainers/features/java",
+        "ghcr.io/devcontainers/features/sshd",
+        "ghcr.io/devcontainers/features/git-lfs",
+        "ghcr.io/devcontainers/features/github-cli",
+        "ghcr.io/devcontainers/features/docker-in-docker",
+        "ghcr.io/devcontainers/features/kubectl-helm-minikube",
+        "ghcr.io/devcontainers/features/git",
+        "ghcr.io/devcontainers/features/go",
+        "./local-features/jekyll",
+        "ghcr.io/devcontainers/features/oryx",
+        "./local-features/setup-user"
+    ],
+    "remoteUser": "codespace",
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    // "forwardPorts": [],
+    // "oryx build" will automatically install your dependencies and attempt to build your project
+    "postCreateCommand": "oryx build -p virtualenv_name=.venv --log-file /tmp/oryx-build.log --manifest-dir /tmp || echo 'Could not auto-build. Skipping.'",
+    // Configure tool-specific properties.
+    "customizations": {
+        // Configure properties specific to VS Code.
+        "vscode": {
+            // Set *default* container specific settings.json values on container create.
+            "settings": {
+                "go.toolsManagement.checkForUpdates": "local",
+                "go.useLanguageServer": true,
+                "go.gopath": "/usr/local/go/bin/go",
+                "python.defaultInterpreterPath": "/usr/local/python/current/bin/python",
+                "python.linting.enabled": true,
+                "python.linting.pylintEnabled": true,
+                "python.formatting.autopep8Path": "/usr/local/py-utils/bin/autopep8",
+                "python.formatting.blackPath": "/usr/local/py-utils/bin/black",
+                "python.formatting.yapfPath": "/usr/local/py-utils/bin/yapf",
+                "python.linting.banditPath": "/usr/local/py-utils/bin/bandit",
+                "python.linting.flake8Path": "/usr/local/py-utils/bin/flake8",
+                "python.linting.mypyPath": "/usr/local/py-utils/bin/mypy",
+                "python.linting.pycodestylePath": "/usr/local/py-utils/bin/pycodestyle",
+                "python.linting.pydocstylePath": "/usr/local/py-utils/bin/pydocstyle",
+                "python.linting.pylintPath": "/usr/local/py-utils/bin/pylint",
+                "lldb.executable": "/usr/bin/lldb",
+                "files.watcherExclude": {
+                    "**/target/**": true
+                }
+            },
+            // Add the IDs of extensions you want installed when the container is created.
+            "extensions": [
+                "GitHub.vscode-pull-request-github"
+            ]
+        }
+    }
+}

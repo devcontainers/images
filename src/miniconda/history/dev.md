@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/miniconda)
 
-**Digest:** sha256:c10a4f734f40235fc64996148e44f9a728157f284183d0be2f72b8015e1d92e4
+**Digest:** sha256:b5d1625d25acf8e864b28cf4bed3d16e7ae30738198591323d72b721be196e37
 
 **Tags:**
 ```
@@ -35,7 +35,7 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 
 | Tool / package | Version |
 |----------------|---------|
-| pylint | 2.14.5 |
+| pylint | 2.15.0 |
 | flake8 | 5.0.4 |
 | autopep8 | 1.7.0 |
 | black | 22.6.0 |
@@ -44,7 +44,7 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.9.1 |
 | bandit | 1.7.4 |
-| virtualenv | 20.16.3 |
+| virtualenv | 20.16.4 |
 | pipx | 1.1.0 |
 
 **Other tools and utilities**
@@ -95,6 +95,6 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | wget | 1.21-1+deb11u1 |
 | yarn | 1.22.19-1 |
 | zip | 3.0-12 |
-| zlib1g | 1:1.2.11.dfsg-2+deb11u1 |
+| zlib1g | 1:1.2.11.dfsg-2+deb11u2 |
 | zsh | 5.8-6+deb11u1 |
 

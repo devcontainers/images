@@ -179,7 +179,7 @@ async function getLinuxPackageInfo(imageTagOrContainerName, packageList, linuxDi
     return componentList;
 }
 
-// Gets a package pool URL out of a download URL - Needed for registering in manifest.json
+// Gets a package pool URL out of a download URL - Needed for registering in cgmanifest.json
 function getPoolUrlFromPackageVersionListOutput(packageUriCommandOutput, config, package, version) {
     // Handle regex reserved charters in regex strings and that ":" is treaded as "1%3a" on Debian/Ubuntu 
     const sanitizedPackage = package.replace(/\+/g, '\\+').replace(/\./g, '\\.');
@@ -256,7 +256,7 @@ async function getNpmGlobalPackageInfo(imageTagOrContainerName, packageList) {
     version: "2.6.0"
 }
 */
-async function getPipPackageInfo(imageTagOrContainerName, packageList, usePipx) {
+async function getPipPackageInfo(imageTagOrContainerName, packageList, usePipx, imageId) {
     // Merge in default dependencies
     packageList = packageList || [];
     const defaultPackages = configUtils.getDefaultDependencies(usePipx ? 'pipx' : 'pip') || [];
@@ -269,7 +269,7 @@ async function getPipPackageInfo(imageTagOrContainerName, packageList, usePipx) 
 
     // Generate and exec command to get installed package versions
     console.log('(*) Gathering information about pip packages...');
-    const versionLookup = usePipx ? await getPipxVersionLookup(imageTagOrContainerName) : await getPipVersionLookup(imageTagOrContainerName);
+    const versionLookup = usePipx ? await getPipxVersionLookup(imageTagOrContainerName) : await getPipVersionLookup(imageTagOrContainerName, imageId);
 
     return packageList.map((package) => {
         return {
@@ -279,8 +279,9 @@ async function getPipPackageInfo(imageTagOrContainerName, packageList, usePipx) 
     });
 }
 
-async function getPipVersionLookup(imageTagOrContainerName) {
-    const packageVersionListOutput = await getCommandOutputFromContainer(imageTagOrContainerName, 'pip list --format json');
+async function getPipVersionLookup(imageTagOrContainerName, imageId) {
+    const userName = imageId === "universal" ? "codespace" : undefined;
+    const packageVersionListOutput = await getCommandOutputFromContainer(imageTagOrContainerName, 'pip list --disable-pip-version-check --no-python-version-warning --format json', false, userName);
 
     const packageVersionList = JSON.parse(packageVersionListOutput);
 
@@ -576,9 +577,9 @@ async function removeProcessingContainer(containerName) {
 // Utility that executes commands inside a container. If a specially formatted container 
 // name is passed in, the function will use "docker exec" and otherwise use "docker run" 
 // since this means an image tag was passed in instead.
-async function getCommandOutputFromContainer(imageTagOrContainerName, command, forceRoot) {
+async function getCommandOutputFromContainer(imageTagOrContainerName, command, forceRoot, userName) {
     const runArgs = isContainerName(imageTagOrContainerName) ?
-        ['exec'].concat(forceRoot ? ['-u', 'root'] : [])
+        ['exec'].concat( userName ? ['-u', userName] : forceRoot ? ['-u', 'root'] : [])
         : ['run','--init', '--privileged', '--rm'].concat(forceRoot ? ['-u', 'root'] : []);
     const wrappedCommand = `bash -c "set -e && echo ~~~BEGIN~~~ && ${command} && echo && echo ~~~END~~~"`;
     runArgs.push(imageTagOrContainerName);
@@ -615,7 +616,7 @@ function getLinuxPackageManagerDependencies(dependencies, distroInfo) {
 }
 
 // Spins up a container for a referenced image and extracts info for the specified dependencies
-async function getAllContentInfo(imageTag, dependencies) {
+async function getAllContentInfo(imageTag, dependencies, imageId) {
     const containerName = await startContainerForProcessing(imageTag);
     try {
         const distroInfo = await getLinuxDistroInfo(containerName);
@@ -624,7 +625,7 @@ async function getAllContentInfo(imageTag, dependencies) {
             distro: distroInfo,
             linux: await getLinuxPackageInfo(containerName, getLinuxPackageManagerDependencies(dependencies, distroInfo), distroInfo),
             npm: await getNpmGlobalPackageInfo(containerName, dependencies.npm),
-            pip: await getPipPackageInfo(containerName, dependencies.pip, false),
+            pip: await getPipPackageInfo(containerName, dependencies.pip, false, imageId),
             pipx: await getPipPackageInfo(containerName, dependencies.pipx, true),
             gem: await getGemPackageInfo(containerName, dependencies.gem),
             cargo: await getCargoPackageInfo(containerName, dependencies.cargo),

@@ -11,7 +11,7 @@
 			"program": "${workspaceFolder}/vscdc",
 			"args": [
 				"push",
-				"debian",
+				"base-debian",
 				"--no-push",
 				"--page", "1",
 				"--page-total", "1",
@@ -30,7 +30,7 @@
 			"program": "${workspaceFolder}/vscdc",
 			"args": [
 				"info",
-				"codespaces",
+				"universal",
 				"--no-build",
 				"--markdown",
 				"--cg",

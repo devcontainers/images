@@ -122,20 +122,15 @@ async function pushImage(definitionId, repo, release, updateLatest,
             if (replaceImage || !await isDefinitionVersionAlreadyPublished(definitionId, release, registry, registryPath, variant)) {
 
                 let platformParams = "";
-                // Codespaces image does not need to be multi-arch
-                // ubuntu:focal image supports multiarch but codespaces doesn't. Hence, the build fails similar to https://github.com/docker/buildx/issues/235
-                if (definitionId != "codespaces") {
+                // Universal image does not need to be multi-arch
+                // ubuntu:focal image supports multiarch but Universal does not. Hence, the build fails similar to https://github.com/docker/buildx/issues/235
+                if (definitionId != "universal") {
                     platformParams = "--platform " + (pushImages ? architectures.reduce((prev, current) => prev + ',' + current, '').substring(1) : localArchitecture)
                 }
 
                 const context = devContainerJson.build ? devContainerJson.build.context || '.' : devContainerJson.context || '.';
                 const workingDir = path.resolve(dotDevContainerPath, context);
                 const imageNameParams = imageNamesWithVersionTags.reduce((prev, current) => prev.concat(['--image-name', current]), []);
-
-                // Do not build and push the "latest" tag when pushing the "dev" images
-                if (configUtils.getVersionFromRelease(release, definitionId) !== 'dev' || !pushImages) {
-                    imageNameParams.push('--image-name', imageName);
-                }
 
                 const spawnOpts = { stdio: 'inherit', cwd: workingDir, shell: true };
                 await asyncUtils.spawn('devcontainer', [

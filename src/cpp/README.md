@@ -19,7 +19,7 @@ See **[history](history)** for information on the contents of published images.
 
 ## Using this image
 
-You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
+You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
 - `mcr.microsoft.com/devcontainers/cpp` (latest Debian GA)
 - `mcr.microsoft.com/devcontainers/cpp:debian` (latest Debian GA)
@@ -36,7 +36,7 @@ You can decide how often you want updates by referencing a [semantic version](ht
 - `mcr.microsoft.com/devcontainers/cpp:0.205-bullseye`
 - `mcr.microsoft.com/devcontainers/cpp:0.205.0-bullseye`
 
-However, we only do security patching on the latest [non-breaking, in support](https://github.com/microsoft/vscode-dev-containers/issues/532) versions of images (e.g. `0-debian-11`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
+However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `0-debian-11`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/cpp/tags/list).
 

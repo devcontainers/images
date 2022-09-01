@@ -1,9 +1,9 @@
 {
+	"version": "0.1.8",
 	"variants": [
 		"2.7-bullseye",
 		"2.7-buster"
 	],
-	"imageVersion": "0.1.7",
 	"build": {
 		"latest": "2.7-bullseye",
 		"parent": "ruby",

@@ -3,7 +3,7 @@ inputs:
   image:
     description: 'Image to test'
     required: true
-    default: 'debian'
+    default: 'base-debian'
 
 runs:
   using: composite

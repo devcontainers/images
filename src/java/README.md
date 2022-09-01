@@ -19,7 +19,7 @@ See **[history](history)** for information on the contents of published images.
 
 ## Using this image
 
-You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
+You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
 - `mcr.microsoft.com/devcontainers/java` (latest)
 - `mcr.microsoft.com/devcontainers/java:11` (or `11-bullseye`, `11-buster` to pin to an OS version)
@@ -31,7 +31,7 @@ You can decide how often you want updates by referencing a [semantic version](ht
 - `mcr.microsoft.com/devcontainers/java:0.205-11` (or `0.205-11-bullseye`, `0.205-11-buster` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/java:0.205.0-11` (or `0.205.0-11-bullseye`, `0.205.0-11-buster` to pin to an OS version)
 
-However, we only do security patching on the latest [non-breaking, in support](https://github.com/microsoft/vscode-dev-containers/issues/532) versions of images (e.g. `0-11`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
+However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `0-11`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/java/tags/list).
 
@@ -39,7 +39,19 @@ Alternatively, you can use the contents of `Dockerfile` to fully customize your 
 
 ### Installing Maven or Gradle
 
-This image has latest version of Maven and Gradle installed by default.
+You can use the [Java Feature](https://github.com/devcontainers/features/tree/main/src/java) to install `maven` and `gradle` in `.devcontainer.json`:
+
+```json
+{
+  "features": {
+     "ghcr.io/devcontainers/features/java:1": {
+        "version": "none",
+        "installGradle": "true",
+        "installMaven": "true"
+    }
+  }
+}
+```
 
 ### Installing Node.js
 
@@ -50,7 +62,9 @@ Also, you can use a [Node feature](https://github.com/devcontainers/features/tre
 ```json
 {
   "features": {
-    "ghcr.io/devcontainers/features/node:1": "latest"
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "latest"
+    }
   }
 }
 ```
