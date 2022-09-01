@@ -33,7 +33,7 @@
             "additionalVersions": "8.0.16",
             "installComposer": "true"
         },
-        "ghcr.io/devcontainers/features/anaconda:1": {
+        "ghcr.io/devcontainers/features/conda:1": {
             "version": "latest"
         },
         "ghcr.io/devcontainers/features/ruby:1": {
@@ -80,7 +80,7 @@
         "ghcr.io/devcontainers/features/python",
         "./local-features/machine-learning-packages",
         "ghcr.io/devcontainers/features/php",
-        "ghcr.io/devcontainers/features/anaconda",
+        "ghcr.io/devcontainers/features/conda",
         "ghcr.io/devcontainers/features/ruby",
         "ghcr.io/devcontainers/features/java",
         "ghcr.io/devcontainers/features/sshd",

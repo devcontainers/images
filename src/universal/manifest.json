@@ -151,6 +151,10 @@
 			},
 			"Docker (Moby) CLI & Engine": {
 				"cgIgnore": true
+			},
+			"conda": {
+				"cgIgnore": true,
+				"path": "/opt/conda/bin"
 			}
 		},
 		"languages": {
@@ -197,7 +201,7 @@
 			"Jupyter Lab": {
 				"cgIgnore": true,
 				"versionCommand": "jupyter-lab --version",
-				"path": "/usr/local/conda/bin/jupyter-lab",
+				"path": "/home/codespace/.local/bin/jupyter-lab",
 				"downloadUrl": "https://jupyter.org/"
 			}
 		}
