@@ -11,7 +11,7 @@ const prep = require('./prep');
 const builderName = 'dev-containers-builder';
 
 async function push(repo, release, updateLatest, registry, registryPath, stubRegistry,
-    stubRegistryPath, pushImages, prepOnly, definitionsToSkip, page, pageTotal, replaceImages, definitionId) {
+    stubRegistryPath, pushImages, prepOnly, definitionsToSkip, page, pageTotal, replaceImages, definitionId, secondaryRegistryPath) {
 
     // Optional argument defaults
     prepOnly = typeof prepOnly === 'undefined' ? false : prepOnly;
@@ -45,14 +45,14 @@ async function push(repo, release, updateLatest, registry, registryPath, stubReg
     await asyncUtils.forEach(definitionsToPush, async (currentDefinitionId) => {
         console.log(`**** Pushing ${currentDefinitionId} ${release} ****`);
         await pushImage(
-            currentDefinitionId, repo, release, updateLatest, registry, registryPath, stubRegistry, stubRegistryPath, prepOnly, pushImages, replaceImages);
+            currentDefinitionId, repo, release, updateLatest, registry, registryPath, stubRegistry, stubRegistryPath, prepOnly, pushImages, replaceImages, secondaryRegistryPath);
     });
 
     return stagingFolder;
 }
 
 async function pushImage(definitionId, repo, release, updateLatest,
-    registry, registryPath, stubRegistry, stubRegistryPath, prepOnly, pushImages, replaceImage) {
+    registry, registryPath, stubRegistry, stubRegistryPath, prepOnly, pushImages, replaceImage, secondaryRegistryPath) {
     const definitionPath = configUtils.getDefinitionPath(definitionId);
     const dotDevContainerPath = definitionPath;
     // Use Dockerfile for image build
@@ -93,7 +93,12 @@ async function pushImage(definitionId, repo, release, updateLatest,
             const imageNamesWithVersionTags = configUtils.getTagList(definitionId, release, updateLatest, registry, registryPath, variant);
             const imageName = imageNamesWithVersionTags[0].split(':')[0];
 
+            // Dual publish image to devcontainers and vscode/devcontainers
+            const secondaryImageNamesWithVersionTags = configUtils.getTagList(definitionId, release, updateLatest, registry, secondaryRegistryPath, variant);
+
             console.log(`(*) Tags:${imageNamesWithVersionTags.reduce((prev, current) => prev += `\n     ${current}`, '')}`);
+            console.log(`(*) Secondary Tags:${secondaryImageNamesWithVersionTags.reduce((prev, current) => prev += `\n     ${current}`, '')}`);
+
             const buildSettings = configUtils.getBuildSettings(definitionId);
 
             let architectures = buildSettings.architectures;
@@ -130,7 +135,10 @@ async function pushImage(definitionId, repo, release, updateLatest,
 
                 const context = devContainerJson.build ? devContainerJson.build.context || '.' : devContainerJson.context || '.';
                 const workingDir = path.resolve(dotDevContainerPath, context);
-                const imageNameParams = imageNamesWithVersionTags.reduce((prev, current) => prev.concat(['--image-name', current]), []);
+                let imageNameParams = imageNamesWithVersionTags.reduce((prev, current) => prev.concat(['--image-name', current]), []);
+
+                const secondaryImageNameParams = secondaryImageNamesWithVersionTags.reduce((prev, current) => prev.concat(['--image-name', current]), []);
+                imageNameParams = imageNameParams.concat(secondaryImageNameParams);
 
                 const spawnOpts = { stdio: 'inherit', cwd: workingDir, shell: true };
                 await asyncUtils.spawn('devcontainer', [

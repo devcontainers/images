@@ -53,6 +53,7 @@ jobs:
         REGISTRY_BASE_PATH: ${{ secrets.REGISTRY_BASE_PATH }}
         STUB_REGISTRY: ${{ secrets.STUB_REGISTRY }}
         STUB_REGISTRY_BASE_PATH: ${{ secrets.STUB_REGISTRY_BASE_PATH }}
+        SECONDARY_REGISTRY_BASE_PATH: ${{ secrets.SECONDARY_REGISTRY_BASE_PATH }}
       run: |
         set -e
 
@@ -77,4 +78,5 @@ jobs:
                           --registry-path "$REGISTRY_BASE_PATH" \
                           --stub-registry "$STUB_REGISTRY" \
                           --stub-registry-path "$STUB_REGISTRY_BASE_PATH" \
+                          --secondary-registry-path "$SECONDARY_REGISTRY_BASE_PATH" \
                           ${{ github.event.inputs.image }}

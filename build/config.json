@@ -1,6 +1,7 @@
 {
 	"containerRegistry": "devcon.azurecr.io",
 	"containerRegistryPath": "public/devcontainers",
+	"secondaryContainerRegistryPath": "public/vscode/devcontainers",
 	"stubRegistry": "mcr.microsoft.com",
 	"stubRegistryPath": "devcontainers",
 	"githubRepoName": "devcontainers/images",
