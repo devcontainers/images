@@ -19,5 +19,5 @@
         "ghcr.io/devcontainers/features/docker-in-docker:1": {},
         "ghcr.io/devcontainers/features/azure-cli:1": {}
     },
-    "postCreateCommand": "npm install -g @devcontainers/cli"
+    "postCreateCommand": "npm install -g @devcontainers/cli@0.14.1"
 }

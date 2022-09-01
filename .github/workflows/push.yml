@@ -56,7 +56,7 @@ jobs:
 
         # Build and push images
         yarn install
-        npm install -g @devcontainers/cli
+        npm install -g @devcontainers/cli@0.14.1
         build/vscdc push  --page ${{ matrix.page }} \
                           --pageTotal ${{ matrix.page-total }} \
                           --release ${{ steps.get_tag_name.outputs.tag }} \

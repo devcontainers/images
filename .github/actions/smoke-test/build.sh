@@ -5,7 +5,7 @@ set -e
 
 export DOCKER_BUILDKIT=1
 echo "(*) Installing @devcontainer/cli"
-npm install -g @devcontainers/cli
+npm install -g @devcontainers/cli@0.14.1
 
 echo "(*) Building image - ${IMAGE}"
 id_label="test-container=${IMAGE}"
