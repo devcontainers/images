@@ -1,4 +1,4 @@
-# [Choice] .NET version: 6.0-bullseye, 5.0-bullseye, 3.1-bullseye, 6.0-focal, 5.0-focal, 3.1-focal
+# [Choice] .NET version: 6.0-bullseye, 3.1-bullseye, 6.0-focal, 3.1-focal
 ARG VARIANT=6.0-bullseye-slim
 FROM mcr.microsoft.com/dotnet/sdk:${VARIANT}
 
