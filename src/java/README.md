@@ -39,7 +39,7 @@ Alternatively, you can use the contents of `Dockerfile` to fully customize your 
 
 ### Installing Maven or Gradle
 
-You can use the [Java Feature](https://github.com/devcontainers/features/tree/main/src/java) to install `maven` and `gradle` in `.devcontainer.json`:
+You can use the [Java Feature](https://github.com/devcontainers/features/tree/main/src/java) to install `maven` and `gradle` in `.devcontainer/devcontainer.json`:
 
 ```json
 {

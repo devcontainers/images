@@ -39,7 +39,7 @@ Alternatively, you can use the contents of `Dockerfile` to fully customize your 
 
 ### Installing Maven or Gradle
 
-You can use the [Java Feature](https://github.com/devcontainers/features/tree/main/src/java) to install `maven` and `gradle` in `.devcontainer.json`:
+You can use the [Java Feature](https://github.com/devcontainers/features/tree/main/src/java) to install `maven` and `gradle` in `.devcontainer/devcontainer.json`:
 
 ```json
 {
@@ -57,7 +57,7 @@ You can use the [Java Feature](https://github.com/devcontainers/features/tree/ma
 
 Given JavaScript front-end web client code written for use in conjunction with a Java back-end often requires the use of Node.js-based utilities to build, this container also includes `nvm` so that you can easily install Node.js.
 
-Also, you can use a [Node Feature](https://github.com/devcontainers/features/tree/main/src/node) to install any version of Node by adding the following to `.devcontainer.json`:
+Also, you can use a [Node Feature](https://github.com/devcontainers/features/tree/main/src/node) to install any version of Node by adding the following to `.devcontainer/devcontainer.json`:
 
 ```json
 {
