@@ -19,9 +19,7 @@ See **[history](history)** for information on the contents of published images.
 
 ## Using this image
 
-> **Note:** A version of this [image for **JDK 8**](../java-8) is also available!
-
-You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
+You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
 - `mcr.microsoft.com/devcontainers/java` (latest)
 - `mcr.microsoft.com/devcontainers/java:11` (or `11-bullseye`, `11-buster` to pin to an OS version)
@@ -41,7 +39,7 @@ Alternatively, you can use the contents of `Dockerfile` to fully customize your 
 
 ### Installing Maven or Gradle
 
-You can use the [Java Feature](https://github.com/devcontainers/features/tree/main/src/java) to install `maven` and `gradle` in `.devcontainer.json`:
+You can use the [Java Feature](https://github.com/devcontainers/features/tree/main/src/java) to install `maven` and `gradle` in `.devcontainer/devcontainer.json`:
 
 ```json
 {
@@ -59,7 +57,7 @@ You can use the [Java Feature](https://github.com/devcontainers/features/tree/ma
 
 Given JavaScript front-end web client code written for use in conjunction with a Java back-end often requires the use of Node.js-based utilities to build, this container also includes `nvm` so that you can easily install Node.js.
 
-Also, you can use a [Node Feature](https://github.com/devcontainers/features/tree/main/src/node) to install any version of Node by adding the following to `.devcontainer.json`:
+Also, you can use a [Node feature](https://github.com/devcontainers/features/tree/main/src/node) to install any version of Node by adding the following to `devcontainer.json`:
 
 ```json
 {

@@ -21,7 +21,7 @@ See **[history](history)** for information on the contents of published images.
 
 Note that .NET 6.0 has switched its default OS to Debian 12 / bullseye. We also offer a `6.0-focal` image if you would prefer to use Ubuntu 20.04 / Focal.
 
-You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
+You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
 - `mcr.microsoft.com/devcontainers/dotnet` (latest)
 - `mcr.microsoft.com/devcontainers/dotnet:3.1` (or `3.1-bullseye`, `3.1-focal` to pin to an OS version)
@@ -55,7 +55,7 @@ To enable HTTPS in ASP.NET, you can mount an exported copy of your local dev cer
     dotnet dev-certs https --trust; dotnet dev-certs https -ep "${HOME}/.aspnet/https/aspnetapp.pfx" -p "SecurePwdGoesHere"
     ```
 
-2. Add the following in to `.devcontainer.json`:
+2. Add the following in to `devcontainer.json`:
 
     ```json
     "remoteEnv": {
@@ -66,7 +66,7 @@ To enable HTTPS in ASP.NET, you can mount an exported copy of your local dev cer
 
 3. Finally, make the certificate available in the container as follows:
 
-    Add the following to `.devcontainer.json`:
+    Add the following to `devcontainer.json`:
 
     ```json
     "mounts": [ "source=${env:HOME}${env:USERPROFILE}/.aspnet/https,target=/home/vscode/.aspnet/https,type=bind" ]
@@ -76,7 +76,7 @@ To enable HTTPS in ASP.NET, you can mount an exported copy of your local dev cer
 
 Given JavaScript front-end web client code written for use in conjunction with an ASP.NET back-end often requires the use of Node.js-based utilities to build, this container also includes `nvm` so that you can easily install Node.js. 
 
-If you would like to install the Azure CLI, you can reference [a dev container Feature](https://github.com/devcontainers/features) by adding the following to `.devcontainer.json`:
+If you would like to install the Azure CLI, you can reference [a dev container feature](https://github.com/devcontainers/features) by adding the following to `devcontainer.json`:
 
 ```json
 {

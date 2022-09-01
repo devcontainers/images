@@ -20,7 +20,7 @@ See **[history](history)** for information on the contents of published images.
 
 ### Configuration
 
-You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` to the following. An example `Dockerfile` is included in this repository.
+You can directly reference pre-built versions of `.devcontainer/Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` to the following. An example `Dockerfile` is included in this repository.
 
 - `mcr.microsoft.com/devcontainers/anaconda`
 
@@ -52,7 +52,7 @@ The `appPort` property [publishes](https://docs.docker.com/config/containers/con
 
 #### Installing Node.js
 
-Given JavaScript front-end web client code written for use in conjunction with a Python back-end often requires the use of Node.js-based utilities to build, you can use a [Node Feature](https://github.com/devcontainers/features/tree/main/src/node) to install any version of Node by adding the following to `.devcontainer.json`:
+Given JavaScript front-end web client code written for use in conjunction with a Python back-end often requires the use of Node.js-based utilities to build, you can use a [Node feature](https://github.com/devcontainers/features/tree/main/src/node) to install any version of Node by adding the following to `devcontainer.json`:
 
 ```json
 {
@@ -91,14 +91,14 @@ RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then /opt/conda/bin/conda env up
 
 Use this container to run Jupyter notebooks.
 
-1. Edit the `./.devcontainer.json` file and add `8888` in the `forwardPorts` array:
+1. Edit the `./.devcontainer/devcontainer.json` file and add `8888` in the `forwardPorts` array:
 
     ```json
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [8888],
     ```
 .
-1. Edit the `./.devcontainer.json` file and add a `postStartCommand` command to start the Jupyter notebook web app after the container is created. Use nohup so it isn't killed when the command finishes. Logs will appear in `nohup.out`.
+1. Edit the `./.devcontainer/devcontainer.json` file and add a `postStartCommand` command to start the Jupyter notebook web app after the container is created. Use nohup so it isn't killed when the command finishes. Logs will appear in `nohup.out`.
 
     ```json
 	// Use 'postStartCommand' to run commands after the container is created.
