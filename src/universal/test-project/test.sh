@@ -94,8 +94,8 @@ echo $(echo "php versions" && ls -a /usr/local/php)
 # Hugo
 check "hugo" hugo version
 
-# Anaconda
-check "Anaconda" conda --version
+# conda
+check "conda" conda --version
 
 # Go
 check "go" go version

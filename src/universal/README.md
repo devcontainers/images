@@ -47,7 +47,7 @@ Access to the Anaconda repository is covered by the [Anaconda Terms of Service](
 
 While the image itself works unmodified, you can also directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to:
 
-`mcr.microsoft.com/devcontainers/universal:1-linux`
+`mcr.microsoft.com/devcontainers/universal:2-linux`
 
 Alternatively, you can use the contents of the `Dockerfile` to fully customize your container's contents or to build it for a container host architecture not supported by the image.
 
