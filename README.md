@@ -42,7 +42,7 @@ This repository contains a select set of images, and we encourage the community 
 Issues related to these images can be reported in [an issue](https://github.com/devcontainers/images/issues) in this repository.
 
 # License
+Copyright (c) Microsoft Corporation. All rights reserved. <br />
+Licensed under the MIT License. See [LICENSE](LICENSE).
 
-License for this repository: MIT License
-
-Copyright (c) Microsoft Corporation. All rights reserved.<br />
+For images generated from this repository, see [LICENSE](https://github.com/microsoft/containerregistry/blob/main/legal/Container-Images-Legal-Notice.md) and [NOTICE.txt](NOTICE.txt).
