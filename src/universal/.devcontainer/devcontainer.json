@@ -95,6 +95,7 @@
         "./local-features/setup-user"
     ],
     "remoteUser": "codespace",
+    "containerUser": "codespace",
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     // "forwardPorts": [],
     // "oryx build" will automatically install your dependencies and attempt to build your project
