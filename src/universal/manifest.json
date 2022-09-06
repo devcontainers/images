@@ -200,7 +200,7 @@
 			},
 			"Jupyter Lab": {
 				"cgIgnore": true,
-				"versionCommand": "jupyter-lab --version",
+				"versionCommand": "export PATH=$PATH && jupyter-lab --version",
 				"path": "/home/codespace/.local/bin/jupyter-lab",
 				"downloadUrl": "https://jupyter.org/"
 			}
