@@ -43,7 +43,7 @@ Issues related to these images can be reported in [an issue](https://github.com/
 
 # License
 
-License for this repository:
+License for this repository: <br />
+MIT License
 
-Copyright © Microsoft Corporation All rights reserved.<br />
-Creative Commons Attribution 4.0 License (International): https://creativecommons.org/licenses/by/4.0/legalcode
+Copyright (c) Microsoft Corporation. All rights reserved.<br />
