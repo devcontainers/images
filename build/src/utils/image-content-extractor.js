@@ -279,9 +279,12 @@ async function getPipPackageInfo(imageTagOrContainerName, packageList, usePipx, 
     });
 }
 
+function getUserName(imageId) {
+    return imageId === "universal" ? "codespace" : undefined;
+}
+
 async function getPipVersionLookup(imageTagOrContainerName, imageId) {
-    const userName = imageId === "universal" ? "codespace" : undefined;
-    const packageVersionListOutput = await getCommandOutputFromContainer(imageTagOrContainerName, 'pip list --disable-pip-version-check --no-python-version-warning --format json', false, userName);
+    const packageVersionListOutput = await getCommandOutputFromContainer(imageTagOrContainerName, 'pip list --disable-pip-version-check --no-python-version-warning --format json', false, getUserName(imageId));
 
     const packageVersionList = JSON.parse(packageVersionListOutput);
 
@@ -355,7 +358,7 @@ async function getGitRepositoryInfo(imageTagOrContainerName, gitRepos) {
     downloadUrl: "https://pecl.php.net/get/xdebug-2.9.6.tgz"
 }
 */
-async function getOtherComponentInfo(imageTagOrContainerName, otherComponents, otherType) {
+async function getOtherComponentInfo(imageTagOrContainerName, otherComponents, otherType, imageId) {
     otherType = otherType || 'other';
     // Merge in default dependencies
     const defaultPackages = configUtils.getDefaultDependencies(otherType);
@@ -378,7 +381,7 @@ async function getOtherComponentInfo(imageTagOrContainerName, otherComponents, o
         if (typeof otherSettings === 'object') {
             console.log(`(*) Getting version for ${otherName}...`);
             // Run specified command to get the version number
-            const otherVersion = (await getCommandOutputFromContainer(imageTagOrContainerName, otherSettings.versionCommand));
+            const otherVersion = (await getCommandOutputFromContainer(imageTagOrContainerName, otherSettings.versionCommand, false, getUserName(imageId)));
             componentList.push({
                 name: otherName,
                 version: otherVersion,
@@ -632,7 +635,7 @@ async function getAllContentInfo(imageTag, dependencies, imageId) {
             go: await getGoPackageInfo(containerName, dependencies.go),
             git: await getGitRepositoryInfo(containerName, dependencies.git),
             other: await getOtherComponentInfo(containerName, dependencies.other, 'other'),
-            languages: await getOtherComponentInfo(containerName, dependencies.languages, 'languages'),
+            languages: await getOtherComponentInfo(containerName, dependencies.languages, 'languages', imageId),
             manual: dependencies.manual
         }    
         await removeProcessingContainer(containerName);
