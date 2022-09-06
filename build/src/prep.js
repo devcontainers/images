@@ -232,20 +232,19 @@ function replaceVariantArg(prepResult) {
 
 function addBuildArguments(prepResult) {
     const buildSettings = configUtils.getBuildSettings(prepResult.meta.definitionId);
-    let argList = '';
 
     for (let buildArg in buildSettings.buildArgs || {}) {
-        argList = argList + `ARG ${buildArg}="${buildSettings.buildArgs[buildArg]}"\n`;
+        prepResult.devContainerDockerfileModified = `ARG ${buildArg}="${buildSettings.buildArgs[buildArg]}"\n` + prepResult.devContainerDockerfileModified;
     }
 
     if (buildSettings.variantBuildArgs) {
         for (let buildArg in buildSettings.variantBuildArgs[prepResult.meta.variant] || {}) {
-            argList = argList + `ARG ${buildArg}="${buildSettings.variantBuildArgs[prepResult.meta.variant][buildArg]}"\n`;
+            const arg = `ARG ${buildArg}="${buildSettings.variantBuildArgs[prepResult.meta.variant][buildArg]}"`;
+            prepResult.devContainerDockerfileModified = (prepResult.devContainerDockerfileModified).replace(new RegExp(`.*${buildArg}=.*`), arg);
         }
     }
 
-    let dockerFileContentsWithArguments = argList + prepResult.devContainerDockerfileModified;
-    return dockerFileContentsWithArguments;
+    return prepResult.devContainerDockerfileModified;
 }
 
 module.exports = {

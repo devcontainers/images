@@ -23,7 +23,7 @@
 				"BASE_IMAGE_VERSION_CODENAME": "buster"
 			},
 			"11-buster": {
-				"JAVA_IMAGE_TAG": "11",
+				"TARGET_JAVA_VERSION": "11",
 				"BASE_IMAGE_VERSION_CODENAME": "buster"
 			}
 		},
