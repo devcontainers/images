@@ -24,8 +24,7 @@
         "./local-features/nvs": "latest",
         "ghcr.io/devcontainers/features/python:1": {
             "version": "3.10",
-            "additionalVersions": "3.9",
-            "installJupyterlab": "true"
+            "additionalVersions": "3.9"
         },
         "./local-features/machine-learning-packages": "latest",
         "ghcr.io/devcontainers/features/php:1": {
