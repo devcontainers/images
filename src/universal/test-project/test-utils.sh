@@ -113,6 +113,7 @@ checkCommon()
         libstdc++6 \
         zlib1g \
         locales \
+        gettext \
         sudo"
 
     # Actual tests
