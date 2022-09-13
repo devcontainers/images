@@ -72,6 +72,13 @@ chown -R codespace:oryx ${OPT_DIR}
 chmod -R g+r+w "${OPT_DIR}"
 find "${OPT_DIR}" -type d | xargs -n 1 chmod g+s
 
+# Add .vsonline
+VSONLINE_DIR="/home/codespace/.vsonline"
+mkdir -p $VSONLINE_DIR
+chown -R codespace:codespace ${VSONLINE_DIR}
+chmod -R g+r+w "${VSONLINE_DIR}"
+find "${VSONLINE_DIR}" -type d | xargs -n 1 chmod g+s
+
 echo "Defaults secure_path=\"${DOTNET_PATH}:${NODE_PATH}/bin:${PHP_PATH}/bin:${PYTHON_PATH}/bin:${JAVA_PATH}/bin:${RUBY_PATH}/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin:/usr/local/share:/home/codespace/.local/bin:${PATH}\"" >> /etc/sudoers.d/$USERNAME
 
 echo "Done!"
