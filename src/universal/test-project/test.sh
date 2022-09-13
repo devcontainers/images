@@ -113,6 +113,9 @@ check "bash" bash --version
 check "fish" fish --version
 check "zsh" zsh --version
 
+# Check env variable
+check "RAILS_DEVELOPMENT_HOSTS is set correctly" echo $RAILS_DEVELOPMENT_HOSTS | grep ".githubpreview.dev,.app.github.dev"
+
 # Check that we can run a puppeteer node app.
 yarn
 check "run-puppeteer" node puppeteer.js
@@ -136,6 +139,8 @@ check "php-version-on-path-is-2.1.12" php --version | grep 7.3.25
 check "oryx-install-java-12.0.2" oryx prep --skip-detection --platforms-and-versions java=12.0.2
 check "java-12.0.2-installed-by-oryx" ls /opt/java/ | grep 12.0.2
 check "java-version-on-path-is-12.0.2" java --version | grep 12.0.2
+
+ls -la /home/codespace
 
 # Report result
 reportResults

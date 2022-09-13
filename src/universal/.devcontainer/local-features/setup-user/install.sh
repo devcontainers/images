@@ -54,6 +54,14 @@ cp -R /usr/local/dotnet/current/dotnet /opt/dotnet/lts
 cp -R /usr/local/dotnet/current/LICENSE.txt /opt/dotnet/lts
 cp -R /usr/local/dotnet/current/ThirdPartyNotices.txt /opt/dotnet/lts
 
+MAVEN_PATH="/home/codespace/.maven/current"
+mkdir -p /home/codespace/.maven
+ln -snf /usr/local/sdkman/candidates/maven/current $MAVEN_PATH
+
+HUGO_ROOT="/home/codespace/.hugo/current"
+mkdir -p /home/codespace/.hugo
+ln -snf /usr/local/hugo $HUGO_ROOT
+
 HOME_DIR="/home/codespace/"
 chown -R codespace:codespace ${HOME_DIR}
 chmod -R g+r+w "${HOME_DIR}"
