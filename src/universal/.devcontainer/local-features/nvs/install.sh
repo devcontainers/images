@@ -75,4 +75,8 @@ chown -R "${USERNAME}:nvs" "${NVS_HOME}"
 chmod -R g+r+w "${NVS_HOME}"
 find "${NVS_HOME}" -type d | xargs -n 1 chmod g+s
 
+NVS="/home/codespace/.nvs"
+mkdir -p ${NVS}
+ln -snf ${NVS_HOME}/* $NVS
+
 echo "Done!"

@@ -54,6 +54,14 @@ cp -R /usr/local/dotnet/current/dotnet /opt/dotnet/lts
 cp -R /usr/local/dotnet/current/LICENSE.txt /opt/dotnet/lts
 cp -R /usr/local/dotnet/current/ThirdPartyNotices.txt /opt/dotnet/lts
 
+MAVEN_PATH="/home/codespace/.maven/current"
+mkdir -p /home/codespace/.maven
+ln -snf /usr/local/sdkman/candidates/maven/current $MAVEN_PATH
+
+HUGO_ROOT="/home/codespace/.hugo/current"
+mkdir -p /home/codespace/.hugo
+ln -snf /usr/local/hugo $HUGO_ROOT
+
 HOME_DIR="/home/codespace/"
 chown -R codespace:codespace ${HOME_DIR}
 chmod -R g+r+w "${HOME_DIR}"
@@ -63,6 +71,13 @@ OPT_DIR="/opt/"
 chown -R codespace:oryx ${OPT_DIR}
 chmod -R g+r+w "${OPT_DIR}"
 find "${OPT_DIR}" -type d | xargs -n 1 chmod g+s
+
+# Add .vsonline
+VSONLINE_DIR="/home/codespace/.vsonline"
+mkdir -p $VSONLINE_DIR
+chown -R codespace:codespace ${VSONLINE_DIR}
+chmod -R g+r+w "${VSONLINE_DIR}"
+find "${VSONLINE_DIR}" -type d | xargs -n 1 chmod g+s
 
 echo "Defaults secure_path=\"${DOTNET_PATH}:${NODE_PATH}/bin:${PHP_PATH}/bin:${PYTHON_PATH}/bin:${JAVA_PATH}/bin:${RUBY_PATH}/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin:/usr/local/share:/home/codespace/.local/bin:${PATH}\"" >> /etc/sudoers.d/$USERNAME
 
