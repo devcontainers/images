@@ -3,7 +3,6 @@
     "name": "Node Version Switcher",
     "containerEnv": {
         "NVS_DIR": "/usr/local/nvs",
-        "NVS_HOME": "/home/codespace/.nvs",
         "PATH": "${NVS_DIR}:${PATH}"
     },
     "install": {
