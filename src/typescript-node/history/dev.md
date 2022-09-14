@@ -14,7 +14,7 @@
 
 ## Variant: 18-bullseye
 
-**Digest:** sha256:5b36f287b6e85b965b3edd5d2806cb08fa8a59f426fceeed4abd66b9ccc4b8c1
+**Digest:** sha256:0d96f64b14d89882931058935deae1181064fe8ad6c5afa1ed6e771fe203b649
 
 **Tags:**
 ```
@@ -42,14 +42,14 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | dfa88b4d369f6afc7205af0b399a0ef05a4bef2e | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.23.0 |
+| eslint | 8.23.1 |
 | tslint-to-eslint-config | 2.13.3 |
 | typescript | 4.8.3 |
 
@@ -60,7 +60,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bullseye
 | apt-transport-https | 2.2.4 |
 | apt-utils | 2.2.4 |
 | ca-certificates | 20210119 |
-| curl | 7.74.0-1.3+deb11u2 |
+| curl | 7.74.0-1.3+deb11u3 |
 | dialog | 1.3-20201126-1 |
 | git | 1:2.30.2-1 |
 | gnupg2 | 2.2.27-2+deb11u2 |
@@ -68,14 +68,14 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bullseye
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
 | less | 551-2 |
-| libc6 | 2.31-13+deb11u3 |
-| libgssapi-krb5-2 | 1.18.3-6+deb11u1 |
+| libc6 | 2.31-13+deb11u4 |
+| libgssapi-krb5-2 | 1.18.3-6+deb11u2 |
 | libicu67 | 67.1-7 |
-| libkrb5-3 | 1.18.3-6+deb11u1 |
+| libkrb5-3 | 1.18.3-6+deb11u2 |
 | liblttng-ust0 | 2.12.1-1 |
 | libssl1.1 | 1.1.1n-0+deb11u3 |
 | libstdc++6 | 10.2.1-6 |
-| locales | 2.31-13+deb11u3 |
+| locales | 2.31-13+deb11u4 |
 | lsb-release | 11.1.0 |
 | lsof | 4.93.2+dfsg-1.1 |
 | man-db | 2.9.4-2 |
@@ -99,7 +99,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bullseye
 
 ## Variant: 16-bullseye
 
-**Digest:** sha256:6a3dbcd0873e807b224cd037e7bc4eebc99581edd3bc8495d9ffed786a52e6da
+**Digest:** sha256:fe8194c53bb57b72ff54e4d497aaa2ab6d3d8b1de26e19d7a28b0db0174d2359
 
 **Tags:**
 ```
@@ -126,14 +126,14 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | dfa88b4d369f6afc7205af0b399a0ef05a4bef2e | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.23.0 |
+| eslint | 8.23.1 |
 | tslint-to-eslint-config | 2.13.3 |
 | typescript | 4.8.3 |
 
@@ -144,7 +144,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16
 | apt-transport-https | 2.2.4 |
 | apt-utils | 2.2.4 |
 | ca-certificates | 20210119 |
-| curl | 7.74.0-1.3+deb11u2 |
+| curl | 7.74.0-1.3+deb11u3 |
 | dialog | 1.3-20201126-1 |
 | git | 1:2.30.2-1 |
 | gnupg2 | 2.2.27-2+deb11u2 |
@@ -152,14 +152,14 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
 | less | 551-2 |
-| libc6 | 2.31-13+deb11u3 |
-| libgssapi-krb5-2 | 1.18.3-6+deb11u1 |
+| libc6 | 2.31-13+deb11u4 |
+| libgssapi-krb5-2 | 1.18.3-6+deb11u2 |
 | libicu67 | 67.1-7 |
-| libkrb5-3 | 1.18.3-6+deb11u1 |
+| libkrb5-3 | 1.18.3-6+deb11u2 |
 | liblttng-ust0 | 2.12.1-1 |
 | libssl1.1 | 1.1.1n-0+deb11u3 |
 | libstdc++6 | 10.2.1-6 |
-| locales | 2.31-13+deb11u3 |
+| locales | 2.31-13+deb11u4 |
 | lsb-release | 11.1.0 |
 | lsof | 4.93.2+dfsg-1.1 |
 | man-db | 2.9.4-2 |
@@ -183,7 +183,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16
 
 ## Variant: 14-bullseye
 
-**Digest:** sha256:5626c94228193e0965b27cdc59c887b87f7b2747394a2b77c789b8482e52d5fb
+**Digest:** sha256:8ba574e9dc7f6693fcb3f17114ae4d10b3e453a0e3c1852957620d6bbf549c21
 
 **Tags:**
 ```
@@ -210,14 +210,14 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | dfa88b4d369f6afc7205af0b399a0ef05a4bef2e | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.23.0 |
+| eslint | 8.23.1 |
 | tslint-to-eslint-config | 2.13.3 |
 | typescript | 4.8.3 |
 
@@ -228,7 +228,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14
 | apt-transport-https | 2.2.4 |
 | apt-utils | 2.2.4 |
 | ca-certificates | 20210119 |
-| curl | 7.74.0-1.3+deb11u2 |
+| curl | 7.74.0-1.3+deb11u3 |
 | dialog | 1.3-20201126-1 |
 | git | 1:2.30.2-1 |
 | gnupg2 | 2.2.27-2+deb11u2 |
@@ -236,14 +236,14 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
 | less | 551-2 |
-| libc6 | 2.31-13+deb11u3 |
-| libgssapi-krb5-2 | 1.18.3-6+deb11u1 |
+| libc6 | 2.31-13+deb11u4 |
+| libgssapi-krb5-2 | 1.18.3-6+deb11u2 |
 | libicu67 | 67.1-7 |
-| libkrb5-3 | 1.18.3-6+deb11u1 |
+| libkrb5-3 | 1.18.3-6+deb11u2 |
 | liblttng-ust0 | 2.12.1-1 |
 | libssl1.1 | 1.1.1n-0+deb11u3 |
 | libstdc++6 | 10.2.1-6 |
-| locales | 2.31-13+deb11u3 |
+| locales | 2.31-13+deb11u4 |
 | lsb-release | 11.1.0 |
 | lsof | 4.93.2+dfsg-1.1 |
 | man-db | 2.9.4-2 |
@@ -267,7 +267,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14
 
 ## Variant: 18-buster
 
-**Digest:** sha256:87a8701f3d8a89b8bc15f7ccef87453fa44819419c923481ae720cdef3ee0183
+**Digest:** sha256:bedb71d408ea8482cbf83114342feebe73d185eaea3c57f81ad73eb2af7f1dfd
 
 **Tags:**
 ```
@@ -294,14 +294,14 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | dfa88b4d369f6afc7205af0b399a0ef05a4bef2e | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.23.0 |
+| eslint | 8.23.1 |
 | tslint-to-eslint-config | 2.13.3 |
 | typescript | 4.8.3 |
 
@@ -322,9 +322,9 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-buster
 | less | 487-0.1+b1 |
 | libc6 | 2.28-10+deb10u1 |
 | libgcc1 | 1:8.3.0-6 |
-| libgssapi-krb5-2 | 1.17-3+deb10u3 |
+| libgssapi-krb5-2 | 1.17-3+deb10u4 |
 | libicu63 | 63.1-6+deb10u3 |
-| libkrb5-3 | 1.17-3+deb10u3 |
+| libkrb5-3 | 1.17-3+deb10u4 |
 | liblttng-ust0 | 2.10.3-1 |
 | libssl1.1 | 1.1.1n-0+deb10u3 |
 | libstdc++6 | 8.3.0-6 |
@@ -347,12 +347,12 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-buster
 | vim-tiny | 2:8.1.0875-5+deb10u2 |
 | wget | 1.20.1-1.1 |
 | zip | 3.0-11+b1 |
-| zlib1g | 1:1.2.11.dfsg-1+deb10u1 |
+| zlib1g | 1:1.2.11.dfsg-1+deb10u2 |
 | zsh | 5.7.1-1+deb10u1 |
 
 ## Variant: 16-buster
 
-**Digest:** sha256:5b70aa6ab78adbc30815a4d32212a05850b1be265e852a69dae2604ea4035ba2
+**Digest:** sha256:e96838cb037288dd1762d4f25525fad3d9d737b58d719cb2e3d827158e7497a8
 
 **Tags:**
 ```
@@ -378,14 +378,14 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | dfa88b4d369f6afc7205af0b399a0ef05a4bef2e | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.23.0 |
+| eslint | 8.23.1 |
 | tslint-to-eslint-config | 2.13.3 |
 | typescript | 4.8.3 |
 
@@ -406,9 +406,9 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16-buster
 | less | 487-0.1+b1 |
 | libc6 | 2.28-10+deb10u1 |
 | libgcc1 | 1:8.3.0-6 |
-| libgssapi-krb5-2 | 1.17-3+deb10u3 |
+| libgssapi-krb5-2 | 1.17-3+deb10u4 |
 | libicu63 | 63.1-6+deb10u3 |
-| libkrb5-3 | 1.17-3+deb10u3 |
+| libkrb5-3 | 1.17-3+deb10u4 |
 | liblttng-ust0 | 2.10.3-1 |
 | libssl1.1 | 1.1.1n-0+deb10u3 |
 | libstdc++6 | 8.3.0-6 |
@@ -431,12 +431,12 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16-buster
 | vim-tiny | 2:8.1.0875-5+deb10u2 |
 | wget | 1.20.1-1.1 |
 | zip | 3.0-11+b1 |
-| zlib1g | 1:1.2.11.dfsg-1+deb10u1 |
+| zlib1g | 1:1.2.11.dfsg-1+deb10u2 |
 | zsh | 5.7.1-1+deb10u1 |
 
 ## Variant: 14-buster
 
-**Digest:** sha256:2e5603c65095ead3ee9bdcb6cd28024ac6418595990a82d73c1e1bc6316359e0
+**Digest:** sha256:54df4de3ecda349c3d3dede535fdfdfd696008ab7aa78db94fe5a080798c3adc
 
 **Tags:**
 ```
@@ -462,14 +462,14 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | dfa88b4d369f6afc7205af0b399a0ef05a4bef2e | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.23.0 |
+| eslint | 8.23.1 |
 | tslint-to-eslint-config | 2.13.3 |
 | typescript | 4.8.3 |
 
@@ -490,9 +490,9 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14-buster
 | less | 487-0.1+b1 |
 | libc6 | 2.28-10+deb10u1 |
 | libgcc1 | 1:8.3.0-6 |
-| libgssapi-krb5-2 | 1.17-3+deb10u3 |
+| libgssapi-krb5-2 | 1.17-3+deb10u4 |
 | libicu63 | 63.1-6+deb10u3 |
-| libkrb5-3 | 1.17-3+deb10u3 |
+| libkrb5-3 | 1.17-3+deb10u4 |
 | liblttng-ust0 | 2.10.3-1 |
 | libssl1.1 | 1.1.1n-0+deb10u3 |
 | libstdc++6 | 8.3.0-6 |
@@ -515,6 +515,6 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14-buster
 | vim-tiny | 2:8.1.0875-5+deb10u2 |
 | wget | 1.20.1-1.1 |
 | zip | 3.0-11+b1 |
-| zlib1g | 1:1.2.11.dfsg-1+deb10u1 |
+| zlib1g | 1:1.2.11.dfsg-1+deb10u2 |
 | zsh | 5.7.1-1+deb10u1 |
 
