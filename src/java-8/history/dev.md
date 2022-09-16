@@ -10,7 +10,7 @@
 
 ## Variant: bullseye
 
-**Digest:** sha256:bcae1dc90d0ed44802c868f5f9c259c14c07b531362a776c42fafd38345c1434
+**Digest:** sha256:dfe6d852aa721a2c7ca37dc3fe57c27b769a82cfe99a3bb135bdc51865054c40
 
 **Tags:**
 ```
@@ -60,7 +60,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bullseye
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
 | less | 551-2 |
-| libc6 | 2.31-13+deb11u3 |
+| libc6 | 2.31-13+deb11u4 |
 | libgssapi-krb5-2 | 1.18.3-6+deb11u1 |
 | libicu67 | 67.1-7 |
 | libkrb5-3 | 1.18.3-6+deb11u1 |
@@ -92,7 +92,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bullseye
 
 ## Variant: buster
 
-**Digest:** sha256:e67ce54f30d270d246fb145638c1c8715ce8ba26ad92f86dc3b5a6fdc89ddb4b
+**Digest:** sha256:ebc2f8306f67f440a1e8c8d92581f9e435124f670233b7f254497cd88c21a8ee
 
 **Tags:**
 ```

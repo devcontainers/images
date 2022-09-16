@@ -6,7 +6,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "dfa88b4d369f6afc7205af0b399a0ef05a4bef2e"
+                    "commitHash": "7dcabbe6826073ef6069c8a4b6f9a943f00d2df0"
                 }
             }
         },
@@ -76,7 +76,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "1ddafcb6f62ee3488b6e32621d6aa343038a8ccc"
+                    "commitHash": "8d3aa2bbf651d599f8bcca1861607c617c434d28"
                 }
             }
         },
@@ -519,7 +519,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Composer",
-                    "Version": "2.4.1",
+                    "Version": "2.4.2",
                     "DownloadUrl": "https://getcomposer.org/"
                 }
             }
@@ -820,7 +820,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "numpy",
-                    "Version": "1.23.2"
+                    "Version": "1.23.3"
                 }
             }
         },
@@ -956,7 +956,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "dfa88b4d369f6afc7205af0b399a0ef05a4bef2e"
+                    "commitHash": "7dcabbe6826073ef6069c8a4b6f9a943f00d2df0"
                 }
             }
         },
@@ -986,7 +986,7 @@
                 "Git": {
                     "Name": "ruby-build",
                     "repositoryUrl": "https://github.com/rbenv/ruby-build.git",
-                    "commitHash": "a9ed7431434c9c4f47abab299a77780cab4da0bb"
+                    "commitHash": "5f063af6aaf58736fc0575f1892fb0a7f9cd6a9e"
                 }
             }
         },
@@ -1189,7 +1189,7 @@
                 "Type": "npm",
                 "Npm": {
                     "Name": "eslint",
-                    "Version": "8.23.0"
+                    "Version": "8.23.1"
                 }
             }
         },
@@ -1199,7 +1199,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "dfa88b4d369f6afc7205af0b399a0ef05a4bef2e"
+                    "commitHash": "7dcabbe6826073ef6069c8a4b6f9a943f00d2df0"
                 }
             }
         },
