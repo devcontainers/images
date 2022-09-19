@@ -14,7 +14,7 @@
 
 ## Variant: 8.1-apache-bullseye
 
-**Digest:** sha256:ef0f8d8320d445df923991ef15aec02a874affed96166afb0ba0e53ed5fed167
+**Digest:** sha256:c9fb32b5250a1b6eae6ab1e1f7ecadca6675c602ab1f05a2461622124145ebe3
 
 **Tags:**
 ```
@@ -101,7 +101,7 @@ mcr.microsoft.com/devcontainers/php:dev-bullseye
 
 ## Variant: 8.0-apache-bullseye
 
-**Digest:** sha256:c26ed165104b84d9155391bc42bc92256ea8c29b5a673637334f91ca8e73c03a
+**Digest:** sha256:fb25f7728caa3dea52e29f05b8e841051842625e0cd15dc667a8b4efc439178f
 
 **Tags:**
 ```
@@ -185,7 +185,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-bullseye
 
 ## Variant: 7.4-apache-bullseye
 
-**Digest:** sha256:e8542bba520b53b7f28af7c3c94b0cabd26247e41f83fb39f48cbb7070877488
+**Digest:** sha256:492052dfac433785c62e52e381f533e8bee5afbf7b3652bb96d2c96bd3aaa3b8
 
 **Tags:**
 ```
@@ -271,7 +271,7 @@ mcr.microsoft.com/devcontainers/php:dev-7.4-bullseye
 
 ## Variant: 8.1-apache-buster
 
-**Digest:** sha256:98b166cf5635fbf4bfe0a0dfb47befc62beb617ba2a38bc88656d1deac630f91
+**Digest:** sha256:f743a9b0a427e541b1e176b2325b0da6660f41a3e7995ba6900a4026572a58d3
 
 **Tags:**
 ```
@@ -357,7 +357,7 @@ mcr.microsoft.com/devcontainers/php:dev-buster
 
 ## Variant: 8.0-apache-buster
 
-**Digest:** sha256:7f1f2307711d95c5febe7c371ba84ba343d603d020f45112280a3c9227883249
+**Digest:** sha256:3dcb4ce581096a88ee56377491632872bcad236e35cc5102c86c333ed1158f2d
 
 **Tags:**
 ```
@@ -441,7 +441,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-buster
 
 ## Variant: 7.4-apache-buster
 
-**Digest:** sha256:92519a285a293eb4434365874cda935436d4e825aa4f292c5b8b5dfed71a54fa
+**Digest:** sha256:06706b2915a67948c86a59ef39a44423001a33a904fd9e8cc41cb4f0ec275d80
 
 **Tags:**
 ```

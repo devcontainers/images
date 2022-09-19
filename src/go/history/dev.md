@@ -12,7 +12,7 @@
 
 ## Variant: 1.19-bullseye
 
-**Digest:** sha256:04888e9e42bf2c62685cc3df33073123d16c5ad4153ddce3638666c93328cac8
+**Digest:** sha256:60a71dbcf2ff369fcc3d7417ba8b5f93205fd8e700ad1322fde42eaedd2c73e1
 
 **Tags:**
 ```
@@ -35,7 +35,7 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | warning: GOPATH set to GOROOT (/usr/local/go) has no effect<br />1.19.1 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.19.1 | /usr/local/go |
 
 **Tools installed using git**
 
@@ -109,7 +109,7 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 
 ## Variant: 1.19-buster
 
-**Digest:** sha256:59a39ef931c7fac1a5930561690f0abf8842b2585a8df66bbbf7fd8b9937575a
+**Digest:** sha256:ec5f7300fba7c1b0b96cdb1f2773fd792aaa6ddf61a4d43636f75bd5d4dc73a7
 
 **Tags:**
 ```
@@ -130,7 +130,7 @@ mcr.microsoft.com/devcontainers/go:dev-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | warning: GOPATH set to GOROOT (/usr/local/go) has no effect<br />1.19.1 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.19.1 | /usr/local/go |
 
 **Tools installed using git**
 
@@ -205,7 +205,7 @@ mcr.microsoft.com/devcontainers/go:dev-buster
 
 ## Variant: 1.18-bullseye
 
-**Digest:** sha256:49c352b3869e0aa318c4ea2e673b2a7c5e4883447f04f70a45cc9fb686ea4639
+**Digest:** sha256:5be47e20bc33a5e3598fdf5194e2bda869bb52dd532aa5ec9717f186a84c58b9
 
 **Tags:**
 ```
@@ -225,7 +225,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.18
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | warning: GOPATH set to GOROOT (/usr/local/go) has no effect<br />1.18.6 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.18.6 | /usr/local/go |
 
 **Tools installed using git**
 
@@ -299,7 +299,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.18
 
 ## Variant: 1.18-buster
 
-**Digest:** sha256:9a0b647795dba711110a319a510cfa2a86e4cef2f50a7884383152f7497c8342
+**Digest:** sha256:63e904f66c89fc945f479af8ea2e81157dec92e439e5b4a9d7188c02d876c303
 
 **Tags:**
 ```
@@ -318,7 +318,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.18-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | warning: GOPATH set to GOROOT (/usr/local/go) has no effect<br />1.18.6 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.18.6 | /usr/local/go |
 
 **Tools installed using git**
 

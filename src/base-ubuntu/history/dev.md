@@ -11,7 +11,7 @@
 
 ## Variant: jammy
 
-**Digest:** sha256:75cde289de82177ed84f4a9f687a5252dc2e38823f41af6c1f4acb57e9a2e531
+**Digest:** sha256:1a4e2214f093e18742b7fe873278acc720dd0d02d1bec998292c2bdfb7eba5ae
 
 **Tags:**
 ```
@@ -53,7 +53,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu22.04
 | libgssapi-krb5-2 | 1.19.2-2 |
 | libicu70 | 70.1-2 |
 | libkrb5-3 | 1.19.2-2 |
-| libstdc++6 | 12-20220319-1ubuntu1 |
+| libstdc++6 | 12.1.0-2ubuntu1~22.04 |
 | locales | 2.35-0ubuntu3.1 |
 | lsb-release | 11.1.0ubuntu4 |
 | lsof | 4.93.2+dfsg-1.1build2 |
@@ -70,7 +70,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu22.04
 | strace | 5.16-0ubuntu3 |
 | sudo | 1.9.9-1ubuntu2 |
 | unzip | 6.0-26ubuntu3 |
-| vim-tiny | 2:8.2.3995-1ubuntu2 |
+| vim-tiny | 2:8.2.3995-1ubuntu2.1 |
 | wget | 1.21.2-2ubuntu1 |
 | zip | 3.0-12build2 |
 | zlib1g | 1:1.2.11.dfsg-2ubuntu9.1 |
@@ -78,7 +78,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu22.04
 
 ## Variant: focal
 
-**Digest:** sha256:d8ce8cad2568142f8d86558bd7a65075c58cf3772e1d30bd6fbc25d2c0ee2aac
+**Digest:** sha256:df498f22195462b3fe3f62e037a984388ea1441ac3da1d911140037afb34b8df
 
 **Tags:**
 ```
@@ -141,7 +141,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 | strace | 5.5-3ubuntu1 |
 | sudo | 1.8.31-1ubuntu1.2 |
 | unzip | 6.0-25ubuntu1 |
-| vim-tiny | 2:8.1.2269-1ubuntu5.7 |
+| vim-tiny | 2:8.1.2269-1ubuntu5.9 |
 | wget | 1.20.3-1ubuntu2 |
 | zip | 3.0-11build1 |
 | zlib1g | 1:1.2.11.dfsg-2ubuntu1.3 |
@@ -149,7 +149,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 ## Variant: bionic
 
-**Digest:** sha256:1aee4fb6ea666feca8e06444288cb4cce21bda553d27c933ac79fad71cfb592d
+**Digest:** sha256:c52e240b1562d0226aac83bd343fbb3eec2d79c0fd96af360f382c4e26eeb9bf
 
 **Tags:**
 ```
@@ -212,7 +212,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu18.04
 | strace | 4.21-1ubuntu1 |
 | sudo | 1.8.21p2-3ubuntu1.4 |
 | unzip | 6.0-21ubuntu1.1 |
-| vim-tiny | 2:8.0.1453-1ubuntu1.8 |
+| vim-tiny | 2:8.0.1453-1ubuntu1.9 |
 | wget | 1.19.4-1ubuntu2.2 |
 | zip | 3.0-11build1 |
 | zlib1g | 1:1.2.11.dfsg-0ubuntu2.2 |

@@ -76,7 +76,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "8d3aa2bbf651d599f8bcca1861607c617c434d28"
+                    "commitHash": "01b29f6d8212bc845da64773b18665d682f5ab66"
                 }
             }
         },
@@ -589,6 +589,15 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "pylint",
+                    "Version": "2.15.3"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "Pip",
+                "Pip": {
+                    "Name": "pylint",
                     "Version": "2.13.9"
                 }
             }
@@ -794,7 +803,7 @@
                 "Type": "linux",
                 "Linux": {
                     "Name": "moby-cli",
-                    "Version": "20.10.17+azure-ubuntu20.04u1",
+                    "Version": "20.10.18+azure-ubuntu20.04u1",
                     "Distribution": "ubuntu",
                     "Release": "20.04",
                     "Pool-URL": "https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod",
@@ -807,7 +816,7 @@
                 "Type": "linux",
                 "Linux": {
                     "Name": "moby-engine",
-                    "Version": "20.10.17+azure-ubuntu20.04u3",
+                    "Version": "20.10.18+azure-ubuntu20.04u1",
                     "Distribution": "ubuntu",
                     "Release": "20.04",
                     "Pool-URL": "https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod",
@@ -847,7 +856,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "matplotlib",
-                    "Version": "3.5.3"
+                    "Version": "3.6.0"
                 }
             }
         },
@@ -976,7 +985,7 @@
                 "Git": {
                     "Name": "rbenv",
                     "repositoryUrl": "https://github.com/rbenv/rbenv.git",
-                    "commitHash": "c4395e58201966d9f90c12bd6b7342e389e7a4cb"
+                    "commitHash": "56a440e4a75d722ecbd0ab2ae0169f00e727c978"
                 }
             }
         },
@@ -986,7 +995,7 @@
                 "Git": {
                     "Name": "ruby-build",
                     "repositoryUrl": "https://github.com/rbenv/ruby-build.git",
-                    "commitHash": "5f063af6aaf58736fc0575f1892fb0a7f9cd6a9e"
+                    "commitHash": "ef66bd1f3c9fcf3422ea8aaec0526d2a46a0a05f"
                 }
             }
         },
@@ -1015,7 +1024,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "kubectl",
-                    "Version": "WARNING: This version information is deprecated and will be replaced with the output from kubectl version --short.  Use --output=yaml|json to get the full version.\n1.25.0",
+                    "Version": "WARNING: This version information is deprecated and will be replaced with the output from kubectl version --short.  Use --output=yaml|json to get the full version.\n1.25.1",
                     "DownloadUrl": "https://github.com/kubernetes/kubectl"
                 }
             }
@@ -1065,7 +1074,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Go",
-                    "Version": "warning: GOPATH set to GOROOT (/usr/local/go) has no effect\n1.19.1",
+                    "Version": "1.19.1",
                     "DownloadUrl": "https://golang.org/dl"
                 }
             }
