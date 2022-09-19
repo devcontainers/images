@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:179e61f5c99ed59c0b15bb752e56696eb2af4c55e64b9ac938330b8453eb0ab4
+**Digest:** sha256:d81a2cb1ebfccc1bbcb2d5f36db4228ef95fce33408c33171320cfe7f4efbfe8
 
 **Tags:**
 ```
@@ -34,7 +34,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [PHP](https://xdebug.org/) | 8.0.16<br />8.1.4 | /usr/local/php/&lt;version&gt; |
 | GCC | 9.4.0-1ubuntu1~20.04.1 | 
 | Clang | 10.0.0-4ubuntu1 | 
-| [Go](https://golang.org/dl) | warning: GOPATH set to GOROOT (/usr/local/go) has no effect<br />1.19.1 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.19.1 | /usr/local/go |
 | [Jekyll](https://jekyllrb.com/) | 4.2.2 | 
 | [Jupyter Lab](https://jupyter.org/) | 3.4.7 | /home/codespace/.local/bin/jupyter-lab |
 
@@ -45,8 +45,8 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0 | /home/codespace/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | bf45ef070e82356ed36a0f4d98f8ec651c8f0d98 | /usr/local/nvs |
-| [rbenv](https://github.com/rbenv/rbenv.git) | c4395e58201966d9f90c12bd6b7342e389e7a4cb | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 5f063af6aaf58736fc0575f1892fb0a7f9cd6a9e | /usr/local/share/ruby-build |
+| [rbenv](https://github.com/rbenv/rbenv.git) | 56a440e4a75d722ecbd0ab2ae0169f00e727c978 | /usr/local/share/rbenv |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | ef66bd1f3c9fcf3422ea8aaec0526d2a46a0a05f | /usr/local/share/ruby-build |
 
 **Pip / pipx installed tools and packages**
 
@@ -55,7 +55,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | numpy | 1.23.3 |
 | pandas | 1.4.4 |
 | scipy | 1.9.1 |
-| matplotlib | 3.5.3 |
+| matplotlib | 3.6.0 |
 | seaborn | 0.12.0 |
 | scikit-learn | 1.1.2 |
 | tensorflow | 2.10.0 |
@@ -104,7 +104,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [git](https://github.com/git/git) | 2.37.3 | /usr/bin |
 | [Xdebug](https://xdebug.org/) | 3.1.5 | /usr/local/php/current |
 | [Composer](https://getcomposer.org/) | 2.4.2 | /usr/local/php/current/bin |
-| [kubectl](https://github.com/kubernetes/kubectl) | WARNING: This version information is deprecated and will be replaced with the output from kubectl version --short.  Use --output=yaml|json to get the full version.<br />1.25.0 | /usr/local/bin |
+| [kubectl](https://github.com/kubernetes/kubectl) | WARNING: This version information is deprecated and will be replaced with the output from kubectl version --short.  Use --output=yaml|json to get the full version.<br />1.25.1 | /usr/local/bin |
 | [Helm](https://github.com/helm/helm) | 3.9.4 | /usr/local/bin |
 | [Docker Compose](https://github.com/docker/compose) | 1.29.2 | /usr/local/bin |
 | [SDKMAN!](https://github.com/sdkman/sdkman-cli) | 5.16.0 | /usr/local/sdkman |
@@ -113,7 +113,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [yarn](https://yarnpkg.com/) | 1.22.19 | /usr/bin |
 | [Maven](https://maven.apache.org/) | 3.8.6 | /usr/local/sdkman/candidates/maven/current/bin |
 | [Gradle](https://gradle.org/) | 7.5.1 | /usr/local/sdkman/candidates/gradle/current/bin |
-| Docker (Moby) CLI &amp; Engine | 20.10.17+azure | 
+| Docker (Moby) CLI &amp; Engine | 20.10.18+azure | 
 | [conda](https://github.com/conda/conda) | 4.12.0 | /opt/conda/bin |
 
 **Additional linux tools and packages**
@@ -173,8 +173,8 @@ mcr.microsoft.com/devcontainers/universal:dev
 | man-db | 2.9.1-1 |
 | manpages | 5.05-1 |
 | manpages-dev | 5.05-1 |
-| moby-cli (Docker CLI) | 20.10.17+azure-ubuntu20.04u1 |
-| moby-engine (Docker Engine) | 20.10.17+azure-ubuntu20.04u3 |
+| moby-cli (Docker CLI) | 20.10.18+azure-ubuntu20.04u1 |
+| moby-engine (Docker Engine) | 20.10.18+azure-ubuntu20.04u1 |
 | nano | 4.8-1ubuntu1 |
 | ncdu | 1.14.1-1 |
 | net-tools | 1.60+git20180626.aebd88e-1ubuntu1 |
@@ -194,9 +194,9 @@ mcr.microsoft.com/devcontainers/universal:dev
 | tar | 1.30+dfsg-7ubuntu0.20.04.2 |
 | unzip | 6.0-25ubuntu1 |
 | valgrind | 1:3.15.0-1ubuntu9.1 |
-| vim | 2:8.1.2269-1ubuntu5.7 |
-| vim-doc | 2:8.1.2269-1ubuntu5.7 |
-| vim-tiny | 2:8.1.2269-1ubuntu5.7 |
+| vim | 2:8.1.2269-1ubuntu5.8 |
+| vim-doc | 2:8.1.2269-1ubuntu5.8 |
+| vim-tiny | 2:8.1.2269-1ubuntu5.8 |
 | wget | 1.20.3-1ubuntu2 |
 | xtail | 2.1-6 |
 | zip | 3.0-11build1 |
