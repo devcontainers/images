@@ -9,6 +9,9 @@
         },
         "ghcr.io/devcontainers/features/node:1": "none"
     },
+    "containerEnv": {
+        "JAVA_HOME": "/usr/lib/jvm/msopenjdk-current"
+    },
     // Configure tool-specific properties.
     "customizations": {
         // Configure properties specific to VS Code.
