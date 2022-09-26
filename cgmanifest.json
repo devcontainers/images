@@ -76,7 +76,17 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "8e8a3d7c1a6f7f587b486663b1e814911e6f2342"
+                    "commitHash": "86cab7438f79f6b0f60fc83f421993534ad333ee"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "git",
+                "Git": {
+                    "Name": "vcpkg",
+                    "repositoryUrl": "https://github.com/microsoft/vcpkg",
+                    "commitHash": "5bc980361a81fd5276ee411a7d7af423a4d24363"
                 }
             }
         },
@@ -445,7 +455,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "mypy",
-                    "Version": "0.971"
+                    "Version": "0.981"
                 }
             }
         },
@@ -590,6 +600,15 @@
                 "Pip": {
                     "Name": "pylint",
                     "Version": "2.13.9"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "Pip",
+                "Pip": {
+                    "Name": "mypy",
+                    "Version": "0.971"
                 }
             }
         },
@@ -1055,7 +1074,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "GitHub CLI",
-                    "Version": "2.16.0",
+                    "Version": "2.16.1",
                     "DownloadUrl": "https://github.com/cli/cli"
                 }
             }
@@ -1084,16 +1103,6 @@
             "Component": {
                 "Type": "RubyGems",
                 "RubyGems": {}
-            }
-        },
-        {
-            "Component": {
-                "Type": "git",
-                "Git": {
-                    "Name": "rbenv",
-                    "repositoryUrl": "https://github.com/rbenv/rbenv.git",
-                    "commitHash": "396e65a4612203d81c68d413a783116ce64c8402"
-                }
             }
         },
         {

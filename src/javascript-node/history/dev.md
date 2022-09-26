@@ -14,7 +14,7 @@
 
 ## Variant: 18-bullseye
 
-**Digest:** sha256:eec8fc2e02e44e302c415bdb259813a722ef61956be7b2315e18bba4203a2073
+**Digest:** sha256:8c4d4b05bb53df90d4b352c68bb9c9e1f8893bfb69282bdefbaf95c0882ffca1
 
 **Tags:**
 ```
@@ -35,7 +35,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 18.9.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 18.9.1 | /usr/local |
 
 **Tools installed using git**
 
@@ -96,7 +96,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 
 ## Variant: 16-bullseye
 
-**Digest:** sha256:d279d1c9be7daeccb2f3789320dd3e466f63e8bf7eec33f305916b457406308f
+**Digest:** sha256:279c2f72f0f835bc37487d2d19bd027424cf730386a17b13d63df4e36f9c0104
 
 **Tags:**
 ```
@@ -116,7 +116,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 16.17.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 16.17.1 | /usr/local |
 
 **Tools installed using git**
 
@@ -177,7 +177,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16
 
 ## Variant: 14-bullseye
 
-**Digest:** sha256:a29f70fe34b583605a399ae98224c8462bffba864460754384768542ca9ecde2
+**Digest:** sha256:0d081c9e7bce74bdfacb502a8251071223759eb0967223c6477b9faabf823962
 
 **Tags:**
 ```
@@ -197,7 +197,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-14
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 14.20.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 14.20.1 | /usr/local |
 
 **Tools installed using git**
 
@@ -258,7 +258,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-14
 
 ## Variant: 18-buster
 
-**Digest:** sha256:9155d7dbee72cea4864c4835cbf7d7c7206d915a3c533d7f96eda6d1c1e234a7
+**Digest:** sha256:91e5e2577e6275aca1dcf0140c70b8af1bbbbc2f168b65c1b71de1421f7a19ae
 
 **Tags:**
 ```
@@ -278,7 +278,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 18.9.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 18.9.1 | /usr/local |
 
 **Tools installed using git**
 
@@ -340,7 +340,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-buster
 
 ## Variant: 16-buster
 
-**Digest:** sha256:db4fa902beba2e823def2a5a4729fa3a6809a46f1a86f736c9dc81e90ceca5a0
+**Digest:** sha256:697755c0767c483073ae767aa6090ce267e722fd329902187c35cbbf97573d48
 
 **Tags:**
 ```
@@ -359,7 +359,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 16.17.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 16.17.1 | /usr/local |
 
 **Tools installed using git**
 
@@ -421,7 +421,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16-buster
 
 ## Variant: 14-buster
 
-**Digest:** sha256:4ce0a9d900ad56e0a5536c39dc1bd293710e715261d183aad5c3dc5b9ca963cf
+**Digest:** sha256:2c5e8b289af0567b13e36ffd4cbbb33edf457d96e771c3e8f32ea3b0d951a66d
 
 **Tags:**
 ```
@@ -440,7 +440,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-14-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 14.20.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 14.20.1 | /usr/local |
 
 **Tools installed using git**
 
