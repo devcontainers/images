@@ -18,7 +18,7 @@
 
 ## Variant: 3.10-bullseye
 
-**Digest:** sha256:8f9925e0f1fc0bd5cf8870d2dac65b16b37128bbf914af65113a2ec5a48b7a35
+**Digest:** sha256:b55bfb44290237dd1affb726c997555add97a6c6bbad76f4036202dddc48c7cc
 
 **Tags:**
 ```
@@ -59,7 +59,7 @@ mcr.microsoft.com/devcontainers/python:dev-bullseye
 | autopep8 | 1.7.0 |
 | black | 22.8.0 |
 | yapf | 0.32.0 |
-| mypy | 0.971 |
+| mypy | 0.981 |
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.9.1 |
 | bandit | 1.7.4 |
@@ -113,7 +113,7 @@ mcr.microsoft.com/devcontainers/python:dev-bullseye
 
 ## Variant: 3.9-bullseye
 
-**Digest:** sha256:1e66837782907f56329557d70be049874da0aa23c27ea0518993477021a33426
+**Digest:** sha256:0ecc46008182503d5ebdfae64b3ef5fb05560768d41be2264874d66172708ed4
 
 **Tags:**
 ```
@@ -151,7 +151,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9
 | autopep8 | 1.7.0 |
 | black | 22.8.0 |
 | yapf | 0.32.0 |
-| mypy | 0.971 |
+| mypy | 0.981 |
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.9.1 |
 | bandit | 1.7.4 |
@@ -205,7 +205,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9
 
 ## Variant: 3.8-bullseye
 
-**Digest:** sha256:4d481d2550c79cd8e6c6bb4dbe6935ff7a7262373d2b16f630809c9f8fe65a11
+**Digest:** sha256:abf96a670dab9b290639c40b098d71ff87d495ef064d8b7c8932efeeea69674c
 
 **Tags:**
 ```
@@ -243,7 +243,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8
 | autopep8 | 1.7.0 |
 | black | 22.8.0 |
 | yapf | 0.32.0 |
-| mypy | 0.971 |
+| mypy | 0.981 |
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.9.1 |
 | bandit | 1.7.4 |
@@ -297,7 +297,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8
 
 ## Variant: 3.7-bullseye
 
-**Digest:** sha256:2f4062fb5d6b08158376a7b032870d1fc80286b0cadd0f7dd96f1d04193a7b2e
+**Digest:** sha256:2beca63dc6615f96cba8aeadb9fed4cabca45f2370b98a260b0852105989b393
 
 **Tags:**
 ```
@@ -335,7 +335,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.7
 | autopep8 | 1.7.0 |
 | black | 22.8.0 |
 | yapf | 0.32.0 |
-| mypy | 0.971 |
+| mypy | 0.981 |
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.9.1 |
 | bandit | 1.7.4 |
@@ -389,7 +389,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.7
 
 ## Variant: 3.6-bullseye
 
-**Digest:** sha256:e3603c738e85d428a37eed2bb9464eded5a8e30c612a1ceaf7a7f805dab8c7ed
+**Digest:** sha256:1eec2adb65287291bb3525f8835980af49941e7de9106f06e90a8079335c236b
 
 **Tags:**
 ```
@@ -481,7 +481,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.6
 
 ## Variant: 3.10-buster
 
-**Digest:** sha256:7d3bd6afb61e057890b140c3f56e21af42bf3dfa2c0118cdd4c9aa9de61a3ddc
+**Digest:** sha256:7cf2c9eb15be9d61474348906c8e0cf7fe2cc1456cf8870dced8978a2e1ca172
 
 **Tags:**
 ```
@@ -515,12 +515,12 @@ mcr.microsoft.com/devcontainers/python:dev-buster
 
 | Tool / package | Version |
 |----------------|---------|
-| pylint | 2.15.2 |
+| pylint | 2.15.3 |
 | flake8 | 5.0.4 |
 | autopep8 | 1.7.0 |
 | black | 22.8.0 |
 | yapf | 0.32.0 |
-| mypy | 0.971 |
+| mypy | 0.981 |
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.9.1 |
 | bandit | 1.7.4 |
@@ -565,7 +565,7 @@ mcr.microsoft.com/devcontainers/python:dev-buster
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u3 |
-| unzip | 6.0-23+deb10u2 |
+| unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u2 |
 | wget | 1.20.1-1.1 |
 | yarn | 1.22.19-1 |
@@ -575,7 +575,7 @@ mcr.microsoft.com/devcontainers/python:dev-buster
 
 ## Variant: 3.9-buster
 
-**Digest:** sha256:e0f45d34a5b832c5c58fda2bc97e466bc9c7d86a3d6a575315709b9a597b8e17
+**Digest:** sha256:96369fd9fe0e8cc2ce364682d185c4c0a672cc647d58e351fbacba293adbede3
 
 **Tags:**
 ```
@@ -607,12 +607,12 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-buster
 
 | Tool / package | Version |
 |----------------|---------|
-| pylint | 2.15.2 |
+| pylint | 2.15.3 |
 | flake8 | 5.0.4 |
 | autopep8 | 1.7.0 |
 | black | 22.8.0 |
 | yapf | 0.32.0 |
-| mypy | 0.971 |
+| mypy | 0.981 |
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.9.1 |
 | bandit | 1.7.4 |
@@ -657,7 +657,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-buster
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u3 |
-| unzip | 6.0-23+deb10u2 |
+| unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u2 |
 | wget | 1.20.1-1.1 |
 | yarn | 1.22.19-1 |
@@ -667,7 +667,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-buster
 
 ## Variant: 3.8-buster
 
-**Digest:** sha256:5db15baa772e77fc4d730519b1d100628980aef6b956424a548ad01ae8a99cce
+**Digest:** sha256:23a58c97ee0a7042d159d4377465eb4a6be5bbc2419d03dbd620d949ffe7bfea
 
 **Tags:**
 ```
@@ -699,12 +699,12 @@ mcr.microsoft.com/devcontainers/python:dev-3.8-buster
 
 | Tool / package | Version |
 |----------------|---------|
-| pylint | 2.15.2 |
+| pylint | 2.15.3 |
 | flake8 | 5.0.4 |
 | autopep8 | 1.7.0 |
 | black | 22.8.0 |
 | yapf | 0.32.0 |
-| mypy | 0.971 |
+| mypy | 0.981 |
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.9.1 |
 | bandit | 1.7.4 |
@@ -749,7 +749,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8-buster
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u3 |
-| unzip | 6.0-23+deb10u2 |
+| unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u2 |
 | wget | 1.20.1-1.1 |
 | yarn | 1.22.19-1 |
@@ -759,7 +759,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8-buster
 
 ## Variant: 3.7-buster
 
-**Digest:** sha256:dd115103a63976bb145c6d4707ec83f286938b914f34df38a54bf4d8acf3bf4a
+**Digest:** sha256:a35134c55928ae610be52e37d5dc7acfa6cb2c7bc149498c76b241aafe7e6a34
 
 **Tags:**
 ```
@@ -791,12 +791,12 @@ mcr.microsoft.com/devcontainers/python:dev-3.7-buster
 
 | Tool / package | Version |
 |----------------|---------|
-| pylint | 2.15.2 |
+| pylint | 2.15.3 |
 | flake8 | 5.0.4 |
 | autopep8 | 1.7.0 |
 | black | 22.8.0 |
 | yapf | 0.32.0 |
-| mypy | 0.971 |
+| mypy | 0.981 |
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.9.1 |
 | bandit | 1.7.4 |
@@ -841,7 +841,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.7-buster
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u3 |
-| unzip | 6.0-23+deb10u2 |
+| unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u2 |
 | wget | 1.20.1-1.1 |
 | yarn | 1.22.19-1 |
@@ -851,7 +851,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.7-buster
 
 ## Variant: 3.6-buster
 
-**Digest:** sha256:057441b55cc4f8e3950b0fc624f90ef659a24fb4c701099d9f2794855653960f
+**Digest:** sha256:1b3905f86a02ab36ca3fc7d72368bf5a0f8d8c22b9aceefc26738032b3df240c
 
 **Tags:**
 ```
@@ -933,7 +933,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.6-buster
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u3 |
-| unzip | 6.0-23+deb10u2 |
+| unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u2 |
 | wget | 1.20.1-1.1 |
 | yarn | 1.22.19-1 |

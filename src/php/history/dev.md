@@ -14,7 +14,7 @@
 
 ## Variant: 8.1-apache-bullseye
 
-**Digest:** sha256:c9fb32b5250a1b6eae6ab1e1f7ecadca6675c602ab1f05a2461622124145ebe3
+**Digest:** sha256:2d37833eaa4c0aa68f4b6df22b63680bbac63e6e4efee24ac8e48addcaee8dd4
 
 **Tags:**
 ```
@@ -101,7 +101,7 @@ mcr.microsoft.com/devcontainers/php:dev-bullseye
 
 ## Variant: 8.0-apache-bullseye
 
-**Digest:** sha256:fb25f7728caa3dea52e29f05b8e841051842625e0cd15dc667a8b4efc439178f
+**Digest:** sha256:595dc3c12fbb4a6391216bd80ce53eaf569a5738bdd35d14f9c99392d6f04222
 
 **Tags:**
 ```
@@ -185,7 +185,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-bullseye
 
 ## Variant: 7.4-apache-bullseye
 
-**Digest:** sha256:492052dfac433785c62e52e381f533e8bee5afbf7b3652bb96d2c96bd3aaa3b8
+**Digest:** sha256:4159f39eebbf089a6a86c1ed8a8185213c894941650052769285c99427131eb8
 
 **Tags:**
 ```
@@ -271,7 +271,7 @@ mcr.microsoft.com/devcontainers/php:dev-7.4-bullseye
 
 ## Variant: 8.1-apache-buster
 
-**Digest:** sha256:f743a9b0a427e541b1e176b2325b0da6660f41a3e7995ba6900a4026572a58d3
+**Digest:** sha256:0f2fbb23391922d5c118ae604779e67b63cd5ea63ea85d9514506e25853e97b4
 
 **Tags:**
 ```
@@ -347,7 +347,7 @@ mcr.microsoft.com/devcontainers/php:dev-buster
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u3 |
-| unzip | 6.0-23+deb10u2 |
+| unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u2 |
 | wget | 1.20.1-1.1 |
 | yarn | 1.22.19-1 |
@@ -357,7 +357,7 @@ mcr.microsoft.com/devcontainers/php:dev-buster
 
 ## Variant: 8.0-apache-buster
 
-**Digest:** sha256:3dcb4ce581096a88ee56377491632872bcad236e35cc5102c86c333ed1158f2d
+**Digest:** sha256:f9457a32fc0ae80d5856c619f655eae4e0e89379c16e6cb8308f67df841e21d9
 
 **Tags:**
 ```
@@ -431,7 +431,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-buster
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u3 |
-| unzip | 6.0-23+deb10u2 |
+| unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u2 |
 | wget | 1.20.1-1.1 |
 | yarn | 1.22.19-1 |
@@ -441,7 +441,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-buster
 
 ## Variant: 7.4-apache-buster
 
-**Digest:** sha256:06706b2915a67948c86a59ef39a44423001a33a904fd9e8cc41cb4f0ec275d80
+**Digest:** sha256:b8e36a358afbb0dfbfcae642305ed584bb934d6e6ba54472ed0d4e5d4d8b62c5
 
 **Tags:**
 ```
@@ -516,7 +516,7 @@ mcr.microsoft.com/devcontainers/php:dev-7.4-buster
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u3 |
-| unzip | 6.0-23+deb10u2 |
+| unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u2 |
 | wget | 1.20.1-1.1 |
 | yarn | 1.22.19-1 |

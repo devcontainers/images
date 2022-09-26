@@ -12,7 +12,7 @@
 
 ## Variant: 1.19-bullseye
 
-**Digest:** sha256:60a71dbcf2ff369fcc3d7417ba8b5f93205fd8e700ad1322fde42eaedd2c73e1
+**Digest:** sha256:5016d414cb15223deb5d01ac8a61d0a1a4e856e810a82f70fe1b76ec43e9e13f
 
 **Tags:**
 ```
@@ -109,7 +109,7 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 
 ## Variant: 1.19-buster
 
-**Digest:** sha256:ec5f7300fba7c1b0b96cdb1f2773fd792aaa6ddf61a4d43636f75bd5d4dc73a7
+**Digest:** sha256:04deb6ad7b56291bb7e6ef8556d35c3f31d930e172ff1ddf5c14dfd61ca8196a
 
 **Tags:**
 ```
@@ -195,7 +195,7 @@ mcr.microsoft.com/devcontainers/go:dev-buster
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u3 |
-| unzip | 6.0-23+deb10u2 |
+| unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u2 |
 | wget | 1.20.1-1.1 |
 | yarn | 1.22.19-1 |
@@ -205,7 +205,7 @@ mcr.microsoft.com/devcontainers/go:dev-buster
 
 ## Variant: 1.18-bullseye
 
-**Digest:** sha256:5be47e20bc33a5e3598fdf5194e2bda869bb52dd532aa5ec9717f186a84c58b9
+**Digest:** sha256:de70881e916d3f536cbf2db0c55ca5bb9ae1eb5b899380a6e12b7f2f9ca53dc4
 
 **Tags:**
 ```
@@ -299,7 +299,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.18
 
 ## Variant: 1.18-buster
 
-**Digest:** sha256:63e904f66c89fc945f479af8ea2e81157dec92e439e5b4a9d7188c02d876c303
+**Digest:** sha256:7ed6cf6fb8d7a4264e9976a641ac8763fb8e51df813e34ea934cafba62096c85
 
 **Tags:**
 ```
@@ -383,7 +383,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.18-buster
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u3 |
-| unzip | 6.0-23+deb10u2 |
+| unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u2 |
 | wget | 1.20.1-1.1 |
 | yarn | 1.22.19-1 |

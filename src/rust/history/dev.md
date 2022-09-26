@@ -10,7 +10,7 @@
 
 ## Variant: buster
 
-**Digest:** sha256:f591fa3c361ae70fb038bc57a77d50cd4b81a38a1edc140467d95ceae278a2e7
+**Digest:** sha256:e605fa6843ee7875403ec85e259083313c10988839579902fba1719a89481987
 
 **Tags:**
 ```
@@ -31,7 +31,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Rust](https://github.com/rust-lang/rust) | 1.63.0 | /usr/local/cargo<br />/usr/local/rustup |
+| [Rust](https://github.com/rust-lang/rust) | 1.64.0 | /usr/local/cargo<br />/usr/local/rustup |
 
 **Tools installed using git**
 
@@ -45,9 +45,9 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 |--------------|---------|
 | rls | 1.41.0 |
 | rustfmt | 1.5.1 |
-| rust-analysis | 1.63.0 |
-| rust-src | 1.63.0 |
-| clippy | 1.63.0 |
+| rust-analysis | 1.64.0 |
+| rust-src | 1.64.0 |
+| clippy | 1.64.0 |
 
 **Additional linux tools and packages**
 
@@ -91,7 +91,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u3 |
-| unzip | 6.0-23+deb10u2 |
+| unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u2 |
 | wget | 1.20.1-1.1 |
 | zip | 3.0-11+b1 |
@@ -100,7 +100,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 
 ## Variant: bullseye
 
-**Digest:** sha256:ae736453557a6fd2dab0c05a33a551b07c9abc9d899213c04c181e921bfce8cc
+**Digest:** sha256:88b034d7370ad8dfd2c1287ed3bccbefef220147ea29a0e18fadbf87f11ac576
 
 **Tags:**
 ```
@@ -120,7 +120,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Rust](https://github.com/rust-lang/rust) | 1.63.0 | /usr/local/cargo<br />/usr/local/rustup |
+| [Rust](https://github.com/rust-lang/rust) | 1.64.0 | /usr/local/cargo<br />/usr/local/rustup |
 
 **Tools installed using git**
 
@@ -134,9 +134,9 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 |--------------|---------|
 | rls | 1.41.0 |
 | rustfmt | 1.5.1 |
-| rust-analysis | 1.63.0 |
-| rust-src | 1.63.0 |
-| clippy | 1.63.0 |
+| rust-analysis | 1.64.0 |
+| rust-src | 1.64.0 |
+| clippy | 1.64.0 |
 
 **Additional linux tools and packages**
 

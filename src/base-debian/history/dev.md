@@ -11,7 +11,7 @@
 
 ## Variant: buster
 
-**Digest:** sha256:cbaa31abb695e24b2a64ef9579ca9251638236bc474a7676f985fcfb70241d41
+**Digest:** sha256:26ac2fcc5c78dd3d1305c02d39102956a234884f9e3bf425d35ec85dc6e2bac1
 
 **Tags:**
 ```
@@ -72,7 +72,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian10
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u3 |
-| unzip | 6.0-23+deb10u2 |
+| unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u2 |
 | wget | 1.20.1-1.1 |
 | zip | 3.0-11+b1 |
@@ -81,7 +81,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian10
 
 ## Variant: bullseye
 
-**Digest:** sha256:4b71284c826c4171f994ee987c2074573196ad7f7caec67c5f0453dff4882f33
+**Digest:** sha256:8b7dd9beaf2fd51f6e1d1148cc04c1a9bb00a5ab007fcb74be03123716f385e1
 
 **Tags:**
 ```
@@ -152,7 +152,7 @@ mcr.microsoft.com/devcontainers/base:dev
 
 ## Variant: stretch
 
-**Digest:** sha256:f12e1d239aa4eff9d78b463022abf0aca2613f64b7ae355341ff960b4db3fbc7
+**Digest:** sha256:7036b224218c31acf802606a01ea9f81cd73f4a28312d28209046572504af08b
 
 **Tags:**
 ```

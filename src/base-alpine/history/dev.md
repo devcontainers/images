@@ -12,7 +12,7 @@
 
 ## Variant: 3.16
 
-**Digest:** sha256:ac0c1a4cba516449646d9f642f6d8dc0855964b59af9ad940f797d677ee18e1c
+**Digest:** sha256:7335775fcc70fa72f1b0ac88bfc05fec3bbc7a6ec3bc8b50149feecfe6dd4094
 
 **Tags:**
 ```
@@ -48,7 +48,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.16
 | psmisc | 23.5-r0 |
 | curl | 7.83.1-r3 |
 | wget | 1.21.3-r0 |
-| rsync | 3.2.4-r2 |
+| rsync | 3.2.5-r0 |
 | ca-certificates | 20220614-r0 |
 | unzip | 6.0-r9 |
 | zip | 3.0-r9 |
@@ -77,7 +77,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.16
 
 ## Variant: 3.15
 
-**Digest:** sha256:533fc93fec61e0de4efd9057a865913928468bb92d9c72633d029375f2248b23
+**Digest:** sha256:ba92a3a5d02707baff22530b985f20728f98739f63d24843d91b34e9734b968f
 
 **Tags:**
 ```
@@ -114,7 +114,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 | psmisc | 23.4-r0 |
 | curl | 7.80.0-r3 |
 | wget | 1.21.2-r2 |
-| rsync | 3.2.4-r0 |
+| rsync | 3.2.5-r0 |
 | ca-certificates | 20220614-r0 |
 | unzip | 6.0-r9 |
 | zip | 3.0-r9 |
@@ -143,7 +143,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 ## Variant: 3.14
 
-**Digest:** sha256:088ca60a4069170ddda0d114cc1ad0a234ce18b5446f823fb40197969444c821
+**Digest:** sha256:0b520400c71e37d761cc4cff62cfe1598451f8e8aa2d37c59af39fc8d237da74
 
 **Tags:**
 ```
@@ -179,7 +179,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.14
 | psmisc | 23.4-r0 |
 | curl | 7.79.1-r3 |
 | wget | 1.21.1-r1 |
-| rsync | 3.2.4-r0 |
+| rsync | 3.2.5-r0 |
 | ca-certificates | 20220614-r0 |
 | unzip | 6.0-r9 |
 | zip | 3.0-r9 |
@@ -208,7 +208,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.14
 
 ## Variant: 3.13
 
-**Digest:** sha256:53a7f50c8598f485cd42587fb6d6897ef0c890945a604f1762fcbae7744a0fd5
+**Digest:** sha256:0fcbfb55297ba0bedf9ce8fa4d0eafcba9e4f1b4e48c7bec25969bac5343b669
 
 **Tags:**
 ```
@@ -244,7 +244,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.13
 | psmisc | 23.3-r0 |
 | curl | 7.79.1-r3 |
 | wget | 1.21.1-r1 |
-| rsync | 3.2.4-r0 |
+| rsync | 3.2.5-r0 |
 | ca-certificates | 20220614-r0 |
 | unzip | 6.0-r9 |
 | zip | 3.0-r9 |

@@ -12,7 +12,7 @@
 
 ## Variant: 6.0-bullseye-slim
 
-**Digest:** sha256:bc5b53980519c771d93acbf47aa53c8008684f6b00e6ffd12df946070b85c87d
+**Digest:** sha256:a5fd77ffe04225e27d5b92ba3a6be54ee014b791d803877de921cc0240e3a774
 
 **Tags:**
 ```
@@ -89,7 +89,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-bullseye
 
 ## Variant: 6.0-focal
 
-**Digest:** sha256:7ea0c05f918c55512bcd27b68aad3d4fc5233ec738622d81a66609e1abe26a39
+**Digest:** sha256:373ae513b64901d0103ebaea17f65df6e153ad99e6ddc50913c51ab58138bf65
 
 **Tags:**
 ```
@@ -156,7 +156,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-focal
 | strace | 5.5-3ubuntu1 |
 | sudo | 1.8.31-1ubuntu1.2 |
 | unzip | 6.0-25ubuntu1 |
-| vim-tiny | 2:8.1.2269-1ubuntu5.8 |
+| vim-tiny | 2:8.1.2269-1ubuntu5.9 |
 | wget | 1.20.3-1ubuntu2 |
 | yarn | 1.22.19-1 |
 | zip | 3.0-11build1 |
@@ -165,7 +165,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-focal
 
 ## Variant: 3.1-bullseye
 
-**Digest:** sha256:9b29372022cac5e28f0e9c7bf8814e9ae44a8abdb18486d230cc3ed887baaeb2
+**Digest:** sha256:27593c2cb9049d04454202dca5960422c6c6940a653249e980694e85a40886d5
 
 **Tags:**
 ```
@@ -241,7 +241,7 @@ mcr.microsoft.com/devcontainers/dotnetcore:dev-3.1-bullseye
 
 ## Variant: 3.1-focal
 
-**Digest:** sha256:44590f3fdccd993ee19fed442dffdecd3966992427dadfe615417ecc56955136
+**Digest:** sha256:2014a5249bab70f5ae0d33a5b0885a3ad375900c9c2d5db8519b94aee40a9036
 
 **Tags:**
 ```
@@ -310,7 +310,7 @@ mcr.microsoft.com/devcontainers/dotnetcore:dev-3.1
 | strace | 5.5-3ubuntu1 |
 | sudo | 1.8.31-1ubuntu1.2 |
 | unzip | 6.0-25ubuntu1 |
-| vim-tiny | 2:8.1.2269-1ubuntu5.8 |
+| vim-tiny | 2:8.1.2269-1ubuntu5.9 |
 | wget | 1.20.3-1ubuntu2 |
 | yarn | 1.22.19-1 |
 | zip | 3.0-11build1 |

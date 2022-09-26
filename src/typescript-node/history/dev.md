@@ -14,7 +14,7 @@
 
 ## Variant: 18-bullseye
 
-**Digest:** sha256:48d781037e4e833b62f52a4981e9567c58c84b725a04936bb10b9470d6846484
+**Digest:** sha256:dd4ec59e1b610c0d1600aaa16079124e6e7be94cb3a85da7ebf9995bf120b68d
 
 **Tags:**
 ```
@@ -35,7 +35,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 18.9.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 18.9.1 | /usr/local |
 | [TypeScript](https://www.typescriptlang.org/) | 4.8.3 | /usr/local/share/npm-global |
 
 **Tools installed using git**
@@ -49,7 +49,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bullseye
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.23.1 |
+| eslint | 8.24.0 |
 | tslint-to-eslint-config | 2.13.3 |
 | typescript | 4.8.3 |
 
@@ -99,7 +99,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bullseye
 
 ## Variant: 16-bullseye
 
-**Digest:** sha256:8dd7ffcea30c52fb171b4b35c24e9642bef11cccd0549590ea5c9b7bf74cc103
+**Digest:** sha256:865304392aef4c5ac5dbfbdf7a3e7e0c57a797bbaad5c65eba7a7263f057a171
 
 **Tags:**
 ```
@@ -119,7 +119,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 16.17.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 16.17.1 | /usr/local |
 | [TypeScript](https://www.typescriptlang.org/) | 4.8.3 | /usr/local/share/npm-global |
 
 **Tools installed using git**
@@ -133,7 +133,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.23.1 |
+| eslint | 8.24.0 |
 | tslint-to-eslint-config | 2.13.3 |
 | typescript | 4.8.3 |
 
@@ -183,7 +183,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16
 
 ## Variant: 14-bullseye
 
-**Digest:** sha256:254c2684d5e69e11ab49e63e7fa74d1c171798aa06eab7d7c93258eb53abaede
+**Digest:** sha256:3f7bcce45bcb4bb0db2663ac597e69c1b4daaad87aa9351d2ddb44f5d82a0649
 
 **Tags:**
 ```
@@ -203,7 +203,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 14.20.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 14.20.1 | /usr/local |
 | [TypeScript](https://www.typescriptlang.org/) | 4.8.3 | /usr/local/share/npm-global |
 
 **Tools installed using git**
@@ -217,7 +217,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.23.1 |
+| eslint | 8.24.0 |
 | tslint-to-eslint-config | 2.13.3 |
 | typescript | 4.8.3 |
 
@@ -267,7 +267,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14
 
 ## Variant: 18-buster
 
-**Digest:** sha256:7d3749f46f4d283ac9b0e793c049f6cf1ce188b24601d94bb386840df8a03211
+**Digest:** sha256:a71dcd90386e7c02dadbce44c40d0b961e6a496e42976a90b6c1c4ee3c35212b
 
 **Tags:**
 ```
@@ -287,7 +287,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 18.9.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 18.9.1 | /usr/local |
 | [TypeScript](https://www.typescriptlang.org/) | 4.8.3 | /usr/local/share/npm-global |
 
 **Tools installed using git**
@@ -301,7 +301,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-buster
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.23.1 |
+| eslint | 8.24.0 |
 | tslint-to-eslint-config | 2.13.3 |
 | typescript | 4.8.3 |
 
@@ -343,7 +343,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-buster
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u3 |
-| unzip | 6.0-23+deb10u2 |
+| unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u2 |
 | wget | 1.20.1-1.1 |
 | zip | 3.0-11+b1 |
@@ -352,7 +352,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-buster
 
 ## Variant: 16-buster
 
-**Digest:** sha256:1d25fcfdc8043959c4c945de5f4dcf120b14e6e8657d90e76c3f0fa7dc78ee09
+**Digest:** sha256:fe0af6678b02512b1898d4b659cfc5f79ebc0c11fa39710166b1a8a67f4e9c6a
 
 **Tags:**
 ```
@@ -371,7 +371,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 16.17.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 16.17.1 | /usr/local |
 | [TypeScript](https://www.typescriptlang.org/) | 4.8.3 | /usr/local/share/npm-global |
 
 **Tools installed using git**
@@ -385,7 +385,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16-buster
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.23.1 |
+| eslint | 8.24.0 |
 | tslint-to-eslint-config | 2.13.3 |
 | typescript | 4.8.3 |
 
@@ -427,7 +427,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16-buster
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u3 |
-| unzip | 6.0-23+deb10u2 |
+| unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u2 |
 | wget | 1.20.1-1.1 |
 | zip | 3.0-11+b1 |
@@ -436,7 +436,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16-buster
 
 ## Variant: 14-buster
 
-**Digest:** sha256:5f9f186d9d8bf25317eabcd0157d66b7dd2c5e91719929e6e95aa2c8f041b6c6
+**Digest:** sha256:8e46443bf819965874db0b5e03909969a74de9ab19aa0bf612c092f27c47670c
 
 **Tags:**
 ```
@@ -455,7 +455,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 14.20.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 14.20.1 | /usr/local |
 | [TypeScript](https://www.typescriptlang.org/) | 4.8.3 | /usr/local/share/npm-global |
 
 **Tools installed using git**
@@ -469,7 +469,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14-buster
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.23.1 |
+| eslint | 8.24.0 |
 | tslint-to-eslint-config | 2.13.3 |
 | typescript | 4.8.3 |
 
@@ -511,7 +511,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14-buster
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u3 |
-| unzip | 6.0-23+deb10u2 |
+| unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u2 |
 | wget | 1.20.1-1.1 |
 | zip | 3.0-11+b1 |

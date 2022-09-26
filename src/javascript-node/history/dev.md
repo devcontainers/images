@@ -14,7 +14,7 @@
 
 ## Variant: 18-bullseye
 
-**Digest:** sha256:1cd8840c76583f17d6061e68f923fe5f09b15cbfba899eafeba062ddb3f78a10
+**Digest:** sha256:8c4d4b05bb53df90d4b352c68bb9c9e1f8893bfb69282bdefbaf95c0882ffca1
 
 **Tags:**
 ```
@@ -35,7 +35,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 18.9.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 18.9.1 | /usr/local |
 
 **Tools installed using git**
 
@@ -48,7 +48,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.23.1 |
+| eslint | 8.24.0 |
 
 **Additional linux tools and packages**
 
@@ -96,7 +96,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 
 ## Variant: 16-bullseye
 
-**Digest:** sha256:6e26d23c21659dae54b3b1dd28e6ebf03aa17e2d3dc8ef86bfea8004b20a0a88
+**Digest:** sha256:279c2f72f0f835bc37487d2d19bd027424cf730386a17b13d63df4e36f9c0104
 
 **Tags:**
 ```
@@ -116,7 +116,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 16.17.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 16.17.1 | /usr/local |
 
 **Tools installed using git**
 
@@ -129,7 +129,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.23.1 |
+| eslint | 8.24.0 |
 
 **Additional linux tools and packages**
 
@@ -177,7 +177,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16
 
 ## Variant: 14-bullseye
 
-**Digest:** sha256:881c56d29de51dc27313b23bcbef6660f7f50270a00001448272646526538919
+**Digest:** sha256:0d081c9e7bce74bdfacb502a8251071223759eb0967223c6477b9faabf823962
 
 **Tags:**
 ```
@@ -197,7 +197,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-14
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 14.20.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 14.20.1 | /usr/local |
 
 **Tools installed using git**
 
@@ -210,7 +210,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-14
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.23.1 |
+| eslint | 8.24.0 |
 
 **Additional linux tools and packages**
 
@@ -258,7 +258,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-14
 
 ## Variant: 18-buster
 
-**Digest:** sha256:5e42cd942770054daefdbd4f25b242ed7ba4c732e457f06b9e9bef2e7b854195
+**Digest:** sha256:91e5e2577e6275aca1dcf0140c70b8af1bbbbc2f168b65c1b71de1421f7a19ae
 
 **Tags:**
 ```
@@ -278,7 +278,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 18.9.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 18.9.1 | /usr/local |
 
 **Tools installed using git**
 
@@ -291,7 +291,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-buster
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.23.1 |
+| eslint | 8.24.0 |
 
 **Additional linux tools and packages**
 
@@ -331,7 +331,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-buster
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u3 |
-| unzip | 6.0-23+deb10u2 |
+| unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u2 |
 | wget | 1.20.1-1.1 |
 | zip | 3.0-11+b1 |
@@ -340,7 +340,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-buster
 
 ## Variant: 16-buster
 
-**Digest:** sha256:96eae2bff111396f6039484b7c8570395b06d2f83c358e20ab1f4a1b46b12de6
+**Digest:** sha256:697755c0767c483073ae767aa6090ce267e722fd329902187c35cbbf97573d48
 
 **Tags:**
 ```
@@ -359,7 +359,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 16.17.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 16.17.1 | /usr/local |
 
 **Tools installed using git**
 
@@ -372,7 +372,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16-buster
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.23.1 |
+| eslint | 8.24.0 |
 
 **Additional linux tools and packages**
 
@@ -412,7 +412,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16-buster
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u3 |
-| unzip | 6.0-23+deb10u2 |
+| unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u2 |
 | wget | 1.20.1-1.1 |
 | zip | 3.0-11+b1 |
@@ -421,7 +421,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16-buster
 
 ## Variant: 14-buster
 
-**Digest:** sha256:bc3621e5da5e9c651b936c3404d6cd78cef96b72e6ba91fa786214f4cb7461c1
+**Digest:** sha256:2c5e8b289af0567b13e36ffd4cbbb33edf457d96e771c3e8f32ea3b0d951a66d
 
 **Tags:**
 ```
@@ -440,7 +440,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-14-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 14.20.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 14.20.1 | /usr/local |
 
 **Tools installed using git**
 
@@ -453,7 +453,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-14-buster
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.23.1 |
+| eslint | 8.24.0 |
 
 **Additional linux tools and packages**
 
@@ -493,7 +493,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-14-buster
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u3 |
-| unzip | 6.0-23+deb10u2 |
+| unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u2 |
 | wget | 1.20.1-1.1 |
 | zip | 3.0-11+b1 |
