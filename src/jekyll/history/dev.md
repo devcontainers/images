@@ -10,7 +10,7 @@
 
 ## Variant: 2.7-bullseye
 
-**Digest:** sha256:45ea3c781480e0b91bec6ba78895b8714becb1e3b7eae2350d19645f2a93ade4
+**Digest:** sha256:e02a4a1fdc6f97f11e4bde5077d7f29485657e3aa01650144f62f201d109c980
 
 **Tags:**
 ```
@@ -40,8 +40,8 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
-| [rbenv](https://github.com/rbenv/rbenv.git) | 56a440e4a75d722ecbd0ab2ae0169f00e727c978 | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | ef66bd1f3c9fcf3422ea8aaec0526d2a46a0a05f | /usr/local/share/ruby-build |
+| [rbenv](https://github.com/rbenv/rbenv.git) | 7c7c4dc11cd30637d40f7a7324ca8200215fb69f | /usr/local/share/rbenv |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | ecb9d2285372c2696cf044783f361ebbd6121725 | /usr/local/share/ruby-build |
 
 **Ruby gems and tools**
 
@@ -104,7 +104,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 
 ## Variant: 2.7-buster
 
-**Digest:** sha256:ad3cad257825f286aac004812f64f822d404af533d94915dc77597c4f6194c98
+**Digest:** sha256:e233fc088eef01810ce99b5654f06ca1fb5ad74ffc2dd3516a2d7dfb98886477
 
 **Tags:**
 ```
@@ -133,8 +133,8 @@ mcr.microsoft.com/devcontainers/jekyll:dev-buster
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
-| [rbenv](https://github.com/rbenv/rbenv.git) | 56a440e4a75d722ecbd0ab2ae0169f00e727c978 | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | ef66bd1f3c9fcf3422ea8aaec0526d2a46a0a05f | /usr/local/share/ruby-build |
+| [rbenv](https://github.com/rbenv/rbenv.git) | 396e65a4612203d81c68d413a783116ce64c8402 | /usr/local/share/rbenv |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | ecb9d2285372c2696cf044783f361ebbd6121725 | /usr/local/share/ruby-build |
 
 **Ruby gems and tools**
 
@@ -188,7 +188,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-buster
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u3 |
-| unzip | 6.0-23+deb10u2 |
+| unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u2 |
 | wget | 1.20.1-1.1 |
 | yarn | 1.22.19-1 |

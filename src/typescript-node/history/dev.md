@@ -14,7 +14,7 @@
 
 ## Variant: 18-bullseye
 
-**Digest:** sha256:48d781037e4e833b62f52a4981e9567c58c84b725a04936bb10b9470d6846484
+**Digest:** sha256:953012ccf060560b44a5e20563486877ea62dfff8aef997f4b2cd37143194522
 
 **Tags:**
 ```
@@ -49,7 +49,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bullseye
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.23.1 |
+| eslint | 8.24.0 |
 | tslint-to-eslint-config | 2.13.3 |
 | typescript | 4.8.3 |
 
@@ -99,7 +99,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bullseye
 
 ## Variant: 16-bullseye
 
-**Digest:** sha256:8dd7ffcea30c52fb171b4b35c24e9642bef11cccd0549590ea5c9b7bf74cc103
+**Digest:** sha256:d2ba7cfb3cf61940d6af9205a60a3bda3e6aa9d810bdd8a39baf8f624e6cafb0
 
 **Tags:**
 ```
@@ -133,7 +133,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.23.1 |
+| eslint | 8.24.0 |
 | tslint-to-eslint-config | 2.13.3 |
 | typescript | 4.8.3 |
 
@@ -183,7 +183,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16
 
 ## Variant: 14-bullseye
 
-**Digest:** sha256:254c2684d5e69e11ab49e63e7fa74d1c171798aa06eab7d7c93258eb53abaede
+**Digest:** sha256:a1a28ab27be5a7c266c0309f1297df5e9190eb26f5e3e04f5f31ab48d61bdc0d
 
 **Tags:**
 ```
@@ -217,7 +217,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.23.1 |
+| eslint | 8.24.0 |
 | tslint-to-eslint-config | 2.13.3 |
 | typescript | 4.8.3 |
 
@@ -267,7 +267,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14
 
 ## Variant: 18-buster
 
-**Digest:** sha256:7d3749f46f4d283ac9b0e793c049f6cf1ce188b24601d94bb386840df8a03211
+**Digest:** sha256:a2fdf4e7f7c8ddb29aa8678ebe750c4a71076129017b7479b8aa7305137b1f77
 
 **Tags:**
 ```
@@ -301,7 +301,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-buster
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.23.1 |
+| eslint | 8.24.0 |
 | tslint-to-eslint-config | 2.13.3 |
 | typescript | 4.8.3 |
 
@@ -343,7 +343,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-buster
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u3 |
-| unzip | 6.0-23+deb10u2 |
+| unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u2 |
 | wget | 1.20.1-1.1 |
 | zip | 3.0-11+b1 |
@@ -352,7 +352,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-buster
 
 ## Variant: 16-buster
 
-**Digest:** sha256:1d25fcfdc8043959c4c945de5f4dcf120b14e6e8657d90e76c3f0fa7dc78ee09
+**Digest:** sha256:07198f00ccae8d3c2909813afbebf7b61945e58cb84e202a935a64260e87f0a6
 
 **Tags:**
 ```
@@ -385,7 +385,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16-buster
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.23.1 |
+| eslint | 8.24.0 |
 | tslint-to-eslint-config | 2.13.3 |
 | typescript | 4.8.3 |
 
@@ -427,7 +427,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16-buster
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u3 |
-| unzip | 6.0-23+deb10u2 |
+| unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u2 |
 | wget | 1.20.1-1.1 |
 | zip | 3.0-11+b1 |
@@ -436,7 +436,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16-buster
 
 ## Variant: 14-buster
 
-**Digest:** sha256:5f9f186d9d8bf25317eabcd0157d66b7dd2c5e91719929e6e95aa2c8f041b6c6
+**Digest:** sha256:276f5886c0fbe24aee91aa1df85b218e889d03a67094e8a2e64faa5218744fe7
 
 **Tags:**
 ```
@@ -469,7 +469,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14-buster
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.23.1 |
+| eslint | 8.24.0 |
 | tslint-to-eslint-config | 2.13.3 |
 | typescript | 4.8.3 |
 
@@ -511,7 +511,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14-buster
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u3 |
-| unzip | 6.0-23+deb10u2 |
+| unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u2 |
 | wget | 1.20.1-1.1 |
 | zip | 3.0-11+b1 |

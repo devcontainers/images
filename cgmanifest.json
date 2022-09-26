@@ -76,7 +76,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "01b29f6d8212bc845da64773b18665d682f5ab66"
+                    "commitHash": "8e8a3d7c1a6f7f587b486663b1e814911e6f2342"
                 }
             }
         },
@@ -400,7 +400,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "pylint",
-                    "Version": "2.15.2"
+                    "Version": "2.15.3"
                 }
             }
         },
@@ -589,15 +589,6 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "pylint",
-                    "Version": "2.15.3"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "Pip",
-                "Pip": {
-                    "Name": "pylint",
                     "Version": "2.13.9"
                 }
             }
@@ -743,7 +734,7 @@
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "rust-analysis",
-                    "Version": "1.63.0"
+                    "Version": "1.64.0"
                 }
             }
         },
@@ -752,7 +743,7 @@
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "rust-src",
-                    "Version": "1.63.0"
+                    "Version": "1.64.0"
                 }
             }
         },
@@ -761,7 +752,7 @@
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "clippy",
-                    "Version": "1.63.0"
+                    "Version": "1.64.0"
                 }
             }
         },
@@ -838,7 +829,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "pandas",
-                    "Version": "1.4.4"
+                    "Version": "1.5.0"
                 }
             }
         },
@@ -985,7 +976,7 @@
                 "Git": {
                     "Name": "rbenv",
                     "repositoryUrl": "https://github.com/rbenv/rbenv.git",
-                    "commitHash": "56a440e4a75d722ecbd0ab2ae0169f00e727c978"
+                    "commitHash": "7c7c4dc11cd30637d40f7a7324ca8200215fb69f"
                 }
             }
         },
@@ -995,7 +986,7 @@
                 "Git": {
                     "Name": "ruby-build",
                     "repositoryUrl": "https://github.com/rbenv/ruby-build.git",
-                    "commitHash": "ef66bd1f3c9fcf3422ea8aaec0526d2a46a0a05f"
+                    "commitHash": "ecb9d2285372c2696cf044783f361ebbd6121725"
                 }
             }
         },
@@ -1024,7 +1015,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "kubectl",
-                    "Version": "WARNING: This version information is deprecated and will be replaced with the output from kubectl version --short.  Use --output=yaml|json to get the full version.\n1.25.1",
+                    "Version": "WARNING: This version information is deprecated and will be replaced with the output from kubectl version --short.  Use --output=yaml|json to get the full version.\n1.25.2",
                     "DownloadUrl": "https://github.com/kubernetes/kubectl"
                 }
             }
@@ -1034,7 +1025,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Helm",
-                    "Version": "3.9.4",
+                    "Version": "3.10.0",
                     "DownloadUrl": "https://github.com/helm/helm"
                 }
             }
@@ -1064,7 +1055,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "GitHub CLI",
-                    "Version": "2.15.0",
+                    "Version": "2.16.0",
                     "DownloadUrl": "https://github.com/cli/cli"
                 }
             }
@@ -1093,6 +1084,16 @@
             "Component": {
                 "Type": "RubyGems",
                 "RubyGems": {}
+            }
+        },
+        {
+            "Component": {
+                "Type": "git",
+                "Git": {
+                    "Name": "rbenv",
+                    "repositoryUrl": "https://github.com/rbenv/rbenv.git",
+                    "commitHash": "396e65a4612203d81c68d413a783116ce64c8402"
+                }
             }
         },
         {
@@ -1198,7 +1199,7 @@
                 "Type": "npm",
                 "Npm": {
                     "Name": "eslint",
-                    "Version": "8.23.1"
+                    "Version": "8.24.0"
                 }
             }
         },
