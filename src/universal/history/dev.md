@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:d81a2cb1ebfccc1bbcb2d5f36db4228ef95fce33408c33171320cfe7f4efbfe8
+**Digest:** sha256:3d70f410275a52f2eee68e2ff9ebe715c1b87c5bb0cda23d32f755491994e4d1
 
 **Tags:**
 ```
@@ -26,7 +26,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 14.20.0<br />16.17.0 | /usr/local/share/nvm/versions/node/&lt;version&gt; |
+| [Node.js](https://nodejs.org/en/) | 14.20.1<br />16.17.1 | /usr/local/share/nvm/versions/node/&lt;version&gt; |
 | [Python](https://www.python.org/) | 3.10.7<br />3.9.14 | /usr/local/python/&lt;version&gt; |
 | [Java](https://adoptopenjdk.net/) | 11.0.16<br />17.0.4 | /usr/local/sdkman/candidates/java/&lt;version&gt; |
 | [.NET](https://dotnet.microsoft.com/) | 3<br />6 | /usr/local/dotnet |
@@ -45,15 +45,15 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0 | /home/codespace/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | bf45ef070e82356ed36a0f4d98f8ec651c8f0d98 | /usr/local/nvs |
-| [rbenv](https://github.com/rbenv/rbenv.git) | 56a440e4a75d722ecbd0ab2ae0169f00e727c978 | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | ef66bd1f3c9fcf3422ea8aaec0526d2a46a0a05f | /usr/local/share/ruby-build |
+| [rbenv](https://github.com/rbenv/rbenv.git) | 7c7c4dc11cd30637d40f7a7324ca8200215fb69f | /usr/local/share/rbenv |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | ecb9d2285372c2696cf044783f361ebbd6121725 | /usr/local/share/ruby-build |
 
 **Pip / pipx installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
 | numpy | 1.23.3 |
-| pandas | 1.4.4 |
+| pandas | 1.5.0 |
 | scipy | 1.9.1 |
 | matplotlib | 3.6.0 |
 | seaborn | 0.12.0 |
@@ -63,7 +63,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | torch | 1.12.1 |
 | requests | 2.28.1 |
 | plotly | 5.10.0 |
-| pylint | 2.15.2 |
+| pylint | 2.15.3 |
 | flake8 | 5.0.4 |
 | autopep8 | 1.7.0 |
 | black | 22.8.0 |
@@ -104,12 +104,12 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [git](https://github.com/git/git) | 2.37.3 | /usr/bin |
 | [Xdebug](https://xdebug.org/) | 3.1.5 | /usr/local/php/current |
 | [Composer](https://getcomposer.org/) | 2.4.2 | /usr/local/php/current/bin |
-| [kubectl](https://github.com/kubernetes/kubectl) | WARNING: This version information is deprecated and will be replaced with the output from kubectl version --short.  Use --output=yaml|json to get the full version.<br />1.25.1 | /usr/local/bin |
-| [Helm](https://github.com/helm/helm) | 3.9.4 | /usr/local/bin |
+| [kubectl](https://github.com/kubernetes/kubectl) | WARNING: This version information is deprecated and will be replaced with the output from kubectl version --short.  Use --output=yaml|json to get the full version.<br />1.25.2 | /usr/local/bin |
+| [Helm](https://github.com/helm/helm) | 3.10.0 | /usr/local/bin |
 | [Docker Compose](https://github.com/docker/compose) | 1.29.2 | /usr/local/bin |
 | [SDKMAN!](https://github.com/sdkman/sdkman-cli) | 5.16.0 | /usr/local/sdkman |
 | [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
-| [GitHub CLI](https://github.com/cli/cli) | 2.15.0 | 
+| [GitHub CLI](https://github.com/cli/cli) | 2.16.0 | 
 | [yarn](https://yarnpkg.com/) | 1.22.19 | /usr/bin |
 | [Maven](https://maven.apache.org/) | 3.8.6 | /usr/local/sdkman/candidates/maven/current/bin |
 | [Gradle](https://gradle.org/) | 7.5.1 | /usr/local/sdkman/candidates/gradle/current/bin |
@@ -194,9 +194,9 @@ mcr.microsoft.com/devcontainers/universal:dev
 | tar | 1.30+dfsg-7ubuntu0.20.04.2 |
 | unzip | 6.0-25ubuntu1 |
 | valgrind | 1:3.15.0-1ubuntu9.1 |
-| vim | 2:8.1.2269-1ubuntu5.8 |
-| vim-doc | 2:8.1.2269-1ubuntu5.8 |
-| vim-tiny | 2:8.1.2269-1ubuntu5.8 |
+| vim | 2:8.1.2269-1ubuntu5.9 |
+| vim-doc | 2:8.1.2269-1ubuntu5.9 |
+| vim-tiny | 2:8.1.2269-1ubuntu5.9 |
 | wget | 1.20.3-1ubuntu2 |
 | xtail | 2.1-6 |
 | zip | 3.0-11build1 |

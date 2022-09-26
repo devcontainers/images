@@ -14,7 +14,7 @@
 
 ## Variant: 18-bullseye
 
-**Digest:** sha256:1cd8840c76583f17d6061e68f923fe5f09b15cbfba899eafeba062ddb3f78a10
+**Digest:** sha256:eec8fc2e02e44e302c415bdb259813a722ef61956be7b2315e18bba4203a2073
 
 **Tags:**
 ```
@@ -48,7 +48,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.23.1 |
+| eslint | 8.24.0 |
 
 **Additional linux tools and packages**
 
@@ -96,7 +96,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 
 ## Variant: 16-bullseye
 
-**Digest:** sha256:6e26d23c21659dae54b3b1dd28e6ebf03aa17e2d3dc8ef86bfea8004b20a0a88
+**Digest:** sha256:d279d1c9be7daeccb2f3789320dd3e466f63e8bf7eec33f305916b457406308f
 
 **Tags:**
 ```
@@ -129,7 +129,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.23.1 |
+| eslint | 8.24.0 |
 
 **Additional linux tools and packages**
 
@@ -177,7 +177,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16
 
 ## Variant: 14-bullseye
 
-**Digest:** sha256:881c56d29de51dc27313b23bcbef6660f7f50270a00001448272646526538919
+**Digest:** sha256:a29f70fe34b583605a399ae98224c8462bffba864460754384768542ca9ecde2
 
 **Tags:**
 ```
@@ -210,7 +210,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-14
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.23.1 |
+| eslint | 8.24.0 |
 
 **Additional linux tools and packages**
 
@@ -258,7 +258,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-14
 
 ## Variant: 18-buster
 
-**Digest:** sha256:5e42cd942770054daefdbd4f25b242ed7ba4c732e457f06b9e9bef2e7b854195
+**Digest:** sha256:9155d7dbee72cea4864c4835cbf7d7c7206d915a3c533d7f96eda6d1c1e234a7
 
 **Tags:**
 ```
@@ -291,7 +291,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-buster
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.23.1 |
+| eslint | 8.24.0 |
 
 **Additional linux tools and packages**
 
@@ -331,7 +331,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-buster
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u3 |
-| unzip | 6.0-23+deb10u2 |
+| unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u2 |
 | wget | 1.20.1-1.1 |
 | zip | 3.0-11+b1 |
@@ -340,7 +340,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-buster
 
 ## Variant: 16-buster
 
-**Digest:** sha256:96eae2bff111396f6039484b7c8570395b06d2f83c358e20ab1f4a1b46b12de6
+**Digest:** sha256:db4fa902beba2e823def2a5a4729fa3a6809a46f1a86f736c9dc81e90ceca5a0
 
 **Tags:**
 ```
@@ -372,7 +372,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16-buster
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.23.1 |
+| eslint | 8.24.0 |
 
 **Additional linux tools and packages**
 
@@ -412,7 +412,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16-buster
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u3 |
-| unzip | 6.0-23+deb10u2 |
+| unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u2 |
 | wget | 1.20.1-1.1 |
 | zip | 3.0-11+b1 |
@@ -421,7 +421,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16-buster
 
 ## Variant: 14-buster
 
-**Digest:** sha256:bc3621e5da5e9c651b936c3404d6cd78cef96b72e6ba91fa786214f4cb7461c1
+**Digest:** sha256:4ce0a9d900ad56e0a5536c39dc1bd293710e715261d183aad5c3dc5b9ca963cf
 
 **Tags:**
 ```
@@ -453,7 +453,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-14-buster
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.23.1 |
+| eslint | 8.24.0 |
 
 **Additional linux tools and packages**
 
@@ -493,7 +493,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-14-buster
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u3 |
-| unzip | 6.0-23+deb10u2 |
+| unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u2 |
 | wget | 1.20.1-1.1 |
 | zip | 3.0-11+b1 |
