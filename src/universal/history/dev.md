@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:3d70f410275a52f2eee68e2ff9ebe715c1b87c5bb0cda23d32f755491994e4d1
+**Digest:** sha256:7a5bde085764f68ed9f9b5210406c9a18d3ee7787a3c33fb7ab1e9672e1f3934
 
 **Tags:**
 ```
@@ -68,7 +68,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | autopep8 | 1.7.0 |
 | black | 22.8.0 |
 | yapf | 0.32.0 |
-| mypy | 0.971 |
+| mypy | 0.981 |
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.9.1 |
 | bandit | 1.7.4 |
@@ -109,7 +109,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [Docker Compose](https://github.com/docker/compose) | 1.29.2 | /usr/local/bin |
 | [SDKMAN!](https://github.com/sdkman/sdkman-cli) | 5.16.0 | /usr/local/sdkman |
 | [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
-| [GitHub CLI](https://github.com/cli/cli) | 2.16.0 | 
+| [GitHub CLI](https://github.com/cli/cli) | 2.16.1 | 
 | [yarn](https://yarnpkg.com/) | 1.22.19 | /usr/bin |
 | [Maven](https://maven.apache.org/) | 3.8.6 | /usr/local/sdkman/candidates/maven/current/bin |
 | [Gradle](https://gradle.org/) | 7.5.1 | /usr/local/sdkman/candidates/gradle/current/bin |

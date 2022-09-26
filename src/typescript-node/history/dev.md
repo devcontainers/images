@@ -14,7 +14,7 @@
 
 ## Variant: 18-bullseye
 
-**Digest:** sha256:953012ccf060560b44a5e20563486877ea62dfff8aef997f4b2cd37143194522
+**Digest:** sha256:dd4ec59e1b610c0d1600aaa16079124e6e7be94cb3a85da7ebf9995bf120b68d
 
 **Tags:**
 ```
@@ -35,7 +35,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 18.9.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 18.9.1 | /usr/local |
 | [TypeScript](https://www.typescriptlang.org/) | 4.8.3 | /usr/local/share/npm-global |
 
 **Tools installed using git**
@@ -99,7 +99,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bullseye
 
 ## Variant: 16-bullseye
 
-**Digest:** sha256:d2ba7cfb3cf61940d6af9205a60a3bda3e6aa9d810bdd8a39baf8f624e6cafb0
+**Digest:** sha256:865304392aef4c5ac5dbfbdf7a3e7e0c57a797bbaad5c65eba7a7263f057a171
 
 **Tags:**
 ```
@@ -119,7 +119,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 16.17.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 16.17.1 | /usr/local |
 | [TypeScript](https://www.typescriptlang.org/) | 4.8.3 | /usr/local/share/npm-global |
 
 **Tools installed using git**
@@ -183,7 +183,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16
 
 ## Variant: 14-bullseye
 
-**Digest:** sha256:a1a28ab27be5a7c266c0309f1297df5e9190eb26f5e3e04f5f31ab48d61bdc0d
+**Digest:** sha256:3f7bcce45bcb4bb0db2663ac597e69c1b4daaad87aa9351d2ddb44f5d82a0649
 
 **Tags:**
 ```
@@ -203,7 +203,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 14.20.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 14.20.1 | /usr/local |
 | [TypeScript](https://www.typescriptlang.org/) | 4.8.3 | /usr/local/share/npm-global |
 
 **Tools installed using git**
@@ -267,7 +267,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14
 
 ## Variant: 18-buster
 
-**Digest:** sha256:a2fdf4e7f7c8ddb29aa8678ebe750c4a71076129017b7479b8aa7305137b1f77
+**Digest:** sha256:a71dcd90386e7c02dadbce44c40d0b961e6a496e42976a90b6c1c4ee3c35212b
 
 **Tags:**
 ```
@@ -287,7 +287,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 18.9.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 18.9.1 | /usr/local |
 | [TypeScript](https://www.typescriptlang.org/) | 4.8.3 | /usr/local/share/npm-global |
 
 **Tools installed using git**
@@ -352,7 +352,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-buster
 
 ## Variant: 16-buster
 
-**Digest:** sha256:07198f00ccae8d3c2909813afbebf7b61945e58cb84e202a935a64260e87f0a6
+**Digest:** sha256:fe0af6678b02512b1898d4b659cfc5f79ebc0c11fa39710166b1a8a67f4e9c6a
 
 **Tags:**
 ```
@@ -371,7 +371,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 16.17.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 16.17.1 | /usr/local |
 | [TypeScript](https://www.typescriptlang.org/) | 4.8.3 | /usr/local/share/npm-global |
 
 **Tools installed using git**
@@ -436,7 +436,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16-buster
 
 ## Variant: 14-buster
 
-**Digest:** sha256:276f5886c0fbe24aee91aa1df85b218e889d03a67094e8a2e64faa5218744fe7
+**Digest:** sha256:8e46443bf819965874db0b5e03909969a74de9ab19aa0bf612c092f27c47670c
 
 **Tags:**
 ```
@@ -455,7 +455,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 14.20.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 14.20.1 | /usr/local |
 | [TypeScript](https://www.typescriptlang.org/) | 4.8.3 | /usr/local/share/npm-global |
 
 **Tools installed using git**
