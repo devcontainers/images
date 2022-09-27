@@ -3,6 +3,11 @@
 		"dockerfile": "./Dockerfile",
 		"context": "."
 	},
+	"features": {
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "none"
+        }
+    },
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
