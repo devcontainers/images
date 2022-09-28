@@ -10,7 +10,7 @@
 
 ## Variant: 2.7-bullseye
 
-**Digest:** sha256:2ed3bb426797df999d113a3d5fe1e82d86c80e1a56e55b190fe97ff559ada3a3
+**Digest:** sha256:fc15867689f87632183db5ff693106e43c3d6c390a1a55e4801e8a2e49e3775a
 
 **Tags:**
 ```
@@ -40,7 +40,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
-| [rbenv](https://github.com/rbenv/rbenv.git) | 7c7c4dc11cd30637d40f7a7324ca8200215fb69f | /usr/local/share/rbenv |
+| [rbenv](https://github.com/rbenv/rbenv.git) | 22ee5d41758dee08a679bf49a74456847b6f9f72 | /usr/local/share/rbenv |
 | [ruby-build](https://github.com/rbenv/ruby-build.git) | ecb9d2285372c2696cf044783f361ebbd6121725 | /usr/local/share/ruby-build |
 
 **Ruby gems and tools**
@@ -104,7 +104,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 
 ## Variant: 2.7-buster
 
-**Digest:** sha256:5748091822b55d4d47b6325b797f1d998137e5b3ebc83ac6d362f0fd967d9ea6
+**Digest:** sha256:d9ed76987f537cb1d2d99acd44cabd608c2548799a849073c44a430a7d3731a8
 
 **Tags:**
 ```
@@ -133,7 +133,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-buster
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
-| [rbenv](https://github.com/rbenv/rbenv.git) | 7c7c4dc11cd30637d40f7a7324ca8200215fb69f | /usr/local/share/rbenv |
+| [rbenv](https://github.com/rbenv/rbenv.git) | 22ee5d41758dee08a679bf49a74456847b6f9f72 | /usr/local/share/rbenv |
 | [ruby-build](https://github.com/rbenv/ruby-build.git) | ecb9d2285372c2696cf044783f361ebbd6121725 | /usr/local/share/ruby-build |
 
 **Ruby gems and tools**

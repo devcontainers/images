@@ -14,7 +14,7 @@
 
 ## Variant: 18-bullseye
 
-**Digest:** sha256:dd4ec59e1b610c0d1600aaa16079124e6e7be94cb3a85da7ebf9995bf120b68d
+**Digest:** sha256:ddfaefc4f6b90a7eca3c25ab4f6467e4c64d89a667e298cdf953ca33f5b1529f
 
 **Tags:**
 ```
@@ -36,7 +36,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bullseye
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
 | [Node.js](https://nodejs.org/en/) | 18.9.1 | /usr/local |
-| [TypeScript](https://www.typescriptlang.org/) | 4.8.3 | /usr/local/share/npm-global |
+| [TypeScript](https://www.typescriptlang.org/) | 4.8.4 | /usr/local/share/npm-global |
 
 **Tools installed using git**
 
@@ -51,7 +51,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bullseye
 |----------------|---------|
 | eslint | 8.24.0 |
 | tslint-to-eslint-config | 2.13.3 |
-| typescript | 4.8.3 |
+| typescript | 4.8.4 |
 
 **Additional linux tools and packages**
 
@@ -99,7 +99,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bullseye
 
 ## Variant: 16-bullseye
 
-**Digest:** sha256:865304392aef4c5ac5dbfbdf7a3e7e0c57a797bbaad5c65eba7a7263f057a171
+**Digest:** sha256:a263c7ed8bc5086d95475787acbea6c65fc403b1c99f52c1402885b86a5531b7
 
 **Tags:**
 ```
@@ -120,7 +120,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
 | [Node.js](https://nodejs.org/en/) | 16.17.1 | /usr/local |
-| [TypeScript](https://www.typescriptlang.org/) | 4.8.3 | /usr/local/share/npm-global |
+| [TypeScript](https://www.typescriptlang.org/) | 4.8.4 | /usr/local/share/npm-global |
 
 **Tools installed using git**
 
@@ -135,7 +135,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16
 |----------------|---------|
 | eslint | 8.24.0 |
 | tslint-to-eslint-config | 2.13.3 |
-| typescript | 4.8.3 |
+| typescript | 4.8.4 |
 
 **Additional linux tools and packages**
 
@@ -183,7 +183,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16
 
 ## Variant: 14-bullseye
 
-**Digest:** sha256:3f7bcce45bcb4bb0db2663ac597e69c1b4daaad87aa9351d2ddb44f5d82a0649
+**Digest:** sha256:63d1f34069a12a06ef719230c5635ef6817e55621dd995390bcd10bc4581a608
 
 **Tags:**
 ```
@@ -204,7 +204,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
 | [Node.js](https://nodejs.org/en/) | 14.20.1 | /usr/local |
-| [TypeScript](https://www.typescriptlang.org/) | 4.8.3 | /usr/local/share/npm-global |
+| [TypeScript](https://www.typescriptlang.org/) | 4.8.4 | /usr/local/share/npm-global |
 
 **Tools installed using git**
 
@@ -219,7 +219,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14
 |----------------|---------|
 | eslint | 8.24.0 |
 | tslint-to-eslint-config | 2.13.3 |
-| typescript | 4.8.3 |
+| typescript | 4.8.4 |
 
 **Additional linux tools and packages**
 
@@ -267,7 +267,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14
 
 ## Variant: 18-buster
 
-**Digest:** sha256:a71dcd90386e7c02dadbce44c40d0b961e6a496e42976a90b6c1c4ee3c35212b
+**Digest:** sha256:e3ece09f4ca6311739a50e52b5280f4b30a3166bdca219da1840a449e26f6b0c
 
 **Tags:**
 ```
@@ -288,7 +288,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-buster
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
 | [Node.js](https://nodejs.org/en/) | 18.9.1 | /usr/local |
-| [TypeScript](https://www.typescriptlang.org/) | 4.8.3 | /usr/local/share/npm-global |
+| [TypeScript](https://www.typescriptlang.org/) | 4.8.4 | /usr/local/share/npm-global |
 
 **Tools installed using git**
 
@@ -303,7 +303,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-buster
 |----------------|---------|
 | eslint | 8.24.0 |
 | tslint-to-eslint-config | 2.13.3 |
-| typescript | 4.8.3 |
+| typescript | 4.8.4 |
 
 **Additional linux tools and packages**
 
@@ -352,7 +352,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-buster
 
 ## Variant: 16-buster
 
-**Digest:** sha256:fe0af6678b02512b1898d4b659cfc5f79ebc0c11fa39710166b1a8a67f4e9c6a
+**Digest:** sha256:2cdc2a1edd055e1586dfa97a2c27fd5d692adf4e1ad5373a57480908b5c8738c
 
 **Tags:**
 ```
@@ -372,7 +372,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16-buster
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
 | [Node.js](https://nodejs.org/en/) | 16.17.1 | /usr/local |
-| [TypeScript](https://www.typescriptlang.org/) | 4.8.3 | /usr/local/share/npm-global |
+| [TypeScript](https://www.typescriptlang.org/) | 4.8.4 | /usr/local/share/npm-global |
 
 **Tools installed using git**
 
@@ -387,7 +387,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16-buster
 |----------------|---------|
 | eslint | 8.24.0 |
 | tslint-to-eslint-config | 2.13.3 |
-| typescript | 4.8.3 |
+| typescript | 4.8.4 |
 
 **Additional linux tools and packages**
 
@@ -436,7 +436,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16-buster
 
 ## Variant: 14-buster
 
-**Digest:** sha256:8e46443bf819965874db0b5e03909969a74de9ab19aa0bf612c092f27c47670c
+**Digest:** sha256:f531c236d0741956792af6ee44180051317d08b5d43d59a19eb6e1ea151c0a60
 
 **Tags:**
 ```
@@ -456,7 +456,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14-buster
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
 | [Node.js](https://nodejs.org/en/) | 14.20.1 | /usr/local |
-| [TypeScript](https://www.typescriptlang.org/) | 4.8.3 | /usr/local/share/npm-global |
+| [TypeScript](https://www.typescriptlang.org/) | 4.8.4 | /usr/local/share/npm-global |
 
 **Tools installed using git**
 
@@ -471,7 +471,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14-buster
 |----------------|---------|
 | eslint | 8.24.0 |
 | tslint-to-eslint-config | 2.13.3 |
-| typescript | 4.8.3 |
+| typescript | 4.8.4 |
 
 **Additional linux tools and packages**
 

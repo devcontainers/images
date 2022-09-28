@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:7a5bde085764f68ed9f9b5210406c9a18d3ee7787a3c33fb7ab1e9672e1f3934
+**Digest:** sha256:de55025d55bb57b78b908350422fcb992a1f6c587fb08bc8a110b1bc92fbcf31
 
 **Tags:**
 ```
@@ -45,7 +45,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0 | /home/codespace/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | bf45ef070e82356ed36a0f4d98f8ec651c8f0d98 | /usr/local/nvs |
-| [rbenv](https://github.com/rbenv/rbenv.git) | 7c7c4dc11cd30637d40f7a7324ca8200215fb69f | /usr/local/share/rbenv |
+| [rbenv](https://github.com/rbenv/rbenv.git) | 22ee5d41758dee08a679bf49a74456847b6f9f72 | /usr/local/share/rbenv |
 | [ruby-build](https://github.com/rbenv/ruby-build.git) | ecb9d2285372c2696cf044783f361ebbd6121725 | /usr/local/share/ruby-build |
 
 **Pip / pipx installed tools and packages**
@@ -82,7 +82,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | golang.org/x/tools/gopls | 0.9.5 |
 | honnef.co/go/tools | 0.3.2 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
-| github.com/mgechev/revive | 1.2.3 |
+| github.com/mgechev/revive | 1.2.4 |
 | github.com/uudashr/gopkgs | 2.0.1+incompatible |
 | github.com/ramya-rao-a/go-outline | 0.0.0-20210608161538-9736a4bde949 |
 | github.com/go-delve/delve | 1.9.1 |
