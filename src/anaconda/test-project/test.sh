@@ -15,6 +15,7 @@ check "autopep8" autopep8 --version
 check "yapf" yapf --version
 check "pydocstyle" pydocstyle --version
 check "pycodestyle" pycodestyle --version
+check "nvm" bash -c ". /usr/local/share/nvm/nvm.sh && nvm --version"
 
 # Report result
 reportResults
