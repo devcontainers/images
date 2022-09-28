@@ -76,7 +76,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "86cab7438f79f6b0f60fc83f421993534ad333ee"
+                    "commitHash": "5f82fa45df07a446bab57f65479f3d2df797f408"
                 }
             }
         },
@@ -86,7 +86,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "5bc980361a81fd5276ee411a7d7af423a4d24363"
+                    "commitHash": "51c3f284f3dc774e7b539d4d84aab4198b545d58"
                 }
             }
         },
@@ -137,6 +137,19 @@
                     "Name": "Docker Image: buildpack-deps",
                     "Version": "bionic-curl",
                     "DownloadUrl": "https://hub.docker.com/_/buildpack-deps"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "linux",
+                "Linux": {
+                    "Name": "yarn",
+                    "Version": "1.22.19-1",
+                    "Distribution": "debian",
+                    "Release": "11",
+                    "Pool-URL": "https://dl.yarnpkg.com/debian",
+                    "Key-URL": "https://dl.yarnpkg.com/debian/pubkey.gpg"
                 }
             }
         },
@@ -197,19 +210,6 @@
                     "Name": "Docker Image: alpine",
                     "Version": "3.13",
                     "DownloadUrl": "https://hub.docker.com/_/alpine"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "linux",
-                "Linux": {
-                    "Name": "yarn",
-                    "Version": "1.22.19-1",
-                    "Distribution": "debian",
-                    "Release": "11",
-                    "Pool-URL": "https://dl.yarnpkg.com/debian",
-                    "Key-URL": "https://dl.yarnpkg.com/debian/pubkey.gpg"
                 }
             }
         },
@@ -295,7 +295,7 @@
                 "Type": "go",
                 "Go": {
                     "Name": "github.com/mgechev/revive",
-                    "Version": "1.2.3"
+                    "Version": "1.2.4"
                 }
             }
         },
@@ -995,7 +995,7 @@
                 "Git": {
                     "Name": "rbenv",
                     "repositoryUrl": "https://github.com/rbenv/rbenv.git",
-                    "commitHash": "7c7c4dc11cd30637d40f7a7324ca8200215fb69f"
+                    "commitHash": "22ee5d41758dee08a679bf49a74456847b6f9f72"
                 }
             }
         },
@@ -1296,7 +1296,7 @@
                 "Type": "npm",
                 "Npm": {
                     "Name": "typescript",
-                    "Version": "4.8.3"
+                    "Version": "4.8.4"
                 }
             }
         },
