@@ -123,6 +123,36 @@
                 "python.linting.pycodestylePath": "/usr/local/py-utils/bin/pycodestyle",
                 "python.linting.pydocstylePath": "/usr/local/py-utils/bin/pydocstyle",
                 "python.linting.pylintPath": "/usr/local/py-utils/bin/pylint",
+                "jupyter.kernels.filter": [
+                    {
+                        "path": "/opt/conda/bin/python",
+                        "type": "pythonEnvironment"
+                    },
+                    {
+                        "path": "/bin/python2",
+                        "type": "pythonEnvironment"
+                    },
+                    {
+                        "path": "/usr/bin/python2",
+                        "type": "pythonEnvironment"
+                    },
+                    {
+                        "path": "/usr/local/python/current/bin/python3",
+                        "type": "pythonEnvironment"
+                    },
+                    {
+                        "path": "/usr/local/python/current/bin/python",
+                        "type": "pythonEnvironment"
+                    },
+                    {
+                        "path": "/usr/bin/python3",
+                        "type": "pythonEnvironment"
+                    },
+                    {
+                        "path": "/bin/python3",
+                        "type": "pythonEnvironment"
+                    }
+                ],
                 "lldb.executable": "/usr/bin/lldb",
                 "files.watcherExclude": {
                     "**/target/**": true
