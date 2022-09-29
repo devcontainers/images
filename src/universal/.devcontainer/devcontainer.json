@@ -110,7 +110,7 @@
             "settings": {
                 "go.toolsManagement.checkForUpdates": "local",
                 "go.useLanguageServer": true,
-                "go.gopath": "/usr/local/go/bin/go",
+                "go.gopath": "/go",
                 "python.defaultInterpreterPath": "/home/codespace/.python/current/bin/python3",
                 "python.linting.enabled": true,
                 "python.linting.pylintEnabled": true,
