@@ -14,7 +14,7 @@
 
 ## Variant: 8.1-apache-bullseye
 
-**Digest:** sha256:a3ad04035f554650ee830b548d11a44ef6246413e40cd6fa8a866a68a9570f60
+**Digest:** sha256:657a49b7e1e099cca687b715d57b6bb656600f3ec23cbb2652f9fc6977717abb
 
 **Tags:**
 ```
@@ -38,13 +38,13 @@ mcr.microsoft.com/devcontainers/php:dev-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [PHP](https://xdebug.org/) | 8.1.10 | /usr/local |
+| [PHP](https://xdebug.org/) | 8.1.11 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 23f3ded92d07184b3611d08c62d7b474a76c956f | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -101,7 +101,7 @@ mcr.microsoft.com/devcontainers/php:dev-bullseye
 
 ## Variant: 8.0-apache-bullseye
 
-**Digest:** sha256:db87ad725c76bacd15c9da5f167558859fca25902c21433ab33352901538c544
+**Digest:** sha256:88cade6c7274f3f074f6e2d599b520df32862ebdf74aef855c204c5ece9baec5
 
 **Tags:**
 ```
@@ -122,13 +122,13 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [PHP](https://xdebug.org/) | 8.0.23 | /usr/local |
+| [PHP](https://xdebug.org/) | 8.0.24 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 23f3ded92d07184b3611d08c62d7b474a76c956f | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -185,7 +185,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-bullseye
 
 ## Variant: 7.4-apache-bullseye
 
-**Digest:** sha256:46190298ba573a5b3b688a19a7961ffb27ffd2e22916ac56f82d8f19e913d51a
+**Digest:** sha256:06c2172524b9fe6e88df97e9e5dc6741e5107752c7334576736d7369f67f3312
 
 **Tags:**
 ```
@@ -208,13 +208,13 @@ mcr.microsoft.com/devcontainers/php:dev-7.4-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [PHP](https://xdebug.org/) | 7.4.30 | /usr/local |
+| [PHP](https://xdebug.org/) | 7.4.32 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 74235e8aea0c3447871791ed56e7d0131586a057 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -271,7 +271,7 @@ mcr.microsoft.com/devcontainers/php:dev-7.4-bullseye
 
 ## Variant: 8.1-apache-buster
 
-**Digest:** sha256:62de3b933e7847fd14e7724b8a3485d4a7996dccbd91ecbb047d8e3406d124f6
+**Digest:** sha256:698e4a8c79e4ea682c1ba746952c6069381a9e16b2fa6f405c213b2bcf0afee1
 
 **Tags:**
 ```
@@ -293,7 +293,7 @@ mcr.microsoft.com/devcontainers/php:dev-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [PHP](https://xdebug.org/) | 8.1.10 | /usr/local |
+| [PHP](https://xdebug.org/) | 8.1.11 | /usr/local |
 
 **Tools installed using git**
 
@@ -357,7 +357,7 @@ mcr.microsoft.com/devcontainers/php:dev-buster
 
 ## Variant: 8.0-apache-buster
 
-**Digest:** sha256:6eeb66fc9421be8a7e14819a8ebba628f99546afa6f6a421138aaba1996ef1ec
+**Digest:** sha256:7039e657c09e7d9de9626a95ea38156460724f87ca65666e840c9ba1be9dc4e3
 
 **Tags:**
 ```
@@ -377,7 +377,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [PHP](https://xdebug.org/) | 8.0.23 | /usr/local |
+| [PHP](https://xdebug.org/) | 8.0.24 | /usr/local |
 
 **Tools installed using git**
 
@@ -441,7 +441,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-buster
 
 ## Variant: 7.4-apache-buster
 
-**Digest:** sha256:0a1d585197237a6e13a64c7a9422c01ce607e8ee8ffaee208c91062a9fd89cc8
+**Digest:** sha256:7c818ef0e2b353e1520ed3b6f86b42e95ff562f7521c21f1390f96b2ad786d01
 
 **Tags:**
 ```
@@ -462,7 +462,7 @@ mcr.microsoft.com/devcontainers/php:dev-7.4-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [PHP](https://xdebug.org/) | 7.4.30 | /usr/local |
+| [PHP](https://xdebug.org/) | 7.4.32 | /usr/local |
 
 **Tools installed using git**
 

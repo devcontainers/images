@@ -11,7 +11,7 @@
 
 ## Variant: jammy
 
-**Digest:** sha256:119c6ba3095942c088643a028c677cdc0bcd223b15d86b3e525b6405f8890bcb
+**Digest:** sha256:92967f5d3928d94360372ade248dd8adde736aa9c80fb0b466266ae7788ee1b8
 
 **Tags:**
 ```
@@ -32,14 +32,14 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu22.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 23f3ded92d07184b3611d08c62d7b474a76c956f | /home/vscode/.oh-my-zsh |
 
 **Additional linux tools and packages**
 
 | Tool / library | Version |
 |----------------|---------|
-| apt-transport-https | 2.4.7 |
-| apt-utils | 2.4.7 |
+| apt-transport-https | 2.4.8 |
+| apt-utils | 2.4.8 |
 | ca-certificates | 20211016 |
 | curl | 7.81.0-1ubuntu1.4 |
 | dialog | 1.3-20211214-1 |
@@ -78,7 +78,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu22.04
 
 ## Variant: focal
 
-**Digest:** sha256:8a8dc65da428ed7095bf10e1f52a803d4b82fbb676de7ba64f607e8f42a44729
+**Digest:** sha256:9e955da3af29c9cfa59550f2d5b7fa0c96a8033e93e23ac3306e990539bcb998
 
 **Tags:**
 ```
@@ -100,7 +100,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 23f3ded92d07184b3611d08c62d7b474a76c956f | /home/vscode/.oh-my-zsh |
 
 **Additional linux tools and packages**
 
@@ -149,7 +149,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 ## Variant: bionic
 
-**Digest:** sha256:27ea9a5c887a363f2ccd82958d4df795d6be5a871dd8db0a0e0db674c5314703
+**Digest:** sha256:2a3b9d12c07dc8d311da2ab0f8b5d5316ea7cff4f9be66f1856ddde0cf0b820b
 
 **Tags:**
 ```
@@ -170,7 +170,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu18.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 23f3ded92d07184b3611d08c62d7b474a76c956f | /home/vscode/.oh-my-zsh |
 
 **Additional linux tools and packages**
 
