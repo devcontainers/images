@@ -18,7 +18,7 @@
 
 ## Variant: 3.10-bullseye
 
-**Digest:** sha256:4b3ca8d2abf66c89a0735d0e5ba56ea90304a6a36e78041e7fe7e62fd5ac1d7b
+**Digest:** sha256:f1b3e5148bacef1d589a7b6bd7975f407b04a3e3715f9b5c5a3aab7a5836c1c1
 
 **Tags:**
 ```
@@ -47,7 +47,7 @@ mcr.microsoft.com/devcontainers/python:dev-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | b93b67b84490d45eb2544b1741e64dc16103207d | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -59,7 +59,7 @@ mcr.microsoft.com/devcontainers/python:dev-bullseye
 | autopep8 | 1.7.0 |
 | black | 22.8.0 |
 | yapf | 0.32.0 |
-| mypy | 0.981 |
+| mypy | 0.982 |
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.9.1 |
 | bandit | 1.7.4 |
@@ -113,7 +113,7 @@ mcr.microsoft.com/devcontainers/python:dev-bullseye
 
 ## Variant: 3.9-bullseye
 
-**Digest:** sha256:52600cb670df45379f6a2121bf39fac2fa735e1fd3db3295ec265fb18da3ca46
+**Digest:** sha256:ea85606428f3a77e41fec545e40cff149b710b9d8fc4a943f9c3786f24072e18
 
 **Tags:**
 ```
@@ -139,7 +139,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e0e22d112013aee22635b6afe4c2c9d1bf88cbf0 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -151,7 +151,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9
 | autopep8 | 1.7.0 |
 | black | 22.8.0 |
 | yapf | 0.32.0 |
-| mypy | 0.981 |
+| mypy | 0.982 |
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.9.1 |
 | bandit | 1.7.4 |
@@ -205,7 +205,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9
 
 ## Variant: 3.8-bullseye
 
-**Digest:** sha256:ae6dd09289f09e614cffa363b0f6ef4fd6d8802c762732c22e4f7feebf71bdd1
+**Digest:** sha256:c9dcc1caed2ebd9ab3233216a13fef0927b27f4c66c9a3e75e0fbd10f86e6072
 
 **Tags:**
 ```
@@ -231,7 +231,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 23f3ded92d07184b3611d08c62d7b474a76c956f | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -243,7 +243,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8
 | autopep8 | 1.7.0 |
 | black | 22.8.0 |
 | yapf | 0.32.0 |
-| mypy | 0.981 |
+| mypy | 0.982 |
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.9.1 |
 | bandit | 1.7.4 |
@@ -297,7 +297,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8
 
 ## Variant: 3.7-bullseye
 
-**Digest:** sha256:74ccf70ae6f5253e2e4addf43b9d09d45104236bfc2b3fc57764a053b759bff4
+**Digest:** sha256:2117c26ee3f2775f23fa4977e0ff1cb7d37e72cc8641026e311ddbbbba50d58a
 
 **Tags:**
 ```
@@ -323,7 +323,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.7
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 23f3ded92d07184b3611d08c62d7b474a76c956f | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -335,7 +335,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.7
 | autopep8 | 1.7.0 |
 | black | 22.8.0 |
 | yapf | 0.32.0 |
-| mypy | 0.981 |
+| mypy | 0.982 |
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.9.1 |
 | bandit | 1.7.4 |
@@ -389,7 +389,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.7
 
 ## Variant: 3.6-bullseye
 
-**Digest:** sha256:eeebb9d136879726d11e8fe38f6d45bb3ca76e857fa927578f568e20ca3f371d
+**Digest:** sha256:2e4a0ac8fcacb2a1a2eb5b7ba1a246d52f1cd53a3598b015bb22e430473ce1e4
 
 **Tags:**
 ```
@@ -415,7 +415,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.6
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 23f3ded92d07184b3611d08c62d7b474a76c956f | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -481,7 +481,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.6
 
 ## Variant: 3.10-buster
 
-**Digest:** sha256:2b6d898519d4081b696c70241f4d6a2649fcb2679355e06ded6ee5b28e2858ba
+**Digest:** sha256:ca918c744c8d53c9d71e5e02e6d6aeffc8ff7ee72a2010ca93fa98b571f5703d
 
 **Tags:**
 ```
@@ -508,7 +508,7 @@ mcr.microsoft.com/devcontainers/python:dev-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 23f3ded92d07184b3611d08c62d7b474a76c956f | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -520,7 +520,7 @@ mcr.microsoft.com/devcontainers/python:dev-buster
 | autopep8 | 1.7.0 |
 | black | 22.8.0 |
 | yapf | 0.32.0 |
-| mypy | 0.981 |
+| mypy | 0.982 |
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.9.1 |
 | bandit | 1.7.4 |
@@ -575,7 +575,7 @@ mcr.microsoft.com/devcontainers/python:dev-buster
 
 ## Variant: 3.9-buster
 
-**Digest:** sha256:bd5377762379283b4a6cdfbbeb41e4ff7ad4d10ab2e017e2827e0a8c984288d6
+**Digest:** sha256:af331cb35640aa75e3edcdebac5898aca7e0e1bdce2444b10972638166cc8e22
 
 **Tags:**
 ```
@@ -600,7 +600,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 23f3ded92d07184b3611d08c62d7b474a76c956f | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -612,7 +612,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-buster
 | autopep8 | 1.7.0 |
 | black | 22.8.0 |
 | yapf | 0.32.0 |
-| mypy | 0.981 |
+| mypy | 0.982 |
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.9.1 |
 | bandit | 1.7.4 |
@@ -667,7 +667,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-buster
 
 ## Variant: 3.8-buster
 
-**Digest:** sha256:f0916055006b8db7e79cec629c70efdbb64bc68643099e47fcafd74e7596ad60
+**Digest:** sha256:d5f1fb0f925d683205a06c201675cbece68b942699e97ff17d36eb3e994910c2
 
 **Tags:**
 ```
@@ -692,7 +692,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 74235e8aea0c3447871791ed56e7d0131586a057 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -759,7 +759,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8-buster
 
 ## Variant: 3.7-buster
 
-**Digest:** sha256:08a1d889d2697c0a07fb9b5f30f25ed562e258ae98a556a35c2a4ea951df2215
+**Digest:** sha256:7d6ba9ffc7d440dcd132ddef0ca58382c98a0a7d1e651bc63fafbf1f0cf22cca
 
 **Tags:**
 ```
@@ -851,7 +851,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.7-buster
 
 ## Variant: 3.6-buster
 
-**Digest:** sha256:9c191e17094affc1e77394461e31d205f90cd0a9bee444fa9864345cb6f355b4
+**Digest:** sha256:7fb229251280ea725620908b3612818eb2dd5ffe4028e074bf00a8cce3b543ab
 
 **Tags:**
 ```
