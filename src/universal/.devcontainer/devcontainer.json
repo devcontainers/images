@@ -153,10 +153,7 @@
                         "type": "pythonEnvironment"
                     }
                 ],
-                "lldb.executable": "/usr/bin/lldb",
-                "files.watcherExclude": {
-                    "**/target/**": true
-                }
+                "lldb.executable": "/usr/bin/lldb"
             },
             // Add the IDs of extensions you want installed when the container is created.
             "extensions": [
