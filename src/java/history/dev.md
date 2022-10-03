@@ -12,7 +12,7 @@
 
 ## Variant: 17-bullseye
 
-**Digest:** sha256:76cc66d9548f377625d4aad1a6a41342af08aa030064642fc2457e484cde7668
+**Digest:** sha256:3927dc4f0ccfd0860a2ef731fa703d32977fe1432f028ee1f67fd2a25fa23ea1
 
 **Tags:**
 ```
@@ -96,7 +96,7 @@ mcr.microsoft.com/devcontainers/java:dev-bullseye
 
 ## Variant: 17-buster
 
-**Digest:** sha256:2382322c76c53bd5b83558653c4788ea44d35764cf277b459c5d915c808eb0b5
+**Digest:** sha256:3a0d3c4f0d2857513f4c73f38f5c82babc8c5ac461f4a7e10acfdc95d949ce50
 
 **Tags:**
 ```
@@ -178,7 +178,7 @@ mcr.microsoft.com/devcontainers/java:dev-17-buster
 
 ## Variant: 11-bullseye
 
-**Digest:** sha256:5165af8a88f45f3efeacf1aa786f3584e252c25d8ae28df18719506be04177e1
+**Digest:** sha256:e628f809e8c6046c05575f01a5aa0b173722ce2440b67b9903310893c76ade69
 
 **Tags:**
 ```
@@ -261,7 +261,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bullseye
 
 ## Variant: 11-buster
 
-**Digest:** sha256:de897c83b4615c7827b8a1c306265de6dac2e0bc29a92dbd62382f315a28bc15
+**Digest:** sha256:fecde968b4873f2bd14e339e7827f6aebecf4a528efcbeb041a65f8038d199fa
 
 **Tags:**
 ```
