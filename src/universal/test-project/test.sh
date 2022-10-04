@@ -48,6 +48,7 @@ check "requests" python -c "import requests; print(requests.__version__)"
 # Check JupyterLab
 check "jupyter-lab" jupyter-lab --version
 check "jupyter-lab config" grep ".*.allow_origin = '*'" /home/codespace/.jupyter/jupyter_server_config.py
+check "jupyter-lab kernel" test -d "/home/codespace/.python/current/bin"
 
 # Check Java tools
 check "java" java -version
