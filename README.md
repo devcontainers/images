@@ -29,7 +29,7 @@ A `devcontainer.json` file is similar to `launch.json` for debugging, but design
 
 ### Why do Dockerfiles in this repo use `RUN` statements with commands separated by `&&`?
 
-Each `RUN` statement creates a Docker image "layer". If one `RUN` statement adds temporary contents, these contents remain in this layer in the image even if they are deleted in a subsequent `RUN`. This means the image takes more storage locally and results in slower image download times if you publish the image to a registry. You can resolve this problem by using a `RUN` statement that includes any clean up steps (separated by `&&`) after a given operation. See [CONTRIBUTING.md](./CONTRIBUTING.md#why-do-dockerfiles-in-this-repository-use-run-statements-with-commands-separated-by-) for more tips.
+Each `RUN` statement creates a Docker image "layer". If one `RUN` statement adds temporary contents, these contents remain in this layer in the image even if they are deleted in a subsequent `RUN`. This means the image takes more storage locally and results in slower image download times if you publish the image to a registry. You can resolve this problem by using a `RUN` statement that includes any clean up steps (separated by `&&`) after a given operation. You can find more tips [here](./docs/TIPS.md/#why-do-dockerfiles-in-this-repository-use-run-statements-with-commands-separated-by).
 
 ### How can I contribute?
 
