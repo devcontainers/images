@@ -13,7 +13,7 @@
 
 ## Variant: bullseye
 
-**Digest:** sha256:c6db7e283f0133fbc63fba3997f3e19bdbcb238088543c787bcda98398d9665c
+**Digest:** sha256:c90155ea06296c42dbe16fc5ceb7f3ae87f82b2d2ad21aae7240ffa56dc88f21
 
 **Tags:**
 ```
@@ -43,8 +43,8 @@ mcr.microsoft.com/devcontainers/cpp:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 23f3ded92d07184b3611d08c62d7b474a76c956f | /home/vscode/.oh-my-zsh |
-| [vcpkg](https://github.com/microsoft/vcpkg) | aa27f5d15ab1d8cb1617d1c003d1b4a30e472e24 | /usr/local/vcpkg |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 570158e464c9f57ab03c4162b4e6853b2c7c650d | /home/vscode/.oh-my-zsh |
+| [vcpkg](https://github.com/microsoft/vcpkg) | 779ce74ef67d3e12d904da1b15f9ed5626d5f677 | /usr/local/vcpkg |
 
 **Additional linux tools and packages**
 
@@ -104,7 +104,7 @@ mcr.microsoft.com/devcontainers/cpp:dev
 
 ## Variant: buster
 
-**Digest:** sha256:c466ad17e3305c41b27e261a4e4d3422550f86fa7f974e6adfcb192a2ebe9bc5
+**Digest:** sha256:d62c60156b3624507f8351037abca6ef4e59979d8f004b6f80e88eaf69880658
 
 **Tags:**
 ```
@@ -132,8 +132,8 @@ mcr.microsoft.com/devcontainers/cpp:dev-debian10
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 23f3ded92d07184b3611d08c62d7b474a76c956f | /home/vscode/.oh-my-zsh |
-| [vcpkg](https://github.com/microsoft/vcpkg) | aa27f5d15ab1d8cb1617d1c003d1b4a30e472e24 | /usr/local/vcpkg |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 570158e464c9f57ab03c4162b4e6853b2c7c650d | /home/vscode/.oh-my-zsh |
+| [vcpkg](https://github.com/microsoft/vcpkg) | 779ce74ef67d3e12d904da1b15f9ed5626d5f677 | /usr/local/vcpkg |
 
 **Additional linux tools and packages**
 
@@ -194,7 +194,7 @@ mcr.microsoft.com/devcontainers/cpp:dev-debian10
 
 ## Variant: jammy
 
-**Digest:** sha256:b2c4277856243c6358b0cb8554cf45fdacd4c1d968b6baff7f7f83ccdbcc6a4a
+**Digest:** sha256:f6066236fe555fc83d052da05f5fb992360b2980e2ddbe2e98e0b4efc39c22da
 
 **Tags:**
 ```
@@ -222,7 +222,7 @@ mcr.microsoft.com/devcontainers/cpp:dev-ubuntu22.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 23f3ded92d07184b3611d08c62d7b474a76c956f | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 570158e464c9f57ab03c4162b4e6853b2c7c650d | /home/vscode/.oh-my-zsh |
 | [vcpkg](https://github.com/microsoft/vcpkg) | aa27f5d15ab1d8cb1617d1c003d1b4a30e472e24 | /usr/local/vcpkg |
 
 **Additional linux tools and packages**
@@ -281,7 +281,7 @@ mcr.microsoft.com/devcontainers/cpp:dev-ubuntu22.04
 
 ## Variant: focal
 
-**Digest:** sha256:26d179693ceb438f6c4f34369f0cbf3b491b8cd3b02d8345e26932d5fde855e0
+**Digest:** sha256:91e05968ee2eb93337eba7b99cc81704f27ed27a79c8f663d03d22ace80cff09
 
 **Tags:**
 ```
@@ -310,7 +310,7 @@ mcr.microsoft.com/devcontainers/cpp:dev-ubuntu
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 23f3ded92d07184b3611d08c62d7b474a76c956f | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 570158e464c9f57ab03c4162b4e6853b2c7c650d | /home/vscode/.oh-my-zsh |
 | [vcpkg](https://github.com/microsoft/vcpkg) | aa27f5d15ab1d8cb1617d1c003d1b4a30e472e24 | /usr/local/vcpkg |
 
 **Additional linux tools and packages**
@@ -372,7 +372,7 @@ mcr.microsoft.com/devcontainers/cpp:dev-ubuntu
 
 ## Variant: bionic
 
-**Digest:** sha256:bee4168df92d1e4e660cac3a7012464008e409a8dd100d5d2d0133f599aa1188
+**Digest:** sha256:f7de048677084fe38e972c323c750e836926b526a35ebe7e16cc4fa91dfaed80
 
 **Tags:**
 ```
@@ -400,7 +400,7 @@ mcr.microsoft.com/devcontainers/cpp:dev-ubuntu18.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 23f3ded92d07184b3611d08c62d7b474a76c956f | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 570158e464c9f57ab03c4162b4e6853b2c7c650d | /home/vscode/.oh-my-zsh |
 | [vcpkg](https://github.com/microsoft/vcpkg) | aa27f5d15ab1d8cb1617d1c003d1b4a30e472e24 | /usr/local/vcpkg |
 
 **Additional linux tools and packages**
