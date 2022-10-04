@@ -36,7 +36,7 @@ Some other tips:
     rm -rf /var/lib/apt/lists/*
     ```
 
-The only downside of doing this is that `apt-get update` has to be executed before you install a package. However, in most cases adding this package to a Dockerfile is a better choice anyway since this will survive a "rebuild" of the image and the creation of an updated container. 
+    The only downside of doing this is that `apt-get update` has to be executed before you install a package. However, in most cases adding this package to a Dockerfile is a better choice anyway since this will survive a "rebuild" of the image and the creation of an updated container. 
 
 2. In all cases, you'll want to pay attention to package caching since this can also take up image space. Typically there is an option for a package manager to not cache when installing that you can use to minimize the size of the image. For example, for Alpine Linux, there's `apk --no-cache`
 
