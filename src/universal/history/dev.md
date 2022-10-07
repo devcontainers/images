@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:10a190271bdd58769ec6b8efab617af418b8d7e4a274c67919470b21cc44d3b2
+**Digest:** sha256:8cf579a05f8c717b6c0530ea53f27050532589f1d62279a1f905143e3784dbe0
 
 **Tags:**
 ```
@@ -34,19 +34,19 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [PHP](https://xdebug.org/) | 8.0.16<br />8.1.4 | /usr/local/php/&lt;version&gt; |
 | GCC | 9.4.0-1ubuntu1~20.04.1 | 
 | Clang | 10.0.0-4ubuntu1 | 
-| [Go](https://golang.org/dl) | 1.19.1 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.19.2 | /usr/local/go |
 | [Jekyll](https://jekyllrb.com/) | 4.2.2 | 
-| [Jupyter Lab](https://jupyter.org/) | 3.4.7 | /home/codespace/.local/bin/jupyter-lab |
+| [Jupyter Lab](https://jupyter.org/) | 3.4.8 | /home/codespace/.local/bin/jupyter-lab |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 570158e464c9f57ab03c4162b4e6853b2c7c650d | /home/codespace/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 78e85c7d78edeca7f06d6a54ad7f03f10dacde62 | /home/codespace/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | bf45ef070e82356ed36a0f4d98f8ec651c8f0d98 | /usr/local/nvs |
 | [rbenv](https://github.com/rbenv/rbenv.git) | a6cf6aeadbee45991aefccf2dfc1c97dd75714b8 | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 55fb8a246077029aff4935b09ee9e0b65de0b582 | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 55575fdb5ea862fda0545578520eec8f91264fc5 | /usr/local/share/ruby-build |
 
 **Pip / pipx installed tools and packages**
 
@@ -86,7 +86,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | github.com/uudashr/gopkgs | 2.0.1+incompatible |
 | github.com/ramya-rao-a/go-outline | 0.0.0-20210608161538-9736a4bde949 |
 | github.com/go-delve/delve | 1.9.1 |
-| github.com/golangci/golangci-lint | 1.49.0 |
+| github.com/golangci/golangci-lint | 1.50.0 |
 
 **Ruby gems and tools**
 
@@ -109,7 +109,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [Docker Compose](https://github.com/docker/compose) | 1.29.2 | /usr/local/bin |
 | [SDKMAN!](https://github.com/sdkman/sdkman-cli) | 5.16.0 | /usr/local/sdkman |
 | [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
-| [GitHub CLI](https://github.com/cli/cli) | 2.16.1 | 
+| [GitHub CLI](https://github.com/cli/cli) | 2.17.0 | 
 | [yarn](https://yarnpkg.com/) | 1.22.19 | /usr/bin |
 | [Maven](https://maven.apache.org/) | 3.8.6 | /usr/local/sdkman/candidates/maven/current/bin |
 | [Gradle](https://gradle.org/) | 7.5.1 | /usr/local/sdkman/candidates/gradle/current/bin |
@@ -173,8 +173,8 @@ mcr.microsoft.com/devcontainers/universal:dev
 | man-db | 2.9.1-1 |
 | manpages | 5.05-1 |
 | manpages-dev | 5.05-1 |
-| moby-cli (Docker CLI) | 20.10.18+azure-ubuntu20.04u1 |
-| moby-engine (Docker Engine) | 20.10.18+azure-ubuntu20.04u1 |
+| moby-cli (Docker CLI) | 20.10.18+azure-ubuntu20.04u2 |
+| moby-engine (Docker Engine) | 20.10.18+azure-ubuntu20.04u2 |
 | nano | 4.8-1ubuntu1 |
 | ncdu | 1.14.1-1 |
 | net-tools | 1.60+git20180626.aebd88e-1ubuntu1 |
@@ -200,6 +200,6 @@ mcr.microsoft.com/devcontainers/universal:dev
 | wget | 1.20.3-1ubuntu2 |
 | xtail | 2.1-6 |
 | zip | 3.0-11build1 |
-| zlib1g | 1:1.2.11.dfsg-2ubuntu1.3 |
+| zlib1g | 1:1.2.11.dfsg-2ubuntu1.4 |
 | zsh | 5.8-3ubuntu1.1 |
 
