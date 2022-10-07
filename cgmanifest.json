@@ -6,7 +6,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "570158e464c9f57ab03c4162b4e6853b2c7c650d"
+                    "commitHash": "78e85c7d78edeca7f06d6a54ad7f03f10dacde62"
                 }
             }
         },
@@ -76,17 +76,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "779ce74ef67d3e12d904da1b15f9ed5626d5f677"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "git",
-                "Git": {
-                    "Name": "vcpkg",
-                    "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "aa27f5d15ab1d8cb1617d1c003d1b4a30e472e24"
+                    "commitHash": "e2667a41fc2fc578474e9521d7eb90b769569c83"
                 }
             }
         },
@@ -331,7 +321,7 @@
                 "Type": "go",
                 "Go": {
                     "Name": "github.com/golangci/golangci-lint",
-                    "Version": "1.49.0"
+                    "Version": "1.50.0"
                 }
             }
         },
@@ -813,7 +803,7 @@
                 "Type": "linux",
                 "Linux": {
                     "Name": "moby-cli",
-                    "Version": "20.10.18+azure-ubuntu20.04u1",
+                    "Version": "20.10.18+azure-ubuntu20.04u2",
                     "Distribution": "ubuntu",
                     "Release": "20.04",
                     "Pool-URL": "https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod",
@@ -826,7 +816,7 @@
                 "Type": "linux",
                 "Linux": {
                     "Name": "moby-engine",
-                    "Version": "20.10.18+azure-ubuntu20.04u1",
+                    "Version": "20.10.18+azure-ubuntu20.04u2",
                     "Distribution": "ubuntu",
                     "Release": "20.04",
                     "Pool-URL": "https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod",
@@ -975,7 +965,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "570158e464c9f57ab03c4162b4e6853b2c7c650d"
+                    "commitHash": "78e85c7d78edeca7f06d6a54ad7f03f10dacde62"
                 }
             }
         },
@@ -1005,7 +995,7 @@
                 "Git": {
                     "Name": "ruby-build",
                     "repositoryUrl": "https://github.com/rbenv/ruby-build.git",
-                    "commitHash": "55fb8a246077029aff4935b09ee9e0b65de0b582"
+                    "commitHash": "55575fdb5ea862fda0545578520eec8f91264fc5"
                 }
             }
         },
@@ -1074,7 +1064,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "GitHub CLI",
-                    "Version": "2.16.1",
+                    "Version": "2.17.0",
                     "DownloadUrl": "https://github.com/cli/cli"
                 }
             }
@@ -1084,7 +1074,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Go",
-                    "Version": "1.19.1",
+                    "Version": "1.19.2",
                     "DownloadUrl": "https://golang.org/dl"
                 }
             }
@@ -1170,7 +1160,7 @@
                 "Type": "RubyGems",
                 "RubyGems": {
                     "Name": "bundler",
-                    "Version": "2.3.22"
+                    "Version": "2.3.23"
                 }
             }
         },
@@ -1218,7 +1208,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "570158e464c9f57ab03c4162b4e6853b2c7c650d"
+                    "commitHash": "78e85c7d78edeca7f06d6a54ad7f03f10dacde62"
                 }
             }
         },
