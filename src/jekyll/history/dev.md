@@ -10,7 +10,7 @@
 
 ## Variant: 2.7-bullseye
 
-**Digest:** sha256:7d8e99e62089c7da294ec8f513157c977a678e197a95834a3f5a510fc3f3e4aa
+**Digest:** sha256:3ff6b7a6b7b94cd73268e17e3068b3385df63f5b59b3819295aab98bbbce67e0
 
 **Tags:**
 ```
@@ -38,9 +38,9 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 78e85c7d78edeca7f06d6a54ad7f03f10dacde62 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 11daa7dd5f22acadef1135000e92cc899e22c134 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
-| [rbenv](https://github.com/rbenv/rbenv.git) | a6cf6aeadbee45991aefccf2dfc1c97dd75714b8 | /usr/local/share/rbenv |
+| [rbenv](https://github.com/rbenv/rbenv.git) | 41580b69db1ca10c4701720e150300898273aaf3 | /usr/local/share/rbenv |
 | [ruby-build](https://github.com/rbenv/ruby-build.git) | 55575fdb5ea862fda0545578520eec8f91264fc5 | /usr/local/share/ruby-build |
 
 **Ruby gems and tools**
@@ -104,7 +104,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 
 ## Variant: 2.7-buster
 
-**Digest:** sha256:f48acd523279c2bc438c891a8048bbbd708609c41319e7ac37c2ce4b2fdbf048
+**Digest:** sha256:580d79d4d8762ad1d09834361934270af7319cfa745d1e1adc27c4cbcf75dcf8
 
 **Tags:**
 ```
@@ -131,9 +131,9 @@ mcr.microsoft.com/devcontainers/jekyll:dev-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 78e85c7d78edeca7f06d6a54ad7f03f10dacde62 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 11daa7dd5f22acadef1135000e92cc899e22c134 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
-| [rbenv](https://github.com/rbenv/rbenv.git) | a6cf6aeadbee45991aefccf2dfc1c97dd75714b8 | /usr/local/share/rbenv |
+| [rbenv](https://github.com/rbenv/rbenv.git) | 41580b69db1ca10c4701720e150300898273aaf3 | /usr/local/share/rbenv |
 | [ruby-build](https://github.com/rbenv/ruby-build.git) | 55575fdb5ea862fda0545578520eec8f91264fc5 | /usr/local/share/ruby-build |
 
 **Ruby gems and tools**

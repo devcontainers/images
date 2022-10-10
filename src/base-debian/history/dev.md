@@ -11,7 +11,7 @@
 
 ## Variant: buster
 
-**Digest:** sha256:6c557bdff9924ea4b1696b0f8d33ee5d58d86c4043a40b30f21f261a3b67a073
+**Digest:** sha256:5aeb0d871c19ded1cca7e91a923e3bea21fd939a02d2b03e793b7fc05e0f2633
 
 **Tags:**
 ```
@@ -32,7 +32,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian10
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 78e85c7d78edeca7f06d6a54ad7f03f10dacde62 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 11daa7dd5f22acadef1135000e92cc899e22c134 | /home/vscode/.oh-my-zsh |
 
 **Additional linux tools and packages**
 
@@ -81,7 +81,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian10
 
 ## Variant: bullseye
 
-**Digest:** sha256:be1c3544a46af8031d06ac9acb3df4f0792c0c019f44a604fff91ef2f1d89d58
+**Digest:** sha256:ffb3072bf0ef3026d5d431eeefec352ec07dc3435fb42ff11216c1e55b6679b1
 
 **Tags:**
 ```
@@ -104,7 +104,7 @@ mcr.microsoft.com/devcontainers/base:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 78e85c7d78edeca7f06d6a54ad7f03f10dacde62 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 11daa7dd5f22acadef1135000e92cc899e22c134 | /home/vscode/.oh-my-zsh |
 
 **Additional linux tools and packages**
 
@@ -152,7 +152,7 @@ mcr.microsoft.com/devcontainers/base:dev
 
 ## Variant: stretch
 
-**Digest:** sha256:62ed1aa0c50bfddacbe3e914df2bc5ef98785607901a7840fa4c18df5ba34213
+**Digest:** sha256:08d86c5223eb994c50be9e55eecb6da114b9334c7609ffc74983cb82d8fbb4b5
 
 **Tags:**
 ```
@@ -173,7 +173,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian9
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 78e85c7d78edeca7f06d6a54ad7f03f10dacde62 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 11daa7dd5f22acadef1135000e92cc899e22c134 | /home/vscode/.oh-my-zsh |
 
 **Additional linux tools and packages**
 

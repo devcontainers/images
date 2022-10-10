@@ -12,7 +12,7 @@
 
 ## Variant: 17-bullseye
 
-**Digest:** sha256:10f1900a35e5cadb65e10c4f2956a311936ab87b30fc8aa0e4065e7d97dd1c93
+**Digest:** sha256:07d17dce6bd9fdca1d9a5fdc6dd9adeefe90cd6dabf21c5c0e9ce9d695419a12
 
 **Tags:**
 ```
@@ -40,7 +40,7 @@ mcr.microsoft.com/devcontainers/java:dev-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 78e85c7d78edeca7f06d6a54ad7f03f10dacde62 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -96,7 +96,7 @@ mcr.microsoft.com/devcontainers/java:dev-bullseye
 
 ## Variant: 17-buster
 
-**Digest:** sha256:64ec4c5a0f47bb723e9a85f9035d67f0d6b7ec34a991fe87350c40dff67666d6
+**Digest:** sha256:aedf2d9e1f4aa8ce333d370f82c4e10a4bc44903a7e20c1308ee294d1ddb252c
 
 **Tags:**
 ```
@@ -121,7 +121,7 @@ mcr.microsoft.com/devcontainers/java:dev-17-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 78e85c7d78edeca7f06d6a54ad7f03f10dacde62 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -178,7 +178,7 @@ mcr.microsoft.com/devcontainers/java:dev-17-buster
 
 ## Variant: 11-bullseye
 
-**Digest:** sha256:3e428fd3f5aa3cd77c6ef4087a8acd2f35a55ea602192b9969eb1cc16eb037e7
+**Digest:** sha256:c9ed3213c15a23e25e630f3bfa3c6f8446c4057519c202ec68b9179e9473d86c
 
 **Tags:**
 ```
@@ -205,7 +205,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 78e85c7d78edeca7f06d6a54ad7f03f10dacde62 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -261,7 +261,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bullseye
 
 ## Variant: 11-buster
 
-**Digest:** sha256:220e0445ff4f5352834115f66df9b2f079f296adbcf780dcbb70a1ebc79fa434
+**Digest:** sha256:69f909a5cd09726db7acbc7a8a77b17034944e1d8517a1811c4780e266a57101
 
 **Tags:**
 ```
@@ -287,7 +287,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 78e85c7d78edeca7f06d6a54ad7f03f10dacde62 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Other tools and utilities**
