@@ -6,7 +6,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "78e85c7d78edeca7f06d6a54ad7f03f10dacde62"
+                    "commitHash": "11daa7dd5f22acadef1135000e92cc899e22c134"
                 }
             }
         },
@@ -76,7 +76,17 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "e2667a41fc2fc578474e9521d7eb90b769569c83"
+                    "commitHash": "42cc830d874f8e24eb4eb05bd5bb28496e3d498c"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "git",
+                "Git": {
+                    "Name": "vcpkg",
+                    "repositoryUrl": "https://github.com/microsoft/vcpkg",
+                    "commitHash": "083f103cfb6ff4a05d6c49b6a2231965e08b6e2b"
                 }
             }
         },
@@ -149,7 +159,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "7dcabbe6826073ef6069c8a4b6f9a943f00d2df0"
+                    "commitHash": "78e85c7d78edeca7f06d6a54ad7f03f10dacde62"
                 }
             }
         },
@@ -400,7 +410,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "pylint",
-                    "Version": "2.15.3"
+                    "Version": "2.15.4"
                 }
             }
         },
@@ -427,7 +437,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "black",
-                    "Version": "22.8.0"
+                    "Version": "22.10.0"
                 }
             }
         },
@@ -590,6 +600,15 @@
                 "Pip": {
                     "Name": "pylint",
                     "Version": "2.13.9"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "Pip",
+                "Pip": {
+                    "Name": "black",
+                    "Version": "22.8.0"
                 }
             }
         },
@@ -847,7 +866,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "scipy",
-                    "Version": "1.9.1"
+                    "Version": "1.9.2"
                 }
             }
         },
@@ -856,7 +875,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "matplotlib",
-                    "Version": "3.6.0"
+                    "Version": "3.6.1"
                 }
             }
         },
@@ -965,7 +984,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "78e85c7d78edeca7f06d6a54ad7f03f10dacde62"
+                    "commitHash": "11daa7dd5f22acadef1135000e92cc899e22c134"
                 }
             }
         },
@@ -985,7 +1004,7 @@
                 "Git": {
                     "Name": "rbenv",
                     "repositoryUrl": "https://github.com/rbenv/rbenv.git",
-                    "commitHash": "a6cf6aeadbee45991aefccf2dfc1c97dd75714b8"
+                    "commitHash": "41580b69db1ca10c4701720e150300898273aaf3"
                 }
             }
         },
@@ -1198,7 +1217,7 @@
                 "Type": "npm",
                 "Npm": {
                     "Name": "eslint",
-                    "Version": "8.24.0"
+                    "Version": "8.25.0"
                 }
             }
         },
@@ -1208,7 +1227,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "78e85c7d78edeca7f06d6a54ad7f03f10dacde62"
+                    "commitHash": "11daa7dd5f22acadef1135000e92cc899e22c134"
                 }
             }
         },
