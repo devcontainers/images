@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:8cf579a05f8c717b6c0530ea53f27050532589f1d62279a1f905143e3784dbe0
+**Digest:** sha256:ad85238e3e943e767f9714dae7650aa3e44d561eecec204b03ba8e3a512302fe
 
 **Tags:**
 ```
@@ -42,10 +42,10 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 78e85c7d78edeca7f06d6a54ad7f03f10dacde62 | /home/codespace/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 11daa7dd5f22acadef1135000e92cc899e22c134 | /home/codespace/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | bf45ef070e82356ed36a0f4d98f8ec651c8f0d98 | /usr/local/nvs |
-| [rbenv](https://github.com/rbenv/rbenv.git) | a6cf6aeadbee45991aefccf2dfc1c97dd75714b8 | /usr/local/share/rbenv |
+| [rbenv](https://github.com/rbenv/rbenv.git) | 41580b69db1ca10c4701720e150300898273aaf3 | /usr/local/share/rbenv |
 | [ruby-build](https://github.com/rbenv/ruby-build.git) | 55575fdb5ea862fda0545578520eec8f91264fc5 | /usr/local/share/ruby-build |
 
 **Pip / pipx installed tools and packages**
@@ -54,8 +54,8 @@ mcr.microsoft.com/devcontainers/universal:dev
 |----------------|---------|
 | numpy | 1.23.3 |
 | pandas | 1.5.0 |
-| scipy | 1.9.1 |
-| matplotlib | 3.6.0 |
+| scipy | 1.9.2 |
+| matplotlib | 3.6.1 |
 | seaborn | 0.12.0 |
 | scikit-learn | 1.1.2 |
 | tensorflow | 2.10.0 |
@@ -63,10 +63,10 @@ mcr.microsoft.com/devcontainers/universal:dev
 | torch | 1.12.1 |
 | requests | 2.28.1 |
 | plotly | 5.10.0 |
-| pylint | 2.15.3 |
+| pylint | 2.15.4 |
 | flake8 | 5.0.4 |
 | autopep8 | 1.7.0 |
-| black | 22.8.0 |
+| black | 22.10.0 |
 | yapf | 0.32.0 |
 | mypy | 0.982 |
 | pydocstyle | 6.1.1 |
