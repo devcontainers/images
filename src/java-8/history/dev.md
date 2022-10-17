@@ -10,7 +10,7 @@
 
 ## Variant: bullseye
 
-**Digest:** sha256:99f04e6ba7844b73bc77d3aad8b23fa5c08b2dc879c4956478536beaadc6f03e
+**Digest:** sha256:dd7e9405ba6f3792f7177d0be84e3d662b13ebcc1ed0963a6ac359a84e89135f
 
 **Tags:**
 ```
@@ -92,7 +92,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bullseye
 
 ## Variant: buster
 
-**Digest:** sha256:691276c2553d2ba372370a5156e3764076566d8c074e66b0d87dd2b921c26bc4
+**Digest:** sha256:e643853ce6d3c2e4d480e22446f16618802907168cf7a50ce51ed9f4c3670d41
 
 **Tags:**
 ```
@@ -143,7 +143,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-buster
 | iproute2 | 4.20.0-2+deb10u1 |
 | jq | 1.5+dfsg-2+b1 |
 | less | 487-0.1+b1 |
-| libc6 | 2.28-10+deb10u1 |
+| libc6 | 2.28-10+deb10u2 |
 | libgcc1 | 1:8.3.0-6 |
 | libgssapi-krb5-2 | 1.17-3+deb10u4 |
 | libicu63 | 63.1-6+deb10u3 |
