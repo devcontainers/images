@@ -14,7 +14,7 @@
 
 ## Variant: 8.1-apache-bullseye
 
-**Digest:** sha256:9408a541040b0beefca059a3e72c566ca70d196ced4c00648024447efd3f20e9
+**Digest:** sha256:04971535068bb796fbf77995cb85189161f97a7e46aae1a99136427837639d6f
 
 **Tags:**
 ```
@@ -44,7 +44,7 @@ mcr.microsoft.com/devcontainers/php:dev-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 11daa7dd5f22acadef1135000e92cc899e22c134 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 65a1e4edbe678cdac37ad96ca4bc4f6d77e27adf | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -52,7 +52,7 @@ mcr.microsoft.com/devcontainers/php:dev-bullseye
 | Tool | Version | Path |
 |------|---------|------|
 | [Xdebug](https://xdebug.org/) | 3.1.5 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.4.2 | /usr/local |
+| [Composer](https://getcomposer.org/) | 2.4.3 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -101,7 +101,7 @@ mcr.microsoft.com/devcontainers/php:dev-bullseye
 
 ## Variant: 8.0-apache-bullseye
 
-**Digest:** sha256:acc82c74e94509f3ba1d6a804883bf7fe8c67d7e6d4c1ffba23d5aeed4d1bafc
+**Digest:** sha256:6797c8b81f2e5ed885af153373678c21b643f0e00cc15d73d9d05963c4008cb4
 
 **Tags:**
 ```
@@ -128,7 +128,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 11daa7dd5f22acadef1135000e92cc899e22c134 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 65a1e4edbe678cdac37ad96ca4bc4f6d77e27adf | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -136,7 +136,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-bullseye
 | Tool | Version | Path |
 |------|---------|------|
 | [Xdebug](https://xdebug.org/) | 3.1.5 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.4.2 | /usr/local |
+| [Composer](https://getcomposer.org/) | 2.4.3 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -185,7 +185,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-bullseye
 
 ## Variant: 7.4-apache-bullseye
 
-**Digest:** sha256:1f41c4216ed41f2ca09dde0e42cf2125d90eef238d2620a9ba3084c17a32210c
+**Digest:** sha256:505370e92549ba5d339b3f2a696881b5a7d3638055c002ab6d7ff3b6f37cd3a1
 
 **Tags:**
 ```
@@ -214,7 +214,7 @@ mcr.microsoft.com/devcontainers/php:dev-7.4-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 11daa7dd5f22acadef1135000e92cc899e22c134 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 65a1e4edbe678cdac37ad96ca4bc4f6d77e27adf | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -222,7 +222,7 @@ mcr.microsoft.com/devcontainers/php:dev-7.4-bullseye
 | Tool | Version | Path |
 |------|---------|------|
 | [Xdebug](https://xdebug.org/) | 3.1.5 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.4.2 | /usr/local |
+| [Composer](https://getcomposer.org/) | 2.4.3 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -271,7 +271,7 @@ mcr.microsoft.com/devcontainers/php:dev-7.4-bullseye
 
 ## Variant: 8.1-apache-buster
 
-**Digest:** sha256:8c8c9b7a88d0377f0e6251eb3e95c244a7f56eec0db061720c138befb0d934bc
+**Digest:** sha256:15083cae8d3fbcb2b72682e6730818b25deec996a08fc5059af9a061c55a5148
 
 **Tags:**
 ```
@@ -299,7 +299,7 @@ mcr.microsoft.com/devcontainers/php:dev-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 11daa7dd5f22acadef1135000e92cc899e22c134 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 65a1e4edbe678cdac37ad96ca4bc4f6d77e27adf | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -307,7 +307,7 @@ mcr.microsoft.com/devcontainers/php:dev-buster
 | Tool | Version | Path |
 |------|---------|------|
 | [Xdebug](https://xdebug.org/) | 3.1.5 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.4.2 | /usr/local |
+| [Composer](https://getcomposer.org/) | 2.4.3 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -318,13 +318,13 @@ mcr.microsoft.com/devcontainers/php:dev-buster
 | ca-certificates | 20200601~deb10u2 |
 | curl | 7.64.0-4+deb10u3 |
 | dialog | 1.3-20190211-1 |
-| git | 1:2.20.1-2+deb10u3 |
+| git | 1:2.20.1-2+deb10u4 |
 | gnupg2 | 2.2.12-1+deb10u2 |
 | htop | 2.2.0-1+b1 |
 | iproute2 | 4.20.0-2+deb10u1 |
 | jq | 1.5+dfsg-2+b1 |
 | less | 487-0.1+b1 |
-| libc6 | 2.28-10+deb10u1 |
+| libc6 | 2.28-10+deb10u2 |
 | libgcc1 | 1:8.3.0-6 |
 | libgssapi-krb5-2 | 1.17-3+deb10u4 |
 | libicu63 | 63.1-6+deb10u3 |
@@ -332,7 +332,7 @@ mcr.microsoft.com/devcontainers/php:dev-buster
 | liblttng-ust0 | 2.10.3-1 |
 | libssl1.1 | 1.1.1n-0+deb10u3 |
 | libstdc++6 | 8.3.0-6 |
-| locales | 2.28-10+deb10u1 |
+| locales | 2.28-10+deb10u2 |
 | lsb-release | 10.2019051400 |
 | lsof | 4.91+dfsg-1 |
 | man-db | 2.8.5-2 |
@@ -357,7 +357,7 @@ mcr.microsoft.com/devcontainers/php:dev-buster
 
 ## Variant: 8.0-apache-buster
 
-**Digest:** sha256:9a0abda6e5c66d38cd5223c32579ee304fff28961166e8358320f878d887aab9
+**Digest:** sha256:bd0ec7aa6ca12bd1beeaa9e47548972efa7bf22a12ec76e06512a875eb4d498b
 
 **Tags:**
 ```
@@ -383,7 +383,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 11daa7dd5f22acadef1135000e92cc899e22c134 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 65a1e4edbe678cdac37ad96ca4bc4f6d77e27adf | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -391,7 +391,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-buster
 | Tool | Version | Path |
 |------|---------|------|
 | [Xdebug](https://xdebug.org/) | 3.1.5 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.4.2 | /usr/local |
+| [Composer](https://getcomposer.org/) | 2.4.3 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -402,13 +402,13 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-buster
 | ca-certificates | 20200601~deb10u2 |
 | curl | 7.64.0-4+deb10u3 |
 | dialog | 1.3-20190211-1 |
-| git | 1:2.20.1-2+deb10u3 |
+| git | 1:2.20.1-2+deb10u4 |
 | gnupg2 | 2.2.12-1+deb10u2 |
 | htop | 2.2.0-1+b1 |
 | iproute2 | 4.20.0-2+deb10u1 |
 | jq | 1.5+dfsg-2+b1 |
 | less | 487-0.1+b1 |
-| libc6 | 2.28-10+deb10u1 |
+| libc6 | 2.28-10+deb10u2 |
 | libgcc1 | 1:8.3.0-6 |
 | libgssapi-krb5-2 | 1.17-3+deb10u4 |
 | libicu63 | 63.1-6+deb10u3 |
@@ -416,7 +416,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-buster
 | liblttng-ust0 | 2.10.3-1 |
 | libssl1.1 | 1.1.1n-0+deb10u3 |
 | libstdc++6 | 8.3.0-6 |
-| locales | 2.28-10+deb10u1 |
+| locales | 2.28-10+deb10u2 |
 | lsb-release | 10.2019051400 |
 | lsof | 4.91+dfsg-1 |
 | man-db | 2.8.5-2 |
@@ -441,7 +441,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-buster
 
 ## Variant: 7.4-apache-buster
 
-**Digest:** sha256:f2c5cfb3ddd30f1c911d37344d8a898e70be295568313878248b18736b473528
+**Digest:** sha256:08e97eeef913753a4ee3720fc75f6e713af94791ef3656138f08d60b26b82e5e
 
 **Tags:**
 ```
@@ -468,7 +468,7 @@ mcr.microsoft.com/devcontainers/php:dev-7.4-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 11daa7dd5f22acadef1135000e92cc899e22c134 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 65a1e4edbe678cdac37ad96ca4bc4f6d77e27adf | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -476,7 +476,7 @@ mcr.microsoft.com/devcontainers/php:dev-7.4-buster
 | Tool | Version | Path |
 |------|---------|------|
 | [Xdebug](https://xdebug.org/) | 3.1.5 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.4.2 | /usr/local |
+| [Composer](https://getcomposer.org/) | 2.4.3 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -487,13 +487,13 @@ mcr.microsoft.com/devcontainers/php:dev-7.4-buster
 | ca-certificates | 20200601~deb10u2 |
 | curl | 7.64.0-4+deb10u3 |
 | dialog | 1.3-20190211-1 |
-| git | 1:2.20.1-2+deb10u3 |
+| git | 1:2.20.1-2+deb10u4 |
 | gnupg2 | 2.2.12-1+deb10u2 |
 | htop | 2.2.0-1+b1 |
 | iproute2 | 4.20.0-2+deb10u1 |
 | jq | 1.5+dfsg-2+b1 |
 | less | 487-0.1+b1 |
-| libc6 | 2.28-10+deb10u1 |
+| libc6 | 2.28-10+deb10u2 |
 | libgcc1 | 1:8.3.0-6 |
 | libgssapi-krb5-2 | 1.17-3+deb10u4 |
 | libicu63 | 63.1-6+deb10u3 |
@@ -501,7 +501,7 @@ mcr.microsoft.com/devcontainers/php:dev-7.4-buster
 | liblttng-ust0 | 2.10.3-1 |
 | libssl1.1 | 1.1.1n-0+deb10u3 |
 | libstdc++6 | 8.3.0-6 |
-| locales | 2.28-10+deb10u1 |
+| locales | 2.28-10+deb10u2 |
 | lsb-release | 10.2019051400 |
 | lsof | 4.91+dfsg-1 |
 | man-db | 2.8.5-2 |

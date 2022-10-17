@@ -12,7 +12,7 @@
 
 ## Variant: 17-bullseye
 
-**Digest:** sha256:07d17dce6bd9fdca1d9a5fdc6dd9adeefe90cd6dabf21c5c0e9ce9d695419a12
+**Digest:** sha256:26db01440464e0ae4ec4f645473b185dd6b8d698e5b0502a0a650d8ae550b43f
 
 **Tags:**
 ```
@@ -96,7 +96,7 @@ mcr.microsoft.com/devcontainers/java:dev-bullseye
 
 ## Variant: 17-buster
 
-**Digest:** sha256:aedf2d9e1f4aa8ce333d370f82c4e10a4bc44903a7e20c1308ee294d1ddb252c
+**Digest:** sha256:16689e6f92530726665e2a0bedd208a50499b8e6644c36c3b4658697ac85e2ec
 
 **Tags:**
 ```
@@ -145,7 +145,7 @@ mcr.microsoft.com/devcontainers/java:dev-17-buster
 | iproute2 | 4.20.0-2+deb10u1 |
 | jq | 1.5+dfsg-2+b1 |
 | less | 487-0.1+b1 |
-| libc6 | 2.28-10+deb10u1 |
+| libc6 | 2.28-10+deb10u2 |
 | libgcc1 | 1:8.3.0-6 |
 | libgssapi-krb5-2 | 1.17-3+deb10u4 |
 | libicu63 | 63.1-6+deb10u3 |
@@ -178,7 +178,7 @@ mcr.microsoft.com/devcontainers/java:dev-17-buster
 
 ## Variant: 11-bullseye
 
-**Digest:** sha256:c9ed3213c15a23e25e630f3bfa3c6f8446c4057519c202ec68b9179e9473d86c
+**Digest:** sha256:f6783733531d0c9d4595f6bea79bd069ab88331419c283e5fae9abc05a019c40
 
 **Tags:**
 ```
@@ -261,7 +261,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bullseye
 
 ## Variant: 11-buster
 
-**Digest:** sha256:69f909a5cd09726db7acbc7a8a77b17034944e1d8517a1811c4780e266a57101
+**Digest:** sha256:0eea54caee4e19252d6d81a0fc4f4ae087adaf85552dec46394d0edc4f9b77b9
 
 **Tags:**
 ```
@@ -311,7 +311,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-buster
 | iproute2 | 4.20.0-2+deb10u1 |
 | jq | 1.5+dfsg-2+b1 |
 | less | 487-0.1+b1 |
-| libc6 | 2.28-10+deb10u1 |
+| libc6 | 2.28-10+deb10u2 |
 | libgcc1 | 1:8.3.0-6 |
 | libgssapi-krb5-2 | 1.17-3+deb10u4 |
 | libicu63 | 63.1-6+deb10u3 |

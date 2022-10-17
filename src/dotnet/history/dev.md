@@ -12,7 +12,7 @@
 
 ## Variant: 6.0-bullseye-slim
 
-**Digest:** sha256:2da30d92dcff4b6847336f550e3e0e8ea5c4bddfa381a51716a44e23bdb31f42
+**Digest:** sha256:fc205ed528c047831f302b4f2b9b029569486a14179b00539e25026a25a43e7c
 
 **Tags:**
 ```
@@ -33,13 +33,13 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [.NET](https://dotnet.microsoft.com/) | 6.0.401 (6.0.9) | /usr |
+| [.NET](https://dotnet.microsoft.com/) | 6.0.402 (6.0.1) | /usr |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 11daa7dd5f22acadef1135000e92cc899e22c134 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 65a1e4edbe678cdac37ad96ca4bc4f6d77e27adf | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Additional linux tools and packages**
@@ -89,7 +89,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-bullseye
 
 ## Variant: 6.0-focal
 
-**Digest:** sha256:c5a33cb38e8ecdb7378d8d12bba712945f5eea3a2e2f501269becc37ec512a61
+**Digest:** sha256:cd9d3621bc07b053cf5dbcb61c3deb47066e8275a1a29e9ad0ee693d7e8d0253
 
 **Tags:**
 ```
@@ -108,13 +108,13 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-focal
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [.NET](https://dotnet.microsoft.com/) | 6.0.401 (6.0.9) | /usr |
+| [.NET](https://dotnet.microsoft.com/) | 6.0.402 (6.0.1) | /usr |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 11daa7dd5f22acadef1135000e92cc899e22c134 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 65a1e4edbe678cdac37ad96ca4bc4f6d77e27adf | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Additional linux tools and packages**
@@ -155,7 +155,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-focal
 | rsync | 3.1.3-8ubuntu0.4 |
 | strace | 5.5-3ubuntu1 |
 | sudo | 1.8.31-1ubuntu1.2 |
-| unzip | 6.0-25ubuntu1 |
+| unzip | 6.0-25ubuntu1.1 |
 | vim-tiny | 2:8.1.2269-1ubuntu5.9 |
 | wget | 1.20.3-1ubuntu2 |
 | yarn | 1.22.19-1 |
@@ -165,7 +165,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-focal
 
 ## Variant: 3.1-bullseye
 
-**Digest:** sha256:e41d2e21bb583123d0bbfde57ccf1278611ef29f269d4e81fcb6e8473418f024
+**Digest:** sha256:c1df1a7f673f63b6f70c4c719c41643448e324ac070a3ed4766f9bd248094927
 
 **Tags:**
 ```
@@ -185,13 +185,13 @@ mcr.microsoft.com/devcontainers/dotnetcore:dev-3.1-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [.NET](https://dotnet.microsoft.com/) | 3.1.423 (3.1.2) | /usr |
+| [.NET](https://dotnet.microsoft.com/) | 3.1.424 (3.1.3) | /usr |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 11daa7dd5f22acadef1135000e92cc899e22c134 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 65a1e4edbe678cdac37ad96ca4bc4f6d77e27adf | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Additional linux tools and packages**
@@ -241,7 +241,7 @@ mcr.microsoft.com/devcontainers/dotnetcore:dev-3.1-bullseye
 
 ## Variant: 3.1-focal
 
-**Digest:** sha256:4872882d50486e8fdadf04b5501e065bd16f6d029db63d5faf64724b2ef189db
+**Digest:** sha256:39eeb49358ee53bda3edfedf60e0c3ff976f30f7fed91d2cd565668a88722cdd
 
 **Tags:**
 ```
@@ -262,13 +262,13 @@ mcr.microsoft.com/devcontainers/dotnetcore:dev-3.1
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [.NET](https://dotnet.microsoft.com/) | 3.1.423 (3.1.2) | /usr |
+| [.NET](https://dotnet.microsoft.com/) | 3.1.424 (3.1.3) | /usr |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 11daa7dd5f22acadef1135000e92cc899e22c134 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 65a1e4edbe678cdac37ad96ca4bc4f6d77e27adf | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Additional linux tools and packages**
@@ -309,7 +309,7 @@ mcr.microsoft.com/devcontainers/dotnetcore:dev-3.1
 | rsync | 3.1.3-8ubuntu0.4 |
 | strace | 5.5-3ubuntu1 |
 | sudo | 1.8.31-1ubuntu1.2 |
-| unzip | 6.0-25ubuntu1 |
+| unzip | 6.0-25ubuntu1.1 |
 | vim-tiny | 2:8.1.2269-1ubuntu5.9 |
 | wget | 1.20.3-1ubuntu2 |
 | yarn | 1.22.19-1 |

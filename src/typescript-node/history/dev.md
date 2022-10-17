@@ -14,7 +14,7 @@
 
 ## Variant: 18-bullseye
 
-**Digest:** sha256:58952a6a7dad23752db9e33159f87cf6c275d5da86e75ad86cb74fe3e411a037
+**Digest:** sha256:ec4762e50b8ce0084493c6ba098d2b8591652045adcb89ca84e1321c65f31038
 
 **Tags:**
 ```
@@ -35,14 +35,14 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 18.10.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 18.11.0 | /usr/local |
 | [TypeScript](https://www.typescriptlang.org/) | 4.8.4 | /usr/local/share/npm-global |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 11daa7dd5f22acadef1135000e92cc899e22c134 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 65a1e4edbe678cdac37ad96ca4bc4f6d77e27adf | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
@@ -99,7 +99,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bullseye
 
 ## Variant: 16-bullseye
 
-**Digest:** sha256:2252ac9c09e8ef9664eb34248858bd878e793e306888c191e9adcc61099e290c
+**Digest:** sha256:11a7e97338aca8179c9a174a45ed9765d6e593e84c0128d9d8b39a403795520c
 
 **Tags:**
 ```
@@ -119,14 +119,14 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 16.17.1 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 16.18.0 | /usr/local |
 | [TypeScript](https://www.typescriptlang.org/) | 4.8.4 | /usr/local/share/npm-global |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 11daa7dd5f22acadef1135000e92cc899e22c134 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 65a1e4edbe678cdac37ad96ca4bc4f6d77e27adf | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
@@ -183,7 +183,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16
 
 ## Variant: 14-bullseye
 
-**Digest:** sha256:f90a29e178af94fae0bca7f21c428fc32eebdf58a4c55405aeda58bbc2df0122
+**Digest:** sha256:cc3ee34bb012b9171f04453df24aa0a609d282685612862cee76cadc43a95888
 
 **Tags:**
 ```
@@ -210,7 +210,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 11daa7dd5f22acadef1135000e92cc899e22c134 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 65a1e4edbe678cdac37ad96ca4bc4f6d77e27adf | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
@@ -267,7 +267,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14
 
 ## Variant: 18-buster
 
-**Digest:** sha256:514a462ede4c8a57c3a634d931ee777ac50c015f56ddaf2f9d2a49983ca3918e
+**Digest:** sha256:7717ecc84b1094a0373104549538d4d6458ead977dce50cdb97a6b404da2403c
 
 **Tags:**
 ```
@@ -287,14 +287,14 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 18.10.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 18.11.0 | /usr/local |
 | [TypeScript](https://www.typescriptlang.org/) | 4.8.4 | /usr/local/share/npm-global |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 11daa7dd5f22acadef1135000e92cc899e22c134 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 65a1e4edbe678cdac37ad96ca4bc4f6d77e27adf | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
@@ -314,13 +314,13 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-buster
 | ca-certificates | 20200601~deb10u2 |
 | curl | 7.64.0-4+deb10u3 |
 | dialog | 1.3-20190211-1 |
-| git | 1:2.20.1-2+deb10u3 |
+| git | 1:2.20.1-2+deb10u4 |
 | gnupg2 | 2.2.12-1+deb10u2 |
 | htop | 2.2.0-1+b1 |
 | iproute2 | 4.20.0-2+deb10u1 |
 | jq | 1.5+dfsg-2+b1 |
 | less | 487-0.1+b1 |
-| libc6 | 2.28-10+deb10u1 |
+| libc6 | 2.28-10+deb10u2 |
 | libgcc1 | 1:8.3.0-6 |
 | libgssapi-krb5-2 | 1.17-3+deb10u4 |
 | libicu63 | 63.1-6+deb10u3 |
@@ -328,7 +328,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-buster
 | liblttng-ust0 | 2.10.3-1 |
 | libssl1.1 | 1.1.1n-0+deb10u3 |
 | libstdc++6 | 8.3.0-6 |
-| locales | 2.28-10+deb10u1 |
+| locales | 2.28-10+deb10u2 |
 | lsb-release | 10.2019051400 |
 | lsof | 4.91+dfsg-1 |
 | man-db | 2.8.5-2 |
@@ -352,7 +352,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-buster
 
 ## Variant: 16-buster
 
-**Digest:** sha256:a36a491e8cdc552e1862e37d3defd3985f01a610918ae776aa271f3e95e75f97
+**Digest:** sha256:69e685c82cb3b2d4917d6a208a5265bd2dd2e260a9dfc9a5017c29c3e785f2d4
 
 **Tags:**
 ```
@@ -371,14 +371,14 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 16.17.1 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 16.18.0 | /usr/local |
 | [TypeScript](https://www.typescriptlang.org/) | 4.8.4 | /usr/local/share/npm-global |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 11daa7dd5f22acadef1135000e92cc899e22c134 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 65a1e4edbe678cdac37ad96ca4bc4f6d77e27adf | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
@@ -398,13 +398,13 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16-buster
 | ca-certificates | 20200601~deb10u2 |
 | curl | 7.64.0-4+deb10u3 |
 | dialog | 1.3-20190211-1 |
-| git | 1:2.20.1-2+deb10u3 |
+| git | 1:2.20.1-2+deb10u4 |
 | gnupg2 | 2.2.12-1+deb10u2 |
 | htop | 2.2.0-1+b1 |
 | iproute2 | 4.20.0-2+deb10u1 |
 | jq | 1.5+dfsg-2+b1 |
 | less | 487-0.1+b1 |
-| libc6 | 2.28-10+deb10u1 |
+| libc6 | 2.28-10+deb10u2 |
 | libgcc1 | 1:8.3.0-6 |
 | libgssapi-krb5-2 | 1.17-3+deb10u4 |
 | libicu63 | 63.1-6+deb10u3 |
@@ -412,7 +412,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16-buster
 | liblttng-ust0 | 2.10.3-1 |
 | libssl1.1 | 1.1.1n-0+deb10u3 |
 | libstdc++6 | 8.3.0-6 |
-| locales | 2.28-10+deb10u1 |
+| locales | 2.28-10+deb10u2 |
 | lsb-release | 10.2019051400 |
 | lsof | 4.91+dfsg-1 |
 | man-db | 2.8.5-2 |
@@ -436,7 +436,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16-buster
 
 ## Variant: 14-buster
 
-**Digest:** sha256:56faf3bf8e0a42a88138efbd2b4c821ff3cdf73a6e7986d524fbffed69ccc325
+**Digest:** sha256:d6695e28a5924caf27fcd032b498c4e3d96ad6ef485932ea697280ebd96a77b9
 
 **Tags:**
 ```
@@ -462,7 +462,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 11daa7dd5f22acadef1135000e92cc899e22c134 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 65a1e4edbe678cdac37ad96ca4bc4f6d77e27adf | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
@@ -482,13 +482,13 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14-buster
 | ca-certificates | 20200601~deb10u2 |
 | curl | 7.64.0-4+deb10u3 |
 | dialog | 1.3-20190211-1 |
-| git | 1:2.20.1-2+deb10u3 |
+| git | 1:2.20.1-2+deb10u4 |
 | gnupg2 | 2.2.12-1+deb10u2 |
 | htop | 2.2.0-1+b1 |
 | iproute2 | 4.20.0-2+deb10u1 |
 | jq | 1.5+dfsg-2+b1 |
 | less | 487-0.1+b1 |
-| libc6 | 2.28-10+deb10u1 |
+| libc6 | 2.28-10+deb10u2 |
 | libgcc1 | 1:8.3.0-6 |
 | libgssapi-krb5-2 | 1.17-3+deb10u4 |
 | libicu63 | 63.1-6+deb10u3 |
@@ -496,7 +496,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14-buster
 | liblttng-ust0 | 2.10.3-1 |
 | libssl1.1 | 1.1.1n-0+deb10u3 |
 | libstdc++6 | 8.3.0-6 |
-| locales | 2.28-10+deb10u1 |
+| locales | 2.28-10+deb10u2 |
 | lsb-release | 10.2019051400 |
 | lsof | 4.91+dfsg-1 |
 | man-db | 2.8.5-2 |
