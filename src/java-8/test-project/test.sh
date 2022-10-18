@@ -19,6 +19,15 @@ check "java" java -version
 check "build-and-test-jar" ./mvnw -q package
 check "test-project" java -jar target/my-app-1.0-SNAPSHOT.jar
 
+check "git" git --version
+
+git_version_satisfied=false
+if (echo a version 2.38.1; git --version) | sort -Vk3 | tail -1 | grep -q git; then
+    git_version_satisfied=true
+fi
+
+check "git version satisfies requirement" echo $git_version_satisfied | grep "true"
+
 # Clean up
 rm -f mvnw
 rm -rf .mvn
