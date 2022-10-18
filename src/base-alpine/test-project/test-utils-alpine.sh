@@ -90,8 +90,7 @@ checkExtension() {
 
 checkCommon()
 {
-    PACKAGE_LIST="git \
-        openssh-client \
+    PACKAGE_LIST="openssh-client \
         gnupg \
         procps \
         lsof \
