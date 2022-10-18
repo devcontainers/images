@@ -13,6 +13,10 @@
         },
         "ghcr.io/devcontainers/features/node:1": {
             "version": "none"
+        },
+		"ghcr.io/devcontainers/features/git:1": {
+            "version": "latest",
+            "ppa": "false"
         }
     },
     "overrideFeatureInstallOrder": [

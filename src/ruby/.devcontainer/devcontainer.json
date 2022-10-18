@@ -12,7 +12,11 @@
             "upgradePackages": "true"
         },
         "ghcr.io/devcontainers/features/ruby:1": "none",
-        "ghcr.io/devcontainers/features/node:1": "none"
+        "ghcr.io/devcontainers/features/node:1": "none",
+        "ghcr.io/devcontainers/features/git:1": {
+            "version": "latest",
+            "ppa": "false"
+        }
     },
     "overrideFeatureInstallOrder": [
         "ghcr.io/devcontainers/features/common-utils"

@@ -1,5 +1,5 @@
 #!/bin/bash
-
+SCRIPT_FOLDER="$(cd "$(dirname $0)" && pwd)"
 USERNAME=${1:-vscode}
 
 if [ -z $HOME ]; then
@@ -51,7 +51,7 @@ checkOSPackages() {
     LABEL=$1
     shift
     echo -e "\n🧪 Testing $LABEL"
-    if apk info -e "$@"; then 
+    if dpkg-query --show -f='${Package}: ${Version}\n' "$@"; then 
         echo "✅  Passed!"
         return 0
     else
@@ -90,45 +90,35 @@ checkExtension() {
 
 checkCommon()
 {
-    PACKAGE_LIST="openssh-client \
-        gnupg \
+    PACKAGE_LIST="apt-utils \
+        git \
+        openssh-client \
+        less \
+        iproute2 \
         procps \
-        lsof \
-        htop \
-        net-tools \
-        psmisc \
         curl \
         wget \
-        rsync \
-        ca-certificates \
         unzip \
-        zip \
         nano \
-        vim \
-        less \
         jq \
-        libgcc \
-        libstdc++ \
-        krb5-libs \
-        libintl \
-        libssl1.1 \
-        lttng-ust \
-        tzdata \
-        userspace-rcu \
-        zlib \
-        sudo \
-        coreutils \
-        sed \
-        grep \
-        which \
-        ncdu \
-        shadow \
-        strace \
-        man-pages"
+        lsb-release \
+        ca-certificates \
+        apt-transport-https \
+        dialog \
+        gnupg2 \
+        libc6 \
+        libgcc1 \
+        libgssapi-krb5-2 \
+        liblttng-ust0 \
+        libstdc++6 \
+        zlib1g \
+        locales \
+        sudo"
 
     # Actual tests
     checkOSPackages "common-os-packages" ${PACKAGE_LIST}
     check "non-root-user" id ${USERNAME}
+    check "locale" [ $(locale -a | grep en_US.utf8) ]
     check "sudo" sudo echo "sudo works."
     check "zsh" zsh --version
     check "oh-my-zsh" [ -d "$HOME/.oh-my-zsh" ]
@@ -146,7 +136,6 @@ reportResults() {
     fi
 }
 
-# Useful for scenarios where UID/GID is not automatically updated - happens in GitHub Actions w/Docker Compose
 fixTestProjectFolderPrivs() {
     if [ "${USERNAME}" != "root" ]; then
         TEST_PROJECT_FOLDER="${1:-$SCRIPT_FOLDER}"
