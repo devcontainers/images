@@ -7,11 +7,7 @@
         "ghcr.io/devcontainers/features/java:1": {
             "version": "none"
         },
-        "ghcr.io/devcontainers/features/node:1": "none",
-        "ghcr.io/devcontainers/features/git:1": {
-            "version": "latest",
-            "ppa": "false"
-        }
+        "ghcr.io/devcontainers/features/node:1": "none"
     },
     "containerEnv": {
         "JAVA_HOME": "/usr/lib/jvm/msopenjdk-current"

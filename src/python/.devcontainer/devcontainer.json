@@ -12,11 +12,7 @@
             "upgradePackages": "true"
         },
         "ghcr.io/devcontainers/features/python:1": "none",
-        "ghcr.io/devcontainers/features/node:1": "none",
-		"ghcr.io/devcontainers/features/git:1": {
-            "version": "latest",
-            "ppa": "false"
-        }
+        "ghcr.io/devcontainers/features/node:1": "none"
     },
     "overrideFeatureInstallOrder": [
         "ghcr.io/devcontainers/features/common-utils"
