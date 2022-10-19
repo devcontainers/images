@@ -62,6 +62,10 @@
         "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
             "version": "latest"
         },
+        "ghcr.io/devcontainers/features/git:1": {
+            "version": "latest",
+            "ppa": "false"
+        },
         "ghcr.io/devcontainers/features/go:1": {
             "version": "latest"
         },
