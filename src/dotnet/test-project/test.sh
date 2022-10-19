@@ -24,7 +24,7 @@ fi
 echo $git_version_satisfied
 check "gitSatisfied" echo $git_version_satisfied | grep "true"
 check "gits" echo $git_version_satisfied | grep "true"
-check "gitsy" if [${git_version_satisfied} = "true"]; then echo "satisfied"; fi
+check "gitsy" $(echo $git_version_satisfied | grep "true")
 
 # Report result
 reportResults
