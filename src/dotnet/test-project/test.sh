@@ -22,7 +22,7 @@ if (echo a version 2.38.1; git --version) | sort -Vk3 | tail -1 | grep -q git; t
 fi
 
 echo $git_version_satisfied
-check "gitsy" $(echo $git_version_satisfied) | grep "true"
+check "gitVersionSatisfactionCheck" $(echo $git_version_satisfied) | grep "true"
 
 # Report result
 reportResults
