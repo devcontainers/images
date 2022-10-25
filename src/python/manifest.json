@@ -57,7 +57,7 @@
 		],
 		"variantTags": {
 			"3.11-bullseye": [
-				"python:${VERSION}-3.10",
+				"python:${VERSION}-3.11",
 				"python:${VERSION}-3",
 				"python:${VERSION}-3-bullseye",
 				"python:${VERSION}-bullseye"
