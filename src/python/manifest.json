@@ -16,6 +16,10 @@
 		"latest": "3.11-bullseye",
 		"rootDistro": "debian",
 		"architectures": {
+			"3.11-bullseye": [
+				"linux/amd64",
+				"linux/arm64"
+			],
 			"3.10-bullseye": [
 				"linux/amd64",
 				"linux/arm64"
@@ -32,9 +36,8 @@
 				"linux/amd64",
 				"linux/arm64"
 			],
-			"3.6-bullseye": [
-				"linux/amd64",
-				"linux/arm64"
+			"3.11-buster": [
+				"linux/amd64"
 			],
 			"3.10-buster": [
 				"linux/amd64"
@@ -46,9 +49,6 @@
 				"linux/amd64"
 			],
 			"3.7-buster": [
-				"linux/amd64"
-			],
-			"3.6-buster": [
 				"linux/amd64"
 			]
 		},
