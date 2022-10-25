@@ -74,9 +74,6 @@
 			"3.7-bullseye": [
 				"python:${VERSION}-3.7"
 			],
-			"3.6-bullseye": [
-				"python:${VERSION}-3.6"
-			],
 			"3.11-buster": [
 				"python:${VERSION}-3-buster",
 				"python:${VERSION}-buster"
