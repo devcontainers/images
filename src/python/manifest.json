@@ -1,21 +1,25 @@
 {
-	"version": "0.203.13",
+	"version": "0.204.0",
 	"variants": [
+		"3.11-bullseye",
 		"3.10-bullseye",
 		"3.9-bullseye",
 		"3.8-bullseye",
 		"3.7-bullseye",
-		"3.6-bullseye",
+		"3.11-buster",
 		"3.10-buster",
 		"3.9-buster",
 		"3.8-buster",
-		"3.7-buster",
-		"3.6-buster"
+		"3.7-buster"
 	],
 	"build": {
-		"latest": "3.10-bullseye",
+		"latest": "3.11-bullseye",
 		"rootDistro": "debian",
 		"architectures": {
+			"3.11-bullseye": [
+				"linux/amd64",
+				"linux/arm64"
+			],
 			"3.10-bullseye": [
 				"linux/amd64",
 				"linux/arm64"
@@ -32,9 +36,8 @@
 				"linux/amd64",
 				"linux/arm64"
 			],
-			"3.6-bullseye": [
-				"linux/amd64",
-				"linux/arm64"
+			"3.11-buster": [
+				"linux/amd64"
 			],
 			"3.10-buster": [
 				"linux/amd64"
@@ -47,20 +50,20 @@
 			],
 			"3.7-buster": [
 				"linux/amd64"
-			],
-			"3.6-buster": [
-				"linux/amd64"
 			]
 		},
 		"tags": [
 			"python:${VERSION}-${VARIANT}"
 		],
 		"variantTags": {
-			"3.10-bullseye": [
-				"python:${VERSION}-3.10",
+			"3.11-bullseye": [
+				"python:${VERSION}-3.11",
 				"python:${VERSION}-3",
 				"python:${VERSION}-3-bullseye",
 				"python:${VERSION}-bullseye"
+			],
+			"3.10-bullseye": [
+				"python:${VERSION}-3.10"
 			],
 			"3.9-bullseye": [
 				"python:${VERSION}-3.9"
@@ -71,10 +74,7 @@
 			"3.7-bullseye": [
 				"python:${VERSION}-3.7"
 			],
-			"3.6-bullseye": [
-				"python:${VERSION}-3.6"
-			],
-			"3.10-buster": [
+			"3.11-buster": [
 				"python:${VERSION}-3-buster",
 				"python:${VERSION}-buster"
 			]
