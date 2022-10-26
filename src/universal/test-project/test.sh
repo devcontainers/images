@@ -135,7 +135,8 @@ check "run-puppeteer" node puppeteer.js
 check "oryx" oryx --version
 
 # Make sure that Oryx builds Python projects correctly
-check "oryx-fullflow-python" oryx build --property python_version='3.10.4' --property packagedir='/home/codespace/.local/lib/python3.10/site-packages' ./sample/python
+check "oryx-build-python" oryx build --property python_version='3.10.4' --property packagedir='/home/codespace/.local/lib/python3.10/site-packages' ./sample/python
+check "oryx-build-python-result" python3 ./sample/python/src/solve.py
 
 # Install platforms with oryx build tool
 check "oryx-install-dotnet-2.1" oryx prep --skip-detection --platforms-and-versions dotnet=2.1.30
