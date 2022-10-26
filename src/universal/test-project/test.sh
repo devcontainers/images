@@ -135,7 +135,9 @@ check "run-puppeteer" node puppeteer.js
 check "oryx" oryx --version
 
 # Make sure that Oryx builds Python projects correctly
-check "oryx-build-python" oryx build --property python_version='3.10.4' --property packagedir='/home/codespace/.local/lib/python3.10/site-packages' ./sample/python
+pythonVersion=$(python -V 2>&1 | grep -Po '(?<=Python )(.+)')
+pythonSite=`python -m site --user-site`
+check "oryx-build-python" oryx build --property python_version="${pythonVersion}" --property packagedir="${pythonSite}" ./sample/python
 check "oryx-build-python-result" python3 ./sample/python/src/solve.py
 
 # Install platforms with oryx build tool
