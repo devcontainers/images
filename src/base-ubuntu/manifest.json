@@ -1,5 +1,5 @@
 {
-	"version": "0.203.9",
+	"version": "1.0.0",
 	"variants": [
 		"jammy",
 		"focal",
@@ -27,12 +27,12 @@
 		"variantTags": {
 			"jammy": [
 				"base:${VERSION}-ubuntu-22.04",
-				"base:${VERSION}-ubuntu22.04"
+				"base:${VERSION}-ubuntu22.04",
+				"base:${VERSION}-ubuntu"
 			],
 			"focal": [
 				"base:${VERSION}-ubuntu-20.04",
-				"base:${VERSION}-ubuntu20.04",
-				"base:${VERSION}-ubuntu"
+				"base:${VERSION}-ubuntu20.04"
 			],
 			"bionic": [
 				"base:${VERSION}-ubuntu-18.04",
