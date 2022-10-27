@@ -391,11 +391,7 @@ function getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip) {
                                 skipParentVariants.push(parentItem);
 
                             } else {
-                                const item = {
-                                    id: definitionId,
-                                    variant
-                                }
-                                variantsList.push([item]);
+                                variantsList.push([getDefinitionObject(definitionId, variant)]);
                             }
                         });
                     } else {
@@ -448,7 +444,7 @@ function getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip) {
         }
     }
 
-    // As 'noParentList' does not have parents, add eavh variant to a separate object
+    // As 'noParentList' does not have parents, add each variant to a separate object
     noParentList.forEach(definitionId => {
         let variants = config.definitionVariants[definitionId];
         if (variants) {
