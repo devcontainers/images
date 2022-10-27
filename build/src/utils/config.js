@@ -5,7 +5,6 @@
 
 const os = require('os');
 const path = require('path');
-const glob = require('glob');
 const asyncUtils = require('./async');
 const jsonc = require('jsonc').jsonc;
 const config = require('../../config.json');
@@ -354,12 +353,12 @@ function getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip) {
 
     for (let id in parentBuckets) {
         const definitionBucket = parentBuckets[id];
-        if (definitionBucket !== undefined) {
+        if (definitionBucket) {
             definitionBucket.reverse().forEach(definitionId => {
                 let variants = config.definitionVariants[definitionId];
                 let parentId = config.definitionBuildSettings[definitionId].parent;
 
-                if (parentId === undefined && variants !== undefined) {
+                if (!parentId && variants) {
                     variants.forEach(variant => {
                         const skipVariant = skipParentVariants.filter(item => item.id === definitionId && item.variant === variant);
                         if (skipVariant.length === 0) {
@@ -372,7 +371,7 @@ function getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip) {
                     });
                 } else if (typeof parentId == 'string') {
                     let parentVariants = config.definitionVariants[parentId];
-                    if (variants !== undefined) {
+                    if (variants) {
                         variants.forEach(variant => {
                             if (parentVariants.includes(variant)) {
                                 const parentItem = {
@@ -401,7 +400,7 @@ function getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip) {
                         });
                     } else {
                         let tags = config.definitionBuildSettings[definitionId].tags;
-                        if (tags !== undefined) {
+                        if (tags) {
                             const item = [
                                 {
                                     id: id,
@@ -421,8 +420,8 @@ function getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip) {
                         let parentVariants = config.definitionVariants[parentObjId];
                         let commonVariant = id;
 
-                        if (commonVariant !== undefined) {
-                            const shouldAddSingleVariant = parentId[commonVariant] === undefined;
+                        if (commonVariant) {
+                            const shouldAddSingleVariant = parentId[commonVariant];
                             if (parentVariants.includes(commonVariant)) {
                                 const parentItem = {
                                     id: parentObjId,
@@ -450,7 +449,7 @@ function getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip) {
                         }
                         else {
                             let tags = config.definitionBuildSettings[definitionId].tags;
-                            if (tags !== undefined) {
+                            if (tags) {
                                 const item = [
                                     {
                                         id: id,
@@ -472,7 +471,7 @@ function getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip) {
 
     noParentList.forEach(definitionId => {
         let variants = config.definitionVariants[definitionId];
-        if (variants !== undefined) {
+        if (variants) {
             variants.forEach(variant => {
                 const item = {
                     id: definitionId,
@@ -482,7 +481,7 @@ function getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip) {
             });
         } else {
             let tags = config.definitionBuildSettings[definitionId].tags;
-            if (tags !== undefined) {
+            if (tags) {
                 const item = {
                     id: definitionId,
                     variant: undefined
@@ -494,7 +493,7 @@ function getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip) {
 
     let allPages = variantsList;
 
-    console.log(`(*) Builds paginated needs at least ${variantsList.length} pages to parallelize jobs efficiently.\n`);
+    console.log(`(*) Builds pagination needs at least ${variantsList.length} pages to parallelize jobs efficiently.\n`);
 
     if (allPages.length > pageTotal) {
         // If too many pages, add extra pages to last one
