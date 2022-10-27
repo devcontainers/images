@@ -8,9 +8,6 @@ const path = require('path');
 const asyncUtils = require('./async');
 const jsonc = require('jsonc').jsonc;
 const config = require('../../config.json');
-const internal = require('stream');
-const { Interface } = require('readline');
-const { stringify } = require('querystring');
 
 config.definitionDependencies = config.definitionDependencies || {};
 config.definitionBuildSettings = config.definitionBuildSettings || {};
