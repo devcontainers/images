@@ -319,7 +319,6 @@ function getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip) {
     const parentBuckets = {};
     const dupeBuckets = [];
     const noParentList = [];
-    let total = 0;
     for (let definitionId in config.definitionBuildSettings) {
         // If paged build, ensure this image should be included
         if (typeof config.definitionBuildSettings[definitionId] === 'object') {
@@ -334,7 +333,6 @@ function getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip) {
                 } else {
                     noParentList.push(definitionId);
                 }
-                total++;
             } else {
                 console.log(`(*) Skipping ${definitionId}.`)
             }
@@ -351,43 +349,152 @@ function getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip) {
         }
     }
 
-    const allPages = [];
-    let pageTotalMinusDedicatedPages = pageTotal;
-    // Remove items that need their own buckets and add the buckets
-    if (config.needsDedicatedPage) {
-        // Remove skipped items from list that needs dedicated page
-        const filteredNeedsDedicatedPage = config.needsDedicatedPage.reduce((prev, current) => (definitionsToSkip.indexOf(current) < 0 ? prev.concat(current) : prev), []);
-        if (pageTotal > filteredNeedsDedicatedPage.length) {
-            pageTotalMinusDedicatedPages = pageTotal - filteredNeedsDedicatedPage.length;
-            filteredNeedsDedicatedPage.forEach((definitionId) => {
-                allPages.push([definitionId]);
-                const definitionIndex = noParentList.indexOf(definitionId);
-                if (definitionIndex > -1) {
-                    noParentList.splice(definitionIndex, 1);
-                    total--;
+    let variantsList = [];
+    let skipParentVariants = [];
+
+    for (let id in parentBuckets) {
+        const definitionBucket = parentBuckets[id];
+        if (definitionBucket !== undefined) {
+            definitionBucket.reverse().forEach(definitionId => {
+                let variants = config.definitionVariants[definitionId];
+                let parentId = config.definitionBuildSettings[definitionId].parent;
+
+                if (parentId === undefined && variants !== undefined) {
+                    variants.forEach(variant => {
+                        const skipVariant = skipParentVariants.filter(item => item.id === definitionId && item.variant === variant);
+                        if (skipVariant.length === 0) {
+                            const item = {
+                                id: definitionId,
+                                variant
+                            }
+                            variantsList.push([item]);
+                        }
+                    });
+                } else if (typeof parentId == 'string') {
+                    let parentVariants = config.definitionVariants[parentId];
+                    if (variants !== undefined) {
+                        variants.forEach(variant => {
+                            if (parentVariants.includes(variant)) {
+                                const parentItem = {
+                                    id: parentId,
+                                    variant
+                                }
+
+                                const item = [
+                                    parentItem,
+                                    {
+                                        id: definitionId,
+                                        variant
+                                    }
+                                ]
+
+                                variantsList.push(item);
+                                skipParentVariants.push(parentItem);
+
+                            } else {
+                                const item = {
+                                    id: definitionId,
+                                    variant
+                                }
+                                variantsList.push([item]);
+                            }
+                        });
+                    } else {
+                        let tags = config.definitionBuildSettings[definitionId].tags;
+                        if (tags !== undefined) {
+                            const item = [
+                                {
+                                    id: id,
+                                    variant: undefined
+                                },
+                                {
+                                    id: definitionId,
+                                    variant: undefined
+                                }
+                            ]
+                            variantsList.push(item);
+                        }
+                    }
+                } else if (typeof parentId == 'object') {
+                    for (const id in parentId) {
+                        let parentObjId = parentId[id];
+                        let parentVariants = config.definitionVariants[parentObjId];
+                        let commonVariant = id;
+
+                        if (commonVariant !== undefined) {
+                            const shouldAddSingleVariant = parentId[commonVariant] === undefined;
+                            if (parentVariants.includes(commonVariant)) {
+                                const parentItem = {
+                                    id: parentObjId,
+                                    variant: commonVariant
+                                }
+
+                                const item = [
+                                    parentItem,
+                                    {
+                                        id: definitionId,
+                                        variant: commonVariant
+                                    }
+                                ]
+
+                                variantsList.push(item);
+                                skipParentVariants.push(parentItem);
+
+                            } else if (shouldAddSingleVariant) {
+                                const item = {
+                                    id: definitionId,
+                                    variant: commonVariant
+                                }
+                                variantsList.push([item]);
+                            }
+                        }
+                        else {
+                            let tags = config.definitionBuildSettings[definitionId].tags;
+                            if (tags !== undefined) {
+                                const item = [
+                                    {
+                                        id: id,
+                                        variant: undefined
+                                    },
+                                    {
+                                        id: definitionId,
+                                        variant: undefined
+                                    }
+                                ]
+                                variantsList.push(item);
+                            }
+                        }
+                    }
                 }
             });
-        } else {
-            console.log(`(!) Not enough pages to give dedicated pages to ${JSON.stringify(filteredNeedsDedicatedPage, null, 4)}. Adding them to other pages.`);
         }
     }
 
-    // Create pages and distribute entries with no parents
-    const pageSize = Math.floor(total / pageTotalMinusDedicatedPages);
-    for (let bucketId in parentBuckets) {
-        let bucket = parentBuckets[bucketId];
-        if (typeof bucket === 'object') {
-            if (noParentList.length > 0 && bucket.length < pageSize) {
-                const toConcat = noParentList.splice(0, pageSize - bucket.length);
-                bucket = bucket.concat(toConcat);
+    noParentList.forEach(definitionId => {
+        let variants = config.definitionVariants[definitionId];
+        if (variants !== undefined) {
+            variants.forEach(variant => {
+                const item = {
+                    id: definitionId,
+                    variant
+                }
+                variantsList.push([item]);
+            });
+        } else {
+            let tags = config.definitionBuildSettings[definitionId].tags;
+            if (tags !== undefined) {
+                const item = {
+                    id: definitionId,
+                    variant: undefined
+                }
+                variantsList.push([item]);
             }
-            allPages.push(bucket);
         }
-    }
-    while (noParentList.length > 0) {
-        const noParentPage = noParentList.splice(0, noParentList.length > pageSize ? pageSize : noParentList.length);
-        allPages.push(noParentPage);
-    }
+    });
+
+    let allPages = variantsList;
+
+    console.log(`(*) Builds paginated needs at least ${variantsList.length} pages to parallelize jobs efficiently.\n`);
 
     if (allPages.length > pageTotal) {
         // If too many pages, add extra pages to last one
@@ -407,6 +514,15 @@ function getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip) {
     console.log(`(*) Builds paginated as follows: ${JSON.stringify(allPages, null, 4)}\n(*) Processing page ${page} of ${pageTotal}.\n`);
 
     return allPages[page - 1];
+}
+
+function getDefinitionList() {
+    let definitionList = [];
+    for (let definitionId in config.definitionBuildSettings) {
+        definitionList.push(definitionId);
+    }
+
+    return definitionList;
 }
 
 // Handle multi-parent definitions
@@ -621,5 +737,6 @@ module.exports = {
     getFallbackPoolUrl: getFallbackPoolUrl,
     getPoolKeyForPoolUrl: getPoolKeyForPoolUrl,
     getConfig: getConfig,
-    shouldFlattenDefinitionBaseImage: shouldFlattenDefinitionBaseImage
+    shouldFlattenDefinitionBaseImage: shouldFlattenDefinitionBaseImage,
+    getDefinitionList: getDefinitionList
 };
