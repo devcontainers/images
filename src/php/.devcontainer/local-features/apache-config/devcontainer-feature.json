@@ -1,8 +1,7 @@
 {
     "id": "apache-config",
     "name": "Apache configuration changes",
-    "install": {
-        "app": "",
-        "file": "install.sh"
-    }
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
 }
