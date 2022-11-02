@@ -152,7 +152,7 @@
 			"downloadUrl": "https://github.com/rvm/rvm"
 		},
 		"kubectl": {
-			"versionCommand": "kubectl version --client --output=json | jq '.clientVersion .gitVersion'",
+			"versionCommand": "kubectl version --client --output=json | jq -r '.clientVersion .gitVersion'",
 			"path": "/usr/local/bin",
 			"downloadUrl": "https://github.com/kubernetes/kubectl"
 		},
