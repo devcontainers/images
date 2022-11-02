@@ -44,7 +44,6 @@ if [[ "$(python --version)" != "" ]] && [[ "$(pip --version)" != "" ]]; then
     install_python_package "matplotlib"
     install_python_package "seaborn"
     install_python_package "scikit-learn"
-    install_python_package "tensorflow"
     install_python_package "keras"
     install_python_package "torch"
     install_python_package "requests"
