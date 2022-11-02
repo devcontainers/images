@@ -114,7 +114,6 @@
 			"matplotlib",
 			"seaborn",
 			"scikit-learn",
-			"keras",
 			"torch",
 			"requests",
 			"plotly"
