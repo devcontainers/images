@@ -1,9 +1,8 @@
 {
-	"version": "0.202.16",
+	"version": "0.203.0",
 	"variants": [
 		"buster",
-		"bullseye",
-		"stretch"
+		"bullseye"
 	],
 	"build": {
 		"latest": "bullseye",
@@ -15,10 +14,6 @@
 			],
 			"buster": [
 				"linux/amd64"
-			],
-			"stretch": [
-				"linux/amd64",
-				"linux/arm64"
 			]
 		},
 		"tags": [
@@ -34,10 +29,6 @@
 			"buster": [
 				"base:${VERSION}-debian-10",
 				"base:${VERSION}-debian10"
-			],
-			"stretch": [
-				"base:${VERSION}-debian-9",
-				"base:${VERSION}-debian9"
 			]
 		}
 	},
