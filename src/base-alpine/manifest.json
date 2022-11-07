@@ -17,13 +17,7 @@
 			"base:${VERSION}-alpine${VARIANT}"
 		],
 		"variantTags": {
-			"3.16": [
-				"base:${VERSION}-alpine"
-			],
 			"3.15": [
-				"base:${VERSION}-alpine"
-			],
-			"3.14": [
 				"base:${VERSION}-alpine"
 			]
 		}
