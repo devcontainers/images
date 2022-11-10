@@ -1,5 +1,5 @@
-# [Choice] .NET version: 6.0-bullseye, 3.1-bullseye, 6.0-focal, 3.1-focal
-ARG VARIANT=6.0-bullseye-slim
+# [Choice] .NET version: 7.0-bullseye, 6.0-bullseye, 3.1-bullseye, 7.0-jammy, 6.0-focal, 3.1-focal
+ARG VARIANT=7.0-bullseye-slim
 FROM mcr.microsoft.com/dotnet/sdk:${VARIANT}
 
 # [Optional] Uncomment this section to install additional OS packages.

@@ -1,18 +1,28 @@
 {
-	"version": "0.203.10",
+	"version": "0.204.0",
 	"variants": [
+		"7.0-bullseye-slim",
+		"7.0-jammy",
 		"6.0-bullseye-slim",
 		"6.0-focal",
 		"3.1-bullseye",
 		"3.1-focal"
 	],
 	"build": {
-		"latest": "6.0-bullseye-slim",
+		"latest": "7.0-bullseye-slim",
 		"rootDistro": "debian",
 		"tags": [
 			"dotnet:${VERSION}-${VARIANT}"
 		],
 		"architectures": {
+			"7.0-bullseye-slim": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"7.0-jammy": [
+				"linux/amd64",
+				"linux/arm64"
+			],
 			"6.0-focal": [
 				"linux/amd64"
 			],
@@ -29,6 +39,10 @@
 			]
 		},
 		"variantTags": {
+			"7.0-bullseye-slim": [
+				"dotnet:${VERSION}-7.0",
+				"dotnet:${VERSION}-7.0-bullseye"
+			],
 			"6.0-bullseye-slim": [
 				"dotnet:${VERSION}-6.0",
 				"dotnet:${VERSION}-6.0-bullseye"
