@@ -49,8 +49,6 @@ check "scipy" python -c "import scipy; print(scipy.__version__)"
 check "matplotlib" python -c "import matplotlib; print(matplotlib.__version__)"
 check "seaborn" python -c "import seaborn; print(seaborn.__version__)"
 check "scikit-learn" python -c "import sklearn; print(sklearn.__version__)"
-check "tensorflow" python -c "import tensorflow; print(tensorflow.__version__)"
-check "keras" python -c "import keras; print(keras.__version__)"
 check "torch" python -c "import torch; print(torch.__version__)"
 check "requests" python -c "import requests; print(requests.__version__)"
 
@@ -133,6 +131,13 @@ check "run-puppeteer" node puppeteer.js
 
 # Check Oryx
 check "oryx" oryx --version
+
+# Make sure that Oryx builds Python projects correctly
+pythonVersion=$(python -V 2>&1 | grep -Po '(?<=Python )(.+)')
+pythonSite=`python -m site --user-site`
+check "oryx-build-python" oryx build --property python_version="${pythonVersion}" --property packagedir="${pythonSite}" ./sample/python
+check "oryx-build-python-installed" python3 -m pip list | grep mpmath
+check "oryx-build-python-result" python3 ./sample/python/src/solve.py
 
 # Install platforms with oryx build tool
 check "oryx-install-dotnet-2.1" oryx prep --skip-detection --platforms-and-versions dotnet=2.1.30
