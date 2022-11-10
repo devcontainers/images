@@ -130,11 +130,14 @@ async function pushImage(definitionId, variant, repo, release, updateLatest,
 
         if (replaceImage || !await isDefinitionVersionAlreadyPublished(definitionId, release, registry, registryPath, variant)) {
 
+            let skipPersistingCustomizationsFromFeatures = false;
             let platformParams = "";
             // Universal image does not need to be multi-arch
             // ubuntu:focal image supports multiarch but Universal does not. Hence, the build fails similar to https://github.com/docker/buildx/issues/235
             if (definitionId != "universal") {
                 platformParams = "--platform " + (pushImages ? architectures.reduce((prev, current) => prev + ',' + current, '').substring(1) : localArchitecture)
+            } else {
+                skipPersistingCustomizationsFromFeatures = true;
             }
 
             const context = devContainerJson.build ? devContainerJson.build.context || '.' : devContainerJson.context || '.';
@@ -153,6 +156,7 @@ async function pushImage(definitionId, variant, repo, release, updateLatest,
                 '--no-cache', 'true',
                 platformParams,
                 pushImages ? '--push' : '',
+                '--skip-persisting-customizations-from-features', skipPersistingCustomizationsFromFeatures,
             ], spawnOpts);
 
             if (!pushImages) {
