@@ -137,6 +137,7 @@ pythonVersion=$(python -V 2>&1 | grep -Po '(?<=Python )(.+)')
 pythonSite=`python -m site --user-site`
 check "oryx-build-python" oryx build --property python_version="${pythonVersion}" --property packagedir="${pythonSite}" ./sample/python
 check "oryx-build-python-installed" python3 -m pip list | grep mpmath
+check "oryx-build-python-installed" python3 -m pip list | grep sympy
 check "oryx-build-python-result" python3 ./sample/python/src/solve.py
 
 # Install platforms with oryx build tool
