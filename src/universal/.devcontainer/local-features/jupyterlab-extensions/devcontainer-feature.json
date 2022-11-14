@@ -1,0 +1,8 @@
+{
+    "id": "jupyterlab-extensions",
+    "name": "Extensions for JupyterLab",
+    "install": {
+        "app": "",
+        "file": "install.sh"
+    }
+}

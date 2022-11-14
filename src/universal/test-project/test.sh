@@ -51,6 +51,7 @@ check "seaborn" python -c "import seaborn; print(seaborn.__version__)"
 check "scikit-learn" python -c "import sklearn; print(sklearn.__version__)"
 check "torch" python -c "import torch; print(torch.__version__)"
 check "requests" python -c "import requests; print(requests.__version__)"
+check "jupyterlab-git" python -m pip list | grep jupyterlab-git
 
 # Check JupyterLab
 check "jupyter-lab" jupyter-lab --version
