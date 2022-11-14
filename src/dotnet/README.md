@@ -9,29 +9,28 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/dotnet |
-| *Available image variants* | 3.1 / 3.1-focal / 6.0 /6.0-bullseye, 6.0-focal, 3.1-bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/dotnet/tags/list)) |
-| *Published image architecture(s)* | x86-64, arm64/aarch64 for `bullseye` variants |
+| *Available image variants* | 3.1 / 3.1-focal, 3.1-bullseye, 6.0 /6.0-bullseye, 6.0-jammy, 6.0-focal, 7.0 /7.0-bullseye, 7.0-jammy ([full list](https://mcr.microsoft.com/v2/devcontainers/dotnet/tags/list)) |
+| *Published image architecture(s)* | x86-64, arm64/aarch64 for `bullseye`, `jammy` variants |
 | *Container host OS support* | Linux, macOS, Windows |
-| *Container OS* | Ubuntu (`-focal`), Debian (`-bullseye`) |
+| *Container OS* | Ubuntu (`-focal`, `-jammy`), Debian (`-bullseye`) |
 | *Languages, platforms* | .NET, .NET Core, C# |
 
 See **[history](history)** for information on the contents of published images.
 
 ## Using this image
 
-Note that .NET 6.0 has switched its default OS to Debian 12 / bullseye. We also offer a `6.0-focal` image if you would prefer to use Ubuntu 20.04 / Focal.
-
 You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
 - `mcr.microsoft.com/devcontainers/dotnet` (latest)
 - `mcr.microsoft.com/devcontainers/dotnet:3.1` (or `3.1-bullseye`, `3.1-focal` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/dotnet:6.0` (or `6.0-bullseye`, `6.0-focal` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/dotnet:6.0` (or `6.0-bullseye`, `6.0-jammy`, `6.0-focal` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/dotnet:7.0` (or `7.0-bullseye`, `7.0-jammy` to pin to an OS version)
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/devcontainers/dotnet:0-3.1`
-- `mcr.microsoft.com/devcontainers/dotnet:0.203-3.1`
-- `mcr.microsoft.com/devcontainers/dotnet:0.203.0-3.1`
+- `mcr.microsoft.com/devcontainers/dotnet:0-7.0`
+- `mcr.microsoft.com/devcontainers/dotnet:0.204-7.0`
+- `mcr.microsoft.com/devcontainers/dotnet:0.204.0-7.0`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/dotnet/tags/list).
 
