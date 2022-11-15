@@ -10,9 +10,9 @@
             "gid": "1000"
         },
         "ghcr.io/devcontainers/features/dotnet:1": {
-            "version": "6",
+            "version": "7",
             "installUsingApt": "false",
-            "additionalVersions": "3"
+            "additionalVersions": "6"
         },
         "ghcr.io/devcontainers/features/hugo:1": {
             "version": "latest"
@@ -98,10 +98,10 @@
     ],
     "remoteUser": "codespace",
     "containerUser": "codespace",
+
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     // "forwardPorts": [],
-    // "oryx build" will automatically install your dependencies and attempt to build your project
-    "postCreateCommand": "oryx build -p virtualenv_name=.venv --log-file /tmp/oryx-build.log --manifest-dir /tmp || echo 'Could not auto-build. Skipping.'",
+
     // Configure tool-specific properties.
     "customizations": {
         // Configure properties specific to VS Code.
