@@ -137,7 +137,10 @@ pythonVersion=$(python -V 2>&1 | grep -Po '(?<=Python )(.+)')
 echo "pythonVersion ${pythonVersion}"
 pythonSite=`python -m site --user-site`
 echo "pythonSite ${pythonSite}"
-echo "cmd oryx build --property python_version="${pythonVersion}" --property packagedir="${pythonSite}" ./sample/python"
+echo "cmd oryx build --property python_version="${pythonVersion}" --property packagedir="${pythonSite}" --debug --log-file oryx-logs ./sample/python"
+
+echo "Reading logs"
+cat oryx-logs.log
 
 ls -la
 check "oryx-build-python" oryx build --property python_version="${pythonVersion}" --property packagedir="${pythonSite}" ./sample/python
