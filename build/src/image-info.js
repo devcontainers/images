@@ -27,7 +27,7 @@ async function generateImageInformationFiles(repo, release, registry, registryPa
     const manifestExists = await asyncUtils.exists(manifestPath);
 
     console.log('(*) Generating image information files...');
-    const definitions = definitionId ? [definitionId] : configUtils.getSortedDefinitionBuildList();
+    const definitions = definitionId ? [definitionId] : configUtils.getDefinitionList();
     await asyncUtils.forEach(definitions, async (currentDefinitionId) => {
         // Target file paths and whether they exist
         const definitionRelativePath = configUtils.getDefinitionPath(currentDefinitionId, true);
