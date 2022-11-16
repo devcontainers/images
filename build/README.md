@@ -105,8 +105,8 @@ The `build` namespace includes properties that defines how the templates maps to
     "rootDistro": "debian",
     "latest": true,
     "tags": [
-        "base:${VERSION}-debian-9",
-        "base:${VERSION}-stretch"
+        "base:${VERSION}-debian-11",
+        "base:${VERSION}-bullseye"
     ]
 }
 ```
@@ -129,20 +129,20 @@ This results in just one "repository" in the registry much like you would see fo
 
 The package version is then automatically added to these various tags in the `${VERSION}` location for an item in the `tags` property array as a part of the release. For example, release 0.40.0 would result in:
 
-- 0.40.0-debian-9
-- 0.40-debian-9
-- 0-debian-9
-- debian-9 <= Equivalent of latest for debian-9 specifically
-- 0.40.0-stretch
-- 0.40-stretch
-- 0-stretch
-- stretch <= Equivalent of latest for stretch specifically
+- 0.40.0-debian-11
+- 0.40-debian-11
+- 0-debian-11
+- debian-11 <= Equivalent of latest for debian-11 specifically
+- 0.40.0-bullseye
+- 0.40-bullseye
+- 0-bullseye
+- bullseye <= Equivalent of latest for bullseye specifically
 
 In this case, Debian is also the one that is used for `latest` for the `base` repository, so that tag gets applied too.  If you ran only the Alpine or Ubuntu versions, the latest tag would not update.
 
 > **NOTE:** The version number used for this repository should be kept in sync with the VS Code Remote - Containers extension to make it easy for developers to find.
 
-There's a special "dev" version that can be used to build main on CI - I ended up needing this to test and others would if they base an image off of one of the MCR images.  e.g. `dev-debian-9`.
+There's a special "dev" version that can be used to build main on CI - I ended up needing this to test and others would if they base an image off of one of the MCR images.  e.g. `dev-debian-11`.
 
 ### The `version` property
 
@@ -196,7 +196,7 @@ In some cases you may want to have different tags for each variant in the `varia
 For example:
 
 ```jsonc
-"variants": ["buster", "bullseye",  "stretch"],
+"variants": ["buster", "bullseye"],
 "build": {
     "latest": "bullseye",
     "tags": [
@@ -211,10 +211,6 @@ For example:
         "buster": [
             "base:debian-10",
             "base:debian10"
-        ],
-        "stretch": [
-            "base:debian-9",
-            "base:debian9"
         ]
     },
     //...
@@ -274,14 +270,13 @@ Because of problems with different OS versions, you may need to specify differen
 "build": {
     "architectures": {
         "bullseye": ["linux/amd64", "linux/arm64"],
-        "buster": ["linux/amd64"],
-        "stretch": ["linux/amd64", "linux/arm64"]
+        "buster": ["linux/amd64"]
     },
     //...
 }
 ```
 
-This configuration will build ARM64 and x86_64 for Debian 11/bullseye and Debian 9/stretch but not Debian 10/buster.
+This configuration will build ARM64 and x86_64 for Debian 11/bullseye and Debian 9/bullseye but not Debian 10/buster.
 
 ### The `dependencies` namespace
 
