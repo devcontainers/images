@@ -10,9 +10,9 @@
             "gid": "1000"
         },
         "ghcr.io/devcontainers/features/dotnet:1": {
-            "version": "7",
+            "version": "6",
             "installUsingApt": "false",
-            "additionalVersions": "6"
+            "additionalVersions": "3"
         },
         "ghcr.io/devcontainers/features/hugo:1": {
             "version": "latest"
