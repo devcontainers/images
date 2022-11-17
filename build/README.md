@@ -376,7 +376,6 @@ For example:
 
 ```json
 "cargo": {
-    "rls": null,
     "rustfmt": null,
     "rust-analysis": "rustc --version",
     "rust-src": "rustc --version",
