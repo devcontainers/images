@@ -159,9 +159,11 @@ check "java-version-on-path-is-12.0.2" java --version | grep 12.0.2
 
 # Ensures sdkman works in a Java Project
 check "default-java-version" bash -c "java --version | grep 17."
+check "default-java-location" bash -c "which java | grep /home/codespace/java/current/bin"
 oryx build ./sample/java
 sdk install java 19.0.1-oracle < /dev/null
 check "sdkman-works-in-java-project" bash -c "java --version | grep 19.0.1"
+check "default-java-location-remained-same" bash -c "which java | grep /home/codespace/java/current/bin"
 
 ls -la /home/codespace
 
