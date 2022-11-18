@@ -59,7 +59,7 @@ check "jupyter-lab config" grep ".*.allow_origin = '*'" /home/codespace/.jupyter
 check "jupyter-lab kernel" test -d "/home/codespace/.python/current/bin"
 
 # Check Java tools
-check "java" bash -version
+check "java" java -version
 check "sdkman" bash -c ". /usr/local/sdkman/bin/sdkman-init.sh && sdk version"
 check "gradle" gradle -g /tmp --version
 check "maven" mvn --version
