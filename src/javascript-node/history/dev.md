@@ -14,7 +14,7 @@
 
 ## Variant: 18-bullseye
 
-**Digest:** sha256:9c2e3380b810e125f6b1cf3f6ab1d0a110ca41031eee5971d8255953ce156dc9
+**Digest:** sha256:b24b8896117d4afd5d85024214d72ce5cc586a925488aacfd119cdde6e521e7a
 
 **Tags:**
 ```
@@ -35,20 +35,20 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 18.11.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 18.12.1 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 65a1e4edbe678cdac37ad96ca4bc4f6d77e27adf | /home/node/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ab517361a4215d2f777023fc1e772fe79496713 | /home/node/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.25.0 |
+| eslint | 8.27.0 |
 
 **Additional linux tools and packages**
 
@@ -65,14 +65,14 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
 | less | 551-2 |
-| libc6 | 2.31-13+deb11u4 |
+| libc6 | 2.31-13+deb11u5 |
 | libgssapi-krb5-2 | 1.18.3-6+deb11u2 |
 | libicu67 | 67.1-7 |
 | libkrb5-3 | 1.18.3-6+deb11u2 |
 | liblttng-ust0 | 2.12.1-1 |
 | libssl1.1 | 1.1.1n-0+deb11u3 |
 | libstdc++6 | 10.2.1-6 |
-| locales | 2.31-13+deb11u4 |
+| locales | 2.31-13+deb11u5 |
 | lsb-release | 11.1.0 |
 | lsof | 4.93.2+dfsg-1.1 |
 | man-db | 2.9.4-2 |
@@ -96,7 +96,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 
 ## Variant: 16-bullseye
 
-**Digest:** sha256:13d42c2bdbc5a82f4a5aca12f91f8e91c8bc0668f4cc862216c1e04a407a498d
+**Digest:** sha256:1a8c344f795301503379ae0074c99d7a653b4ded67a38e8c032dcfb7bbade423
 
 **Tags:**
 ```
@@ -116,20 +116,20 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 16.18.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 16.18.1 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 65a1e4edbe678cdac37ad96ca4bc4f6d77e27adf | /home/node/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ab517361a4215d2f777023fc1e772fe79496713 | /home/node/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.25.0 |
+| eslint | 8.27.0 |
 
 **Additional linux tools and packages**
 
@@ -146,14 +146,14 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
 | less | 551-2 |
-| libc6 | 2.31-13+deb11u4 |
+| libc6 | 2.31-13+deb11u5 |
 | libgssapi-krb5-2 | 1.18.3-6+deb11u2 |
 | libicu67 | 67.1-7 |
 | libkrb5-3 | 1.18.3-6+deb11u2 |
 | liblttng-ust0 | 2.12.1-1 |
 | libssl1.1 | 1.1.1n-0+deb11u3 |
 | libstdc++6 | 10.2.1-6 |
-| locales | 2.31-13+deb11u4 |
+| locales | 2.31-13+deb11u5 |
 | lsb-release | 11.1.0 |
 | lsof | 4.93.2+dfsg-1.1 |
 | man-db | 2.9.4-2 |
@@ -177,7 +177,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16
 
 ## Variant: 14-bullseye
 
-**Digest:** sha256:7fd1f205416725ce82e1339fcb5260b5b221fe30af1d1b0e4ee918840aa9a7c7
+**Digest:** sha256:27cf530dd8e5ae90037bb9ae623954c48708dd5157aecdf10e52c3ace23e3f22
 
 **Tags:**
 ```
@@ -197,20 +197,20 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-14
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 14.20.1 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 14.21.1 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 65a1e4edbe678cdac37ad96ca4bc4f6d77e27adf | /home/node/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ab517361a4215d2f777023fc1e772fe79496713 | /home/node/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.25.0 |
+| eslint | 8.27.0 |
 
 **Additional linux tools and packages**
 
@@ -227,14 +227,14 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-14
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
 | less | 551-2 |
-| libc6 | 2.31-13+deb11u4 |
+| libc6 | 2.31-13+deb11u5 |
 | libgssapi-krb5-2 | 1.18.3-6+deb11u2 |
 | libicu67 | 67.1-7 |
 | libkrb5-3 | 1.18.3-6+deb11u2 |
 | liblttng-ust0 | 2.12.1-1 |
 | libssl1.1 | 1.1.1n-0+deb11u3 |
 | libstdc++6 | 10.2.1-6 |
-| locales | 2.31-13+deb11u4 |
+| locales | 2.31-13+deb11u5 |
 | lsb-release | 11.1.0 |
 | lsof | 4.93.2+dfsg-1.1 |
 | man-db | 2.9.4-2 |
@@ -258,7 +258,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-14
 
 ## Variant: 18-buster
 
-**Digest:** sha256:7f84bf9b39ed724eda214c731e7c5d32835a4d5dee5df004dda7d6e9d897ff57
+**Digest:** sha256:4daae0613cf6a469133ffc9c7ade49a895fe09bf64442adbcdff41ce0859b65b
 
 **Tags:**
 ```
@@ -278,20 +278,20 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 18.11.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 18.12.1 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 65a1e4edbe678cdac37ad96ca4bc4f6d77e27adf | /home/node/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ab517361a4215d2f777023fc1e772fe79496713 | /home/node/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.25.0 |
+| eslint | 8.27.0 |
 
 **Additional linux tools and packages**
 
@@ -330,9 +330,9 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-buster
 | psmisc | 23.2-1+deb10u1 |
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
-| sudo | 1.8.27-1+deb10u3 |
+| sudo | 1.8.27-1+deb10u4 |
 | unzip | 6.0-23+deb10u3 |
-| vim-tiny | 2:8.1.0875-5+deb10u2 |
+| vim-tiny | 2:8.1.0875-5+deb10u3 |
 | wget | 1.20.1-1.1 |
 | zip | 3.0-11+b1 |
 | zlib1g | 1:1.2.11.dfsg-1+deb10u2 |
@@ -340,7 +340,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-buster
 
 ## Variant: 16-buster
 
-**Digest:** sha256:888b3af357eef5258d72fb550db6086da4f7c032a629c008dc76e8171f05635e
+**Digest:** sha256:12608886804d8ceb0c4a7178be97f1ac13c2d9f212b68ae7f82b2cbeadf11a87
 
 **Tags:**
 ```
@@ -359,20 +359,20 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 16.18.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 16.18.1 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 65a1e4edbe678cdac37ad96ca4bc4f6d77e27adf | /home/node/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ab517361a4215d2f777023fc1e772fe79496713 | /home/node/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.25.0 |
+| eslint | 8.27.0 |
 
 **Additional linux tools and packages**
 
@@ -411,9 +411,9 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16-buster
 | psmisc | 23.2-1+deb10u1 |
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
-| sudo | 1.8.27-1+deb10u3 |
+| sudo | 1.8.27-1+deb10u4 |
 | unzip | 6.0-23+deb10u3 |
-| vim-tiny | 2:8.1.0875-5+deb10u2 |
+| vim-tiny | 2:8.1.0875-5+deb10u3 |
 | wget | 1.20.1-1.1 |
 | zip | 3.0-11+b1 |
 | zlib1g | 1:1.2.11.dfsg-1+deb10u2 |
@@ -421,7 +421,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16-buster
 
 ## Variant: 14-buster
 
-**Digest:** sha256:3df3ea0f0430df146fd20a7f9853c0f85ed28960e8763284332fac645711f6a0
+**Digest:** sha256:bb13a979cb6738b1c893f121770002c27af62e8ccdd880c1596aacf013bbb113
 
 **Tags:**
 ```
@@ -440,20 +440,20 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-14-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 14.20.1 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 14.21.1 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 65a1e4edbe678cdac37ad96ca4bc4f6d77e27adf | /home/node/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ab517361a4215d2f777023fc1e772fe79496713 | /home/node/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.25.0 |
+| eslint | 8.27.0 |
 
 **Additional linux tools and packages**
 
@@ -492,9 +492,9 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-14-buster
 | psmisc | 23.2-1+deb10u1 |
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
-| sudo | 1.8.27-1+deb10u3 |
+| sudo | 1.8.27-1+deb10u4 |
 | unzip | 6.0-23+deb10u3 |
-| vim-tiny | 2:8.1.0875-5+deb10u2 |
+| vim-tiny | 2:8.1.0875-5+deb10u3 |
 | wget | 1.20.1-1.1 |
 | zip | 3.0-11+b1 |
 | zlib1g | 1:1.2.11.dfsg-1+deb10u2 |

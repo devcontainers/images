@@ -10,7 +10,7 @@
 
 ## Variant: 2.7-bullseye
 
-**Digest:** sha256:bae0b75b7fed49ad10ab97a8e4cb34c20d38f7909c75cad388a7262123d31118
+**Digest:** sha256:09a31252f793f173925a30e019396991a063649bf9617c9c09ad93759c343d0e
 
 **Tags:**
 ```
@@ -32,23 +32,23 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
 | [Ruby](https://www.ruby-lang.org/en/) | 2.7.6p219 | /usr/local |
-| [Jekyll](https://jekyllrb.com/) | 4.2.2 | /usr/local/bundle/bin |
+| [Jekyll](https://jekyllrb.com/) | 4.3.1 | /usr/local/bundle/bin |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 65a1e4edbe678cdac37ad96ca4bc4f6d77e27adf | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ab517361a4215d2f777023fc1e772fe79496713 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 | [rbenv](https://github.com/rbenv/rbenv.git) | 52acbdf83f524fb75f8491ba92fe5c0335f3b5f3 | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 55575fdb5ea862fda0545578520eec8f91264fc5 | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 66311de0f8089564a232722a6b3db824b85235b3 | /usr/local/share/ruby-build |
 
 **Ruby gems and tools**
 
 | Tool / gem | Version |
 |------------|---------|
-| bundler | 2.3.24 |
-| jekyll | 4.2.2 |
+| bundler | 2.3.26 |
+| jekyll | 4.3.1 |
 | github-pages | 227 |
 
 **Other tools and utilities**
@@ -72,14 +72,14 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
 | less | 551-2 |
-| libc6 | 2.31-13+deb11u4 |
+| libc6 | 2.31-13+deb11u5 |
 | libgssapi-krb5-2 | 1.18.3-6+deb11u2 |
 | libicu67 | 67.1-7 |
 | libkrb5-3 | 1.18.3-6+deb11u2 |
 | liblttng-ust0 | 2.12.1-1 |
 | libssl1.1 | 1.1.1n-0+deb11u3 |
 | libstdc++6 | 10.2.1-6 |
-| locales | 2.31-13+deb11u4 |
+| locales | 2.31-13+deb11u5 |
 | lsb-release | 11.1.0 |
 | lsof | 4.93.2+dfsg-1.1 |
 | man-db | 2.9.4-2 |
@@ -104,7 +104,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 
 ## Variant: 2.7-buster
 
-**Digest:** sha256:d521bf51e12de6f7941d6173b8653e016f70beb82412dcda45d2feb35a2a52e3
+**Digest:** sha256:1d46fc05978f870e67d70a2ba3a51e9dce2af7a8194e28f4d0d1d47ac25baea5
 
 **Tags:**
 ```
@@ -125,23 +125,23 @@ mcr.microsoft.com/devcontainers/jekyll:dev-buster
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
 | [Ruby](https://www.ruby-lang.org/en/) | 2.7.6p219 | /usr/local |
-| [Jekyll](https://jekyllrb.com/) | 4.2.2 | /usr/local/bundle/bin |
+| [Jekyll](https://jekyllrb.com/) | 4.3.1 | /usr/local/bundle/bin |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 65a1e4edbe678cdac37ad96ca4bc4f6d77e27adf | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ab517361a4215d2f777023fc1e772fe79496713 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 | [rbenv](https://github.com/rbenv/rbenv.git) | 52acbdf83f524fb75f8491ba92fe5c0335f3b5f3 | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 55575fdb5ea862fda0545578520eec8f91264fc5 | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 66311de0f8089564a232722a6b3db824b85235b3 | /usr/local/share/ruby-build |
 
 **Ruby gems and tools**
 
 | Tool / gem | Version |
 |------------|---------|
-| bundler | 2.3.24 |
-| jekyll | 4.2.2 |
+| bundler | 2.3.26 |
+| jekyll | 4.3.1 |
 | github-pages | 227 |
 
 **Other tools and utilities**
@@ -187,9 +187,9 @@ mcr.microsoft.com/devcontainers/jekyll:dev-buster
 | psmisc | 23.2-1+deb10u1 |
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
-| sudo | 1.8.27-1+deb10u3 |
+| sudo | 1.8.27-1+deb10u4 |
 | unzip | 6.0-23+deb10u3 |
-| vim-tiny | 2:8.1.0875-5+deb10u2 |
+| vim-tiny | 2:8.1.0875-5+deb10u3 |
 | wget | 1.20.1-1.1 |
 | yarn | 1.22.19-1 |
 | zip | 3.0-11+b1 |
