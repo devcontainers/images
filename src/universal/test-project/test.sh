@@ -157,6 +157,12 @@ check "oryx-install-java-12.0.2" oryx prep --skip-detection --platforms-and-vers
 check "java-12.0.2-installed-by-oryx" ls /opt/java/ | grep 12.0.2
 check "java-version-on-path-is-12.0.2" java --version | grep 12.0.2
 
+# Ensures nvm works in a Node Project
+check "default-node-version" bash -c "node --version | grep 16."
+oryx build ./sample/node
+nvm install 8.0.0
+check "nvm-works-in-node-project" bash -c "node --version | grep v8.0.0"
+
 ls -la /home/codespace
 
 # Report result
