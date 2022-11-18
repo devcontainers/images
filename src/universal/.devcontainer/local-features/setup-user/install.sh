@@ -44,8 +44,7 @@ ln -snf /usr/local/python/current $PYTHON_PATH
 ln -snf /usr/local/python /opt/python
 
 JAVA_PATH="/home/codespace/.java/current"
-mkdir -p /home/codespace/.java
-ln -snf /usr/local/sdkman/candidates/java/current $JAVA_PATH
+ln -snf /usr/local/sdkman/candidates/java /home/codespace/.java
 
 RUBY_PATH="/home/codespace/.ruby/current"
 mkdir -p /home/codespace/.ruby
