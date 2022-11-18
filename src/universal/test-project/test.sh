@@ -59,7 +59,7 @@ check "jupyter-lab config" grep ".*.allow_origin = '*'" /home/codespace/.jupyter
 check "jupyter-lab kernel" test -d "/home/codespace/.python/current/bin"
 
 # Check Java tools
-check "java" java -version
+check "java" bash -version
 check "sdkman" bash -c ". /usr/local/sdkman/bin/sdkman-init.sh && sdk version"
 check "gradle" gradle -g /tmp --version
 check "maven" mvn --version
@@ -156,6 +156,12 @@ check "php-version-on-path-is-2.1.12" php --version | grep 7.3.25
 check "oryx-install-java-12.0.2" oryx prep --skip-detection --platforms-and-versions java=12.0.2
 check "java-12.0.2-installed-by-oryx" ls /opt/java/ | grep 12.0.2
 check "java-version-on-path-is-12.0.2" java --version | grep 12.0.2
+
+# Ensures sdkman works in a Java Project
+check "default-java-version" bash -c "java --version | grep 17."
+oryx build ./sample/java
+sdk install java 19.0.1-oracle < /dev/null
+check "sdkman-works-in-java-project" bash -c "java --version | grep 19.0.1"
 
 ls -la /home/codespace
 
