@@ -95,23 +95,7 @@ if [ "${PACKAGES_ALREADY_INSTALLED}" != "true" ]; then
         which \
         ncdu \
         shadow \
-        strace \
-        make \
-        zlib-dev \
-        --no-cache \
-        openssl-dev \
-        curl-dev \
-        expat-dev \
-        asciidoc \
-        xmlto \
-        perl-error \
-        perl-dev \
-        tcl \
-        tk \
-        gcc \
-        g++ \
-        python3-dev \
-        pcre2-dev
+        strace
 
     # Install man pages - package name varies between 3.12 and earlier versions
     if apk info man > /dev/null 2>&1; then
@@ -120,24 +104,10 @@ if [ "${PACKAGES_ALREADY_INSTALLED}" != "true" ]; then
         apk add --no-cache mandoc man-pages
     fi
 
-    # Temporarily install git from source until OSS feeds contains 2.38.1 or greater version.
     # Install git if not already installed (may be more recent than distro version)
-    # if ! type git > /dev/null 2>&1; then
-    #     apk add --no-cache git
-    # fi
-
-    # Install latest version of git from source
-    git_version_list="$(curl -sSL -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/git/git/tags" | grep -oP '"name":\s*"v\K[0-9]+\.[0-9]+\.[0-9]+"' | tr -d '"' | sort -rV )"
-    GIT_VERSION="$(echo "${git_version_list}" | head -n 1)"
-
-    echo "Installing git v${GIT_VERSION}"
-    curl -sL https://github.com/git/git/archive/v${GIT_VERSION}.tar.gz | tar -xzC /tmp 2>&1
-    pushd /tmp/git-${GIT_VERSION}
-    make -s prefix=/usr/local all NO_REGEX=YesPlease NO_GETTEXT=YesPlease \
-        && make -s prefix=/usr/local NO_REGEX=YesPlease NO_GETTEXT=YesPlease install 2>&1
-
-    popd
-    rm -rf /tmp/git-${GIT_VERSION}
+    if ! type git > /dev/null 2>&1; then
+        apk add --no-cache git
+    fi
 
     PACKAGES_ALREADY_INSTALLED="true"
 fi

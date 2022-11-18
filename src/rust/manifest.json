@@ -42,7 +42,6 @@
 			"Oh My Zsh!": "/home/vscode/.oh-my-zsh"
 		},
 		"cargo": {
-			"rls": null,
 			"rustfmt": null,
 			"rust-analysis": "rustc --version",
 			"rust-src": "rustc --version",
