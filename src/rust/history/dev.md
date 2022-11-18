@@ -10,7 +10,7 @@
 
 ## Variant: buster
 
-**Digest:** sha256:aa995350f1eef61661e459dd137202c74e10ef1f00a6bc453e822a0cdcfbe34e
+**Digest:** sha256:0fc68ab5271f6f4847da752fc17bb9f78350057ba8b59a5ca192b220d061fb81
 
 **Tags:**
 ```
@@ -31,23 +31,22 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Rust](https://github.com/rust-lang/rust) | 1.64.0 | /usr/local/cargo<br />/usr/local/rustup |
+| [Rust](https://github.com/rust-lang/rust) | 1.65.0 | /usr/local/cargo<br />/usr/local/rustup |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 65a1e4edbe678cdac37ad96ca4bc4f6d77e27adf | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ab517361a4215d2f777023fc1e772fe79496713 | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 
 | Tool / crate | Version |
 |--------------|---------|
-| rls | 1.41.0 |
 | rustfmt | 1.5.1 |
-| rust-analysis | 1.64.0 |
-| rust-src | 1.64.0 |
-| clippy | 1.64.0 |
+| rust-analysis | 1.65.0 |
+| rust-src | 1.65.0 |
+| clippy | 1.65.0 |
 
 **Additional linux tools and packages**
 
@@ -90,9 +89,9 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 | python3-minimal | 3.7.3-1 |
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
-| sudo | 1.8.27-1+deb10u3 |
+| sudo | 1.8.27-1+deb10u4 |
 | unzip | 6.0-23+deb10u3 |
-| vim-tiny | 2:8.1.0875-5+deb10u2 |
+| vim-tiny | 2:8.1.0875-5+deb10u3 |
 | wget | 1.20.1-1.1 |
 | zip | 3.0-11+b1 |
 | zlib1g | 1:1.2.11.dfsg-1+deb10u2 |
@@ -100,7 +99,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 
 ## Variant: bullseye
 
-**Digest:** sha256:60b0355c8c4607514c1744f5125b2a259bc5dc65d26b4f38647a77f91365b257
+**Digest:** sha256:c2af3c3f95d4f5fb0ec7fb3242cb379fcb7abf5846b4d002a8d67c52c567d871
 
 **Tags:**
 ```
@@ -120,23 +119,22 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Rust](https://github.com/rust-lang/rust) | 1.64.0 | /usr/local/cargo<br />/usr/local/rustup |
+| [Rust](https://github.com/rust-lang/rust) | 1.65.0 | /usr/local/cargo<br />/usr/local/rustup |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 65a1e4edbe678cdac37ad96ca4bc4f6d77e27adf | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ab517361a4215d2f777023fc1e772fe79496713 | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 
 | Tool / crate | Version |
 |--------------|---------|
-| rls | 1.41.0 |
 | rustfmt | 1.5.1 |
-| rust-analysis | 1.64.0 |
-| rust-src | 1.64.0 |
-| clippy | 1.64.0 |
+| rust-analysis | 1.65.0 |
+| rust-src | 1.65.0 |
+| clippy | 1.65.0 |
 
 **Additional linux tools and packages**
 
@@ -154,8 +152,8 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
 | less | 551-2 |
-| libc6 | 2.31-13+deb11u4 |
-| libc6-dev | 2.31-13+deb11u4 |
+| libc6 | 2.31-13+deb11u5 |
+| libc6-dev | 2.31-13+deb11u5 |
 | libgssapi-krb5-2 | 1.18.3-6+deb11u2 |
 | libicu67 | 67.1-7 |
 | libkrb5-3 | 1.18.3-6+deb11u2 |
@@ -163,7 +161,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 | libssl1.1 | 1.1.1n-0+deb11u3 |
 | libstdc++6 | 10.2.1-6 |
 | lldb | 1:11.0-51+nmu5 |
-| locales | 2.31-13+deb11u4 |
+| locales | 2.31-13+deb11u5 |
 | lsb-release | 11.1.0 |
 | lsof | 4.93.2+dfsg-1.1 |
 | man-db | 2.9.4-2 |

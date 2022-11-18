@@ -12,7 +12,7 @@
 
 ## Variant: 17-bullseye
 
-**Digest:** sha256:26db01440464e0ae4ec4f645473b185dd6b8d698e5b0502a0a650d8ae550b43f
+**Digest:** sha256:e82fea84adf67cce6294f0f99cdbc3df969475f8db9ee42f3ac48579ea9f7034
 
 **Tags:**
 ```
@@ -34,14 +34,14 @@ mcr.microsoft.com/devcontainers/java:dev-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 17.0.4 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 17.0.5 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 78e85c7d78edeca7f06d6a54ad7f03f10dacde62 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 49691b58b3c1fbe64b927ec88d5e9697f76e2a80 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -64,14 +64,14 @@ mcr.microsoft.com/devcontainers/java:dev-bullseye
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
 | less | 551-2 |
-| libc6 | 2.31-13+deb11u4 |
+| libc6 | 2.31-13+deb11u5 |
 | libgssapi-krb5-2 | 1.18.3-6+deb11u2 |
 | libicu67 | 67.1-7 |
 | libkrb5-3 | 1.18.3-6+deb11u2 |
 | liblttng-ust0 | 2.12.1-1 |
 | libssl1.1 | 1.1.1n-0+deb11u3 |
 | libstdc++6 | 10.2.1-6 |
-| locales | 2.31-13+deb11u4 |
+| locales | 2.31-13+deb11u5 |
 | lsb-release | 11.1.0 |
 | lsof | 4.93.2+dfsg-1.1 |
 | man-db | 2.9.4-2 |
@@ -96,7 +96,7 @@ mcr.microsoft.com/devcontainers/java:dev-bullseye
 
 ## Variant: 17-buster
 
-**Digest:** sha256:16689e6f92530726665e2a0bedd208a50499b8e6644c36c3b4658697ac85e2ec
+**Digest:** sha256:9a402cbd9eb19435b118c67fb00162d5f8a34f36e8efa39c63def486c7eff27f
 
 **Tags:**
 ```
@@ -115,14 +115,14 @@ mcr.microsoft.com/devcontainers/java:dev-17-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 17.0.4 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 17.0.5 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 78e85c7d78edeca7f06d6a54ad7f03f10dacde62 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 49691b58b3c1fbe64b927ec88d5e9697f76e2a80 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -139,7 +139,7 @@ mcr.microsoft.com/devcontainers/java:dev-17-buster
 | ca-certificates | 20200601~deb10u2 |
 | curl | 7.64.0-4+deb10u3 |
 | dialog | 1.3-20190211-1 |
-| git | 1:2.20.1-2+deb10u3 |
+| git | 1:2.20.1-2+deb10u4 |
 | gnupg2 | 2.2.12-1+deb10u2 |
 | htop | 2.2.0-1+b1 |
 | iproute2 | 4.20.0-2+deb10u1 |
@@ -153,7 +153,7 @@ mcr.microsoft.com/devcontainers/java:dev-17-buster
 | liblttng-ust0 | 2.10.3-1 |
 | libssl1.1 | 1.1.1n-0+deb10u3 |
 | libstdc++6 | 8.3.0-6 |
-| locales | 2.28-10+deb10u1 |
+| locales | 2.28-10+deb10u2 |
 | lsb-release | 10.2019051400 |
 | lsof | 4.91+dfsg-1 |
 | man-db | 2.8.5-2 |
@@ -178,7 +178,7 @@ mcr.microsoft.com/devcontainers/java:dev-17-buster
 
 ## Variant: 11-bullseye
 
-**Digest:** sha256:f6783733531d0c9d4595f6bea79bd069ab88331419c283e5fae9abc05a019c40
+**Digest:** sha256:5100445f31b4e98a4a768b5d77b20b2ea9326add033c4a5b8157c5e137f42523
 
 **Tags:**
 ```
@@ -199,14 +199,14 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 11.0.16 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 11.0.17 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 78e85c7d78edeca7f06d6a54ad7f03f10dacde62 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 49691b58b3c1fbe64b927ec88d5e9697f76e2a80 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -229,14 +229,14 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bullseye
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
 | less | 551-2 |
-| libc6 | 2.31-13+deb11u4 |
+| libc6 | 2.31-13+deb11u5 |
 | libgssapi-krb5-2 | 1.18.3-6+deb11u2 |
 | libicu67 | 67.1-7 |
 | libkrb5-3 | 1.18.3-6+deb11u2 |
 | liblttng-ust0 | 2.12.1-1 |
 | libssl1.1 | 1.1.1n-0+deb11u3 |
 | libstdc++6 | 10.2.1-6 |
-| locales | 2.31-13+deb11u4 |
+| locales | 2.31-13+deb11u5 |
 | lsb-release | 11.1.0 |
 | lsof | 4.93.2+dfsg-1.1 |
 | man-db | 2.9.4-2 |
@@ -261,7 +261,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bullseye
 
 ## Variant: 11-buster
 
-**Digest:** sha256:0eea54caee4e19252d6d81a0fc4f4ae087adaf85552dec46394d0edc4f9b77b9
+**Digest:** sha256:2e327457bdef7b12dabdd10c9943f602a6109adadbec87aea298faaa496f84be
 
 **Tags:**
 ```
@@ -281,14 +281,14 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 11.0.16 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 11.0.17 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 78e85c7d78edeca7f06d6a54ad7f03f10dacde62 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 3fea5493a431ac64470d4230d4b51438cf213bd1 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 49691b58b3c1fbe64b927ec88d5e9697f76e2a80 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -305,7 +305,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-buster
 | ca-certificates | 20200601~deb10u2 |
 | curl | 7.64.0-4+deb10u3 |
 | dialog | 1.3-20190211-1 |
-| git | 1:2.20.1-2+deb10u3 |
+| git | 1:2.20.1-2+deb10u4 |
 | gnupg2 | 2.2.12-1+deb10u2 |
 | htop | 2.2.0-1+b1 |
 | iproute2 | 4.20.0-2+deb10u1 |
@@ -319,7 +319,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-buster
 | liblttng-ust0 | 2.10.3-1 |
 | libssl1.1 | 1.1.1n-0+deb10u3 |
 | libstdc++6 | 8.3.0-6 |
-| locales | 2.28-10+deb10u1 |
+| locales | 2.28-10+deb10u2 |
 | lsb-release | 10.2019051400 |
 | lsof | 4.91+dfsg-1 |
 | man-db | 2.8.5-2 |

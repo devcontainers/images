@@ -11,13 +11,14 @@
 
 ## Variant: jammy
 
-**Digest:** sha256:14fb6adbeaa64f54345000276c50f73dc9b3f60c6439f78df7cbd5afcc167009
+**Digest:** sha256:a0dd9e730868468528d98947c99811dbc4db953f64d9e7fcb7049552daeab20b
 
 **Tags:**
 ```
 mcr.microsoft.com/devcontainers/base:dev-jammy
 mcr.microsoft.com/devcontainers/base:dev-ubuntu-22.04
 mcr.microsoft.com/devcontainers/base:dev-ubuntu22.04
+mcr.microsoft.com/devcontainers/base:dev-ubuntu
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
@@ -32,7 +33,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu22.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 65a1e4edbe678cdac37ad96ca4bc4f6d77e27adf | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ab517361a4215d2f777023fc1e772fe79496713 | /home/vscode/.oh-my-zsh |
 
 **Additional linux tools and packages**
 
@@ -41,9 +42,9 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu22.04
 | apt-transport-https | 2.4.8 |
 | apt-utils | 2.4.8 |
 | ca-certificates | 20211016 |
-| curl | 7.81.0-1ubuntu1.4 |
+| curl | 7.81.0-1ubuntu1.6 |
 | dialog | 1.3-20211214-1 |
-| git | 1:2.34.1-1ubuntu1.4 |
+| git | 1:2.34.1-1ubuntu1.5 |
 | gnupg2 | 2.2.27-3ubuntu2.1 |
 | htop | 3.0.5-7build2 |
 | iproute2 | 5.15.0-1ubuntu2 |
@@ -68,24 +69,23 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu22.04
 | psmisc | 23.4-2build3 |
 | rsync | 3.2.3-8ubuntu3 |
 | strace | 5.16-0ubuntu3 |
-| sudo | 1.9.9-1ubuntu2 |
+| sudo | 1.9.9-1ubuntu2.1 |
 | unzip | 6.0-26ubuntu3.1 |
 | vim-tiny | 2:8.2.3995-1ubuntu2.1 |
 | wget | 1.21.2-2ubuntu1 |
 | zip | 3.0-12build2 |
-| zlib1g | 1:1.2.11.dfsg-2ubuntu9.1 |
+| zlib1g | 1:1.2.11.dfsg-2ubuntu9.2 |
 | zsh | 5.8.1-1 |
 
 ## Variant: focal
 
-**Digest:** sha256:7822d031c3adaa9583a1a7a1f4be0634dae12d8997deaf37d876e69b5b8c1a02
+**Digest:** sha256:72c7a0f73da1f6241d11bd2a6a3a26496474079c6b84aa8e22ba767b68846f80
 
 **Tags:**
 ```
 mcr.microsoft.com/devcontainers/base:dev-focal
 mcr.microsoft.com/devcontainers/base:dev-ubuntu-20.04
 mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
-mcr.microsoft.com/devcontainers/base:dev-ubuntu
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
@@ -100,7 +100,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 65a1e4edbe678cdac37ad96ca4bc4f6d77e27adf | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ab517361a4215d2f777023fc1e772fe79496713 | /home/vscode/.oh-my-zsh |
 
 **Additional linux tools and packages**
 
@@ -109,9 +109,9 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 | apt-transport-https | 2.0.9 |
 | apt-utils | 2.0.9 |
 | ca-certificates | 20211016~20.04.1 |
-| curl | 7.68.0-1ubuntu2.13 |
+| curl | 7.68.0-1ubuntu2.14 |
 | dialog | 1.3-20190808-1 |
-| git | 1:2.25.1-1ubuntu3.5 |
+| git | 1:2.25.1-1ubuntu3.6 |
 | gnupg2 | 2.2.19-3ubuntu2.2 |
 | htop | 2.2.0-2build1 |
 | iproute2 | 5.5.0-1ubuntu1 |
@@ -144,12 +144,12 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 | vim-tiny | 2:8.1.2269-1ubuntu5.9 |
 | wget | 1.20.3-1ubuntu2 |
 | zip | 3.0-11build1 |
-| zlib1g | 1:1.2.11.dfsg-2ubuntu1.4 |
+| zlib1g | 1:1.2.11.dfsg-2ubuntu1.5 |
 | zsh | 5.8-3ubuntu1.1 |
 
 ## Variant: bionic
 
-**Digest:** sha256:e14e8310a8d73668c18ea84ff9a622d1e54ae80e084ede1e5b724791ebc461ee
+**Digest:** sha256:1e6ac88bb441554d6e0e000bb1c5d124a975617b482d49887f47330d2486c2fb
 
 **Tags:**
 ```
@@ -170,7 +170,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu18.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 65a1e4edbe678cdac37ad96ca4bc4f6d77e27adf | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ab517361a4215d2f777023fc1e772fe79496713 | /home/vscode/.oh-my-zsh |
 
 **Additional linux tools and packages**
 
@@ -179,9 +179,9 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu18.04
 | apt-transport-https | 1.6.14 |
 | apt-utils | 1.6.14 |
 | ca-certificates | 20211016~18.04.1 |
-| curl | 7.58.0-2ubuntu3.20 |
+| curl | 7.58.0-2ubuntu3.21 |
 | dialog | 1.3-20171209-1 |
-| git | 1:2.17.1-1ubuntu0.12 |
+| git | 1:2.17.1-1ubuntu0.13 |
 | gnupg2 | 2.2.4-1ubuntu1.6 |
 | htop | 2.1.0-3 |
 | iproute2 | 4.15.0-2ubuntu1.3 |
