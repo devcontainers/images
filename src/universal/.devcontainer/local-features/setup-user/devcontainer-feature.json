@@ -3,8 +3,8 @@
     "name": "Setup user configs",
     "containerEnv": {
         "RUBY_HOME": "/usr/local/rvm/rubies/default",
-        "JAVA_ROOT": "/home/codespace/.java",
-        "NODE_ROOT": "/home/codespace/.nodejs", // might require changing to sdkman or opt/java
+        "JAVA_ROOT": "/home/codespace/java",
+        "NODE_ROOT": "/home/codespace/.nodejs",
         "PHP_ROOT": "/home/codespace/.php",
         "PYTHON_ROOT": "/home/codespace/.python",
         "RUBY_ROOT": "/home/codespace/.ruby",

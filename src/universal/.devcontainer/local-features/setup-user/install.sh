@@ -43,8 +43,8 @@ mkdir -p /home/codespace/.python
 ln -snf /usr/local/python/current $PYTHON_PATH
 ln -snf /usr/local/python /opt/python
 
-JAVA_PATH="/home/codespace/.java/current"
-ln -snf /usr/local/sdkman/candidates/java /home/codespace/.java
+JAVA_PATH="/home/codespace/java/current"
+ln -snf /usr/local/sdkman/candidates/java /home/codespace
 
 RUBY_PATH="/home/codespace/.ruby/current"
 mkdir -p /home/codespace/.ruby
