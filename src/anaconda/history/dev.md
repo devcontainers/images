@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:dc516a58cd3cc88b8d42352b7bed3cd8883c89676a48f01638b096d500a122a2
+**Digest:** sha256:23b5976319db703a7029fa8120f1bb642802776f19fd559a241ab281117402f8
 
 **Tags:**
 ```
@@ -23,22 +23,22 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Python](https://www.python.org/) | 3.9.12 | /opt/conda |
-| [Jupyter Notebooks](https://jupyter.org/) | 6.4.8 | /opt/conda |
-| [Jupyter Lab](https://jupyter.org/) | 3.3.2 | /opt/conda |
+| [Python](https://www.python.org/) | 3.9.13 | /opt/conda |
+| [Jupyter Notebooks](https://jupyter.org/) | 6.4.12 | /opt/conda |
+| [Jupyter Lab](https://jupyter.org/) | 3.4.4 | /opt/conda |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 78e85c7d78edeca7f06d6a54ad7f03f10dacde62 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 49691b58b3c1fbe64b927ec88d5e9697f76e2a80 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [conda](https://github.com/conda/conda) | 4.12.0 | /opt/conda |
-| anaconda | 2022.05 | /opt/conda |
+| [conda](https://github.com/conda/conda) | 22.9.0 | /opt/conda |
+| anaconda | 2022.10 | /opt/conda |
 
 **Additional linux tools and packages**
 
@@ -55,14 +55,14 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
 | less | 551-2 |
-| libc6 | 2.31-13+deb11u4 |
+| libc6 | 2.31-13+deb11u5 |
 | libgssapi-krb5-2 | 1.18.3-6+deb11u2 |
 | libicu67 | 67.1-7 |
 | libkrb5-3 | 1.18.3-6+deb11u2 |
 | liblttng-ust0 | 2.12.1-1 |
 | libssl1.1 | 1.1.1n-0+deb11u3 |
 | libstdc++6 | 10.2.1-6 |
-| locales | 2.31-13+deb11u4 |
+| locales | 2.31-13+deb11u5 |
 | lsb-release | 11.1.0 |
 | lsof | 4.93.2+dfsg-1.1 |
 | man-db | 2.9.4-2 |
