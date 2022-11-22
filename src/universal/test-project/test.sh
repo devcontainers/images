@@ -7,7 +7,8 @@ source test-utils.sh codespace
 checkCommon
 
 check "git" git --version
-check "gitconfig-location" bash -c "git config --system user.name devcontainer && ls /etc | grep gitconfig"
+check "gitconfig" bash -c "sudo git config --system user.name devcontainer"
+check "gitconfig-location" bash -c "sudo ls /etc | grep gitconfig"
 
 # Check .NET
 check "dotnet" dotnet --list-sdks
