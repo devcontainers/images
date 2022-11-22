@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:480ecc3ce21b0f840546030104a9d11cb4156f7f57f153efdabc09d6fe79e3b4
+**Digest:** sha256:fb1b966c7d3b26a3b0e713832a3ced686c9ea0d0c66f3931a77005627584f94b
 
 **Tags:**
 ```
@@ -42,17 +42,17 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ab517361a4215d2f777023fc1e772fe79496713 | /home/codespace/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe83581a20ab12010e9168977dc633c9da2924e1 | /home/codespace/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | bf45ef070e82356ed36a0f4d98f8ec651c8f0d98 | /usr/local/nvs |
 | [rbenv](https://github.com/rbenv/rbenv.git) | 52acbdf83f524fb75f8491ba92fe5c0335f3b5f3 | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 66311de0f8089564a232722a6b3db824b85235b3 | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 5eb8c65e3f279cacb2066dd435b22afc237ab0e3 | /usr/local/share/ruby-build |
 
 **Pip / pipx installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| numpy | 1.23.4 |
+| numpy | 1.23.5 |
 | pandas | 1.5.1 |
 | scipy | 1.9.3 |
 | matplotlib | 3.6.2 |
@@ -62,7 +62,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | requests | 2.28.1 |
 | plotly | 5.11.0 |
 | jupyterlab-git | 0.39.3 |
-| pylint | 2.15.5 |
+| pylint | 2.15.6 |
 | flake8 | 5.0.4 |
 | autopep8 | 2.0.0 |
 | black | 22.10.0 |
@@ -124,7 +124,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | build-essential | 12.8ubuntu1.1 |
 | ca-certificates | 20211016~20.04.1 |
 | clang | 1:10.0-50~exp1 |
-| cmake | 3.16.3-1ubuntu1 |
+| cmake | 3.16.3-1ubuntu1.20.04.1 |
 | cppcheck | 1.90-4build1 |
 | curl | 7.68.0-1ubuntu2.14 |
 | dialog | 1.3-20190808-1 |
