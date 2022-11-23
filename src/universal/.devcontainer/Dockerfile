@@ -54,6 +54,7 @@ RUN LANG="C.UTF-8" \
         tk-dev \
         uuid-dev \
         curl \
+        gettext \
     && rm -rf /var/lib/apt/lists/* \
     # This is the folder containing 'links' to benv and build script generator
     && apt-get update \
