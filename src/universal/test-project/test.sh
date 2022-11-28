@@ -152,6 +152,14 @@ check "oryx-install-java-12.0.2" oryx prep --skip-detection --platforms-and-vers
 check "java-12.0.2-installed-by-oryx" ls /opt/java/ | grep 12.0.2
 check "java-version-on-path-is-12.0.2" java --version | grep 12.0.2
 
+# Ensures nvm works in a Node Project
+check "default-node-version" bash -c "node --version | grep 16."
+check "default-node-location" bash -c "which node | grep /home/codespace/nvm/current/bin"
+check "oryx-build-node-projectr" bash -c "oryx build ./sample/node"
+check "nvm-install-node" bash -c ". /usr/local/share/nvm/nvm.sh && nvm install 8.0.0"
+check "nvm-works-in-node-project" bash -c "node --version | grep v8.0.0"
+check "default-node-location-remained-same" bash -c "which node | grep /home/codespace/nvm/current/bin"
+
 # Ensures sdkman works in a Java Project
 check "default-java-version" bash -c "java --version | grep 17."
 check "default-java-location" bash -c "which java | grep /home/codespace/java/current/bin"

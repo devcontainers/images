@@ -4,7 +4,7 @@
     "containerEnv": {
         "RUBY_HOME": "/usr/local/rvm/rubies/default",
         "JAVA_ROOT": "/home/codespace/java",
-        "NODE_ROOT": "/home/codespace/.nodejs",
+        "NODE_ROOT": "/home/codespace/nvm",
         "PHP_ROOT": "/home/codespace/.php",
         "PYTHON_ROOT": "/home/codespace/.python",
         "RUBY_ROOT": "/home/codespace/.ruby",
@@ -20,7 +20,7 @@
         "RAILS_DEVELOPMENT_HOSTS": ".githubpreview.dev,.app.github.dev",
         "GOROOT": "/usr/local/go",
         "JUPYTERLAB_PATH": "/home/codespace/.local/bin",
-        "PATH": "/home/codespace/.dotnet:/home/codespace/.nodejs/current/bin:/home/codespace/.php/current/bin:/home/codespace/.python/current/bin:/home/codespace/java/current/bin:/home/codespace/.ruby/current/bin:/home/codespace/.local/bin:${PATH}"
+        "PATH": "/home/codespace/.dotnet:/home/codespace/nvm/current/bin:/home/codespace/.php/current/bin:/home/codespace/.python/current/bin:/home/codespace/java/current/bin:/home/codespace/.ruby/current/bin:/home/codespace/.local/bin:${PATH}"
     },
     "install": {
         "app": "",
