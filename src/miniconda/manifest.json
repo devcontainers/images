@@ -1,5 +1,5 @@
 {
-	"version": "0.202.11",
+	"version": "0.202.12",
 	"build": {
 		"latest": true,
 		"rootDistro": "debian",
