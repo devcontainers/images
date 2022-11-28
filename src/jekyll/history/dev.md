@@ -10,7 +10,7 @@
 
 ## Variant: 2.7-bullseye
 
-**Digest:** sha256:09a31252f793f173925a30e019396991a063649bf9617c9c09ad93759c343d0e
+**Digest:** sha256:b9a9bcbcf271b328e5b74aa77bde86085bec791541fbe096c8ea7a044b85ac11
 
 **Tags:**
 ```
@@ -38,10 +38,10 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ab517361a4215d2f777023fc1e772fe79496713 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe83581a20ab12010e9168977dc633c9da2924e1 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 | [rbenv](https://github.com/rbenv/rbenv.git) | 52acbdf83f524fb75f8491ba92fe5c0335f3b5f3 | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 66311de0f8089564a232722a6b3db824b85235b3 | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 5eb8c65e3f279cacb2066dd435b22afc237ab0e3 | /usr/local/share/ruby-build |
 
 **Ruby gems and tools**
 
@@ -73,9 +73,9 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 | jq | 1.6-2.1 |
 | less | 551-2 |
 | libc6 | 2.31-13+deb11u5 |
-| libgssapi-krb5-2 | 1.18.3-6+deb11u2 |
+| libgssapi-krb5-2 | 1.18.3-6+deb11u3 |
 | libicu67 | 67.1-7 |
-| libkrb5-3 | 1.18.3-6+deb11u2 |
+| libkrb5-3 | 1.18.3-6+deb11u3 |
 | liblttng-ust0 | 2.12.1-1 |
 | libssl1.1 | 1.1.1n-0+deb11u3 |
 | libstdc++6 | 10.2.1-6 |
@@ -104,7 +104,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 
 ## Variant: 2.7-buster
 
-**Digest:** sha256:1d46fc05978f870e67d70a2ba3a51e9dce2af7a8194e28f4d0d1d47ac25baea5
+**Digest:** sha256:b9e9da3266aab0da3f2bafa0d6d999195a67ef30746acaabfe18cad80654921b
 
 **Tags:**
 ```
@@ -131,10 +131,10 @@ mcr.microsoft.com/devcontainers/jekyll:dev-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ab517361a4215d2f777023fc1e772fe79496713 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe83581a20ab12010e9168977dc633c9da2924e1 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 | [rbenv](https://github.com/rbenv/rbenv.git) | 52acbdf83f524fb75f8491ba92fe5c0335f3b5f3 | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 66311de0f8089564a232722a6b3db824b85235b3 | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 5eb8c65e3f279cacb2066dd435b22afc237ab0e3 | /usr/local/share/ruby-build |
 
 **Ruby gems and tools**
 

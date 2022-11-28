@@ -30,51 +30,51 @@ ln -snf /usr/local/oryx/* /opt/oryx
 
 # For the universal image, oryx build tool installs the detected platforms in /home/codespace/*. Hence, linking current platforms to the /home/codespace/ path and adding it to the PATH.
 # This ensures that whatever platfornm versions oryx detects and installs are set as root.
-NODE_PATH="/home/codespace/.nodejs/current"
-mkdir -p /home/codespace/.nodejs
+NODE_PATH="/home/${USERNAME}/.nodejs/current"
+mkdir -p /home/${USERNAME}/.nodejs
 ln -snf /usr/local/share/nvm/current $NODE_PATH
 
-PHP_PATH="/home/codespace/.php/current"
-mkdir -p /home/codespace/.php
+PHP_PATH="/home/${USERNAME}/.php/current"
+mkdir -p /home/${USERNAME}/.php
 ln -snf /usr/local/php/current $PHP_PATH
 
-PYTHON_PATH="/home/codespace/.python/current"
-mkdir -p /home/codespace/.python
+PYTHON_PATH="/home/${USERNAME}/.python/current"
+mkdir -p /home/${USERNAME}/.python
 ln -snf /usr/local/python/current $PYTHON_PATH
 ln -snf /usr/local/python /opt/python
 
 JAVA_PATH="/home/codespace/java/current"
 ln -snf /usr/local/sdkman/candidates/java /home/codespace
 
-RUBY_PATH="/home/codespace/.ruby/current"
-mkdir -p /home/codespace/.ruby
+RUBY_PATH="/home/${USERNAME}/.ruby/current"
+mkdir -p /home/${USERNAME}/.ruby
 ln -snf /usr/local/rvm/rubies/default $RUBY_PATH
 
-DOTNET_PATH="/home/codespace/.dotnet"
+DOTNET_PATH="/home/${USERNAME}/.dotnet"
 ln -snf /usr/local/dotnet/current $DOTNET_PATH
 mkdir -p /opt/dotnet/lts
 cp -R /usr/local/dotnet/current/dotnet /opt/dotnet/lts
 cp -R /usr/local/dotnet/current/LICENSE.txt /opt/dotnet/lts
 cp -R /usr/local/dotnet/current/ThirdPartyNotices.txt /opt/dotnet/lts
 
-MAVEN_PATH="/home/codespace/.maven/current"
-mkdir -p /home/codespace/.maven
+MAVEN_PATH="/home/${USERNAME}/.maven/current"
+mkdir -p /home/${USERNAME}/.maven
 ln -snf /usr/local/sdkman/candidates/maven/current $MAVEN_PATH
 
-HUGO_ROOT="/home/codespace/.hugo/current"
-mkdir -p /home/codespace/.hugo
+HUGO_ROOT="/home/${USERNAME}/.hugo/current"
+mkdir -p /home/${USERNAME}/.hugo
 ln -snf /usr/local/hugo $HUGO_ROOT
 
-HOME_DIR="/home/codespace/"
-chown -R codespace:codespace ${HOME_DIR}
+HOME_DIR="/home/${USERNAME}/"
+chown -R ${USERNAME}:${USERNAME} ${HOME_DIR}
 chmod -R g+r+w "${HOME_DIR}"
 find "${HOME_DIR}" -type d | xargs -n 1 chmod g+s
 
 OPT_DIR="/opt/"
-chown -R codespace:oryx ${OPT_DIR}
+chown -R ${USERNAME}:oryx ${OPT_DIR}
 chmod -R g+r+w "${OPT_DIR}"
 find "${OPT_DIR}" -type d | xargs -n 1 chmod g+s
 
-echo "Defaults secure_path=\"${DOTNET_PATH}:${NODE_PATH}/bin:${PHP_PATH}/bin:${PYTHON_PATH}/bin:${JAVA_PATH}/bin:${RUBY_PATH}/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin:/usr/local/share:/home/codespace/.local/bin:${PATH}\"" >> /etc/sudoers.d/$USERNAME
+echo "Defaults secure_path=\"${DOTNET_PATH}:${NODE_PATH}/bin:${PHP_PATH}/bin:${PYTHON_PATH}/bin:${JAVA_PATH}/bin:${RUBY_PATH}/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin:/usr/local/share:/home/${USERNAME}/.local/bin:${PATH}\"" >> /etc/sudoers.d/$USERNAME
 
 echo "Done!"

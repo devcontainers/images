@@ -11,7 +11,7 @@
 
 ## Variant: 3.16
 
-**Digest:** sha256:beb8a1944400b75b18657eaa8388a2b275bf20a7f4d93e221c33bc8596c3b890
+**Digest:** sha256:67d2bd7da6393f01ff0b33f6edcc0199dc933be5e529b97a7c90dd1342c6c625
 
 **Tags:**
 ```
@@ -31,7 +31,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.16
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ab517361a4215d2f777023fc1e772fe79496713 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe83581a20ab12010e9168977dc633c9da2924e1 | /home/vscode/.oh-my-zsh |
 
 **Additional linux tools and packages**
 
@@ -57,7 +57,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.16
 | jq | 1.6-r1 |
 | libgcc | 11.2.1_git20220219-r2 |
 | libstdc++ | 11.2.1_git20220219-r2 |
-| krb5-libs | 1.19.3-r0 |
+| krb5-libs | 1.19.4-r0 |
 | libintl | 0.21-r2 |
 | libssl1.1 | 1.1.1s-r0 |
 | lttng-ust | 2.13.2-r0 |
@@ -76,7 +76,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.16
 
 ## Variant: 3.15
 
-**Digest:** sha256:48f0f133dca5cfe763a18a7c159e24f76baaaec62d4f2bcfafbe498946744f8a
+**Digest:** sha256:ceb2e7b3a071295def20eb5780388625e81cc1f39f9d249c1eacff862a302d99
 
 **Tags:**
 ```
@@ -97,7 +97,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ab517361a4215d2f777023fc1e772fe79496713 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe83581a20ab12010e9168977dc633c9da2924e1 | /home/vscode/.oh-my-zsh |
 
 **Additional linux tools and packages**
 
@@ -142,7 +142,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 ## Variant: 3.14
 
-**Digest:** sha256:cdfe1a268e750166337aaf5c1c330cbcbd7b8c83fe7e2815b6e49ab4364d4ecf
+**Digest:** sha256:4ad40f8c80df93787e5b9b36bc5f99992c0af1138de32b4e4ea3cf8d891ce61d
 
 **Tags:**
 ```
@@ -162,7 +162,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.14
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ab517361a4215d2f777023fc1e772fe79496713 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe83581a20ab12010e9168977dc633c9da2924e1 | /home/vscode/.oh-my-zsh |
 
 **Additional linux tools and packages**
 

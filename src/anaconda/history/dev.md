@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:23b5976319db703a7029fa8120f1bb642802776f19fd559a241ab281117402f8
+**Digest:** sha256:d4e1d2f71e3c7fc35f5e0f91926d8c72d9084c674068a3014869097290bded48
 
 **Tags:**
 ```
@@ -31,7 +31,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 49691b58b3c1fbe64b927ec88d5e9697f76e2a80 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ab517361a4215d2f777023fc1e772fe79496713 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -56,9 +56,9 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | jq | 1.6-2.1 |
 | less | 551-2 |
 | libc6 | 2.31-13+deb11u5 |
-| libgssapi-krb5-2 | 1.18.3-6+deb11u2 |
+| libgssapi-krb5-2 | 1.18.3-6+deb11u3 |
 | libicu67 | 67.1-7 |
-| libkrb5-3 | 1.18.3-6+deb11u2 |
+| libkrb5-3 | 1.18.3-6+deb11u3 |
 | liblttng-ust0 | 2.12.1-1 |
 | libssl1.1 | 1.1.1n-0+deb11u3 |
 | libstdc++6 | 10.2.1-6 |
