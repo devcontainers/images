@@ -132,6 +132,8 @@ check "oryx" oryx --version
 check "default-node-version" bash -c "node --version | grep 16."
 check "default-node-location" bash -c "which node | grep /home/codespace/nvm/current/bin"
 check "oryx-build-node-projectr" bash -c "oryx build ./sample/node"
+ls -la /home/codespace/nvm
+ls -la /home/codespace
 check "oryx-configured-current-node-version" bash -c "ls -la /home/codespace/nvm | grep /opt/nodejs"
 check "nvm-install-node" bash -c ". /usr/local/share/nvm/nvm.sh && nvm install 8.0.0"
 check "nvm-works-in-node-project" bash -c "node --version | grep v8.0.0"
@@ -141,6 +143,8 @@ check "default-node-location-remained-same" bash -c "which node | grep /home/cod
 check "default-java-version" bash -c "java --version | grep 17."
 check "default-java-location" bash -c "which java | grep /home/codespace/java/current/bin"
 check "oryx-build-java-project" bash -c "oryx build ./sample/java"
+ls -la /home/codespace/java
+ls -la /home/codespace
 check "oryx-configured-current-java-version" bash -c "ls -la /home/codespace/java | grep /opt/java"
 check "sdk-install-java" bash -c ". /usr/local/sdkman/bin/sdkman-init.sh && sdk install java 19.0.1-oracle < /dev/null"
 check "sdkman-works-in-java-project" bash -c "java --version | grep 19.0.1"
