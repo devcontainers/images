@@ -10,7 +10,7 @@
 
 ## Variant: buster
 
-**Digest:** sha256:0fc68ab5271f6f4847da752fc17bb9f78350057ba8b59a5ca192b220d061fb81
+**Digest:** sha256:8bfafb030e8c304f49ddfb5da26aafa8a9569e95137522ae89a0502feb20c347
 
 **Tags:**
 ```
@@ -37,7 +37,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ab517361a4215d2f777023fc1e772fe79496713 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe83581a20ab12010e9168977dc633c9da2924e1 | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 
@@ -99,7 +99,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 
 ## Variant: bullseye
 
-**Digest:** sha256:c2af3c3f95d4f5fb0ec7fb3242cb379fcb7abf5846b4d002a8d67c52c567d871
+**Digest:** sha256:442181b7fef44b965e461992eb08190a4b1d4e04588a2c01f479e01528305044
 
 **Tags:**
 ```
@@ -125,7 +125,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ab517361a4215d2f777023fc1e772fe79496713 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe83581a20ab12010e9168977dc633c9da2924e1 | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 
@@ -154,9 +154,9 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 | less | 551-2 |
 | libc6 | 2.31-13+deb11u5 |
 | libc6-dev | 2.31-13+deb11u5 |
-| libgssapi-krb5-2 | 1.18.3-6+deb11u2 |
+| libgssapi-krb5-2 | 1.18.3-6+deb11u3 |
 | libicu67 | 67.1-7 |
-| libkrb5-3 | 1.18.3-6+deb11u2 |
+| libkrb5-3 | 1.18.3-6+deb11u3 |
 | liblttng-ust0 | 2.12.1-1 |
 | libssl1.1 | 1.1.1n-0+deb11u3 |
 | libstdc++6 | 10.2.1-6 |

@@ -7,13 +7,8 @@ source test-utils.sh codespace
 checkCommon
 
 check "git" git --version
-
-git_version_satisfied=false
-if (echo a version 2.38.1; git --version) | sort -Vk3 | tail -1 | grep -q git; then
-    git_version_satisfied=true
-fi
-
-check "git version satisfies requirement" echo $git_version_satisfied | grep "true"
+check "gitconfig" bash -c "sudo git config --system user.name devcontainer"
+check "gitconfig-location" bash -c "sudo ls /etc | grep gitconfig"
 
 # Check .NET
 check "dotnet" dotnet --list-sdks
@@ -164,6 +159,14 @@ check "oryx-build-node-projectr" bash -c "oryx build ./sample/node"
 check "nvm-install-node" bash -c ". /usr/local/share/nvm/nvm.sh && nvm install 8.0.0"
 check "nvm-works-in-node-project" bash -c "node --version | grep v8.0.0"
 check "default-node-location-remained-same" bash -c "which node | grep /home/codespace/nvm/current/bin"
+
+# Ensures sdkman works in a Java Project
+check "default-java-version" bash -c "java --version | grep 17."
+check "default-java-location" bash -c "which java | grep /home/codespace/java/current/bin"
+check "oryx-build-java-project" bash -c "oryx build ./sample/java"
+check "sdk-install-java" bash -c ". /usr/local/sdkman/bin/sdkman-init.sh && sdk install java 19.0.1-oracle < /dev/null"
+check "sdkman-works-in-java-project" bash -c "java --version | grep 19.0.1"
+check "default-java-location-remained-same" bash -c "which java | grep /home/codespace/java/current/bin"
 
 ls -la /home/codespace
 
