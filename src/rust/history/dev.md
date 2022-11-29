@@ -10,7 +10,7 @@
 
 ## Variant: buster
 
-**Digest:** sha256:8b4c77da1ae540e01bdeeac5c676db9b3b447f7b27c669d1a35c7a5fd0dd8d05
+**Digest:** sha256:ceb3a8dfe008c723e8cec759abadd505a4d45c7a87671dd9f2cfd4f4e07d3eed
 
 **Tags:**
 ```
@@ -37,7 +37,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1aa58d42a52b8fa39f16ad169fc405f276c36ae5 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 66addc8b45c93f7661a5d8bba93b7b4afcbc23de | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 
@@ -67,9 +67,9 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 | libc6 | 2.28-10+deb10u2 |
 | libc6-dev | 2.28-10+deb10u2 |
 | libgcc1 | 1:8.3.0-6 |
-| libgssapi-krb5-2 | 1.17-3+deb10u4 |
+| libgssapi-krb5-2 | 1.17-3+deb10u5 |
 | libicu63 | 63.1-6+deb10u3 |
-| libkrb5-3 | 1.17-3+deb10u4 |
+| libkrb5-3 | 1.17-3+deb10u5 |
 | liblttng-ust0 | 2.10.3-1 |
 | libssl1.1 | 1.1.1n-0+deb10u3 |
 | libstdc++6 | 8.3.0-6 |
@@ -99,7 +99,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 
 ## Variant: bullseye
 
-**Digest:** sha256:ae125492f18323dc8c6ec6d67d735006c37744b41a07ce2c6cfe0f08726306d6
+**Digest:** sha256:4a4c38d0574cdf013149d59821d2d977d7ac0791417f221a227fded9aefb3af8
 
 **Tags:**
 ```
@@ -125,7 +125,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1aa58d42a52b8fa39f16ad169fc405f276c36ae5 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 66addc8b45c93f7661a5d8bba93b7b4afcbc23de | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 

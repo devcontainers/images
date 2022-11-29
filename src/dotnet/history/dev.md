@@ -15,7 +15,7 @@
 
 ## Variant: 7.0-bullseye-slim
 
-**Digest:** sha256:cd5be04f79c58bdafc017144abb401ad7152cc93aac637fa100404eb9cd0e60d
+**Digest:** sha256:dd25b115e44c807f90d7822771c301817bb887de39efa159401e26df517de574
 
 **Tags:**
 ```
@@ -42,7 +42,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-7.0-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1aa58d42a52b8fa39f16ad169fc405f276c36ae5 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 66addc8b45c93f7661a5d8bba93b7b4afcbc23de | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Additional linux tools and packages**
@@ -92,7 +92,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-7.0-bullseye
 
 ## Variant: 7.0-jammy
 
-**Digest:** sha256:c71385e86cd6a394d9599c49064827665fe435686f21b4b7de83652c4cf91560
+**Digest:** sha256:9333bda9688e60b6c39ed78bc00871edbb015e059f71c0494632063ff451d154
 
 **Tags:**
 ```
@@ -117,7 +117,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-7.0-jammy
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1aa58d42a52b8fa39f16ad169fc405f276c36ae5 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 66addc8b45c93f7661a5d8bba93b7b4afcbc23de | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Additional linux tools and packages**
@@ -165,7 +165,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-7.0-jammy
 
 ## Variant: 6.0-bullseye-slim
 
-**Digest:** sha256:47cffe73b4e39f7137308723510f2db92a7f21e558a90fd0d96411a53d336ce6
+**Digest:** sha256:7fd060d90ba3288e764b2069064e3d59eb0620aba9c3e16d7ec3cbd2d0bf88bb
 
 **Tags:**
 ```
@@ -192,7 +192,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1aa58d42a52b8fa39f16ad169fc405f276c36ae5 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 66addc8b45c93f7661a5d8bba93b7b4afcbc23de | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Additional linux tools and packages**
@@ -242,7 +242,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-bullseye
 
 ## Variant: 6.0-jammy
 
-**Digest:** sha256:b50d4c1464e80ccd3d12f41f1e9dc3747ccce5a4f14e3f1567e61e2581af3ea9
+**Digest:** sha256:7fc1d0fad8ac64d64cac914930ee51380c4ed6c305e68ee978fc45e892aa528f
 
 **Tags:**
 ```
@@ -267,7 +267,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-jammy
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1aa58d42a52b8fa39f16ad169fc405f276c36ae5 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 66addc8b45c93f7661a5d8bba93b7b4afcbc23de | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Additional linux tools and packages**
@@ -315,7 +315,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-jammy
 
 ## Variant: 6.0-focal
 
-**Digest:** sha256:1af260f113672e5dbef76a453ff6a2bb4555a73d9392cb1a85ff99fb2b04d24c
+**Digest:** sha256:e22e60b177186dd6664f808bdb6e119e3ec1878221abb69b10ee1e74b3f189cc
 
 **Tags:**
 ```
@@ -340,7 +340,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-focal
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1aa58d42a52b8fa39f16ad169fc405f276c36ae5 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 66addc8b45c93f7661a5d8bba93b7b4afcbc23de | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Additional linux tools and packages**
@@ -391,7 +391,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-focal
 
 ## Variant: 3.1-bullseye
 
-**Digest:** sha256:89c12b3be42f46af6fa04c5595c303f78e13406a219c3a9342eab26baef3276f
+**Digest:** sha256:fafcb43980755cbd2b4bcb54fe9cbe05ee6f21a8848cc9e3ae13ee1a3c52edad
 
 **Tags:**
 ```
@@ -417,7 +417,7 @@ mcr.microsoft.com/devcontainers/dotnetcore:dev-3.1-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1aa58d42a52b8fa39f16ad169fc405f276c36ae5 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 66addc8b45c93f7661a5d8bba93b7b4afcbc23de | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Additional linux tools and packages**
@@ -467,7 +467,7 @@ mcr.microsoft.com/devcontainers/dotnetcore:dev-3.1-bullseye
 
 ## Variant: 3.1-focal
 
-**Digest:** sha256:79348af218e2a52a34958861e3fa1f3b2612afce26fd748884033971ab758ee0
+**Digest:** sha256:f733bba038dfc7b2c964bbf16d09371b0f85aed4c3bc0c5a90bf7fccdfd9868b
 
 **Tags:**
 ```
@@ -494,7 +494,7 @@ mcr.microsoft.com/devcontainers/dotnetcore:dev-3.1
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1aa58d42a52b8fa39f16ad169fc405f276c36ae5 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 66addc8b45c93f7661a5d8bba93b7b4afcbc23de | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Additional linux tools and packages**

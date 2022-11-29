@@ -10,7 +10,7 @@
 
 ## Variant: buster
 
-**Digest:** sha256:0a8a443b8cef81fb42781168877a9bfe3699e914bbab6d99db4780b4b68c969f
+**Digest:** sha256:39e5e6176dd404c81ae8ae4924a5f3a51419e6ae55a940a130f79b6e85dd5bc1
 
 **Tags:**
 ```
@@ -31,7 +31,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian10
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1aa58d42a52b8fa39f16ad169fc405f276c36ae5 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 66addc8b45c93f7661a5d8bba93b7b4afcbc23de | /home/vscode/.oh-my-zsh |
 
 **Additional linux tools and packages**
 
@@ -50,9 +50,9 @@ mcr.microsoft.com/devcontainers/base:dev-debian10
 | less | 487-0.1+b1 |
 | libc6 | 2.28-10+deb10u2 |
 | libgcc1 | 1:8.3.0-6 |
-| libgssapi-krb5-2 | 1.17-3+deb10u4 |
+| libgssapi-krb5-2 | 1.17-3+deb10u5 |
 | libicu63 | 63.1-6+deb10u3 |
-| libkrb5-3 | 1.17-3+deb10u4 |
+| libkrb5-3 | 1.17-3+deb10u5 |
 | liblttng-ust0 | 2.10.3-1 |
 | libssl1.1 | 1.1.1n-0+deb10u3 |
 | libstdc++6 | 8.3.0-6 |
@@ -80,7 +80,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian10
 
 ## Variant: bullseye
 
-**Digest:** sha256:9cc40928d2934b17fed9380ef0418748ec5f130279f2d45cd293819c725f1534
+**Digest:** sha256:2e632b0de09b186fcb006e8c214c740aa5a01580cf6962baf01018871e6f0be8
 
 **Tags:**
 ```
@@ -103,7 +103,7 @@ mcr.microsoft.com/devcontainers/base:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1aa58d42a52b8fa39f16ad169fc405f276c36ae5 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 66addc8b45c93f7661a5d8bba93b7b4afcbc23de | /home/vscode/.oh-my-zsh |
 
 **Additional linux tools and packages**
 
