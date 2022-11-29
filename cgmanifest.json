@@ -39,7 +39,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "1aa58d42a52b8fa39f16ad169fc405f276c36ae5"
+                    "commitHash": "66addc8b45c93f7661a5d8bba93b7b4afcbc23de"
                 }
             }
         },
@@ -129,7 +129,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "62d01b70df227850b728f5050418b917ad6d2b32"
+                    "commitHash": "4e368f63904b784e19401e08cbc15ca8f06eb92a"
                 }
             }
         },
@@ -420,7 +420,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "1aa58d42a52b8fa39f16ad169fc405f276c36ae5"
+                    "commitHash": "66addc8b45c93f7661a5d8bba93b7b4afcbc23de"
                 }
             }
         },
@@ -572,7 +572,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "pylint",
-                    "Version": "2.15.6"
+                    "Version": "2.15.7"
                 }
             }
         },
@@ -1184,7 +1184,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "jupyterlab-git",
-                    "Version": "0.40.0"
+                    "Version": "0.40.1"
                 }
             }
         },
@@ -1221,7 +1221,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "1aa58d42a52b8fa39f16ad169fc405f276c36ae5"
+                    "commitHash": "66addc8b45c93f7661a5d8bba93b7b4afcbc23de"
                 }
             }
         },

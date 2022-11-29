@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:c8e9aabbde0481a7c01088e1f95bc6de8a45d685549c489a0c5766d0f187e687
+**Digest:** sha256:5f8b516f0f97df273a313feb7e35645ea5ce5fa507bf10ed3caf4f2f4c465419
 
 **Tags:**
 ```
@@ -42,7 +42,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1aa58d42a52b8fa39f16ad169fc405f276c36ae5 | /home/codespace/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 66addc8b45c93f7661a5d8bba93b7b4afcbc23de | /home/codespace/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | bf45ef070e82356ed36a0f4d98f8ec651c8f0d98 | /usr/local/nvs |
 | [rbenv](https://github.com/rbenv/rbenv.git) | 6717c62dc18a81e2d3ce3e3d6dcf70839dd981c9 | /usr/local/share/rbenv |
@@ -61,8 +61,8 @@ mcr.microsoft.com/devcontainers/universal:dev
 | torch | 1.13.0 |
 | requests | 2.28.1 |
 | plotly | 5.11.0 |
-| jupyterlab-git | 0.40.0 |
-| pylint | 2.15.6 |
+| jupyterlab-git | 0.40.1 |
+| pylint | 2.15.7 |
 | flake8 | 6.0.0 |
 | autopep8 | 2.0.0 |
 | black | 22.10.0 |

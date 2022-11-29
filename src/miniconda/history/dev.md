@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/miniconda)
 
-**Digest:** sha256:69fa59f01a914ed9e326b5ecd46580c9b6f5a434c997b1df06b3ca10d2eb34b6
+**Digest:** sha256:6609ac284cc62f882f370d07a1e8e2bc74e1c23f44a8ac177d60067a55aa8658
 
 **Tags:**
 ```
@@ -35,7 +35,7 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 
 | Tool / package | Version |
 |----------------|---------|
-| pylint | 2.15.6 |
+| pylint | 2.15.7 |
 | flake8 | 6.0.0 |
 | autopep8 | 2.0.0 |
 | black | 22.10.0 |
