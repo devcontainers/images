@@ -128,6 +128,24 @@ check "run-puppeteer" node puppeteer.js
 # Check Oryx
 check "oryx" oryx --version
 
+# Ensures nvm works in a Node Project
+check "default-node-version" bash -c "node --version | grep 16."
+check "default-node-location" bash -c "which node | grep /home/codespace/nvm/current/bin"
+check "oryx-build-node-projectr" bash -c "oryx build ./sample/node"
+check "oryx-configured-current-node-version" bash -c "ls -la /home/codespace/nvm/current | grep /opt/nodejs"
+check "nvm-install-node" bash -c ". /usr/local/share/nvm/nvm.sh && nvm install 8.0.0"
+check "nvm-works-in-node-project" bash -c "node --version | grep v8.0.0"
+check "default-node-location-remained-same" bash -c "which node | grep /home/codespace/nvm/current/bin"
+
+# Ensures sdkman works in a Java Project
+check "default-java-version" bash -c "java --version | grep 17."
+check "default-java-location" bash -c "which java | grep /home/codespace/java/current/bin"
+check "oryx-build-java-project" bash -c "oryx build ./sample/java"
+check "oryx-configured-current-java-version" bash -c "ls -la /home/codespace/java/current | grep /opt/java"
+check "sdk-install-java" bash -c ". /usr/local/sdkman/bin/sdkman-init.sh && sdk install java 19.0.1-oracle < /dev/null"
+check "sdkman-works-in-java-project" bash -c "java --version | grep 19.0.1"
+check "default-java-location-remained-same" bash -c "which java | grep /home/codespace/java/current/bin"
+
 # Make sure that Oryx builds Python projects correctly
 pythonVersion=$(python -V 2>&1 | grep -Po '(?<=Python )(.+)')
 pythonSite=`python -m site --user-site`
@@ -151,22 +169,6 @@ check "php-version-on-path-is-2.1.12" php --version | grep 7.3.25
 check "oryx-install-java-12.0.2" oryx prep --skip-detection --platforms-and-versions java=12.0.2
 check "java-12.0.2-installed-by-oryx" ls /opt/java/ | grep 12.0.2
 check "java-version-on-path-is-12.0.2" java --version | grep 12.0.2
-
-# Ensures nvm works in a Node Project
-check "default-node-version" bash -c "node --version | grep 16."
-check "default-node-location" bash -c "which node | grep /home/codespace/nvm/current/bin"
-check "oryx-build-node-projectr" bash -c "oryx build ./sample/node"
-check "nvm-install-node" bash -c ". /usr/local/share/nvm/nvm.sh && nvm install 8.0.0"
-check "nvm-works-in-node-project" bash -c "node --version | grep v8.0.0"
-check "default-node-location-remained-same" bash -c "which node | grep /home/codespace/nvm/current/bin"
-
-# Ensures sdkman works in a Java Project
-check "default-java-version" bash -c "java --version | grep 17."
-check "default-java-location" bash -c "which java | grep /home/codespace/java/current/bin"
-check "oryx-build-java-project" bash -c "oryx build ./sample/java"
-check "sdk-install-java" bash -c ". /usr/local/sdkman/bin/sdkman-init.sh && sdk install java 19.0.1-oracle < /dev/null"
-check "sdkman-works-in-java-project" bash -c "java --version | grep 19.0.1"
-check "default-java-location-remained-same" bash -c "which java | grep /home/codespace/java/current/bin"
 
 ls -la /home/codespace
 
