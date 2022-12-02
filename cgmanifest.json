@@ -19,7 +19,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "5ab517361a4215d2f777023fc1e772fe79496713"
+                    "commitHash": "66addc8b45c93f7661a5d8bba93b7b4afcbc23de"
                 }
             }
         },
@@ -39,7 +39,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "66addc8b45c93f7661a5d8bba93b7b4afcbc23de"
+                    "commitHash": "fc44c49cca9d5e499097392d3f42b1375d0253ba"
                 }
             }
         },
@@ -129,7 +129,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "4e368f63904b784e19401e08cbc15ca8f06eb92a"
+                    "commitHash": "e46521db005de9208c9ed79ef4f96e212cb9a25a"
                 }
             }
         },
@@ -420,7 +420,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "66addc8b45c93f7661a5d8bba93b7b4afcbc23de"
+                    "commitHash": "fc44c49cca9d5e499097392d3f42b1375d0253ba"
                 }
             }
         },
@@ -1064,7 +1064,7 @@
                 "Type": "linux",
                 "Linux": {
                     "Name": "git-lfs",
-                    "Version": "3.2.0",
+                    "Version": "3.3.0",
                     "Distribution": "ubuntu",
                     "Release": "20.04",
                     "Pool-URL": "https://packagecloud.io/github/git-lfs/ubuntu",
@@ -1221,7 +1221,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "66addc8b45c93f7661a5d8bba93b7b4afcbc23de"
+                    "commitHash": "fc44c49cca9d5e499097392d3f42b1375d0253ba"
                 }
             }
         },

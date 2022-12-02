@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/miniconda)
 
-**Digest:** sha256:6609ac284cc62f882f370d07a1e8e2bc74e1c23f44a8ac177d60067a55aa8658
+**Digest:** sha256:f8803c80f1cd7847b79c8090313de79aa5f9c1cbba6f34712592192c17d92c54
 
 **Tags:**
 ```
@@ -29,7 +29,7 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ab517361a4215d2f777023fc1e772fe79496713 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 66addc8b45c93f7661a5d8bba93b7b4afcbc23de | /home/vscode/.oh-my-zsh |
 
 **Pip / pipx installed tools and packages**
 
