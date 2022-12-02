@@ -60,7 +60,7 @@ RUN python3 -m pip install --upgrade joblib
 # 'cookiecutter' is installed by the base image (continuumio/anaconda3) which does not have the patch.
 RUN python3 -m pip install --upgrade cookiecutter
 
-# Temporary: Upgrade 'cryptography' due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24065
+# Temporary: Upgrade 'cryptography' due to https://github.com/advisories/GHSA-39hc-v87j-747x
 # 'cryptography' is installed by the base image (continuumio/anaconda3) which does not have the patch.
 RUN python3 -m pip install --upgrade cryptography
 
