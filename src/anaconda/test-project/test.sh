@@ -25,5 +25,9 @@ joblib_version=$(python -c "import joblib; print(joblib.__version__)")
 check "joblib" bash -c "echo ${joblib_version}" 
 check-version-ge "joblib-requirement" "${joblib_version}" "1.2.0"
 
+cookiecutter_version=$(python -c "import cookiecutter; print(cookiecutter.__version__)")
+check "cookiecutter" bash -c "echo ${cookiecutter}" 
+check-version-ge "cookiecutter-requirement" "${cookiecutter_version}" "2.1.1"
+
 # Report result
 reportResults

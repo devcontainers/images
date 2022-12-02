@@ -56,6 +56,10 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 # 'joblib' is installed by the base image (continuumio/anaconda3) which does not have the patch.
 RUN python3 -m pip install --upgrade joblib
 
+# Temporary: Upgrade 'cookiecutter' due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24065
+# 'cookiecutter' is installed by the base image (continuumio/anaconda3) which does not have the patch.
+RUN python3 -m pip install --upgrade cookiecutter
+
 # Copy environment.yml (if found) to a temp locaition so we update the environment. Also
 # copy "noop.txt" so the COPY instruction does not fail if no environment.yml exists.
 # COPY environment.yml* .devcontainer/noop.txt /tmp/conda-tmp/
