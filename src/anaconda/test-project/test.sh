@@ -29,5 +29,9 @@ cookiecutter_version=$(python -c "import cookiecutter; print(cookiecutter.__vers
 check "cookiecutter" bash -c "echo ${cookiecutter}" 
 check-version-ge "cookiecutter-requirement" "${cookiecutter_version}" "2.1.1"
 
+cryptography_version=$(python -c "import cryptography; print(cryptography.__version__)")
+check "cryptography" bash -c "echo ${cryptography}" 
+check-version-ge "cryptography-requirement" "${cryptography_version}" "38.0.3"
+
 # Report result
 reportResults
