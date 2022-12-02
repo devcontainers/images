@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:1405f275463e14809dc712f7e5ff89bf12432b6c681831aa7d7bccf21141f009
+**Digest:** sha256:0e9305cab35d5845e07443a9297898b8951beefecd9141abf3f9ac01a01634d7
 
 **Tags:**
 ```
@@ -42,7 +42,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fc44c49cca9d5e499097392d3f42b1375d0253ba | /home/codespace/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7ea8a93bb8fb04a070960048aa0b5dca639456a8 | /home/codespace/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | bf45ef070e82356ed36a0f4d98f8ec651c8f0d98 | /usr/local/nvs |
 | [rbenv](https://github.com/rbenv/rbenv.git) | 6717c62dc18a81e2d3ce3e3d6dcf70839dd981c9 | /usr/local/share/rbenv |
