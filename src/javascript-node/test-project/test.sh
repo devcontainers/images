@@ -10,6 +10,10 @@ decodeVersion=$(npm ls -g | grep 'decode-uri-component')
 check "decode-uri-component" bash -c "echo ${decodeVersion}"
 check-version-ge "decode-uri-component" "${decodeVersion}" "+-- decode-uri-component@0.2.1"
 
+ansiRegexVersion=$(npm ls -g | grep 'ansi-regex')
+check "ansi-regex" bash -c "echo ${ansiRegexVersion}"
+check-version-ge "ansi-regex" "${ansiRegexVersion}" "+-- ansi-regex@6.0.0"
+
 # Image specific tests
 check "node" node --version
 sudo rm -f yarn.lock

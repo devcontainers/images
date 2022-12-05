@@ -40,7 +40,8 @@
 		},
 		"npm": [
 			"eslint",
-			"decode-uri-component"
+			"decode-uri-component",
+			"ansi-regex"
 		],
 		"languages": {
 			"Node.js": {
