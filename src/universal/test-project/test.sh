@@ -86,6 +86,10 @@ expectedCount=2
 checkVersionCount "two versions of node are present" $count $expectedCount
 echo $(echo "node versions" && ls -a /usr/local/share/nvm/versions/node)
 
+decodeVersion=$(npm ls -g | grep 'decode-uri-component')
+check "decode-uri-component" bash -c "echo ${decodeVersion}"
+check-version-ge "decode-uri-component" "${decodeVersion}" "+-- decode-uri-component@0.2.1"
+
 # PHP
 check "php" php --version
 check "php composer" composer --version
