@@ -52,17 +52,17 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && usermod -aG conda ${USERNAME} \
     && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts/add-notice.sh
 
-# Temporary: Upgrade 'joblib' due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21797
-# 'joblib' is installed by the base image (continuumio/anaconda3) which does not have the patch.
-RUN python3 -m pip install --upgrade joblib
-
-# Temporary: Upgrade 'cookiecutter' due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24065
-# 'cookiecutter' is installed by the base image (continuumio/anaconda3) which does not have the patch.
-RUN python3 -m pip install --upgrade cookiecutter
-
-# Temporary: Upgrade 'cryptography' due to https://github.com/advisories/GHSA-39hc-v87j-747x
-# 'cryptography' is installed by the base image (continuumio/anaconda3) which does not have the patch.
-RUN python3 -m pip install --upgrade cryptography
+# Temporary: Upgrade python packages due to mentioned CVEs
+# They are installed by the base image (continuumio/anaconda3) which does not have the patch.
+RUN python3 -m pip install \
+    # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21797
+    --upgrade joblib \
+    # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24065
+    cookiecutter \
+    # https://github.com/advisories/GHSA-39hc-v87j-747x
+    cryptography \
+    # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-34749
+    mistune
 
 # Copy environment.yml (if found) to a temp locaition so we update the environment. Also
 # copy "noop.txt" so the COPY instruction does not fail if no environment.yml exists.
