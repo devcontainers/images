@@ -7,7 +7,6 @@ source test-utils.sh node
 checkCommon
 
 decodeVersion=$(npm ls -g | grep 'decode-uri-component')
-check "decode-uri-component" bash -c "echo ${decodeVersion}"
 check-version-ge "decode-uri-component" "${decodeVersion}" "+-- decode-uri-component@0.2.1"
 
 # Image specific tests
@@ -24,7 +23,6 @@ check "nvm-node" bash -c ". /usr/local/share/nvm/nvm.sh && node --version"
 sudo rm -rf node_modules
 
 git_version=$(git --version)
-check "git" bash -c "echo ${git_version}" 
 check-version-ge "git-requirement" "${git_version}" "git version 2.38.1"
 
 # Report result
