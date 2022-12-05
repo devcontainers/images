@@ -23,6 +23,9 @@ export DEBIAN_FRONTEND=noninteractive
 # Temporary: Upgrade 'decode-uri-component' due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38900
 npm install -g decode-uri-component
 
+# Temporary: Upgrade 'ansi-regex' due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3807
+npm install -g ansi-regex
+
 # Enables the oryx tool to generate manifest-dir which is needed for running the postcreate tool
 DEBIAN_FLAVOR="focal-scm"
 mkdir -p /opt/oryx && echo "vso-focal" > /opt/oryx/.imagetype
