@@ -21,12 +21,15 @@ RUN \
     && su ${USERNAME} -c "npm config -g set prefix ${NPM_GLOBAL}" \
     # Install eslint
     && su ${USERNAME} -c "umask 0002 && npm install -g eslint" \
-    # Temporary: Upgrade 'decode-uri-component' due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38900
-    # 'decode-uri-component' is installed by the base image (node) which does not have the patch.  
-    && su ${USERNAME} -c "umask 0002 && npm install -g decode-uri-component" \
-    # Temporary: Upgrade 'ansi-regex ' due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3807
-    # 'ansi-regex ' is installed by the base image (node) which does not have the patch.  
-    && su ${USERNAME} -c "umask 0002 && npm install -g ansi-regex" \
+    # Temporary: Upgrade NPM packages due to CVEs.
+    # They are installed by the base image (node) which does not have the patch.
+    && su ${USERNAME} -c "umask 0002 && npm install -g \
+        # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38900
+        decode-uri-component \
+        # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3807
+        ansi-regex \
+        # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3517
+        minimatch" \
     && npm cache clean --force > /dev/null 2>&1
 
 # [Optional] Uncomment this section to install additional OS packages.

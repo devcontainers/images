@@ -73,7 +73,8 @@
 		],
 		"npm": [
 			"decode-uri-component",
-			"ansi-regex"
+			"ansi-regex",
+			"minimatch"
 		],
 		"pipx": [
 			"pylint",

@@ -41,7 +41,8 @@
 		"npm": [
 			"eslint",
 			"decode-uri-component",
-			"ansi-regex"
+			"ansi-regex",
+			"minimatch"
 		],
 		"languages": {
 			"Node.js": {

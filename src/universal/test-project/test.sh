@@ -86,11 +86,14 @@ expectedCount=2
 checkVersionCount "two versions of node are present" $count $expectedCount
 echo $(echo "node versions" && ls -a /usr/local/share/nvm/versions/node)
 
-decodeVersion=$(npm ls -g | grep 'decode-uri-component')
-check-version-ge "decode-uri-component" "${decodeVersion}" "+-- decode-uri-component@0.2.1"
+decodeVersion=$(npm ls --global --depth 1 --json | jq -r '.dependencies."decode-uri-component".version')
+check-version-ge "decode-uri-component" "${decodeVersion}" "0.2.1"
 
-ansiRegexVersion=$(npm ls -g | grep 'ansi-regex')
-check-version-ge "ansi-regex" "${ansiRegexVersion}" "+-- ansi-regex@6.0.0"
+ansiRegexVersion=$(npm ls --global --depth 1 --json | jq -r '.dependencies."ansi-regex".version')
+check-version-ge "ansi-regex" "${ansiRegexVersion}" "6.0.0"
+
+minimatchVersion=$(npm ls --global --depth 1 --json | jq -r ".dependencies.minimatch.version")
+check-version-ge "minimatch" "${minimatchVersion}" "3.0.5"
 
 # PHP
 check "php" php --version
