@@ -32,6 +32,7 @@ check-version-ge() {
     CURRENT_VERSION=$2
     REQUIRED_VERSION=$3
     shift
+    echo -e "\n🧪 Testing $LABEL: '$CURRENT_VERSION' is >= '$REQUIRED_VERSION'"
     local GREATER_VERSION=$((echo ${CURRENT_VERSION}; echo ${REQUIRED_VERSION}) | sort -V | tail -1)
     if [ "${CURRENT_VERSION}" == "${GREATER_VERSION}" ]; then
         echo "✅  Passed!"
