@@ -39,8 +39,7 @@
 			"nvm": "/usr/local/share/nvm"
 		},
 		"npm": [
-			"eslint",
-			"decode-uri-component"
+			"eslint"
 		],
 		"languages": {
 			"Node.js": {

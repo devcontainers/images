@@ -6,9 +6,6 @@ source test-utils.sh node
 # Run common tests
 checkCommon
 
-decodeVersion=$(npm ls -g | grep 'decode-uri-component')
-check-version-ge "decode-uri-component" "${decodeVersion}" "+-- decode-uri-component@0.2.1"
-
 # Image specific tests
 check "node" node --version
 sudo rm -f yarn.lock
