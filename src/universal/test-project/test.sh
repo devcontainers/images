@@ -86,9 +86,6 @@ expectedCount=2
 checkVersionCount "two versions of node are present" $count $expectedCount
 echo $(echo "node versions" && ls -a /usr/local/share/nvm/versions/node)
 
-decodeVersion=$(npm ls -g | grep 'decode-uri-component')
-check-version-ge "decode-uri-component" "${decodeVersion}" "+-- decode-uri-component@0.2.1"
-
 # PHP
 check "php" php --version
 check "php composer" composer --version
@@ -172,6 +169,10 @@ check "php-version-on-path-is-2.1.12" php --version | grep 7.3.25
 check "oryx-install-java-12.0.2" oryx prep --skip-detection --platforms-and-versions java=12.0.2
 check "java-12.0.2-installed-by-oryx" ls /opt/java/ | grep 12.0.2
 check "java-version-on-path-is-12.0.2" java --version | grep 12.0.2
+
+cd /usr/local/share/nvm/versions/node/v14.21.1/lib/node_modules/npm
+decodeVersion=$(npm ls --depth 1 --json | jq -r '.dependencies."decode-uri-component".version')
+check-version-ge "decode-uri-component" "${decodeVersion}" "0.2.1"
 
 ls -la /home/codespace
 
