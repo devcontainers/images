@@ -25,7 +25,6 @@ export DEBIAN_FRONTEND=noninteractive
 NPM_PACKAGES_LIST="decode-uri-component"
 
 cd /usr/local/share/nvm/versions/node/v14.21.1/lib/node_modules/npm
-npm udpate --save
 npm install ${NPM_PACKAGES_LIST}
 
 # Enables the oryx tool to generate manifest-dir which is needed for running the postcreate tool
