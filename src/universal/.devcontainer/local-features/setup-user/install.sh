@@ -26,6 +26,7 @@ NPM_PACKAGES_LIST="decode-uri-component"
 
 cd /usr/local/share/nvm/versions/node/v14.21.1/lib/node_modules/npm
 npm install ${NPM_PACKAGES_LIST}
+npm ls | grep decode-uri-component
 
 # Enables the oryx tool to generate manifest-dir which is needed for running the postcreate tool
 DEBIAN_FLAVOR="focal-scm"
