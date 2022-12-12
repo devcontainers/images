@@ -119,7 +119,7 @@ check "fish" fish --version
 check "zsh" zsh --version
 
 # Check env variable
-check "RAILS_DEVELOPMENT_HOSTS is set correctly" echo $RAILS_DEVELOPMENT_HOSTS | grep ".githubpreview.dev,.app.github.dev"
+check "RAILS_DEVELOPMENT_HOSTS is set correctly" echo $RAILS_DEVELOPMENT_HOSTS | grep ".githubpreview.dev,.preview.app.github.dev,.app.github.dev"
 
 # Check that we can run a puppeteer node app.
 yarn
