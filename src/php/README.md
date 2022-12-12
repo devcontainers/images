@@ -9,7 +9,7 @@
 | *Categories* | Languages |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/php |
-| *Available image variants* | 8 / 8-bullseye, 8.1 / 8.1-bullseye, 8.0 / 8.0-bullseye, 7 / 7-bullseye, 7.4 / 7.4-bullseye, 8-buster, 8.1-buster, 8.0-buster, 7-buster, 7.5-buster ([full list](https://mcr.microsoft.com/v2/devcontainers/php/tags/list)) |
+| *Available image variants* | 8 / 8-bullseye, 8.2 / 8.2-bullseye, 8.1 / 8.1-bullseye, 8.0 / 8.0-bullseye, 8-buster, 8.2-buster, 8.1-buster, 8.0-buster ([full list](https://mcr.microsoft.com/v2/devcontainers/php/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bullseye` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
@@ -23,18 +23,17 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 
 - `mcr.microsoft.com/devcontainers/php` (latest)
 - `mcr.microsoft.com/devcontainers/php:8` (or `8-bullseye`, `8-buster` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/php:8.2` (or `8.2-bullseye`, `8.2-buster` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/php:8.1` (or `8.1-bullseye`, `8.1-buster` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/php:8.0` (or `8.0-bullseye`, `8.0-buster` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/php:7` (or `7-bullseye`, `7-buster` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/php:7.4` (or `7.4-bullseye`, `7.4-buster` to pin to an OS version)
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/devcontainers/python:0-7` (or `0-7-bullseye`, `0-7-buster`)
-- `mcr.microsoft.com/devcontainers/python:0.203-7` (or `0.203-7-bullseye`, `0.203-7-buster`)
-- `mcr.microsoft.com/devcontainers/python:0.203.3-7` (or `0.203.3-7-bullseye`, `0.203.3-7-buster`)
+- `mcr.microsoft.com/devcontainers/php:0-8` (or `0-8-bullseye`, `0-8-buster`)
+- `mcr.microsoft.com/devcontainers/php:0.203-8` (or `0.203-8-bullseye`, `0.203-8-buster`)
+- `mcr.microsoft.com/devcontainers/php:0.203.3-8` (or `0.203.3-8-bullseye`, `0.203.3-8-buster`)
 
-However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `0-7`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
+However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `0-8`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/php/tags/list).
 

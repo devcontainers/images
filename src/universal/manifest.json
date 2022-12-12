@@ -71,11 +71,6 @@
 			"sed",
 			"python3-minimal"
 		],
-		"npm": [
-			"decode-uri-component",
-			"ansi-regex",
-			"minimatch"
-		],
 		"pipx": [
 			"pylint",
 			"flake8",
