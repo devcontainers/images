@@ -39,7 +39,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "7ea8a93bb8fb04a070960048aa0b5dca639456a8"
+                    "commitHash": "3a9322b9a0698a3861277890f791b43e727cccc5"
                 }
             }
         },
@@ -410,7 +410,7 @@
                 "Type": "npm",
                 "Npm": {
                     "Name": "eslint",
-                    "Version": "8.28.0"
+                    "Version": "8.29.0"
                 }
             }
         },
@@ -420,7 +420,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "7ea8a93bb8fb04a070960048aa0b5dca639456a8"
+                    "commitHash": "3a9322b9a0698a3861277890f791b43e727cccc5"
                 }
             }
         },
@@ -572,7 +572,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "pylint",
-                    "Version": "2.15.7"
+                    "Version": "2.15.8"
                 }
             }
         },
@@ -1221,7 +1221,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "7ea8a93bb8fb04a070960048aa0b5dca639456a8"
+                    "commitHash": "3a9322b9a0698a3861277890f791b43e727cccc5"
                 }
             }
         },
