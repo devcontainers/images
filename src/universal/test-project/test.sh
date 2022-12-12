@@ -81,7 +81,6 @@ check "nvm" bash -c ". /usr/local/share/nvm/nvm.sh && nvm --version"
 check "nvs" bash -c ". /usr/local/nvs/nvs.sh && nvs --version"
 check "yarn" yarn --version
 check "npm" npm --version
-check "npm-ls" npm ls
 count=$(ls /usr/local/share/nvm/versions/node | wc -l)
 expectedCount=2
 checkVersionCount "two versions of node are present" $count $expectedCount
