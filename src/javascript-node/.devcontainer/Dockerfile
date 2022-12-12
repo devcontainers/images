@@ -1,6 +1,11 @@
 # [Choice] Node.js version (use -bullseye variants on local arm64/Apple Silicon): 18, 16, 14, 18-bullseye, 16-bullseye, 14-bullseye, 18-buster, 16-buster, 14-buster
-ARG VARIANT=16-bullseye
+ARG VARIANT=18-bullseye
 FROM node:${VARIANT}
+
+ENV IMAGE_VARIANT="18-bullseye"
+
+COPY library-scripts/add-patch.sh /tmp/library-scripts/
+RUN bash /tmp/library-scripts/add-patch.sh "${IMAGE_VARIANT}" && rm -rf /tmp/library-scripts
 
 ARG USERNAME=node
 ARG NPM_GLOBAL=/usr/local/share/npm-global
@@ -21,12 +26,6 @@ RUN \
     && su ${USERNAME} -c "npm config -g set prefix ${NPM_GLOBAL}" \
     # Install eslint
     && su ${USERNAME} -c "umask 0002 && npm install -g eslint" \
-    # Temporary: Upgrade 'decode-uri-component' due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38900
-    # 'decode-uri-component' is installed by the base image (node) which does not have the patch.  
-    && su ${USERNAME} -c "umask 0002 && npm install -g decode-uri-component" \
-    # Temporary: Upgrade 'ansi-regex ' due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3807
-    # 'ansi-regex ' is installed by the base image (node) which does not have the patch.  
-    && su ${USERNAME} -c "umask 0002 && npm install -g ansi-regex" \
     && npm cache clean --force > /dev/null 2>&1
 
 # [Optional] Uncomment this section to install additional OS packages.

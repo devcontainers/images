@@ -20,11 +20,20 @@ chmod +x /etc/profile.d/00-restore-env.sh
 
 export DEBIAN_FRONTEND=noninteractive
 
-# Temporary: Upgrade 'decode-uri-component' due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38900
-npm install -g decode-uri-component
+# Temporary: Upgrade NPM packages due to mentioned CVEs.
+# decode-uri-component: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38900
+# ansi-regex: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3807
+NPM_PACKAGES_LIST_1="decode-uri-component
+    ansi-regex"
 
-# Temporary: Upgrade 'ansi-regex' due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3807
-npm install -g ansi-regex
+cd /usr/local/share/nvm/versions/node/v14.21.1/lib/node_modules/npm
+npm install ${NPM_PACKAGES_LIST_1}
+
+# Temporary: Upgrade NPM packages due to mentioned CVEs.
+# ansi-regex: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3807
+NPM_PACKAGES_LIST_2="ansi-regex"
+cd /usr/local/share/nvm/versions/node/v16.18.1/lib/node_modules/npm
+npm install ${NPM_PACKAGES_LIST_2}
 
 # Enables the oryx tool to generate manifest-dir which is needed for running the postcreate tool
 DEBIAN_FLAVOR="focal-scm"
