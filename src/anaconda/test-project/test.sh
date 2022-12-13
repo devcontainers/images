@@ -18,20 +18,19 @@ check "pycodestyle" pycodestyle --version
 check "nvm" bash -c ". /usr/local/share/nvm/nvm.sh && nvm --version"
 
 git_version=$(git --version)
-check "git" bash -c "echo ${git_version}" 
 check-version-ge "git-requirement" "${git_version}" "git version 2.38.1"
 
 joblib_version=$(python -c "import joblib; print(joblib.__version__)")
-check "joblib" bash -c "echo ${joblib_version}" 
 check-version-ge "joblib-requirement" "${joblib_version}" "1.2.0"
 
 cookiecutter_version=$(python -c "import cookiecutter; print(cookiecutter.__version__)")
-check "cookiecutter" bash -c "echo ${cookiecutter}" 
 check-version-ge "cookiecutter-requirement" "${cookiecutter_version}" "2.1.1"
 
 cryptography_version=$(python -c "import cryptography; print(cryptography.__version__)")
-check "cryptography" bash -c "echo ${cryptography}" 
 check-version-ge "cryptography-requirement" "${cryptography_version}" "38.0.3"
+
+mistune_version=$(python -c "import mistune; print(mistune.__version__)")
+check-version-ge "mistune-requirement" "${mistune_version}" "2.0.3"
 
 # Report result
 reportResults
