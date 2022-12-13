@@ -18,20 +18,19 @@
             "version": "latest"
         },
         "ghcr.io/devcontainers/features/node:1": {
-            "version": "16",
-            "additionalVersions": "14"
+            "version": "18"
         },
         "./local-features/nvs": "latest",
         "ghcr.io/devcontainers/features/python:1": {
-            "version": "3.10.4",
-            "additionalVersions": "3.9.7",
+            "version": "3.11",
+            "additionalVersions": "3.10",
             "installJupyterlab": "true",
             "configureJupyterlabAllowOrigin": "*"
         },
         "./local-features/machine-learning-packages": "latest",
         "ghcr.io/devcontainers/features/php:1": {
-            "version": "8.1.4",
-            "additionalVersions": "8.0.16",
+            "version": "8.2",
+            "additionalVersions": "8.1",
             "installComposer": "true"
         },
         "ghcr.io/devcontainers/features/conda:1": {
