@@ -23,6 +23,11 @@
 		"git": {
 			"Oh My Zsh!": "/home/vscode/.oh-my-zsh"
 		},
+		"pip": [
+			"joblib",
+			"cookiecutter",
+			"cryptography"
+		],
 		"other": {
 			"conda": {
 				"cgIgnore": true,

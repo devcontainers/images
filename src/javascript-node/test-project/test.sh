@@ -22,7 +22,6 @@ sudo rm -rf node_modules
 git_version=$(git --version)
 check-version-ge "git-requirement" "${git_version}" "git version 2.38.1"
 
-check "npm-ls" npm ls
 
 # Report result
 reportResults
