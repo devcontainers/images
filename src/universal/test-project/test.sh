@@ -170,6 +170,10 @@ check "oryx-install-java-12.0.2" oryx prep --skip-detection --platforms-and-vers
 check "java-12.0.2-installed-by-oryx" ls /opt/java/ | grep 12.0.2
 check "java-version-on-path-is-12.0.2" java --version | grep 12.0.2
 
+# Test patches
+GRADLE_PATH=$(cd /usr/local/sdkman/candidates/gradle/7*/lib/plugins && pwd)
+check "aws-java-sdk-s3-plugin" bash -c "ls ${GRADLE_PATH} | grep aws-java-sdk-s3-1.12.363.jar"
+
 cd /usr/local/share/nvm/versions/node/v14.21.1/lib/node_modules/npm
 decodeVersion=$(npm ls --depth 1 --json | jq -r '.dependencies."decode-uri-component".version')
 check-version-ge "decode-uri-component" "${decodeVersion}" "0.2.1"
