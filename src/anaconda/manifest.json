@@ -25,7 +25,8 @@
 		},
 		"pip": [
 			"joblib",
-			"cookiecutter"
+			"cookiecutter",
+			"cryptography"
 		],
 		"other": {
 			"conda": {

@@ -60,6 +60,10 @@ RUN python3 -m pip install --upgrade joblib
 # 'cookiecutter' is installed by the base image (continuumio/anaconda3) which does not have the patch.
 RUN python3 -m pip install --upgrade cookiecutter
 
+# Temporary: Upgrade 'cryptography' due to https://github.com/advisories/GHSA-39hc-v87j-747x
+# 'cryptography' is installed by the base image (continuumio/anaconda3) which does not have the patch.
+RUN python3 -m pip install --upgrade cryptography
+
 # Copy environment.yml (if found) to a temp locaition so we update the environment. Also
 # copy "noop.txt" so the COPY instruction does not fail if no environment.yml exists.
 # COPY environment.yml* .devcontainer/noop.txt /tmp/conda-tmp/
