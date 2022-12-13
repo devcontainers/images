@@ -20,6 +20,13 @@ chmod +x /etc/profile.d/00-restore-env.sh
 
 export DEBIAN_FRONTEND=noninteractive
 
+# Temporary: Upgrade NPM packages due to mentioned CVEs.
+# decode-uri-component: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38900
+NPM_PACKAGES_LIST="decode-uri-component"
+
+cd /usr/local/share/nvm/versions/node/v14.21.1/lib/node_modules/npm
+npm install ${NPM_PACKAGES_LIST}
+
 # Enables the oryx tool to generate manifest-dir which is needed for running the postcreate tool
 DEBIAN_FLAVOR="focal-scm"
 mkdir -p /opt/oryx && echo "vso-focal" > /opt/oryx/.imagetype
