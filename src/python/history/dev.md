@@ -18,7 +18,7 @@
 
 ## Variant: 3.11-bullseye
 
-**Digest:** sha256:69d1cf74fb38042ebdb62079cc5d7973c366d5e8e58160942bc7a315fb2a1fb1
+**Digest:** sha256:307211b4b0c8cce5e29570426b01dfb6ab5cd400e0dc4c5803d6d91800af92b3
 
 **Tags:**
 ```
@@ -113,7 +113,7 @@ mcr.microsoft.com/devcontainers/python:dev-bullseye
 
 ## Variant: 3.10-bullseye
 
-**Digest:** sha256:e8b39f99535ad9f13c37bd5972b67702261750ee21db362a4bf1510b2fb6e405
+**Digest:** sha256:f6b516eeb2794ee957803287f445243c1ee898a4e89f5a123b5d0169e1230be5
 
 **Tags:**
 ```
@@ -205,7 +205,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.10
 
 ## Variant: 3.9-bullseye
 
-**Digest:** sha256:b1d18579c68d14ec962f8c5e63c6a96b5b656f638c1f558406940c977035ba88
+**Digest:** sha256:33908e7cf0a5e157c028d5e642bacd19bec96635b4a0123fce43cf2e123fe01d
 
 **Tags:**
 ```
@@ -297,7 +297,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9
 
 ## Variant: 3.8-bullseye
 
-**Digest:** sha256:b87bfa21d9c75b9b4f0ebe2ebd68e63077c79ea677c2949662c8260a94d1a4ef
+**Digest:** sha256:58055b07efbd53c812f1b3d67aa190602b0afecb870173dcf536f9316c976b24
 
 **Tags:**
 ```
@@ -389,7 +389,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8
 
 ## Variant: 3.7-bullseye
 
-**Digest:** sha256:14ca0cf705dc5177d7782348f4c0352a3e30d207cc07d602000ed6eb6c1531e5
+**Digest:** sha256:b8759ece13d8703153019c2f8b5abd7ad8d157a2d3a1dfe337813b62a392a077
 
 **Tags:**
 ```
@@ -481,7 +481,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.7
 
 ## Variant: 3.11-buster
 
-**Digest:** sha256:cad6172185245a63fc3786b3d34f0fda20d761429d9e07d3205ad1e4de1efde9
+**Digest:** sha256:4435ee9936a095fa595f5f8d2ac4c85b4f719db2edf339790041af556047076b
 
 **Tags:**
 ```
@@ -575,7 +575,7 @@ mcr.microsoft.com/devcontainers/python:dev-buster
 
 ## Variant: 3.10-buster
 
-**Digest:** sha256:c79d1ed2a0c72bf9a39d57263733bca2a5b6f0f0808b374b3dbb4e7012001f01
+**Digest:** sha256:ea2e1841b5efd124eb32b2cbd6cecf2b8eee4278916e71cf36fd2afa7ce5ba47
 
 **Tags:**
 ```
@@ -667,7 +667,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.10-buster
 
 ## Variant: 3.9-buster
 
-**Digest:** sha256:89936a87372c6d7405d84fed00a934e81b0d72a0aa0560f6bc76fa9323ee86e1
+**Digest:** sha256:81e2bfbc312ce8056a6c93db2f173a900caa53a2c8aab6f5952bc7ad0525a1f0
 
 **Tags:**
 ```
@@ -759,7 +759,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-buster
 
 ## Variant: 3.8-buster
 
-**Digest:** sha256:6595920d2e8b7bd3c866df7e818e6985d0ac7c9e85019ea9385e0ad1cf4e0efe
+**Digest:** sha256:dc494983c70f3c51850bb2c5a69bd01dd8f756acb8476f8dc3a0a0540d62fb53
 
 **Tags:**
 ```
@@ -851,7 +851,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8-buster
 
 ## Variant: 3.7-buster
 
-**Digest:** sha256:4f58a7d10e6b19a3dfb5e33cd5b8438cfa0885fc29349b3ce44e1ffc7f25685a
+**Digest:** sha256:94af3e9bc559ebc53c1bb7419cb847f23b0db55ed5768416906f3b3005fba642
 
 **Tags:**
 ```

@@ -12,7 +12,7 @@
 
 ## Variant: 1.19-bullseye
 
-**Digest:** sha256:8f3dbbf27330c60bac6e8f3a455579da45d3503e93ecb985fdb9a756aeb58cb1
+**Digest:** sha256:d4774006eff1ea9bb4c7733f3a5b59f7ac273ee527efc807b64fe9f9984449ef
 
 **Tags:**
 ```
@@ -109,7 +109,7 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 
 ## Variant: 1.19-buster
 
-**Digest:** sha256:eb543c7d75a625e88cd85d5c570ff5120a028fff4530812224ba0acade8b4ec9
+**Digest:** sha256:77f81ae98dfcb32cd5a01586a5bb9e49d0822cf1470c296d575f068044dff03a
 
 **Tags:**
 ```
@@ -205,7 +205,7 @@ mcr.microsoft.com/devcontainers/go:dev-buster
 
 ## Variant: 1.18-bullseye
 
-**Digest:** sha256:f94e0f61afdcd195e69b1b7fbf6fa4fbf012a7260ff02ff8089c7791527b9b8d
+**Digest:** sha256:18e4ef7e198c55e438fea5fc8370bb65082e87ac95333abf74d581592b795c17
 
 **Tags:**
 ```
@@ -299,7 +299,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.18
 
 ## Variant: 1.18-buster
 
-**Digest:** sha256:b808f8057e20955372fcbb21fbbf344c10fd1df09f435582ce65fd12d6b89738
+**Digest:** sha256:ef9a94a079c5a8ce1d5de066ab82eea5e70a258a2961a0d7b625155b59abc421
 
 **Tags:**
 ```

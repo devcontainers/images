@@ -14,7 +14,7 @@
 
 ## Variant: 18-bullseye
 
-**Digest:** sha256:612409ba3e02191f1d06670b0bc669ab33f836848133cf7b31539ee01c566fc2
+**Digest:** sha256:6f2f683281d09ae4fe0b5db54841cd264cb939cd7fef04c8438980422b87ecd7
 
 **Tags:**
 ```
@@ -96,7 +96,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 
 ## Variant: 16-bullseye
 
-**Digest:** sha256:c0209adec7c00c324e2d6fc63abbd103602636059fc61482ad896a027db44b1d
+**Digest:** sha256:317f680162c3b352cc31ff21cfb28fa5a421545f3a484f021813671b4044f9d6
 
 **Tags:**
 ```
@@ -177,7 +177,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16
 
 ## Variant: 14-bullseye
 
-**Digest:** sha256:f6b627156b50bdc0289f12b85a0c8734007085f3d16781796993389f02261ab7
+**Digest:** sha256:244dba2ff74695ca9509c2ad6b62dfc72ad7b93a3b93593231763c8bbbfadf65
 
 **Tags:**
 ```
@@ -258,7 +258,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-14
 
 ## Variant: 18-buster
 
-**Digest:** sha256:61110e69248559569fa3bd874304bdcf5e0da4931d559dbc85b373a415e3351e
+**Digest:** sha256:2d5ebefe1cc40ef355c37b2bdfe963f0129a2c98b42a4ea46e0a64db3da6a501
 
 **Tags:**
 ```
@@ -340,7 +340,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-buster
 
 ## Variant: 16-buster
 
-**Digest:** sha256:8c3dc291e1790cbe2d8a6e8f291059c1779a26eb846463fe312866e33fbdb856
+**Digest:** sha256:a2fceb296e2f75690856f8f8564d2b0e8b94dfbc72e31a8c69748ba4256b81b0
 
 **Tags:**
 ```
@@ -421,7 +421,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16-buster
 
 ## Variant: 14-buster
 
-**Digest:** sha256:c53f96afef86b97cbeeec0b2befa12125cd5b4219bd61f6732fb25fddfb386ca
+**Digest:** sha256:ef7984892f0b1e034b220f00befebfc5449fe7781d940a102c90e0392019497a
 
 **Tags:**
 ```
