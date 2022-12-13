@@ -26,13 +26,13 @@ export DEBIAN_FRONTEND=noninteractive
 NPM_PACKAGES_LIST_1="decode-uri-component
     ansi-regex"
 
-cd /usr/local/share/nvm/versions/node/v14.21.1/lib/node_modules/npm
+cd /usr/local/share/nvm/versions/node/v14.21.2/lib/node_modules/npm
 npm install ${NPM_PACKAGES_LIST_1}
 
 # Temporary: Upgrade NPM packages due to mentioned CVEs.
 # ansi-regex: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3807
 NPM_PACKAGES_LIST_2="ansi-regex"
-cd /usr/local/share/nvm/versions/node/v16.18.1/lib/node_modules/npm
+cd /usr/local/share/nvm/versions/node/v16.19.0/lib/node_modules/npm
 npm install ${NPM_PACKAGES_LIST_2}
 
 # Enables the oryx tool to generate manifest-dir which is needed for running the postcreate tool
