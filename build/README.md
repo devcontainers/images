@@ -55,11 +55,17 @@ Once you have your build configuration setup, you can use the `vscdc` CLI to tes
     docker run -it --init --privileged --rm mcr.microsoft.com/devcontainers/<expected-repository>:dev-<expected tag> bash
     ```
 
-3. Finally, test manifest/markdown generation by running:
+3. Test manifest generation by running:
 
    ```bash
-   build/vscdc cg --registry mcr.microsoft.com --registry-path devcontainers --release main <you-image-name-here>
+   build/vscdc cg --registry mcr.microsoft.com --registry-path devcontainers --release main <your-image-name-here>
    ```
+
+4. Test markdown image history by running:
+
+    ```bash
+        build/vscdc info --build --markdown --overwrite --registry mcr.microsoft.com --registry-path devcontainers --release main <your-image-name-here>
+    ```
 
 ## Creating a `Dockerfile`
 
