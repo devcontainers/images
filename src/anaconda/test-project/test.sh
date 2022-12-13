@@ -16,14 +16,14 @@ check "yapf" yapf --version
 check "pydocstyle" pydocstyle --version
 check "pycodestyle" pycodestyle --version
 check "nvm" bash -c ". /usr/local/share/nvm/nvm.sh && nvm --version"
-check "git" git --version
 
-git_version_satisfied=false
-if (echo a version 2.38.1; git --version) | sort -Vk3 | tail -1 | grep -q git; then
-    git_version_satisfied=true
-fi
+git_version=$(git --version)
+check "git" bash -c "echo ${git_version}" 
+check-version-ge "git-requirement" "${git_version}" "git version 2.38.1"
 
-check "git version satisfies requirement" echo $git_version_satisfied | grep "true"
+joblib_version=$(python -c "import joblib; print(joblib.__version__)")
+check "joblib" bash -c "echo ${joblib_version}" 
+check-version-ge "joblib-requirement" "${joblib_version}" "1.2.0"
 
 # Report result
 reportResults
