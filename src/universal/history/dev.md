@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:0e9305cab35d5845e07443a9297898b8951beefecd9141abf3f9ac01a01634d7
+**Digest:** sha256:7f5737197a0426159485a30c5c6f0cfacf3b096a0f8485b8ff0a16c451689f2e
 
 **Tags:**
 ```
@@ -34,19 +34,19 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [PHP](https://xdebug.org/) | 8.0.16<br />8.1.4 | /usr/local/php/&lt;version&gt; |
 | GCC | 9.4.0-1ubuntu1~20.04.1 | 
 | Clang | 10.0.0-4ubuntu1 | 
-| [Go](https://golang.org/dl) | 1.19.3 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.19.4 | /usr/local/go |
 | [Jekyll](https://jekyllrb.com/) | 4.3.1 | 
-| [Jupyter Lab](https://jupyter.org/) | 3.5.0 | /home/codespace/.local/bin/jupyter-lab |
+| [Jupyter Lab](https://jupyter.org/) | 3.5.1 | /home/codespace/.local/bin/jupyter-lab |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7ea8a93bb8fb04a070960048aa0b5dca639456a8 | /home/codespace/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 29cf199b5d84eb4897f2e0e421a344174568eb9f | /home/codespace/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
-| [nvs](https://github.com/jasongin/nvs) | bf45ef070e82356ed36a0f4d98f8ec651c8f0d98 | /usr/local/nvs |
-| [rbenv](https://github.com/rbenv/rbenv.git) | 6717c62dc18a81e2d3ce3e3d6dcf70839dd981c9 | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 4f4f3078d8c564e665726714f9dff6f5fe36f7bf | /usr/local/share/ruby-build |
+| [nvs](https://github.com/jasongin/nvs) | 790ecc84b8041890bcafdf516eedf40755e80386 | /usr/local/nvs |
+| [rbenv](https://github.com/rbenv/rbenv.git) | 593f820a7d2b48009797c6fa491375af3c1d5563 | /usr/local/share/rbenv |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 80cef45524c46fde2d255931d4ce9a4034786eb6 | /usr/local/share/ruby-build |
 
 **Pip / pipx installed tools and packages**
 
@@ -57,21 +57,21 @@ mcr.microsoft.com/devcontainers/universal:dev
 | scipy | 1.9.3 |
 | matplotlib | 3.6.2 |
 | seaborn | 0.12.1 |
-| scikit-learn | 1.1.3 |
+| scikit-learn | 1.2.0 |
 | torch | 1.13.0 |
 | requests | 2.28.1 |
 | plotly | 5.11.0 |
 | jupyterlab-git | 0.40.1 |
-| pylint | 2.15.7 |
+| pylint | 2.15.8 |
 | flake8 | 6.0.0 |
 | autopep8 | 2.0.0 |
-| black | 22.10.0 |
+| black | 22.12.0 |
 | yapf | 0.32.0 |
 | mypy | 0.991 |
 | pydocstyle | 6.1.1 |
 | pycodestyle | 2.10.0 |
 | bandit | 1.7.4 |
-| virtualenv | 20.17.0 |
+| virtualenv | 20.17.1 |
 | pipx | 1.1.0 |
 
 **Go tools and modules**
@@ -84,7 +84,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | github.com/mgechev/revive | 1.2.4 |
 | github.com/uudashr/gopkgs | 2.0.1+incompatible |
 | github.com/ramya-rao-a/go-outline | 0.0.0-20210608161538-9736a4bde949 |
-| github.com/go-delve/delve | 1.9.1 |
+| github.com/go-delve/delve | 1.20.1 |
 | github.com/golangci/golangci-lint | latest |
 
 **Ruby gems and tools**
@@ -101,9 +101,9 @@ mcr.microsoft.com/devcontainers/universal:dev
 | Tool | Version | Path |
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.25.1 | /usr/bin |
-| [Xdebug](https://xdebug.org/) | 3.1.6 | /usr/local/php/current |
+| [Xdebug](https://xdebug.org/) | 3.2.0 | /usr/local/php/current |
 | [Composer](https://getcomposer.org/) | 2.4.4 | /usr/local/php/current/bin |
-| [kubectl](https://github.com/kubernetes/kubectl) | v1.25.4 | /usr/local/bin |
+| [kubectl](https://github.com/kubernetes/kubectl) | v1.26.0 | /usr/local/bin |
 | [Helm](https://github.com/helm/helm) | 3.10.2 | /usr/local/bin |
 | [Docker Compose](https://github.com/docker/compose) | 1.29.2 | /usr/local/bin |
 | [SDKMAN!](https://github.com/sdkman/sdkman-cli) | 5.16.0 | /usr/local/sdkman |
@@ -122,7 +122,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | apt-transport-https | 2.0.9 |
 | apt-utils | 2.0.9 |
 | build-essential | 12.8ubuntu1.1 |
-| ca-certificates | 20211016~20.04.1 |
+| ca-certificates | 20211016ubuntu0.20.04.1 |
 | clang | 1:10.0-50~exp1 |
 | cmake | 3.16.3-1ubuntu1.20.04.1 |
 | cppcheck | 1.90-4build1 |
@@ -172,8 +172,8 @@ mcr.microsoft.com/devcontainers/universal:dev
 | man-db | 2.9.1-1 |
 | manpages | 5.05-1 |
 | manpages-dev | 5.05-1 |
-| moby-cli (Docker CLI) | 20.10.21+azure-ubuntu20.04u1 |
-| moby-engine (Docker Engine) | 20.10.21+azure-ubuntu20.04u1 |
+| moby-cli (Docker CLI) | 20.10.21+azure-ubuntu20.04u2 |
+| moby-engine (Docker Engine) | 20.10.21+azure-ubuntu20.04u2 |
 | nano | 4.8-1ubuntu1 |
 | ncdu | 1.14.1-1 |
 | net-tools | 1.60+git20180626.aebd88e-1ubuntu1 |

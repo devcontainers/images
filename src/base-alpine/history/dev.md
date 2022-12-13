@@ -5,13 +5,80 @@
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/base-alpine)
 
 **Image variations:**
+- [3.17](#variant-317)
 - [3.16](#variant-316)
 - [3.15](#variant-315)
 - [3.14](#variant-314)
 
+## Variant: 3.17
+
+**Digest:** sha256:d3243f17aeb375d1e5a4744aad14d9feec17b2df4684484ac76ea8e610330fb1
+
+**Tags:**
+```
+mcr.microsoft.com/devcontainers/base:dev-alpine-3.17
+mcr.microsoft.com/devcontainers/base:dev-alpine3.17
+mcr.microsoft.com/devcontainers/base:dev-alpine
+```
+> *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
+
+**Linux distribution:** Alpine Linux v3.17
+
+**Architectures:** linux/amd64, linux/arm64
+
+**Available (non-root) user:** vscode
+
+### Contents
+**Tools installed using git**
+
+| Tool | Commit | Path |
+|------|--------|------|
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 29cf199b5d84eb4897f2e0e421a344174568eb9f | /home/vscode/.oh-my-zsh |
+
+**Additional linux tools and packages**
+
+| Tool / library | Version |
+|----------------|---------|
+| git | 2.38.2-r0 |
+| openssh-client-default | 9.1_p1-r1 |
+| gnupg | 2.2.40-r0 |
+| procps | 3.3.17-r2 |
+| lsof | 4.96.4-r0 |
+| htop | 3.2.1-r1 |
+| net-tools | 2.10-r0 |
+| psmisc | 23.5-r0 |
+| curl | 7.86.0-r1 |
+| wget | 1.21.3-r2 |
+| rsync | 3.2.7-r0 |
+| ca-certificates | 20220614-r2 |
+| unzip | 6.0-r13 |
+| zip | 3.0-r10 |
+| nano | 7.0-r0 |
+| vim | 9.0.0999-r0 |
+| less | 608-r0 |
+| jq | 1.6-r2 |
+| libgcc | 12.2.1_git20220924-r4 |
+| libstdc++ | 12.2.1_git20220924-r4 |
+| krb5-libs | 1.20.1-r0 |
+| libintl | 0.21.1-r1 |
+| libssl1.1 | 1.1.1s-r0 |
+| lttng-ust | 2.13.3-r0 |
+| tzdata | 2022f-r1 |
+| userspace-rcu | 0.13.2-r0 |
+| zlib | 1.2.13-r0 |
+| sudo | 1.9.12_p1-r1 |
+| coreutils | 9.1-r0 |
+| sed | 4.9-r0 |
+| grep | 3.8-r1 |
+| which | 2.21-r3 |
+| ncdu | 1.17-r1 |
+| shadow | 4.13-r0 |
+| strace | 6.0-r0 |
+| man-pages | 6.01-r0 |
+
 ## Variant: 3.16
 
-**Digest:** sha256:5cb147caed56398e4f6faad9376ab02bf866e92ccf53ed8c026777a5081f7257
+**Digest:** sha256:475b5d7d283bf13a3e68998af49677f10e68e91a5f8e239d9a7a8f4694a2073f
 
 **Tags:**
 ```
@@ -31,7 +98,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.16
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7ea8a93bb8fb04a070960048aa0b5dca639456a8 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 29cf199b5d84eb4897f2e0e421a344174568eb9f | /home/vscode/.oh-my-zsh |
 
 **Additional linux tools and packages**
 
@@ -76,13 +143,12 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.16
 
 ## Variant: 3.15
 
-**Digest:** sha256:3ba1ddc9d4adf0963b5cfaf7d72e5ec13436a96c7b7f48f05f88a490c9ae3326
+**Digest:** sha256:58867002ca0a2627866e01ed44cbc045aaf4e7bd001dde3739942c0f7613347c
 
 **Tags:**
 ```
 mcr.microsoft.com/devcontainers/base:dev-alpine-3.15
 mcr.microsoft.com/devcontainers/base:dev-alpine3.15
-mcr.microsoft.com/devcontainers/base:dev-alpine
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
@@ -97,7 +163,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7ea8a93bb8fb04a070960048aa0b5dca639456a8 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 29cf199b5d84eb4897f2e0e421a344174568eb9f | /home/vscode/.oh-my-zsh |
 
 **Additional linux tools and packages**
 
@@ -142,7 +208,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 ## Variant: 3.14
 
-**Digest:** sha256:be261d25f60db4279138873fd8d4d64cbd0ac4555adc2c9cb1b5d4d1c5e67408
+**Digest:** sha256:4351bd27493ffa9f565cd3c0fb8846ba5474cec6884ade5e98ec291436503aa1
 
 **Tags:**
 ```
@@ -162,7 +228,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.14
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7ea8a93bb8fb04a070960048aa0b5dca639456a8 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 29cf199b5d84eb4897f2e0e421a344174568eb9f | /home/vscode/.oh-my-zsh |
 
 **Additional linux tools and packages**
 
