@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:f324d635bdac598ab1fb6368c0aa7417e288a8449f27490431333dc0917704d5
+**Digest:** sha256:de6e3e1f74aa9bb5358c3da05a4c8ca158413ca80789f8b32bb9cbb0801f5ef1
 
 **Tags:**
 ```
@@ -32,6 +32,14 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | Tool | Commit | Path |
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 66addc8b45c93f7661a5d8bba93b7b4afcbc23de | /home/vscode/.oh-my-zsh |
+
+**Pip / pipx installed tools and packages**
+
+| Tool / package | Version |
+|----------------|---------|
+| joblib | 1.2.0 |
+| cookiecutter | 2.1.1 |
+| cryptography | 38.0.4 |
 
 **Other tools and utilities**
 

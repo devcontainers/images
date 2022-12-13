@@ -10,7 +10,7 @@
 
 ## Variant: 2.7-bullseye
 
-**Digest:** sha256:3ab2facc0e18f6a1901ec8301b1e2200a7ea7701c129aa326a69976090a1e789
+**Digest:** sha256:836f54361ae735c2fad885fa5571c45cb371da98bb585eb335cd3f456267e7b9
 
 **Tags:**
 ```
@@ -104,7 +104,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 
 ## Variant: 2.7-buster
 
-**Digest:** sha256:53f90a52824aab7b000b2327ddcfafa21766721dc184f07665a7ae82433572a8
+**Digest:** sha256:30a779bec7b4701ec7ef76f7f5e5705f964cf0ff7282b64c406e10abe0324a12
 
 **Tags:**
 ```

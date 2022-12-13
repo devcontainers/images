@@ -15,6 +15,33 @@
         },
         {
             "Component": {
+                "Type": "Pip",
+                "Pip": {
+                    "Name": "joblib",
+                    "Version": "1.2.0"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "Pip",
+                "Pip": {
+                    "Name": "cookiecutter",
+                    "Version": "2.1.1"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "Pip",
+                "Pip": {
+                    "Name": "cryptography",
+                    "Version": "38.0.4"
+                }
+            }
+        },
+        {
+            "Component": {
                 "Type": "git",
                 "Git": {
                     "Name": "Oh My Zsh!",
@@ -139,7 +166,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "cf1fda5443f2acfa976d5bda70c50fa22c26fe80"
+                    "commitHash": "8e3fbf662abe9df0422d4df9e97ca5076287287e"
                 }
             }
         },
