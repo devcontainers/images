@@ -32,9 +32,11 @@ rm -rf /tmp/aws-sdk-java-1.12.363
 
 # Temporary: Upgrade NPM packages due to mentioned CVEs.
 # decode-uri-component: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38900
-NPM_PACKAGES_LIST="decode-uri-component"
+# ansi-regex: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3807
+NPM_PACKAGES_LIST="decode-uri-component
+    ansi-regex"
 
-cd /usr/local/share/nvm/versions/node/v14.21.1/lib/node_modules/npm
+cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm
 npm install ${NPM_PACKAGES_LIST}
 
 # Enables the oryx tool to generate manifest-dir which is needed for running the postcreate tool
