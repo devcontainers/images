@@ -174,6 +174,9 @@ cd /usr/local/share/nvm/versions/node/v14.21.1/lib/node_modules/npm
 decodeVersion=$(npm ls --depth 1 --json | jq -r '.dependencies."decode-uri-component".version')
 check-version-ge "decode-uri-component" "${decodeVersion}" "0.2.1"
 
+ansiVersion=$(npm ls --depth 1 --json | jq -r '.dependencies."ansi-regex".version')
+check-version-ge "ansi-regex" "${ansiVersion}" "6.0.0"
+
 ls -la /home/codespace
 
 # Report result
