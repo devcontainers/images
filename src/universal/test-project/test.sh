@@ -180,13 +180,6 @@ check-version-ge "ansi-regex" "${ansiVersion}" "6.0.0"
 minimatchVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.minimatch.version')
 check-version-ge "minimatch" "${minimatchVersion}" "3.0.5"
 
-cd /usr/local/share/nvm/versions/node/v16*/lib/node_modules/npm
-ansiVersion=$(npm ls --depth 1 --json | jq -r '.dependencies."ansi-regex".version')
-check-version-ge "ansi-regex" "${ansiVersion}" "6.0.0"
-
-minimatchVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.minimatch.version')
-check-version-ge "minimatch" "${minimatchVersion}" "3.0.5"
-
 ls -la /home/codespace
 
 # Report result

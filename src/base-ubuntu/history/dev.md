@@ -11,7 +11,7 @@
 
 ## Variant: jammy
 
-**Digest:** sha256:b5b56ab3674e976763cf5bc7018677ca34ad23965ebd7689293881aa03197f98
+**Digest:** sha256:a349be6b14484bf0694f638b6a2d3b984c561c832f4134f4bdf1ae2c066a937e
 
 **Tags:**
 ```
@@ -33,7 +33,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3a9322b9a0698a3861277890f791b43e727cccc5 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 29cf199b5d84eb4897f2e0e421a344174568eb9f | /home/vscode/.oh-my-zsh |
 
 **Additional linux tools and packages**
 
@@ -41,7 +41,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 |----------------|---------|
 | apt-transport-https | 2.4.8 |
 | apt-utils | 2.4.8 |
-| ca-certificates | 20211016 |
+| ca-certificates | 20211016ubuntu0.22.04.1 |
 | curl | 7.81.0-1ubuntu1.6 |
 | dialog | 1.3-20211214-1 |
 | git | 1:2.34.1-1ubuntu1.5 |
@@ -79,7 +79,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 ## Variant: focal
 
-**Digest:** sha256:09d1bd382c9b54051a5ea387e3d08d09f145de5d09d15bb7d1244925c1999097
+**Digest:** sha256:affeba1521eae7e09d48bba5d4335cea913b75cf474a3885dd16b523d57869a7
 
 **Tags:**
 ```
@@ -100,7 +100,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3a9322b9a0698a3861277890f791b43e727cccc5 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 29cf199b5d84eb4897f2e0e421a344174568eb9f | /home/vscode/.oh-my-zsh |
 
 **Additional linux tools and packages**
 
@@ -108,7 +108,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 |----------------|---------|
 | apt-transport-https | 2.0.9 |
 | apt-utils | 2.0.9 |
-| ca-certificates | 20211016~20.04.1 |
+| ca-certificates | 20211016ubuntu0.20.04.1 |
 | curl | 7.68.0-1ubuntu2.14 |
 | dialog | 1.3-20190808-1 |
 | git | 1:2.25.1-1ubuntu3.6 |
@@ -149,7 +149,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 
 ## Variant: bionic
 
-**Digest:** sha256:00e0399f4cb43949be0d82e1aff54f6a4b287f00f4c0936539bbfce3895c9db9
+**Digest:** sha256:ed777ab482b5c96e5252db3c75d0a65cece4b689f77c94e8feeaefb52985ab4d
 
 **Tags:**
 ```
@@ -170,7 +170,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu18.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3a9322b9a0698a3861277890f791b43e727cccc5 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 29cf199b5d84eb4897f2e0e421a344174568eb9f | /home/vscode/.oh-my-zsh |
 
 **Additional linux tools and packages**
 
@@ -178,7 +178,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu18.04
 |----------------|---------|
 | apt-transport-https | 1.6.14 |
 | apt-utils | 1.6.14 |
-| ca-certificates | 20211016~18.04.1 |
+| ca-certificates | 20211016ubuntu0.18.04.1 |
 | curl | 7.58.0-2ubuntu3.21 |
 | dialog | 1.3-20171209-1 |
 | git | 1:2.17.1-1ubuntu0.13 |
