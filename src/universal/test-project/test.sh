@@ -175,12 +175,16 @@ GRADLE_PATH=$(cd /usr/local/sdkman/candidates/gradle/7*/lib/plugins && pwd)
 check "aws-java-sdk-s3-plugin" bash -c "ls ${GRADLE_PATH} | grep aws-java-sdk-s3-1.12.363.jar"
 check "jsoup-plugin" bash -c "ls ${GRADLE_PATH} | grep jsoup-1.15.3.jar"
 
-cd /usr/local/share/nvm/versions/node/v14.21.1/lib/node_modules/npm
+cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm
+
 decodeVersion=$(npm ls --depth 1 --json | jq -r '.dependencies."decode-uri-component".version')
 check-version-ge "decode-uri-component" "${decodeVersion}" "0.2.1"
 
 ansiVersion=$(npm ls --depth 1 --json | jq -r '.dependencies."ansi-regex".version')
 check-version-ge "ansi-regex" "${ansiVersion}" "6.0.0"
+
+minimatchVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.minimatch.version')
+check-version-ge "minimatch" "${minimatchVersion}" "3.0.5"
 
 ls -la /home/codespace
 
