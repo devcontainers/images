@@ -20,15 +20,23 @@ chmod +x /etc/profile.d/00-restore-env.sh
 
 export DEBIAN_FRONTEND=noninteractive
 
+# Temporary: Replace the current gradle plugins with patched versions
+GRADLE_PATH=$(cd /usr/local/sdkman/candidates/gradle/7*/lib/plugins/ && pwd)
+
 # Temporary: Due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31159
 # Delete the current plugin
-GRADLE_PATH=$(cd /usr/local/sdkman/candidates/gradle/7*/lib/plugins/ && pwd)
 rm -f ${GRADLE_PATH}/aws-java-sdk-s3-*
 
 # Install "aws-java-sdk-s3" plugin with version >= 1.12.261
 curl -sSL https://github.com/aws/aws-sdk-java/archive/refs/tags/1.12.363.tar.gz | tar -xzC /tmp 2>&1
 jar cf ${GRADLE_PATH}/aws-java-sdk-s3-1.12.363.jar /tmp/aws-sdk-java-1.12.363/aws-java-sdk-s3
 rm -rf /tmp/aws-sdk-java-1.12.363
+
+# Temporary: Due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-36033
+rm -f ${GRADLE_PATH}/jsoup-*
+curl -sSL https://github.com/jhy/jsoup/archive/refs/tags/jsoup-1.15.3.tar.gz | tar -xzC /tmp 2>&1
+jar cf ${GRADLE_PATH}/jsoup-1.15.3.jar /tmp/jsoup-jsoup-1.15.3
+rm -rf /tmp/jsoup-jsoup-1.15.3
 
 # Temporary: Upgrade NPM packages due to mentioned CVEs.
 # decode-uri-component: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38900
