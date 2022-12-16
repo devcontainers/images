@@ -124,14 +124,6 @@
                         "type": "pythonEnvironment"
                     },
                     {
-                        "path": "/bin/python2",
-                        "type": "pythonEnvironment"
-                    },
-                    {
-                        "path": "/usr/bin/python2",
-                        "type": "pythonEnvironment"
-                    },
-                    {
                         "path": "/usr/local/python/current/bin/python3",
                         "type": "pythonEnvironment"
                     },
