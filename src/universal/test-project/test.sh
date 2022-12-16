@@ -186,6 +186,9 @@ check-version-ge "ansi-regex" "${ansiVersion}" "6.0.0"
 minimatchVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.minimatch.version')
 check-version-ge "minimatch" "${minimatchVersion}" "3.0.5"
 
+gotVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.got.version')
+check-version-ge "got" "${gotVersion}" "12.1.0"
+
 ls -la /home/codespace
 
 # Report result

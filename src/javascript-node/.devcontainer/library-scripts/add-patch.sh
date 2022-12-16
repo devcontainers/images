@@ -6,6 +6,7 @@ IMAGE_VARIANT=$1
 # Upgrade 'decode-uri-component' due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38900
 # Upgrade 'ansi-regex ' due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3807
 # Upgrade 'minimatch' due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3517
+# Upgrade 'got' due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-33987
 if [[ "${IMAGE_VARIANT}" =~ "14" ]] ; then
     cd /usr/local/lib/node_modules/npm
     npm update --save

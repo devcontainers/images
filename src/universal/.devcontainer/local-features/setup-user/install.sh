@@ -42,9 +42,11 @@ rm -rf /tmp/jsoup-jsoup-1.15.3
 # decode-uri-component: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38900
 # ansi-regex: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3807
 # minimatch: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3517
+# got: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-33987
 NPM_PACKAGES_LIST="decode-uri-component
     ansi-regex
-    minimatch"
+    minimatch
+    got"
 
 cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm
 npm install ${NPM_PACKAGES_LIST}
