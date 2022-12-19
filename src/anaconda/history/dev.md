@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:de6e3e1f74aa9bb5358c3da05a4c8ca158413ca80789f8b32bb9cbb0801f5ef1
+**Digest:** sha256:bbd0f4bfdb36ebdcfc48265c3132770d61ef46d0268979b312c6566c8adefcbb
 
 **Tags:**
 ```
@@ -40,6 +40,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | joblib | 1.2.0 |
 | cookiecutter | 2.1.1 |
 | cryptography | 38.0.4 |
+| mistune | 2.0.4 |
 
 **Other tools and utilities**
 
@@ -76,7 +77,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | man-db | 2.9.4-2 |
 | manpages | 5.10-1 |
 | manpages-dev | 5.10-1 |
-| nano | 5.4-2+deb11u1 |
+| nano | 5.4-2+deb11u2 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
 | openssh-client | 1:8.4p1-5+deb11u1 |

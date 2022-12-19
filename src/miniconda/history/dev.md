@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/miniconda)
 
-**Digest:** sha256:105c617b6d03508de991973e2ca60465c8bfbc1aaaae3faa3b306f220e41bf19
+**Digest:** sha256:34f49af9e24b979a46cc43127f64062c7db2f7b4c8b5bfd323608f0830cf97d1
 
 **Tags:**
 ```
@@ -35,9 +35,9 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 
 | Tool / package | Version |
 |----------------|---------|
-| pylint | 2.15.8 |
+| pylint | 2.15.9 |
 | flake8 | 6.0.0 |
-| autopep8 | 2.0.0 |
+| autopep8 | 2.0.1 |
 | black | 22.12.0 |
 | yapf | 0.32.0 |
 | mypy | 0.991 |
@@ -81,7 +81,7 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | man-db | 2.9.4-2 |
 | manpages | 5.10-1 |
 | manpages-dev | 5.10-1 |
-| nano | 5.4-2+deb11u1 |
+| nano | 5.4-2+deb11u2 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
 | openssh-client | 1:8.4p1-5+deb11u1 |
