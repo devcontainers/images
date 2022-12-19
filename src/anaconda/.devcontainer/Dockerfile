@@ -62,7 +62,9 @@ RUN python3 -m pip install \
     # https://github.com/advisories/GHSA-39hc-v87j-747x
     cryptography \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-34749
-    mistune
+    mistune \
+    # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-34141
+    numpy
 
 # Copy environment.yml (if found) to a temp locaition so we update the environment. Also
 # copy "noop.txt" so the COPY instruction does not fail if no environment.yml exists.

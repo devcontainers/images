@@ -32,5 +32,8 @@ check-version-ge "cryptography-requirement" "${cryptography_version}" "38.0.3"
 mistune_version=$(python -c "import mistune; print(mistune.__version__)")
 check-version-ge "mistune-requirement" "${mistune_version}" "2.0.3"
 
+numpy_version=$(python -c "import numpy; print(numpy.__version__)")
+check-version-ge "numpy-requirement" "${numpy_version}" "1.22"
+
 # Report result
 reportResults

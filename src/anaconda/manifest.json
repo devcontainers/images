@@ -27,7 +27,8 @@
 			"joblib",
 			"cookiecutter",
 			"cryptography",
-			"mistune"
+			"mistune",
+			"numpy"
 		],
 		"other": {
 			"conda": {
