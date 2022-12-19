@@ -60,13 +60,7 @@ RUN LANG="C.UTF-8" \
     && apt-get update \
     && apt-get upgrade -y \
     && add-apt-repository universe \
-    && apt-get install -y --no-install-recommends python2 \
-    && rm -rf /var/lib/apt/lists/* \
-    # 'get-pip.py' has been moved to ' https://bootstrap.pypa.io/pip/2.7/get-pip.py' from 'https://bootstrap.pypa.io/2.7/get-pip.py'
-    && curl  https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py \
-    && python2 get-pip.py \
-    && pip install pip --upgrade \
-    && pip3 install pip --upgrade
+    && rm -rf /var/lib/apt/lists/*
 
 # Verify expected build and debug tools are present
 RUN apt-get update \
