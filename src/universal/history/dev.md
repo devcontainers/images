@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:f8084ceb103b129453a7a1efa268aa07ef06eb7a9a36fab21785ad2095f6e8b1
+**Digest:** sha256:de451e3e464558a9c50dcc8b022dbfa0f20eb53e21e6cf4159a2b5f5efb0d537
 
 **Tags:**
 ```
@@ -26,45 +26,45 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 14.21.1<br />16.18.1 | /usr/local/share/nvm/versions/node/&lt;version&gt; |
+| [Node.js](https://nodejs.org/en/) | 14.21.2<br />16.19.0 | /usr/local/share/nvm/versions/node/&lt;version&gt; |
 | [Python](https://www.python.org/) | 3.10.4<br />3.9.7 | /usr/local/python/&lt;version&gt; |
 | [Java](https://adoptopenjdk.net/) | 11.0.17<br />17.0.5 | /usr/local/sdkman/candidates/java/&lt;version&gt; |
-| [.NET](https://dotnet.microsoft.com/) | 6<br />0<br />4<br />0<br />3<br />7<br />0<br />1<br />0<br />0 | /usr/local/dotnet |
+| [.NET](https://dotnet.microsoft.com/) | 6<br />0<br />4<br />0<br />4<br />7<br />0<br />1<br />0<br />1 | /usr/local/dotnet |
 | [Ruby](https://www.ruby-lang.org/en/) | 3.0.5<br />3.1.3 | /usr/local/rvm/rubies/&lt;version&gt; |
 | [PHP](https://xdebug.org/) | 8.0.16<br />8.1.4 | /usr/local/php/&lt;version&gt; |
 | GCC | 9.4.0-1ubuntu1~20.04.1 | 
 | Clang | 10.0.0-4ubuntu1 | 
 | [Go](https://golang.org/dl) | 1.19.4 | /usr/local/go |
 | [Jekyll](https://jekyllrb.com/) | 4.3.1 | 
-| [Jupyter Lab](https://jupyter.org/) | 3.5.1 | /home/codespace/.local/bin/jupyter-lab |
+| [Jupyter Lab](https://jupyter.org/) | 3.5.2 | /home/codespace/.local/bin/jupyter-lab |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 29cf199b5d84eb4897f2e0e421a344174568eb9f | /home/codespace/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 2bc42d223cfe3e21aef06648fb971bd9fb00828e | /home/codespace/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | 790ecc84b8041890bcafdf516eedf40755e80386 | /usr/local/nvs |
-| [rbenv](https://github.com/rbenv/rbenv.git) | 593f820a7d2b48009797c6fa491375af3c1d5563 | /usr/local/share/rbenv |
+| [rbenv](https://github.com/rbenv/rbenv.git) | 61747c06d42a4ef094fcc498eefcd93d5d9d7016 | /usr/local/share/rbenv |
 | [ruby-build](https://github.com/rbenv/ruby-build.git) | 80cef45524c46fde2d255931d4ce9a4034786eb6 | /usr/local/share/ruby-build |
 
 **Pip / pipx installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| numpy | 1.23.5 |
+| numpy | 1.24.0 |
 | pandas | 1.5.2 |
 | scipy | 1.9.3 |
 | matplotlib | 3.6.2 |
 | seaborn | 0.12.1 |
 | scikit-learn | 1.2.0 |
-| torch | 1.13.0 |
+| torch | 1.13.1 |
 | requests | 2.28.1 |
 | plotly | 5.11.0 |
-| jupyterlab-git | 0.40.1 |
-| pylint | 2.15.8 |
+| jupyterlab-git | 0.41.0 |
+| pylint | 2.15.9 |
 | flake8 | 6.0.0 |
-| autopep8 | 2.0.0 |
+| autopep8 | 2.0.1 |
 | black | 22.12.0 |
 | yapf | 0.32.0 |
 | mypy | 0.991 |
@@ -78,7 +78,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool / module | Version |
 |---------------|---------|
-| golang.org/x/tools/gopls | 0.10.1 |
+| golang.org/x/tools/gopls | 0.11.0 |
 | honnef.co/go/tools | 0.3.3 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
 | github.com/mgechev/revive | 1.2.4 |
@@ -104,7 +104,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [Xdebug](https://xdebug.org/) | 3.2.0 | /usr/local/php/current |
 | [Composer](https://getcomposer.org/) | 2.4.4 | /usr/local/php/current/bin |
 | [kubectl](https://github.com/kubernetes/kubectl) | v1.26.0 | /usr/local/bin |
-| [Helm](https://github.com/helm/helm) | 3.10.2 | /usr/local/bin |
+| [Helm](https://github.com/helm/helm) | 3.10.3 | /usr/local/bin |
 | [Docker Compose](https://github.com/docker/compose) | 1.29.2 | /usr/local/bin |
 | [SDKMAN!](https://github.com/sdkman/sdkman-cli) | 5.16.0 | /usr/local/sdkman |
 | [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |

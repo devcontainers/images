@@ -10,7 +10,7 @@
 
 ## Variant: buster
 
-**Digest:** sha256:da83afc1e008d16e6a878a375c060a29a554e42a2b8d8d9879172aebb0d3cab1
+**Digest:** sha256:547d19fe45afe4d9ba631cc5eb18c46c18c365f353f62fa1efb9735c44b0a7aa
 
 **Tags:**
 ```
@@ -31,7 +31,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian10
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 29cf199b5d84eb4897f2e0e421a344174568eb9f | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 2bc42d223cfe3e21aef06648fb971bd9fb00828e | /home/vscode/.oh-my-zsh |
 
 **Additional linux tools and packages**
 
@@ -42,7 +42,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian10
 | ca-certificates | 20200601~deb10u2 |
 | curl | 7.64.0-4+deb10u3 |
 | dialog | 1.3-20190211-1 |
-| git | 1:2.20.1-2+deb10u4 |
+| git | 1:2.20.1-2+deb10u6 |
 | gnupg2 | 2.2.12-1+deb10u2 |
 | htop | 2.2.0-1+b1 |
 | iproute2 | 4.20.0-2+deb10u1 |
@@ -80,7 +80,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian10
 
 ## Variant: bullseye
 
-**Digest:** sha256:ceca508ff2959d5650159f566d6d89e53d3086c1f105a062213d3bbf9d568592
+**Digest:** sha256:0fa85ce77f5011d69be415a81656c6622ea2d5a0da8e445fdbdb63a214216517
 
 **Tags:**
 ```
@@ -103,7 +103,7 @@ mcr.microsoft.com/devcontainers/base:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 29cf199b5d84eb4897f2e0e421a344174568eb9f | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 2bc42d223cfe3e21aef06648fb971bd9fb00828e | /home/vscode/.oh-my-zsh |
 
 **Additional linux tools and packages**
 
@@ -133,7 +133,7 @@ mcr.microsoft.com/devcontainers/base:dev
 | man-db | 2.9.4-2 |
 | manpages | 5.10-1 |
 | manpages-dev | 5.10-1 |
-| nano | 5.4-2+deb11u1 |
+| nano | 5.4-2+deb11u2 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
 | openssh-client | 1:8.4p1-5+deb11u1 |
