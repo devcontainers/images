@@ -192,6 +192,9 @@ check-version-ge "minimatch" "${minimatchVersion}" "3.0.5"
 gotVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.got.version')
 check-version-ge "got" "${gotVersion}" "12.1.0"
 
+qsVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.qs.version')
+check-version-ge "qs" "${qsVersion}" "6.10"
+
 ls -la /home/codespace
 
 # Report result
