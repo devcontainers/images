@@ -174,6 +174,7 @@ check "java-version-on-path-is-12.0.2" java --version | grep 12.0.2
 GRADLE_PATH=$(cd /usr/local/sdkman/candidates/gradle/7*/lib/plugins && pwd)
 check "aws-java-sdk-s3-plugin" bash -c "ls ${GRADLE_PATH} | grep aws-java-sdk-s3-1.12.363.jar"
 check "jsoup-plugin" bash -c "ls ${GRADLE_PATH} | grep jsoup-1.15.3.jar"
+check "jackson-databind" bash -c "ls ${GRADLE_PATH} | grep jackson-databind-2.14.1.jar"
 
 MAVEN_PATH=$(cd /usr/local/sdkman/candidates/maven/3*/lib/ && pwd)
 check "commons-io-lib" bash -c "ls ${MAVEN_PATH} | grep commons-io-2.11.jar"
