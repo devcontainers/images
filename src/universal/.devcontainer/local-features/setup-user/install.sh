@@ -58,10 +58,6 @@ NPM_PACKAGES_LIST="decode-uri-component
 cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm
 npm install ${NPM_PACKAGES_LIST}
 
-# ansi-regex: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3807
-cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/string-width
-npm install ansi-regex --save
-
 # Temporary: Due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0536 & https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0155
 rm -rf /usr/local/nvs/deps/node_modules/follow-redirects/*
 curl -sSL https://github.com/follow-redirects/follow-redirects/archive/refs/tags/v1.15.2.tar.gz | tar -xzC /tmp 2>&1
