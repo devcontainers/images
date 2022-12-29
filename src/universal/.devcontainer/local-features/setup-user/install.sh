@@ -66,6 +66,10 @@ NPM_PACKAGES_LIST="ansi-regex
 cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm
 npm install ${NPM_PACKAGES_LIST}
 
+# Temporary: marked: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21680
+npm install marked-man@1.3.1
+npm install marked@4.2.5
+
 # Temporary: ansi-regex: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3807
 cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/string-width
 npm install ansi-regex --save
