@@ -186,7 +186,7 @@ decodeVersion=$(npm ls --depth 1 --json | jq -r '.dependencies."decode-uri-compo
 check-version-ge "decode-uri-component" "${decodeVersion}" "0.2.1"
 
 ansiVersion=$(npm ls --depth 1 --json | jq -r '.dependencies."ansi-regex".version')
-check-version-ge "ansi-regex" "${ansiVersion}" "6.0.0"
+check-version-ge "ansi-regex" "${ansiVersion}" "6.0.1"
 
 minimatchVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.minimatch.version')
 check-version-ge "minimatch" "${minimatchVersion}" "3.0.5"
@@ -194,8 +194,21 @@ check-version-ge "minimatch" "${minimatchVersion}" "3.0.5"
 gotVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.got.version')
 check-version-ge "got" "${gotVersion}" "12.1.0"
 
+markedVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.marked.version')
+check-version-ge "marked" "${markedVersion}" "4.0.10"
+
 qsVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.qs.version')
 check-version-ge "qs" "${qsVersion}" "6.10"
+
+cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/string-width
+
+ansiVersion=$(npm ls --depth 1 --json | jq -r '.dependencies."ansi-regex".version')
+check-version-ge "ansi-regex-2" "${ansiVersion}" "6.0.1"
+
+cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/tacks
+
+minimistVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.mkdirp.dependencies.minimist.version')
+check-version-ge "minimist" "${minimistVersion}" "1.2.6"
 
 ls -la /home/codespace
 
