@@ -59,7 +59,7 @@ cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm
 npm install ${NPM_PACKAGES_LIST}
 
 # Temporary due to minimist: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44906 & https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-7598
-cd /usr/local/share/nvm/versions/node/v14.21.2/lib/node_modules/npm/node_modules/tacks
+cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/tacks
 npm update mkdirp
 
 # Temporary: Due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0536 & https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0155
