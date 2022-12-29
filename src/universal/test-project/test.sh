@@ -201,6 +201,11 @@ cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/str
 ansiVersion=$(npm ls --depth 1 --json | jq -r '.dependencies."ansi-regex".version')
 check-version-ge "ansi-regex-2" "${ansiVersion}" "6.0.1"
 
+cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/tacks
+
+minimistVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.mkdirp.dependencies.minimist.version')
+check-version-ge "minimist" "${minimistVersion}" "1.2.6"
+
 ls -la /home/codespace
 
 # Report result
