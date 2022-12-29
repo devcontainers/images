@@ -196,6 +196,11 @@ check-version-ge "got" "${gotVersion}" "12.1.0"
 qsVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.qs.version')
 check-version-ge "qs" "${qsVersion}" "6.10"
 
+cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/tacks
+
+minimistVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.mkdirp.dependencies.minimist.version')
+check-version-ge "minimist" "${minimistVersion}" "1.2.6"
+
 ls -la /home/codespace
 
 # Report result
