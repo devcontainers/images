@@ -38,6 +38,12 @@ curl -sSL https://github.com/jhy/jsoup/archive/refs/tags/jsoup-1.15.3.tar.gz | t
 jar cf ${GRADLE_PATH}/jsoup-1.15.3.jar /tmp/jsoup-jsoup-1.15.3
 rm -rf /tmp/jsoup-jsoup-1.15.3
 
+# Temporary: Due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4065
+rm -f ${GRADLE_PATH}/testng-*
+curl -sSL https://github.com/cbeust/testng/archive/refs/tags/7.7.0.tar.gz | tar -xzC /tmp 2>&1
+jar cf ${GRADLE_PATH}/testng-7.7.0.jar /tmp/testng-7.7.0
+rm -rf /tmp/testng-7.7.0
+
 # Temporary: Due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-29425
 MAVEN_PATH=$(cd /usr/local/sdkman/candidates/maven/3*/lib/ && pwd)
 rm -f ${MAVEN_PATH}/commons-io-*
