@@ -57,6 +57,7 @@ NPM_PACKAGES_LIST="decode-uri-component
 
 cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm
 npm install ${NPM_PACKAGES_LIST}
+npm install ajv@8.11.2
 
 # Temporary: Due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0536 & https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0155
 rm -rf /usr/local/nvs/deps/node_modules/follow-redirects/*
