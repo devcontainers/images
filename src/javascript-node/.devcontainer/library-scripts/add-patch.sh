@@ -8,8 +8,13 @@ IMAGE_VARIANT=$1
 # Upgrade 'minimatch' due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3517
 # Upgrade 'got' due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-33987
 if [[ "${IMAGE_VARIANT}" =~ "14" ]] ; then
+    NPM_LIST="ansi-regex \
+        decode-uri-component \
+        got \
+        minimatch"
+
     cd /usr/local/lib/node_modules/npm
-    npm update --save
+    npm install ${NPM_LIST} --save
 
     cd /usr/local/lib/node_modules/npm/node_modules/string-width
     npm install ansi-regex --save
