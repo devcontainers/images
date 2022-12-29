@@ -38,6 +38,12 @@ curl -sSL https://github.com/jhy/jsoup/archive/refs/tags/jsoup-1.15.3.tar.gz | t
 jar cf ${GRADLE_PATH}/jsoup-1.15.3.jar /tmp/jsoup-jsoup-1.15.3
 rm -rf /tmp/jsoup-jsoup-1.15.3
 
+# Temporary: Due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42004
+rm -f ${GRADLE_PATH}/jackson-databind-*
+curl -sSL https://github.com/FasterXML/jackson-databind/archive/refs/tags/jackson-databind-2.14.1.tar.gz | tar -xzC /tmp 2>&1
+jar cf ${GRADLE_PATH}/jackson-databind-2.14.1.jar /tmp/jackson-databind-jackson-databind-2.14.1
+rm -rf /tmp/jackson-databind-jackson-databind-2.14.1
+
 # Temporary: Due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4065
 rm -f ${GRADLE_PATH}/testng-*
 curl -sSL https://github.com/cbeust/testng/archive/refs/tags/7.7.0.tar.gz | tar -xzC /tmp 2>&1
