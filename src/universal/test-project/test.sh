@@ -202,6 +202,9 @@ check-version-ge "marked" "${markedVersion}" "4.0.10"
 qsVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.qs.version')
 check-version-ge "qs" "${qsVersion}" "6.10"
 
+diffVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.diff.version')
+check-version-ge "diff" "${diffVersion}" "3.5"
+
 cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/package-json/
 
 gotVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.got.version')
