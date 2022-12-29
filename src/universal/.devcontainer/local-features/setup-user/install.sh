@@ -52,14 +52,16 @@ jar cf ${MAVEN_PATH}/commons-io-2.11.jar /tmp/commons-io-commons-io-2.11.0-RC1
 rm -rf /tmp/commons-io-commons-io-2.11.0-RC1
 
 # Temporary: Upgrade NPM packages due to mentioned CVEs.
-# decode-uri-component: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38900
 # ansi-regex: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3807
-# minimatch: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3517
+# decode-uri-component: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38900
 # got: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-33987
-NPM_PACKAGES_LIST="decode-uri-component
-    ansi-regex
+# minimatch: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3517
+# qs: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24999
+NPM_PACKAGES_LIST="ansi-regex
+    decode-uri-component
+    got
     minimatch
-    got"
+    qs"
 
 cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm
 npm install ${NPM_PACKAGES_LIST}
