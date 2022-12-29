@@ -67,6 +67,18 @@ cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm
 npm install ${NPM_PACKAGES_LIST}
 npm install ajv@8.11.2
 
+# Temporary: marked: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21680
+npm install marked-man@1.3.1
+npm install marked@4.2.5
+
+# Temporary: ansi-regex: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3807
+cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/string-width
+npm install ansi-regex --save
+
+# Temporary due to minimist: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44906 & https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-7598
+cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/tacks
+npm update mkdirp
+
 # Temporary: Due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0536 & https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0155
 rm -rf /usr/local/nvs/deps/node_modules/follow-redirects/*
 curl -sSL https://github.com/follow-redirects/follow-redirects/archive/refs/tags/v1.15.2.tar.gz | tar -xzC /tmp 2>&1
