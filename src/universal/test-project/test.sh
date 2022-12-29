@@ -193,6 +193,9 @@ check-version-ge "minimatch" "${minimatchVersion}" "3.0.5"
 gotVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.got.version')
 check-version-ge "got" "${gotVersion}" "12.1.0"
 
+ajvVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.ajv.version')
+check-version-ge "ajv" "${ajvVersion}" "6.12.3"
+
 markedVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.marked.version')
 check-version-ge "marked" "${markedVersion}" "4.0.10"
 
