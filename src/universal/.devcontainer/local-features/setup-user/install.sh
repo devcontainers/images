@@ -66,6 +66,10 @@ NPM_PACKAGES_LIST="ansi-regex
 cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm
 npm install ${NPM_PACKAGES_LIST}
 
+# Temporary: ansi-regex: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3807
+cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/string-width
+npm install ansi-regex --save
+
 # Temporary due to minimist: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44906 & https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-7598
 cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/tacks
 npm update mkdirp
