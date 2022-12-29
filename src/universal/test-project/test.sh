@@ -202,6 +202,11 @@ check-version-ge "marked" "${markedVersion}" "4.0.10"
 qsVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.qs.version')
 check-version-ge "qs" "${qsVersion}" "6.10"
 
+cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/package-json/
+
+gotVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.got.version')
+check-version-ge "got" "${gotVersion}" "12.1.0"
+
 cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/string-width
 
 ansiVersion=$(npm ls --depth 1 --json | jq -r '.dependencies."ansi-regex".version')

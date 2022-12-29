@@ -79,6 +79,10 @@ npm install ansi-regex --save
 cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/tacks
 npm update mkdirp
 
+# Temporary: got: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-33987
+cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/package-json/
+npm install got@12.5.3
+
 # Temporary: Due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0536 & https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0155
 rm -rf /usr/local/nvs/deps/node_modules/follow-redirects/*
 curl -sSL https://github.com/follow-redirects/follow-redirects/archive/refs/tags/v1.15.2.tar.gz | tar -xzC /tmp 2>&1
