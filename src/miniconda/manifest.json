@@ -36,6 +36,9 @@
 			"virtualenv",
 			"pipx"
 		],
+		"pip": [
+			"certifi"
+		],
 		"other": {
 			"conda": {
 				"cgIgnore": true,

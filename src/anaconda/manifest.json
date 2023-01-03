@@ -28,7 +28,8 @@
 			"cookiecutter",
 			"cryptography",
 			"mistune",
-			"numpy"
+			"numpy",
+			"certifi"
 		],
 		"other": {
 			"conda": {
