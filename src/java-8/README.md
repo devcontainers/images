@@ -25,6 +25,8 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 
 - `mcr.microsoft.com/devcontainers/java:8` (or `8-bullseye`, `8-buster` to pin to an OS version)
 
+Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
+
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
 - `mcr.microsoft.com/devcontainers/java:1-8` (or `1-8-bullseye`, `1-8-buster` to pin to an OS version)
