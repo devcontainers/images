@@ -11,11 +11,15 @@ if [[ "${IMAGE_VARIANT}" =~ "14" ]] ; then
     NPM_LIST="ansi-regex \
         decode-uri-component \
         got \
-        minimatch"
+        minimatch \
+        package-json"
 
     cd /usr/local/lib/node_modules/npm
     npm install ${NPM_LIST} --save
 
     cd /usr/local/lib/node_modules/npm/node_modules/string-width
     npm install ansi-regex --save
+
+    cd /usr/local/lib/node_modules/npm/node_modules/package-json
+    npm install got registry-auth-token registry-url --save
 fi
