@@ -37,7 +37,8 @@
 			"pipx"
 		],
 		"pip": [
-			"certifi"
+			"certifi",
+			"cryptography"
 		],
 		"other": {
 			"conda": {
