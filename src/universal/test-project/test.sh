@@ -221,6 +221,11 @@ cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/tac
 minimistVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.mkdirp.dependencies.minimist.version')
 check-version-ge "minimist" "${minimistVersion}" "1.2.6"
 
+cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/eslint
+
+ajvVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.ajv.version')
+check-version-ge "ajv-2" "${ajvVersion}" "6.12.3"
+
 ls -la /home/codespace
 
 # Report result
