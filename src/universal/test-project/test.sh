@@ -45,6 +45,8 @@ check "matplotlib" python -c "import matplotlib; print(matplotlib.__version__)"
 check "seaborn" python -c "import seaborn; print(seaborn.__version__)"
 check "scikit-learn" python -c "import sklearn; print(sklearn.__version__)"
 check "torch" python -c "import torch; print(torch.__version__)"
+check "codespaces_jupyterlab" python -c "import codespaces_jupyterlab; print(codespaces_jupyterlab.__version__)"
+
 check "requests" python -c "import requests; print(requests.__version__)"
 check "jupyterlab-git" bash -c "python3 -m pip list | grep jupyterlab-git"
 

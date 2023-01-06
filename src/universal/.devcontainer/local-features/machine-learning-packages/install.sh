@@ -47,6 +47,7 @@ if [[ "$(python --version)" != "" ]] && [[ "$(pip --version)" != "" ]]; then
     install_python_package "torch"
     install_python_package "requests"
     install_python_package "plotly"
+    install_python_package "codespaces_jupyterlab"
 else
     "(*) Error: Need to install python and pip."
 fi

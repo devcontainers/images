@@ -1216,6 +1216,15 @@
         },
         {
             "Component": {
+                "Type": "Pip",
+                "Pip": {
+                    "Name": "codespaces_jupyterlab",
+                    "Version": "0.2.1"
+                }
+            }
+        },
+        {
+            "Component": {
                 "Type": "RubyGems",
                 "RubyGems": {
                     "Name": "rake",
