@@ -18,4 +18,7 @@ if [[ "${IMAGE_VARIANT}" =~ "14" ]] ; then
 
     cd /usr/local/lib/node_modules/npm/node_modules/string-width
     npm install ansi-regex --save
+
+    cd /usr/local/lib/node_modules/npm/node_modules/yargs
+    npm install ansi-regex --save
 fi
