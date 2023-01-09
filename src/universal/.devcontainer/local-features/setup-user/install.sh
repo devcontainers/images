@@ -90,6 +90,9 @@ npm install ansi-regex --save
 cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/tacks
 npm update mkdirp
 
+# Temporary due to diff: https://github.com/advisories/GHSA-h6ch-v84p-w6p9
+npm install diff
+
 # Temporary: got: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-33987
 cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/package-json/
 npm install got@12.5.3
