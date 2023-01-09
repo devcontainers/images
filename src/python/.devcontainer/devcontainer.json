@@ -25,10 +25,7 @@
 			// Set *default* container specific settings.json values on container create.
 			"settings": {
 				"python.defaultInterpreterPath": "/usr/local/bin/python",
-			},
-			// Add the IDs of extensions you want installed when the container is created.
-			"extensions": [
-			]
+			}
 		}
 	},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
