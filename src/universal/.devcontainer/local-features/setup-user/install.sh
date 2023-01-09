@@ -38,6 +38,12 @@ curl -sSL https://github.com/jhy/jsoup/archive/refs/tags/jsoup-1.15.3.tar.gz | t
 jar cf ${GRADLE_PATH}/jsoup-1.15.3.jar /tmp/jsoup-jsoup-1.15.3
 rm -rf /tmp/jsoup-jsoup-1.15.3
 
+# Temporary: Due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-42004
+rm -f ${GRADLE_PATH}/jackson-databind-*
+curl -sSL https://github.com/FasterXML/jackson-databind/archive/refs/tags/jackson-databind-2.14.1.tar.gz | tar -xzC /tmp 2>&1
+jar cf ${GRADLE_PATH}/jackson-databind-2.14.1.jar /tmp/jackson-databind-jackson-databind-2.14.1
+rm -rf /tmp/jackson-databind-jackson-databind-2.14.1
+
 # Temporary: Due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4065
 rm -f ${GRADLE_PATH}/testng-*
 curl -sSL https://github.com/cbeust/testng/archive/refs/tags/7.7.0.tar.gz | tar -xzC /tmp 2>&1
@@ -54,17 +60,42 @@ rm -rf /tmp/commons-io-commons-io-2.11.0-RC1
 # Temporary: Upgrade NPM packages due to mentioned CVEs.
 # ansi-regex: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3807
 # decode-uri-component: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38900
+# diff: https://github.com/advisories/GHSA-h6ch-v84p-w6p9
 # got: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-33987
 # minimatch: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3517
 # qs: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24999
 NPM_PACKAGES_LIST="ansi-regex
     decode-uri-component
+    diff
     got
     minimatch
     qs"
 
 cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm
 npm install ${NPM_PACKAGES_LIST}
+npm install ajv@8.11.2
+
+# Temporary: marked: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21680
+npm install marked-man@1.3.1
+npm install marked@4.2.5
+
+# Temporary: ansi-regex: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3807
+cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/string-width
+npm install ansi-regex --save
+
+cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/yargs
+npm install ansi-regex --save
+
+# Temporary due to minimist: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44906 & https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-7598
+cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/tacks
+npm update mkdirp
+
+# Temporary due to diff: https://github.com/advisories/GHSA-h6ch-v84p-w6p9
+npm install diff
+
+# Temporary: got: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-33987
+cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/package-json/
+npm install got@12.5.3
 
 # Temporary: Due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0536 & https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0155
 rm -rf /usr/local/nvs/deps/node_modules/follow-redirects/*

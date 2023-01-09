@@ -51,6 +51,8 @@ While the image itself works unmodified, you can also directly reference pre-bui
 
 Alternatively, you can use the contents of the `Dockerfile` to fully customize your container's contents or to build it for a container host architecture not supported by the image.
 
+Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
+
 ## License
 
 Copyright (c) Microsoft Corporation. All rights reserved.

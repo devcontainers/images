@@ -174,6 +174,7 @@ check "java-version-on-path-is-12.0.2" java --version | grep 12.0.2
 GRADLE_PATH=$(cd /usr/local/sdkman/candidates/gradle/7*/lib/plugins && pwd)
 check "aws-java-sdk-s3-plugin" bash -c "ls ${GRADLE_PATH} | grep aws-java-sdk-s3-1.12.363.jar"
 check "jsoup-plugin" bash -c "ls ${GRADLE_PATH} | grep jsoup-1.15.3.jar"
+check "jackson-databind" bash -c "ls ${GRADLE_PATH} | grep jackson-databind-2.14.1.jar"
 check "testng-plugin" bash -c "ls ${GRADLE_PATH} | grep testng-7.7.0.jar"
 
 MAVEN_PATH=$(cd /usr/local/sdkman/candidates/maven/3*/lib/ && pwd)
@@ -185,7 +186,7 @@ decodeVersion=$(npm ls --depth 1 --json | jq -r '.dependencies."decode-uri-compo
 check-version-ge "decode-uri-component" "${decodeVersion}" "0.2.1"
 
 ansiVersion=$(npm ls --depth 1 --json | jq -r '.dependencies."ansi-regex".version')
-check-version-ge "ansi-regex" "${ansiVersion}" "6.0.0"
+check-version-ge "ansi-regex" "${ansiVersion}" "6.0.1"
 
 minimatchVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.minimatch.version')
 check-version-ge "minimatch" "${minimatchVersion}" "3.0.5"
@@ -193,8 +194,39 @@ check-version-ge "minimatch" "${minimatchVersion}" "3.0.5"
 gotVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.got.version')
 check-version-ge "got" "${gotVersion}" "12.1.0"
 
+ajvVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.ajv.version')
+check-version-ge "ajv" "${ajvVersion}" "6.12.3"
+
+markedVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.marked.version')
+check-version-ge "marked" "${markedVersion}" "4.0.10"
+
 qsVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.qs.version')
 check-version-ge "qs" "${qsVersion}" "6.10"
+
+diffVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.diff.version')
+check-version-ge "diff" "${diffVersion}" "3.5"
+
+cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/package-json/
+
+gotVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.got.version')
+check-version-ge "got" "${gotVersion}" "12.1.0"
+
+cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/string-width
+
+ansiVersion=$(npm ls --depth 1 --json | jq -r '.dependencies."ansi-regex".version')
+check-version-ge "ansi-regex-2" "${ansiVersion}" "6.0.1"
+
+cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/tacks
+
+minimistVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.mkdirp.dependencies.minimist.version')
+check-version-ge "minimist" "${minimistVersion}" "1.2.6"
+
+diffVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.diff.version')
+check-version-ge "diff-2" "${diffVersion}" "3.5"
+
+cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/yargs
+ansiVersion=$(npm ls --depth 1 --json | jq -r '.dependencies."ansi-regex".version')
+check-version-ge "ansi-regex-3" "${ansiVersion}" "6.0.1"
 
 ls -la /home/codespace
 

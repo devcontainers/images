@@ -24,6 +24,8 @@ You can directly reference pre-built versions of `.devcontainer/Dockerfile` by u
 - `mcr.microsoft.com/devcontainers/rust:latest` (or `bullseye`, `buster` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/rust:1` (or `1-bullseye`, `1-buster` to pin to an OS version)
 
+Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
+
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
 - `mcr.microsoft.com/devcontainers/rust:0-1` (or `0-1-bullseye`, `0-1-buster` to pin to an OS version)
