@@ -11,7 +11,7 @@ const prep = require('./prep');
 const builderName = 'dev-containers-builder';
 
 async function push(repo, release, updateLatest, registry, registryPath, stubRegistry,
-    stubRegistryPath, pushImages, prepOnly, definitionsToSkip, page, pageTotal, replaceImages, definitionId, secondaryRegistryPath) {
+    stubRegistryPath, pushImages, prepOnly, definitionsToSkip, page, pageTotal, replaceImages, definitionId) {
 
     // Optional argument defaults
     prepOnly = typeof prepOnly === 'undefined' ? false : prepOnly;
@@ -46,14 +46,14 @@ async function push(repo, release, updateLatest, registry, registryPath, stubReg
         await asyncUtils.forEach(variants, async (variant) => {
             console.log(`**** Pushing ${definitionId}: ${variant} ${release} ****`);
             await pushImage(
-                definitionId, variant, repo, release, updateLatest, registry, registryPath, stubRegistry, stubRegistryPath, prepOnly, pushImages, replaceImages, secondaryRegistryPath);
+                definitionId, variant, repo, release, updateLatest, registry, registryPath, stubRegistry, stubRegistryPath, prepOnly, pushImages, replaceImages);
         });
     } else {
         const definitionsToPush = configUtils.getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip);
         await asyncUtils.forEach(definitionsToPush, async (currentJob) => {
             console.log(`**** Pushing ${currentJob['id']}: ${currentJob['variant']} ${release} ****`);
             await pushImage(
-                currentJob['id'], currentJob['variant'] || null, repo, release, updateLatest, registry, registryPath, stubRegistry, stubRegistryPath, prepOnly, pushImages, replaceImages, secondaryRegistryPath);
+                currentJob['id'], currentJob['variant'] || null, repo, release, updateLatest, registry, registryPath, stubRegistry, stubRegistryPath, prepOnly, pushImages, replaceImages);
         });
     }
 
@@ -61,7 +61,7 @@ async function push(repo, release, updateLatest, registry, registryPath, stubReg
 }
 
 async function pushImage(definitionId, variant, repo, release, updateLatest,
-    registry, registryPath, stubRegistry, stubRegistryPath, prepOnly, pushImages, replaceImage, secondaryRegistryPath) {
+    registry, registryPath, stubRegistry, stubRegistryPath, prepOnly, pushImages, replaceImage) {
     const definitionPath = configUtils.getDefinitionPath(definitionId);
     const dotDevContainerPath = path.join(definitionPath, '.devcontainer');
     // Use Dockerfile for image build
@@ -97,11 +97,8 @@ async function pushImage(definitionId, variant, repo, release, updateLatest,
         const imageNamesWithVersionTags = configUtils.getTagList(definitionId, release, updateLatest, registry, registryPath, variant);
         const imageName = imageNamesWithVersionTags[0].split(':')[0];
 
-        // Dual publish image to devcontainers and vscode/devcontainers
-        const secondaryImageNamesWithVersionTags = configUtils.getTagList(definitionId, release, updateLatest, registry, secondaryRegistryPath, variant);
 
         console.log(`(*) Tags:${imageNamesWithVersionTags.reduce((prev, current) => prev += `\n     ${current}`, '')}`);
-        console.log(`(*) Secondary Tags:${secondaryImageNamesWithVersionTags.reduce((prev, current) => prev += `\n     ${current}`, '')}`);
 
         const buildSettings = configUtils.getBuildSettings(definitionId);
 
@@ -143,9 +140,6 @@ async function pushImage(definitionId, variant, repo, release, updateLatest,
             const context = devContainerJson.build ? devContainerJson.build.context || '.' : devContainerJson.context || '.';
             const workingDir = path.resolve(dotDevContainerPath, context);
             let imageNameParams = imageNamesWithVersionTags.reduce((prev, current) => prev.concat(['--image-name', current]), []);
-
-            const secondaryImageNameParams = secondaryImageNamesWithVersionTags.reduce((prev, current) => prev.concat(['--image-name', current]), []);
-            imageNameParams = imageNameParams.concat(secondaryImageNameParams);
 
             const spawnOpts = { stdio: 'inherit', cwd: workingDir, shell: true };
             await asyncUtils.spawn('devcontainer', [

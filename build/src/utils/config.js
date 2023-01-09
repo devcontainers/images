@@ -218,7 +218,7 @@ function getTagsForVersion(definitionId, version, registry, registryPath, varian
             .replace(/\$\{?VARIANT\}?/, variant || 'NOVARIANT')
             .replace('-NOVARIANT', '');
         if (baseTag.charAt(baseTag.length - 1) !== ':') {
-            list.push(`${registry}/${registryPath}/${baseTag}`);
+            list.push(`${registry}/${registryPath}${baseTag}`);
         }
         return list;
     }, []);

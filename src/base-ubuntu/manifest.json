@@ -1,9 +1,7 @@
 {
 	"version": "1.0.3",
 	"variants": [
-		"jammy",
-		"focal",
-		"bionic"
+		"jammy"
 	],
 	"build": {
 		"latest": false,
@@ -12,31 +10,16 @@
 			"jammy": [
 				"linux/amd64",
 				"linux/arm64"
-			],
-			"focal": [
-				"linux/amd64"
-			],
-			"bionic": [
-				"linux/amd64",
-				"linux/arm64"
 			]
 		},
 		"tags": [
-			"base:${VERSION}-${VARIANT}"
+			":${VERSION}-${VARIANT}"
 		],
 		"variantTags": {
 			"jammy": [
-				"base:${VERSION}-ubuntu-22.04",
-				"base:${VERSION}-ubuntu22.04",
-				"base:${VERSION}-ubuntu"
-			],
-			"focal": [
-				"base:${VERSION}-ubuntu-20.04",
-				"base:${VERSION}-ubuntu20.04"
-			],
-			"bionic": [
-				"base:${VERSION}-ubuntu-18.04",
-				"base:${VERSION}-ubuntu18.04"
+				":${VERSION}-ubuntu-22.04",
+				":${VERSION}-ubuntu22.04",
+				":${VERSION}-ubuntu"
 			]
 		}
 	},
