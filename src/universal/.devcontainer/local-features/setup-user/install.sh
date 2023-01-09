@@ -83,6 +83,9 @@ npm install marked@4.2.5
 cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/string-width
 npm install ansi-regex --save
 
+cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/yargs
+npm install ansi-regex --save
+
 # Temporary due to minimist: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44906 & https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-7598
 cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/tacks
 npm update mkdirp

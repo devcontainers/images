@@ -224,6 +224,10 @@ check-version-ge "minimist" "${minimistVersion}" "1.2.6"
 diffVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.diff.version')
 check-version-ge "diff-2" "${diffVersion}" "3.5"
 
+cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/yargs
+ansiVersion=$(npm ls --depth 1 --json | jq -r '.dependencies."ansi-regex".version')
+check-version-ge "ansi-regex-3" "${ansiVersion}" "6.0.1"
+
 ls -la /home/codespace
 
 # Report result
