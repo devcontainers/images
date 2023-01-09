@@ -224,6 +224,11 @@ check-version-ge "minimist" "${minimistVersion}" "1.2.6"
 diffVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.diff.version')
 check-version-ge "diff-2" "${diffVersion}" "3.5"
 
+cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/eslint
+
+ajvVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.ajv.version')
+check-version-ge "ajv-2" "${ajvVersion}" "6.12.3"
+
 cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/yargs
 ansiVersion=$(npm ls --depth 1 --json | jq -r '.dependencies."ansi-regex".version')
 check-version-ge "ansi-regex-3" "${ansiVersion}" "6.0.1"

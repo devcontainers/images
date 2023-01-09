@@ -73,6 +73,11 @@ NPM_PACKAGES_LIST="ansi-regex
 
 cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm
 npm install ${NPM_PACKAGES_LIST}
+
+# Temporary: ajv: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15366
+npm install ajv@8.11.2
+
+cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/eslint
 npm install ajv@8.11.2
 
 # Temporary: marked: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21680
