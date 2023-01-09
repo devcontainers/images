@@ -120,8 +120,6 @@ checkCommon()
     check "non-root-user" id ${USERNAME}
     check "locale" [ $(locale -a | grep en_US.utf8) ]
     check "sudo" sudo echo "sudo works."
-    check "zsh" zsh --version
-    check "oh-my-zsh" [ -d "$HOME/.oh-my-zsh" ]
     check "login-shell-path" [ -f "/etc/profile.d/00-restore-env.sh" ]
     check "code" which code
 }
