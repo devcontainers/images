@@ -1,7 +1,6 @@
 name: Build and push images
 
 on: 
-  workflow_dispatch:
   push:
     tags:
     - 'v*'
