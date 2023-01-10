@@ -1,5 +1,5 @@
 {
-	"version": "0.1.15",
+	"version": "0.1.16",
 	"variants": [
 		"2.7-bullseye",
 		"2.7-buster"
