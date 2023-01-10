@@ -60,13 +60,13 @@ jobs:
                           --registry "$REGISTRY" \
                           --registry-path "$REGISTRY_BASE_PATH" 
 
-  image-info:
-    name: Trigger info extraction
-    needs: [build-and-push]
-    uses: devcontainers/images/.github/workflows/version-history.yml@main
-    with:
-      release: "${{ github.ref }}"
-      cg: "false"
-      push: "true"
-      overwrite: "false"
-    secrets: inherit
+#  image-info:
+#    name: Trigger info extraction
+#    needs: [build-and-push]
+#    uses: devcontainers/images/.github/workflows/version-history.yml@main
+#    with:
+#      release: "${{ github.ref }}"
+#      cg: "false"
+#      push: "true"
+#      overwrite: "false"
+#    secrets: inherit
