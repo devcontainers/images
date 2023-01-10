@@ -19,5 +19,8 @@ cd /tmp && git clone https://github.com/devcontainers/feature-starter.git
 cd feature-starter
 check "perl" bash -c "git -c grep.patternType=perl grep -q 'a.+b'"
 
+check "Oh My Zsh! theme" test -e $HOME/.oh-my-zsh/custom/themes/devcontainers.zsh-theme
+check "zsh theme symlink" test -e $HOME/.oh-my-zsh/custom/themes/codespaces.zsh-theme
+
 # Report result
 reportResults

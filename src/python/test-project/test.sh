@@ -24,6 +24,9 @@ check "nvm" bash -c ". /usr/local/share/nvm/nvm.sh && nvm install 10"
 check "nvm-node" bash -c ". /usr/local/share/nvm/nvm.sh && node --version"
 check "yarn" bash -c ". /usr/local/share/nvm/nvm.sh && yarn --version"
 
+check "Oh My Zsh! theme" test -e $HOME/.oh-my-zsh/custom/themes/devcontainers.zsh-theme
+check "zsh theme symlink" test -e $HOME/.oh-my-zsh/custom/themes/codespaces.zsh-theme
+
 check "git" git --version
 
 git_version_satisfied=false
