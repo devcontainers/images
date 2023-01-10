@@ -4,10 +4,10 @@
         "context": "."
     },
     "features": {
-        "ghcr.io/devcontainers/features/common-utils:1": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
             "username": "codespace",
-            "uid": "1000",
-            "gid": "1000"
+            "userUid": "1000",
+            "userGid": "1000"
         },
         "ghcr.io/devcontainers/features/dotnet:1": {
             "version": "7",

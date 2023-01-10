@@ -4,11 +4,11 @@
 		"context": "."
 	},
 	"features": {
-		"ghcr.io/devcontainers/features/common-utils:1": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
 			"installZsh": "true",
 			"username": "vscode",
-			"uid": "1000",
-			"gid": "1000",
+			"userUid": "1000",
+			"userGid": "1000",
 			"upgradePackages": "true"
 		},
 		"ghcr.io/devcontainers/features/git:1": {

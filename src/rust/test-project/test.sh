@@ -10,6 +10,9 @@ checkCommon
 check "rust" rustc --version
 check "cargo" cargo --version
 
+check "Oh My Zsh! theme" test -e $HOME/.oh-my-zsh/custom/themes/devcontainers.zsh-theme
+check "zsh theme symlink" test -e $HOME/.oh-my-zsh/custom/themes/codespaces.zsh-theme
+
 check "git" git --version
 
 git_version_satisfied=false
