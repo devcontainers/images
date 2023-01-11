@@ -8,7 +8,6 @@
 		"latest": false,
 		"rootDistro": "debian",
 		"parent": "base-debian",
-		"idMismatch": "true",
 		"architectures": {
 			"bullseye": [
 				"linux/amd64",

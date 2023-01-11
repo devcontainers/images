@@ -572,8 +572,9 @@ function getParentTagForVersion(definitionId, version, registry, registryPath, v
                 // Use variant to figure out correct variant it not the same across all parents, or return first variant if child has no variant
                 parentVariant = variant ? parentVariant[variant] : parentVariant[Object.keys(parentId)[0]];
             }
-            if(!parentVariantList.includes(parentVariant)) {
-                throw `Unable to determine variant for parent. Variant ${parentVariant} is not in ${parentId} list: ${parentVariantList}`;
+            const parentVariantId = config.definitionBuildSettings[definitionId].idMismatch === "true" && variant.includes('-') ? variant.split('-')[1] : variant;
+            if(!parentVariantList.includes(parentVariantId)) {
+                throw `Unable to determine variant for parent. Variant ${parentVariantId} is not in ${parentId} list: ${parentVariantList}`;
             }
         }
         
