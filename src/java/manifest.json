@@ -9,6 +9,8 @@
 	"build": {
 		"latest": "17-bullseye",
 		"rootDistro": "debian",
+		"parent": "base-debian",
+		"idMismatch": "true",
 		"variantBuildArgs": {
 			"17-bullseye": {
 				"TARGET_JAVA_VERSION": "17",
