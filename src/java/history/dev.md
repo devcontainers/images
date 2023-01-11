@@ -12,7 +12,7 @@
 
 ## Variant: 17-bullseye
 
-**Digest:** sha256:c6ae8e5e119b7793588911beeed40abb903fe6608a3a25969d8dac32646f87f6
+**Digest:** sha256:44f70e3c889d100ea0e8fa676de83883aff1cf7cae36144c4ad89ce6e20cabda
 
 **Tags:**
 ```
@@ -40,7 +40,7 @@ mcr.microsoft.com/devcontainers/java:dev-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 66addc8b45c93f7661a5d8bba93b7b4afcbc23de | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 2bc42d223cfe3e21aef06648fb971bd9fb00828e | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -77,7 +77,7 @@ mcr.microsoft.com/devcontainers/java:dev-bullseye
 | man-db | 2.9.4-2 |
 | manpages | 5.10-1 |
 | manpages-dev | 5.10-1 |
-| nano | 5.4-2+deb11u1 |
+| nano | 5.4-2+deb11u2 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
 | openssh-client | 1:8.4p1-5+deb11u1 |
@@ -96,7 +96,7 @@ mcr.microsoft.com/devcontainers/java:dev-bullseye
 
 ## Variant: 17-buster
 
-**Digest:** sha256:a236931d6a1e894bacc663a3dff86ace9a079525bed67f6e4a5f6167bc643fb8
+**Digest:** sha256:e6e72a3e2c36cd59cfd163a5e136ece5d3435acfcd1cc0729846d9b616c846af
 
 **Tags:**
 ```
@@ -121,7 +121,7 @@ mcr.microsoft.com/devcontainers/java:dev-17-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 66addc8b45c93f7661a5d8bba93b7b4afcbc23de | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 2bc42d223cfe3e21aef06648fb971bd9fb00828e | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -139,7 +139,7 @@ mcr.microsoft.com/devcontainers/java:dev-17-buster
 | ca-certificates | 20200601~deb10u2 |
 | curl | 7.64.0-4+deb10u3 |
 | dialog | 1.3-20190211-1 |
-| git | 1:2.20.1-2+deb10u4 |
+| git | 1:2.20.1-2+deb10u6 |
 | gnupg2 | 2.2.12-1+deb10u2 |
 | htop | 2.2.0-1+b1 |
 | iproute2 | 4.20.0-2+deb10u1 |
@@ -178,7 +178,7 @@ mcr.microsoft.com/devcontainers/java:dev-17-buster
 
 ## Variant: 11-bullseye
 
-**Digest:** sha256:32fffe6fe6710d08d9bd648c7df7b557254a7617309b8f2f497aeb7008f5441a
+**Digest:** sha256:ade13114fdd955bba1ddcc5957f467919c47dda501d7d694d17846bbb2e756a5
 
 **Tags:**
 ```
@@ -205,7 +205,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 66addc8b45c93f7661a5d8bba93b7b4afcbc23de | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 2bc42d223cfe3e21aef06648fb971bd9fb00828e | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -242,7 +242,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bullseye
 | man-db | 2.9.4-2 |
 | manpages | 5.10-1 |
 | manpages-dev | 5.10-1 |
-| nano | 5.4-2+deb11u1 |
+| nano | 5.4-2+deb11u2 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
 | openssh-client | 1:8.4p1-5+deb11u1 |
@@ -261,7 +261,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bullseye
 
 ## Variant: 11-buster
 
-**Digest:** sha256:4a5d9ecec3a1939890b523838a2246eedfdf4421c97426573335a86841073027
+**Digest:** sha256:945a11539fb769348bd2da960255961c56a14b9b535d890533bf90386ba594cb
 
 **Tags:**
 ```
@@ -287,7 +287,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 66addc8b45c93f7661a5d8bba93b7b4afcbc23de | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 2bc42d223cfe3e21aef06648fb971bd9fb00828e | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -305,7 +305,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-buster
 | ca-certificates | 20200601~deb10u2 |
 | curl | 7.64.0-4+deb10u3 |
 | dialog | 1.3-20190211-1 |
-| git | 1:2.20.1-2+deb10u4 |
+| git | 1:2.20.1-2+deb10u6 |
 | gnupg2 | 2.2.12-1+deb10u2 |
 | htop | 2.2.0-1+b1 |
 | iproute2 | 4.20.0-2+deb10u1 |

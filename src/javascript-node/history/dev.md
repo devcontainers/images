@@ -14,7 +14,7 @@
 
 ## Variant: 18-bullseye
 
-**Digest:** sha256:c98fb94899ae0711b292fcc29b58b872b833aa2596f82d12061279118486db75
+**Digest:** sha256:fe23630a330bdf9526b0c95b6b273f196607e811d2375b36eb1d5c6ef990b4e1
 
 **Tags:**
 ```
@@ -35,20 +35,20 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 18.12.1 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 18.13.0 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 2bc42d223cfe3e21aef06648fb971bd9fb00828e | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4181e8a2cc936bc7b7a89d674bf261023159ed35 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.30.0 |
+| eslint | 8.31.0 |
 
 **Additional linux tools and packages**
 
@@ -96,7 +96,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 
 ## Variant: 16-bullseye
 
-**Digest:** sha256:d4488ca58636c3eebdab4ef943fb4479b5d9ad59658c01b289b005ad1fcc1dcf
+**Digest:** sha256:b9c8107bae0d8548bc770730756ccb4599846518d9c53172813620029da72240
 
 **Tags:**
 ```
@@ -122,14 +122,14 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 2bc42d223cfe3e21aef06648fb971bd9fb00828e | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4181e8a2cc936bc7b7a89d674bf261023159ed35 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.30.0 |
+| eslint | 8.31.0 |
 
 **Additional linux tools and packages**
 
@@ -177,7 +177,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16
 
 ## Variant: 14-bullseye
 
-**Digest:** sha256:64c2699ba84b855c18a910f144faffcbd38b4a2daf94037cebd3de7f29b2170f
+**Digest:** sha256:a330ed379e334faaab529b25f4f877bc384e037398f71384692b00493cbb33e8
 
 **Tags:**
 ```
@@ -203,14 +203,14 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-14
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 2bc42d223cfe3e21aef06648fb971bd9fb00828e | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4181e8a2cc936bc7b7a89d674bf261023159ed35 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.30.0 |
+| eslint | 8.31.0 |
 
 **Additional linux tools and packages**
 
@@ -258,7 +258,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-14
 
 ## Variant: 18-buster
 
-**Digest:** sha256:693b6c6615bff46892c3a9e493d516b920c0420bfee7ff360801d4017c4b90a9
+**Digest:** sha256:360b0d3419da22c0744f09fe0dd523b4e3c388d406eb9f1e1859961781407c88
 
 **Tags:**
 ```
@@ -278,20 +278,20 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 18.12.1 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 18.13.0 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 2bc42d223cfe3e21aef06648fb971bd9fb00828e | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4181e8a2cc936bc7b7a89d674bf261023159ed35 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.30.0 |
+| eslint | 8.31.0 |
 
 **Additional linux tools and packages**
 
@@ -340,7 +340,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-buster
 
 ## Variant: 16-buster
 
-**Digest:** sha256:64668e66686876f50f1b2676f1d628f79c16ff1ef6aee7298fb45d6e24740aee
+**Digest:** sha256:2d2fcfe5ff84e603b06b526f50be6b037408bdcaae66eb7b8b19fb1b354f0705
 
 **Tags:**
 ```
@@ -365,14 +365,14 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 2bc42d223cfe3e21aef06648fb971bd9fb00828e | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4181e8a2cc936bc7b7a89d674bf261023159ed35 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.30.0 |
+| eslint | 8.31.0 |
 
 **Additional linux tools and packages**
 
@@ -421,7 +421,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16-buster
 
 ## Variant: 14-buster
 
-**Digest:** sha256:c2927e7f23d3744a2f1a9ddbd2ff20d08df9fbba7c40074c04ae142b16b25496
+**Digest:** sha256:79f8db574ea2de2d945ef4ab1380f11f0d4f61623d87da22182c66d89ff0c09e
 
 **Tags:**
 ```
@@ -446,14 +446,14 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-14-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 2bc42d223cfe3e21aef06648fb971bd9fb00828e | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4181e8a2cc936bc7b7a89d674bf261023159ed35 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.30.0 |
+| eslint | 8.31.0 |
 
 **Additional linux tools and packages**
 
