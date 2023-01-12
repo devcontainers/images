@@ -62,6 +62,10 @@
         "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
             "version": "latest"
         },
+        "ghcr.io/devcontainers/features/git:1": {
+            "version": "latest",
+            "ppa": "false"
+        },
         "ghcr.io/devcontainers/features/go:1": {
             "version": "latest"
         },
@@ -86,6 +90,7 @@
         "ghcr.io/devcontainers/features/github-cli",
         "ghcr.io/devcontainers/features/docker-in-docker",
         "ghcr.io/devcontainers/features/kubectl-helm-minikube",
+        "ghcr.io/devcontainers/features/git",
         "ghcr.io/devcontainers/features/go",
         "./local-features/jekyll",
         "ghcr.io/devcontainers/features/oryx",
