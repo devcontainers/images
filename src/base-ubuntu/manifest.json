@@ -25,9 +25,6 @@
 	},
 	"dependencies": {
 		"image": "buildpack-deps:${VARIANT}-curl",
-		"imageLink": "https://hub.docker.com/_/buildpack-deps",
-		"git": {
-			"Oh My Zsh!": "/home/vscode/.oh-my-zsh"
-		}
+		"imageLink": "https://hub.docker.com/_/buildpack-deps"
 	}
 }

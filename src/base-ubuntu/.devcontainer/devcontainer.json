@@ -6,9 +6,10 @@
     "features": {
         "ghcr.io/devcontainers/features/common-utils:1": {
             "installZsh": "false",
+            "installohmyzsh": "false",
             "username": "vscode",
-            "uid": "1003",
-            "gid": "1003",
+            "uid": "1000",
+            "gid": "1000",
             "upgradePackages": "true"
         }
     },
