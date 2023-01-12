@@ -547,7 +547,7 @@ async function getImageInfo(imageTagOrContainerName) {
         const imageNameAndDigest = await asyncUtils.spawn('docker', ['inspect', "--format='{{index .RepoDigests 0}}'", image], { shell: true, stdio: 'pipe' });
         [name, digest] = imageNameAndDigest.trim().split('@');
     } catch(err) {
-        if(err.result.indexOf('Template parsing error') > 0) {
+        if(err.result.indexOf('template parsing error') > 0) {
             name = 'N/A';
             digest = 'N/A';
         } else {
