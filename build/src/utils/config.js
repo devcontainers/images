@@ -17,6 +17,8 @@ config.definitionVariants = config.definitionVariants || {};
 const stagingFolders = {};
 const definitionTagLookup = {};
 const allDefinitionPaths = {};
+let variantsList = [];
+let skipParentVariants = [];
 
 // Must be called first
 async function loadConfig(repoPath) {
@@ -355,8 +357,6 @@ function getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip) {
         }
     }
 
-    let variantsList = [];
-    let skipParentVariants = [];
 
     // Configure and club dependent variants together.
     for (let id in parentBuckets) {
@@ -380,16 +380,11 @@ function getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip) {
                     let parentVariants = config.definitionVariants[parentId];
                     if (variants) {
                         variants.forEach(variant => {
-                            if (parentVariants.includes(variant)) {
-                                const parentItem = getDefinitionObject(parentId, variant);
-                                const item = [
-                                    parentItem,
-                                    getDefinitionObject(definitionId, variant)
-                                ]
-
-                                variantsList.push(item);
-                                skipParentVariants.push(parentItem);
-
+                            const variantId = config.definitionBuildSettings[definitionId].idMismatch === "true" && variant.includes('-') ? variant.split('-')[1] : variant;
+                            if (parentVariants.includes(variantId)) {
+                                const parentItem = getDefinitionObject(parentId, variantId);
+                                const childItem = getDefinitionObject(definitionId, variant);
+                                addToVariantsList(parentItem, childItem);
                             } else {
                                 variantsList.push([getDefinitionObject(definitionId, variant)]);
                             }
@@ -415,15 +410,8 @@ function getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip) {
                             const shouldAddSingleVariant = parentId[commonVariant];
                             if (parentVariants.includes(commonVariant)) {
                                 const parentItem = getDefinitionObject(parentObjId, commonVariant);
-
-                                const item = [
-                                    parentItem,
-                                    getDefinitionObject(definitionId, commonVariant)
-                                ]
-
-                                variantsList.push(item);
-                                skipParentVariants.push(parentItem);
-
+                                const childItem = getDefinitionObject(definitionId, commonVariant);
+                                addToVariantsList(parentItem, childItem);
                             } else if (shouldAddSingleVariant) {
                                 variantsList.push([getDefinitionObject(definitionId, commonVariant)]);
                             }
@@ -481,6 +469,35 @@ function getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip) {
     console.log(`(*) Builds paginated as follows: ${JSON.stringify(allPages, null, 4)}\n(*) Processing page ${page} of ${pageTotal}.\n`);
 
     return allPages[page - 1];
+}
+
+function addToVariantsList(parentItem, childItem) {
+    let isAdded = false;
+    for (let x = 0; x < variantsList.length; x++) {
+        for (let y = 0; y < variantsList[x].length; y++) {
+            const variantItem = variantsList[x][y];
+            if (variantItem.id === parentItem.id && variantItem.variant === parentItem.variant) {
+                variantsList[x].push(childItem);
+                isAdded = true;
+                break;
+            }
+        }
+
+        if (isAdded) {
+            break;
+        }
+    }
+
+    if (!isAdded) {
+        const item = [
+            parentItem,
+            childItem
+        ]
+
+        variantsList.push(item);
+    }
+
+    skipParentVariants.push(parentItem);
 }
 
 function getDefinitionList() {
@@ -555,8 +572,9 @@ function getParentTagForVersion(definitionId, version, registry, registryPath, v
                 // Use variant to figure out correct variant it not the same across all parents, or return first variant if child has no variant
                 parentVariant = variant ? parentVariant[variant] : parentVariant[Object.keys(parentId)[0]];
             }
-            if(!parentVariantList.includes(parentVariant)) {
-                throw `Unable to determine variant for parent. Variant ${parentVariant} is not in ${parentId} list: ${parentVariantList}`;
+            const parentVariantId = config.definitionBuildSettings[definitionId].idMismatch === "true" && variant.includes('-') ? variant.split('-')[1] : variant;
+            if(!parentVariantList.includes(parentVariantId)) {
+                throw `Unable to determine variant for parent. Variant ${parentVariantId} is not in ${parentId} list: ${parentVariantList}`;
             }
         }
         

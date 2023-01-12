@@ -1,5 +1,5 @@
 {
-	"version": "0.202.15",
+	"version": "0.202.17",
 	"build": {
 		"latest": true,
 		"rootDistro": "debian",
@@ -27,7 +27,9 @@
 			"joblib",
 			"cookiecutter",
 			"cryptography",
-			"mistune"
+			"mistune",
+			"numpy",
+			"certifi"
 		],
 		"other": {
 			"conda": {

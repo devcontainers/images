@@ -9,7 +9,7 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/dotnet |
-| *Available image variants* | 3.1 / 3.1-focal, 3.1-bullseye, 6.0 /6.0-bullseye, 6.0-jammy, 6.0-focal, 7.0 /7.0-bullseye, 7.0-jammy ([full list](https://mcr.microsoft.com/v2/devcontainers/dotnet/tags/list)) |
+| *Available image variants* | 6.0 /6.0-bullseye, 6.0-jammy, 6.0-focal, 7.0 /7.0-bullseye, 7.0-jammy ([full list](https://mcr.microsoft.com/v2/devcontainers/dotnet/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bullseye`, `jammy` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Ubuntu (`-focal`, `-jammy`), Debian (`-bullseye`) |
@@ -22,9 +22,10 @@ See **[history](history)** for information on the contents of published images.
 You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
 - `mcr.microsoft.com/devcontainers/dotnet` (latest)
-- `mcr.microsoft.com/devcontainers/dotnet:3.1` (or `3.1-bullseye`, `3.1-focal` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/dotnet:6.0` (or `6.0-bullseye`, `6.0-jammy`, `6.0-focal` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/dotnet:7.0` (or `7.0-bullseye`, `7.0-jammy` to pin to an OS version)
+
+Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 

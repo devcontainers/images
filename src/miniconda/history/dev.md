@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/miniconda)
 
-**Digest:** sha256:105c617b6d03508de991973e2ca60465c8bfbc1aaaae3faa3b306f220e41bf19
+**Digest:** sha256:f3c0a62d75eb8237822407f569392f0157a65f8aebc5d31f28d7b26343c89794
 
 **Tags:**
 ```
@@ -23,25 +23,27 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Python](https://www.python.org/) | 3.9.12 | /opt/conda |
+| [Python](https://www.python.org/) | 3.10.8 | /opt/conda |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 66addc8b45c93f7661a5d8bba93b7b4afcbc23de | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 2bc42d223cfe3e21aef06648fb971bd9fb00828e | /home/vscode/.oh-my-zsh |
 
 **Pip / pipx installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| pylint | 2.15.8 |
+| certifi | 2022.12.7 |
+| cryptography | 39.0.0 |
+| pylint | 2.15.10 |
 | flake8 | 6.0.0 |
-| autopep8 | 2.0.0 |
+| autopep8 | 2.0.1 |
 | black | 22.12.0 |
 | yapf | 0.32.0 |
 | mypy | 0.991 |
-| pydocstyle | 6.1.1 |
+| pydocstyle | 6.2.3 |
 | pycodestyle | 2.10.0 |
 | bandit | 1.7.4 |
 | virtualenv | 20.17.1 |
@@ -51,7 +53,7 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 
 | Tool | Version | Path |
 |------|---------|------|
-| [conda](https://github.com/conda/conda) | 4.12.0 | /opt/conda |
+| [conda](https://github.com/conda/conda) | 22.11.1 | /opt/conda |
 
 **Additional linux tools and packages**
 
@@ -81,7 +83,7 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | man-db | 2.9.4-2 |
 | manpages | 5.10-1 |
 | manpages-dev | 5.10-1 |
-| nano | 5.4-2+deb11u1 |
+| nano | 5.4-2+deb11u2 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
 | openssh-client | 1:8.4p1-5+deb11u1 |

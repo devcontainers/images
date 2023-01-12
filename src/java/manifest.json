@@ -1,5 +1,5 @@
 {
-	"version": "0.205.15",
+	"version": "0.205.17",
 	"variants": [
 		"17-bullseye",
 		"17-buster",
@@ -9,6 +9,8 @@
 	"build": {
 		"latest": "17-bullseye",
 		"rootDistro": "debian",
+		"parent": "base-debian",
+		"idMismatch": "true",
 		"variantBuildArgs": {
 			"17-bullseye": {
 				"TARGET_JAVA_VERSION": "17",

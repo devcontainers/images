@@ -8,12 +8,11 @@ checkCommon
 
 check "git" git --version
 
-git_version_satisfied=false
-if (echo a version 2.38.1; git --version) | sort -Vk3 | tail -1 | grep -q git; then
-    git_version_satisfied=true
-fi
+git_version=$(git --version)
+check-version-ge "git-requirement" "${git_version}" "git version 2.38.1"
 
-check "git version satisfies requirement" echo $git_version_satisfied | grep "true"
+cryptography_version=$(python -c "import cryptography; print(cryptography.__version__)")
+check-version-ge "cryptography-requirement" "${cryptography_version}" "38.0.3"
 
 # Report result
 reportResults

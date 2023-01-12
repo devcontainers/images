@@ -1,5 +1,5 @@
 {
-	"version": "2.1.2",
+	"version": "2.1.5",
 	"build": {
 		"latest": true,
 		"rootDistro": "debian",
@@ -117,7 +117,8 @@
 			"torch",
 			"requests",
 			"plotly",
-			"jupyterlab-git"
+			"jupyterlab-git",
+			"certifi"
 		],
 		"other": {
 			"git": {

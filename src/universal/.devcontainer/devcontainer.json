@@ -4,10 +4,10 @@
         "context": "."
     },
     "features": {
-        "ghcr.io/devcontainers/features/common-utils:1": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
             "username": "codespace",
-            "uid": "1000",
-            "gid": "1000"
+            "userUid": "1000",
+            "userGid": "1000"
         },
         "ghcr.io/devcontainers/features/dotnet:1": {
             "version": "7",
@@ -110,24 +110,14 @@
                 "python.formatting.blackPath": "/usr/local/py-utils/bin/black",
                 "python.formatting.yapfPath": "/usr/local/py-utils/bin/yapf",
                 "python.linting.banditPath": "/usr/local/py-utils/bin/bandit",
-                "python.linting.enabled": true,
                 "python.linting.flake8Path": "/usr/local/py-utils/bin/flake8",
                 "python.linting.mypyPath": "/usr/local/py-utils/bin/mypy",
                 "python.linting.pycodestylePath": "/usr/local/py-utils/bin/pycodestyle",
                 "python.linting.pydocstylePath": "/usr/local/py-utils/bin/pydocstyle",
-                "python.linting.pylintEnabled": true,
                 "python.linting.pylintPath": "/usr/local/py-utils/bin/pylint",
                 "jupyter.kernels.filter": [
                     {
                         "path": "/opt/conda/bin/python",
-                        "type": "pythonEnvironment"
-                    },
-                    {
-                        "path": "/bin/python2",
-                        "type": "pythonEnvironment"
-                    },
-                    {
-                        "path": "/usr/bin/python2",
                         "type": "pythonEnvironment"
                     },
                     {
