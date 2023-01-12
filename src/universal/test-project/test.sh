@@ -13,7 +13,7 @@ check "gitconfig-location" bash -c "sudo ls /etc | grep gitconfig"
 # Check .NET
 check "dotnet" dotnet --list-sdks
 count=$(ls /usr/local/dotnet | wc -l)
-expectedCount=3 # 2 version folders + 1 current folder which links to either one of the version
+expectedCount=2 # 1 version folders + 1 current folder which links to either one of the version
 checkVersionCount "two versions of dotnet are present" $count $expectedCount
 echo $(echo "list of installed dotnet versions" && ls -a /usr/local/dotnet)
 
@@ -129,7 +129,7 @@ check "run-puppeteer" node puppeteer.js
 check "oryx" oryx --version
 
 # Ensures nvm works in a Node Project
-check "default-node-version" bash -c "node --version | grep 16."
+check "default-node-version" bash -c "node --version | grep 18."
 check "default-node-location" bash -c "which node | grep /home/codespace/nvm/current/bin"
 check "oryx-build-node-projectr" bash -c "oryx build ./sample/node"
 check "oryx-configured-current-node-version" bash -c "ls -la /home/codespace/nvm/current | grep /opt/nodejs"
