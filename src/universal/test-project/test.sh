@@ -13,7 +13,7 @@ check "gitconfig-location" bash -c "sudo ls /etc | grep gitconfig"
 # Check .NET
 check "dotnet" dotnet --list-sdks
 count=$(ls /usr/local/dotnet | wc -l)
-expectedCount=2 # 1 version folders + 1 current folder which links to either one of the version
+expectedCount=3 # 2 version folders + 1 current folder which links to either one of the version
 checkVersionCount "two versions of dotnet are present" $count $expectedCount
 echo $(echo "list of installed dotnet versions" && ls -a /usr/local/dotnet)
 
@@ -82,8 +82,8 @@ check "nvs" bash -c ". /usr/local/nvs/nvs.sh && nvs --version"
 check "yarn" yarn --version
 check "npm" npm --version
 count=$(ls /usr/local/share/nvm/versions/node | wc -l)
-expectedCount=2
-checkVersionCount "two versions of node are present" $count $expectedCount
+expectedCount=1
+checkVersionCount "one version of node is present" $count $expectedCount
 echo $(echo "node versions" && ls -a /usr/local/share/nvm/versions/node)
 
 # PHP
