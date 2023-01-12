@@ -40,26 +40,20 @@ jobs:
         path: 'release'
         ref: ${{ github.event.inputs.release }}
 
-    - name: Azure CLI login
-      id: az_login
-      uses: azure/login@v1
+    - name: Login to ACR
+      uses: docker/login-action@v2
       with:
-        creds: ${{ secrets.AZ_ACR_CREDS }}
+        registry: ${{ secrets.AZURE_REGISTRY }}
+        username: ${{ secrets.AZURE_CLIENT_ID }}
+        password: ${{ secrets.AZURE_CLIENT_SECRET }}
       
     - name: Build and push
       id: build_and_push
       env:
         REGISTRY: ${{ secrets.REGISTRY }}
         REGISTRY_BASE_PATH: ${{ secrets.REGISTRY_BASE_PATH }}
-        STUB_REGISTRY: ${{ secrets.STUB_REGISTRY }}
-        STUB_REGISTRY_BASE_PATH: ${{ secrets.STUB_REGISTRY_BASE_PATH }}
-        SECONDARY_REGISTRY_BASE_PATH: ${{ secrets.SECONDARY_REGISTRY_BASE_PATH }}
       run: |
         set -e
-
-        # ACR login
-        ACR_REGISTRY_NAME=$(echo "$REGISTRY" | grep -oP '(.+)(?=\.azurecr\.io)')
-        az acr login --name $ACR_REGISTRY_NAME
 
         # Setup build CLI
         cd "$GITHUB_WORKSPACE/ref"
@@ -76,7 +70,4 @@ jobs:
                           --release ${{ github.event.inputs.release }} \
                           --registry "$REGISTRY" \
                           --registry-path "$REGISTRY_BASE_PATH" \
-                          --stub-registry "$STUB_REGISTRY" \
-                          --stub-registry-path "$STUB_REGISTRY_BASE_PATH" \
-                          --secondary-registry-path "$SECONDARY_REGISTRY_BASE_PATH" \
                           ${{ github.event.inputs.image }}

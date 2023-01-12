@@ -2,3 +2,4 @@ node_modules/
 .tgz
 .secrets*
 bin/*
+event.json
