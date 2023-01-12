@@ -251,7 +251,7 @@ function pushCommand(argv) {
 }
 
 function imageInfoCommand(argv) {
-    generateImageInformationFiles(argv.githubRepo, argv.release, argv.registry, argv.registryPath, argv.stubRegistry, argv.stubRegistryPath, 
+    generateImageInformationFiles(argv.githubRepo, argv.release, argv.registry, argv.registryPath, 
         argv.build, argv.prune, argv.cg, argv.markdown, argv.overwrite, argv.outputPath, argv.devcontainer)
         .catch((reason) => {
             console.error(`(!) Image information file generation failed - ${reason}`);

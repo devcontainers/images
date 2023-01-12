@@ -12,7 +12,7 @@ let releaseNotesHeaderTemplate, releaseNotesVariantPartTemplate;
 handlebars.registerHelper('anchor', (value) => value.toLowerCase().replace(/[^\w\- ]/g, '').replace(/ /g, '-'));
 
 async function generateImageInformationFiles(repo, release, registry, registryPath, 
-    stubRegistry, stubRegistryPath, buildFirst, pruneBetweenDefinitions, generateManifest, generateMarkdown, overwrite, outputPath, definitionId) {
+    buildFirst, pruneBetweenDefinitions, generateManifest, generateMarkdown, overwrite, outputPath, definitionId) {
     // Load config files
     await configUtils.loadConfig();
 
@@ -45,7 +45,7 @@ async function generateImageInformationFiles(repo, release, registry, registryPa
         }
 
         // Extract information
-        const definitionInfo = await getDefinitionImageContent(repo, release, registry, registryPath,  stubRegistry, stubRegistryPath, currentDefinitionId, alreadyRegistered, buildFirst);
+        const definitionInfo = await getDefinitionImageContent(repo, release, registry, registryPath,  currentDefinitionId, alreadyRegistered, buildFirst);
 
         // Write markdown file as appropriate
         if (generateMarkdown && (overwrite || ! markdownExists)) {
@@ -74,7 +74,7 @@ async function generateImageInformationFiles(repo, release, registry, registryPa
     console.log('(*) Done!');    
 }
 
-async function getDefinitionImageContent(repo, release, registry, registryPath, stubRegistry, stubRegistryPath, definitionId, alreadyRegistered, buildFirst) {
+async function getDefinitionImageContent(repo, release, registry, registryPath, definitionId, alreadyRegistered, buildFirst) {
     const dependencies = configUtils.getDefinitionDependencies(definitionId);
     if (typeof dependencies !== 'object') {
         return [];
@@ -108,7 +108,7 @@ async function getDefinitionImageContent(repo, release, registry, registryPath, 
         const contents = await imageContentUtils.getAllContentInfo(imageTag, dependencies, definitionId);
         
         // Update markdown content
-        markdown = markdown + await generateReleaseNotesPart(contents, release, stubRegistry, stubRegistryPath, definitionId, variant);
+        markdown = markdown + await generateReleaseNotesPart(contents, release, null, null, definitionId, variant);
 
         // Add to registrations
         registrations = registrations.concat(getUniqueComponents(alreadyRegistered, contents));
