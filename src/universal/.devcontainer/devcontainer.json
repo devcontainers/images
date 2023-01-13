@@ -18,7 +18,8 @@
             "version": "latest"
         },
         "ghcr.io/devcontainers/features/node:1": {
-            "version": "18"
+            "version": "19",
+            "additionalVersions": "18"
         },
         "./local-features/nvs": "latest",
         "ghcr.io/devcontainers/features/python:1": {
