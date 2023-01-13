@@ -28,7 +28,7 @@ jobs:
   image_info:
     name: Update version history
     if: ${{ github.ref == 'refs/heads/main' || github.event.base_ref == 'refs/heads/main' }}
-    runs-on: ubuntu-latest
+    runs-on: devcontainer-image-builder-ubuntu
     permissions:
       contents: write
       pull-requests: write
@@ -57,15 +57,15 @@ jobs:
     - name: Get image info
       id: Get_image_info
       env:
-        REGISTRY: ${{ secrets.REGISTRY }}
+        REGISTRY: ${{ secrets.AZURE_REGISTRY }}
         REGISTRY_BASE_PATH: ${{ secrets.REGISTRY_BASE_PATH }}
       run: |
         set -e
 
         yarn install
-        RELEASE_STRING=$(echo "${{ inputs.release }}" | grep -oP 'refs/(heads|tags)/\K(.+)')
-        OVERWRITE_STRING=$(if [ "${{ inputs.overwrite }}" = "false" ]; then echo '--no-overwrite'; else echo '--overwrite'; fi)
-        CG_STRING=$(if [ ${{ inputs.cg }} = "false" ]; then echo '--no-cg'; else echo '--cg'; fi)
+        RELEASE_STRING=$(echo "${{ github.event.inputs.release }}") | grep -oP 'refs/(heads|tags)/\K(.+)')
+        OVERWRITE_STRING=$(if [ "${{ github.event.inputs.overwrite }}" = "false" ]; then echo '--no-overwrite'; else echo '--overwrite'; fi)
+        CG_STRING=$(if [ ${{ github.event.inputs.cg }} = "false" ]; then echo '--no-cg'; else echo '--cg'; fi)
 
         # Pull images and update cgmanifest.json
         build/vscdc info  --no-build \

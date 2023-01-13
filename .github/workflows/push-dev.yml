@@ -41,14 +41,10 @@ jobs:
       id: build_and_push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        REGISTRY: ${{ secrets.REGISTRY }}
+        REGISTRY: ${{ secrets.AZURE_REGISTRY }}
         REGISTRY_BASE_PATH: ${{ secrets.REGISTRY_BASE_PATH }}
       run: |
         set -e
-
-        # ACR login
-        ACR_REGISTRY_NAME=$(echo "$REGISTRY" | grep -oP '(.+)(?=\.azurecr\.io)')
-        az acr login --name $ACR_REGISTRY_NAME
 
         # Build and push dev images
         yarn install

@@ -15,7 +15,7 @@ jobs:
   build-and-push:
     name: Build and push images
     if: ${{ github.ref == 'refs/heads/main' }}
-    runs-on: ubuntu-latest
+    runs-on: devcontainer-image-builder-ubuntu
     steps:
     - name: Free more space
       id: free_space 
@@ -50,7 +50,7 @@ jobs:
     - name: Build and push
       id: build_and_push
       env:
-        REGISTRY: ${{ secrets.REGISTRY }}
+        REGISTRY: ${{ secrets.AZURE_REGISTRY }}
         REGISTRY_BASE_PATH: ${{ secrets.REGISTRY_BASE_PATH }}
       run: |
         set -e
