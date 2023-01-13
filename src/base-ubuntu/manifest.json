@@ -17,9 +17,7 @@
 		],
 		"variantTags": {
 			"jammy": [
-				":${VERSION}-ubuntu-22.04",
-				":${VERSION}-ubuntu22.04",
-				":${VERSION}-ubuntu"
+				":${VERSION}-ubuntu-22.04"
 			]
 		}
 	},
