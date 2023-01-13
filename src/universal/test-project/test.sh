@@ -129,7 +129,7 @@ check "run-puppeteer" node puppeteer.js
 check "oryx" oryx --version
 
 # Ensures nvm works in a Node Project
-check "default-node-version" bash -c "node --version | grep 16."
+check "default-node-version" bash -c "node --version | grep 19."
 check "default-node-location" bash -c "which node | grep /home/codespace/nvm/current/bin"
 check "oryx-build-node-projectr" bash -c "oryx build ./sample/node"
 check "oryx-configured-current-node-version" bash -c "ls -la /home/codespace/nvm/current | grep /opt/nodejs"
@@ -180,58 +180,6 @@ check "testng-plugin" bash -c "ls ${GRADLE_PATH} | grep testng-7.7.0.jar"
 MAVEN_PATH=$(cd /usr/local/sdkman/candidates/maven/3*/lib/ && pwd)
 check "commons-io-lib" bash -c "ls ${MAVEN_PATH} | grep commons-io-2.11.jar"
 
-cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm
-
-decodeVersion=$(npm ls --depth 1 --json | jq -r '.dependencies."decode-uri-component".version')
-check-version-ge "decode-uri-component" "${decodeVersion}" "0.2.1"
-
-ansiVersion=$(npm ls --depth 1 --json | jq -r '.dependencies."ansi-regex".version')
-check-version-ge "ansi-regex" "${ansiVersion}" "6.0.1"
-
-minimatchVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.minimatch.version')
-check-version-ge "minimatch" "${minimatchVersion}" "3.0.5"
-
-gotVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.got.version')
-check-version-ge "got" "${gotVersion}" "12.1.0"
-
-ajvVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.ajv.version')
-check-version-ge "ajv" "${ajvVersion}" "6.12.3"
-
-markedVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.marked.version')
-check-version-ge "marked" "${markedVersion}" "4.0.10"
-
-qsVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.qs.version')
-check-version-ge "qs" "${qsVersion}" "6.10"
-
-diffVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.diff.version')
-check-version-ge "diff" "${diffVersion}" "3.5"
-
-cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/package-json/
-
-gotVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.got.version')
-check-version-ge "got" "${gotVersion}" "12.1.0"
-
-cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/string-width
-
-ansiVersion=$(npm ls --depth 1 --json | jq -r '.dependencies."ansi-regex".version')
-check-version-ge "ansi-regex-2" "${ansiVersion}" "6.0.1"
-
-cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/tacks
-
-minimistVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.mkdirp.dependencies.minimist.version')
-check-version-ge "minimist" "${minimistVersion}" "1.2.6"
-
-diffVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.diff.version')
-check-version-ge "diff-2" "${diffVersion}" "3.5"
-
-cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/eslint
-
-ajvVersion=$(npm ls --depth 1 --json | jq -r '.dependencies.ajv.version')
-check-version-ge "ajv-2" "${ajvVersion}" "6.12.3"
-
-cd /usr/local/share/nvm/versions/node/v14*/lib/node_modules/npm/node_modules/yargs
-ansiVersion=$(npm ls --depth 1 --json | jq -r '.dependencies."ansi-regex".version')
-check-version-ge "ansi-regex-3" "${ansiVersion}" "6.0.1"
 
 ls -la /home/codespace
 
