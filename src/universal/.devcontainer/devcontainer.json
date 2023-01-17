@@ -18,8 +18,8 @@
             "version": "latest"
         },
         "ghcr.io/devcontainers/features/node:1": {
-            "version": "16",
-            "additionalVersions": "14"
+            "version": "19",
+            "additionalVersions": "18"
         },
         "./local-features/nvs": "latest",
         "ghcr.io/devcontainers/features/python:1": {
@@ -30,8 +30,8 @@
         },
         "./local-features/machine-learning-packages": "latest",
         "ghcr.io/devcontainers/features/php:1": {
-            "version": "8.1.4",
-            "additionalVersions": "8.0.16",
+            "version": "8.2.1",
+            "additionalVersions": "8.1.14",
             "installComposer": "true"
         },
         "ghcr.io/devcontainers/features/conda:1": {
