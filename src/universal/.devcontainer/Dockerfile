@@ -16,6 +16,7 @@ RUN LANG="C.UTF-8" \
     && apt-get update \
     && apt-get upgrade -y \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+        git \
         make \
         unzip \
         # The tools in this package are used when installing packages for Python
