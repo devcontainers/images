@@ -3,6 +3,14 @@
 		"dockerfile": "./Dockerfile",
 		"context": "."
 	},
+
+	"features": {
+		"ghcr.io/devcontainers/features/git:1": {
+            "version": "latest",
+            "ppa": "false"
+        }
+    },
+
 	"capAdd": ["SYS_PTRACE"],
 	"securityOpt": ["seccomp=unconfined"],
 	// Configure tool-specific properties.

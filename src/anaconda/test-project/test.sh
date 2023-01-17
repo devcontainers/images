@@ -17,8 +17,17 @@ check "pydocstyle" pydocstyle --version
 check "pycodestyle" pycodestyle --version
 check "nvm" bash -c ". /usr/local/share/nvm/nvm.sh && nvm --version"
 
+check "git" git --version
+check "git-location" sh -c "which git | grep /usr/local/bin/git"
+
 git_version=$(git --version)
-check-version-ge "git-requirement" "${git_version}" "git version 2.38.1"
+check-version-ge "git-requirement" "${git_version}" "git version 2.39.1"
+
+check "set-git-config-user-name" sh -c "sudo git config --system user.name devcontainers"
+check "gitconfig-file-location" sh -c "ls /etc/gitconfig"
+check "gitconfig-contains-name" sh -c "cat /etc/gitconfig | grep 'name = devcontainers'"
+
+check "usr-local-etc-config-does-not-exist" test ! -f "/usr/local/etc/gitconfig"
 
 joblib_version=$(python -c "import joblib; print(joblib.__version__)")
 check-version-ge "joblib-requirement" "${joblib_version}" "1.2.0"

@@ -62,6 +62,10 @@
         "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
             "version": "latest"
         },
+        "ghcr.io/devcontainers/features/git:1": {
+            "version": "latest",
+            "ppa": "false"
+        },
         "ghcr.io/devcontainers/features/go:1": {
             "version": "latest"
         },
@@ -71,6 +75,7 @@
     },
     "overrideFeatureInstallOrder": [
         "ghcr.io/devcontainers/features/common-utils",
+        "ghcr.io/devcontainers/features/git",
         "ghcr.io/devcontainers/features/dotnet",
         "ghcr.io/devcontainers/features/hugo",
         "ghcr.io/devcontainers/features/node",
