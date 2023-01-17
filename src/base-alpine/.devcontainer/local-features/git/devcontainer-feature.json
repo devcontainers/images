@@ -1,0 +1,8 @@
+{
+	"id": "git",
+	"name": "Git from source",
+	"install": {
+        "app": "",
+        "file": "install.sh"
+    }
+}

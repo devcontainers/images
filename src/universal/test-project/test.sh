@@ -7,8 +7,16 @@ source test-utils.sh codespace
 checkCommon
 
 check "git" git --version
-check "gitconfig" bash -c "sudo git config --system user.name devcontainer"
-check "gitconfig-location" bash -c "sudo ls /etc | grep gitconfig"
+check "git-location" sh -c "which git | grep /usr/local/bin/git"
+
+git_version=$(git --version)
+check-version-ge "git-requirement" "${git_version}" "git version 2.39.1"
+
+check "set-git-config-user-name" sh -c "sudo git config --system user.name devcontainers"
+check "gitconfig-file-location" sh -c "ls /etc/gitconfig"
+check "gitconfig-contains-name" sh -c "cat /etc/gitconfig | grep 'name = devcontainers'"
+
+check "usr-local-etc-config-does-not-exist" test ! -f "/usr/local/etc/gitconfig"
 
 # Check .NET
 check "dotnet" dotnet --list-sdks

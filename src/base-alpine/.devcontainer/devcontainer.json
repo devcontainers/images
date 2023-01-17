@@ -11,7 +11,8 @@
 			"userUid": "1000",
 			"userGid": "1000",
 			"upgradePackages": "true"
-		}
+		},
+		"./local-features/git": {}
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

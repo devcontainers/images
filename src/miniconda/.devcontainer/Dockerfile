@@ -22,7 +22,6 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get install -y --no-install-recommends \
         bzip2 \
         ca-certificates \
-        git \
         libglib2.0-0 \
         libsm6 \
         libxext6 \
