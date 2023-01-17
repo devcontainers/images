@@ -7,7 +7,9 @@ source test-utils.sh codespace
 checkCommon
 
 check "git" git --version
-check "git-location" sh -c "which git | grep /usr/local/bin/git"
+
+git_version=$(git --version)
+check-version-ge "git-requirement" "${git_version}" "git version 2.25.1"
 
 check "set-git-config-user-name" sh -c "sudo git config --system user.name devcontainers"
 check "gitconfig-file-location" sh -c "ls /etc/gitconfig"
