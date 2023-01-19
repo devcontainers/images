@@ -26,7 +26,8 @@ async function push(repo, release, updateLatest, registry, registryPath, stubReg
     replaceImages = (configUtils.getVersionFromRelease(release, definitionId) == 'dev') || replaceImages;
 
     // Stage content
-    let stagingFolder;
+    let stagingFolder = await configUtils.getStagingFolder(release);
+    await configUtils.loadConfig(stagingFolder);
 
     // Use or create a buildx / buildkit "builder" that using the docker-container driver which internally 
     // uses QEMU to emulate different architectures for cross-platform builds. Setting up a separate
