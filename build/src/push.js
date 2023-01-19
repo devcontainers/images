@@ -26,8 +26,7 @@ async function push(repo, release, updateLatest, registry, registryPath, stubReg
     replaceImages = (configUtils.getVersionFromRelease(release, definitionId) == 'dev') || replaceImages;
 
     // Stage content
-    const stagingFolder = await configUtils.getStagingFolder(release);
-    await configUtils.loadConfig(stagingFolder);
+    let stagingFolder;
 
     // Use or create a buildx / buildkit "builder" that using the docker-container driver which internally 
     // uses QEMU to emulate different architectures for cross-platform builds. Setting up a separate
@@ -44,6 +43,9 @@ async function push(repo, release, updateLatest, registry, registryPath, stubReg
     if (definitionId) {
         const variants = configUtils.getVariants(definitionId) || [null];
         await asyncUtils.forEach(variants, async (variant) => {
+            stagingFolder = await configUtils.getStagingFolder(release);
+            await configUtils.loadConfig(stagingFolder);
+
             console.log(`**** Pushing ${definitionId}: ${variant} ${release} ****`);
             await pushImage(
                 definitionId, variant, repo, release, updateLatest, registry, registryPath, stubRegistry, stubRegistryPath, prepOnly, pushImages, replaceImages, secondaryRegistryPath);
@@ -51,6 +53,9 @@ async function push(repo, release, updateLatest, registry, registryPath, stubReg
     } else {
         const definitionsToPush = configUtils.getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip);
         await asyncUtils.forEach(definitionsToPush, async (currentJob) => {
+            stagingFolder = await configUtils.getStagingFolder(release);
+            await configUtils.loadConfig(stagingFolder);
+
             console.log(`**** Pushing ${currentJob['id']}: ${currentJob['variant']} ${release} ****`);
             await pushImage(
                 currentJob['id'], currentJob['variant'] || null, repo, release, updateLatest, registry, registryPath, stubRegistry, stubRegistryPath, prepOnly, pushImages, replaceImages, secondaryRegistryPath);
