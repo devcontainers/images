@@ -9,7 +9,7 @@
 | *Categories* | Community, Languages, Frameworks |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/jekyll |
-| *Available image variants* | bullseye, buster ([full list](https://mcr.microsoft.com/v2/devcontainers/ruby/tags/list)) |
+| *Available image variants* | bullseye, buster ([full list](https://mcr.microsoft.com/v2/devcontainers/jekyll/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bullseye` variant |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
