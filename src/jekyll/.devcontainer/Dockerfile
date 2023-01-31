@@ -3,6 +3,7 @@ ARG VARIANT=2.7-bullseye
 FROM mcr.microsoft.com/devcontainers/ruby:${VARIANT}
 
 USER root
+
 # ENV Variables required by Jekyll
 ENV LANG=en_US.UTF-8 \
     LANGUAGE=en_US:en \
@@ -15,9 +16,11 @@ ENV LANG=en_US.UTF-8 \
 RUN gem update --system
 RUN gem install bundler jekyll github-pages
 
-# [Choice] Node.js version: none, lts/*, 16, 14, 12, 10
-ARG NODE_VERSION="none"
-RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/local/share/nvm/nvm.sh && nvm install ${NODE_VERSION} 2>&1"; fi
+RUN chown -R "vscode:rvm" "/usr/local/rvm/" \
+    && chmod -R g+r+w "/usr/local/rvm/" \
+    && find "/usr/local/rvm/" -type d | xargs -n 1 chmod g+s
+
+COPY post-create.sh /usr/local/post-create.sh
 
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
