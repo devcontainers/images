@@ -27,5 +27,7 @@ check "gitconfig-contains-name" sh -c "cat /etc/gitconfig | grep 'name = devcont
 
 check "usr-local-etc-config-does-not-exist" test ! -f "/usr/local/etc/gitconfig"
 
+check "post-create-exists" test -f /usr/local/post-create.sh
+
 # Report result
 reportResults
