@@ -2,7 +2,7 @@
 ARG VARIANT=2.7-bullseye
 FROM mcr.microsoft.com/devcontainers/ruby:${VARIANT}
 
-USER vscode
+USER root
 
 # ENV Variables required by Jekyll
 ENV LANG=en_US.UTF-8 \
@@ -13,8 +13,12 @@ ENV LANG=en_US.UTF-8 \
     LANGUAGE=en_US
 
 # Install bundler, latest jekyll, and github-pages for older jekyll
-RUN sudo gem update --system
-RUN sudo gem install bundler jekyll github-pages
+RUN gem update --system
+RUN gem install bundler jekyll github-pages
+
+RUN chown -R "vscode:rvm" "/usr/local/rvm/" \
+    && chmod -R g+r+w "/usr/local/rvm/" \
+    && find "/usr/local/rvm/" -type d | xargs -n 1 chmod g+s
 
 COPY post-create.sh /usr/local/post-create.sh
 
