@@ -12,7 +12,7 @@
 
 ## Variant: 1.19-bullseye
 
-**Digest:** sha256:c43ffd53f342473b4e6691e2a202f84b2eace14e8b84ceca597430f8cb013b77
+**Digest:** sha256:5cea1d4b31855f2db8b8d0613ddb2f6eebf6c2aac946f2cbdf7922840752b3da
 
 **Tags:**
 ```
@@ -35,13 +35,13 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | 1.19.4 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.19.5 | /usr/local/go |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4181e8a2cc936bc7b7a89d674bf261023159ed35 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | b2313ec7493dc127c9712f20654579221d0bcce6 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Go tools and modules**
@@ -51,7 +51,7 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 | golang.org/x/tools/gopls | 0.11.0 |
 | honnef.co/go/tools | 0.3.3 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
-| github.com/mgechev/revive | 1.2.4 |
+| github.com/mgechev/revive | 1.2.5 |
 | github.com/uudashr/gopkgs | 2.0.1+incompatible |
 | github.com/ramya-rao-a/go-outline | 0.0.0-20210608161538-9736a4bde949 |
 | github.com/go-delve/delve | 1.20.1 |
@@ -64,11 +64,11 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 | apt-transport-https | 2.2.4 |
 | apt-utils | 2.2.4 |
 | ca-certificates | 20210119 |
-| curl | 7.74.0-1.3+deb11u3 |
+| curl | 7.74.0-1.3+deb11u5 |
 | dialog | 1.3-20201126-1 |
 | g++ | 4:10.2.1-1 |
 | gcc | 4:10.2.1-1 |
-| git | 1:2.30.2-1 |
+| git | 1:2.30.2-1+deb11u1 |
 | gnupg2 | 2.2.27-2+deb11u2 |
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |
@@ -98,7 +98,7 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 | psmisc | 23.4-2 |
 | rsync | 3.2.3-4+deb11u1 |
 | strace | 5.10-1 |
-| sudo | 1.9.5p2-3 |
+| sudo | 1.9.5p2-3+deb11u1 |
 | unzip | 6.0-26+deb11u1 |
 | vim-tiny | 2:8.2.2434-3+deb11u1 |
 | wget | 1.21-1+deb11u1 |
@@ -109,7 +109,7 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 
 ## Variant: 1.19-buster
 
-**Digest:** sha256:2b4cc3b3fc8b08640b089db4276b0c7566e4d1c9eb15420023681ef67e90e3bb
+**Digest:** sha256:595e17f1ef73d8c5b1bd6b7f68b02ae3bf6277e8faee43aa0d4d2030307bb670
 
 **Tags:**
 ```
@@ -130,13 +130,13 @@ mcr.microsoft.com/devcontainers/go:dev-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | 1.19.4 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.19.5 | /usr/local/go |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4181e8a2cc936bc7b7a89d674bf261023159ed35 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | b2313ec7493dc127c9712f20654579221d0bcce6 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Go tools and modules**
@@ -146,7 +146,7 @@ mcr.microsoft.com/devcontainers/go:dev-buster
 | golang.org/x/tools/gopls | 0.11.0 |
 | honnef.co/go/tools | 0.3.3 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
-| github.com/mgechev/revive | 1.2.4 |
+| github.com/mgechev/revive | 1.2.5 |
 | github.com/uudashr/gopkgs | 2.0.1+incompatible |
 | github.com/ramya-rao-a/go-outline | 0.0.0-20210608161538-9736a4bde949 |
 | github.com/go-delve/delve | 1.20.1 |
@@ -159,11 +159,11 @@ mcr.microsoft.com/devcontainers/go:dev-buster
 | apt-transport-https | 1.8.2.3 |
 | apt-utils | 1.8.2.3 |
 | ca-certificates | 20200601~deb10u2 |
-| curl | 7.64.0-4+deb10u3 |
+| curl | 7.64.0-4+deb10u4 |
 | dialog | 1.3-20190211-1 |
 | g++ | 4:8.3.0-1 |
 | gcc | 4:8.3.0-1 |
-| git | 1:2.20.1-2+deb10u6 |
+| git | 1:2.20.1-2+deb10u7 |
 | gnupg2 | 2.2.12-1+deb10u2 |
 | htop | 2.2.0-1+b1 |
 | iproute2 | 4.20.0-2+deb10u1 |
@@ -194,7 +194,7 @@ mcr.microsoft.com/devcontainers/go:dev-buster
 | psmisc | 23.2-1+deb10u1 |
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
-| sudo | 1.8.27-1+deb10u4 |
+| sudo | 1.8.27-1+deb10u5 |
 | unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u4 |
 | wget | 1.20.1-1.1 |
@@ -205,7 +205,7 @@ mcr.microsoft.com/devcontainers/go:dev-buster
 
 ## Variant: 1.18-bullseye
 
-**Digest:** sha256:f10ef38a2b5451249d60463fd9309afbdfd9e90f07b5fa95873ee0b1b995825f
+**Digest:** sha256:0b08e86673f3980aa489368dc32dfbccb5cc043e168c0b1b288394f401fcf824
 
 **Tags:**
 ```
@@ -225,13 +225,13 @@ mcr.microsoft.com/devcontainers/go:dev-1.18
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | 1.18.9 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.18.10 | /usr/local/go |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4181e8a2cc936bc7b7a89d674bf261023159ed35 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | b2313ec7493dc127c9712f20654579221d0bcce6 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Go tools and modules**
@@ -241,7 +241,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.18
 | golang.org/x/tools/gopls | 0.11.0 |
 | honnef.co/go/tools | 0.3.3 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
-| github.com/mgechev/revive | 1.2.4 |
+| github.com/mgechev/revive | 1.2.5 |
 | github.com/uudashr/gopkgs | 2.0.1+incompatible |
 | github.com/ramya-rao-a/go-outline | 0.0.0-20210608161538-9736a4bde949 |
 | github.com/go-delve/delve | 1.20.1 |
@@ -254,11 +254,11 @@ mcr.microsoft.com/devcontainers/go:dev-1.18
 | apt-transport-https | 2.2.4 |
 | apt-utils | 2.2.4 |
 | ca-certificates | 20210119 |
-| curl | 7.74.0-1.3+deb11u3 |
+| curl | 7.74.0-1.3+deb11u5 |
 | dialog | 1.3-20201126-1 |
 | g++ | 4:10.2.1-1 |
 | gcc | 4:10.2.1-1 |
-| git | 1:2.30.2-1 |
+| git | 1:2.30.2-1+deb11u1 |
 | gnupg2 | 2.2.27-2+deb11u2 |
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |
@@ -288,7 +288,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.18
 | psmisc | 23.4-2 |
 | rsync | 3.2.3-4+deb11u1 |
 | strace | 5.10-1 |
-| sudo | 1.9.5p2-3 |
+| sudo | 1.9.5p2-3+deb11u1 |
 | unzip | 6.0-26+deb11u1 |
 | vim-tiny | 2:8.2.2434-3+deb11u1 |
 | wget | 1.21-1+deb11u1 |
@@ -299,7 +299,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.18
 
 ## Variant: 1.18-buster
 
-**Digest:** sha256:12227eb4f91d2a0b24b5fac5d527d4a947652496940c0da4df54fe0b6ba9c863
+**Digest:** sha256:43ca24c2127c3872586e7b9495838f30c0bef8844e2e5c4aeb631cd61cc16d5e
 
 **Tags:**
 ```
@@ -318,13 +318,13 @@ mcr.microsoft.com/devcontainers/go:dev-1.18-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | 1.18.9 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.18.10 | /usr/local/go |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4181e8a2cc936bc7b7a89d674bf261023159ed35 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | b2313ec7493dc127c9712f20654579221d0bcce6 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Go tools and modules**
@@ -334,7 +334,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.18-buster
 | golang.org/x/tools/gopls | 0.11.0 |
 | honnef.co/go/tools | 0.3.3 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
-| github.com/mgechev/revive | 1.2.4 |
+| github.com/mgechev/revive | 1.2.5 |
 | github.com/uudashr/gopkgs | 2.0.1+incompatible |
 | github.com/ramya-rao-a/go-outline | 0.0.0-20210608161538-9736a4bde949 |
 | github.com/go-delve/delve | 1.20.1 |
@@ -347,11 +347,11 @@ mcr.microsoft.com/devcontainers/go:dev-1.18-buster
 | apt-transport-https | 1.8.2.3 |
 | apt-utils | 1.8.2.3 |
 | ca-certificates | 20200601~deb10u2 |
-| curl | 7.64.0-4+deb10u3 |
+| curl | 7.64.0-4+deb10u4 |
 | dialog | 1.3-20190211-1 |
 | g++ | 4:8.3.0-1 |
 | gcc | 4:8.3.0-1 |
-| git | 1:2.20.1-2+deb10u6 |
+| git | 1:2.20.1-2+deb10u7 |
 | gnupg2 | 2.2.12-1+deb10u2 |
 | htop | 2.2.0-1+b1 |
 | iproute2 | 4.20.0-2+deb10u1 |
@@ -382,7 +382,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.18-buster
 | psmisc | 23.2-1+deb10u1 |
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
-| sudo | 1.8.27-1+deb10u4 |
+| sudo | 1.8.27-1+deb10u5 |
 | unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u4 |
 | wget | 1.20.1-1.1 |

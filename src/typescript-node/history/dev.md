@@ -14,7 +14,7 @@
 
 ## Variant: 18-bullseye
 
-**Digest:** sha256:1130188bb5a6d2add2cdf54d4a75235f6eec458db0cda036fa1839f4cdd513a4
+**Digest:** sha256:422bdd8190f8ac4acf590b94a8a87428f2b6ce9a9ba1b310e14c1defac64f06c
 
 **Tags:**
 ```
@@ -36,22 +36,22 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bullseye
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
 | [Node.js](https://nodejs.org/en/) | 18.13.0 | /usr/local |
-| [TypeScript](https://www.typescriptlang.org/) | 4.9.4 | /usr/local/share/npm-global |
+| [TypeScript](https://www.typescriptlang.org/) | 4.9.5 | /usr/local/share/npm-global |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4181e8a2cc936bc7b7a89d674bf261023159ed35 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | b2313ec7493dc127c9712f20654579221d0bcce6 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.31.0 |
+| eslint | 8.33.0 |
 | tslint-to-eslint-config | 2.13.4 |
-| typescript | 4.9.4 |
+| typescript | 4.9.5 |
 
 **Additional linux tools and packages**
 
@@ -60,9 +60,9 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bullseye
 | apt-transport-https | 2.2.4 |
 | apt-utils | 2.2.4 |
 | ca-certificates | 20210119 |
-| curl | 7.74.0-1.3+deb11u3 |
+| curl | 7.74.0-1.3+deb11u5 |
 | dialog | 1.3-20201126-1 |
-| git | 1:2.30.2-1 |
+| git | 1:2.30.2-1+deb11u1 |
 | gnupg2 | 2.2.27-2+deb11u2 |
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |
@@ -89,7 +89,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bullseye
 | psmisc | 23.4-2 |
 | rsync | 3.2.3-4+deb11u1 |
 | strace | 5.10-1 |
-| sudo | 1.9.5p2-3 |
+| sudo | 1.9.5p2-3+deb11u1 |
 | unzip | 6.0-26+deb11u1 |
 | vim-tiny | 2:8.2.2434-3+deb11u1 |
 | wget | 1.21-1+deb11u1 |
@@ -99,7 +99,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bullseye
 
 ## Variant: 16-bullseye
 
-**Digest:** sha256:ae19eee30d0415b509ea4ba759cf5c1872ca3e712619cd0c00dbdf2efa149e4b
+**Digest:** sha256:0ae67026d2ee880cf411ad182a911e21aca8d7a5ea40a09b7a19282a9c3f99e5
 
 **Tags:**
 ```
@@ -120,22 +120,22 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
 | [Node.js](https://nodejs.org/en/) | 16.19.0 | /usr/local |
-| [TypeScript](https://www.typescriptlang.org/) | 4.9.4 | /usr/local/share/npm-global |
+| [TypeScript](https://www.typescriptlang.org/) | 4.9.5 | /usr/local/share/npm-global |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4181e8a2cc936bc7b7a89d674bf261023159ed35 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | b2313ec7493dc127c9712f20654579221d0bcce6 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.31.0 |
+| eslint | 8.33.0 |
 | tslint-to-eslint-config | 2.13.4 |
-| typescript | 4.9.4 |
+| typescript | 4.9.5 |
 
 **Additional linux tools and packages**
 
@@ -144,9 +144,9 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16
 | apt-transport-https | 2.2.4 |
 | apt-utils | 2.2.4 |
 | ca-certificates | 20210119 |
-| curl | 7.74.0-1.3+deb11u3 |
+| curl | 7.74.0-1.3+deb11u5 |
 | dialog | 1.3-20201126-1 |
-| git | 1:2.30.2-1 |
+| git | 1:2.30.2-1+deb11u1 |
 | gnupg2 | 2.2.27-2+deb11u2 |
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |
@@ -173,7 +173,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16
 | psmisc | 23.4-2 |
 | rsync | 3.2.3-4+deb11u1 |
 | strace | 5.10-1 |
-| sudo | 1.9.5p2-3 |
+| sudo | 1.9.5p2-3+deb11u1 |
 | unzip | 6.0-26+deb11u1 |
 | vim-tiny | 2:8.2.2434-3+deb11u1 |
 | wget | 1.21-1+deb11u1 |
@@ -183,7 +183,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16
 
 ## Variant: 14-bullseye
 
-**Digest:** sha256:08e393a0e7b4010db87aec1ac83fa908dda68edfa3e0967dda216afb2250577b
+**Digest:** sha256:6bed809ea4c84867ce21f48da6f5ead4101962ee05105c487a8c8be4f1659ef3
 
 **Tags:**
 ```
@@ -204,22 +204,22 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
 | [Node.js](https://nodejs.org/en/) | 14.21.2 | /usr/local |
-| [TypeScript](https://www.typescriptlang.org/) | 4.9.4 | /usr/local/share/npm-global |
+| [TypeScript](https://www.typescriptlang.org/) | 4.9.5 | /usr/local/share/npm-global |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4181e8a2cc936bc7b7a89d674bf261023159ed35 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | b2313ec7493dc127c9712f20654579221d0bcce6 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.31.0 |
+| eslint | 8.33.0 |
 | tslint-to-eslint-config | 2.13.4 |
-| typescript | 4.9.4 |
+| typescript | 4.9.5 |
 
 **Additional linux tools and packages**
 
@@ -228,9 +228,9 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14
 | apt-transport-https | 2.2.4 |
 | apt-utils | 2.2.4 |
 | ca-certificates | 20210119 |
-| curl | 7.74.0-1.3+deb11u3 |
+| curl | 7.74.0-1.3+deb11u5 |
 | dialog | 1.3-20201126-1 |
-| git | 1:2.30.2-1 |
+| git | 1:2.30.2-1+deb11u1 |
 | gnupg2 | 2.2.27-2+deb11u2 |
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |
@@ -257,7 +257,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14
 | psmisc | 23.4-2 |
 | rsync | 3.2.3-4+deb11u1 |
 | strace | 5.10-1 |
-| sudo | 1.9.5p2-3 |
+| sudo | 1.9.5p2-3+deb11u1 |
 | unzip | 6.0-26+deb11u1 |
 | vim-tiny | 2:8.2.2434-3+deb11u1 |
 | wget | 1.21-1+deb11u1 |
@@ -267,7 +267,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14
 
 ## Variant: 18-buster
 
-**Digest:** sha256:77d07e87220abd20d45793bfa2a8e79959cb8d42adbf84c2d6273b1a7f465f3c
+**Digest:** sha256:256c6a774783f7558f91ec89dd4f9abaf8e2b5c86411de77fa287b996902f58e
 
 **Tags:**
 ```
@@ -288,22 +288,22 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-buster
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
 | [Node.js](https://nodejs.org/en/) | 18.13.0 | /usr/local |
-| [TypeScript](https://www.typescriptlang.org/) | 4.9.4 | /usr/local/share/npm-global |
+| [TypeScript](https://www.typescriptlang.org/) | 4.9.5 | /usr/local/share/npm-global |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4181e8a2cc936bc7b7a89d674bf261023159ed35 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | b2313ec7493dc127c9712f20654579221d0bcce6 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.31.0 |
+| eslint | 8.33.0 |
 | tslint-to-eslint-config | 2.13.4 |
-| typescript | 4.9.4 |
+| typescript | 4.9.5 |
 
 **Additional linux tools and packages**
 
@@ -312,9 +312,9 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-buster
 | apt-transport-https | 1.8.2.3 |
 | apt-utils | 1.8.2.3 |
 | ca-certificates | 20200601~deb10u2 |
-| curl | 7.64.0-4+deb10u3 |
+| curl | 7.64.0-4+deb10u4 |
 | dialog | 1.3-20190211-1 |
-| git | 1:2.20.1-2+deb10u6 |
+| git | 1:2.20.1-2+deb10u7 |
 | gnupg2 | 2.2.12-1+deb10u2 |
 | htop | 2.2.0-1+b1 |
 | iproute2 | 4.20.0-2+deb10u1 |
@@ -342,7 +342,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-buster
 | psmisc | 23.2-1+deb10u1 |
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
-| sudo | 1.8.27-1+deb10u4 |
+| sudo | 1.8.27-1+deb10u5 |
 | unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u4 |
 | wget | 1.20.1-1.1 |
@@ -352,7 +352,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-buster
 
 ## Variant: 16-buster
 
-**Digest:** sha256:098aef7b297552c963af4ba81f6cbfc600b798b62b240774d3a4481d866a1d1c
+**Digest:** sha256:cb6b71c3a5e4eded227df28e1a43cd7b2d7dc451605fea6df38a64c9173ab8ac
 
 **Tags:**
 ```
@@ -372,22 +372,22 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16-buster
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
 | [Node.js](https://nodejs.org/en/) | 16.19.0 | /usr/local |
-| [TypeScript](https://www.typescriptlang.org/) | 4.9.4 | /usr/local/share/npm-global |
+| [TypeScript](https://www.typescriptlang.org/) | 4.9.5 | /usr/local/share/npm-global |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4181e8a2cc936bc7b7a89d674bf261023159ed35 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | b2313ec7493dc127c9712f20654579221d0bcce6 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.31.0 |
+| eslint | 8.33.0 |
 | tslint-to-eslint-config | 2.13.4 |
-| typescript | 4.9.4 |
+| typescript | 4.9.5 |
 
 **Additional linux tools and packages**
 
@@ -396,9 +396,9 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16-buster
 | apt-transport-https | 1.8.2.3 |
 | apt-utils | 1.8.2.3 |
 | ca-certificates | 20200601~deb10u2 |
-| curl | 7.64.0-4+deb10u3 |
+| curl | 7.64.0-4+deb10u4 |
 | dialog | 1.3-20190211-1 |
-| git | 1:2.20.1-2+deb10u6 |
+| git | 1:2.20.1-2+deb10u7 |
 | gnupg2 | 2.2.12-1+deb10u2 |
 | htop | 2.2.0-1+b1 |
 | iproute2 | 4.20.0-2+deb10u1 |
@@ -426,7 +426,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16-buster
 | psmisc | 23.2-1+deb10u1 |
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
-| sudo | 1.8.27-1+deb10u4 |
+| sudo | 1.8.27-1+deb10u5 |
 | unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u4 |
 | wget | 1.20.1-1.1 |
@@ -436,7 +436,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16-buster
 
 ## Variant: 14-buster
 
-**Digest:** sha256:4356f538b4a42ce8646a9ddc9f5977ddfbd847f0a8fb4e51f99e0a6a6cb18bd5
+**Digest:** sha256:3c093bc4092964f8f5428ac7949cfb429069ba820434577d5dbe1a3c83af0ecc
 
 **Tags:**
 ```
@@ -456,22 +456,22 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14-buster
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
 | [Node.js](https://nodejs.org/en/) | 14.21.2 | /usr/local |
-| [TypeScript](https://www.typescriptlang.org/) | 4.9.4 | /usr/local/share/npm-global |
+| [TypeScript](https://www.typescriptlang.org/) | 4.9.5 | /usr/local/share/npm-global |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4181e8a2cc936bc7b7a89d674bf261023159ed35 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | b2313ec7493dc127c9712f20654579221d0bcce6 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.31.0 |
+| eslint | 8.33.0 |
 | tslint-to-eslint-config | 2.13.4 |
-| typescript | 4.9.4 |
+| typescript | 4.9.5 |
 
 **Additional linux tools and packages**
 
@@ -480,9 +480,9 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14-buster
 | apt-transport-https | 1.8.2.3 |
 | apt-utils | 1.8.2.3 |
 | ca-certificates | 20200601~deb10u2 |
-| curl | 7.64.0-4+deb10u3 |
+| curl | 7.64.0-4+deb10u4 |
 | dialog | 1.3-20190211-1 |
-| git | 1:2.20.1-2+deb10u6 |
+| git | 1:2.20.1-2+deb10u7 |
 | gnupg2 | 2.2.12-1+deb10u2 |
 | htop | 2.2.0-1+b1 |
 | iproute2 | 4.20.0-2+deb10u1 |
@@ -510,7 +510,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-14-buster
 | psmisc | 23.2-1+deb10u1 |
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
-| sudo | 1.8.27-1+deb10u4 |
+| sudo | 1.8.27-1+deb10u5 |
 | unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u4 |
 | wget | 1.20.1-1.1 |
