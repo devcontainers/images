@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/miniconda)
 
-**Digest:** sha256:0dc51b21e065cf8a9ac7792140d2ff8d629a37617639f99bc62886d442a35147
+**Digest:** sha256:e4745ba78cd48a8d3205d37301c06e2d377839b3b179d4ea4be0deb4cdec43a1
 
 **Tags:**
 ```
@@ -37,10 +37,10 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 |----------------|---------|
 | certifi | 2022.12.7 |
 | cryptography | 39.0.0 |
-| pylint | 2.15.10 |
+| pylint | 2.16.1 |
 | flake8 | 6.0.0 |
 | autopep8 | 2.0.1 |
-| black | 22.12.0 |
+| black | 23.1.0 |
 | yapf | 0.32.0 |
 | mypy | 0.991 |
 | pydocstyle | 6.3.0 |

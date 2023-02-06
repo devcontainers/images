@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:991d8e817469df474f898182903cec1557599fe04901ff6482a5b8d09feeddd4
+**Digest:** sha256:a2e715de372578961dc3c5128a975f3a8ec51dc41555606e01ff62fd2adf59c4
 
 **Tags:**
 ```
@@ -41,7 +41,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | cookiecutter | 2.1.1 |
 | cryptography | 39.0.0 |
 | mistune | 2.0.4 |
-| numpy | 1.24.1 |
+| numpy | 1.24.2 |
 | certifi | 2022.12.7 |
 
 **Other tools and utilities**

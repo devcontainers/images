@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:a74aa7ad7c28cc09a62dd530191aa13d1e9b8e2a73f4820d5905340b710e9fc5
+**Digest:** sha256:743d5ec7ecb569cd45e42a560fe7d0d93c21f11374dda6270bb2a2d7f17240c5
 
 **Tags:**
 ```
@@ -26,7 +26,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 18.13.0<br />19.5.0 | /usr/local/share/nvm/versions/node/&lt;version&gt; |
+| [Node.js](https://nodejs.org/en/) | 18.14.0<br />19.6.0 | /usr/local/share/nvm/versions/node/&lt;version&gt; |
 | [Python](https://www.python.org/) | 3.10.4<br />3.9.7 | /usr/local/python/&lt;version&gt; |
 | [Java](https://adoptopenjdk.net/) | 11.0.18<br />17.0.6 | /usr/local/sdkman/candidates/java/&lt;version&gt; |
 | [.NET](https://dotnet.microsoft.com/) | 6<br />0<br />4<br />0<br />5<br />7<br />0<br />1<br />0<br />2 | /usr/local/dotnet |
@@ -34,25 +34,25 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [PHP](https://xdebug.org/) | 8.1.14<br />8.2.1 | /usr/local/php/&lt;version&gt; |
 | GCC | 9.4.0-1ubuntu1~20.04.1 | 
 | Clang | 10.0.0-4ubuntu1 | 
-| [Go](https://golang.org/dl) | 1.19.5 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.20 | /usr/local/go |
 | [Jekyll](https://jekyllrb.com/) | 4.3.2 | 
-| [Jupyter Lab](https://jupyter.org/) | 3.5.3 | /home/codespace/.local/bin/jupyter-lab |
+| [Jupyter Lab](https://jupyter.org/) | 3.6.1 | /home/codespace/.local/bin/jupyter-lab |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | b2313ec7493dc127c9712f20654579221d0bcce6 | /home/codespace/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3fd63fdf01344bb5f5f13a9c33eb0b7a72fe4771 | /home/codespace/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
-| [nvs](https://github.com/jasongin/nvs) | 4fc93c60fb3341a56984ae2b50553561acff33ea | /usr/local/nvs |
+| [nvs](https://github.com/jasongin/nvs) | 6c5a5983e2bccae5ac2b217b69210ecf3cd560f1 | /usr/local/nvs |
 | [rbenv](https://github.com/rbenv/rbenv.git) | 61747c06d42a4ef094fcc498eefcd93d5d9d7016 | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 2a2880fd97b43ead49f79c3340c96c1dccdfdd76 | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | a6976a5af32443ae0af41fa7713c6b1e8d629ed3 | /usr/local/share/ruby-build |
 
 **Pip / pipx installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| numpy | 1.24.1 |
+| numpy | 1.24.2 |
 | pandas | 1.5.3 |
 | scipy | 1.10.0 |
 | matplotlib | 3.6.3 |
@@ -63,10 +63,10 @@ mcr.microsoft.com/devcontainers/universal:dev
 | plotly | 5.13.0 |
 | jupyterlab-git | 0.41.0 |
 | certifi | 2022.12.7 |
-| pylint | 2.15.10 |
+| pylint | 2.16.1 |
 | flake8 | 6.0.0 |
 | autopep8 | 2.0.1 |
-| black | 22.12.0 |
+| black | 23.1.0 |
 | yapf | 0.32.0 |
 | mypy | 0.991 |
 | pydocstyle | 6.3.0 |
@@ -103,7 +103,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.25.1 | /usr/bin |
 | [Xdebug](https://xdebug.org/) | 3.2.0 | /usr/local/php/current |
-| [Composer](https://getcomposer.org/) | 2.5.1 | /usr/local/php/current/bin |
+| [Composer](https://getcomposer.org/) | 2.5.2 | /usr/local/php/current/bin |
 | [kubectl](https://github.com/kubernetes/kubectl) | v1.26.1 | /usr/local/bin |
 | [Helm](https://github.com/helm/helm) | 3.11.0 | /usr/local/bin |
 | [Docker Compose](https://github.com/docker/compose) | 1.29.2 | /usr/local/bin |
@@ -111,7 +111,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
 | [GitHub CLI](https://github.com/cli/cli) | 2.22.1 | 
 | [yarn](https://yarnpkg.com/) | 1.22.19 | /usr/bin |
-| [Maven](https://maven.apache.org/) | 3.8.7 | /usr/local/sdkman/candidates/maven/current/bin |
+| [Maven](https://maven.apache.org/) | 3.9.0 | /usr/local/sdkman/candidates/maven/current/bin |
 | [Gradle](https://gradle.org/) | 7.6 | /usr/local/sdkman/candidates/gradle/current/bin |
 | Docker (Moby) CLI &amp; Engine | 20.10.22+azure | 
 | [conda](https://github.com/conda/conda) | 4.12.0 | /opt/conda/bin |
