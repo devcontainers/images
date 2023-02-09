@@ -98,11 +98,7 @@
 			"flake8",
 			"autopep8",
 			"black",
-			"yapf",
 			"mypy",
-			"pydocstyle",
-			"pycodestyle",
-			"bandit",
 			"virtualenv",
 			"pipx"
 		],

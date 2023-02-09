@@ -12,11 +12,7 @@ check "pipx" pipx --version
 check "pylint" pylint --version
 check "flake8" flake8 --version
 check "autopep8" autopep8 --version
-check "yapf" yapf --version
 check "mypy" mypy --version
-check "pydocstyle" pydocstyle --version
-check "pycodestyle" pycodestyle --version
-check "bandit" bandit --version
 check "pipenv" pipenv --version
 check "virtualenv" virtualenv --version
 
