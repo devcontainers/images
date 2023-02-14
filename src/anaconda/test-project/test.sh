@@ -21,7 +21,7 @@ check "git" git --version
 check "git-location" sh -c "which git | grep /usr/local/bin/git"
 
 git_version=$(git --version)
-check-version-ge "git-requirement" "${git_version}" "git version 2.39.1"
+check-version-ge "git-requirement" "${git_version}" "git version 2.39.2"
 
 check "set-git-config-user-name" sh -c "sudo git config --system user.name devcontainers"
 check "gitconfig-file-location" sh -c "ls /etc/gitconfig"
