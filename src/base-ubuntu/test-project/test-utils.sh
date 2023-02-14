@@ -108,7 +108,6 @@ checkExtension() {
 checkCommon()
 {
     PACKAGE_LIST="apt-utils \
-        git \
         openssh-client \
         less \
         iproute2 \
