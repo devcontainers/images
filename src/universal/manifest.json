@@ -121,9 +121,7 @@
 			"certifi"
 		],
 		"other": {
-			"git": {
-				"path": "/usr/bin"
-			},
+			"git": null,
 			"Xdebug": {
 				"path": "/usr/local/php/current"
 			},

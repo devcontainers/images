@@ -95,6 +95,7 @@
 			"debase"
 		],
 		"other": {
+			"git": null,
 			"rvm": null
 		},
 		"languages": {

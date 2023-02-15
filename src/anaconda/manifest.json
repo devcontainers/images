@@ -32,6 +32,7 @@
 			"certifi"
 		],
 		"other": {
+			"git": null,
 			"conda": {
 				"cgIgnore": true,
 				"path": "/opt/conda"
