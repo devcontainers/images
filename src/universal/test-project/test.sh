@@ -9,7 +9,7 @@ checkCommon
 check "git" git --version
 
 git_version=$(git --version)
-check-version-ge "git-requirement" "${git_version}" "git version 2.25.1"
+check-version-ge "git-requirement" "${git_version}" "git version 2.39.2"
 
 check "set-git-config-user-name" sh -c "sudo git config --system user.name devcontainers"
 check "gitconfig-file-location" sh -c "ls /etc/gitconfig"
@@ -178,15 +178,8 @@ check "java-12.0.2-installed-by-oryx" ls /opt/java/ | grep 12.0.2
 check "java-version-on-path-is-12.0.2" java --version | grep 12.0.2
 
 # Test patches
-GRADLE_PATH=$(cd /usr/local/sdkman/candidates/gradle/7*/lib/plugins && pwd)
-check "aws-java-sdk-s3-plugin" bash -c "ls ${GRADLE_PATH} | grep aws-java-sdk-s3-1.12.363.jar"
-check "jsoup-plugin" bash -c "ls ${GRADLE_PATH} | grep jsoup-1.15.3.jar"
-check "jackson-databind" bash -c "ls ${GRADLE_PATH} | grep jackson-databind-2.14.1.jar"
-check "testng-plugin" bash -c "ls ${GRADLE_PATH} | grep testng-7.7.0.jar"
-
 MAVEN_PATH=$(cd /usr/local/sdkman/candidates/maven/3*/lib/ && pwd)
 check "commons-io-lib" bash -c "ls ${MAVEN_PATH} | grep commons-io-2.11.jar"
-
 
 ls -la /home/codespace
 

@@ -1,18 +1,24 @@
 {
-  "version": "0.207.14",
+  "version": "0.207.16",
   "variants": [
+    "1.20-bullseye",
+    "1.20-buster",
     "1.19-bullseye",
     "1.19-buster",
     "1.18-bullseye",
     "1.18-buster"
   ],
   "build": {
-    "latest": "1.19-bullseye",
+    "latest": "1.20-bullseye",
     "rootDistro": "debian",
     "tags": [
       "go:${VERSION}-${VARIANT}"
     ],
     "architectures": {
+      "1.20-bullseye": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
       "1.19-bullseye": [
         "linux/amd64",
         "linux/arm64"
@@ -20,6 +26,9 @@
       "1.18-bullseye": [
         "linux/amd64",
         "linux/arm64"
+      ],
+      "1.20-buster": [
+        "linux/amd64"
       ],
       "1.19-buster": [
         "linux/amd64"
@@ -29,15 +38,18 @@
       ]
     },
     "variantTags": {
-      "1.19-bullseye": [
-        "go:${VERSION}-1.19",
+      "1.20-bullseye": [
+        "go:${VERSION}-1.20",
         "go:${VERSION}-1",
         "go:${VERSION}-1-bullseye",
         "go:${VERSION}-bullseye"
       ],
-      "1.19-buster": [
+      "1.20-buster": [
         "go:${VERSION}-1-buster",
         "go:${VERSION}-buster"
+      ],
+      "1.19-bullseye": [
+        "go:${VERSION}-1.19"
       ],
       "1.18-bullseye": [
         "go:${VERSION}-1.18"

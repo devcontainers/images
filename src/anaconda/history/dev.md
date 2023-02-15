@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:991d8e817469df474f898182903cec1557599fe04901ff6482a5b8d09feeddd4
+**Digest:** sha256:7293016b03cf4e24c4063aa7b78c2eb6e7731261c011648bc0d9144a2adaffe5
 
 **Tags:**
 ```
@@ -39,9 +39,9 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 |----------------|---------|
 | joblib | 1.2.0 |
 | cookiecutter | 2.1.1 |
-| cryptography | 39.0.0 |
-| mistune | 2.0.4 |
-| numpy | 1.24.1 |
+| cryptography | 39.0.1 |
+| mistune | 2.0.5 |
+| numpy | 1.24.2 |
 | certifi | 2022.12.7 |
 
 **Other tools and utilities**
@@ -71,7 +71,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | libicu67 | 67.1-7 |
 | libkrb5-3 | 1.18.3-6+deb11u3 |
 | liblttng-ust0 | 2.12.1-1 |
-| libssl1.1 | 1.1.1n-0+deb11u3 |
+| libssl1.1 | 1.1.1n-0+deb11u4 |
 | libstdc++6 | 10.2.1-6 |
 | locales | 2.31-13+deb11u5 |
 | lsb-release | 11.1.0 |
