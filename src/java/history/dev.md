@@ -12,7 +12,7 @@
 
 ## Variant: 17-bullseye
 
-**Digest:** sha256:cf3b12d67acb4f076dc72637bd288b1cb2ee37ef13e22b370cf307d59bc97bfe
+**Digest:** sha256:f4f058895bf79d65e28740a5315840a0133dab7d41c1a4b3816cd7677a9f8ef1
 
 **Tags:**
 ```
@@ -40,14 +40,8 @@ mcr.microsoft.com/devcontainers/java:dev-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3fd63fdf01344bb5f5f13a9c33eb0b7a72fe4771 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 69b5737daf0448ad7e6686174638be74f86afdec | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
-
-**Other tools and utilities**
-
-| Tool | Version | Path |
-|------|---------|------|
-| [SDKMAN!](https://github.com/sdkman/sdkman-cli) | /usr/local/sdkman/libexec/version: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.33' not found (required by /usr/local/sdkman/libexec/version)<br />/usr/local/sdkman/libexec/version: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.32' not found (required by /usr/local/sdkman/libexec/version)<br />/usr/local/sdkman/libexec/version: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.34' not found (required by /usr/local/sdkman/libexec/version) | /usr/local/sdkman |
 
 **Additional linux tools and packages**
 
@@ -69,7 +63,7 @@ mcr.microsoft.com/devcontainers/java:dev-bullseye
 | libicu67 | 67.1-7 |
 | libkrb5-3 | 1.18.3-6+deb11u3 |
 | liblttng-ust0 | 2.12.1-1 |
-| libssl1.1 | 1.1.1n-0+deb11u3 |
+| libssl1.1 | 1.1.1n-0+deb11u4 |
 | libstdc++6 | 10.2.1-6 |
 | locales | 2.31-13+deb11u5 |
 | lsb-release | 11.1.0 |
@@ -96,7 +90,7 @@ mcr.microsoft.com/devcontainers/java:dev-bullseye
 
 ## Variant: 17-buster
 
-**Digest:** sha256:2d2c29a6aad992f36216d3c0836cfe85b53c280f230a88ea4326ae08fab3b5a5
+**Digest:** sha256:2e8478542d0727ac6a9b7b4cbbac0503eca088b60d6158ea276776bb278e6cba
 
 **Tags:**
 ```
@@ -121,14 +115,8 @@ mcr.microsoft.com/devcontainers/java:dev-17-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3fd63fdf01344bb5f5f13a9c33eb0b7a72fe4771 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 69b5737daf0448ad7e6686174638be74f86afdec | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
-
-**Other tools and utilities**
-
-| Tool | Version | Path |
-|------|---------|------|
-| [SDKMAN!](https://github.com/sdkman/sdkman-cli) | /usr/local/sdkman/libexec/version: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.33' not found (required by /usr/local/sdkman/libexec/version)<br />/usr/local/sdkman/libexec/version: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.32' not found (required by /usr/local/sdkman/libexec/version)<br />/usr/local/sdkman/libexec/version: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.34' not found (required by /usr/local/sdkman/libexec/version) | /usr/local/sdkman |
 
 **Additional linux tools and packages**
 
@@ -178,7 +166,7 @@ mcr.microsoft.com/devcontainers/java:dev-17-buster
 
 ## Variant: 11-bullseye
 
-**Digest:** sha256:d9458f0223dd5c7ebcc84c85b9e5d2b7fa9f3b5f70857bbed6acce4cc5b9a50a
+**Digest:** sha256:24172cbed0373cee320f7039a3dc897732ee2e4e5a52fdabf8c24fa6aa661a07
 
 **Tags:**
 ```
@@ -205,14 +193,8 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3fd63fdf01344bb5f5f13a9c33eb0b7a72fe4771 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 69b5737daf0448ad7e6686174638be74f86afdec | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
-
-**Other tools and utilities**
-
-| Tool | Version | Path |
-|------|---------|------|
-| [SDKMAN!](https://github.com/sdkman/sdkman-cli) | /usr/local/sdkman/libexec/version: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.33' not found (required by /usr/local/sdkman/libexec/version)<br />/usr/local/sdkman/libexec/version: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.32' not found (required by /usr/local/sdkman/libexec/version)<br />/usr/local/sdkman/libexec/version: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.34' not found (required by /usr/local/sdkman/libexec/version) | /usr/local/sdkman |
 
 **Additional linux tools and packages**
 
@@ -234,7 +216,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bullseye
 | libicu67 | 67.1-7 |
 | libkrb5-3 | 1.18.3-6+deb11u3 |
 | liblttng-ust0 | 2.12.1-1 |
-| libssl1.1 | 1.1.1n-0+deb11u3 |
+| libssl1.1 | 1.1.1n-0+deb11u4 |
 | libstdc++6 | 10.2.1-6 |
 | locales | 2.31-13+deb11u5 |
 | lsb-release | 11.1.0 |
@@ -261,7 +243,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bullseye
 
 ## Variant: 11-buster
 
-**Digest:** sha256:25d697c5ddfdb08f7e6d8f9bdf27184ee2314f2ec1990eadfa62104d81f8b74e
+**Digest:** sha256:5abe7d1d85fac9d097cf297a97ac2d761c2cba2a5877f4b2e924b41a832d9355
 
 **Tags:**
 ```
@@ -287,14 +269,8 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3fd63fdf01344bb5f5f13a9c33eb0b7a72fe4771 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 69b5737daf0448ad7e6686174638be74f86afdec | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
-
-**Other tools and utilities**
-
-| Tool | Version | Path |
-|------|---------|------|
-| [SDKMAN!](https://github.com/sdkman/sdkman-cli) | /usr/local/sdkman/libexec/version: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.33' not found (required by /usr/local/sdkman/libexec/version)<br />/usr/local/sdkman/libexec/version: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.32' not found (required by /usr/local/sdkman/libexec/version)<br />/usr/local/sdkman/libexec/version: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.34' not found (required by /usr/local/sdkman/libexec/version) | /usr/local/sdkman |
 
 **Additional linux tools and packages**
 
