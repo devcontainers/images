@@ -47,7 +47,7 @@
 			"Oh My Zsh!": "/home/vscode/.oh-my-zsh"
 		},
 		"other": {
-			"git": null
+			"git": {}
 		}
 	}
 }

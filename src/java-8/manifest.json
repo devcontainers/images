@@ -44,7 +44,7 @@
 			"nvm": "/usr/local/share/nvm"
 		},
 		"other": {
-			"git": null,
+			"git": {},
 			"SDKMAN!": null,
 			"Eclipse Temurin": {
 				"markdownIgnore": true,

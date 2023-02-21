@@ -81,7 +81,7 @@
 			"nvm": "/usr/local/share/nvm"
 		},
 		"other": {
-			"git": null,
+			"git": {},
 			"SDKMAN!": null
 		},
 		"languages": {
