@@ -4,9 +4,7 @@
     "1.20-bullseye",
     "1.20-buster",
     "1.19-bullseye",
-    "1.19-buster",
-    "1.18-bullseye",
-    "1.18-buster"
+    "1.19-buster"
   ],
   "build": {
     "latest": "1.20-bullseye",
@@ -23,17 +21,10 @@
         "linux/amd64",
         "linux/arm64"
       ],
-      "1.18-bullseye": [
-        "linux/amd64",
-        "linux/arm64"
-      ],
       "1.20-buster": [
         "linux/amd64"
       ],
       "1.19-buster": [
-        "linux/amd64"
-      ],
-      "1.18-buster": [
         "linux/amd64"
       ]
     },
@@ -50,9 +41,6 @@
       ],
       "1.19-bullseye": [
         "go:${VERSION}-1.19"
-      ],
-      "1.18-bullseye": [
-        "go:${VERSION}-1.18"
       ]
     }
   },

@@ -10,7 +10,7 @@
 | *Categories* | Core, Languages |
 | *Definition type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/go |
-| *Available image variants* | 1 / 1-bullseye, 1.20 / 1.20-bullseye, 1.19 / 1.19-bullseye, 1.18 / 1.18-bullseye, 1-buster, 1.20-buster, 1.19-buster, 1.18-buster  ([full list](https://mcr.microsoft.com/v2/devcontainers/go/tags/list)) |
+| *Available image variants* | 1 / 1-bullseye, 1.20 / 1.20-bullseye, 1.19 / 1.19-bullseye, 1-buster, 1.20-buster, 1.19-buster ([full list](https://mcr.microsoft.com/v2/devcontainers/go/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bullseye` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
@@ -26,7 +26,6 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 - `mcr.microsoft.com/devcontainers/go:1` (or `1-bullseye`, `1-buster` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/go:1.20` (or `1.20-bullseye`, `1.20-buster` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/go:1.19` (or `1.19-bullseye`, `1.19-buster` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/go:1.18` (or `1.18-bullseye`, `1.18-buster` to pin to an OS version)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
