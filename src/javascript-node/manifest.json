@@ -46,6 +46,9 @@
 				"cgIgnore": true,
 				"path": "/usr/local"
 			}
+		},
+		"other": {
+			"git": {}
 		}
 	}
 }

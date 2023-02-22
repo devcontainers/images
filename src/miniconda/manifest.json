@@ -41,6 +41,7 @@
 			"cryptography"
 		],
 		"other": {
+			"git": {},
 			"conda": {
 				"cgIgnore": true,
 				"path": "/opt/conda"

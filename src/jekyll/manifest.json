@@ -54,6 +54,7 @@
 			"github-pages"
 		],
 		"other": {
+			"git": {},
 			"rvm": null
 		},
 		"languages": {

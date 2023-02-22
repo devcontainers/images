@@ -55,6 +55,9 @@
 				"path": "/usr/local/share/npm-global",
 				"downloadUrl": "https://www.typescriptlang.org/"
 			}
+		},
+		"other": {
+			"git": {}
 		}
 	}
 }

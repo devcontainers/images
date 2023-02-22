@@ -64,6 +64,7 @@
 			"nvm": "/usr/local/share/nvm"
 		},
 		"other": {
+			"git": {},
 			"Xdebug": {
 				"path": "/usr/local/lib/php/extensions"
 			},

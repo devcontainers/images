@@ -51,6 +51,9 @@
 			"Rust": {
 				"cgIgnore": true
 			}
+		},
+		"other": {
+			"git": {}
 		}
 	}
 }
