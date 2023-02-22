@@ -29,6 +29,7 @@ jobs:
     name: Update version history
     if: ${{ github.ref == 'refs/heads/main' || github.event.base_ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
+    environment: documentation
     permissions:
       contents: write
       pull-requests: write
@@ -88,7 +89,7 @@ jobs:
     - name: Create PR with updated image information
       id: push_image_info
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.PAT }}
       run: |
         set -e
 
@@ -109,5 +110,12 @@ jobs:
         # Push (unless disabled for testing)
         if [ "$NO_UPDATES" != "true" ] && [ "${{ inputs.push }}" = "true" ]; then
             git push origin "$branch"
-            gh pr create --title "$message" --body "$message"
+            gh api \
+                --method POST \
+                -H "Accept: application/vnd.github+json" \
+                /repos/${GITHUB_REPOSITORY}/pulls \
+                -f title="$message" \
+              -f body="$message" \
+              -f head="$branch" \
+              -f base='main'
         fi
