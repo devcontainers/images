@@ -55,6 +55,9 @@ check "torch" python -c "import torch; print(torch.__version__)"
 check "requests" python -c "import requests; print(requests.__version__)"
 check "jupyterlab-git" bash -c "python3 -m pip list | grep jupyterlab-git"
 
+setuptools_version=$(python3 -c "import setuptools; print(setuptools.__version__)")
+check-version-ge "setuptools-requirement" "${setuptools_version}" "65.5.1"
+
 # Check JupyterLab
 check "jupyter-lab" jupyter-lab --version
 check "jupyter-lab config" grep ".*.allow_origin = '*'" /home/codespace/.jupyter/jupyter_server_config.py
@@ -180,9 +183,6 @@ check "java-version-on-path-is-12.0.2" java --version | grep 12.0.2
 # Test patches
 MAVEN_PATH=$(cd /usr/local/sdkman/candidates/maven/3*/lib/ && pwd)
 check "commons-io-lib" bash -c "ls ${MAVEN_PATH} | grep commons-io-2.11.jar"
-
-setuptools_version=$(python3 -c "import setuptools; print(setuptools.__version__)")
-check-version-ge "setuptools-requirement" "${setuptools_version}" "65.5.1"
 
 ls -la /home/codespace
 
