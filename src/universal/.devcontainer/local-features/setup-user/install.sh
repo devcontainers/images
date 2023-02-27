@@ -32,6 +32,10 @@ rm -rf /usr/local/nvs/deps/node_modules/follow-redirects/*
 curl -sSL https://github.com/follow-redirects/follow-redirects/archive/refs/tags/v1.15.2.tar.gz | tar -xzC /tmp 2>&1
 mv /tmp/follow-redirects-1.15.2/*  /usr/local/nvs/deps/node_modules/follow-redirects/
 
+# Temporary: Upgrade python packages due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40897
+# They are installed by the base image (python) which does not have the patch.
+python3 -m pip install --upgrade setuptools
+
 # Enables the oryx tool to generate manifest-dir which is needed for running the postcreate tool
 DEBIAN_FLAVOR="focal-scm"
 mkdir -p /opt/oryx && echo "vso-focal" > /opt/oryx/.imagetype

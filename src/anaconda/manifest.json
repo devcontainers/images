@@ -29,7 +29,8 @@
 			"cryptography",
 			"mistune",
 			"numpy",
-			"certifi"
+			"certifi",
+			"setuptools"
 		],
 		"other": {
 			"git": {},

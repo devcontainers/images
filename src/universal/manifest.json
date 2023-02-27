@@ -118,7 +118,8 @@
 			"requests",
 			"plotly",
 			"jupyterlab-git",
-			"certifi"
+			"certifi",
+			"setuptools"
 		],
 		"other": {
 			"git": {},
