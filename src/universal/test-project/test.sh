@@ -178,8 +178,14 @@ check "java-12.0.2-installed-by-oryx" ls /opt/java/ | grep 12.0.2
 check "java-version-on-path-is-12.0.2" java --version | grep 12.0.2
 
 # Test patches
+GRADLE_PATH=$(cd /usr/local/sdkman/candidates/gradle/8*/lib/plugins && pwd)
+check "testng-plugin" bash -c "ls ${GRADLE_PATH} | grep testng-7.7.0.jar"
+
 MAVEN_PATH=$(cd /usr/local/sdkman/candidates/maven/3*/lib/ && pwd)
 check "commons-io-lib" bash -c "ls ${MAVEN_PATH} | grep commons-io-2.11.jar"
+
+wheel_version=$(python -c "import wheel; print(wheel.__version__)")
+check-version-ge "wheel-requirement" "${wheel_version}" "0.38.1"
 
 ls -la /home/codespace
 
