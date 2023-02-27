@@ -44,5 +44,8 @@ check-version-ge "mistune-requirement" "${mistune_version}" "2.0.3"
 numpy_version=$(python -c "import numpy; print(numpy.__version__)")
 check-version-ge "numpy-requirement" "${numpy_version}" "1.22"
 
+future_version=$(python -c "import future; print(future.__version__)")
+check-version-ge "future-requirement" "${future_version}" "0.18.3"
+
 # Report result
 reportResults
