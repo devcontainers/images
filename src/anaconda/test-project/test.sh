@@ -44,5 +44,8 @@ check-version-ge "mistune-requirement" "${mistune_version}" "2.0.3"
 numpy_version=$(python -c "import numpy; print(numpy.__version__)")
 check-version-ge "numpy-requirement" "${numpy_version}" "1.22"
 
+wheel_version=$(python -c "import wheel; print(wheel.__version__)")
+check-version-ge "wheel-requirement" "${wheel_version}" "0.38.1"
+
 # Report result
 reportResults
