@@ -106,6 +106,9 @@
 			"virtualenv",
 			"pipx"
 		],
+		"pip": [
+			"setuptools"
+		],
 		"languages": {
 			"Python": {
 				"cgIgnore": true,

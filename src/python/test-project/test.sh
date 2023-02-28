@@ -39,5 +39,8 @@ check "gitconfig-contains-name" sh -c "cat /etc/gitconfig | grep 'name = devcont
 
 check "usr-local-etc-config-does-not-exist" test ! -f "/usr/local/etc/gitconfig"
 
+setuptools_version=$(python -c "import setuptools; print(setuptools.__version__)")
+check-version-ge "setuptools-requirement" "${setuptools_version}" "65.5.1"
+
 # Report result
 reportResults
