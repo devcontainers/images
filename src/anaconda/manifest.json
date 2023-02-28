@@ -30,6 +30,7 @@
 			"mistune",
 			"numpy",
 			"certifi",
+			"setuptools",
 			"future",
 			"wheel"
 		],
