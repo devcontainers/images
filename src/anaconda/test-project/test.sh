@@ -47,5 +47,11 @@ check-version-ge "numpy-requirement" "${numpy_version}" "1.22"
 setuptools_version=$(python -c "import setuptools; print(setuptools.__version__)")
 check-version-ge "setuptools-requirement" "${setuptools_version}" "65.5.1"
 
+future_version=$(python -c "import future; print(future.__version__)")
+check-version-ge "future-requirement" "${future_version}" "0.18.3"
+
+wheel_version=$(python -c "import wheel; print(wheel.__version__)")
+check-version-ge "wheel-requirement" "${wheel_version}" "0.38.1"
+
 # Report result
 reportResults

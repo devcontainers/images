@@ -30,7 +30,9 @@
 			"mistune",
 			"numpy",
 			"certifi",
-			"setuptools"
+			"setuptools",
+			"future",
+			"wheel"
 		],
 		"other": {
 			"git": {},

@@ -119,7 +119,8 @@
 			"plotly",
 			"jupyterlab-git",
 			"certifi",
-			"setuptools"
+			"setuptools",
+			"wheel"
 		],
 		"other": {
 			"git": {},

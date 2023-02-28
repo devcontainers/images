@@ -20,6 +20,13 @@ chmod +x /etc/profile.d/00-restore-env.sh
 
 export DEBIAN_FRONTEND=noninteractive
 
+# Temporary: Due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4065
+GRADLE_PATH=$(cd /usr/local/sdkman/candidates/gradle/8*/lib/plugins/ && pwd)
+rm -f ${GRADLE_PATH}/testng-*
+curl -sSL https://github.com/cbeust/testng/archive/refs/tags/7.7.0.tar.gz | tar -xzC /tmp 2>&1
+jar cf ${GRADLE_PATH}/testng-7.7.0.jar /tmp/testng-7.7.0
+rm -rf /tmp/testng-7.7.0
+
 # Temporary: Due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-29425
 MAVEN_PATH=$(cd /usr/local/sdkman/candidates/maven/3*/lib/ && pwd)
 rm -f ${MAVEN_PATH}/commons-io-*
