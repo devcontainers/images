@@ -30,6 +30,7 @@
 			"mistune",
 			"numpy",
 			"certifi",
+			"future",
 			"wheel"
 		],
 		"other": {

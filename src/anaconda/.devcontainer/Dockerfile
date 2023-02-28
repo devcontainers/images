@@ -66,6 +66,8 @@ RUN python3 -m pip install \
     numpy \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23491
     certifi \
+    # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40899
+    future \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40898
     wheel
 
