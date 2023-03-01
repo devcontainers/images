@@ -53,5 +53,8 @@ check-version-ge "future-requirement" "${future_version}" "0.18.3"
 wheel_version=$(python -c "import wheel; print(wheel.__version__)")
 check-version-ge "wheel-requirement" "${wheel_version}" "0.38.1"
 
+nbconvert_version=$(python -c "import nbconvert; print(nbconvert.__version__)")
+check-version-ge "nbconvert-requirement" "${nbconvert_version}" "6.5.1"
+
 # Report result
 reportResults
