@@ -12,7 +12,7 @@
 
 ## Variant: 3.17
 
-**Digest:** sha256:3362a087e0412ad90d5edb225af229d04329cfc33cd769dc9d1525c0bc6cb3d6
+**Digest:** sha256:ddc1cff0e41deda42a11892d8102a844d7d2ff972884566bfaa5b385423876f7
 
 **Tags:**
 ```
@@ -33,7 +33,13 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 69b5737daf0448ad7e6686174638be74f86afdec | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | b602e0a066d8c98e8c02201ad16c764447fd8531 | /home/vscode/.oh-my-zsh |
+
+**Other tools and utilities**
+
+| Tool | Version | Path |
+|------|---------|------|
+| [git](https://github.com/git/git) | 2.39.2 | 
 
 **Additional linux tools and packages**
 
@@ -46,7 +52,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 | htop | 3.2.1-r1 |
 | net-tools | 2.10-r0 |
 | psmisc | 23.5-r0 |
-| curl | 7.87.0-r1 |
+| curl | 7.87.0-r2 |
 | wget | 1.21.3-r2 |
 | rsync | 3.2.7-r0 |
 | ca-certificates | 20220614-r4 |
@@ -77,7 +83,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 ## Variant: 3.16
 
-**Digest:** sha256:050b18028a3e065f61dfc1886b21d167383d3c0eb4c9445763263944a8e6fac8
+**Digest:** sha256:e2d50f553a5b2a7294d3ee959dc7632406365daec2feeabfe06237d6345b6fed
 
 **Tags:**
 ```
@@ -97,7 +103,13 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.16
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 69b5737daf0448ad7e6686174638be74f86afdec | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | b602e0a066d8c98e8c02201ad16c764447fd8531 | /home/vscode/.oh-my-zsh |
+
+**Other tools and utilities**
+
+| Tool | Version | Path |
+|------|---------|------|
+| [git](https://github.com/git/git) | 2.39.2 | 
 
 **Additional linux tools and packages**
 
@@ -110,7 +122,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.16
 | htop | 3.2.0-r1 |
 | net-tools | 2.10-r0 |
 | psmisc | 23.5-r0 |
-| curl | 7.83.1-r5 |
+| curl | 7.83.1-r6 |
 | wget | 1.21.3-r0 |
 | rsync | 3.2.7-r0 |
 | ca-certificates | 20220614-r0 |
@@ -141,7 +153,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.16
 
 ## Variant: 3.15
 
-**Digest:** sha256:d9deac585f41b75956025d9880c89f67391c258737d622812296b8af3552e09c
+**Digest:** sha256:271e747688c60c48387150edbb13564fcfd0013c8b2c040f8f76eea2d3bf4923
 
 **Tags:**
 ```
@@ -161,7 +173,13 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.15
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 69b5737daf0448ad7e6686174638be74f86afdec | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | b602e0a066d8c98e8c02201ad16c764447fd8531 | /home/vscode/.oh-my-zsh |
+
+**Other tools and utilities**
+
+| Tool | Version | Path |
+|------|---------|------|
+| [git](https://github.com/git/git) | 2.39.2 | 
 
 **Additional linux tools and packages**
 
@@ -174,7 +192,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.15
 | htop | 3.1.1-r0 |
 | net-tools | 1.60_git20140218-r2 |
 | psmisc | 23.4-r0 |
-| curl | 7.80.0-r5 |
+| curl | 7.80.0-r6 |
 | wget | 1.21.2-r2 |
 | rsync | 3.2.5-r0 |
 | ca-certificates | 20220614-r0 |
@@ -205,7 +223,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.15
 
 ## Variant: 3.14
 
-**Digest:** sha256:e51438a7b5bf0533418f612d62a7d88c93ca0be4c41da9bc46ca55c5e20daae8
+**Digest:** sha256:7bc3f9f1f963dffc262fe04aba374ddf832ff11342c4604766e9db4a50c32ecd
 
 **Tags:**
 ```
@@ -225,7 +243,13 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.14
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 69b5737daf0448ad7e6686174638be74f86afdec | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | b602e0a066d8c98e8c02201ad16c764447fd8531 | /home/vscode/.oh-my-zsh |
+
+**Other tools and utilities**
+
+| Tool | Version | Path |
+|------|---------|------|
+| [git](https://github.com/git/git) | 2.39.2 | 
 
 **Additional linux tools and packages**
 
@@ -238,7 +262,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.14
 | htop | 3.0.5-r2 |
 | net-tools | 1.60_git20140218-r2 |
 | psmisc | 23.4-r0 |
-| curl | 7.79.1-r4 |
+| curl | 7.79.1-r5 |
 | wget | 1.21.1-r1 |
 | rsync | 3.2.5-r0 |
 | ca-certificates | 20220614-r0 |
