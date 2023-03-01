@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/miniconda)
 
-**Digest:** sha256:526297f5fe0186a2ec1349d4e3a4bfb7d5b87b0ae17f870f041b58136d05b348
+**Digest:** sha256:bd3f48b691631d9251b0ecfe524550d72caf025de88bbe290b331cb5415d60b3
 
 **Tags:**
 ```
@@ -29,7 +29,7 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7de55844b26394688221b1cd12ef4053b3c7f6c7 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 69b5737daf0448ad7e6686174638be74f86afdec | /home/vscode/.oh-my-zsh |
 
 **Pip / pipx installed tools and packages**
 
@@ -42,7 +42,7 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | autopep8 | 2.0.1 |
 | black | 23.1.0 |
 | yapf | 0.32.0 |
-| mypy | 1.0.0 |
+| mypy | 1.0.1 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.10.0 |
 | bandit | 1.7.4 |
@@ -53,6 +53,7 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 
 | Tool | Version | Path |
 |------|---------|------|
+| [git](https://github.com/git/git) | 2.39.2 | 
 | [conda](https://github.com/conda/conda) | 22.11.1 | /opt/conda |
 
 **Additional linux tools and packages**
@@ -62,9 +63,9 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | apt-transport-https | 2.2.4 |
 | apt-utils | 2.2.4 |
 | ca-certificates | 20210119 |
-| curl | 7.74.0-1.3+deb11u5 |
+| curl | 7.74.0-1.3+deb11u7 |
 | dialog | 1.3-20201126-1 |
-| git | 1:2.30.2-1+deb11u1 |
+| git | 1:2.30.2-1+deb11u2 |
 | gnupg2 | 2.2.27-2+deb11u2 |
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |

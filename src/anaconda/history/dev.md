@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:7293016b03cf4e24c4063aa7b78c2eb6e7731261c011648bc0d9144a2adaffe5
+**Digest:** sha256:fb87c68a15267ee927a0bae3d18fe3f0d40e65435a0972d6a7cc7e30f87e58d0
 
 **Tags:**
 ```
@@ -31,7 +31,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7de55844b26394688221b1cd12ef4053b3c7f6c7 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 69b5737daf0448ad7e6686174638be74f86afdec | /home/vscode/.oh-my-zsh |
 
 **Pip / pipx installed tools and packages**
 
@@ -43,11 +43,15 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | mistune | 2.0.5 |
 | numpy | 1.24.2 |
 | certifi | 2022.12.7 |
+| setuptools | 67.4.0 |
+| future | 0.18.3 |
+| wheel | 0.38.4 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
+| [git](https://github.com/git/git) | 2.39.2 | 
 | [conda](https://github.com/conda/conda) | 22.9.0 | /opt/conda |
 | anaconda | 2022.10 | /opt/conda |
 
@@ -58,9 +62,9 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | apt-transport-https | 2.2.4 |
 | apt-utils | 2.2.4 |
 | ca-certificates | 20210119 |
-| curl | 7.74.0-1.3+deb11u5 |
+| curl | 7.74.0-1.3+deb11u7 |
 | dialog | 1.3-20201126-1 |
-| git | 1:2.30.2-1+deb11u1 |
+| git | 1:2.30.2-1+deb11u2 |
 | gnupg2 | 2.2.27-2+deb11u2 |
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |
