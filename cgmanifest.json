@@ -96,6 +96,24 @@
         },
         {
             "Component": {
+                "Type": "Pip",
+                "Pip": {
+                    "Name": "nbconvert",
+                    "Version": "7.2.9"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "Pip",
+                "Pip": {
+                    "Name": "py",
+                    "Version": "1.11.0"
+                }
+            }
+        },
+        {
+            "Component": {
                 "Type": "git",
                 "Git": {
                     "Name": "Oh My Zsh!",
@@ -130,7 +148,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "b602e0a066d8c98e8c02201ad16c764447fd8531"
+                    "commitHash": "14978859c5b8d9385c9b836cd09c97cc08b6035b"
                 }
             }
         },
@@ -230,7 +248,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "9ccc64ca98b320404d059df4349220bd2c1b4a46"
+                    "commitHash": "62fb5ef70474ca6d4efe6fb0887d25d3ac30b5a1"
                 }
             }
         },
@@ -240,7 +258,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "5aa33f10763102a3ce077c409a83b93985a9b1eb"
+                    "commitHash": "8e82d67b78a6c7fe93bf25a3bfb595f01b2d7d7e"
                 }
             }
         },
@@ -511,7 +529,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "b602e0a066d8c98e8c02201ad16c764447fd8531"
+                    "commitHash": "14978859c5b8d9385c9b836cd09c97cc08b6035b"
                 }
             }
         },
@@ -744,7 +762,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "virtualenv",
-                    "Version": "20.19.0"
+                    "Version": "20.20.0"
                 }
             }
         },
@@ -844,15 +862,6 @@
                     "Name": "Docker Image: php",
                     "Version": "8.0-apache-buster",
                     "DownloadUrl": "https://hub.docker.com/_/php"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "Pip",
-                "Pip": {
-                    "Name": "virtualenv",
-                    "Version": "20.20.0"
                 }
             }
         },
@@ -1210,7 +1219,7 @@
                 "Type": "linux",
                 "Linux": {
                     "Name": "moby-engine",
-                    "Version": "20.10.22+azure-ubuntu20.04u1",
+                    "Version": "20.10.23+azure-ubuntu20.04u2",
                     "Distribution": "ubuntu",
                     "Release": "20.04",
                     "Pool-URL": "https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod",
@@ -1332,7 +1341,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "b602e0a066d8c98e8c02201ad16c764447fd8531"
+                    "commitHash": "14978859c5b8d9385c9b836cd09c97cc08b6035b"
                 }
             }
         },
@@ -1361,7 +1370,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "kubectl",
-                    "Version": "v1.26.1",
+                    "Version": "v1.26.2",
                     "DownloadUrl": "https://github.com/kubernetes/kubectl"
                 }
             }

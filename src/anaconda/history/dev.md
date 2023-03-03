@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:fb87c68a15267ee927a0bae3d18fe3f0d40e65435a0972d6a7cc7e30f87e58d0
+**Digest:** sha256:92ee2eed139b2334e922c34024cb9f44192ecb8e36b40b319ec3d99ab1aa17d3
 
 **Tags:**
 ```
@@ -46,6 +46,8 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | setuptools | 67.4.0 |
 | future | 0.18.3 |
 | wheel | 0.38.4 |
+| nbconvert | 7.2.9 |
+| py | 1.11.0 |
 
 **Other tools and utilities**
 

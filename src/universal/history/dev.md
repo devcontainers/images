@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:88569ab0bb4874c0102030e22d33c44f88b762dac4e836e674c4c0fe787e9bcc
+**Digest:** sha256:bd6e750df9c841480a61eebda39d1a2008bb68f0d64137c079c0cb8c7898f76e
 
 **Tags:**
 ```
@@ -42,7 +42,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | b602e0a066d8c98e8c02201ad16c764447fd8531 | /home/codespace/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 14978859c5b8d9385c9b836cd09c97cc08b6035b | /home/codespace/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | 6c5a5983e2bccae5ac2b217b69210ecf3cd560f1 | /usr/local/nvs |
 | [rbenv](https://github.com/rbenv/rbenv.git) | 0704e65781cea29c0e6abe5f175eaf4d21e6ebd2 | /usr/local/share/rbenv |
@@ -106,7 +106,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [git](https://github.com/git/git) | 2.39.2 | 
 | [Xdebug](https://xdebug.org/) | 3.2.0 | /usr/local/php/current |
 | [Composer](https://getcomposer.org/) | 2.5.4 | /usr/local/php/current/bin |
-| [kubectl](https://github.com/kubernetes/kubectl) | v1.26.1 | /usr/local/bin |
+| [kubectl](https://github.com/kubernetes/kubectl) | v1.26.2 | /usr/local/bin |
 | [Helm](https://github.com/helm/helm) | 3.11.1 | /usr/local/bin |
 | [Docker Compose](https://github.com/docker/compose) | 1.29.2 | /usr/local/bin |
 | [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
@@ -175,7 +175,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | manpages | 5.05-1 |
 | manpages-dev | 5.05-1 |
 | moby-cli (Docker CLI) | 20.10.23+azure-ubuntu20.04u2 |
-| moby-engine (Docker Engine) | 20.10.22+azure-ubuntu20.04u1 |
+| moby-engine (Docker Engine) | 20.10.23+azure-ubuntu20.04u2 |
 | nano | 4.8-1ubuntu1 |
 | ncdu | 1.14.1-1 |
 | net-tools | 1.60+git20180626.aebd88e-1ubuntu1 |
@@ -189,7 +189,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | python3-minimal | 3.8.2-0ubuntu2 |
 | rsync | 3.1.3-8ubuntu0.4 |
 | sed | 4.7-1 |
-| software-properties-common | 0.99.9.10 |
+| software-properties-common | 0.99.9.11 |
 | strace | 5.5-3ubuntu1 |
 | sudo | 1.8.31-1ubuntu1.4 |
 | tar | 1.30+dfsg-7ubuntu0.20.04.3 |
