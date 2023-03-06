@@ -21,10 +21,10 @@
 		],
 		"variantTags": {
 			"buster": [
-				"rust:${VERSION}-1",
 				"rust:${VERSION}-1-buster"
 			],
 			"bullseye": [
+				"rust:${VERSION}-1",
 				"rust:${VERSION}-1-bullseye"
 			]
 		}
