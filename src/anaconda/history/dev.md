@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:fb87c68a15267ee927a0bae3d18fe3f0d40e65435a0972d6a7cc7e30f87e58d0
+**Digest:** sha256:c1fe0e2eed08cd6bd1b377cdf9aa3ff667f985bbd2df77aaad6f1cc04f5bea13
 
 **Tags:**
 ```
@@ -31,7 +31,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 69b5737daf0448ad7e6686174638be74f86afdec | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 14978859c5b8d9385c9b836cd09c97cc08b6035b | /home/vscode/.oh-my-zsh |
 
 **Pip / pipx installed tools and packages**
 
@@ -39,13 +39,15 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 |----------------|---------|
 | joblib | 1.2.0 |
 | cookiecutter | 2.1.1 |
-| cryptography | 39.0.1 |
+| cryptography | 39.0.2 |
 | mistune | 2.0.5 |
 | numpy | 1.24.2 |
 | certifi | 2022.12.7 |
-| setuptools | 67.4.0 |
+| setuptools | 67.5.1 |
 | future | 0.18.3 |
 | wheel | 0.38.4 |
+| nbconvert | 7.2.9 |
+| py | 1.11.0 |
 
 **Other tools and utilities**
 

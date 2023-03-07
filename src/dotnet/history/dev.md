@@ -13,7 +13,7 @@
 
 ## Variant: 7.0-bullseye-slim
 
-**Digest:** sha256:ed3a87bdf01d06d8fe838eeee47e4c93da7610849bc29497d7f9d36d06e6d843
+**Digest:** sha256:a6ff8effe97fb7da4d3b00775f4c4079c5e666c0c9af35b405cca0ddbbf9ba3b
 
 **Tags:**
 ```
@@ -40,7 +40,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-7.0-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | b602e0a066d8c98e8c02201ad16c764447fd8531 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3b759c5dc926d0973d82fa1b8ffed45d770d20e8 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -96,7 +96,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-7.0-bullseye
 
 ## Variant: 7.0-jammy
 
-**Digest:** sha256:25cc0e85f5ec08dde925dfc9fbaa20000ba5fb3b1417bb03be546a0104f3651e
+**Digest:** sha256:eeb9b40f1f362259ac658e09c2ef4c6fee54962cf84aff9d7b130a978d715fbe
 
 **Tags:**
 ```
@@ -121,7 +121,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-7.0-jammy
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | b602e0a066d8c98e8c02201ad16c764447fd8531 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3b759c5dc926d0973d82fa1b8ffed45d770d20e8 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -162,9 +162,9 @@ mcr.microsoft.com/devcontainers/dotnet:dev-7.0-jammy
 | openssh-client | 1:8.9p1-3ubuntu0.1 |
 | procps | 2:3.3.17-6ubuntu2 |
 | psmisc | 23.4-2build3 |
-| rsync | 3.2.3-8ubuntu3.1 |
+| rsync | 3.2.7-0ubuntu0.22.04.2 |
 | strace | 5.16-0ubuntu3 |
-| sudo | 1.9.9-1ubuntu2.2 |
+| sudo | 1.9.9-1ubuntu2.3 |
 | unzip | 6.0-26ubuntu3.1 |
 | vim-tiny | 2:8.2.3995-1ubuntu2.3 |
 | wget | 1.21.2-2ubuntu1 |
@@ -175,7 +175,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-7.0-jammy
 
 ## Variant: 6.0-bullseye-slim
 
-**Digest:** sha256:1bf2d99074d575585619dd88e4f8570991191f9f1e32b918b7b655c9fff5d268
+**Digest:** sha256:231e115d54c8fcba514bb77fcb5183b3c4dc6390490147b07a6d6e52a3a5e414
 
 **Tags:**
 ```
@@ -202,7 +202,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | b602e0a066d8c98e8c02201ad16c764447fd8531 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3b759c5dc926d0973d82fa1b8ffed45d770d20e8 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -258,7 +258,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-bullseye
 
 ## Variant: 6.0-jammy
 
-**Digest:** sha256:f5aacded52010785e18ddabeda6eab9e9bb4373b489815b05867ab476788589b
+**Digest:** sha256:dcd76aabebb80565d776ada1a8866d251f352611a14b9746c5f2f42665bc5f54
 
 **Tags:**
 ```
@@ -283,7 +283,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-jammy
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | b602e0a066d8c98e8c02201ad16c764447fd8531 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3b759c5dc926d0973d82fa1b8ffed45d770d20e8 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -324,9 +324,9 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-jammy
 | openssh-client | 1:8.9p1-3ubuntu0.1 |
 | procps | 2:3.3.17-6ubuntu2 |
 | psmisc | 23.4-2build3 |
-| rsync | 3.2.3-8ubuntu3.1 |
+| rsync | 3.2.7-0ubuntu0.22.04.2 |
 | strace | 5.16-0ubuntu3 |
-| sudo | 1.9.9-1ubuntu2.2 |
+| sudo | 1.9.9-1ubuntu2.3 |
 | unzip | 6.0-26ubuntu3.1 |
 | vim-tiny | 2:8.2.3995-1ubuntu2.3 |
 | wget | 1.21.2-2ubuntu1 |
@@ -337,7 +337,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-jammy
 
 ## Variant: 6.0-focal
 
-**Digest:** sha256:84e74e6762979040a31f3687541a9de8787d5929b2d0c6a80c823c76a571b8a6
+**Digest:** sha256:8d4c3908d3ec0573d2631d7397f9b092276b44243f9a12956ca86b2f0b9822c0
 
 **Tags:**
 ```
@@ -362,7 +362,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-focal
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | b602e0a066d8c98e8c02201ad16c764447fd8531 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3b759c5dc926d0973d82fa1b8ffed45d770d20e8 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -406,7 +406,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-focal
 | openssh-client | 1:8.2p1-4ubuntu0.5 |
 | procps | 2:3.3.16-1ubuntu2.3 |
 | psmisc | 23.3-1 |
-| rsync | 3.1.3-8ubuntu0.4 |
+| rsync | 3.1.3-8ubuntu0.5 |
 | strace | 5.5-3ubuntu1 |
 | sudo | 1.8.31-1ubuntu1.4 |
 | unzip | 6.0-25ubuntu1.1 |

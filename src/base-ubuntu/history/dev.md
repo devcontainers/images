@@ -11,7 +11,7 @@
 
 ## Variant: jammy
 
-**Digest:** sha256:b78739d51702efa875360003bc26475660bc476c26ab7fb7624061bea5e9d6e7
+**Digest:** sha256:ce0922cce48e0e98819a6e354c3f12562bc30123a08a34f693c96a2938c91585
 
 **Tags:**
 ```
@@ -33,7 +33,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | b602e0a066d8c98e8c02201ad16c764447fd8531 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3b759c5dc926d0973d82fa1b8ffed45d770d20e8 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -73,9 +73,9 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 | openssh-client | 1:8.9p1-3ubuntu0.1 |
 | procps | 2:3.3.17-6ubuntu2 |
 | psmisc | 23.4-2build3 |
-| rsync | 3.2.3-8ubuntu3.1 |
+| rsync | 3.2.7-0ubuntu0.22.04.2 |
 | strace | 5.16-0ubuntu3 |
-| sudo | 1.9.9-1ubuntu2.2 |
+| sudo | 1.9.9-1ubuntu2.3 |
 | unzip | 6.0-26ubuntu3.1 |
 | vim-tiny | 2:8.2.3995-1ubuntu2.3 |
 | wget | 1.21.2-2ubuntu1 |
@@ -85,7 +85,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 ## Variant: focal
 
-**Digest:** sha256:279b67158a2323e4f3aeb16d2a947caa418f0ffd3b81679d3e82f3f9b1095894
+**Digest:** sha256:a08a8dd1503048f742e52b7a8304963c8f43566d83ced5a94c454c2d4ffbff5b
 
 **Tags:**
 ```
@@ -106,7 +106,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | b602e0a066d8c98e8c02201ad16c764447fd8531 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3b759c5dc926d0973d82fa1b8ffed45d770d20e8 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -149,7 +149,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 | openssh-client | 1:8.2p1-4ubuntu0.5 |
 | procps | 2:3.3.16-1ubuntu2.3 |
 | psmisc | 23.3-1 |
-| rsync | 3.1.3-8ubuntu0.4 |
+| rsync | 3.1.3-8ubuntu0.5 |
 | strace | 5.5-3ubuntu1 |
 | sudo | 1.8.31-1ubuntu1.4 |
 | unzip | 6.0-25ubuntu1.1 |
@@ -161,7 +161,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 
 ## Variant: bionic
 
-**Digest:** sha256:377e85d3aa7f8e62b1257dba7c4b44319b4563f2cc4b31dc0ac49d1a0d0717c6
+**Digest:** sha256:07ee6a303865c6a14365a4271094848e9b4ff8c8c0e94a5a48b424abc501dfb6
 
 **Tags:**
 ```
@@ -182,7 +182,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu18.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | b602e0a066d8c98e8c02201ad16c764447fd8531 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3b759c5dc926d0973d82fa1b8ffed45d770d20e8 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -199,7 +199,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu18.04
 | ca-certificates | 20211016ubuntu0.18.04.1 |
 | curl | 7.58.0-2ubuntu3.23 |
 | dialog | 1.3-20171209-1 |
-| git | 1:2.17.1-1ubuntu0.16 |
+| git | 1:2.17.1-1ubuntu0.17 |
 | gnupg2 | 2.2.4-1ubuntu1.6 |
 | htop | 2.1.0-3 |
 | iproute2 | 4.15.0-2ubuntu1.3 |
@@ -226,7 +226,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu18.04
 | openssh-client | 1:7.6p1-4ubuntu0.7 |
 | procps | 2:3.3.12-3ubuntu1.2 |
 | psmisc | 23.1-1ubuntu0.1 |
-| rsync | 3.1.2-2.1ubuntu1.5 |
+| rsync | 3.1.2-2.1ubuntu1.6 |
 | strace | 4.21-1ubuntu1 |
 | sudo | 1.8.21p2-3ubuntu1.5 |
 | unzip | 6.0-21ubuntu1.2 |

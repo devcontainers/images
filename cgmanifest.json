@@ -36,7 +36,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "cryptography",
-                    "Version": "39.0.1"
+                    "Version": "39.0.2"
                 }
             }
         },
@@ -72,7 +72,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "setuptools",
-                    "Version": "67.4.0"
+                    "Version": "67.5.1"
                 }
             }
         },
@@ -96,11 +96,29 @@
         },
         {
             "Component": {
+                "Type": "Pip",
+                "Pip": {
+                    "Name": "nbconvert",
+                    "Version": "7.2.9"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "Pip",
+                "Pip": {
+                    "Name": "py",
+                    "Version": "1.11.0"
+                }
+            }
+        },
+        {
+            "Component": {
                 "Type": "git",
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "69b5737daf0448ad7e6686174638be74f86afdec"
+                    "commitHash": "14978859c5b8d9385c9b836cd09c97cc08b6035b"
                 }
             }
         },
@@ -130,7 +148,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "b602e0a066d8c98e8c02201ad16c764447fd8531"
+                    "commitHash": "3b759c5dc926d0973d82fa1b8ffed45d770d20e8"
                 }
             }
         },
@@ -230,17 +248,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "9ccc64ca98b320404d059df4349220bd2c1b4a46"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "git",
-                "Git": {
-                    "Name": "vcpkg",
-                    "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "5aa33f10763102a3ce077c409a83b93985a9b1eb"
+                    "commitHash": "8daf70c56ba9581f5251a5d4675eb771b6b34957"
                 }
             }
         },
@@ -511,7 +519,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "b602e0a066d8c98e8c02201ad16c764447fd8531"
+                    "commitHash": "3b759c5dc926d0973d82fa1b8ffed45d770d20e8"
                 }
             }
         },
@@ -663,7 +671,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "pylint",
-                    "Version": "2.16.2"
+                    "Version": "2.16.3"
                 }
             }
         },
@@ -681,7 +689,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "autopep8",
-                    "Version": "2.0.1"
+                    "Version": "2.0.2"
                 }
             }
         },
@@ -744,7 +752,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "virtualenv",
-                    "Version": "20.19.0"
+                    "Version": "20.20.0"
                 }
             }
         },
@@ -851,8 +859,8 @@
             "Component": {
                 "Type": "Pip",
                 "Pip": {
-                    "Name": "virtualenv",
-                    "Version": "20.20.0"
+                    "Name": "pylint",
+                    "Version": "2.16.4"
                 }
             }
         },
@@ -1210,7 +1218,7 @@
                 "Type": "linux",
                 "Linux": {
                     "Name": "moby-engine",
-                    "Version": "20.10.22+azure-ubuntu20.04u1",
+                    "Version": "20.10.23+azure-ubuntu20.04u2",
                     "Distribution": "ubuntu",
                     "Release": "20.04",
                     "Pool-URL": "https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod",
@@ -1241,7 +1249,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "matplotlib",
-                    "Version": "3.7.0"
+                    "Version": "3.7.1"
                 }
             }
         },
@@ -1332,7 +1340,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "b602e0a066d8c98e8c02201ad16c764447fd8531"
+                    "commitHash": "3b759c5dc926d0973d82fa1b8ffed45d770d20e8"
                 }
             }
         },
@@ -1361,7 +1369,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "kubectl",
-                    "Version": "v1.26.1",
+                    "Version": "v1.26.2",
                     "DownloadUrl": "https://github.com/kubernetes/kubectl"
                 }
             }
