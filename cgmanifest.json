@@ -72,7 +72,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "setuptools",
-                    "Version": "67.5.1"
+                    "Version": "67.6.0"
                 }
             }
         },
@@ -148,7 +148,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "3b759c5dc926d0973d82fa1b8ffed45d770d20e8"
+                    "commitHash": "3ea0e0d2343a2e79be0c2c6ace030a595d5cec2f"
                 }
             }
         },
@@ -248,7 +248,17 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "8daf70c56ba9581f5251a5d4675eb771b6b34957"
+                    "commitHash": "54e3abfe853002647fccb6bcd765cc81e1395055"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "git",
+                "Git": {
+                    "Name": "vcpkg",
+                    "repositoryUrl": "https://github.com/microsoft/vcpkg",
+                    "commitHash": "02ad673d3bf004f17ec780cb6363ba1c7f928851"
                 }
             }
         },
@@ -519,7 +529,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "3b759c5dc926d0973d82fa1b8ffed45d770d20e8"
+                    "commitHash": "3ea0e0d2343a2e79be0c2c6ace030a595d5cec2f"
                 }
             }
         },
@@ -594,7 +604,7 @@
                 "Type": "RubyGems",
                 "RubyGems": {
                     "Name": "bundler",
-                    "Version": "2.4.7"
+                    "Version": "2.4.8"
                 }
             }
         },
@@ -632,7 +642,7 @@
                 "Git": {
                     "Name": "ruby-build",
                     "repositoryUrl": "https://github.com/rbenv/ruby-build.git",
-                    "commitHash": "99cb5e3fa1bd09efda440d5e28e96952d5c965e0"
+                    "commitHash": "fea57ceae16bdeb484e9038259497d5fc0c17fe2"
                 }
             }
         },
@@ -671,7 +681,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "pylint",
-                    "Version": "2.16.3"
+                    "Version": "2.17.0"
                 }
             }
         },
@@ -716,7 +726,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "mypy",
-                    "Version": "1.0.1"
+                    "Version": "1.1.1"
                 }
             }
         },
@@ -852,15 +862,6 @@
                     "Name": "Docker Image: php",
                     "Version": "8.0-apache-buster",
                     "DownloadUrl": "https://hub.docker.com/_/php"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "Pip",
-                "Pip": {
-                    "Name": "pylint",
-                    "Version": "2.16.4"
                 }
             }
         },
@@ -1340,7 +1341,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "3b759c5dc926d0973d82fa1b8ffed45d770d20e8"
+                    "commitHash": "3ea0e0d2343a2e79be0c2c6ace030a595d5cec2f"
                 }
             }
         },
@@ -1399,7 +1400,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "GitHub CLI",
-                    "Version": "2.23.0",
+                    "Version": "2.24.0",
                     "DownloadUrl": "https://github.com/cli/cli"
                 }
             }
@@ -1409,7 +1410,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Go",
-                    "Version": "1.20.1",
+                    "Version": "1.20.2",
                     "DownloadUrl": "https://golang.org/dl"
                 }
             }

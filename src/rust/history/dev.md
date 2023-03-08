@@ -10,12 +10,11 @@
 
 ## Variant: buster
 
-**Digest:** sha256:0876b5de4e3f6c5255ac5b34b2bc2e2c6914fd9e61858b097e537a08f8ceabc2
+**Digest:** sha256:23c5889a8eaae00ba022ad2b1664ff189799c32ac16fce471f1893dace87327b
 
 **Tags:**
 ```
 mcr.microsoft.com/devcontainers/rust:dev-buster
-mcr.microsoft.com/devcontainers/rust:dev-1
 mcr.microsoft.com/devcontainers/rust:dev-1-buster
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
@@ -37,7 +36,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3b759c5dc926d0973d82fa1b8ffed45d770d20e8 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3ea0e0d2343a2e79be0c2c6ace030a595d5cec2f | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 
@@ -105,11 +104,12 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 
 ## Variant: bullseye
 
-**Digest:** sha256:28c24e5ab2b6219085394a660bfc3ef67d599a1a99cfac263224a6add6974f97
+**Digest:** sha256:c043928a9ac428ee44ac6dc986ef458d4595bc68f8e5dfeab3669bb99d52550c
 
 **Tags:**
 ```
 mcr.microsoft.com/devcontainers/rust:dev-bullseye
+mcr.microsoft.com/devcontainers/rust:dev-1
 mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
@@ -131,7 +131,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3b759c5dc926d0973d82fa1b8ffed45d770d20e8 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3ea0e0d2343a2e79be0c2c6ace030a595d5cec2f | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 
