@@ -38,7 +38,8 @@
 		],
 		"pip": [
 			"certifi",
-			"cryptography"
+			"cryptography",
+			"pyOpenssl"
 		],
 		"other": {
 			"git": {},

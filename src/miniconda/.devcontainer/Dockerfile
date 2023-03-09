@@ -41,9 +41,12 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && usermod -aG conda ${USERNAME} \
     && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts/add-notice.sh
 
-# Temporary: Upgrade 'cryptography' due to https://github.com/advisories/GHSA-39hc-v87j-747x
-# 'cryptography' is installed by the base image (continuumio/miniconda3) which does not have the patch.
-RUN python3 -m pip install --upgrade cryptography
+RUN python3 -m pip install --upgrade \
+    # Temporary: Upgrade 'cryptography' due to https://github.com/advisories/GHSA-39hc-v87j-747x
+    # 'cryptography' is installed by the base image (continuumio/miniconda3) which does not have the patch.
+    cryptography \
+    # https://github.com/devcontainers/images/issues/486
+    pyOpenssl
 
 # Copy environment.yml (if found) to a temp locaition so we update the environment. Also
 # copy "noop.txt" so the COPY instruction does not fail if no environment.yml exists.

@@ -21,5 +21,7 @@ check "usr-local-etc-config-does-not-exist" test ! -f "/usr/local/etc/gitconfig"
 cryptography_version=$(python -c "import cryptography; print(cryptography.__version__)")
 check-version-ge "cryptography-requirement" "${cryptography_version}" "38.0.3"
 
+check "conda-update-conda" bash -c "sudo conda update -y conda"
+
 # Report result
 reportResults
