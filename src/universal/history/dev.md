@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:db651dd6735250c59256a030c920af65b8a6eb14a6e61003ef8b95d6ebc20711
+**Digest:** sha256:fd86eef07c692cc5055394b1840fb9b4f9a69b7549e784820076ebac85633966
 
 **Tags:**
 ```
@@ -26,7 +26,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 18.14.2<br />19.7.0 | /usr/local/share/nvm/versions/node/&lt;version&gt; |
+| [Node.js](https://nodejs.org/en/) | 18.15.0<br />19.7.0 | /usr/local/share/nvm/versions/node/&lt;version&gt; |
 | [Python](https://www.python.org/) | 3.10.4<br />3.9.7 | /usr/local/python/&lt;version&gt; |
 | [Java](https://adoptopenjdk.net/) | 11.0.18<br />17.0.6 | /usr/local/sdkman/candidates/java/&lt;version&gt; |
 | [.NET](https://dotnet.microsoft.com/) | 6<br />0<br />4<br />0<br />6<br />7<br />0<br />2<br />0<br />1 | /usr/local/dotnet |
@@ -34,7 +34,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [PHP](https://xdebug.org/) | 8.1.14<br />8.2.1 | /usr/local/php/&lt;version&gt; |
 | GCC | 9.4.0-1ubuntu1~20.04.1 | 
 | Clang | 10.0.0-4ubuntu1 | 
-| [Go](https://golang.org/dl) | 1.20.1 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.20.2 | /usr/local/go |
 | [Jekyll](https://jekyllrb.com/) | 4.3.2 | 
 | [Jupyter Lab](https://jupyter.org/) | 3.6.1 | /home/codespace/.local/bin/jupyter-lab |
 
@@ -42,11 +42,11 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3b759c5dc926d0973d82fa1b8ffed45d770d20e8 | /home/codespace/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3ea0e0d2343a2e79be0c2c6ace030a595d5cec2f | /home/codespace/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | 6c5a5983e2bccae5ac2b217b69210ecf3cd560f1 | /usr/local/nvs |
 | [rbenv](https://github.com/rbenv/rbenv.git) | 0704e65781cea29c0e6abe5f175eaf4d21e6ebd2 | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 99cb5e3fa1bd09efda440d5e28e96952d5c965e0 | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | ecda5597b14b87b94cf8dada45f31d0b6dbd76d0 | /usr/local/share/ruby-build |
 
 **Pip / pipx installed tools and packages**
 
@@ -63,14 +63,14 @@ mcr.microsoft.com/devcontainers/universal:dev
 | plotly | 5.13.1 |
 | jupyterlab-git | 0.41.0 |
 | certifi | 2022.12.7 |
-| setuptools | 67.5.1 |
+| setuptools | 67.6.0 |
 | wheel | 0.38.4 |
-| pylint | 2.16.3 |
+| pylint | 2.17.0 |
 | flake8 | 6.0.0 |
 | autopep8 | 2.0.2 |
 | black | 23.1.0 |
 | yapf | 0.32.0 |
-| mypy | 1.0.1 |
+| mypy | 1.1.1 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.10.0 |
 | bandit | 1.7.4 |
@@ -107,10 +107,10 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [Xdebug](https://xdebug.org/) | 3.2.0 | /usr/local/php/current |
 | [Composer](https://getcomposer.org/) | 2.5.4 | /usr/local/php/current/bin |
 | [kubectl](https://github.com/kubernetes/kubectl) | v1.26.2 | /usr/local/bin |
-| [Helm](https://github.com/helm/helm) | 3.11.1 | /usr/local/bin |
+| [Helm](https://github.com/helm/helm) | 3.11.2 | /usr/local/bin |
 | [Docker Compose](https://github.com/docker/compose) | 1.29.2 | /usr/local/bin |
 | [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
-| [GitHub CLI](https://github.com/cli/cli) | 2.23.0 | 
+| [GitHub CLI](https://github.com/cli/cli) | 2.24.0 | 
 | [yarn](https://yarnpkg.com/) | 1.22.19 | /usr/bin |
 | [Maven](https://maven.apache.org/) | 3.9.0 | /usr/local/sdkman/candidates/maven/current/bin |
 | [Gradle](https://gradle.org/) | 8.0.2 | /usr/local/sdkman/candidates/gradle/current/bin |
