@@ -22,6 +22,7 @@ cryptography_version=$(python -c "import cryptography; print(cryptography.__vers
 check-version-ge "cryptography-requirement" "${cryptography_version}" "38.0.3"
 
 check "conda-update-conda" bash -c "conda update -y conda"
+check "conda-install" bash -c "conda install -c conda-forge pylint"
 
 # Report result
 reportResults

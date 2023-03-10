@@ -57,6 +57,7 @@ nbconvert_version=$(python -c "import nbconvert; print(nbconvert.__version__)")
 check-version-ge "nbconvert-requirement" "${nbconvert_version}" "6.5.1"
 
 check "conda-update-conda" bash -c "conda update -y conda"
+check "conda-install" bash -c "conda install -c conda-forge pylint"
 
 # Report result
 reportResults
