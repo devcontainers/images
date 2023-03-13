@@ -34,7 +34,8 @@
 			"future",
 			"wheel",
 			"nbconvert",
-			"py"
+			"py",
+			"pyOpenssl"
 		],
 		"other": {
 			"git": {},

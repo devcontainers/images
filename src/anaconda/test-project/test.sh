@@ -56,5 +56,9 @@ check-version-ge "wheel-requirement" "${wheel_version}" "0.38.1"
 nbconvert_version=$(python -c "import nbconvert; print(nbconvert.__version__)")
 check-version-ge "nbconvert-requirement" "${nbconvert_version}" "6.5.1"
 
+check "conda-update-conda" bash -c "conda update -y conda"
+check "conda-install" bash -c "conda install -c conda-forge --yes tensorflow"
+check "conda-install" bash -c "conda install -c conda-forge --yes pytorch"
+
 # Report result
 reportResults
