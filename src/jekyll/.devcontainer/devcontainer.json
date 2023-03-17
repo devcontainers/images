@@ -13,12 +13,12 @@
         }
 	},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [
-		// Jekyll server
-		4000,
-		// Live reload server
-		35729
-	],
+	// "forwardPorts": [
+	// 	// Jekyll server
+	// 	4000,
+	// 	// Live reload server
+	// 	35729
+	// ],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "sh /usr/local/post-create.sh",
