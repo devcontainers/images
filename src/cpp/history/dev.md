@@ -13,7 +13,7 @@
 
 ## Variant: bullseye
 
-**Digest:** sha256:0ddb651c91bbe6abcb1456fbdb70c437853e46693553e11cb4107c5de6498a8f
+**Digest:** sha256:4cf19fa2aba345aac6f61909120e5bf5753186ba9c6c5a7ea285e6999dcb086e
 
 **Tags:**
 ```
@@ -43,14 +43,14 @@ mcr.microsoft.com/devcontainers/cpp:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3ea0e0d2343a2e79be0c2c6ace030a595d5cec2f | /home/vscode/.oh-my-zsh |
-| [vcpkg](https://github.com/microsoft/vcpkg) | 62578200abd494caf19dc42d9a3cf0e0b47800db | /usr/local/vcpkg |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | c08b925d282e35ea7bd9a8f4c29de2ece0debb49 | /home/vscode/.oh-my-zsh |
+| [vcpkg](https://github.com/microsoft/vcpkg) | b81bc3a83fdbdffe80325eeabb2ec735a1f3c29d | /usr/local/vcpkg |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.39.2 | 
+| [git](https://github.com/git/git) | 2.40.0 | 
 
 **Additional linux tools and packages**
 
@@ -110,7 +110,7 @@ mcr.microsoft.com/devcontainers/cpp:dev
 
 ## Variant: buster
 
-**Digest:** sha256:eefe574c0317094d77ebbe34601ae64a3b442d6358e3450b01e5b526ffec9ede
+**Digest:** sha256:00f57210e05b334717cc617744d7bd310d9bb4744ff98ef7db623bd22232e75b
 
 **Tags:**
 ```
@@ -138,14 +138,14 @@ mcr.microsoft.com/devcontainers/cpp:dev-debian10
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3ea0e0d2343a2e79be0c2c6ace030a595d5cec2f | /home/vscode/.oh-my-zsh |
-| [vcpkg](https://github.com/microsoft/vcpkg) | 62578200abd494caf19dc42d9a3cf0e0b47800db | /usr/local/vcpkg |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | c08b925d282e35ea7bd9a8f4c29de2ece0debb49 | /home/vscode/.oh-my-zsh |
+| [vcpkg](https://github.com/microsoft/vcpkg) | b81bc3a83fdbdffe80325eeabb2ec735a1f3c29d | /usr/local/vcpkg |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.39.2 | 
+| [git](https://github.com/git/git) | 2.40.0 | 
 
 **Additional linux tools and packages**
 
@@ -206,7 +206,7 @@ mcr.microsoft.com/devcontainers/cpp:dev-debian10
 
 ## Variant: jammy
 
-**Digest:** sha256:0cb6dce0b16c194023d9e9f4ef54773012a7b4313756f02c8b2adf81b00e3c62
+**Digest:** sha256:8bb98cd6c65a01dc7a3eb920fbcdf811eecf9578c21e9acfa9c0bab917fffcb8
 
 **Tags:**
 ```
@@ -234,14 +234,14 @@ mcr.microsoft.com/devcontainers/cpp:dev-ubuntu22.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3ea0e0d2343a2e79be0c2c6ace030a595d5cec2f | /home/vscode/.oh-my-zsh |
-| [vcpkg](https://github.com/microsoft/vcpkg) | 62578200abd494caf19dc42d9a3cf0e0b47800db | /usr/local/vcpkg |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | c08b925d282e35ea7bd9a8f4c29de2ece0debb49 | /home/vscode/.oh-my-zsh |
+| [vcpkg](https://github.com/microsoft/vcpkg) | b81bc3a83fdbdffe80325eeabb2ec735a1f3c29d | /usr/local/vcpkg |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.39.2 | 
+| [git](https://github.com/git/git) | 2.40.0 | 
 
 **Additional linux tools and packages**
 
@@ -255,7 +255,7 @@ mcr.microsoft.com/devcontainers/cpp:dev-ubuntu22.04
 | clang | 1:14.0-55~exp2 |
 | cmake | 3.22.1-1ubuntu1.22.04.1 |
 | cppcheck | 2.7-1 |
-| curl | 7.81.0-1ubuntu1.8 |
+| curl | 7.81.0-1ubuntu1.10 |
 | dialog | 1.3-20211214-1 |
 | gdb | 12.1-0ubuntu1~22.04 |
 | git | 1:2.34.1-1ubuntu1.8 |
@@ -291,7 +291,7 @@ mcr.microsoft.com/devcontainers/cpp:dev-ubuntu22.04
 | tar | 1.34+dfsg-1ubuntu0.1.22.04.1 |
 | unzip | 6.0-26ubuntu3.1 |
 | valgrind | 1:3.18.1-1ubuntu2 |
-| vim-tiny | 2:8.2.3995-1ubuntu2.3 |
+| vim-tiny | 2:8.2.3995-1ubuntu2.4 |
 | wget | 1.21.2-2ubuntu1 |
 | zip | 3.0-12build2 |
 | zlib1g | 1:1.2.11.dfsg-2ubuntu9.2 |
@@ -299,7 +299,7 @@ mcr.microsoft.com/devcontainers/cpp:dev-ubuntu22.04
 
 ## Variant: focal
 
-**Digest:** sha256:c264eb02919ae2e45e6dc68016fd1bc7b63197f389a837292ed357d6d8b7d528
+**Digest:** sha256:ff2c3dfb6f0a7adcbd981b153ea391e611332e3ef0ef487b101b0d1d6ef39612
 
 **Tags:**
 ```
@@ -310,7 +310,7 @@ mcr.microsoft.com/devcontainers/cpp:dev-ubuntu
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
-**Linux distribution:** Ubuntu 20.04.5 LTS (debian-like distro)
+**Linux distribution:** Ubuntu 20.04.6 LTS (debian-like distro)
 
 **Architectures:** linux/amd64
 
@@ -328,14 +328,14 @@ mcr.microsoft.com/devcontainers/cpp:dev-ubuntu
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3ea0e0d2343a2e79be0c2c6ace030a595d5cec2f | /home/vscode/.oh-my-zsh |
-| [vcpkg](https://github.com/microsoft/vcpkg) | 62578200abd494caf19dc42d9a3cf0e0b47800db | /usr/local/vcpkg |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | c08b925d282e35ea7bd9a8f4c29de2ece0debb49 | /home/vscode/.oh-my-zsh |
+| [vcpkg](https://github.com/microsoft/vcpkg) | b81bc3a83fdbdffe80325eeabb2ec735a1f3c29d | /usr/local/vcpkg |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.39.2 | 
+| [git](https://github.com/git/git) | 2.40.0 | 
 
 **Additional linux tools and packages**
 
@@ -349,7 +349,7 @@ mcr.microsoft.com/devcontainers/cpp:dev-ubuntu
 | clang | 1:10.0-50~exp1 |
 | cmake | 3.16.3-1ubuntu1.20.04.1 |
 | cppcheck | 1.90-4build1 |
-| curl | 7.68.0-1ubuntu2.16 |
+| curl | 7.68.0-1ubuntu2.18 |
 | dialog | 1.3-20190808-1 |
 | gdb | 9.2-0ubuntu1~20.04.1 |
 | git | 1:2.25.1-1ubuntu3.10 |
@@ -360,9 +360,9 @@ mcr.microsoft.com/devcontainers/cpp:dev-ubuntu
 | less | 551-1ubuntu0.1 |
 | libc6 | 2.31-0ubuntu9.9 |
 | libgcc1 | 1:10.3.0-1ubuntu1~20.04 |
-| libgssapi-krb5-2 | 1.17-6ubuntu4.2 |
+| libgssapi-krb5-2 | 1.17-6ubuntu4.3 |
 | libicu66 | 66.1-2ubuntu2.1 |
-| libkrb5-3 | 1.17-6ubuntu4.2 |
+| libkrb5-3 | 1.17-6ubuntu4.3 |
 | liblttng-ust0 | 2.11.0-1 |
 | libssl1.1 | 1.1.1f-1ubuntu2.17 |
 | libstdc++6 | 10.3.0-1ubuntu1~20.04 |
@@ -388,7 +388,7 @@ mcr.microsoft.com/devcontainers/cpp:dev-ubuntu
 | tar | 1.30+dfsg-7ubuntu0.20.04.3 |
 | unzip | 6.0-25ubuntu1.1 |
 | valgrind | 1:3.15.0-1ubuntu9.1 |
-| vim-tiny | 2:8.1.2269-1ubuntu5.11 |
+| vim-tiny | 2:8.1.2269-1ubuntu5.12 |
 | wget | 1.20.3-1ubuntu2 |
 | zip | 3.0-11build1 |
 | zlib1g | 1:1.2.11.dfsg-2ubuntu1.5 |
@@ -396,7 +396,7 @@ mcr.microsoft.com/devcontainers/cpp:dev-ubuntu
 
 ## Variant: bionic
 
-**Digest:** sha256:1c22b5da367c3ccf30b8b84b92064c52e7ecc4a90de3b9792c4c64919f08189d
+**Digest:** sha256:4093ac28681b128d6b437930afcaf22339763b970462bb2f0df6c4af9d1a8427
 
 **Tags:**
 ```
@@ -424,14 +424,14 @@ mcr.microsoft.com/devcontainers/cpp:dev-ubuntu18.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3ea0e0d2343a2e79be0c2c6ace030a595d5cec2f | /home/vscode/.oh-my-zsh |
-| [vcpkg](https://github.com/microsoft/vcpkg) | 62578200abd494caf19dc42d9a3cf0e0b47800db | /usr/local/vcpkg |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | c08b925d282e35ea7bd9a8f4c29de2ece0debb49 | /home/vscode/.oh-my-zsh |
+| [vcpkg](https://github.com/microsoft/vcpkg) | b81bc3a83fdbdffe80325eeabb2ec735a1f3c29d | /usr/local/vcpkg |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.39.2 | 
+| [git](https://github.com/git/git) | 2.40.0 | 
 
 **Additional linux tools and packages**
 
@@ -445,7 +445,7 @@ mcr.microsoft.com/devcontainers/cpp:dev-ubuntu18.04
 | clang | 1:6.0-41~exp5~ubuntu1 |
 | cmake | 3.10.2-1ubuntu2.18.04.2 |
 | cppcheck | 1.82-1 |
-| curl | 7.58.0-2ubuntu3.23 |
+| curl | 7.58.0-2ubuntu3.24 |
 | dialog | 1.3-20171209-1 |
 | gdb | 8.1.1-0ubuntu1 |
 | git | 1:2.17.1-1ubuntu0.17 |
@@ -456,9 +456,9 @@ mcr.microsoft.com/devcontainers/cpp:dev-ubuntu18.04
 | less | 487-0.1 |
 | libc6 | 2.27-3ubuntu1.6 |
 | libgcc1 | 1:8.4.0-1ubuntu1~18.04 |
-| libgssapi-krb5-2 | 1.16-2ubuntu0.3 |
+| libgssapi-krb5-2 | 1.16-2ubuntu0.4 |
 | libicu60 | 60.2-3ubuntu3.2 |
-| libkrb5-3 | 1.16-2ubuntu0.3 |
+| libkrb5-3 | 1.16-2ubuntu0.4 |
 | liblttng-ust0 | 2.10.1-1 |
 | libssl1.0.0 | 1.0.2n-1ubuntu5.11 |
 | libssl1.1 | 1.1.1-1ubuntu2.1~18.04.21 |
@@ -485,7 +485,7 @@ mcr.microsoft.com/devcontainers/cpp:dev-ubuntu18.04
 | tar | 1.29b-2ubuntu0.4 |
 | unzip | 6.0-21ubuntu1.2 |
 | valgrind | 1:3.13.0-2ubuntu2.3 |
-| vim-tiny | 2:8.0.1453-1ubuntu1.10 |
+| vim-tiny | 2:8.0.1453-1ubuntu1.11 |
 | wget | 1.19.4-1ubuntu2.2 |
 | zip | 3.0-11build1 |
 | zlib1g | 1:1.2.11.dfsg-0ubuntu2.2 |
