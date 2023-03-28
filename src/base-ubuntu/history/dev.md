@@ -11,7 +11,7 @@
 
 ## Variant: jammy
 
-**Digest:** sha256:6cc780f47f9b6b236106422c6e631f740e556dc11f7b41055fa1d564113f1988
+**Digest:** sha256:7646bdd2c94459598483abf971366c8a8d7968e7e7a0f9f83234cf6eba6c2f61
 
 **Tags:**
 ```
@@ -33,13 +33,13 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3ea0e0d2343a2e79be0c2c6ace030a595d5cec2f | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | c08b925d282e35ea7bd9a8f4c29de2ece0debb49 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.39.2 | 
+| [git](https://github.com/git/git) | 2.40.0 | 
 
 **Additional linux tools and packages**
 
@@ -48,7 +48,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 | apt-transport-https | 2.4.8 |
 | apt-utils | 2.4.8 |
 | ca-certificates | 20211016ubuntu0.22.04.1 |
-| curl | 7.81.0-1ubuntu1.8 |
+| curl | 7.81.0-1ubuntu1.10 |
 | dialog | 1.3-20211214-1 |
 | git | 1:2.34.1-1ubuntu1.8 |
 | gnupg2 | 2.2.27-3ubuntu2.1 |
@@ -77,7 +77,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 | strace | 5.16-0ubuntu3 |
 | sudo | 1.9.9-1ubuntu2.3 |
 | unzip | 6.0-26ubuntu3.1 |
-| vim-tiny | 2:8.2.3995-1ubuntu2.3 |
+| vim-tiny | 2:8.2.3995-1ubuntu2.4 |
 | wget | 1.21.2-2ubuntu1 |
 | zip | 3.0-12build2 |
 | zlib1g | 1:1.2.11.dfsg-2ubuntu9.2 |
@@ -85,7 +85,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 ## Variant: focal
 
-**Digest:** sha256:42415d19aff5e4afcada73760f8c0dbad749366f200dd8efe1e1f54054272723
+**Digest:** sha256:24840cd16fc5c6c68b79641423fa9b76b17bbd990314dde24ba23d7b6942cb29
 
 **Tags:**
 ```
@@ -95,7 +95,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
-**Linux distribution:** Ubuntu 20.04.5 LTS (debian-like distro)
+**Linux distribution:** Ubuntu 20.04.6 LTS (debian-like distro)
 
 **Architectures:** linux/amd64
 
@@ -106,13 +106,13 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3ea0e0d2343a2e79be0c2c6ace030a595d5cec2f | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | c08b925d282e35ea7bd9a8f4c29de2ece0debb49 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.39.2 | 
+| [git](https://github.com/git/git) | 2.40.0 | 
 
 **Additional linux tools and packages**
 
@@ -121,7 +121,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 | apt-transport-https | 2.0.9 |
 | apt-utils | 2.0.9 |
 | ca-certificates | 20211016ubuntu0.20.04.1 |
-| curl | 7.68.0-1ubuntu2.16 |
+| curl | 7.68.0-1ubuntu2.18 |
 | dialog | 1.3-20190808-1 |
 | git | 1:2.25.1-1ubuntu3.10 |
 | gnupg2 | 2.2.19-3ubuntu2.2 |
@@ -131,9 +131,9 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 | less | 551-1ubuntu0.1 |
 | libc6 | 2.31-0ubuntu9.9 |
 | libgcc1 | 1:10.3.0-1ubuntu1~20.04 |
-| libgssapi-krb5-2 | 1.17-6ubuntu4.2 |
+| libgssapi-krb5-2 | 1.17-6ubuntu4.3 |
 | libicu66 | 66.1-2ubuntu2.1 |
-| libkrb5-3 | 1.17-6ubuntu4.2 |
+| libkrb5-3 | 1.17-6ubuntu4.3 |
 | liblttng-ust0 | 2.11.0-1 |
 | libssl1.1 | 1.1.1f-1ubuntu2.17 |
 | libstdc++6 | 10.3.0-1ubuntu1~20.04 |
@@ -153,7 +153,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 | strace | 5.5-3ubuntu1 |
 | sudo | 1.8.31-1ubuntu1.4 |
 | unzip | 6.0-25ubuntu1.1 |
-| vim-tiny | 2:8.1.2269-1ubuntu5.11 |
+| vim-tiny | 2:8.1.2269-1ubuntu5.12 |
 | wget | 1.20.3-1ubuntu2 |
 | zip | 3.0-11build1 |
 | zlib1g | 1:1.2.11.dfsg-2ubuntu1.5 |
@@ -161,7 +161,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 
 ## Variant: bionic
 
-**Digest:** sha256:18d9da65b34a1a7cfec8d55785486841f547e365993a23374fe2cfc466914d98
+**Digest:** sha256:02250ecad364627a015fcb9047aaff267fe04b5038b7ff77e45731d3be82218a
 
 **Tags:**
 ```
@@ -182,13 +182,13 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu18.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3ea0e0d2343a2e79be0c2c6ace030a595d5cec2f | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | c08b925d282e35ea7bd9a8f4c29de2ece0debb49 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.39.2 | 
+| [git](https://github.com/git/git) | 2.40.0 | 
 
 **Additional linux tools and packages**
 
@@ -197,7 +197,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu18.04
 | apt-transport-https | 1.6.14 |
 | apt-utils | 1.6.14 |
 | ca-certificates | 20211016ubuntu0.18.04.1 |
-| curl | 7.58.0-2ubuntu3.23 |
+| curl | 7.58.0-2ubuntu3.24 |
 | dialog | 1.3-20171209-1 |
 | git | 1:2.17.1-1ubuntu0.17 |
 | gnupg2 | 2.2.4-1ubuntu1.6 |
@@ -207,9 +207,9 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu18.04
 | less | 487-0.1 |
 | libc6 | 2.27-3ubuntu1.6 |
 | libgcc1 | 1:8.4.0-1ubuntu1~18.04 |
-| libgssapi-krb5-2 | 1.16-2ubuntu0.3 |
+| libgssapi-krb5-2 | 1.16-2ubuntu0.4 |
 | libicu60 | 60.2-3ubuntu3.2 |
-| libkrb5-3 | 1.16-2ubuntu0.3 |
+| libkrb5-3 | 1.16-2ubuntu0.4 |
 | liblttng-ust0 | 2.10.1-1 |
 | libssl1.0.0 | 1.0.2n-1ubuntu5.11 |
 | libssl1.1 | 1.1.1-1ubuntu2.1~18.04.21 |
@@ -230,7 +230,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu18.04
 | strace | 4.21-1ubuntu1 |
 | sudo | 1.8.21p2-3ubuntu1.5 |
 | unzip | 6.0-21ubuntu1.2 |
-| vim-tiny | 2:8.0.1453-1ubuntu1.10 |
+| vim-tiny | 2:8.0.1453-1ubuntu1.11 |
 | wget | 1.19.4-1ubuntu2.2 |
 | zip | 3.0-11build1 |
 | zlib1g | 1:1.2.11.dfsg-0ubuntu2.2 |
