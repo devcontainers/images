@@ -18,5 +18,8 @@ check "gitconfig-contains-name" sh -c "cat /etc/gitconfig | grep 'name = devcont
 
 check "usr-local-etc-config-does-not-exist" test ! -f "/usr/local/etc/gitconfig"
 
+sudo_version=$(sudo --version | head -1)
+check-version-ge "sudo-requirement" "${sudo_version}" "Sudo version 1.9.12p2"
+
 # Report result
 reportResults
