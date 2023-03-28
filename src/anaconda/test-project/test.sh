@@ -60,5 +60,8 @@ check "conda-update-conda" bash -c "conda update -y conda"
 check "conda-install" bash -c "conda install -c conda-forge --yes tensorflow"
 check "conda-install" bash -c "conda install -c conda-forge --yes pytorch"
 
+werkzeug_version=$(python -c "import werkzeug; print(werkzeug.__version__)")
+check-version-ge "werkzeug-requirement" "${werkzeug_version}" "2.2.3"
+
 # Report result
 reportResults

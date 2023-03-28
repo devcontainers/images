@@ -35,7 +35,8 @@
 			"wheel",
 			"nbconvert",
 			"py",
-			"pyOpenssl"
+			"pyOpenssl",
+			"werkzeug"
 		],
 		"other": {
 			"git": {},
