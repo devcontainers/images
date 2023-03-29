@@ -1,5 +1,5 @@
 # [Choice] Alpine version: 3.17, 3.16, 3.15, 3.14
-ARG VARIANT=3.14
+ARG VARIANT=3.17
 FROM alpine:${VARIANT}
 
 ARG VARIANT
