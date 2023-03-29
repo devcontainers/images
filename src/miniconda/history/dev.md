@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/miniconda)
 
-**Digest:** sha256:b04ead974de937fcc777c09ca160a2bfa76a9c3d5be4a1469ec2bda4a5cda7a0
+**Digest:** sha256:f3008858a8b81f72efa4ea71c444e6cf8fecadabdcf2bcff690f0b5057d260db
 
 **Tags:**
 ```
@@ -36,8 +36,8 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | Tool / package | Version |
 |----------------|---------|
 | certifi | 2022.12.7 |
-| cryptography | 39.0.2 |
-| pylint | 2.17.0 |
+| cryptography | 39.0.1 |
+| pylint | 2.17.1 |
 | flake8 | 6.0.0 |
 | autopep8 | 2.0.2 |
 | black | 23.1.0 |
@@ -45,16 +45,16 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | mypy | 1.1.1 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.10.0 |
-| bandit | 1.7.4 |
-| virtualenv | 20.20.0 |
-| pipx | 1.1.0 |
+| bandit | 1.7.5 |
+| virtualenv | 20.21.0 |
+| pipx | 1.2.0 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.39.2 | 
-| [conda](https://github.com/conda/conda) | 22.11.1 | /opt/conda |
+| [git](https://github.com/git/git) | 2.40.0 | 
+| [conda](https://github.com/conda/conda) | 23.1.0 | /opt/conda |
 
 **Additional linux tools and packages**
 
