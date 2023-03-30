@@ -49,9 +49,15 @@ RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then umask 0002 && /opt/conda/bi
 
 USER vscode
 
-# Temporary: Upgrade 'cryptography' due to https://github.com/advisories/GHSA-39hc-v87j-747x
-# 'cryptography' is installed by the base image (continuumio/miniconda3) which does not have the patch.
-RUN python3 -m conda update -y cryptography
+# Temporary: Upgrade python packages due to mentioned CVEs
+# They are installed by the base image (continuumio/anaconda3) which does not have the patch.
+RUN python3 -m conda update -y \
+    # https://github.com/advisories/GHSA-39hc-v87j-747x
+    cryptography \
+    # https://github.com/advisories/GHSA-r9hx-vwmv-q579
+    setuptools \
+    # https://github.com/advisories/GHSA-qwmp-2cf2-g9g6
+    wheel
 
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
