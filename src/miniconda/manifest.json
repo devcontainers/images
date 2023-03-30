@@ -39,7 +39,9 @@
 		"pip": [
 			"certifi",
 			"cryptography",
-			"pyOpenssl"
+			"pyOpenssl",
+			"setuptools",
+			"wheel"
 		],
 		"other": {
 			"git": {},

@@ -23,5 +23,11 @@ check-version-ge "cryptography-requirement" "${cryptography_version}" "38.0.3"
 
 check "conda-update-conda" bash -c "conda update -y conda"
 
+setuptools_version=$(python -c "import setuptools; print(setuptools.__version__)")
+check-version-ge "setuptools-requirement" "${setuptools_version}" "65.5.1"
+
+wheel_version=$(python -c "import wheel; print(wheel.__version__)")
+check-version-ge "wheel-requirement" "${wheel_version}" " 0.38.1"
+
 # Report result
 reportResults
