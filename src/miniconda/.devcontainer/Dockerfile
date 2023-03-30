@@ -50,7 +50,7 @@ RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then umask 0002 && /opt/conda/bi
 USER vscode
 
 # Temporary: Upgrade python packages due to mentioned CVEs
-# They are installed by the base image (continuumio/anaconda3) which does not have the patch.
+# They are installed by the base image (continuumio/miniconda3) which does not have the patch.
 RUN python3 -m conda update -y \
     # https://github.com/advisories/GHSA-39hc-v87j-747x
     cryptography \
