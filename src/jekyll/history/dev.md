@@ -10,7 +10,7 @@
 
 ## Variant: 2.7-bullseye
 
-**Digest:** sha256:c2caefe99a853f0292c3a1cc814d1af22ce3e99df7025a50ff145c39562a6908
+**Digest:** sha256:81c33690bc903fb1a10fad7ea2af2a24016b16563e85cd62e6bf95ccce6e4643
 
 **Tags:**
 ```
@@ -31,17 +31,17 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Ruby](https://www.ruby-lang.org/en/) | 2.7.7p221 | /usr/local |
+| [Ruby](https://www.ruby-lang.org/en/) | 2.7.8p225 | /usr/local |
 | [Jekyll](https://jekyllrb.com/) | 4.3.2 | /usr/local/bundle/bin |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | c08b925d282e35ea7bd9a8f4c29de2ece0debb49 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d47e1d65f66f9bb2e7a96ba58797b33f0e91a623 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
-| [rbenv](https://github.com/rbenv/rbenv.git) | dd79c11f6c83897e59293dab8d981e1319c067db | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | f3c1ccc33543ec8d469f67cea9c21c6a0364e14e | /usr/local/share/ruby-build |
+| [rbenv](https://github.com/rbenv/rbenv.git) | a632465cf4007d0a5b419ed5c5a7bd87349d7b14 | /usr/local/share/rbenv |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | f2c3a7f607b6c24edbf6f6b5953be15a6e2ef10c | /usr/local/share/ruby-build |
 
 **Ruby gems and tools**
 
@@ -105,7 +105,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 
 ## Variant: 2.7-buster
 
-**Digest:** sha256:7566f1f01f626d1b08e5c576dce41a845d973343a1ce4c7a1c6554f9bff6d5c0
+**Digest:** sha256:f9bff4f72a774578e640c18c9f7c0a31062253072814221aa5801acad72871b9
 
 **Tags:**
 ```
@@ -125,17 +125,17 @@ mcr.microsoft.com/devcontainers/jekyll:dev-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Ruby](https://www.ruby-lang.org/en/) | 2.7.7p221 | /usr/local |
+| [Ruby](https://www.ruby-lang.org/en/) | 2.7.8p225 | /usr/local |
 | [Jekyll](https://jekyllrb.com/) | 4.3.2 | /usr/local/bundle/bin |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | c08b925d282e35ea7bd9a8f4c29de2ece0debb49 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d47e1d65f66f9bb2e7a96ba58797b33f0e91a623 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
-| [rbenv](https://github.com/rbenv/rbenv.git) | dd79c11f6c83897e59293dab8d981e1319c067db | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | f3c1ccc33543ec8d469f67cea9c21c6a0364e14e | /usr/local/share/ruby-build |
+| [rbenv](https://github.com/rbenv/rbenv.git) | a632465cf4007d0a5b419ed5c5a7bd87349d7b14 | /usr/local/share/rbenv |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | f2c3a7f607b6c24edbf6f6b5953be15a6e2ef10c | /usr/local/share/ruby-build |
 
 **Ruby gems and tools**
 
