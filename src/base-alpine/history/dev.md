@@ -12,7 +12,7 @@
 
 ## Variant: 3.17
 
-**Digest:** sha256:c5c9a4b3016d08e8a4eb75f1bfd99901f8306604659467a4f76d22e6eca91290
+**Digest:** sha256:4bb033bf2c312d62b48cee1c4525c9015b49ea727b0971b39b11f99ceb312bde
 
 **Tags:**
 ```
@@ -33,7 +33,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | c08b925d282e35ea7bd9a8f4c29de2ece0debb49 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d47e1d65f66f9bb2e7a96ba58797b33f0e91a623 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -66,9 +66,9 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 | libstdc++ | 12.2.1_git20220924-r4 |
 | krb5-libs | 1.20.1-r0 |
 | libintl | 0.21.1-r1 |
-| libssl1.1 | 1.1.1t-r1 |
+| libssl1.1 | 1.1.1t-r2 |
 | lttng-ust | 2.13.3-r0 |
-| tzdata | 2023b-r1 |
+| tzdata | 2023c-r0 |
 | userspace-rcu | 0.13.2-r0 |
 | zlib | 1.2.13-r0 |
 | sudo | 1.9.12_p2-r1 |
@@ -83,7 +83,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 ## Variant: 3.16
 
-**Digest:** sha256:7381bbe5be1361d6e9048ff258b9f11fc3c04fbadab96015c4c52654502f4506
+**Digest:** sha256:cb0d4830ad7b5e2fd11da253de4985369df9ad1ef48543c99dbc4c2a4750e49c
 
 **Tags:**
 ```
@@ -103,7 +103,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.16
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | c08b925d282e35ea7bd9a8f4c29de2ece0debb49 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d47e1d65f66f9bb2e7a96ba58797b33f0e91a623 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -136,9 +136,9 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.16
 | libstdc++ | 11.2.1_git20220219-r2 |
 | krb5-libs | 1.19.4-r0 |
 | libintl | 0.21-r2 |
-| libssl1.1 | 1.1.1t-r1 |
+| libssl1.1 | 1.1.1t-r2 |
 | lttng-ust | 2.13.2-r0 |
-| tzdata | 2023b-r1 |
+| tzdata | 2023c-r0 |
 | userspace-rcu | 0.13.1-r0 |
 | zlib | 1.2.12-r3 |
 | sudo | 1.9.12-r1 |
@@ -153,7 +153,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.16
 
 ## Variant: 3.15
 
-**Digest:** sha256:15a07ed00294daaad4a02735636505ec4f8185a7acf69013ae45b6ce2d0e1ef3
+**Digest:** sha256:3024f7b5e30669611099f33f266960e977741fdbcaee1935b1ba64c0c3df37b6
 
 **Tags:**
 ```
@@ -173,7 +173,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.15
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | c08b925d282e35ea7bd9a8f4c29de2ece0debb49 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d47e1d65f66f9bb2e7a96ba58797b33f0e91a623 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -206,12 +206,12 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.15
 | libstdc++ | 10.3.1_git20211027-r0 |
 | krb5-libs | 1.19.4-r0 |
 | libintl | 0.21-r0 |
-| libssl1.1 | 1.1.1t-r2 |
+| libssl1.1 | 1.1.1t-r3 |
 | lttng-ust | 2.12.0-r3 |
-| tzdata | 2023b-r1 |
+| tzdata | 2023c-r0 |
 | userspace-rcu | 0.12.2-r0 |
 | zlib | 1.2.12-r3 |
-| sudo | 1.9.12_p2-r0 |
+| sudo | 1.9.12_p2-r1 |
 | coreutils | 9.0-r2 |
 | sed | 4.8-r0 |
 | grep | 3.7-r0 |
@@ -223,7 +223,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.15
 
 ## Variant: 3.14
 
-**Digest:** sha256:8757009704f8a11995935f404add5a4d4e62c470c64e52abe60b4711b252558d
+**Digest:** sha256:7afa2676cf6a09a16a5bfe1ddcb4434f248f64fc514d0dc5bc1c280c0617f8f1
 
 **Tags:**
 ```
@@ -243,7 +243,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.14
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | c08b925d282e35ea7bd9a8f4c29de2ece0debb49 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d47e1d65f66f9bb2e7a96ba58797b33f0e91a623 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -276,12 +276,12 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.14
 | libstdc++ | 10.3.1_git20210424-r2 |
 | krb5-libs | 1.18.5-r0 |
 | libintl | 0.21-r0 |
-| libssl1.1 | 1.1.1t-r1 |
+| libssl1.1 | 1.1.1t-r2 |
 | lttng-ust | 2.12.0-r3 |
-| tzdata | 2023b-r1 |
+| tzdata | 2023c-r0 |
 | userspace-rcu | 0.12.2-r0 |
 | zlib | 1.2.12-r3 |
-| sudo | 1.9.12_p2-r0 |
+| sudo | 1.9.12_p2-r1 |
 | coreutils | 8.32-r2 |
 | sed | 4.8-r0 |
 | grep | 3.7-r0 |

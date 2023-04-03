@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:2cc2a7d70705237e7057ee332de9f5d11823093bd79c5833898b215a8c9f3ef0
+**Digest:** sha256:bc31047f69456c826c2298061ffd793cb5350a1aa4e64aad2138467eddfa5261
 
 **Tags:**
 ```
@@ -30,45 +30,45 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [Python](https://www.python.org/) | 3.10.4<br />3.9.7 | /usr/local/python/&lt;version&gt; |
 | [Java](https://adoptopenjdk.net/) | 11.0.18<br />17.0.6 | /usr/local/sdkman/candidates/java/&lt;version&gt; |
 | [.NET](https://dotnet.microsoft.com/) | 6<br />0<br />4<br />0<br />7<br />7<br />0<br />2<br />0<br />2 | /usr/local/dotnet |
-| [Ruby](https://www.ruby-lang.org/en/) | 3.0.5<br />3.1.3 | /usr/local/rvm/rubies/&lt;version&gt; |
+| [Ruby](https://www.ruby-lang.org/en/) | 3.0.6<br />3.1.4 | /usr/local/rvm/rubies/&lt;version&gt; |
 | [PHP](https://xdebug.org/) | 8.1.14<br />8.2.1 | /usr/local/php/&lt;version&gt; |
 | GCC | 9.4.0-1ubuntu1~20.04.1 | 
 | Clang | 10.0.0-4ubuntu1 | 
 | [Go](https://golang.org/dl) | 1.20.2 | /usr/local/go |
 | [Jekyll](https://jekyllrb.com/) | 4.3.2 | 
-| [Jupyter Lab](https://jupyter.org/) | 3.6.2 | /home/codespace/.local/bin/jupyter-lab |
+| [Jupyter Lab](https://jupyter.org/) | 3.6.3 | /home/codespace/.local/bin/jupyter-lab |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | c08b925d282e35ea7bd9a8f4c29de2ece0debb49 | /home/codespace/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d47e1d65f66f9bb2e7a96ba58797b33f0e91a623 | /home/codespace/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | 6c5a5983e2bccae5ac2b217b69210ecf3cd560f1 | /usr/local/nvs |
-| [rbenv](https://github.com/rbenv/rbenv.git) | dd79c11f6c83897e59293dab8d981e1319c067db | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | f3c1ccc33543ec8d469f67cea9c21c6a0364e14e | /usr/local/share/ruby-build |
+| [rbenv](https://github.com/rbenv/rbenv.git) | a632465cf4007d0a5b419ed5c5a7bd87349d7b14 | /usr/local/share/rbenv |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | f2c3a7f607b6c24edbf6f6b5953be15a6e2ef10c | /usr/local/share/ruby-build |
 
 **Pip / pipx installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
 | numpy | 1.24.2 |
-| pandas | 1.5.3 |
+| pandas | 2.0.0 |
 | scipy | 1.10.1 |
 | matplotlib | 3.7.1 |
 | seaborn | 0.12.2 |
 | scikit-learn | 1.2.2 |
 | torch | 2.0.0 |
 | requests | 2.28.2 |
-| plotly | 5.13.1 |
+| plotly | 5.14.0 |
 | jupyterlab-git | 0.41.0 |
 | certifi | 2022.12.7 |
-| setuptools | 67.6.0 |
+| setuptools | 67.6.1 |
 | wheel | 0.40.0 |
-| pylint | 2.17.1 |
+| pylint | 2.17.2 |
 | flake8 | 6.0.0 |
 | autopep8 | 2.0.2 |
-| black | 23.1.0 |
+| black | 23.3.0 |
 | yapf | 0.32.0 |
 | mypy | 1.1.1 |
 | pydocstyle | 6.3.0 |
@@ -95,8 +95,6 @@ mcr.microsoft.com/devcontainers/universal:dev
 | Tool / gem | Version |
 |------------|---------|
 | rake | 13.0.6 |
-| ruby-debug-ide | 0.7.3 |
-| debase | 0.2.5.beta2 |
 | jekyll | 4.3.2 |
 
 **Other tools and utilities**

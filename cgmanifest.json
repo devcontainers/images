@@ -72,7 +72,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "setuptools",
-                    "Version": "67.6.0"
+                    "Version": "67.6.1"
                 }
             }
         },
@@ -164,7 +164,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "c08b925d282e35ea7bd9a8f4c29de2ece0debb49"
+                    "commitHash": "d47e1d65f66f9bb2e7a96ba58797b33f0e91a623"
                 }
             }
         },
@@ -264,7 +264,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "b81bc3a83fdbdffe80325eeabb2ec735a1f3c29d"
+                    "commitHash": "19af97cba8ca48474e4ad15a24ed50271a9ecdac"
                 }
             }
         },
@@ -525,7 +525,7 @@
                 "Type": "npm",
                 "Npm": {
                     "Name": "eslint",
-                    "Version": "8.36.0"
+                    "Version": "8.37.0"
                 }
             }
         },
@@ -535,7 +535,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "c08b925d282e35ea7bd9a8f4c29de2ece0debb49"
+                    "commitHash": "d47e1d65f66f9bb2e7a96ba58797b33f0e91a623"
                 }
             }
         },
@@ -638,7 +638,7 @@
                 "Git": {
                     "Name": "rbenv",
                     "repositoryUrl": "https://github.com/rbenv/rbenv.git",
-                    "commitHash": "dd79c11f6c83897e59293dab8d981e1319c067db"
+                    "commitHash": "a632465cf4007d0a5b419ed5c5a7bd87349d7b14"
                 }
             }
         },
@@ -648,7 +648,7 @@
                 "Git": {
                     "Name": "ruby-build",
                     "repositoryUrl": "https://github.com/rbenv/ruby-build.git",
-                    "commitHash": "f3c1ccc33543ec8d469f67cea9c21c6a0364e14e"
+                    "commitHash": "f2c3a7f607b6c24edbf6f6b5953be15a6e2ef10c"
                 }
             }
         },
@@ -695,8 +695,26 @@
             "Component": {
                 "Type": "Pip",
                 "Pip": {
+                    "Name": "setuptools",
+                    "Version": "65.6.3"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "Pip",
+                "Pip": {
+                    "Name": "wheel",
+                    "Version": "0.38.4"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "Pip",
+                "Pip": {
                     "Name": "pylint",
-                    "Version": "2.17.1"
+                    "Version": "2.17.2"
                 }
             }
         },
@@ -723,7 +741,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "black",
-                    "Version": "23.1.0"
+                    "Version": "23.3.0"
                 }
             }
         },
@@ -1083,7 +1101,7 @@
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "rust-analysis",
-                    "Version": "1.68.1"
+                    "Version": "1.68.2"
                 }
             }
         },
@@ -1092,7 +1110,7 @@
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "rust-src",
-                    "Version": "1.68.1"
+                    "Version": "1.68.2"
                 }
             }
         },
@@ -1101,7 +1119,7 @@
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "clippy",
-                    "Version": "1.68.1"
+                    "Version": "1.68.2"
                 }
             }
         },
@@ -1139,7 +1157,7 @@
                 "Type": "npm",
                 "Npm": {
                     "Name": "typescript",
-                    "Version": "5.0.2"
+                    "Version": "5.0.3"
                 }
             }
         },
@@ -1247,7 +1265,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "pandas",
-                    "Version": "1.5.3"
+                    "Version": "2.0.0"
                 }
             }
         },
@@ -1310,7 +1328,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "plotly",
-                    "Version": "5.13.1"
+                    "Version": "5.14.0"
                 }
             }
         },
@@ -1334,29 +1352,11 @@
         },
         {
             "Component": {
-                "Type": "RubyGems",
-                "RubyGems": {
-                    "Name": "ruby-debug-ide",
-                    "Version": "0.7.3"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "RubyGems",
-                "RubyGems": {
-                    "Name": "debase",
-                    "Version": "0.2.5.beta2"
-                }
-            }
-        },
-        {
-            "Component": {
                 "Type": "git",
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "c08b925d282e35ea7bd9a8f4c29de2ece0debb49"
+                    "commitHash": "d47e1d65f66f9bb2e7a96ba58797b33f0e91a623"
                 }
             }
         },
