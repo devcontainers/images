@@ -1,5 +1,5 @@
-# [Choice] Debian OS version (use 2.7-bullseye on local arm64/Apple Silicon): 2.7-bullseye, 2.7-buster
-ARG VARIANT=2.7-bullseye
+# [Choice] Debian OS version (use 3.2-bullseye on local arm64/Apple Silicon): 3.2-bullseye, 3.2-buster
+ARG VARIANT=3.2-bullseye
 FROM mcr.microsoft.com/devcontainers/ruby:${VARIANT}
 
 USER root
