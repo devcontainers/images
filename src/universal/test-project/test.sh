@@ -187,9 +187,6 @@ check "commons-io-lib" bash -c "ls ${MAVEN_PATH} | grep commons-io-2.11.jar"
 wheel_version=$(python -c "import wheel; print(wheel.__version__)")
 check-version-ge "wheel-requirement" "${wheel_version}" "0.38.1"
 
-setuptools_version=$(./usr/local/python/3.9.16/bin/python -c "import setuptools; print(setuptools.__version__)"
-check-version-ge "setuptools-requirement" "${setuptools_version}" "65.5.1"
-
 ls -la /home/codespace
 
 # Report result

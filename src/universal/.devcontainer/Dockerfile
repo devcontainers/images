@@ -103,6 +103,3 @@ RUN if [ -z $DeveloperBuild ]; then \
     else \
         curl -sSL https://aka.ms/getvsdbgsh | bash /dev/stdin -v latest -l /vsdbg ; \
     fi
-
-# Temporary: Upgrade python packages due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40897
-RUN ./usr/local/python/3.9.16/bin/python -m pip install --upgrade setuptools
