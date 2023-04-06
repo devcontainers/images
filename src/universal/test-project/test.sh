@@ -189,5 +189,11 @@ check-version-ge "wheel-requirement" "${wheel_version}" "0.38.1"
 
 ls -la /home/codespace
 
+setuptools_version_py_current=$(python -c "import setuptools; print(setuptools.__version__)")
+check-version-ge "setuptools-requirement-python_current" "${setuptools_version_py_current}" "65.5.1"
+
+setuptools_version_py_39=$(/usr/local/python/3.9.*/bin/python -c "import setuptools; print(setuptools.__version__)")
+check-version-ge "setuptools-requirement-python_39" "${setuptools_version_py_39}" "65.5.1"
+
 # Report result
 reportResults
