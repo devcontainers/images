@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:c8664a5860bb1a2f5d03993fec3676370c1c48c0be535baa91a0fc0e42855c66
+**Digest:** sha256:60cdc3edb36992dec2a3604adfdd5aebcb84957ed0f19046719f7c975876d37a
 
 **Tags:**
 ```
@@ -31,7 +31,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 14978859c5b8d9385c9b836cd09c97cc08b6035b | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9233ef75f28423d147a2f9f64a45a77b1886ee5d | /home/vscode/.oh-my-zsh |
 
 **Pip / pipx installed tools and packages**
 
@@ -46,7 +46,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | setuptools | 67.6.1 |
 | future | 0.18.3 |
 | wheel | 0.40.0 |
-| nbconvert | 7.2.10 |
+| nbconvert | 7.3.1 |
 | py | 1.11.0 |
 
 **Other tools and utilities**
