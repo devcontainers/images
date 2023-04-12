@@ -30,4 +30,5 @@ if [[ "${IMAGE_VARIANT}" =~ "14" ]] ; then
 
     cd /usr/local/lib/node_modules/npm/node_modules/latest-version
     npm install got --save
+    npm install package-json@8 --save
 fi
