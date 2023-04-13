@@ -11,7 +11,7 @@
 
 ## Variant: jammy
 
-**Digest:** sha256:45eaa4c1c2d56413549cde3619a62c065a2edb90aab240b9e270961a95b6fbeb
+**Digest:** sha256:3ceb3844fc3cc053d98940066a6d542a2f9a5ebcc73cd8091323858553814b47
 
 **Tags:**
 ```
@@ -33,7 +33,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d47e1d65f66f9bb2e7a96ba58797b33f0e91a623 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4586808f86bf3bfdf97685380472b63597ce43c0 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -77,7 +77,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 | strace | 5.16-0ubuntu3 |
 | sudo | 1.9.9-1ubuntu2.3 |
 | unzip | 6.0-26ubuntu3.1 |
-| vim-tiny | 2:8.2.3995-1ubuntu2.4 |
+| vim-tiny | 2:8.2.3995-1ubuntu2.5 |
 | wget | 1.21.2-2ubuntu1 |
 | zip | 3.0-12build2 |
 | zlib1g | 1:1.2.11.dfsg-2ubuntu9.2 |
@@ -85,7 +85,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 ## Variant: focal
 
-**Digest:** sha256:d59bddfd2947de324fc87a9d746b18cc64939b14f43a88840b612faf2ec838ae
+**Digest:** sha256:9ccf963398d6bd4d37e056123b5df28913f90663d1e4676b10f86a5c8dd1bc92
 
 **Tags:**
 ```
@@ -106,7 +106,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d47e1d65f66f9bb2e7a96ba58797b33f0e91a623 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4586808f86bf3bfdf97685380472b63597ce43c0 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -153,7 +153,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 | strace | 5.5-3ubuntu1 |
 | sudo | 1.8.31-1ubuntu1.4 |
 | unzip | 6.0-25ubuntu1.1 |
-| vim-tiny | 2:8.1.2269-1ubuntu5.12 |
+| vim-tiny | 2:8.1.2269-1ubuntu5.13 |
 | wget | 1.20.3-1ubuntu2 |
 | zip | 3.0-11build1 |
 | zlib1g | 1:1.2.11.dfsg-2ubuntu1.5 |
@@ -161,7 +161,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 
 ## Variant: bionic
 
-**Digest:** sha256:34a14d0f9a08f86ce250c58abc0f4ac58e218cd6f46ef76c6bddf52cea8d95ad
+**Digest:** sha256:be89e8b9a1c02725d0b7b2051203a1d40cc4857943f51546dad7f9d295860659
 
 **Tags:**
 ```
@@ -182,7 +182,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu18.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d47e1d65f66f9bb2e7a96ba58797b33f0e91a623 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4586808f86bf3bfdf97685380472b63597ce43c0 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -230,7 +230,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu18.04
 | strace | 4.21-1ubuntu1 |
 | sudo | 1.8.21p2-3ubuntu1.5 |
 | unzip | 6.0-21ubuntu1.2 |
-| vim-tiny | 2:8.0.1453-1ubuntu1.11 |
+| vim-tiny | 2:8.0.1453-1ubuntu1.12 |
 | wget | 1.19.4-1ubuntu2.2 |
 | zip | 3.0-11build1 |
 | zlib1g | 1:1.2.11.dfsg-0ubuntu2.2 |
