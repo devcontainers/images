@@ -10,7 +10,7 @@
 
 ## Variant: buster
 
-**Digest:** sha256:a5f512a2bf469b99144a1cea988f4ed43b711c92984822349a4aed82a6642e0a
+**Digest:** sha256:0bbb7d5419168f266017c68853b392ffd09831bf5d212dee7bbfbe1cd11d1f60
 
 **Tags:**
 ```
@@ -30,22 +30,22 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Rust](https://github.com/rust-lang/rust) | 1.68.2 | /usr/local/cargo<br />/usr/local/rustup |
+| [Rust](https://github.com/rust-lang/rust) | 1.69.0 | /usr/local/cargo<br />/usr/local/rustup |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4586808f86bf3bfdf97685380472b63597ce43c0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 91c7ed45a312a71b7d3b856228047ddcd51d4651 | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 
 | Tool / crate | Version |
 |--------------|---------|
-| rustfmt | 1.5.1 |
-| rust-analysis | 1.68.2 |
-| rust-src | 1.68.2 |
-| clippy | 1.68.2 |
+| rustfmt | 1.5.2 |
+| rust-analysis | 1.69.0 |
+| rust-src | 1.69.0 |
+| clippy | 1.69.0 |
 
 **Other tools and utilities**
 
@@ -104,7 +104,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 
 ## Variant: bullseye
 
-**Digest:** sha256:05ddc7896e081f54b35b90e191252bb21dfab04b7aa35d742ab3344cfbdaf7f7
+**Digest:** sha256:655374383417e7e952ad379af2664204abd28c654bab121e022c12c8aecb9e9a
 
 **Tags:**
 ```
@@ -125,22 +125,22 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Rust](https://github.com/rust-lang/rust) | 1.68.2 | /usr/local/cargo<br />/usr/local/rustup |
+| [Rust](https://github.com/rust-lang/rust) | 1.69.0 | /usr/local/cargo<br />/usr/local/rustup |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4586808f86bf3bfdf97685380472b63597ce43c0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 91c7ed45a312a71b7d3b856228047ddcd51d4651 | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 
 | Tool / crate | Version |
 |--------------|---------|
-| rustfmt | 1.5.1 |
-| rust-analysis | 1.68.2 |
-| rust-src | 1.68.2 |
-| clippy | 1.68.2 |
+| rustfmt | 1.5.2 |
+| rust-analysis | 1.69.0 |
+| rust-src | 1.69.0 |
+| clippy | 1.69.0 |
 
 **Other tools and utilities**
 
