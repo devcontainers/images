@@ -9,7 +9,7 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published image* | mcr.microsoft.com/devcontainers/typescript-node |
-| *Available image variants* | 12 / 12-buster, 14 / 14-buster, 16 / 16-buster, 12-bullseye, 14-bullseye, 16-bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/javascript-node/tags/list)) |
+| *Available image variants* | 20 / 20-bullseye, 18 / 18-bullseye, 16 / 16-bullseye, 14 / 14-bullseye, 20-buster, 18-buster, 16-buster, 14-buster ([full list](https://mcr.microsoft.com/v2/devcontainers/typescript-node/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bullseye` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
@@ -20,9 +20,10 @@
 You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
 - `mcr.microsoft.com/devcontainers/typescript-node` (latest)
+- `mcr.microsoft.com/devcontainers/typescript-node:20` (or `20-bullseye`, `20-buster` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/typescript-node:18` (or `18-bullseye`, `18-buster` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/typescript-node:16` (or `16-bullseye`, `16-buster` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/typescript-node:14` (or `14-bullseye`, `14-buster` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/typescript-node:12` (or `12-bullseye`, `12-buster` to pin to an OS version)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
