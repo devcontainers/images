@@ -10,7 +10,7 @@
 
 ## Variant: 3.2-bullseye
 
-**Digest:** sha256:17a632666872efcb88c1722c0012b2e8bc32df8b679fa67d3f859787ab4c1852
+**Digest:** sha256:1fb472bd8e101f526147ccaaf978310463ea8023ad1fdf45ee1d8fe1d99ee32c
 
 **Tags:**
 ```
@@ -38,7 +38,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4586808f86bf3bfdf97685380472b63597ce43c0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 91c7ed45a312a71b7d3b856228047ddcd51d4651 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 | [rbenv](https://github.com/rbenv/rbenv.git) | a632465cf4007d0a5b419ed5c5a7bd87349d7b14 | /usr/local/share/rbenv |
 | [ruby-build](https://github.com/rbenv/ruby-build.git) | 48e927dad83b8b41e32bb718edc82a4a7081a903 | /usr/local/share/ruby-build |
@@ -47,7 +47,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 
 | Tool / gem | Version |
 |------------|---------|
-| bundler | 2.4.10 |
+| bundler | 2.4.12 |
 | jekyll | 4.3.2 |
 | github-pages | 228 |
 
@@ -105,7 +105,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 
 ## Variant: 3.2-buster
 
-**Digest:** sha256:6bb94da2f852364ed8d06117dfb74ea1d714a93be9c62fafb577d90bb7a67390
+**Digest:** sha256:07007898653eb6eceaa1a6f002e731d4891236a374b510b9d9aebab3b4116b65
 
 **Tags:**
 ```
@@ -132,7 +132,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4586808f86bf3bfdf97685380472b63597ce43c0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 91c7ed45a312a71b7d3b856228047ddcd51d4651 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 | [rbenv](https://github.com/rbenv/rbenv.git) | a632465cf4007d0a5b419ed5c5a7bd87349d7b14 | /usr/local/share/rbenv |
 | [ruby-build](https://github.com/rbenv/ruby-build.git) | 48e927dad83b8b41e32bb718edc82a4a7081a903 | /usr/local/share/ruby-build |
@@ -141,7 +141,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-buster
 
 | Tool / gem | Version |
 |------------|---------|
-| bundler | 2.4.10 |
+| bundler | 2.4.12 |
 | jekyll | 4.3.2 |
 | github-pages | 228 |
 

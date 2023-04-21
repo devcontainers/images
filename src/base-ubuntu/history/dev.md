@@ -11,7 +11,7 @@
 
 ## Variant: jammy
 
-**Digest:** sha256:3ceb3844fc3cc053d98940066a6d542a2f9a5ebcc73cd8091323858553814b47
+**Digest:** sha256:52f4c0c615f554f68294255cd678b1a35e45206406909d18381313e8de1f846d
 
 **Tags:**
 ```
@@ -33,7 +33,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4586808f86bf3bfdf97685380472b63597ce43c0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 91c7ed45a312a71b7d3b856228047ddcd51d4651 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -45,8 +45,8 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 | Tool / library | Version |
 |----------------|---------|
-| apt-transport-https | 2.4.8 |
-| apt-utils | 2.4.8 |
+| apt-transport-https | 2.4.9 |
+| apt-utils | 2.4.9 |
 | ca-certificates | 20211016ubuntu0.22.04.1 |
 | curl | 7.81.0-1ubuntu1.10 |
 | dialog | 1.3-20211214-1 |
@@ -75,9 +75,9 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 | psmisc | 23.4-2build3 |
 | rsync | 3.2.7-0ubuntu0.22.04.2 |
 | strace | 5.16-0ubuntu3 |
-| sudo | 1.9.9-1ubuntu2.3 |
+| sudo | 1.9.9-1ubuntu2.4 |
 | unzip | 6.0-26ubuntu3.1 |
-| vim-tiny | 2:8.2.3995-1ubuntu2.5 |
+| vim-tiny | 2:8.2.3995-1ubuntu2.7 |
 | wget | 1.21.2-2ubuntu1 |
 | zip | 3.0-12build2 |
 | zlib1g | 1:1.2.11.dfsg-2ubuntu9.2 |
@@ -85,7 +85,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 ## Variant: focal
 
-**Digest:** sha256:9ccf963398d6bd4d37e056123b5df28913f90663d1e4676b10f86a5c8dd1bc92
+**Digest:** sha256:ab222ab7740584a36101f9e84dcff944a1de5cd95b22cc127526b2ec8f1e409a
 
 **Tags:**
 ```
@@ -106,7 +106,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4586808f86bf3bfdf97685380472b63597ce43c0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 91c7ed45a312a71b7d3b856228047ddcd51d4651 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -151,9 +151,9 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 | psmisc | 23.3-1 |
 | rsync | 3.1.3-8ubuntu0.5 |
 | strace | 5.5-3ubuntu1 |
-| sudo | 1.8.31-1ubuntu1.4 |
+| sudo | 1.8.31-1ubuntu1.5 |
 | unzip | 6.0-25ubuntu1.1 |
-| vim-tiny | 2:8.1.2269-1ubuntu5.13 |
+| vim-tiny | 2:8.1.2269-1ubuntu5.14 |
 | wget | 1.20.3-1ubuntu2 |
 | zip | 3.0-11build1 |
 | zlib1g | 1:1.2.11.dfsg-2ubuntu1.5 |
@@ -161,7 +161,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 
 ## Variant: bionic
 
-**Digest:** sha256:be89e8b9a1c02725d0b7b2051203a1d40cc4857943f51546dad7f9d295860659
+**Digest:** sha256:0b5b6827efface6551c222c39fef406e6a6be83b26bd39d5fdc12e443a70357a
 
 **Tags:**
 ```
@@ -182,7 +182,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu18.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4586808f86bf3bfdf97685380472b63597ce43c0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 91c7ed45a312a71b7d3b856228047ddcd51d4651 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -194,8 +194,8 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu18.04
 
 | Tool / library | Version |
 |----------------|---------|
-| apt-transport-https | 1.6.14 |
-| apt-utils | 1.6.14 |
+| apt-transport-https | 1.6.17 |
+| apt-utils | 1.6.17 |
 | ca-certificates | 20211016ubuntu0.18.04.1 |
 | curl | 7.58.0-2ubuntu3.24 |
 | dialog | 1.3-20171209-1 |
@@ -228,9 +228,9 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu18.04
 | psmisc | 23.1-1ubuntu0.1 |
 | rsync | 3.1.2-2.1ubuntu1.6 |
 | strace | 4.21-1ubuntu1 |
-| sudo | 1.8.21p2-3ubuntu1.5 |
+| sudo | 1.8.21p2-3ubuntu1.6 |
 | unzip | 6.0-21ubuntu1.2 |
-| vim-tiny | 2:8.0.1453-1ubuntu1.12 |
+| vim-tiny | 2:8.0.1453-1ubuntu1.13 |
 | wget | 1.19.4-1ubuntu2.2 |
 | zip | 3.0-11build1 |
 | zlib1g | 1:1.2.11.dfsg-0ubuntu2.2 |

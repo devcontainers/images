@@ -12,7 +12,7 @@
 
 ## Variant: 17-bullseye
 
-**Digest:** sha256:b24c56409bb8d6dcc11826379f2a27a067780991722b6b5c19fd536c0070975a
+**Digest:** sha256:d62d2c8c73e9ad94f034a3e07dcd5e854309babccc750f0211ea48fcfd90e20c
 
 **Tags:**
 ```
@@ -34,13 +34,13 @@ mcr.microsoft.com/devcontainers/java:dev-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 17.0.6 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 17.0.7 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4586808f86bf3bfdf97685380472b63597ce43c0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 91c7ed45a312a71b7d3b856228047ddcd51d4651 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -96,7 +96,7 @@ mcr.microsoft.com/devcontainers/java:dev-bullseye
 
 ## Variant: 17-buster
 
-**Digest:** sha256:c6b37ff826c3d026d4b0716aecff4567087c78ffc8c790dca546eaca4da6aacc
+**Digest:** sha256:a898631a9b32ce89bad270d2773a70c06bcb9f168fdbaec19d129ba981679168
 
 **Tags:**
 ```
@@ -115,13 +115,13 @@ mcr.microsoft.com/devcontainers/java:dev-17-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 17.0.6 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 17.0.7 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4586808f86bf3bfdf97685380472b63597ce43c0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 91c7ed45a312a71b7d3b856228047ddcd51d4651 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -178,7 +178,7 @@ mcr.microsoft.com/devcontainers/java:dev-17-buster
 
 ## Variant: 11-bullseye
 
-**Digest:** sha256:4d282e21929081b3513fb9bad834f343d86e2e2a1ee0b003fcb388fdf07f28e2
+**Digest:** sha256:b6e353973d450d6f1106ddae571393c36443eea05d3e89a5c19e19ec46794b53
 
 **Tags:**
 ```
@@ -199,13 +199,13 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 11.0.18 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 11.0.19 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4586808f86bf3bfdf97685380472b63597ce43c0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 91c7ed45a312a71b7d3b856228047ddcd51d4651 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -261,7 +261,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bullseye
 
 ## Variant: 11-buster
 
-**Digest:** sha256:2e18f58c5d9fd55b6dd4a0c70d2088693905f6a85e33c4659a8f11a0ebe9ca58
+**Digest:** sha256:f2d2ba345015bcf6a8e28aef58d43a6aef43e93cf6074b7b8f3a2ed1b43dcd62
 
 **Tags:**
 ```
@@ -281,13 +281,13 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 11.0.18 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 11.0.19 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4586808f86bf3bfdf97685380472b63597ce43c0 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 91c7ed45a312a71b7d3b856228047ddcd51d4651 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Other tools and utilities**
