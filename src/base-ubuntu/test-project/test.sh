@@ -12,7 +12,7 @@ check "zsh theme symlink" test -e $HOME/.oh-my-zsh/custom/themes/codespaces.zsh-
 check "git" git --version
 
 git_version=$(git --version)
-check-version-ge "git-requirement" "${git_version}" "git version 2.39.2"
+check-version-ge "git-requirement" "${git_version}" "git version 2.40.1"
 
 check "set-git-config-user-name" sh -c "sudo git config --system user.name devcontainers"
 check "gitconfig-file-location" sh -c "ls /etc/gitconfig"
