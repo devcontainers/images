@@ -10,7 +10,7 @@
 
 ## Variant: 3.2-bullseye
 
-**Digest:** sha256:1fb472bd8e101f526147ccaaf978310463ea8023ad1fdf45ee1d8fe1d99ee32c
+**Digest:** sha256:995c360dc5bc8600b08986fd3af323b35769587dacf86a040c89f43ea8c2668d
 
 **Tags:**
 ```
@@ -38,10 +38,10 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 91c7ed45a312a71b7d3b856228047ddcd51d4651 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5d3e86e2a48adf7a308773f8f1b725d187c7c5ef | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 | [rbenv](https://github.com/rbenv/rbenv.git) | a632465cf4007d0a5b419ed5c5a7bd87349d7b14 | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 48e927dad83b8b41e32bb718edc82a4a7081a903 | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 7ed052655b4f8b6441d07a28dc7f176cb849683e | /usr/local/share/ruby-build |
 
 **Ruby gems and tools**
 
@@ -55,7 +55,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.40.0 | 
+| [git](https://github.com/git/git) | 2.40.1 | 
 | [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
 
 **Additional linux tools and packages**
@@ -105,7 +105,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 
 ## Variant: 3.2-buster
 
-**Digest:** sha256:07007898653eb6eceaa1a6f002e731d4891236a374b510b9d9aebab3b4116b65
+**Digest:** sha256:e7e3e9470e4860cf7416f37056a30fb4836013d2c902b392bb6afd7e916bf253
 
 **Tags:**
 ```
@@ -132,10 +132,10 @@ mcr.microsoft.com/devcontainers/jekyll:dev-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 91c7ed45a312a71b7d3b856228047ddcd51d4651 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5d3e86e2a48adf7a308773f8f1b725d187c7c5ef | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 | [rbenv](https://github.com/rbenv/rbenv.git) | a632465cf4007d0a5b419ed5c5a7bd87349d7b14 | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 48e927dad83b8b41e32bb718edc82a4a7081a903 | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 7ed052655b4f8b6441d07a28dc7f176cb849683e | /usr/local/share/ruby-build |
 
 **Ruby gems and tools**
 
@@ -149,7 +149,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-buster
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.40.0 | 
+| [git](https://github.com/git/git) | 2.40.1 | 
 | [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
 
 **Additional linux tools and packages**
@@ -159,7 +159,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-buster
 | apt-transport-https | 1.8.2.3 |
 | apt-utils | 1.8.2.3 |
 | ca-certificates | 20200601~deb10u2 |
-| curl | 7.64.0-4+deb10u5 |
+| curl | 7.64.0-4+deb10u6 |
 | dialog | 1.3-20190211-1 |
 | git | 1:2.20.1-2+deb10u8 |
 | gnupg2 | 2.2.12-1+deb10u2 |

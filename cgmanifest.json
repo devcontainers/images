@@ -54,7 +54,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "numpy",
-                    "Version": "1.24.2"
+                    "Version": "1.24.3"
                 }
             }
         },
@@ -72,7 +72,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "setuptools",
-                    "Version": "67.7.0"
+                    "Version": "67.7.2"
                 }
             }
         },
@@ -143,7 +143,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "git",
-                    "Version": "2.40.0",
+                    "Version": "2.40.1",
                     "DownloadUrl": "https://github.com/git/git"
                 }
             }
@@ -164,7 +164,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "91c7ed45a312a71b7d3b856228047ddcd51d4651"
+                    "commitHash": "5d3e86e2a48adf7a308773f8f1b725d187c7c5ef"
                 }
             }
         },
@@ -264,7 +264,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "95252eadd63118201b0d0df0b4360fa613f0de84"
+                    "commitHash": "b669595870177598587d3ff67e675f4f9213fe82"
                 }
             }
         },
@@ -274,27 +274,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "2b1757dd1d5ed7d9d5bb65fd8316631b157e7afc"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "git",
-                "Git": {
-                    "Name": "vcpkg",
-                    "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "829e2f5646c79e13d918c1ad122f701d2476cee4"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "git",
-                "Git": {
-                    "Name": "vcpkg",
-                    "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "8f6490446e650b392a914211211362879cf9b608"
+                    "commitHash": "5787cfa699a75805ef41938ec66bc7492714d290"
                 }
             }
         },
@@ -545,7 +525,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Eclipse Temurin",
-                    "Version": "1.8.0_362",
+                    "Version": "1.8.0_372",
                     "DownloadUrl": "https://adoptium.net/"
                 }
             }
@@ -555,7 +535,7 @@
                 "Type": "npm",
                 "Npm": {
                     "Name": "eslint",
-                    "Version": "8.38.0"
+                    "Version": "8.39.0"
                 }
             }
         },
@@ -565,7 +545,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "91c7ed45a312a71b7d3b856228047ddcd51d4651"
+                    "commitHash": "5d3e86e2a48adf7a308773f8f1b725d187c7c5ef"
                 }
             }
         },
@@ -698,7 +678,7 @@
                 "Git": {
                     "Name": "ruby-build",
                     "repositoryUrl": "https://github.com/rbenv/ruby-build.git",
-                    "commitHash": "48e927dad83b8b41e32bb718edc82a4a7081a903"
+                    "commitHash": "7ed052655b4f8b6441d07a28dc7f176cb849683e"
                 }
             }
         },
@@ -764,7 +744,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "pylint",
-                    "Version": "2.17.2"
+                    "Version": "2.17.3"
                 }
             }
         },
@@ -1216,6 +1196,16 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Image: node",
+                    "Version": "20-bullseye",
+                    "DownloadUrl": "https://hub.docker.com/_/node"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: node",
                     "Version": "18-bullseye",
                     "DownloadUrl": "https://hub.docker.com/_/node"
                 }
@@ -1237,6 +1227,16 @@
                 "Other": {
                     "Name": "Docker Image: node",
                     "Version": "14-bullseye",
+                    "DownloadUrl": "https://hub.docker.com/_/node"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: node",
+                    "Version": "20-buster",
                     "DownloadUrl": "https://hub.docker.com/_/node"
                 }
             }
@@ -1315,7 +1315,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "pandas",
-                    "Version": "2.0.0"
+                    "Version": "2.0.1"
                 }
             }
         },
@@ -1406,7 +1406,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "91c7ed45a312a71b7d3b856228047ddcd51d4651"
+                    "commitHash": "5d3e86e2a48adf7a308773f8f1b725d187c7c5ef"
                 }
             }
         },
@@ -1465,7 +1465,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "GitHub CLI",
-                    "Version": "2.27.0",
+                    "Version": "2.28.0",
                     "DownloadUrl": "https://github.com/cli/cli"
                 }
             }

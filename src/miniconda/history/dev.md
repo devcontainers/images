@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/miniconda)
 
-**Digest:** sha256:4878560914b23d80aea9157c1303fe2fcc3338b0acf7361a8c66b58922bc9d2a
+**Digest:** sha256:957103c9db7935e0802407d1876b2a5c6451fd039ea1c93c7d7e08de949c5e63
 
 **Tags:**
 ```
@@ -39,7 +39,7 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | cryptography | 39.0.1 |
 | setuptools | 66.0.0 |
 | wheel | 0.38.4 |
-| pylint | 2.17.2 |
+| pylint | 2.17.3 |
 | flake8 | 6.0.0 |
 | autopep8 | 2.0.2 |
 | black | 23.3.0 |
@@ -55,7 +55,7 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.40.0 | 
+| [git](https://github.com/git/git) | 2.40.1 | 
 | [conda](https://github.com/conda/conda) | 23.3.1 | /opt/conda |
 
 **Additional linux tools and packages**
