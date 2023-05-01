@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/miniconda)
 
-**Digest:** sha256:4878560914b23d80aea9157c1303fe2fcc3338b0acf7361a8c66b58922bc9d2a
+**Digest:** sha256:29204425ff81c89e8f3727ff397f03fe9a995b0321b2a3680dea514d78369e09
 
 **Tags:**
 ```
@@ -29,7 +29,7 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9233ef75f28423d147a2f9f64a45a77b1886ee5d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5d3e86e2a48adf7a308773f8f1b725d187c7c5ef | /home/vscode/.oh-my-zsh |
 
 **Pip / pipx installed tools and packages**
 
@@ -39,7 +39,7 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | cryptography | 39.0.1 |
 | setuptools | 66.0.0 |
 | wheel | 0.38.4 |
-| pylint | 2.17.2 |
+| pylint | 2.17.3 |
 | flake8 | 6.0.0 |
 | autopep8 | 2.0.2 |
 | black | 23.3.0 |
@@ -48,14 +48,14 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.10.0 |
 | bandit | 1.7.5 |
-| virtualenv | 20.22.0 |
+| virtualenv | 20.23.0 |
 | pipx | 1.2.0 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.40.0 | 
+| [git](https://github.com/git/git) | 2.40.1 | 
 | [conda](https://github.com/conda/conda) | 23.3.1 | /opt/conda |
 
 **Additional linux tools and packages**
@@ -73,14 +73,14 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
 | less | 551-2 |
-| libc6 | 2.31-13+deb11u5 |
+| libc6 | 2.31-13+deb11u6 |
 | libgssapi-krb5-2 | 1.18.3-6+deb11u3 |
 | libicu67 | 67.1-7 |
 | libkrb5-3 | 1.18.3-6+deb11u3 |
 | liblttng-ust0 | 2.12.1-1 |
 | libssl1.1 | 1.1.1n-0+deb11u4 |
 | libstdc++6 | 10.2.1-6 |
-| locales | 2.31-13+deb11u5 |
+| locales | 2.31-13+deb11u6 |
 | lsb-release | 11.1.0 |
 | lsof | 4.93.2+dfsg-1.1 |
 | man-db | 2.9.4-2 |
