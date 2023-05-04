@@ -1,11 +1,8 @@
-# [Choice] Node.js version (use -bullseye variants on local arm64/Apple Silicon): 20, 18, 16, 14, 20-bullseye, 18-bullseye, 16-bullseye, 14-bullseye, 20-buster, 18-buster, 16-buster, 14-buster
+# [Choice] Node.js version (use -bullseye variants on local arm64/Apple Silicon): 20, 18, 16, 20-bullseye, 18-bullseye, 16-bullseye, 20-buster, 18-buster, 16-buster
 ARG VARIANT=20-bullseye
 FROM node:${VARIANT}
 
-ENV IMAGE_VARIANT="20-bullseye"
-
 COPY library-scripts/add-patch.sh /tmp/library-scripts/
-RUN bash /tmp/library-scripts/add-patch.sh "${IMAGE_VARIANT}" && rm -rf /tmp/library-scripts
 
 ARG USERNAME=node
 ARG NPM_GLOBAL=/usr/local/share/npm-global

@@ -83,10 +83,9 @@ async function prepDockerFile(devContainerDockerfilePath, definitionId, repo, re
             prepResult.devContainerDockerfileModified = replaceFrom(prepResult.devContainerDockerfileModified, `FROM ${prepResult.flattenedBaseImageTag}`);
         }
 
-        // Add variant & image_variant as an argument to the dockerfile
+        // Add variant as an argument to the dockerfile
         if (variant) {
             replaceVariantArg(prepResult);
-            replaceImageVariantEnv(prepResult);
         }
 
         // Generate list of other arguments if applicable and add to the dockefile
@@ -245,13 +244,6 @@ function addBuildArguments(prepResult) {
         }
     }
 
-    return prepResult.devContainerDockerfileModified;
-}
-
-function replaceImageVariantEnv(prepResult) {
-    const variantArg = `ENV IMAGE_VARIANT="${prepResult.meta.variant}"\n`;
-
-    prepResult.devContainerDockerfileModified = (prepResult.devContainerDockerfileModified).replace(new RegExp(".*ENV IMAGE_VARIANT=.*"), variantArg);
     return prepResult.devContainerDockerfileModified;
 }
 

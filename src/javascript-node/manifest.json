@@ -4,11 +4,9 @@
 		"20-bullseye",
 		"18-bullseye",
 		"16-bullseye",
-		"14-bullseye",
 		"20-buster",
 		"18-buster",
-		"16-buster",
-		"14-buster"
+		"16-buster"
 	],
 	"build": {
 		"latest": "20-bullseye",
@@ -26,10 +24,6 @@
 				"linux/amd64",
 				"linux/arm64"
 			],
-			"14-bullseye": [
-				"linux/amd64",
-				"linux/arm64"
-			],
 			"20-buster": [
 				"linux/amd64"
 			],
@@ -37,9 +31,6 @@
 				"linux/amd64"
 			],
 			"16-buster": [
-				"linux/amd64"
-			],
-			"14-buster": [
 				"linux/amd64"
 			]
 		},
@@ -56,9 +47,6 @@
 			],
 			"16-bullseye": [
 				"javascript-node:${VERSION}-16"
-			],
-			"14-bullseye": [
-				"javascript-node:${VERSION}-14"
 			],
 			"20-buster": [
 				"javascript-node:${VERSION}-buster"

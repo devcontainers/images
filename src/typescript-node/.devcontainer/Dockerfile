@@ -1,4 +1,4 @@
-# [Choice] Node.js version (use -bullseye variants on local arm64/Apple Silicon): 20, 18, 16, 14, 20-bullseye, 18-bullseye, 16-bullseye, 14-bullseye, 20-buster, 18-buster, 16-buster, 14-buster
+# [Choice] Node.js version (use -bullseye variants on local arm64/Apple Silicon): 20, 18, 16, 20-bullseye, 18-bullseye, 16-bullseye, 20-buster, 18-buster, 16-buster
 ARG VARIANT=20-bullseye
 FROM mcr.microsoft.com/devcontainers/javascript-node:0-${VARIANT}
 

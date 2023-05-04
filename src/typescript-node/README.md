@@ -9,7 +9,7 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published image* | mcr.microsoft.com/devcontainers/typescript-node |
-| *Available image variants* | 20 / 20-bullseye, 18 / 18-bullseye, 16 / 16-bullseye, 14 / 14-bullseye, 20-buster, 18-buster, 16-buster, 14-buster ([full list](https://mcr.microsoft.com/v2/devcontainers/typescript-node/tags/list)) |
+| *Available image variants* | 20 / 20-bullseye, 18 / 18-bullseye, 16 / 16-bullseye, 20-buster, 18-buster, 16-buster ([full list](https://mcr.microsoft.com/v2/devcontainers/typescript-node/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bullseye` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
@@ -23,15 +23,14 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 - `mcr.microsoft.com/devcontainers/typescript-node:20` (or `20-bullseye`, `20-buster` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/typescript-node:18` (or `18-bullseye`, `18-buster` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/typescript-node:16` (or `16-bullseye`, `16-buster` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/typescript-node:14` (or `14-bullseye`, `14-buster` to pin to an OS version)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/devcontainers/typescript-node:0-14` (or `0-14-bullseye`, `0-14-buster`)
-- `mcr.microsoft.com/devcontainers/typescript-node:0.204-14` (or `0.203-14-bullseye`, `0.203-14-buster`)
-- `mcr.microsoft.com/devcontainers/typescript-node:0.204.0-14` (or `0.203.0-14-bullseye`, `0.203.0-14-buster`)
+- `mcr.microsoft.com/devcontainers/typescript-node:0-20` (or `0-20-bullseye`, `0-20-buster`)
+- `mcr.microsoft.com/devcontainers/typescript-node:0.205-20` (or `0.205-20-bullseye`, `0.205-20-buster`)
+- `mcr.microsoft.com/devcontainers/typescript-node:0.205.1-20` (or `0.205.1-20-bullseye`, `0.205.1-20-buster`)
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `0-1.16`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
