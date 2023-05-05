@@ -18,7 +18,8 @@ fi
 # If we don't already have Jekyll installed, install it now.
 if ! jekyll --version > /dev/null ; then
     echo "Installing Jekyll..."
-    
+
+    RUBY_VERSION_MANAGER_DIR="/usr/local/rvm/"
     GEMS_DIR=/usr/local/rvm/rubies/default/bin
     PATH=$GEMS_DIR/gem:$PATH
     if [ "${VERSION}" = "latest" ]; then
@@ -27,7 +28,7 @@ if ! jekyll --version > /dev/null ; then
         gem install jekyll -v "${VERSION}"
     fi
 
-    chown -R "${USERNAME}:rvm" "${GEMS_DIR}/"
-    chmod -R g+r+w "${GEMS_DIR}/"
-    find "${GEMS_DIR}" -type d | xargs -n 1 chmod g+s
+    chown -R "${USERNAME}:rvm" "${RUBY_VERSION_MANAGER_DIR}"
+    chmod -R g+r+w "${RUBY_VERSION_MANAGER_DIR}"
+    find "${RUBY_VERSION_MANAGER_DIR}" -type d | xargs -n 1 chmod g+s
 fi
