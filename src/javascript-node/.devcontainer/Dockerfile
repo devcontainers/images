@@ -2,8 +2,6 @@
 ARG VARIANT=20-bullseye
 FROM node:${VARIANT}
 
-COPY library-scripts/add-patch.sh /tmp/library-scripts/
-
 ARG USERNAME=node
 ARG NPM_GLOBAL=/usr/local/share/npm-global
 
