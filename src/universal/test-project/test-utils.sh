@@ -179,3 +179,20 @@ checkVersionCount() {
         return 1
     fi
 }
+
+checkDirectoryOwnership() {
+    LABEL=$1
+    targetDirectory=$2
+    expectedOwnership=$3
+
+    directoryOwnership=$(stat -c "%U:%G" ${targetDirectory})
+
+    if [ "$expectedOwnership" == "$directoryOwnership" ]; then
+        echo "✅  Passed!"
+        return 0
+    else
+        echoStderr "❌ $LABEL check failed. Expected ownership: ${expectedOwnership} - Got: ${directoryOwnership}"
+        FAILED+=("$LABEL")
+        return 1
+    fi
+}
