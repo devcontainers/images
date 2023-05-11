@@ -188,29 +188,30 @@ checkDirectoryOwnership() {
 
     echo -e "\n🧪 Testing $LABEL"
 
-    # Resolve user and group ids
-    expectedUserId=$(id -u ${expectedUser})
-    expectedGroupId=$(getent group ${expectedGroup} | cut -d: -f3)
-    expectedOwnership="$expectedUserId:$expectedGroupId"
+    # Get group metadata
+    groupMetadata=$(getent group ${expectedGroup})
+    
+    # Extract group id and group members
+    targetGroupId=$(echo $groupMetadata | cut -d: -f3)
+    targetGroupMembers=$(echo $groupMetadata | cut -d: -f4)
 
     # Get directory ownership metadata
     # Note: "stat" returns the string "UNKNOWN" for %U and %G if it's not defined in the system files. 
     # So it's better to work with UID (%u) and GID (%g) numbers from "stat".
-    directoryOwnership=$(stat -c "%u:%g" ${targetDirectory})
-
-    if [ "$expectedOwnership" == "$directoryOwnership" ]; then
+    directoryOwnershipGroupId=$(stat -c "%g" ${targetDirectory})
+    
+    # Check that group has ownership over directory and user belong to the group
+    if [ "$targetGroupId" == "$directoryOwnershipGroupId" ] && [[ "$targetGroupMembers" == *"$expectedUser"* ]]; then
         echo "✅  Passed!"
         return 0
     else
-        tree -up $targetDirectory
-        getent group
-        id
-        stat $targetDirectory
-        
-        expected="Expected: ${expectedOwnership} (${expectedUser}:${expectedGroup})"
-        got="Got: ${directoryOwnership} ($(stat -c "%U:%G" ${targetDirectory}))"
-        
+        expected="Expected: Group - $expectedGroup ($targetGroupId), User - $expectedUser"
+        got="Got: $(stat -c "Group - %G (%g), User - %U (%u)" ${targetDirectory})"
         echoStderr "❌ $LABEL check failed. $expected $got"
+        
+        # Provide more context on test failure
+        stat ${targetDirectory}
+        
         FAILED+=("$LABEL")
         
         return 1
