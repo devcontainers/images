@@ -202,10 +202,17 @@ checkDirectoryOwnership() {
         echo "✅  Passed!"
         return 0
     else
+        tree -up $targetDirectory
+        getent group
+        id
+        stat $targetDirectory
+        
         expected="Expected: ${expectedOwnership} (${expectedUser}:${expectedGroup})"
         got="Got: ${directoryOwnership} ($(stat -c "%U:%G" ${targetDirectory}))"
+        
         echoStderr "❌ $LABEL check failed. $expected $got"
         FAILED+=("$LABEL")
+        
         return 1
     fi
 }
