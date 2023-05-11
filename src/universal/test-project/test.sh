@@ -84,6 +84,9 @@ count=$(ls /usr/local/rvm/gems | wc -l)
 expectedCount=6 # 2 version folders + 2 global folders for each version + 1 default folder which links to either one of the version + 1 cache folder
 checkVersionCount "two versions of ruby are present" $count $expectedCount
 echo $(echo "ruby versions" && ls -a /usr/local/rvm/rubies)
+rvmExtensions="/usr/local/rvm/gems/default/extensions"
+rvmPlatform=$(rvm info default ruby | grep -w "platform" | cut -d'"' -f 2)
+checkDirectoryOwnership "codespace user has ownership over extension directory" "$rvmExtensions/$rvmPlatform" "codespace" "rvm"
 
 # Node.js
 check "node" node --version

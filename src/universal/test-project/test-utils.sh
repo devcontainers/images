@@ -179,3 +179,41 @@ checkVersionCount() {
         return 1
     fi
 }
+
+checkDirectoryOwnership() {
+    LABEL=$1
+    targetDirectory=$2
+    expectedUser=$3
+    expectedGroup=$4
+
+    echo -e "\n🧪 Testing $LABEL"
+
+    # Get group metadata
+    groupMetadata=$(getent group ${expectedGroup})
+    
+    # Extract group id and group members
+    targetGroupId=$(echo $groupMetadata | cut -d: -f3)
+    targetGroupMembers=$(echo $groupMetadata | cut -d: -f4)
+
+    # Get directory ownership metadata
+    # Note: "stat" returns the string "UNKNOWN" for %U and %G if it's not defined in the system files. 
+    # So it's better to work with UID (%u) and GID (%g) numbers from "stat".
+    directoryOwnershipGroupId=$(stat -c "%g" ${targetDirectory})
+    
+    # Check that group has ownership over directory and user belong to the group
+    if [ "$targetGroupId" == "$directoryOwnershipGroupId" ] && [[ "$targetGroupMembers" == *"$expectedUser"* ]]; then
+        echo "✅  Passed!"
+        return 0
+    else
+        expected="Expected: Group - $expectedGroup ($targetGroupId), User - $expectedUser"
+        got="Got: $(stat -c "Group - %G (%g), User - %U (%u)" ${targetDirectory})"
+        echoStderr "❌ $LABEL check failed. $expected $got"
+        
+        # Provide more context on test failure
+        stat ${targetDirectory}
+        
+        FAILED+=("$LABEL")
+        
+        return 1
+    fi
+}

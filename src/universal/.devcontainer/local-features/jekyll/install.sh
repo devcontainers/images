@@ -30,4 +30,11 @@ if ! jekyll --version > /dev/null ; then
     chown -R "${USERNAME}:rvm" "${GEMS_DIR}/"
     chmod -R g+r+w "${GEMS_DIR}/"
     find "${GEMS_DIR}" -type d | xargs -n 1 chmod g+s
+
+    # Make sure the user has the necessary permissions to install the gems
+    RVM_GEMS_DIR=/usr/local/rvm/gems/default/extensions
+    
+    chown -R "${USERNAME}:rvm" "${RVM_GEMS_DIR}/"
+    chmod -R g+r+w "${RVM_GEMS_DIR}/"
+    find "${RVM_GEMS_DIR}" -type d | xargs -n 1 chmod g+s
 fi
