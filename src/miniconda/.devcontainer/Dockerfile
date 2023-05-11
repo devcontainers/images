@@ -47,8 +47,6 @@ COPY environment.yml* noop.txt /tmp/conda-tmp/
 RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then umask 0002 && /opt/conda/bin/conda env update -n base -f /tmp/conda-tmp/environment.yml; fi \
     && rm -rf /tmp/conda-tmp
 
-USER vscode
-
 # Temporary: Upgrade python packages due to mentioned CVEs
 # They are installed by the base image (continuumio/miniconda3) which does not have the patch.
 RUN python3 -m conda update -y \
