@@ -57,7 +57,9 @@ RUN python3 -m pip install \
     # https://github.com/devcontainers/images/issues/486
     pyOpenssl \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-25577
-    werkzeug
+    werkzeug \
+    # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32862
+    nbconvert
 
 # Update, change owner
 RUN groupadd -r conda --gid 900 \
