@@ -3,12 +3,6 @@ FROM continuumio/anaconda3 as upstream
 # Verify OS version is expected one
 RUN . /etc/os-release && if [ "${VERSION_CODENAME}" != "bullseye" ]; then exit 1; fi
 
-# Update, change owner
-RUN groupadd -r conda --gid 900 \
-    && chown -R :conda /opt/conda \
-    && chmod -R g+w /opt/conda \
-    && find /opt -type d | xargs -n 1 chmod g+s
-
 # Reset and copy updated files with updated privs to keep image size down
 FROM mcr.microsoft.com/devcontainers/base:0-bullseye
 COPY --from=upstream /opt /opt/
@@ -47,8 +41,6 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh \
     && echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc \
     && echo "conda activate base" >> ~/.bashrc \
-    && groupadd -r conda --gid 900 \
-    && usermod -aG conda ${USERNAME} \
     && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts/add-notice.sh
 
 # Temporary: Upgrade python packages due to mentioned CVEs
@@ -58,26 +50,21 @@ RUN python3 -m pip install \
     --upgrade joblib \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24065
     cookiecutter \
-    # https://github.com/advisories/GHSA-39hc-v87j-747x
-    cryptography \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-34749
     mistune \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-34141
     numpy \
-    # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-23491
-    certifi \
-    # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40897
-    setuptools \
-    # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40899
-    future \
-    # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40898
-    wheel \
-    # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32862
-    nbconvert \
     # https://github.com/devcontainers/images/issues/486
     pyOpenssl \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-25577
     werkzeug
+
+# Update, change owner
+RUN groupadd -r conda --gid 900 \
+    && chown -R :conda /opt/conda \
+    && chmod -R g+w /opt/conda \
+    && find /opt -type d | xargs -n 1 chmod g+s \
+    && usermod -aG conda ${USERNAME}
 
 # Copy environment.yml (if found) to a temp location so we can update the environment. Also
 # copy "noop.txt" so the COPY instruction does not fail if no environment.yml exists.
