@@ -61,13 +61,6 @@ RUN python3 -m pip install \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32862
     nbconvert
 
-# Update, change owner
-RUN groupadd -r conda --gid 900 \
-    && chown -R :conda /opt/conda \
-    && chmod -R g+w /opt/conda \
-    && find /opt -type d | xargs -n 1 chmod g+s \
-    && usermod -aG conda ${USERNAME}
-
 # Copy environment.yml (if found) to a temp location so we can update the environment. Also
 # copy "noop.txt" so the COPY instruction does not fail if no environment.yml exists.
 # COPY environment.yml* .devcontainer/noop.txt /tmp/conda-tmp/
@@ -78,3 +71,13 @@ RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then umask 0002 && /opt/conda/bi
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
+
+# Create conda group, update conda directory permissions, 
+# add user to conda group
+# Note: We need to execute these commands after pip install / conda update 
+# since pip doesn't preserve directory permissions
+RUN groupadd -r conda --gid 900 \
+    && chown -R :conda /opt/conda \
+    && chmod -R g+w /opt/conda \
+    && find /opt -type d | xargs -n 1 chmod g+s \
+    && usermod -aG conda ${USERNAME}
