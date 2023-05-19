@@ -1,11 +1,5 @@
 FROM continuumio/miniconda3 as upstream
 
-# Update, change owner
-RUN groupadd -r conda --gid 900 \
-    && chown -R :conda /opt/conda \
-    && chmod -R g+w /opt/conda \
-    && find /opt -type d | xargs -n 1 chmod g+s
-
 # Reset and copy updated files with updated privs to keep image size down
 FROM mcr.microsoft.com/devcontainers/base:0-bullseye
 USER root
@@ -37,8 +31,6 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh \
     && echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc \
     && echo "conda activate base" >> ~/.bashrc \
-    && groupadd -r conda --gid 900 \
-    && usermod -aG conda ${USERNAME} \
     && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts/add-notice.sh
 
 # Copy environment.yml (if found) to a temp locaition so we update the environment. Also
@@ -47,16 +39,20 @@ COPY environment.yml* noop.txt /tmp/conda-tmp/
 RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then umask 0002 && /opt/conda/bin/conda env update -n base -f /tmp/conda-tmp/environment.yml; fi \
     && rm -rf /tmp/conda-tmp
 
-# Temporary: Upgrade python packages due to mentioned CVEs
-# They are installed by the base image (continuumio/miniconda3) which does not have the patch.
-RUN python3 -m conda update -y \
-    # https://github.com/advisories/GHSA-39hc-v87j-747x
-    cryptography \
-    # https://github.com/advisories/GHSA-r9hx-vwmv-q579
-    setuptools \
-    # https://github.com/advisories/GHSA-qwmp-2cf2-g9g6
-    wheel
+# [Optional] Uncomment this section to install updates/additional Python packages.
+# RUN python3 -m conda update -y \
+#     <your-package-list-here>
 
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
+
+# Create conda group, update conda directory permissions, 
+# add user to conda group
+# Note: We need to execute these commands after pip install / conda update 
+# since pip doesn't preserve directory permissions
+RUN groupadd -r conda --gid 900 \
+    && chown -R :conda /opt/conda \
+    && chmod -R g+w /opt/conda \
+    && find /opt -type d | xargs -n 1 chmod g+s \
+    && usermod -aG conda ${USERNAME}
