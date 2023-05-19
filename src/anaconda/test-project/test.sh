@@ -63,5 +63,8 @@ check "conda-install" bash -c "conda install -c conda-forge --yes pytorch"
 werkzeug_version=$(python -c "import werkzeug; print(werkzeug.__version__)")
 check-version-ge "werkzeug-requirement" "${werkzeug_version}" "2.2.3"
 
+certifi_version=$(python -c "import certifi; print(certifi.__version__)")
+check-version-ge "certifi-requirement" "${certifi_version}" "2022.12.07"
+
 # Report result
 reportResults
