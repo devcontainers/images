@@ -1,5 +1,5 @@
 {
-	"version": "0.202.11",
+	"version": "0.202.25",
 	"build": {
 		"latest": true,
 		"rootDistro": "debian",
@@ -23,7 +23,23 @@
 		"git": {
 			"Oh My Zsh!": "/home/vscode/.oh-my-zsh"
 		},
+		"pip": [
+			"joblib",
+			"cookiecutter",
+			"cryptography",
+			"mistune",
+			"numpy",
+			"certifi",
+			"setuptools",
+			"future",
+			"wheel",
+			"nbconvert",
+			"py",
+			"pyOpenssl",
+			"werkzeug"
+		],
 		"other": {
+			"git": {},
 			"conda": {
 				"cgIgnore": true,
 				"path": "/opt/conda"

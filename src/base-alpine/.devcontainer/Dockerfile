@@ -1,17 +1,12 @@
-# [Choice] Alpine version: 3.16, 3.15, 3.14, 3.13
-ARG VARIANT=3.16
+# [Choice] Alpine version: 3.17, 3.16, 3.15
+ARG VARIANT=3.17
 FROM alpine:${VARIANT}
 
-# [Option] Install zsh
-ARG INSTALL_ZSH="true"
+ARG VARIANT
 
-# Install needed packages and setup non-root user. Use a separate RUN statement to add your own dependencies.
-ARG USERNAME=vscode
-ARG USER_UID=1000
-ARG USER_GID=$USER_UID
-COPY library-scripts/*.sh /tmp/library-scripts/
-RUN apk update && ash /tmp/library-scripts/common-alpine.sh "${INSTALL_ZSH}" "${USERNAME}" "${USER_UID}" "${USER_GID}" && rm -rf /tmp/library-scripts
-
-# ** [Optional] Uncomment this section to install additional packages. **
-# RUN apk update \
-#     && apk add --no-cache <your-package-list-here>
+# Temporary: Upgrade packages due to mentioned CVEs
+RUN if [[ "$VARIANT" == "3.15" ]]; then \
+        apk update \
+        # https://security.alpinelinux.org/vuln/CVE-2023-27320
+        && apk add sudo>=1.9.12-r1 --repository https://dl-cdn.alpinelinux.org/alpine/latest-stable/community ; \
+    fi

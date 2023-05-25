@@ -1,5 +1,5 @@
 {
-	"version": "2.0.19",
+	"version": "2.3.1",
 	"build": {
 		"latest": true,
 		"rootDistro": "debian",
@@ -114,16 +114,16 @@
 			"matplotlib",
 			"seaborn",
 			"scikit-learn",
-			"tensorflow",
-			"keras",
 			"torch",
 			"requests",
-			"plotly"
+			"plotly",
+			"jupyterlab-git",
+			"certifi",
+			"setuptools",
+			"wheel"
 		],
 		"other": {
-			"git": {
-				"path": "/usr/bin"
-			},
+			"git": {},
 			"Xdebug": {
 				"path": "/usr/local/php/current"
 			},

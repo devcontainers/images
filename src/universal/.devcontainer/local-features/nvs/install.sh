@@ -50,9 +50,6 @@ updaterc() {
 
 export DEBIAN_FRONTEND=noninteractive
 
-# Install dependencies
-check_packages git
-
 if ! cat /etc/group | grep -e "^nvs:" > /dev/null 2>&1; then
     groupadd -r nvs
 fi

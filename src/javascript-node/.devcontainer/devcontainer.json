@@ -4,18 +4,19 @@
 		"dockerfile": "Dockerfile"
 	},
 	"features": {
-		"ghcr.io/devcontainers/features/common-utils:1": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
 			"installZsh": "true",
 			"username": "node",
 			"upgradePackages": "true"
 		},
 		"ghcr.io/devcontainers/features/node:1": {
 			"version": "none"
-		}
+		},
+		"ghcr.io/devcontainers/features/git:1": {
+            "version": "latest",
+            "ppa": "false"
+        }
 	},
-	"overrideFeatureInstallOrder": [
-		"ghcr.io/devcontainers/features/common-utils"
-	],
 
 	// Configure tool-specific properties.
 	"customizations": {
@@ -34,6 +35,6 @@
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "yarn install",
 
-	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	// Set `remoteUser` to `root` to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "node"
 }

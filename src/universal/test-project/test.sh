@@ -6,6 +6,17 @@ source test-utils.sh codespace
 # Run common tests
 checkCommon
 
+check "git" git --version
+
+git_version=$(git --version)
+check-version-ge "git-requirement" "${git_version}" "git version 2.40.1"
+
+check "set-git-config-user-name" sh -c "sudo git config --system user.name devcontainers"
+check "gitconfig-file-location" sh -c "ls /etc/gitconfig"
+check "gitconfig-contains-name" sh -c "cat /etc/gitconfig | grep 'name = devcontainers'"
+
+check "usr-local-etc-config-does-not-exist" test ! -f "/usr/local/etc/gitconfig"
+
 # Check .NET
 check "dotnet" dotnet --list-sdks
 count=$(ls /usr/local/dotnet | wc -l)
@@ -40,14 +51,17 @@ check "scipy" python -c "import scipy; print(scipy.__version__)"
 check "matplotlib" python -c "import matplotlib; print(matplotlib.__version__)"
 check "seaborn" python -c "import seaborn; print(seaborn.__version__)"
 check "scikit-learn" python -c "import sklearn; print(sklearn.__version__)"
-check "tensorflow" python -c "import tensorflow; print(tensorflow.__version__)"
-check "keras" python -c "import keras; print(keras.__version__)"
 check "torch" python -c "import torch; print(torch.__version__)"
 check "requests" python -c "import requests; print(requests.__version__)"
+check "jupyterlab-git" bash -c "python3 -m pip list | grep jupyterlab-git"
+
+setuptools_version=$(python3 -c "import setuptools; print(setuptools.__version__)")
+check-version-ge "setuptools-requirement" "${setuptools_version}" "65.5.1"
 
 # Check JupyterLab
 check "jupyter-lab" jupyter-lab --version
 check "jupyter-lab config" grep ".*.allow_origin = '*'" /home/codespace/.jupyter/jupyter_server_config.py
+check "jupyter-lab kernel" test -d "/home/codespace/.python/current/bin"
 
 # Check Java tools
 check "java" java -version
@@ -70,6 +84,9 @@ count=$(ls /usr/local/rvm/gems | wc -l)
 expectedCount=6 # 2 version folders + 2 global folders for each version + 1 default folder which links to either one of the version + 1 cache folder
 checkVersionCount "two versions of ruby are present" $count $expectedCount
 echo $(echo "ruby versions" && ls -a /usr/local/rvm/rubies)
+rvmExtensions="/usr/local/rvm/gems/default/extensions"
+rvmPlatform=$(rvm info default ruby | grep -w "platform" | cut -d'"' -f 2)
+checkDirectoryOwnership "codespace user has ownership over extension directory" "$rvmExtensions/$rvmPlatform" "codespace" "rvm"
 
 # Node.js
 check "node" node --version
@@ -115,7 +132,7 @@ check "fish" fish --version
 check "zsh" zsh --version
 
 # Check env variable
-check "RAILS_DEVELOPMENT_HOSTS is set correctly" echo $RAILS_DEVELOPMENT_HOSTS | grep ".githubpreview.dev,.app.github.dev"
+check "RAILS_DEVELOPMENT_HOSTS is set correctly" echo $RAILS_DEVELOPMENT_HOSTS | grep ".githubpreview.dev,.preview.app.github.dev,.app.github.dev"
 
 # Check that we can run a puppeteer node app.
 yarn
@@ -123,6 +140,31 @@ check "run-puppeteer" node puppeteer.js
 
 # Check Oryx
 check "oryx" oryx --version
+
+# Ensures nvm works in a Node Project
+check "default-node-version" bash -c "node --version | grep 19."
+check "default-node-location" bash -c "which node | grep /home/codespace/nvm/current/bin"
+check "oryx-build-node-projectr" bash -c "oryx build ./sample/node"
+check "oryx-configured-current-node-version" bash -c "ls -la /home/codespace/nvm/current | grep /opt/nodejs"
+check "nvm-install-node" bash -c ". /usr/local/share/nvm/nvm.sh && nvm install 8.0.0"
+check "nvm-works-in-node-project" bash -c "node --version | grep v8.0.0"
+check "default-node-location-remained-same" bash -c "which node | grep /home/codespace/nvm/current/bin"
+
+# Ensures sdkman works in a Java Project
+check "default-java-version" bash -c "java --version | grep 17."
+check "default-java-location" bash -c "which java | grep /home/codespace/java/current/bin"
+check "oryx-build-java-project" bash -c "oryx build ./sample/java"
+check "oryx-configured-current-java-version" bash -c "ls -la /home/codespace/java/current | grep /opt/java"
+check "sdk-install-java" bash -c ". /usr/local/sdkman/bin/sdkman-init.sh && sdk install java 19.0.1-oracle < /dev/null"
+check "sdkman-works-in-java-project" bash -c "java --version | grep 19.0.1"
+check "default-java-location-remained-same" bash -c "which java | grep /home/codespace/java/current/bin"
+
+# Make sure that Oryx builds Python projects correctly
+pythonVersion=$(python -V 2>&1 | grep -Po '(?<=Python )(.+)')
+pythonSite=`python -m site --user-site`
+check "oryx-build-python" oryx build --property python_version="${pythonVersion}" --property packagedir="${pythonSite}" ./sample/python
+check "oryx-build-python-installed" python3 -m pip list | grep mpmath
+check "oryx-build-python-result" python3 ./sample/python/src/solve.py
 
 # Install platforms with oryx build tool
 check "oryx-install-dotnet-2.1" oryx prep --skip-detection --platforms-and-versions dotnet=2.1.30
@@ -141,7 +183,20 @@ check "oryx-install-java-12.0.2" oryx prep --skip-detection --platforms-and-vers
 check "java-12.0.2-installed-by-oryx" ls /opt/java/ | grep 12.0.2
 check "java-version-on-path-is-12.0.2" java --version | grep 12.0.2
 
+# Test patches
+MAVEN_PATH=$(cd /usr/local/sdkman/candidates/maven/3*/lib/ && pwd)
+check "commons-io-lib" bash -c "ls ${MAVEN_PATH} | grep commons-io-2.11.jar"
+
+wheel_version=$(python -c "import wheel; print(wheel.__version__)")
+check-version-ge "wheel-requirement" "${wheel_version}" "0.38.1"
+
 ls -la /home/codespace
+
+setuptools_version_py_current=$(python -c "import setuptools; print(setuptools.__version__)")
+check-version-ge "setuptools-requirement-python_current" "${setuptools_version_py_current}" "65.5.1"
+
+setuptools_version_py_39=$(/usr/local/python/3.9.*/bin/python -c "import setuptools; print(setuptools.__version__)")
+check-version-ge "setuptools-requirement-python_39" "${setuptools_version_py_39}" "65.5.1"
 
 # Report result
 reportResults

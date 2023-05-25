@@ -1,9 +1,8 @@
 {
-	"version": "0.202.12",
+	"version": "0.203.9",
 	"variants": [
 		"buster",
-		"bullseye",
-		"stretch"
+		"bullseye"
 	],
 	"build": {
 		"latest": "bullseye",
@@ -15,10 +14,6 @@
 			],
 			"buster": [
 				"linux/amd64"
-			],
-			"stretch": [
-				"linux/amd64",
-				"linux/arm64"
 			]
 		},
 		"tags": [
@@ -34,10 +29,6 @@
 			"buster": [
 				"base:${VERSION}-debian-10",
 				"base:${VERSION}-debian10"
-			],
-			"stretch": [
-				"base:${VERSION}-debian-9",
-				"base:${VERSION}-debian9"
 			]
 		}
 	},
@@ -46,6 +37,9 @@
 		"imageLink": "https://hub.docker.com/_/buildpack-deps",
 		"git": {
 			"Oh My Zsh!": "/home/vscode/.oh-my-zsh"
+		},
+		"other": {
+			"git": {}
 		}
 	}
 }

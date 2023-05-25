@@ -4,15 +4,19 @@
         "context": "."
     },
     "features": {
-        "ghcr.io/devcontainers/features/common-utils:1": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
             "installZsh": "true",
             "username": "vscode",
-            "uid": "1000",
-            "gid": "1000",
+            "userUid": "1000",
+            "userGid": "1000",
             "upgradePackages": "true"
         },
         "./local-features/apache-config": "latest",
-        "ghcr.io/devcontainers/features/node:1": "none"
+        "ghcr.io/devcontainers/features/node:1": "none",
+        "ghcr.io/devcontainers/features/git:1": {
+            "version": "latest",
+            "ppa": "false"
+        }
     },
     "overrideFeatureInstallOrder": [
         "ghcr.io/devcontainers/features/common-utils"
@@ -34,12 +38,12 @@
         }
     },
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
-    "forwardPorts": [
-        8080
-    ],
+    // "forwardPorts": [
+    //     8080
+    // ],
     // Use 'postCreateCommand' to run commands after the container is created.
     // "postCreateCommand": "sudo chmod a+x \"$(pwd)\" && sudo rm -rf /var/www/html && sudo ln -s \"$(pwd)\" /var/www/html"
 
-    // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+    // Set `remoteUser` to `root` to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
     "remoteUser": "vscode"
 }

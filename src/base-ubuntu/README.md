@@ -26,11 +26,13 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 - `mcr.microsoft.com/devcontainers/base:ubuntu-20.04` (or `focal`)
 - `mcr.microsoft.com/devcontainers/base:ubuntu-18.04` (or `bionic`)
 
+Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
+
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/devcontainers/base:0-focal`
-- `mcr.microsoft.com/devcontainers/base:0.203-focal`
-- `mcr.microsoft.com/devcontainers/base:0.203.0-focal`
+- `mcr.microsoft.com/devcontainers/base:1-focal`
+- `mcr.microsoft.com/devcontainers/base:1.0-focal`
+- `mcr.microsoft.com/devcontainers/base:1.0.0-focal`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/base/tags/list).
 

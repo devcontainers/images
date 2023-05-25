@@ -1,0 +1,12 @@
+root = true
+
+[*.json]
+indent_style = tab
+
+[Dockerfile]
+indent_style = spaces
+indent_size = 4
+
+[*.{yml,yaml}]
+indent_style = spaces
+indent_size = 2

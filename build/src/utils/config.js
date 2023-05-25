@@ -5,7 +5,6 @@
 
 const os = require('os');
 const path = require('path');
-const glob = require('glob');
 const asyncUtils = require('./async');
 const jsonc = require('jsonc').jsonc;
 const config = require('../../config.json');
@@ -18,6 +17,8 @@ config.definitionVariants = config.definitionVariants || {};
 const stagingFolders = {};
 const definitionTagLookup = {};
 const allDefinitionPaths = {};
+let variantsList = [];
+let skipParentVariants = [];
 
 // Must be called first
 async function loadConfig(repoPath) {
@@ -309,6 +310,13 @@ function getTagList(definitionId, release, versionPartHandling, registry, regist
         : []);
 }
 
+const getDefinitionObject = (id, variant) => {
+    return {
+        id,
+        variant
+    }
+}
+
 // Walk the image build config and paginate and sort list so parents build before (and with) children
 function getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip) {
     page = page || 1;
@@ -319,7 +327,6 @@ function getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip) {
     const parentBuckets = {};
     const dupeBuckets = [];
     const noParentList = [];
-    let total = 0;
     for (let definitionId in config.definitionBuildSettings) {
         // If paged build, ensure this image should be included
         if (typeof config.definitionBuildSettings[definitionId] === 'object') {
@@ -334,7 +341,6 @@ function getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip) {
                 } else {
                     noParentList.push(definitionId);
                 }
-                total++;
             } else {
                 console.log(`(*) Skipping ${definitionId}.`)
             }
@@ -351,43 +357,99 @@ function getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip) {
         }
     }
 
-    const allPages = [];
-    let pageTotalMinusDedicatedPages = pageTotal;
-    // Remove items that need their own buckets and add the buckets
-    if (config.needsDedicatedPage) {
-        // Remove skipped items from list that needs dedicated page
-        const filteredNeedsDedicatedPage = config.needsDedicatedPage.reduce((prev, current) => (definitionsToSkip.indexOf(current) < 0 ? prev.concat(current) : prev), []);
-        if (pageTotal > filteredNeedsDedicatedPage.length) {
-            pageTotalMinusDedicatedPages = pageTotal - filteredNeedsDedicatedPage.length;
-            filteredNeedsDedicatedPage.forEach((definitionId) => {
-                allPages.push([definitionId]);
-                const definitionIndex = noParentList.indexOf(definitionId);
-                if (definitionIndex > -1) {
-                    noParentList.splice(definitionIndex, 1);
-                    total--;
+
+    // Configure and club dependent variants together.
+    for (let id in parentBuckets) {
+        const definitionBucket = parentBuckets[id];
+        if (definitionBucket) {
+            definitionBucket.reverse().forEach(definitionId => {
+                let variants = config.definitionVariants[definitionId];
+                let parentId = config.definitionBuildSettings[definitionId].parent;
+
+                // eg. id: base-debian ; variant: stretch
+                // base-debian is part of parentId, but the variant does not have an interdependent definition.
+                if (!parentId && variants) {
+                    variants.forEach(variant => {
+                        const skipVariant = skipParentVariants.filter(item => item.id === definitionId && item.variant === variant);
+                        if (skipVariant.length === 0) {
+                            variantsList.push([getDefinitionObject(definitionId, variant)]);
+                        }
+                    });
+                } else if (typeof parentId == 'string') {
+                    // eg. id: ruby ; variant: 2.7-bullseye which needs to be build before id: jekyll ; variant: 2.7-bullseye 
+                    let parentVariants = config.definitionVariants[parentId];
+                    if (variants) {
+                        variants.forEach(variant => {
+                            const variantId = config.definitionBuildSettings[definitionId].idMismatch === "true" && variant.includes('-') ? variant.split('-')[1] : variant;
+                            if (parentVariants.includes(variantId)) {
+                                const parentItem = getDefinitionObject(parentId, variantId);
+                                const childItem = getDefinitionObject(definitionId, variant);
+                                addToVariantsList(parentItem, childItem);
+                            } else {
+                                variantsList.push([getDefinitionObject(definitionId, variant)]);
+                            }
+                        });
+                    } else {
+                        let tags = config.definitionBuildSettings[definitionId].tags;
+                        if (tags) {
+                            const item = [
+                                getDefinitionObject(id, undefined),
+                                getDefinitionObject(definitionId, undefined),
+                            ]
+                            variantsList.push(item);
+                        }
+                    }
+                } else if (typeof parentId == 'object') {
+                    // eg. cpp
+                    for (const id in parentId) {
+                        let parentObjId = parentId[id];
+                        let parentVariants = config.definitionVariants[parentObjId];
+                        let commonVariant = id;
+
+                        if (commonVariant) {
+                            const shouldAddSingleVariant = parentId[commonVariant];
+                            if (parentVariants.includes(commonVariant)) {
+                                const parentItem = getDefinitionObject(parentObjId, commonVariant);
+                                const childItem = getDefinitionObject(definitionId, commonVariant);
+                                addToVariantsList(parentItem, childItem);
+                            } else if (shouldAddSingleVariant) {
+                                variantsList.push([getDefinitionObject(definitionId, commonVariant)]);
+                            }
+                        }
+                        else {
+                            let tags = config.definitionBuildSettings[definitionId].tags;
+                            if (tags) {
+                                const item = [
+                                    getDefinitionObject(id, undefined),
+                                    getDefinitionObject(definitionId, undefined)
+                                ]
+                                variantsList.push(item);
+                            }
+                        }
+                    }
                 }
             });
-        } else {
-            console.log(`(!) Not enough pages to give dedicated pages to ${JSON.stringify(filteredNeedsDedicatedPage, null, 4)}. Adding them to other pages.`);
         }
     }
 
-    // Create pages and distribute entries with no parents
-    const pageSize = Math.floor(total / pageTotalMinusDedicatedPages);
-    for (let bucketId in parentBuckets) {
-        let bucket = parentBuckets[bucketId];
-        if (typeof bucket === 'object') {
-            if (noParentList.length > 0 && bucket.length < pageSize) {
-                const toConcat = noParentList.splice(0, pageSize - bucket.length);
-                bucket = bucket.concat(toConcat);
+    // As 'noParentList' does not have parents, add each variant to a separate object
+    noParentList.forEach(definitionId => {
+        let variants = config.definitionVariants[definitionId];
+        if (variants) {
+            variants.forEach(variant => {
+                variantsList.push([getDefinitionObject(definitionId, variant)]);
+            });
+        } else {
+            let tags = config.definitionBuildSettings[definitionId].tags;
+            if (tags) {
+                variantsList.push([getDefinitionObject(definitionId, undefined)]);
             }
-            allPages.push(bucket);
         }
-    }
-    while (noParentList.length > 0) {
-        const noParentPage = noParentList.splice(0, noParentList.length > pageSize ? pageSize : noParentList.length);
-        allPages.push(noParentPage);
-    }
+    });
+
+    let allPages = variantsList;
+
+    console.log(`(*) Builds pagination needs at least ${variantsList.length} pages to parallelize jobs efficiently.\n`);
 
     if (allPages.length > pageTotal) {
         // If too many pages, add extra pages to last one
@@ -407,6 +469,44 @@ function getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip) {
     console.log(`(*) Builds paginated as follows: ${JSON.stringify(allPages, null, 4)}\n(*) Processing page ${page} of ${pageTotal}.\n`);
 
     return allPages[page - 1];
+}
+
+function addToVariantsList(parentItem, childItem) {
+    let isAdded = false;
+    for (let x = 0; x < variantsList.length; x++) {
+        for (let y = 0; y < variantsList[x].length; y++) {
+            const variantItem = variantsList[x][y];
+            if (variantItem.id === parentItem.id && variantItem.variant === parentItem.variant) {
+                variantsList[x].push(childItem);
+                isAdded = true;
+                break;
+            }
+        }
+
+        if (isAdded) {
+            break;
+        }
+    }
+
+    if (!isAdded) {
+        const item = [
+            parentItem,
+            childItem
+        ]
+
+        variantsList.push(item);
+    }
+
+    skipParentVariants.push(parentItem);
+}
+
+function getDefinitionList() {
+    let definitionList = [];
+    for (let definitionId in config.definitionBuildSettings) {
+        definitionList.push(definitionId);
+    }
+
+    return definitionList;
 }
 
 // Handle multi-parent definitions
@@ -464,22 +564,23 @@ function getParentTagForVersion(definitionId, version, registry, registryPath, v
     
         // Determine right parent variant to use (assuming there are variants)
         const parentVariantList = getVariants(parentId);
-        let parentVariant;
+        let parentVariantId;
         if(parentVariantList) {
             // If a variant is specified in the parentVariant property in build, use it - otherwise default to the child image's variant
-            parentVariant = config.definitionBuildSettings[definitionId].parentVariant || variant;
+            let parentVariant = config.definitionBuildSettings[definitionId].parentVariant || variant;
             if(typeof parentVariant !== 'string') {
                 // Use variant to figure out correct variant it not the same across all parents, or return first variant if child has no variant
                 parentVariant = variant ? parentVariant[variant] : parentVariant[Object.keys(parentId)[0]];
             }
-            if(!parentVariantList.includes(parentVariant)) {
-                throw `Unable to determine variant for parent. Variant ${parentVariant} is not in ${parentId} list: ${parentVariantList}`;
+            parentVariantId = config.definitionBuildSettings[definitionId].idMismatch === "true" && variant.includes('-') ? variant.split('-')[1] : variant;
+            if(!parentVariantList.includes(parentVariantId)) {
+                throw `Unable to determine variant for parent. Variant ${parentVariantId} is not in ${parentId} list: ${parentVariantList}`;
             }
         }
         
         // Parent image version may be different than child's
         const parentVersion = getVersionFromRelease(version, parentId);
-        return getTagsForVersion(parentId, parentVersion, registry, registryPath, parentVariant)[0];
+        return getTagsForVersion(parentId, parentVersion, registry, registryPath, parentVariantId)[0];
     }
     return null;
 }
@@ -570,18 +671,16 @@ function getFallbackPoolUrl(package) {
 
 
 async function getStagingFolder(release) {
-    if (!stagingFolders[release]) {
-        const stagingFolder = path.join(os.tmpdir(), 'dev-containers', release);
-        console.log(`(*) Copying files to ${stagingFolder}\n`);
-        await asyncUtils.rimraf(stagingFolder); // Clean out folder if it exists
-        await asyncUtils.mkdirp(stagingFolder); // Create the folder
-        await asyncUtils.copyFiles(
-            path.resolve(__dirname, '..', '..', '..'),
-            getConfig('filesToStage'),
-            stagingFolder);
-        
-        stagingFolders[release] = stagingFolder;
-    }
+    const stagingFolder = path.join(os.tmpdir(), 'dev-containers', release);
+    console.log(`(*) Copying files to ${stagingFolder}\n`);
+    await asyncUtils.rimraf(stagingFolder); // Clean out folder if it exists
+    await asyncUtils.mkdirp(stagingFolder); // Create the folder
+    await asyncUtils.copyFiles(
+        path.resolve(__dirname, '..', '..', '..'),
+        getConfig('filesToStage'),
+        stagingFolder);
+    
+    stagingFolders[release] = stagingFolder;
     return stagingFolders[release];
 }
 
@@ -621,5 +720,6 @@ module.exports = {
     getFallbackPoolUrl: getFallbackPoolUrl,
     getPoolKeyForPoolUrl: getPoolKeyForPoolUrl,
     getConfig: getConfig,
-    shouldFlattenDefinitionBaseImage: shouldFlattenDefinitionBaseImage
+    shouldFlattenDefinitionBaseImage: shouldFlattenDefinitionBaseImage,
+    getDefinitionList: getDefinitionList
 };

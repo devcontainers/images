@@ -1,5 +1,5 @@
 {
-	"version": "0.205.10",
+	"version": "0.205.24",
 	"variants": [
 		"17-bullseye",
 		"17-buster",
@@ -9,6 +9,8 @@
 	"build": {
 		"latest": "17-bullseye",
 		"rootDistro": "debian",
+		"parent": "base-debian",
+		"idMismatch": "true",
 		"variantBuildArgs": {
 			"17-bullseye": {
 				"TARGET_JAVA_VERSION": "17",
@@ -79,6 +81,7 @@
 			"nvm": "/usr/local/share/nvm"
 		},
 		"other": {
+			"git": {},
 			"SDKMAN!": null
 		},
 		"languages": {

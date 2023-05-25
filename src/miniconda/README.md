@@ -22,7 +22,9 @@ See **[history](history)** for information on the contents of published images.
 
 You can directly reference pre-built versions of `.devcontainer/Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` to the following. An example `Dockerfile` is included in this repository.
 
-- `mcr.microsoft.com/devcontainers/minconda` (or `minconda:3`)
+- `mcr.microsoft.com/devcontainers/miniconda` (or `miniconda:3`)
+
+Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 

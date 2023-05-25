@@ -51,7 +51,7 @@ check_packages() {
 export DEBIAN_FRONTEND=noninteractive
 
 # Install additional packages needed by vcpkg: https://github.com/microsoft/vcpkg/blob/master/README.md#installing-linux-developer-tools
-check_packages build-essential tar curl zip unzip pkg-config bash-completion ninja-build git
+check_packages build-essential tar curl zip unzip pkg-config bash-completion ninja-build
 
 # Setup group and add user
 umask 0002

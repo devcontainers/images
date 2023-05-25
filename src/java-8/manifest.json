@@ -1,5 +1,5 @@
 {
-	"version": "1.0.4",
+	"version": "1.0.17",
 	"variants": [
 		"bullseye",
 		"buster"
@@ -7,6 +7,7 @@
 	"build": {
 		"latest": false,
 		"rootDistro": "debian",
+		"parent": "base-debian",
 		"architectures": {
 			"bullseye": [
 				"linux/amd64",
@@ -43,6 +44,7 @@
 			"nvm": "/usr/local/share/nvm"
 		},
 		"other": {
+			"git": {},
 			"SDKMAN!": null,
 			"Eclipse Temurin": {
 				"markdownIgnore": true,

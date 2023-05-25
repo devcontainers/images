@@ -1,10 +1,9 @@
 {
-	"version": "0.204.10",
+	"version": "0.205.9",
 	"variants": [
+		"3.17",
 		"3.16",
-		"3.15",
-		"3.14",
-		"3.13"
+		"3.15"
 	],
 	"build": {
 		"latest": false,
@@ -18,7 +17,7 @@
 			"base:${VERSION}-alpine${VARIANT}"
 		],
 		"variantTags": {
-			"3.15": [
+			"3.17": [
 				"base:${VERSION}-alpine"
 			]
 		}
@@ -28,6 +27,9 @@
 		"imageLink": "https://hub.docker.com/_/alpine",
 		"git": {
 			"Oh My Zsh!": "/home/vscode/.oh-my-zsh"
+		},
+		"other": {
+			"git": {}
 		}
 	}
 }

@@ -27,6 +27,23 @@ check() {
     fi
 }
 
+check-version-ge() {
+    LABEL=$1
+    CURRENT_VERSION=$2
+    REQUIRED_VERSION=$3
+    shift
+    echo -e "\n🧪 Testing $LABEL: '$CURRENT_VERSION' is >= '$REQUIRED_VERSION'"
+    local GREATER_VERSION=$((echo ${CURRENT_VERSION}; echo ${REQUIRED_VERSION}) | sort -V | tail -1)
+    if [ "${CURRENT_VERSION}" == "${GREATER_VERSION}" ]; then
+        echo "✅  Passed!"
+        return 0
+    else
+        echoStderr "❌ $LABEL check failed."
+        FAILED+=("$LABEL")
+        return 1
+    fi
+}
+
 checkMultiple() {
     PASSED=0
     LABEL="$1"
@@ -91,7 +108,6 @@ checkExtension() {
 checkCommon()
 {
     PACKAGE_LIST="apt-utils \
-        git \
         openssh-client \
         less \
         iproute2 \
@@ -160,6 +176,44 @@ checkVersionCount() {
     else
         echoStderr "❌ $LABEL check failed."
         FAILED+=("$LABEL")
+        return 1
+    fi
+}
+
+checkDirectoryOwnership() {
+    LABEL=$1
+    targetDirectory=$2
+    expectedUser=$3
+    expectedGroup=$4
+
+    echo -e "\n🧪 Testing $LABEL"
+
+    # Get group metadata
+    groupMetadata=$(getent group ${expectedGroup})
+    
+    # Extract group id and group members
+    targetGroupId=$(echo $groupMetadata | cut -d: -f3)
+    targetGroupMembers=$(echo $groupMetadata | cut -d: -f4)
+
+    # Get directory ownership metadata
+    # Note: "stat" returns the string "UNKNOWN" for %U and %G if it's not defined in the system files. 
+    # So it's better to work with UID (%u) and GID (%g) numbers from "stat".
+    directoryOwnershipGroupId=$(stat -c "%g" ${targetDirectory})
+    
+    # Check that group has ownership over directory and user belong to the group
+    if [ "$targetGroupId" == "$directoryOwnershipGroupId" ] && [[ "$targetGroupMembers" == *"$expectedUser"* ]]; then
+        echo "✅  Passed!"
+        return 0
+    else
+        expected="Expected: Group - $expectedGroup ($targetGroupId), User - $expectedUser"
+        got="Got: $(stat -c "Group - %G (%g), User - %U (%u)" ${targetDirectory})"
+        echoStderr "❌ $LABEL check failed. $expected $got"
+        
+        # Provide more context on test failure
+        stat ${targetDirectory}
+        
+        FAILED+=("$LABEL")
+        
         return 1
     fi
 }

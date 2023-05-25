@@ -1,5 +1,5 @@
 {
-	"version": "0.205.5",
+	"version": "0.206.8",
 	"variants": [
 		"bullseye",
 		"buster",
@@ -51,10 +51,6 @@
 				"cpp:${VERSION}-debian-10",
 				"cpp:${VERSION}-debian10"
 			],
-			"stretch": [
-				"cpp:${VERSION}-debian-9",
-				"cpp:${VERSION}-debian9"
-			],
 			"jammy": [
 				"cpp:${VERSION}-ubuntu-22.04",
 				"cpp:${VERSION}-ubuntu22.04"
@@ -105,6 +101,9 @@
 			"Clang": {
 				"cgIgnore": true
 			}
+		},
+		"other": {
+			"git": {}
 		}
 	}
 }

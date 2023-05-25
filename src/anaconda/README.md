@@ -24,6 +24,8 @@ You can directly reference pre-built versions of `.devcontainer/Dockerfile` by u
 
 - `mcr.microsoft.com/devcontainers/anaconda`
 
+Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
+
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
 - `mcr.microsoft.com/devcontainers/anaconda:0-3`
