@@ -60,7 +60,9 @@ RUN python3 -m pip install \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-25577
     werkzeug \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32862
-    nbconvert \
+    nbconvert
+
+RUN conda update \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32681
     requests
 
