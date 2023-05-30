@@ -41,7 +41,8 @@
 			"cryptography",
 			"pyOpenssl",
 			"setuptools",
-			"wheel"
+			"wheel",
+			"requests"
 		],
 		"other": {
 			"git": {},

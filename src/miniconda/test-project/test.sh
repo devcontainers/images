@@ -18,18 +18,14 @@ check "gitconfig-contains-name" sh -c "cat /etc/gitconfig | grep 'name = devcont
 
 check "usr-local-etc-config-does-not-exist" test ! -f "/usr/local/etc/gitconfig"
 
-cryptography_version=$(python -c "import cryptography; print(cryptography.__version__)")
-check-version-ge "cryptography-requirement" "${cryptography_version}" "38.0.3"
-
 check "conda-update-conda" bash -c "conda update -y conda"
 check "conda-install" bash -c "conda install -c conda-forge --yes tensorflow"
 check "conda-install" bash -c "conda install -c conda-forge --yes pytorch"
 
-setuptools_version=$(python -c "import setuptools; print(setuptools.__version__)")
-check-version-ge "setuptools-requirement" "${setuptools_version}" "65.5.1"
-
-wheel_version=$(python -c "import wheel; print(wheel.__version__)")
-check-version-ge "wheel-requirement" "${wheel_version}" " 0.38.1"
+checkPythonPackageVersion "cryptography" "38.0.3"
+checkPythonPackageVersion "setuptools" "65.5.1"
+checkPythonPackageVersion "wheel" "0.38.1"
+checkPythonPackageVersion "requests" "2.31.0"
 
 # Report result
 reportResults
