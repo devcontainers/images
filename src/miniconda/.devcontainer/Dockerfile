@@ -39,9 +39,11 @@ COPY environment.yml* noop.txt /tmp/conda-tmp/
 RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then umask 0002 && /opt/conda/bin/conda env update -n base -f /tmp/conda-tmp/environment.yml; fi \
     && rm -rf /tmp/conda-tmp
 
-# [Optional] Uncomment this section to install updates/additional Python packages.
-# RUN python3 -m conda update -y \
-#     <your-package-list-here>
+# Temporary: Upgrade python packages due to mentioned CVEs
+# They are installed by the base image (continuumio/miniconda3) which does not have the patch.
+RUN python3 -m pip install --upgrade \
+    # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32681
+    requests
 
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
