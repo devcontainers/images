@@ -29,42 +29,22 @@ check "gitconfig-contains-name" sh -c "cat /etc/gitconfig | grep 'name = devcont
 
 check "usr-local-etc-config-does-not-exist" test ! -f "/usr/local/etc/gitconfig"
 
-joblib_version=$(python -c "import joblib; print(joblib.__version__)")
-check-version-ge "joblib-requirement" "${joblib_version}" "1.2.0"
-
-cookiecutter_version=$(python -c "import cookiecutter; print(cookiecutter.__version__)")
-check-version-ge "cookiecutter-requirement" "${cookiecutter_version}" "2.1.1"
-
-cryptography_version=$(python -c "import cryptography; print(cryptography.__version__)")
-check-version-ge "cryptography-requirement" "${cryptography_version}" "38.0.3"
-
-mistune_version=$(python -c "import mistune; print(mistune.__version__)")
-check-version-ge "mistune-requirement" "${mistune_version}" "2.0.3"
-
-numpy_version=$(python -c "import numpy; print(numpy.__version__)")
-check-version-ge "numpy-requirement" "${numpy_version}" "1.22"
-
-setuptools_version=$(python -c "import setuptools; print(setuptools.__version__)")
-check-version-ge "setuptools-requirement" "${setuptools_version}" "65.5.1"
-
-future_version=$(python -c "import future; print(future.__version__)")
-check-version-ge "future-requirement" "${future_version}" "0.18.3"
-
-wheel_version=$(python -c "import wheel; print(wheel.__version__)")
-check-version-ge "wheel-requirement" "${wheel_version}" "0.38.1"
-
-nbconvert_version=$(python -c "import nbconvert; print(nbconvert.__version__)")
-check-version-ge "nbconvert-requirement" "${nbconvert_version}" "6.5.1"
-
 check "conda-update-conda" bash -c "conda update -y conda"
 check "conda-install" bash -c "conda install -c conda-forge --yes tensorflow"
 check "conda-install" bash -c "conda install -c conda-forge --yes pytorch"
 
-werkzeug_version=$(python -c "import werkzeug; print(werkzeug.__version__)")
-check-version-ge "werkzeug-requirement" "${werkzeug_version}" "2.2.3"
-
-certifi_version=$(python -c "import certifi; print(certifi.__version__)")
-check-version-ge "certifi-requirement" "${certifi_version}" "2022.12.07"
+checkPythonPackageVersion "joblib" "1.2.0"
+checkPythonPackageVersion "cookiecutter" "2.1.1"
+checkPythonPackageVersion "cryptography" "38.0.3"
+checkPythonPackageVersion "mistune" "2.0.3"
+checkPythonPackageVersion "numpy" "1.22"
+checkPythonPackageVersion "setuptools" "65.5.1"
+checkPythonPackageVersion "future" "0.18.3"
+checkPythonPackageVersion "wheel" "0.38.1"
+checkPythonPackageVersion "nbconvert" "6.5.1"
+checkPythonPackageVersion "werkzeug" "2.2.3"
+checkPythonPackageVersion "certifi" "2022.12.07"
+checkPythonPackageVersion "requests" "2.31.0"
 
 # Report result
 reportResults

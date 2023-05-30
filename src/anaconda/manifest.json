@@ -36,7 +36,8 @@
 			"nbconvert",
 			"py",
 			"pyOpenssl",
-			"werkzeug"
+			"werkzeug",
+			"requests"
 		],
 		"other": {
 			"git": {},
