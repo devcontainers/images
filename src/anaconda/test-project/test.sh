@@ -8,6 +8,7 @@ checkCommon
 
 # Image specific tests
 check "conda" conda --version
+check "anaconda" bash -c "conda list anaconda$ | grep -oP 'anaconda\\s+\\K[^\\s]+'"
 check "python" python --version
 check "pylint" pylint --version
 check "flake8" flake8 --version

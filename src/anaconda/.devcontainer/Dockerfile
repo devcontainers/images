@@ -43,6 +43,9 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && echo "conda activate base" >> ~/.bashrc \
     && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts/add-notice.sh
 
+# Since anaconda distribution 2023.03-1, continuumio/anaconda3 image no more contains `anaconda` pkg.
+RUN conda install anaconda
+
 # Temporary: Upgrade python packages due to mentioned CVEs
 # They are installed by the base image (continuumio/anaconda3) which does not have the patch.
 RUN python3 -m pip install \
@@ -54,8 +57,6 @@ RUN python3 -m pip install \
     mistune \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-34141
     numpy \
-    # https://github.com/devcontainers/images/issues/486
-    pyOpenssl \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-25577
     werkzeug \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32862
