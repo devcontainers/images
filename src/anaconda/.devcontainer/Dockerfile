@@ -44,7 +44,8 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts/add-notice.sh
 
 # Since anaconda distribution 2023.03-1, continuumio/anaconda3 image no more contains `anaconda` pkg.
-RUN conda install anaconda
+RUN conda update --yes conda \
+    && conda install -c conda-forge --yes anaconda
 
 # Temporary: Upgrade python packages due to mentioned CVEs
 # They are installed by the base image (continuumio/anaconda3) which does not have the patch.
@@ -60,9 +61,7 @@ RUN python3 -m pip install \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-25577
     werkzeug \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32862
-    nbconvert
-
-RUN conda update \
+    nbconvert \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32681
     requests
 
