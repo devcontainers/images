@@ -8,6 +8,7 @@ checkCommon
 
 # Image specific tests
 check "conda" conda --version
+check "anaconda" bash -c "conda list anaconda$ | grep -oP 'anaconda\\s+\\K[^\\s]+'"
 check "python" python --version
 check "pylint" pylint --version
 check "flake8" flake8 --version
@@ -42,7 +43,8 @@ checkPythonPackageVersion "werkzeug" "2.2.3"
 checkPythonPackageVersion "certifi" "2022.12.07"
 checkPythonPackageVersion "requests" "2.31.0"
 
-check "conda-update-conda" bash -c "conda update -y conda"
+# https://github.com/conda/conda/issues/8149
+check "conda-update-conda" bash -c "conda update --force conda"
 check "conda-install" bash -c "conda install -c conda-forge --yes tensorflow"
 check "conda-install" bash -c "conda install -c conda-forge --yes pytorch"
 
