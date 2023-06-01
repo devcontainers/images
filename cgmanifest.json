@@ -36,7 +36,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "cryptography",
-                    "Version": "40.0.2"
+                    "Version": "39.0.1"
                 }
             }
         },
@@ -63,7 +63,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "certifi",
-                    "Version": "2022.12.7"
+                    "Version": "2023.5.7"
                 }
             }
         },
@@ -72,7 +72,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "setuptools",
-                    "Version": "67.7.2"
+                    "Version": "65.6.3"
                 }
             }
         },
@@ -90,7 +90,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "wheel",
-                    "Version": "0.40.0"
+                    "Version": "0.38.4"
                 }
             }
         },
@@ -99,7 +99,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "nbconvert",
-                    "Version": "7.3.1"
+                    "Version": "7.4.0"
                 }
             }
         },
@@ -107,8 +107,7 @@
             "Component": {
                 "Type": "Pip",
                 "Pip": {
-                    "Name": "py",
-                    "Version": "1.11.0"
+                    "Name": "py"
                 }
             }
         },
@@ -130,11 +129,20 @@
         },
         {
             "Component": {
+                "Type": "Pip",
+                "Pip": {
+                    "Name": "requests",
+                    "Version": "2.31.0"
+                }
+            }
+        },
+        {
+            "Component": {
                 "Type": "git",
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "9233ef75f28423d147a2f9f64a45a77b1886ee5d"
+                    "commitHash": "5d3e86e2a48adf7a308773f8f1b725d187c7c5ef"
                 }
             }
         },
@@ -164,7 +172,17 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "5d3e86e2a48adf7a308773f8f1b725d187c7c5ef"
+                    "commitHash": "fb4213c34ff8ec83cbe6251f432fdac383378562"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: alpine",
+                    "Version": "3.18",
+                    "DownloadUrl": "https://hub.docker.com/_/alpine"
                 }
             }
         },
@@ -194,16 +212,6 @@
                 "Other": {
                     "Name": "Docker Image: alpine",
                     "Version": "3.15",
-                    "DownloadUrl": "https://hub.docker.com/_/alpine"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "other",
-                "Other": {
-                    "Name": "Docker Image: alpine",
-                    "Version": "3.14",
                     "DownloadUrl": "https://hub.docker.com/_/alpine"
                 }
             }
@@ -264,7 +272,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "b669595870177598587d3ff67e675f4f9213fe82"
+                    "commitHash": "e527f179b10208896e983337aac4cfccfd45e3f9"
                 }
             }
         },
@@ -274,7 +282,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "5787cfa699a75805ef41938ec66bc7492714d290"
+                    "commitHash": "8a2b7de29d42d713e4816d542cd610ee59dff63e"
                 }
             }
         },
@@ -393,7 +401,7 @@
                 "Type": "go",
                 "Go": {
                     "Name": "golang.org/x/tools/gopls",
-                    "Version": "0.11.0"
+                    "Version": "0.12.0"
                 }
             }
         },
@@ -402,7 +410,7 @@
                 "Type": "go",
                 "Go": {
                     "Name": "honnef.co/go/tools",
-                    "Version": "0.3.3"
+                    "Version": "0.4.2"
                 }
             }
         },
@@ -420,7 +428,7 @@
                 "Type": "go",
                 "Go": {
                     "Name": "github.com/mgechev/revive",
-                    "Version": "1.3.1"
+                    "Version": "1.3.2"
                 }
             }
         },
@@ -429,7 +437,7 @@
                 "Type": "go",
                 "Go": {
                     "Name": "github.com/uudashr/gopkgs",
-                    "Version": "2.0.1+incompatible"
+                    "Version": "latest"
                 }
             }
         },
@@ -438,7 +446,7 @@
                 "Type": "go",
                 "Go": {
                     "Name": "github.com/ramya-rao-a/go-outline",
-                    "Version": "0.0.0-20210608161538-9736a4bde949"
+                    "Version": "latest"
                 }
             }
         },
@@ -535,7 +543,7 @@
                 "Type": "npm",
                 "Npm": {
                     "Name": "eslint",
-                    "Version": "8.39.0"
+                    "Version": "8.41.0"
                 }
             }
         },
@@ -545,7 +553,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "5d3e86e2a48adf7a308773f8f1b725d187c7c5ef"
+                    "commitHash": "fb4213c34ff8ec83cbe6251f432fdac383378562"
                 }
             }
         },
@@ -584,16 +592,6 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Image: node",
-                    "Version": "14-bullseye",
-                    "DownloadUrl": "https://hub.docker.com/_/node"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "other",
-                "Other": {
-                    "Name": "Docker Image: node",
                     "Version": "20-buster",
                     "DownloadUrl": "https://hub.docker.com/_/node"
                 }
@@ -621,16 +619,6 @@
         },
         {
             "Component": {
-                "Type": "other",
-                "Other": {
-                    "Name": "Docker Image: node",
-                    "Version": "14-buster",
-                    "DownloadUrl": "https://hub.docker.com/_/node"
-                }
-            }
-        },
-        {
-            "Component": {
                 "Type": "RubyGems",
                 "RubyGems": {}
             }
@@ -640,7 +628,7 @@
                 "Type": "RubyGems",
                 "RubyGems": {
                     "Name": "bundler",
-                    "Version": "2.4.12"
+                    "Version": "2.4.13"
                 }
             }
         },
@@ -668,7 +656,7 @@
                 "Git": {
                     "Name": "rbenv",
                     "repositoryUrl": "https://github.com/rbenv/rbenv.git",
-                    "commitHash": "a632465cf4007d0a5b419ed5c5a7bd87349d7b14"
+                    "commitHash": "af9201ea1ef7dca287a15fe30d51dd187403c993"
                 }
             }
         },
@@ -678,7 +666,7 @@
                 "Git": {
                     "Name": "ruby-build",
                     "repositoryUrl": "https://github.com/rbenv/ruby-build.git",
-                    "commitHash": "7ed052655b4f8b6441d07a28dc7f176cb849683e"
+                    "commitHash": "dc6d1973d540dd69e81f810080643f54ff352da8"
                 }
             }
         },
@@ -716,26 +704,8 @@
             "Component": {
                 "Type": "Pip",
                 "Pip": {
-                    "Name": "cryptography",
-                    "Version": "39.0.1"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "Pip",
-                "Pip": {
-                    "Name": "setuptools",
-                    "Version": "66.0.0"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "Pip",
-                "Pip": {
-                    "Name": "wheel",
-                    "Version": "0.38.4"
+                    "Name": "certifi",
+                    "Version": "2022.12.7"
                 }
             }
         },
@@ -744,7 +714,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "pylint",
-                    "Version": "2.17.3"
+                    "Version": "2.17.4"
                 }
             }
         },
@@ -789,7 +759,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "mypy",
-                    "Version": "1.2.0"
+                    "Version": "1.3.0"
                 }
             }
         },
@@ -825,7 +795,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "virtualenv",
-                    "Version": "20.22.0"
+                    "Version": "20.23.0"
                 }
             }
         },
@@ -863,7 +833,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Composer",
-                    "Version": "2.5.5",
+                    "Version": "2.5.7",
                     "DownloadUrl": "https://getcomposer.org/"
                 }
             }
@@ -925,6 +895,15 @@
                     "Name": "Docker Image: php",
                     "Version": "8.0-apache-buster",
                     "DownloadUrl": "https://hub.docker.com/_/php"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "Pip",
+                "Pip": {
+                    "Name": "setuptools",
+                    "Version": "67.8.0"
                 }
             }
         },
@@ -1072,16 +1051,6 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Image: ruby",
-                    "Version": "2.7-bullseye",
-                    "DownloadUrl": "https://hub.docker.com/_/ruby"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "other",
-                "Other": {
-                    "Name": "Docker Image: ruby",
                     "Version": "3.2-buster",
                     "DownloadUrl": "https://hub.docker.com/_/ruby"
                 }
@@ -1103,16 +1072,6 @@
                 "Other": {
                     "Name": "Docker Image: ruby",
                     "Version": "3.0-buster",
-                    "DownloadUrl": "https://hub.docker.com/_/ruby"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "other",
-                "Other": {
-                    "Name": "Docker Image: ruby",
-                    "Version": "2.7-buster",
                     "DownloadUrl": "https://hub.docker.com/_/ruby"
                 }
             }
@@ -1226,16 +1185,6 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Image: node",
-                    "Version": "14-bullseye",
-                    "DownloadUrl": "https://hub.docker.com/_/node"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "other",
-                "Other": {
-                    "Name": "Docker Image: node",
                     "Version": "20-buster",
                     "DownloadUrl": "https://hub.docker.com/_/node"
                 }
@@ -1263,16 +1212,6 @@
         },
         {
             "Component": {
-                "Type": "other",
-                "Other": {
-                    "Name": "Docker Image: node",
-                    "Version": "14-buster",
-                    "DownloadUrl": "https://hub.docker.com/_/node"
-                }
-            }
-        },
-        {
-            "Component": {
                 "Type": "linux",
                 "Linux": {
                     "Name": "git-lfs",
@@ -1289,7 +1228,7 @@
                 "Type": "linux",
                 "Linux": {
                     "Name": "moby-cli",
-                    "Version": "20.10.24+azure-ubuntu20.04u1",
+                    "Version": "20.10.25+azure-ubuntu20.04u1",
                     "Distribution": "ubuntu",
                     "Release": "20.04",
                     "Pool-URL": "https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod",
@@ -1302,7 +1241,7 @@
                 "Type": "linux",
                 "Linux": {
                     "Name": "moby-engine",
-                    "Version": "20.10.24+azure-ubuntu20.04u1",
+                    "Version": "20.10.25+azure-ubuntu20.04u1",
                     "Distribution": "ubuntu",
                     "Release": "20.04",
                     "Pool-URL": "https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod",
@@ -1315,7 +1254,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "pandas",
-                    "Version": "2.0.1"
+                    "Version": "2.0.2"
                 }
             }
         },
@@ -1360,16 +1299,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "torch",
-                    "Version": "2.0.0"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "Pip",
-                "Pip": {
-                    "Name": "requests",
-                    "Version": "2.28.2"
+                    "Version": "2.0.1"
                 }
             }
         },
@@ -1393,6 +1323,15 @@
         },
         {
             "Component": {
+                "Type": "Pip",
+                "Pip": {
+                    "Name": "wheel",
+                    "Version": "0.40.0"
+                }
+            }
+        },
+        {
+            "Component": {
                 "Type": "RubyGems",
                 "RubyGems": {
                     "Name": "rake",
@@ -1406,7 +1345,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "5d3e86e2a48adf7a308773f8f1b725d187c7c5ef"
+                    "commitHash": "fb4213c34ff8ec83cbe6251f432fdac383378562"
                 }
             }
         },
@@ -1435,7 +1374,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "kubectl",
-                    "Version": "v1.27.1",
+                    "Version": "v1.27.2",
                     "DownloadUrl": "https://github.com/kubernetes/kubectl"
                 }
             }
@@ -1445,7 +1384,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Helm",
-                    "Version": "3.11.3",
+                    "Version": "3.12.0",
                     "DownloadUrl": "https://github.com/helm/helm"
                 }
             }
@@ -1465,7 +1404,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "GitHub CLI",
-                    "Version": "2.28.0",
+                    "Version": "2.30.0",
                     "DownloadUrl": "https://github.com/cli/cli"
                 }
             }
@@ -1475,7 +1414,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Go",
-                    "Version": "1.20.3",
+                    "Version": "1.20.4",
                     "DownloadUrl": "https://golang.org/dl"
                 }
             }

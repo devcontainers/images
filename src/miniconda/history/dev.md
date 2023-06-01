@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/miniconda)
 
-**Digest:** sha256:957103c9db7935e0802407d1876b2a5c6451fd039ea1c93c7d7e08de949c5e63
+**Digest:** sha256:8f7e111fda17921317b23e2637a7a0ed0bd2fec3b0dbe6da87e05d551ba03ab5
 
 **Tags:**
 ```
@@ -23,13 +23,13 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Python](https://www.python.org/) | 3.10.8 | /opt/conda |
+| [Python](https://www.python.org/) | 3.10.10 | /opt/conda |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9233ef75f28423d147a2f9f64a45a77b1886ee5d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5d3e86e2a48adf7a308773f8f1b725d187c7c5ef | /home/vscode/.oh-my-zsh |
 
 **Pip / pipx installed tools and packages**
 
@@ -37,18 +37,19 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 |----------------|---------|
 | certifi | 2022.12.7 |
 | cryptography | 39.0.1 |
-| setuptools | 66.0.0 |
+| setuptools | 65.6.3 |
 | wheel | 0.38.4 |
-| pylint | 2.17.3 |
+| requests | 2.31.0 |
+| pylint | 2.17.4 |
 | flake8 | 6.0.0 |
 | autopep8 | 2.0.2 |
 | black | 23.3.0 |
 | yapf | 0.33.0 |
-| mypy | 1.2.0 |
+| mypy | 1.3.0 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.10.0 |
 | bandit | 1.7.5 |
-| virtualenv | 20.22.0 |
+| virtualenv | 20.23.0 |
 | pipx | 1.2.0 |
 
 **Other tools and utilities**
@@ -73,14 +74,14 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
 | less | 551-2 |
-| libc6 | 2.31-13+deb11u5 |
+| libc6 | 2.31-13+deb11u6 |
 | libgssapi-krb5-2 | 1.18.3-6+deb11u3 |
 | libicu67 | 67.1-7 |
 | libkrb5-3 | 1.18.3-6+deb11u3 |
 | liblttng-ust0 | 2.12.1-1 |
-| libssl1.1 | 1.1.1n-0+deb11u4 |
+| libssl1.1 | 1.1.1n-0+deb11u5 |
 | libstdc++6 | 10.2.1-6 |
-| locales | 2.31-13+deb11u5 |
+| locales | 2.31-13+deb11u6 |
 | lsb-release | 11.1.0 |
 | lsof | 4.93.2+dfsg-1.1 |
 | man-db | 2.9.4-2 |
