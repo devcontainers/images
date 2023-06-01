@@ -44,8 +44,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts/add-notice.sh
 
 # Since anaconda distribution 2023.03-1, continuumio/anaconda3 image no more contains `anaconda` pkg.
-RUN conda update -n base -c defaults conda \
-    && conda install --yes anaconda
+RUN conda install -c anaconda anaconda
 
 # Temporary: Upgrade python packages due to mentioned CVEs
 # They are installed by the base image (continuumio/anaconda3) which does not have the patch.

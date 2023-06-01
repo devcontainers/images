@@ -44,7 +44,7 @@ checkPythonPackageVersion "certifi" "2022.12.07"
 checkPythonPackageVersion "requests" "2.31.0"
 
 # https://github.com/conda/conda/issues/8149
-check "conda-update-conda" bash -c "conda update --force conda"
+check "conda-update-conda" bash -c "conda update conda"
 check "conda-install" bash -c "conda install -c conda-forge --yes tensorflow"
 check "conda-install" bash -c "conda install -c conda-forge --yes pytorch"
 
