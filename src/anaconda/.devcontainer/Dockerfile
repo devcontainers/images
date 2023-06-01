@@ -60,9 +60,9 @@ RUN python3 -m pip install \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-25577
     werkzeug \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32862
-    nbconvert \
+    nbconvert
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32681
-    requests
+    # requests
 
 # Copy environment.yml (if found) to a temp location so we can update the environment. Also
 # copy "noop.txt" so the COPY instruction does not fail if no environment.yml exists.
