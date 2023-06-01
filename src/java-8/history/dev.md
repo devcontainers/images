@@ -10,7 +10,7 @@
 
 ## Variant: bullseye
 
-**Digest:** sha256:e07804f303cf8040965a0e555e5a98296ab3de57098269b8b0b128bf49b1ee32
+**Digest:** sha256:f9377081130ba594de9705afb8fdc9936e1fc072a75b543ffebde4836ce583a7
 
 **Tags:**
 ```
@@ -36,7 +36,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5d3e86e2a48adf7a308773f8f1b725d187c7c5ef | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fb4213c34ff8ec83cbe6251f432fdac383378562 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -60,14 +60,14 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bullseye
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
 | less | 551-2 |
-| libc6 | 2.31-13+deb11u5 |
+| libc6 | 2.31-13+deb11u6 |
 | libgssapi-krb5-2 | 1.18.3-6+deb11u3 |
 | libicu67 | 67.1-7 |
 | libkrb5-3 | 1.18.3-6+deb11u3 |
 | liblttng-ust0 | 2.12.1-1 |
-| libssl1.1 | 1.1.1n-0+deb11u4 |
+| libssl1.1 | 1.1.1n-0+deb11u5 |
 | libstdc++6 | 10.2.1-6 |
-| locales | 2.31-13+deb11u5 |
+| locales | 2.31-13+deb11u6 |
 | lsb-release | 11.1.0 |
 | lsof | 4.93.2+dfsg-1.1 |
 | man-db | 2.9.4-2 |
@@ -92,7 +92,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bullseye
 
 ## Variant: buster
 
-**Digest:** sha256:14dc7b7efbb0c2175a745ff145b48349a7300ab7c44a7ff1cd8ec53a1e08c1e6
+**Digest:** sha256:ed21e4976502a87b128e45bfdfe24f842357fc7b5936348925c8c555a97e6e7f
 
 **Tags:**
 ```
@@ -119,7 +119,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5d3e86e2a48adf7a308773f8f1b725d187c7c5ef | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fb4213c34ff8ec83cbe6251f432fdac383378562 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Other tools and utilities**
