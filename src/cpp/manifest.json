@@ -4,8 +4,7 @@
 		"bullseye",
 		"buster",
 		"jammy",
-		"focal",
-		"bionic"
+		"focal"
 	],
 	"build": {
 		"latest": "bullseye",
@@ -13,8 +12,7 @@
 			"bullseye": "base-debian",
 			"buster": "base-debian",
 			"jammy": "base-ubuntu",
-			"focal": "base-ubuntu",
-			"bionic": "base-ubuntu"
+			"focal": "base-ubuntu"
 		},
 		"rootDistro": "debian",
 		"architectures": {
@@ -31,10 +29,6 @@
 			],
 			"focal": [
 				"linux/amd64"
-			],
-			"bionic": [
-				"linux/amd64",
-				"linux/arm64"
 			]
 		},
 		"tags": [
@@ -63,10 +57,6 @@
 				"cpp:${VERSION}-ubuntu-20.04",
 				"cpp:${VERSION}-ubuntu20.04",
 				"cpp:${VERSION}-ubuntu"
-			],
-			"bionic": [
-				"cpp:${VERSION}-ubuntu-18.04",
-				"cpp:${VERSION}-ubuntu18.04"
 			]
 		}
 	},

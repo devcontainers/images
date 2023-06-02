@@ -8,13 +8,10 @@ set -e
 
 USERNAME=${1:-"vscode"}
 
-# bionic and stretch pkg repos install cmake version < 3.15 which is required to run bootstrap-vcpkg.sh on ARM64 
-VCPKG_UNSUPPORTED_ARM64_VERSION_CODENAMES="stretch bionic"
-
 . /etc/os-release
 
 # Exit early if ARM64 OS does not have cmake version required to build Vcpkg
-if [ "$(dpkg --print-architecture)" = "arm64" ] && [[ "${VCPKG_UNSUPPORTED_ARM64_VERSION_CODENAMES}" = *"${VERSION_CODENAME}"* ]]; then
+if [ "$(dpkg --print-architecture)" = "arm64" ]; then
     echo "OS ${VERSION_CODENAME} ARM64 pkg repo installs cmake version < 3.15, which is required to build Vcpkg."
     exit 0
 fi
