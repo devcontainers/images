@@ -9,8 +9,8 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/cpp |
-| *Available image variants* | debian-11, debian-10, ubuntu-22.04, ubuntu-20.04, ubuntu-18.04 ([full list](https://mcr.microsoft.com/v2/devcontainers/cpp/tags/list)) |
-| *Published image architecture(s)* | x86-64, aarch64/arm64 for `debian-11`, `ubuntu-22.04`, and `ubuntu-18.04` variants |
+| *Available image variants* | debian-11, debian-10, ubuntu-22.04, ubuntu-20.04 ([full list](https://mcr.microsoft.com/v2/devcontainers/cpp/tags/list)) |
+| *Published image architecture(s)* | x86-64, aarch64/arm64 for `debian-11`,and `ubuntu-22.04` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian, Ubuntu |
 | *Languages, platforms* | C++ |
@@ -28,7 +28,6 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 - `mcr.microsoft.com/devcontainers/cpp:ubuntu` (latest Ubuntu LTS)
 - `mcr.microsoft.com/devcontainers/cpp:ubuntu-22.04` (or `jammy`)
 - `mcr.microsoft.com/devcontainers/cpp:ubuntu-20.04` (or `focal`)
-- `mcr.microsoft.com/devcontainers/cpp:ubuntu-18.04` (or `bionic`)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 

@@ -128,7 +128,7 @@ RUN if ! cat /etc/group | grep -e "^pip-global:" > /dev/null 2>&1; then groupadd
 If you would prefer to have multiple Python versions in your container, use `Dockerfile` and update `FROM` statement:
 
 ```Dockerfile
-FROM ubuntu:bionic
+FROM ubuntu:jammy
 ARG PYTHON_PACKAGES="python3.5 python3.6 python3.7 python3.8 python3 python3-pip python3-venv"
 RUN apt-get update && apt-get install --no-install-recommends -yq software-properties-common \
      && add-apt-repository ppa:deadsnakes/ppa && apt-get update \
