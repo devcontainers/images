@@ -14,7 +14,7 @@
 
 ## Variant: 20-bullseye
 
-**Digest:** sha256:a0dc9cc31fa2880c1de9106f1e4e18f8dc690333e3fe73bb6df537bb83fa38f0
+**Digest:** sha256:220fbe4f495f3b1d09dde2c46e61f778b02b52aaf47f8ac7dc0aec9d00864281
 
 **Tags:**
 ```
@@ -41,7 +41,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fb4213c34ff8ec83cbe6251f432fdac383378562 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6101106916147b1716ff2d5de4a53260e7607bae | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
@@ -54,7 +54,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.40.1 | 
+| [git](https://github.com/git/git) | 2.41.0 | 
 
 **Additional linux tools and packages**
 
@@ -102,7 +102,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 
 ## Variant: 18-bullseye
 
-**Digest:** sha256:35d696f382de89859244121e68b1e98b20d8c07938b4ba071a7fa76792e2ce29
+**Digest:** sha256:1b4b237654ae55e2a08617f91f03a49eada75572f41909227fe62fccff355ea0
 
 **Tags:**
 ```
@@ -128,7 +128,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fb4213c34ff8ec83cbe6251f432fdac383378562 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6101106916147b1716ff2d5de4a53260e7607bae | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
@@ -141,7 +141,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.40.1 | 
+| [git](https://github.com/git/git) | 2.41.0 | 
 
 **Additional linux tools and packages**
 
@@ -189,7 +189,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18
 
 ## Variant: 16-bullseye
 
-**Digest:** sha256:868d15a7205f222434ca8b505a7bd5b77524e8fada67e9f9d0ab401eaf5268be
+**Digest:** sha256:fdcc6274db7d793f93d1dbd5851e1070cb9cb726a5f010c5a4d6c7ea2a7ae4f6
 
 **Tags:**
 ```
@@ -215,7 +215,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fb4213c34ff8ec83cbe6251f432fdac383378562 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6101106916147b1716ff2d5de4a53260e7607bae | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
@@ -228,7 +228,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.40.1 | 
+| [git](https://github.com/git/git) | 2.41.0 | 
 
 **Additional linux tools and packages**
 
@@ -276,7 +276,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16
 
 ## Variant: 20-buster
 
-**Digest:** sha256:54ba0b2dbd105387f81c16ebad5da5d37ba0374a6ec2034ee0c51222718c9f62
+**Digest:** sha256:474e35c89b6aa92425c9f74112cf7f9ad2913550d4789acf0ffce30706ac2724
 
 **Tags:**
 ```
@@ -302,7 +302,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fb4213c34ff8ec83cbe6251f432fdac383378562 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6101106916147b1716ff2d5de4a53260e7607bae | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
@@ -315,7 +315,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-buster
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.40.1 | 
+| [git](https://github.com/git/git) | 2.41.0 | 
 
 **Additional linux tools and packages**
 
@@ -364,7 +364,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-buster
 
 ## Variant: 18-buster
 
-**Digest:** sha256:7b77eeb703f08ca591144b026422745d8adeb40dbeaab99b3f2753177beb15b8
+**Digest:** sha256:b2be98aa9b6a0a1572e923be61c7a95cb4ce1c7d2984965cffe5e997b6b579e5
 
 **Tags:**
 ```
@@ -389,7 +389,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fb4213c34ff8ec83cbe6251f432fdac383378562 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6101106916147b1716ff2d5de4a53260e7607bae | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
@@ -402,7 +402,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18-buster
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.40.1 | 
+| [git](https://github.com/git/git) | 2.41.0 | 
 
 **Additional linux tools and packages**
 
@@ -451,7 +451,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18-buster
 
 ## Variant: 16-buster
 
-**Digest:** sha256:f5dc0fd5a8641c93e55950e9ce520d7a1fdbe27fb9c0212631ace971b36d900b
+**Digest:** sha256:f4c8390bac2e7eb66c507c5c0515802dd5c2df34b85739aed7629e11a5bd875f
 
 **Tags:**
 ```
@@ -476,7 +476,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fb4213c34ff8ec83cbe6251f432fdac383378562 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6101106916147b1716ff2d5de4a53260e7607bae | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
@@ -489,7 +489,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16-buster
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.40.1 | 
+| [git](https://github.com/git/git) | 2.41.0 | 
 
 **Additional linux tools and packages**
 

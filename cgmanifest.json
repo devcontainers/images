@@ -63,7 +63,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "certifi",
-                    "Version": "2023.5.7"
+                    "Version": "2022.12.7"
                 }
             }
         },
@@ -107,7 +107,8 @@
             "Component": {
                 "Type": "Pip",
                 "Pip": {
-                    "Name": "py"
+                    "Name": "py",
+                    "Version": "1.11.0"
                 }
             }
         },
@@ -151,7 +152,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "git",
-                    "Version": "2.40.1",
+                    "Version": "2.41.0",
                     "DownloadUrl": "https://github.com/git/git"
                 }
             }
@@ -172,7 +173,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "fb4213c34ff8ec83cbe6251f432fdac383378562"
+                    "commitHash": "6101106916147b1716ff2d5de4a53260e7607bae"
                 }
             }
         },
@@ -238,6 +239,16 @@
         },
         {
             "Component": {
+                "Type": "git",
+                "Git": {
+                    "Name": "Oh My Zsh!",
+                    "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
+                    "commitHash": "00241073105643874531e1826b7df6d2cb3cadfb"
+                }
+            }
+        },
+        {
+            "Component": {
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Image: buildpack-deps",
@@ -272,7 +283,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "e527f179b10208896e983337aac4cfccfd45e3f9"
+                    "commitHash": "662dbb50e63af15baa2909b7eac5b1b87e86a0aa"
                 }
             }
         },
@@ -282,7 +293,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "8a2b7de29d42d713e4816d542cd610ee59dff63e"
+                    "commitHash": "d8e5ba9b4513ee2088c0cf17834e771300d156bd"
                 }
             }
         },
@@ -401,7 +412,7 @@
                 "Type": "go",
                 "Go": {
                     "Name": "golang.org/x/tools/gopls",
-                    "Version": "0.12.0"
+                    "Version": "0.12.2"
                 }
             }
         },
@@ -553,7 +564,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "fb4213c34ff8ec83cbe6251f432fdac383378562"
+                    "commitHash": "6101106916147b1716ff2d5de4a53260e7607bae"
                 }
             }
         },
@@ -697,15 +708,6 @@
                     "Name": "Docker Image: mcr.microsoft.com/devcontainers/ruby",
                     "Version": "3.2-buster",
                     "DownloadUrl": "https://github.com/devcontainers/images"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "Pip",
-                "Pip": {
-                    "Name": "certifi",
-                    "Version": "2022.12.7"
                 }
             }
         },
@@ -1146,7 +1148,7 @@
                 "Type": "npm",
                 "Npm": {
                     "Name": "typescript",
-                    "Version": "5.0.4"
+                    "Version": "5.1.3"
                 }
             }
         },
@@ -1325,6 +1327,15 @@
             "Component": {
                 "Type": "Pip",
                 "Pip": {
+                    "Name": "certifi",
+                    "Version": "2023.5.7"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "Pip",
+                "Pip": {
                     "Name": "wheel",
                     "Version": "0.40.0"
                 }
@@ -1345,7 +1356,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "fb4213c34ff8ec83cbe6251f432fdac383378562"
+                    "commitHash": "6101106916147b1716ff2d5de4a53260e7607bae"
                 }
             }
         },

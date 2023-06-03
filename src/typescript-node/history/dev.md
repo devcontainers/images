@@ -14,7 +14,7 @@
 
 ## Variant: 20-bullseye
 
-**Digest:** sha256:409d9b2faef793bb015e19e7e85603b5037505d44febe138aa1d8b95c6600ce8
+**Digest:** sha256:9ea0b92120b624b7cee151bd7675781af9da3c4d4fa1bfd85f196f237b5c06f4
 
 **Tags:**
 ```
@@ -36,13 +36,13 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bullseye
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
 | [Node.js](https://nodejs.org/en/) | 20.2.0 | /usr/local |
-| [TypeScript](https://www.typescriptlang.org/) | 5.0.4 | /usr/local/share/npm-global |
+| [TypeScript](https://www.typescriptlang.org/) | 5.1.3 | /usr/local/share/npm-global |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fb4213c34ff8ec83cbe6251f432fdac383378562 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6101106916147b1716ff2d5de4a53260e7607bae | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
@@ -51,13 +51,13 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bullseye
 |----------------|---------|
 | eslint | 8.41.0 |
 | tslint-to-eslint-config | 2.14.0 |
-| typescript | 5.0.4 |
+| typescript | 5.1.3 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.40.1 | 
+| [git](https://github.com/git/git) | 2.41.0 | 
 
 **Additional linux tools and packages**
 
@@ -105,7 +105,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bullseye
 
 ## Variant: 18-bullseye
 
-**Digest:** sha256:4c22cd5d9ab377e8bfc8c60456c76efe2f750496c84037d2d6005d544e243528
+**Digest:** sha256:d9fce2279d2f1c70e99d52072f8bd5492677e026bad97be707d6030039f1784c
 
 **Tags:**
 ```
@@ -126,13 +126,13 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-18
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
 | [Node.js](https://nodejs.org/en/) | 18.16.0 | /usr/local |
-| [TypeScript](https://www.typescriptlang.org/) | 5.0.4 | /usr/local/share/npm-global |
+| [TypeScript](https://www.typescriptlang.org/) | 5.1.3 | /usr/local/share/npm-global |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fb4213c34ff8ec83cbe6251f432fdac383378562 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6101106916147b1716ff2d5de4a53260e7607bae | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
@@ -141,13 +141,13 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-18
 |----------------|---------|
 | eslint | 8.41.0 |
 | tslint-to-eslint-config | 2.14.0 |
-| typescript | 5.0.4 |
+| typescript | 5.1.3 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.40.1 | 
+| [git](https://github.com/git/git) | 2.41.0 | 
 
 **Additional linux tools and packages**
 
@@ -195,7 +195,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-18
 
 ## Variant: 16-bullseye
 
-**Digest:** sha256:cdb22571a3425360fa8bbea12dbb367a87cbddf9e1ca73812b80011ebd0dc5d4
+**Digest:** sha256:2762ce64ca1ce4208bd17e0358e089ca69d15d6279f320c7224a2e009396a25e
 
 **Tags:**
 ```
@@ -216,13 +216,13 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
 | [Node.js](https://nodejs.org/en/) | 16.20.0 | /usr/local |
-| [TypeScript](https://www.typescriptlang.org/) | 5.0.4 | /usr/local/share/npm-global |
+| [TypeScript](https://www.typescriptlang.org/) | 5.1.3 | /usr/local/share/npm-global |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fb4213c34ff8ec83cbe6251f432fdac383378562 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6101106916147b1716ff2d5de4a53260e7607bae | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
@@ -231,13 +231,13 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16
 |----------------|---------|
 | eslint | 8.41.0 |
 | tslint-to-eslint-config | 2.14.0 |
-| typescript | 5.0.4 |
+| typescript | 5.1.3 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.40.1 | 
+| [git](https://github.com/git/git) | 2.41.0 | 
 
 **Additional linux tools and packages**
 
@@ -285,7 +285,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16
 
 ## Variant: 20-buster
 
-**Digest:** sha256:a5e4aeaaa97365b538f532176ccaea0f328367e2bdf632484b65cbb9b8552ec3
+**Digest:** sha256:a08410abbfacf5d532b1c7ff53495707f6f8527a18325a8b74f724a6f5d9882d
 
 **Tags:**
 ```
@@ -306,13 +306,13 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-buster
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
 | [Node.js](https://nodejs.org/en/) | 20.2.0 | /usr/local |
-| [TypeScript](https://www.typescriptlang.org/) | 5.0.4 | /usr/local/share/npm-global |
+| [TypeScript](https://www.typescriptlang.org/) | 5.1.3 | /usr/local/share/npm-global |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fb4213c34ff8ec83cbe6251f432fdac383378562 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6101106916147b1716ff2d5de4a53260e7607bae | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
@@ -321,13 +321,13 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-buster
 |----------------|---------|
 | eslint | 8.41.0 |
 | tslint-to-eslint-config | 2.14.0 |
-| typescript | 5.0.4 |
+| typescript | 5.1.3 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.40.1 | 
+| [git](https://github.com/git/git) | 2.41.0 | 
 
 **Additional linux tools and packages**
 
@@ -376,7 +376,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-buster
 
 ## Variant: 18-buster
 
-**Digest:** sha256:55d4e5634812a6f06321f0cf8f17cdb6cc02cf8a5cd4c7c1ffb3ae7431cbc6e7
+**Digest:** sha256:4f5aa231d67b2ec06e0f36ba773c0107e8b74ccc9c2203e5b060804463dc338b
 
 **Tags:**
 ```
@@ -396,13 +396,13 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-18-buster
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
 | [Node.js](https://nodejs.org/en/) | 18.16.0 | /usr/local |
-| [TypeScript](https://www.typescriptlang.org/) | 5.0.4 | /usr/local/share/npm-global |
+| [TypeScript](https://www.typescriptlang.org/) | 5.1.3 | /usr/local/share/npm-global |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fb4213c34ff8ec83cbe6251f432fdac383378562 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6101106916147b1716ff2d5de4a53260e7607bae | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
@@ -411,13 +411,13 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-18-buster
 |----------------|---------|
 | eslint | 8.41.0 |
 | tslint-to-eslint-config | 2.14.0 |
-| typescript | 5.0.4 |
+| typescript | 5.1.3 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.40.1 | 
+| [git](https://github.com/git/git) | 2.41.0 | 
 
 **Additional linux tools and packages**
 
@@ -466,7 +466,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-18-buster
 
 ## Variant: 16-buster
 
-**Digest:** sha256:7be1a90c8d7700cf4a0de503b2cdaea9411bc90c30b120a6940e1ef523280c9b
+**Digest:** sha256:16fbe17d567040269ed3b01067618cfb1911bfb5fa9630a6995c51e13b055e7e
 
 **Tags:**
 ```
@@ -486,13 +486,13 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16-buster
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
 | [Node.js](https://nodejs.org/en/) | 16.20.0 | /usr/local |
-| [TypeScript](https://www.typescriptlang.org/) | 5.0.4 | /usr/local/share/npm-global |
+| [TypeScript](https://www.typescriptlang.org/) | 5.1.3 | /usr/local/share/npm-global |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fb4213c34ff8ec83cbe6251f432fdac383378562 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6101106916147b1716ff2d5de4a53260e7607bae | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
@@ -501,13 +501,13 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16-buster
 |----------------|---------|
 | eslint | 8.41.0 |
 | tslint-to-eslint-config | 2.14.0 |
-| typescript | 5.0.4 |
+| typescript | 5.1.3 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.40.1 | 
+| [git](https://github.com/git/git) | 2.41.0 | 
 
 **Additional linux tools and packages**
 

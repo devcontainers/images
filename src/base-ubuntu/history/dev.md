@@ -11,7 +11,7 @@
 
 ## Variant: jammy
 
-**Digest:** sha256:1e9fefbe0c635cefee763fafc95dd71059dd16c8a3624028d0e2b508f855f84f
+**Digest:** sha256:e160e5b22e21bf9f0de94a2a793fa2cddb68ce6b3ae55f9fced47fc7daec797a
 
 **Tags:**
 ```
@@ -33,13 +33,13 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fb4213c34ff8ec83cbe6251f432fdac383378562 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6101106916147b1716ff2d5de4a53260e7607bae | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.40.1 | 
+| [git](https://github.com/git/git) | 2.41.0 | 
 
 **Additional linux tools and packages**
 
@@ -85,7 +85,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 ## Variant: focal
 
-**Digest:** sha256:6486fe0b18ffad7fbd2e6d364bb26e06c3f4f9a6113c655ebe0bf29c9e461be4
+**Digest:** sha256:f9a1165bc422bec8e6040c8431a0814e116f23fe05f6cb98b96065c30685925b
 
 **Tags:**
 ```
@@ -106,13 +106,13 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fb4213c34ff8ec83cbe6251f432fdac383378562 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6101106916147b1716ff2d5de4a53260e7607bae | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.40.1 | 
+| [git](https://github.com/git/git) | 2.41.0 | 
 
 **Additional linux tools and packages**
 
@@ -161,7 +161,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 
 ## Variant: bionic
 
-**Digest:** sha256:70a89fb17ae99b801ce98d20993867fa8c6332403d6045b755f63f6b83acdd71
+**Digest:** sha256:3780f5e570ab0090823c3d85f70880525f2c8ec71d7c36758cd5523062c4dc45
 
 **Tags:**
 ```
@@ -182,13 +182,13 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu18.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fb4213c34ff8ec83cbe6251f432fdac383378562 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 00241073105643874531e1826b7df6d2cb3cadfb | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.40.1 | 
+| [git](https://github.com/git/git) | 2.41.0 | 
 
 **Additional linux tools and packages**
 
