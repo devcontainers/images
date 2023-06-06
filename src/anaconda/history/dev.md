@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:1d1597bdaf80f15ad2ecfb2eaf56979b5764f67bd92cec91641341204add70e6
+**Digest:** sha256:61c85e350fb19f48315095744d4a37830332c44d7cef9087f20dfb7de28967e5
 
 **Tags:**
 ```
@@ -24,7 +24,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
 | [Python](https://www.python.org/) | 3.10.9 | /opt/conda |
-| [Jupyter Notebooks](https://jupyter.org/) | 6.5.4 | /opt/conda |
+| [Jupyter Notebooks](https://jupyter.org/) | 6.5.2 | /opt/conda |
 | [Jupyter Lab](https://jupyter.org/) | 3.5.3 | /opt/conda |
 
 **Tools installed using git**
@@ -42,20 +42,20 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | cryptography | 39.0.1 |
 | mistune | 2.0.5 |
 | numpy | 1.24.3 |
-| certifi | 2023.5.7 |
+| certifi | 2022.12.7 |
 | setuptools | 65.6.3 |
 | future | 0.18.3 |
 | wheel | 0.38.4 |
 | nbconvert | 7.4.0 |
+| py | 1.11.0 |
 | requests | 2.31.0 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.40.1 | 
+| [git](https://github.com/git/git) | 2.41.0 | 
 | [conda](https://github.com/conda/conda) | 23.3.1 | /opt/conda |
-| anaconda | custom | /opt/conda |
 
 **Additional linux tools and packages**
 

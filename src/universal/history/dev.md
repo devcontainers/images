@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:47105df19e9386aeafd5363955ab62599d05a0d312851d3f9c207ce3646ea035
+**Digest:** sha256:086d56709a85c49035830370c9a814e7d948f744ec457f681e8b92cceb6b4994
 
 **Tags:**
 ```
@@ -42,7 +42,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fb4213c34ff8ec83cbe6251f432fdac383378562 | /home/codespace/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6101106916147b1716ff2d5de4a53260e7607bae | /home/codespace/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | 6c5a5983e2bccae5ac2b217b69210ecf3cd560f1 | /usr/local/nvs |
 | [rbenv](https://github.com/rbenv/rbenv.git) | af9201ea1ef7dca287a15fe30d51dd187403c993 | /usr/local/share/rbenv |
@@ -81,7 +81,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool / module | Version |
 |---------------|---------|
-| golang.org/x/tools/gopls | 0.12.0 |
+| golang.org/x/tools/gopls | 0.12.2 |
 | honnef.co/go/tools | 0.4.2 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
 | github.com/mgechev/revive | 1.3.2 |
@@ -101,7 +101,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.40.1 | 
+| [git](https://github.com/git/git) | 2.41.0 | 
 | [Xdebug](https://xdebug.org/) | 3.2.1 | /usr/local/php/current |
 | [Composer](https://getcomposer.org/) | 2.5.7 | /usr/local/php/current/bin |
 | [kubectl](https://github.com/kubernetes/kubectl) | v1.27.2 | /usr/local/bin |
@@ -143,7 +143,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | libatk1.0-0 | 2.35.1-1ubuntu2 |
 | libc6 | 2.31-0ubuntu9.9 |
 | libc6-dev | 2.31-0ubuntu9.9 |
-| libcups2 | 2.3.1-9ubuntu1.2 |
+| libcups2 | 2.3.1-9ubuntu1.3 |
 | libgbm1 | 21.2.6-0ubuntu0.1~20.04.2 |
 | libgcc1 | 1:10.3.0-1ubuntu1~20.04 |
 | libgssapi-krb5-2 | 1.17-6ubuntu4.3 |
