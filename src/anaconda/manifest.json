@@ -37,7 +37,8 @@
 			"py",
 			"pyOpenssl",
 			"werkzeug",
-			"requests"
+			"requests",
+			"tornado"
 		],
 		"other": {
 			"git": {},
