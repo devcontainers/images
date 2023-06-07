@@ -42,6 +42,10 @@ checkPythonPackageVersion "werkzeug" "2.2.3"
 checkPythonPackageVersion "certifi" "2022.12.07"
 checkPythonPackageVersion "requests" "2.31.0"
 
+# The `tornado` package doesn't have the `__version__` attribute so we can use the `version` attribute.
+tornado_version=$(python -c "import tornado; print(tornado.version)")
+check-version-ge "tornado-requirement" "${tornado_version}" "6.3.2"
+
 check "conda-update-conda" bash -c "conda update -y conda"
 check "conda-install" bash -c "conda install -c conda-forge --yes tensorflow"
 check "conda-install" bash -c "conda install -c conda-forge --yes pytorch"
