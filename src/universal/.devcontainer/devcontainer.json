@@ -23,7 +23,7 @@
         },
         "./local-features/nvs": "latest",
         "ghcr.io/devcontainers/features/python:1": {
-            "version": "3.10.4",
+            "version": "3.10.8",
             "additionalVersions": "3.9.16",
             "installJupyterlab": "true",
             "configureJupyterlabAllowOrigin": "*"
@@ -71,7 +71,8 @@
         },
         "./local-features/jekyll": "latest",
         "ghcr.io/devcontainers/features/oryx:1": "latest",
-        "./local-features/setup-user": "latest"
+        "./local-features/setup-user": "latest",
+        "./local-features/patch-python": "latest"
     },
     "overrideFeatureInstallOrder": [
         "ghcr.io/devcontainers/features/common-utils",
@@ -81,6 +82,7 @@
         "ghcr.io/devcontainers/features/node",
         "./local-features/nvs",
         "ghcr.io/devcontainers/features/python",
+        "./local-features/patch-python",
         "./local-features/machine-learning-packages",
         "ghcr.io/devcontainers/features/php",
         "ghcr.io/devcontainers/features/conda",

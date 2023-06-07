@@ -1,0 +1,8 @@
+{
+    "id": "patch-python",
+    "name": "Patch Python Packages",
+    "install": {
+        "app": "",
+        "file": "install.sh"
+    }
+}
