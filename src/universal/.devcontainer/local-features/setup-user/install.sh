@@ -41,13 +41,6 @@ sudo_if() {
     fi
 }
 
-# Temporary: Upgrade python packages due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40897
-# They are installed by the base image (python) which does not have the patch.
-sudo_if /usr/local/python/current/bin/python -m pip uninstall --yes setuptools
-sudo_if /usr/local/python/current/bin/python -m pip install --user --upgrade --no-cache-dir setuptools
-sudo_if /usr/local/python/3.9.*/bin/python -m pip uninstall --yes setuptools
-sudo_if /usr/local/python/3.9.*/bin/python -m pip install --user --upgrade --no-cache-dir setuptools
-
 # Enables the oryx tool to generate manifest-dir which is needed for running the postcreate tool
 DEBIAN_FLAVOR="focal-scm"
 mkdir -p /opt/oryx && echo "vso-focal" > /opt/oryx/.imagetype
