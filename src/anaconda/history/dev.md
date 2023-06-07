@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:61c85e350fb19f48315095744d4a37830332c44d7cef9087f20dfb7de28967e5
+**Digest:** sha256:00966bf8bdf4875b72af9d2dcd7ad57cc5f8d7d38c04c665176caa5ef5f28aa3
 
 **Tags:**
 ```
@@ -49,6 +49,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | nbconvert | 7.4.0 |
 | py | 1.11.0 |
 | requests | 2.31.0 |
+| tornado | 6.3.2 |
 
 **Other tools and utilities**
 

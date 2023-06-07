@@ -12,7 +12,7 @@
 
 ## Variant: 3.18
 
-**Digest:** sha256:d77ef1e9efdf19598f22bc792749d772137b36f2760483338ab68c3977f26803
+**Digest:** sha256:1da2aaaa3190fd1e73763edb07162168a878a1e551c393f63d67561adceac14c
 
 **Tags:**
 ```
@@ -33,7 +33,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6101106916147b1716ff2d5de4a53260e7607bae | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 46c70406dd0b26bbd61210873ad6c86d9e8ee5da | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -83,7 +83,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 ## Variant: 3.17
 
-**Digest:** sha256:0225732b96d54cda78133c9c1755cb71986cc0d15281ff51fee86bc4e322f28f
+**Digest:** sha256:54c774879eca034046fcb2d1ad532a9cf15dbfc7e46d854d4c20a1c807a6b1f8
 
 **Tags:**
 ```
@@ -103,7 +103,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.17
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6101106916147b1716ff2d5de4a53260e7607bae | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 46c70406dd0b26bbd61210873ad6c86d9e8ee5da | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -153,7 +153,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.17
 
 ## Variant: 3.16
 
-**Digest:** sha256:7a502a7699ba66e6d9f781b5429c985221113d4fab5e34272b5d5f3110f2c8d9
+**Digest:** sha256:d68d250c6c813f8bb99375f5f2af0924248af2cece1a2ad382a5c73eb5e03035
 
 **Tags:**
 ```
@@ -173,7 +173,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.16
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6101106916147b1716ff2d5de4a53260e7607bae | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 115cee17015e4b5665e16dc4fd15c53e06a22f9a | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -223,7 +223,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.16
 
 ## Variant: 3.15
 
-**Digest:** sha256:fa1694df104da562a1c52679ad4b62f70531b46ce9fbdcff8cb4bc1a8797ca46
+**Digest:** sha256:c7dc2fee4148950c0d0d10c1529ee42fd70b825fe81e2f34b3665ddebcb33682
 
 **Tags:**
 ```
@@ -243,7 +243,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.15
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6101106916147b1716ff2d5de4a53260e7607bae | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 46c70406dd0b26bbd61210873ad6c86d9e8ee5da | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 

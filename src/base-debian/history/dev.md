@@ -10,7 +10,7 @@
 
 ## Variant: buster
 
-**Digest:** sha256:a3165e8d355c5c1b483a336af2a47a431ea6db38ea8832bf79cd9aade1cbf451
+**Digest:** sha256:f566a28a62b0ceec2397cfa6eb3732fe3b6a83951b8bef314521fd5dcca204db
 
 **Tags:**
 ```
@@ -31,7 +31,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian10
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6101106916147b1716ff2d5de4a53260e7607bae | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 46c70406dd0b26bbd61210873ad6c86d9e8ee5da | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -86,7 +86,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian10
 
 ## Variant: bullseye
 
-**Digest:** sha256:42029aeb0fe8d4afc780d8e2cbb44e5f3dd26a6c45f197c4f5fe4d43407626fb
+**Digest:** sha256:2c4190199a59fb652d6e206b3436ae9c8cae81bffea4149768bcf56474bbf408
 
 **Tags:**
 ```
@@ -109,7 +109,7 @@ mcr.microsoft.com/devcontainers/base:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6101106916147b1716ff2d5de4a53260e7607bae | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 115cee17015e4b5665e16dc4fd15c53e06a22f9a | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 

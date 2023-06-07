@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:086d56709a85c49035830370c9a814e7d948f744ec457f681e8b92cceb6b4994
+**Digest:** sha256:80347775b2306e1df103a37d42caf238edded2b480e989f965077f2084891109
 
 **Tags:**
 ```
@@ -34,7 +34,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [PHP](https://xdebug.org/) | 8.1.14<br />8.2.1 | /usr/local/php/&lt;version&gt; |
 | GCC | 9.4.0-1ubuntu1~20.04.1 | 
 | Clang | 10.0.0-4ubuntu1 | 
-| [Go](https://golang.org/dl) | 1.20.4 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.20.5 | /usr/local/go |
 | [Jekyll](https://jekyllrb.com/) | 4.3.2 | 
 | [Jupyter Lab](https://jupyter.org/) | 4.0.1 | /home/codespace/.local/bin/jupyter-lab |
 
@@ -42,7 +42,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6101106916147b1716ff2d5de4a53260e7607bae | /home/codespace/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 115cee17015e4b5665e16dc4fd15c53e06a22f9a | /home/codespace/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | 6c5a5983e2bccae5ac2b217b69210ecf3cd560f1 | /usr/local/nvs |
 | [rbenv](https://github.com/rbenv/rbenv.git) | af9201ea1ef7dca287a15fe30d51dd187403c993 | /usr/local/share/rbenv |
