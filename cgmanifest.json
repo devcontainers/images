@@ -139,6 +139,15 @@
         },
         {
             "Component": {
+                "Type": "Pip",
+                "Pip": {
+                    "Name": "tornado",
+                    "Version": "6.3.2"
+                }
+            }
+        },
+        {
+            "Component": {
                 "Type": "git",
                 "Git": {
                     "Name": "Oh My Zsh!",
@@ -173,7 +182,17 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "6101106916147b1716ff2d5de4a53260e7607bae"
+                    "commitHash": "46c70406dd0b26bbd61210873ad6c86d9e8ee5da"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "git",
+                "Git": {
+                    "Name": "Oh My Zsh!",
+                    "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
+                    "commitHash": "115cee17015e4b5665e16dc4fd15c53e06a22f9a"
                 }
             }
         },
@@ -239,16 +258,6 @@
         },
         {
             "Component": {
-                "Type": "git",
-                "Git": {
-                    "Name": "Oh My Zsh!",
-                    "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "00241073105643874531e1826b7df6d2cb3cadfb"
-                }
-            }
-        },
-        {
-            "Component": {
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Image: buildpack-deps",
@@ -269,11 +278,11 @@
         },
         {
             "Component": {
-                "Type": "other",
-                "Other": {
-                    "Name": "Docker Image: buildpack-deps",
-                    "Version": "bionic-curl",
-                    "DownloadUrl": "https://hub.docker.com/_/buildpack-deps"
+                "Type": "git",
+                "Git": {
+                    "Name": "vcpkg",
+                    "repositoryUrl": "https://github.com/microsoft/vcpkg",
+                    "commitHash": "037ef821daeb028882c8e73edb198dc2eb02758f"
                 }
             }
         },
@@ -283,7 +292,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "662dbb50e63af15baa2909b7eac5b1b87e86a0aa"
+                    "commitHash": "1e334d770ac71a89d1c36d51019e60dd08b68f76"
                 }
             }
         },
@@ -293,7 +302,17 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "d8e5ba9b4513ee2088c0cf17834e771300d156bd"
+                    "commitHash": "0f8a0f084a8d1bf35700dd797ae5e4bb8aa52f1a"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "git",
+                "Git": {
+                    "Name": "vcpkg",
+                    "repositoryUrl": "https://github.com/microsoft/vcpkg",
+                    "commitHash": "6d6f3164e60d62325fc667bb68ac89568857b6d7"
                 }
             }
         },
@@ -333,16 +352,6 @@
                 "Other": {
                     "Name": "Docker Image: buildpack-deps",
                     "Version": "focal-curl",
-                    "DownloadUrl": "https://hub.docker.com/_/buildpack-deps"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "other",
-                "Other": {
-                    "Name": "Docker Image: buildpack-deps",
-                    "Version": "bionic-curl",
                     "DownloadUrl": "https://hub.docker.com/_/buildpack-deps"
                 }
             }
@@ -554,7 +563,7 @@
                 "Type": "npm",
                 "Npm": {
                     "Name": "eslint",
-                    "Version": "8.41.0"
+                    "Version": "8.42.0"
                 }
             }
         },
@@ -564,7 +573,17 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "6101106916147b1716ff2d5de4a53260e7607bae"
+                    "commitHash": "115cee17015e4b5665e16dc4fd15c53e06a22f9a"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "git",
+                "Git": {
+                    "Name": "Oh My Zsh!",
+                    "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
+                    "commitHash": "46c70406dd0b26bbd61210873ad6c86d9e8ee5da"
                 }
             }
         },
@@ -1092,7 +1111,7 @@
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "rust-analysis",
-                    "Version": "1.69.0"
+                    "Version": "1.70.0"
                 }
             }
         },
@@ -1101,7 +1120,7 @@
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "rust-src",
-                    "Version": "1.69.0"
+                    "Version": "1.70.0"
                 }
             }
         },
@@ -1110,7 +1129,7 @@
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "clippy",
-                    "Version": "1.69.0"
+                    "Version": "1.70.0"
                 }
             }
         },
@@ -1356,7 +1375,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "6101106916147b1716ff2d5de4a53260e7607bae"
+                    "commitHash": "46c70406dd0b26bbd61210873ad6c86d9e8ee5da"
                 }
             }
         },
@@ -1367,6 +1386,16 @@
                     "Name": "nvs",
                     "repositoryUrl": "https://github.com/jasongin/nvs",
                     "commitHash": "6c5a5983e2bccae5ac2b217b69210ecf3cd560f1"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "git",
+                "Git": {
+                    "Name": "ruby-build",
+                    "repositoryUrl": "https://github.com/rbenv/ruby-build.git",
+                    "commitHash": "4effe8661b407c939cadb75280aafce6ba449057"
                 }
             }
         },
@@ -1425,7 +1454,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Go",
-                    "Version": "1.20.4",
+                    "Version": "1.20.5",
                     "DownloadUrl": "https://golang.org/dl"
                 }
             }
