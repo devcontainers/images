@@ -7,11 +7,10 @@
 **Image variations:**
 - [jammy](#variant-jammy)
 - [focal](#variant-focal)
-- [bionic](#variant-bionic)
 
 ## Variant: jammy
 
-**Digest:** sha256:e160e5b22e21bf9f0de94a2a793fa2cddb68ce6b3ae55f9fced47fc7daec797a
+**Digest:** sha256:b38b1df0eefaf28e6f6a7d4f294cc92d3ad117d6a33c329bac40d60ff0b2924b
 
 **Tags:**
 ```
@@ -33,7 +32,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6101106916147b1716ff2d5de4a53260e7607bae | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 115cee17015e4b5665e16dc4fd15c53e06a22f9a | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -85,7 +84,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 ## Variant: focal
 
-**Digest:** sha256:f9a1165bc422bec8e6040c8431a0814e116f23fe05f6cb98b96065c30685925b
+**Digest:** sha256:8f8855363adfcb13f3ad5347a0c84c12f89365b8e35855fac602c2a298a4e3bd
 
 **Tags:**
 ```
@@ -106,7 +105,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6101106916147b1716ff2d5de4a53260e7607bae | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 115cee17015e4b5665e16dc4fd15c53e06a22f9a | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -158,81 +157,4 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 | zip | 3.0-11build1 |
 | zlib1g | 1:1.2.11.dfsg-2ubuntu1.5 |
 | zsh | 5.8-3ubuntu1.1 |
-
-## Variant: bionic
-
-**Digest:** sha256:3780f5e570ab0090823c3d85f70880525f2c8ec71d7c36758cd5523062c4dc45
-
-**Tags:**
-```
-mcr.microsoft.com/devcontainers/base:dev-bionic
-mcr.microsoft.com/devcontainers/base:dev-ubuntu-18.04
-mcr.microsoft.com/devcontainers/base:dev-ubuntu18.04
-```
-> *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
-
-**Linux distribution:** Ubuntu 18.04.6 LTS (debian-like distro)
-
-**Architectures:** linux/amd64, linux/arm64
-
-**Available (non-root) user:** vscode
-
-### Contents
-**Tools installed using git**
-
-| Tool | Commit | Path |
-|------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 00241073105643874531e1826b7df6d2cb3cadfb | /home/vscode/.oh-my-zsh |
-
-**Other tools and utilities**
-
-| Tool | Version | Path |
-|------|---------|------|
-| [git](https://github.com/git/git) | 2.41.0 | 
-
-**Additional linux tools and packages**
-
-| Tool / library | Version |
-|----------------|---------|
-| apt-transport-https | 1.6.17 |
-| apt-utils | 1.6.17 |
-| ca-certificates | 20230311ubuntu0.18.04.1 |
-| curl | 7.58.0-2ubuntu3.24 |
-| dialog | 1.3-20171209-1 |
-| git | 1:2.17.1-1ubuntu0.18 |
-| gnupg2 | 2.2.4-1ubuntu1.6 |
-| htop | 2.1.0-3 |
-| iproute2 | 4.15.0-2ubuntu1.3 |
-| jq | 1.5+dfsg-2 |
-| less | 487-0.1 |
-| libc6 | 2.27-3ubuntu1.6 |
-| libgcc1 | 1:8.4.0-1ubuntu1~18.04 |
-| libgssapi-krb5-2 | 1.16-2ubuntu0.4 |
-| libicu60 | 60.2-3ubuntu3.2 |
-| libkrb5-3 | 1.16-2ubuntu0.4 |
-| liblttng-ust0 | 2.10.1-1 |
-| libssl1.0.0 | 1.0.2n-1ubuntu5.13 |
-| libssl1.1 | 1.1.1-1ubuntu2.1~18.04.23 |
-| libstdc++6 | 8.4.0-1ubuntu1~18.04 |
-| locales | 2.27-3ubuntu1.6 |
-| lsb-release | 9.20170808ubuntu1 |
-| lsof | 4.89+dfsg-0.1 |
-| man-db | 2.8.3-2ubuntu0.1 |
-| manpages | 4.15-1 |
-| manpages-dev | 4.15-1 |
-| nano | 2.9.3-2 |
-| ncdu | 1.12-1 |
-| net-tools | 1.60+git20161116.90da8a0-1ubuntu1 |
-| openssh-client | 1:7.6p1-4ubuntu0.7 |
-| procps | 2:3.3.12-3ubuntu1.2 |
-| psmisc | 23.1-1ubuntu0.1 |
-| rsync | 3.1.2-2.1ubuntu1.6 |
-| strace | 4.21-1ubuntu1 |
-| sudo | 1.8.21p2-3ubuntu1.6 |
-| unzip | 6.0-21ubuntu1.2 |
-| vim-tiny | 2:8.0.1453-1ubuntu1.13 |
-| wget | 1.19.4-1ubuntu2.2 |
-| zip | 3.0-11build1 |
-| zlib1g | 1:1.2.11.dfsg-0ubuntu2.2 |
-| zsh | 5.4.2-3ubuntu3.2 |
 

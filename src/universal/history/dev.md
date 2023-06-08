@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:086d56709a85c49035830370c9a814e7d948f744ec457f681e8b92cceb6b4994
+**Digest:** sha256:fd9eee70054a07124120b5a8babfca78ead6b487d7c2d4c34dac7ac8a9d44652
 
 **Tags:**
 ```
@@ -27,14 +27,14 @@ mcr.microsoft.com/devcontainers/universal:dev
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
 | [Node.js](https://nodejs.org/en/) | 18.16.0<br />19.9.0 | /usr/local/share/nvm/versions/node/&lt;version&gt; |
-| [Python](https://www.python.org/) | 3.10.4<br />3.9.16 | /usr/local/python/&lt;version&gt; |
+| [Python](https://www.python.org/) | 3.10.8<br />3.9.16 | /usr/local/python/&lt;version&gt; |
 | [Java](https://adoptopenjdk.net/) | 11.0.19<br />17.0.7 | /usr/local/sdkman/candidates/java/&lt;version&gt; |
 | [.NET](https://dotnet.microsoft.com/) | 6<br />0<br />4<br />0<br />8<br />7<br />0<br />3<br />0<br />2 | /usr/local/dotnet |
 | [Ruby](https://www.ruby-lang.org/en/) | 3.0.6<br />3.1.4 | /usr/local/rvm/rubies/&lt;version&gt; |
 | [PHP](https://xdebug.org/) | 8.1.14<br />8.2.1 | /usr/local/php/&lt;version&gt; |
 | GCC | 9.4.0-1ubuntu1~20.04.1 | 
 | Clang | 10.0.0-4ubuntu1 | 
-| [Go](https://golang.org/dl) | 1.20.4 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.20.5 | /usr/local/go |
 | [Jekyll](https://jekyllrb.com/) | 4.3.2 | 
 | [Jupyter Lab](https://jupyter.org/) | 4.0.1 | /home/codespace/.local/bin/jupyter-lab |
 
@@ -42,11 +42,11 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6101106916147b1716ff2d5de4a53260e7607bae | /home/codespace/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 46c70406dd0b26bbd61210873ad6c86d9e8ee5da | /home/codespace/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | 6c5a5983e2bccae5ac2b217b69210ecf3cd560f1 | /usr/local/nvs |
 | [rbenv](https://github.com/rbenv/rbenv.git) | af9201ea1ef7dca287a15fe30d51dd187403c993 | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | dc6d1973d540dd69e81f810080643f54ff352da8 | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 4effe8661b407c939cadb75280aafce6ba449057 | /usr/local/share/ruby-build |
 
 **Pip / pipx installed tools and packages**
 
