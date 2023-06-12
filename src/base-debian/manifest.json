@@ -1,11 +1,12 @@
 {
 	"version": "0.203.10",
 	"variants": [
+		"bookworm",
 		"buster",
 		"bullseye"
 	],
 	"build": {
-		"latest": "bullseye",
+		"latest": "bookworm",
 		"rootDistro": "debian",
 		"architectures": {
 			"bullseye": [
@@ -20,11 +21,15 @@
 			"base:${VERSION}-${VARIANT}"
 		],
 		"variantTags": {
-			"bullseye": [
-				"base:${VERSION}-debian-11",
-				"base:${VERSION}-debian11",
+			"bookworm": [
+				"base:${VERSION}-debian-12",
+				"base:${VERSION}-debian12",
 				"base:${VERSION}-debian",
 				"base:${VERSION}"
+			],
+			"bullseye": [
+				"base:${VERSION}-debian-11",
+				"base:${VERSION}-debian11"
 			],
 			"buster": [
 				"base:${VERSION}-debian-10",
