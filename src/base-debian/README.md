@@ -9,8 +9,8 @@
 | *Categories* | Core, Other |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/base:debian |
-| *Available image variants* | buster, bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/base/tags/list)) |
-| *Published image architecture(s)* | x86-64, aarch64/arm64 for `bullseye` variant |
+| *Available image variants* | bookworm, buster, bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/base/tags/list)) |
+| *Published image architecture(s)* | x86-64, aarch64/arm64 for `bookworm`, and `bullseye` variant |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
 | *Languages, platforms* | Any |
@@ -22,6 +22,7 @@ See **[history](history)** for information on the contents of published images.
 You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
 - `mcr.microsoft.com/devcontainers/base:debian` (latest)
+- `mcr.microsoft.com/devcontainers/base:bookworm` (or `debian-12`)
 - `mcr.microsoft.com/devcontainers/base:bullseye` (or `debian-11`)
 - `mcr.microsoft.com/devcontainers/base:buster` (or `debian-10`)
 
