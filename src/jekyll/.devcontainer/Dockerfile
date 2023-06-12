@@ -13,9 +13,9 @@ ENV LANG=en_US.UTF-8 \
     LANGUAGE=en_US
 
 # Install bundler, latest jekyll, and github-pages for older jekyll
-# RUN gem update --system
-RUN gem install jekyll github-pages
-RUN gem install 
+RUN gem update --system
+RUN gem install sass-embedded -v 1.62.1
+RUN gem install bundler jekyll github-pages
 
 RUN chown -R "vscode:rvm" "/usr/local/rvm/" \
     && chmod -R g+r+w "/usr/local/rvm/" \
