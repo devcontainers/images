@@ -13,7 +13,7 @@ ENV LANG=en_US.UTF-8 \
     LANGUAGE=en_US
 
 # Install bundler, latest jekyll, and github-pages for older jekyll
-RUN gem update --system
+# RUN gem update --system
 RUN gem install bundler -v 2.4.13
 RUN gem install jekyll github-pages
 
