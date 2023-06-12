@@ -9,6 +9,10 @@
 		"latest": "bookworm",
 		"rootDistro": "debian",
 		"architectures": {
+			"bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
 			"bullseye": [
 				"linux/amd64",
 				"linux/arm64"

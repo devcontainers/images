@@ -9,8 +9,8 @@
 | *Categories* | Core, Other |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/base:debian |
-| *Available image variants* | buster, bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/base/tags/list)) |
-| *Published image architecture(s)* | x86-64, aarch64/arm64 for `bookworm`, `buster`, `bullseye` variant |
+| *Available image variants* | bookworm, buster, bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/base/tags/list)) |
+| *Published image architecture(s)* | x86-64, aarch64/arm64 for `bookworm`, and `bullseye` variant |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
 | *Languages, platforms* | Any |
