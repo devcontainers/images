@@ -9,8 +9,8 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/java |
-| *Available image variants* | 11 / 11-bullseye, 17 / 17-bullseye, 11-buster, 17-buster ([full list](https://mcr.microsoft.com/v2/devcontainers/java/tags/list)) |
-| *Published image architecture(s)* | x86-64, arm64/aarch64 for `bullseye` variants |
+| *Available image variants* | 11 / 11-bookworm, 17 / 17-bookworm, 11-bullseye, 17-bullseye, 11-buster, 17-buster ([full list](https://mcr.microsoft.com/v2/devcontainers/java/tags/list)) |
+| *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm`, and `bullseye` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
 | *Languages, platforms* | Java |
@@ -22,8 +22,8 @@ See **[history](history)** for information on the contents of published images.
 You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
 - `mcr.microsoft.com/devcontainers/java` (latest)
-- `mcr.microsoft.com/devcontainers/java:11` (or `11-bullseye`, `11-buster` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/java:17` (or `17-bullseye`, `17-buster` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/java:11` (or `17-bookworm`, `11-bullseye`, `11-buster` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/java:17` (or `17-bookworm`, `17-bullseye`, `17-buster` to pin to an OS version)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
