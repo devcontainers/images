@@ -30,9 +30,9 @@ Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/devcontainers/base:0-buster`
-- `mcr.microsoft.com/devcontainers/base:0.202-buster`
-- `mcr.microsoft.com/devcontainers/base:0.202.6-buster`
+- `mcr.microsoft.com/devcontainers/base:1-bookworm`
+- `mcr.microsoft.com/devcontainers/base:1.0-bookworm`
+- `mcr.microsoft.com/devcontainers/base:1.0.0-bookworm`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/base/tags/list).
 
