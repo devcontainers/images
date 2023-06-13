@@ -10,7 +10,7 @@
 
 ## Variant: jammy
 
-**Digest:** sha256:b38b1df0eefaf28e6f6a7d4f294cc92d3ad117d6a33c329bac40d60ff0b2924b
+**Digest:** sha256:7f9e06f4c4b6d037cff34d0fa8a5720b1c87d5282209d41b10ff472d4f15b01a
 
 **Tags:**
 ```
@@ -32,7 +32,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 115cee17015e4b5665e16dc4fd15c53e06a22f9a | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cb8b677488c7a20278917af58dfccd72cd40e1b1 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -59,6 +59,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 | libgssapi-krb5-2 | 1.19.2-2ubuntu0.2 |
 | libicu70 | 70.1-2 |
 | libkrb5-3 | 1.19.2-2ubuntu0.2 |
+| liblttng-ust1 | 2.13.1-1ubuntu1 |
 | libstdc++6 | 12.1.0-2ubuntu1~22.04 |
 | locales | 2.35-0ubuntu3.1 |
 | lsb-release | 11.1.0ubuntu4 |
@@ -76,7 +77,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 | strace | 5.16-0ubuntu3 |
 | sudo | 1.9.9-1ubuntu2.4 |
 | unzip | 6.0-26ubuntu3.1 |
-| vim-tiny | 2:8.2.3995-1ubuntu2.7 |
+| vim-tiny | 2:8.2.3995-1ubuntu2.8 |
 | wget | 1.21.2-2ubuntu1 |
 | zip | 3.0-12build2 |
 | zlib1g | 1:1.2.11.dfsg-2ubuntu9.2 |
@@ -84,7 +85,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 ## Variant: focal
 
-**Digest:** sha256:8f8855363adfcb13f3ad5347a0c84c12f89365b8e35855fac602c2a298a4e3bd
+**Digest:** sha256:83a49bf19cf430d80f0c82a334285c92a8017af9322e75b62f7d74eda5108208
 
 **Tags:**
 ```
@@ -105,7 +106,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 115cee17015e4b5665e16dc4fd15c53e06a22f9a | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cb8b677488c7a20278917af58dfccd72cd40e1b1 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -152,7 +153,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 | strace | 5.5-3ubuntu1 |
 | sudo | 1.8.31-1ubuntu1.5 |
 | unzip | 6.0-25ubuntu1.1 |
-| vim-tiny | 2:8.1.2269-1ubuntu5.14 |
+| vim-tiny | 2:8.1.2269-1ubuntu5.15 |
 | wget | 1.20.3-1ubuntu2 |
 | zip | 3.0-11build1 |
 | zlib1g | 1:1.2.11.dfsg-2ubuntu1.5 |
