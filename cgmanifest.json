@@ -152,7 +152,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "5d3e86e2a48adf7a308773f8f1b725d187c7c5ef"
+                    "commitHash": "46c70406dd0b26bbd61210873ad6c86d9e8ee5da"
                 }
             }
         },
@@ -182,17 +182,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "46c70406dd0b26bbd61210873ad6c86d9e8ee5da"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "git",
-                "Git": {
-                    "Name": "Oh My Zsh!",
-                    "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "115cee17015e4b5665e16dc4fd15c53e06a22f9a"
+                    "commitHash": "cb8b677488c7a20278917af58dfccd72cd40e1b1"
                 }
             }
         },
@@ -233,6 +223,16 @@
                     "Name": "Docker Image: alpine",
                     "Version": "3.15",
                     "DownloadUrl": "https://hub.docker.com/_/alpine"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: buildpack-deps",
+                    "Version": "bookworm-curl",
+                    "DownloadUrl": "https://hub.docker.com/_/buildpack-deps"
                 }
             }
         },
@@ -282,7 +282,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "037ef821daeb028882c8e73edb198dc2eb02758f"
+                    "commitHash": "1ba9a2591f15af5900f2ce2b3e2bf31771e3ac48"
                 }
             }
         },
@@ -292,7 +292,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "1e334d770ac71a89d1c36d51019e60dd08b68f76"
+                    "commitHash": "a1ba7080ce1d046d675d7cf762fc48106e7430e5"
                 }
             }
         },
@@ -302,17 +302,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "0f8a0f084a8d1bf35700dd797ae5e4bb8aa52f1a"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "git",
-                "Git": {
-                    "Name": "vcpkg",
-                    "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "6d6f3164e60d62325fc667bb68ac89568857b6d7"
+                    "commitHash": "85ee7ef3cd80ef0d3e1862f79fae6f37c3f8de7e"
                 }
             }
         },
@@ -573,17 +563,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "115cee17015e4b5665e16dc4fd15c53e06a22f9a"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "git",
-                "Git": {
-                    "Name": "Oh My Zsh!",
-                    "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "46c70406dd0b26bbd61210873ad6c86d9e8ee5da"
+                    "commitHash": "cb8b677488c7a20278917af58dfccd72cd40e1b1"
                 }
             }
         },
@@ -658,7 +638,7 @@
                 "Type": "RubyGems",
                 "RubyGems": {
                     "Name": "bundler",
-                    "Version": "2.4.13"
+                    "Version": "2.4.14"
                 }
             }
         },
@@ -696,7 +676,7 @@
                 "Git": {
                     "Name": "ruby-build",
                     "repositoryUrl": "https://github.com/rbenv/ruby-build.git",
-                    "commitHash": "dc6d1973d540dd69e81f810080643f54ff352da8"
+                    "commitHash": "4effe8661b407c939cadb75280aafce6ba449057"
                 }
             }
         },
@@ -854,7 +834,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Composer",
-                    "Version": "2.5.7",
+                    "Version": "2.5.8",
                     "DownloadUrl": "https://getcomposer.org/"
                 }
             }
@@ -1329,7 +1309,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "plotly",
-                    "Version": "5.14.1"
+                    "Version": "5.15.0"
                 }
             }
         },
@@ -1375,7 +1355,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "46c70406dd0b26bbd61210873ad6c86d9e8ee5da"
+                    "commitHash": "cb8b677488c7a20278917af58dfccd72cd40e1b1"
                 }
             }
         },
@@ -1386,16 +1366,6 @@
                     "Name": "nvs",
                     "repositoryUrl": "https://github.com/jasongin/nvs",
                     "commitHash": "6c5a5983e2bccae5ac2b217b69210ecf3cd560f1"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "git",
-                "Git": {
-                    "Name": "ruby-build",
-                    "repositoryUrl": "https://github.com/rbenv/ruby-build.git",
-                    "commitHash": "4effe8661b407c939cadb75280aafce6ba449057"
                 }
             }
         },

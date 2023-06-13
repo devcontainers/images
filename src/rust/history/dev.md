@@ -10,7 +10,7 @@
 
 ## Variant: buster
 
-**Digest:** sha256:38cf4e4ca4aa03de6aec5cf6a87270800e0806c460af6d53f6f18acd4f1346e1
+**Digest:** sha256:3a7d171cc3aeebbdef162e3eb2ed68ab4c818e2f4d892cda9c72bdca7ee29a7f
 
 **Tags:**
 ```
@@ -36,7 +36,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 115cee17015e4b5665e16dc4fd15c53e06a22f9a | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cb8b677488c7a20278917af58dfccd72cd40e1b1 | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 
@@ -76,7 +76,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 | libicu63 | 63.1-6+deb10u3 |
 | libkrb5-3 | 1.17-3+deb10u5 |
 | liblttng-ust0 | 2.10.3-1 |
-| libssl1.1 | 1.1.1n-0+deb10u4 |
+| libssl1.1 | 1.1.1n-0+deb10u5 |
 | libstdc++6 | 8.3.0-6 |
 | lldb | 1:7.0-47 |
 | locales | 2.28-10+deb10u2 |
@@ -96,7 +96,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u5 |
 | unzip | 6.0-23+deb10u3 |
-| vim-tiny | 2:8.1.0875-5+deb10u4 |
+| vim-tiny | 2:8.1.0875-5+deb10u5 |
 | wget | 1.20.1-1.1 |
 | zip | 3.0-11+b1 |
 | zlib1g | 1:1.2.11.dfsg-1+deb10u2 |
@@ -104,7 +104,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 
 ## Variant: bullseye
 
-**Digest:** sha256:1b7f3a74e9968656a63740c65b9979a8d6d51bb77b9cfad79a2375507094c48d
+**Digest:** sha256:7d1cca53d011b0d19bb2725c15e2f7d064193399198781101f2718dcd8a8ac63
 
 **Tags:**
 ```
@@ -131,7 +131,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 46c70406dd0b26bbd61210873ad6c86d9e8ee5da | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cb8b677488c7a20278917af58dfccd72cd40e1b1 | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 

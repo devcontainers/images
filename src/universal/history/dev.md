@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:fd9eee70054a07124120b5a8babfca78ead6b487d7c2d4c34dac7ac8a9d44652
+**Digest:** sha256:2470b24c5ab8e6402e011a7b9342ab1129812104f2f92b4fc7604d20fd2064ef
 
 **Tags:**
 ```
@@ -36,13 +36,13 @@ mcr.microsoft.com/devcontainers/universal:dev
 | Clang | 10.0.0-4ubuntu1 | 
 | [Go](https://golang.org/dl) | 1.20.5 | /usr/local/go |
 | [Jekyll](https://jekyllrb.com/) | 4.3.2 | 
-| [Jupyter Lab](https://jupyter.org/) | 4.0.1 | /home/codespace/.local/bin/jupyter-lab |
+| [Jupyter Lab](https://jupyter.org/) | 4.0.2 | /home/codespace/.local/bin/jupyter-lab |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 46c70406dd0b26bbd61210873ad6c86d9e8ee5da | /home/codespace/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cb8b677488c7a20278917af58dfccd72cd40e1b1 | /home/codespace/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | 6c5a5983e2bccae5ac2b217b69210ecf3cd560f1 | /usr/local/nvs |
 | [rbenv](https://github.com/rbenv/rbenv.git) | af9201ea1ef7dca287a15fe30d51dd187403c993 | /usr/local/share/rbenv |
@@ -60,7 +60,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | scikit-learn | 1.2.2 |
 | torch | 2.0.1 |
 | requests | 2.31.0 |
-| plotly | 5.14.1 |
+| plotly | 5.15.0 |
 | jupyterlab-git | 0.41.0 |
 | certifi | 2023.5.7 |
 | setuptools | 67.8.0 |
@@ -103,7 +103,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.41.0 | 
 | [Xdebug](https://xdebug.org/) | 3.2.1 | /usr/local/php/current |
-| [Composer](https://getcomposer.org/) | 2.5.7 | /usr/local/php/current/bin |
+| [Composer](https://getcomposer.org/) | 2.5.8 | /usr/local/php/current/bin |
 | [kubectl](https://github.com/kubernetes/kubectl) | v1.27.2 | /usr/local/bin |
 | [Helm](https://github.com/helm/helm) | 3.12.0 | /usr/local/bin |
 | [Docker Compose](https://github.com/docker/compose) | 1.29.2 | /usr/local/bin |
@@ -193,9 +193,9 @@ mcr.microsoft.com/devcontainers/universal:dev
 | tar | 1.30+dfsg-7ubuntu0.20.04.3 |
 | unzip | 6.0-25ubuntu1.1 |
 | valgrind | 1:3.15.0-1ubuntu9.1 |
-| vim | 2:8.1.2269-1ubuntu5.14 |
-| vim-doc | 2:8.1.2269-1ubuntu5.14 |
-| vim-tiny | 2:8.1.2269-1ubuntu5.14 |
+| vim | 2:8.1.2269-1ubuntu5.15 |
+| vim-doc | 2:8.1.2269-1ubuntu5.15 |
+| vim-tiny | 2:8.1.2269-1ubuntu5.15 |
 | wget | 1.20.3-1ubuntu2 |
 | xtail | 2.1-6 |
 | zip | 3.0-11build1 |
