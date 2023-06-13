@@ -14,7 +14,7 @@
         "ghcr.io/devcontainers/features/node:1": {
             "version": "none"
         },
-		"ghcr.io/devcontainers/features/git:1": {
+	"ghcr.io/devcontainers/features/git:1": {
             "version": "latest",
             "ppa": "false"
         }
@@ -25,7 +25,7 @@
 		"vscode": {
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
-				"ms-dotnettools.csharp"
+				"ms-dotnettools.csharp@prerelease"
 			]
 		}
 	},
