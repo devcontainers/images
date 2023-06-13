@@ -10,7 +10,7 @@
 
 ## Variant: 3.2-bullseye
 
-**Digest:** sha256:a12440793b608432d1120cc01894d77641eef60fa5741ab8efef1e562ad87526
+**Digest:** sha256:b969a7cb5da8af7be942c088ba55ea134f85e7df8eabc3cb9ae8b61e09869686
 
 **Tags:**
 ```
@@ -38,16 +38,16 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 46c70406dd0b26bbd61210873ad6c86d9e8ee5da | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cb8b677488c7a20278917af58dfccd72cd40e1b1 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 | [rbenv](https://github.com/rbenv/rbenv.git) | af9201ea1ef7dca287a15fe30d51dd187403c993 | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | dc6d1973d540dd69e81f810080643f54ff352da8 | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 4effe8661b407c939cadb75280aafce6ba449057 | /usr/local/share/ruby-build |
 
 **Ruby gems and tools**
 
 | Tool / gem | Version |
 |------------|---------|
-| bundler | 2.4.13 |
+| bundler | 2.4.14 |
 | jekyll | 4.3.2 |
 | github-pages | 228 |
 
@@ -105,7 +105,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 
 ## Variant: 3.2-buster
 
-**Digest:** sha256:8ba190645f5ca71ea56be06e443a185b2341a2be8cd61e156a19e12c43839b8e
+**Digest:** sha256:bd482ba9c9ecbba9e712d18d2f3f100e41a71810d3e51a81418078307923384d
 
 **Tags:**
 ```
@@ -132,16 +132,16 @@ mcr.microsoft.com/devcontainers/jekyll:dev-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 115cee17015e4b5665e16dc4fd15c53e06a22f9a | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cb8b677488c7a20278917af58dfccd72cd40e1b1 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 | [rbenv](https://github.com/rbenv/rbenv.git) | af9201ea1ef7dca287a15fe30d51dd187403c993 | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | dc6d1973d540dd69e81f810080643f54ff352da8 | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 4effe8661b407c939cadb75280aafce6ba449057 | /usr/local/share/ruby-build |
 
 **Ruby gems and tools**
 
 | Tool / gem | Version |
 |------------|---------|
-| bundler | 2.4.13 |
+| bundler | 2.4.14 |
 | jekyll | 4.3.2 |
 | github-pages | 228 |
 
@@ -173,7 +173,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-buster
 | libicu63 | 63.1-6+deb10u3 |
 | libkrb5-3 | 1.17-3+deb10u5 |
 | liblttng-ust0 | 2.10.3-1 |
-| libssl1.1 | 1.1.1n-0+deb10u4 |
+| libssl1.1 | 1.1.1n-0+deb10u5 |
 | libstdc++6 | 8.3.0-6 |
 | locales | 2.28-10+deb10u2 |
 | lsb-release | 10.2019051400 |
@@ -191,7 +191,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-buster
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u5 |
 | unzip | 6.0-23+deb10u3 |
-| vim-tiny | 2:8.1.0875-5+deb10u4 |
+| vim-tiny | 2:8.1.0875-5+deb10u5 |
 | wget | 1.20.1-1.1 |
 | yarn | 1.22.19-1 |
 | zip | 3.0-11+b1 |

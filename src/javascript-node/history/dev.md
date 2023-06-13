@@ -14,7 +14,7 @@
 
 ## Variant: 20-bullseye
 
-**Digest:** sha256:3ac6e5f8ec6f86c44124621773930cbed686d44a45d0cee3bbd5457f160bef87
+**Digest:** sha256:5f12e58e26c358c001c91854c34aa6fe88b231ddde06f5dd6420934360f3c0af
 
 **Tags:**
 ```
@@ -35,13 +35,13 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 20.2.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 20.3.0 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 115cee17015e4b5665e16dc4fd15c53e06a22f9a | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cb8b677488c7a20278917af58dfccd72cd40e1b1 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
@@ -102,7 +102,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 
 ## Variant: 18-bullseye
 
-**Digest:** sha256:84b7ce2eae3c70b42a8ea00e564a1c9c952d25dab37a3b59e01351d7f27c6ddb
+**Digest:** sha256:9a27f0481ab487c5d58b9981f8482c0fb1fd8ffb9c08f6058be84766910f88f8
 
 **Tags:**
 ```
@@ -128,7 +128,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 46c70406dd0b26bbd61210873ad6c86d9e8ee5da | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cb8b677488c7a20278917af58dfccd72cd40e1b1 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
@@ -189,7 +189,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18
 
 ## Variant: 16-bullseye
 
-**Digest:** sha256:c37420e15d5a841fe1ea08f6edc126147d42edef92971eac6b1927baa8972066
+**Digest:** sha256:5ed3d900bff460dbedcadc7997081a331b1bdfe831f129f8d1c50f26c22a4191
 
 **Tags:**
 ```
@@ -215,7 +215,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 46c70406dd0b26bbd61210873ad6c86d9e8ee5da | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cb8b677488c7a20278917af58dfccd72cd40e1b1 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
@@ -276,7 +276,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16
 
 ## Variant: 20-buster
 
-**Digest:** sha256:6aa0dfa4cde1da61e6302f66b9d33d67f98fb89e01eca184e29c43c44e945627
+**Digest:** sha256:50b1b2323124358ad0d25640b75904bde21d2ec2e34e3542e8a9c284bba47075
 
 **Tags:**
 ```
@@ -296,13 +296,13 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 20.2.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 20.3.0 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 115cee17015e4b5665e16dc4fd15c53e06a22f9a | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cb8b677488c7a20278917af58dfccd72cd40e1b1 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
@@ -338,7 +338,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-buster
 | libicu63 | 63.1-6+deb10u3 |
 | libkrb5-3 | 1.17-3+deb10u5 |
 | liblttng-ust0 | 2.10.3-1 |
-| libssl1.1 | 1.1.1n-0+deb10u4 |
+| libssl1.1 | 1.1.1n-0+deb10u5 |
 | libstdc++6 | 8.3.0-6 |
 | locales | 2.28-10+deb10u2 |
 | lsb-release | 10.2019051400 |
@@ -356,7 +356,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-buster
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u5 |
 | unzip | 6.0-23+deb10u3 |
-| vim-tiny | 2:8.1.0875-5+deb10u4 |
+| vim-tiny | 2:8.1.0875-5+deb10u5 |
 | wget | 1.20.1-1.1 |
 | zip | 3.0-11+b1 |
 | zlib1g | 1:1.2.11.dfsg-1+deb10u2 |
@@ -364,7 +364,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-buster
 
 ## Variant: 18-buster
 
-**Digest:** sha256:f082c8be0d1c5c6a711f5ff4a497ed612353adf6b752d2eb2430d2b551b72c16
+**Digest:** sha256:de902f00648608396d5cc8a396f83f39f70e643152e9e42483c49e96328d3904
 
 **Tags:**
 ```
@@ -389,7 +389,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 46c70406dd0b26bbd61210873ad6c86d9e8ee5da | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cb8b677488c7a20278917af58dfccd72cd40e1b1 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
@@ -425,7 +425,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18-buster
 | libicu63 | 63.1-6+deb10u3 |
 | libkrb5-3 | 1.17-3+deb10u5 |
 | liblttng-ust0 | 2.10.3-1 |
-| libssl1.1 | 1.1.1n-0+deb10u4 |
+| libssl1.1 | 1.1.1n-0+deb10u5 |
 | libstdc++6 | 8.3.0-6 |
 | locales | 2.28-10+deb10u2 |
 | lsb-release | 10.2019051400 |
@@ -443,7 +443,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18-buster
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u5 |
 | unzip | 6.0-23+deb10u3 |
-| vim-tiny | 2:8.1.0875-5+deb10u4 |
+| vim-tiny | 2:8.1.0875-5+deb10u5 |
 | wget | 1.20.1-1.1 |
 | zip | 3.0-11+b1 |
 | zlib1g | 1:1.2.11.dfsg-1+deb10u2 |
@@ -451,7 +451,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18-buster
 
 ## Variant: 16-buster
 
-**Digest:** sha256:9648f943ddc3fd1599de6aebfeda09960fee4ca1da5dc68ad2fac63b622057a2
+**Digest:** sha256:af11be839275911e66b8ed4ec589d6118e9dc06477678172e04c97cfd6f8c31e
 
 **Tags:**
 ```
@@ -476,7 +476,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 115cee17015e4b5665e16dc4fd15c53e06a22f9a | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cb8b677488c7a20278917af58dfccd72cd40e1b1 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
@@ -512,7 +512,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16-buster
 | libicu63 | 63.1-6+deb10u3 |
 | libkrb5-3 | 1.17-3+deb10u5 |
 | liblttng-ust0 | 2.10.3-1 |
-| libssl1.1 | 1.1.1n-0+deb10u4 |
+| libssl1.1 | 1.1.1n-0+deb10u5 |
 | libstdc++6 | 8.3.0-6 |
 | locales | 2.28-10+deb10u2 |
 | lsb-release | 10.2019051400 |
@@ -530,7 +530,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16-buster
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u5 |
 | unzip | 6.0-23+deb10u3 |
-| vim-tiny | 2:8.1.0875-5+deb10u4 |
+| vim-tiny | 2:8.1.0875-5+deb10u5 |
 | wget | 1.20.1-1.1 |
 | zip | 3.0-11+b1 |
 | zlib1g | 1:1.2.11.dfsg-1+deb10u2 |
