@@ -1,5 +1,5 @@
-# [Choice] PHP version (use -bullseye variants on local arm64/Apple Silicon): 8-apache-bullseye, 8.2-apache-bullseye, 8.1-apache-bullseye, 8.0-apache-bullseye, 8-apache-buster, 8.2-apache-buster, 8.1-apache-buster, 8.0-apache-buster
-ARG VARIANT=8.2-apache-bullseye
+# [Choice] PHP version (use -bullseye variants on local arm64/Apple Silicon): 8-apache-bookworm, 8.2-apache-bookworm, 8.1-apache-bookworm, 8.0-apache-bookworm, 8-apache-bullseye, 8.2-apache-bullseye, 8.1-apache-bullseye, 8.0-apache-bullseye, 8-apache-buster, 8.2-apache-buster, 8.1-apache-buster, 8.0-apache-buster
+ARG VARIANT=8.2-apache-bookworm
 FROM php:${VARIANT}
 
 # Install xdebug
