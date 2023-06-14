@@ -1,5 +1,5 @@
-# [Choice] Debian OS version (use bullseye on local arm64/Apple Silicon): buster, bullseye
-ARG VARIANT="bullseye"
+# [Choice] Debian OS version (use bookworm, or bullseye on local arm64/Apple Silicon): bookworm, buster, bullseye
+ARG VARIANT="bookworm"
 FROM rust:1-${VARIANT}
 
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
