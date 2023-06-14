@@ -1,5 +1,5 @@
 {
-	"version": "0.203.25",
+	"version": "1.0.0",
 	"variants": [
 		"8.2-apache-bookworm",
 		"8.1-apache-bookworm",
