@@ -1,14 +1,16 @@
 {
 	"version": "0.206.9",
 	"variants": [
+		"bookworm",
 		"bullseye",
 		"buster",
 		"jammy",
 		"focal"
 	],
 	"build": {
-		"latest": "bullseye",
+		"latest": "bookworm",
 		"parent": {
+			"bookworm": "base-debian",
 			"bullseye": "base-debian",
 			"buster": "base-debian",
 			"jammy": "base-ubuntu",
@@ -16,6 +18,10 @@
 		},
 		"rootDistro": "debian",
 		"architectures": {
+			"bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
 			"bullseye": [
 				"linux/amd64",
 				"linux/arm64"
@@ -35,10 +41,15 @@
 			"cpp:${VERSION}-${VARIANT}"
 		],
 		"variantTags": {
+			"bookworm": [
+				"cpp:${VERSION}-debian-12",
+				"cpp:${VERSION}-debian12",
+				"cpp:${VERSION}-debian",
+				"cpp:${VERSION}"
+			],
 			"bullseye": [
 				"cpp:${VERSION}-debian-11",
 				"cpp:${VERSION}-debian11",
-				"cpp:${VERSION}-debian",
 				"cpp:${VERSION}"
 			],
 			"buster": [
@@ -48,10 +59,6 @@
 			"jammy": [
 				"cpp:${VERSION}-ubuntu-22.04",
 				"cpp:${VERSION}-ubuntu22.04"
-			],
-			"hirsute": [
-				"cpp:${VERSION}-ubuntu-21.04",
-				"cpp:${VERSION}-ubuntu21.04"
 			],
 			"focal": [
 				"cpp:${VERSION}-ubuntu-20.04",
