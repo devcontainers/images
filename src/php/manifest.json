@@ -1,9 +1,6 @@
 {
 	"version": "0.203.25",
 	"variants": [
-		"8.2-apache-bookworm",
-		"8.1-apache-bookworm",
-		"8.0-apache-bookworm",
 		"8.2-apache-bullseye",
 		"8.1-apache-bullseye",
 		"8.0-apache-bullseye",
@@ -12,21 +9,9 @@
 		"8.0-apache-buster"
 	],
 	"build": {
-		"latest": "8.2-apache-bookworm",
+		"latest": "8.2-apache-bullseye",
 		"rootDistro": "debian",
 		"architectures": {
-			"8.2-apache-bookworm": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"8.1-apache-bookworm": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"8.0-apache-bookworm": [
-				"linux/amd64",
-				"linux/arm64"
-			],
 			"8.2-apache-bullseye": [
 				"linux/amd64",
 				"linux/arm64"
@@ -53,30 +38,19 @@
 			"php:${VERSION}-${VARIANT}"
 		],
 		"variantTags": {
-			"8.2-apache-bookworm": [
+			"8.2-apache-bullseye": [
 				"php:${VERSION}-8",
 				"php:${VERSION}-8.2",
-				"php:${VERSION}-8-bookworm",
-				"php:${VERSION}-8.2-bookworm",
-				"php:${VERSION}-bookworm"
-			],
-			"8.1-apache-bookworm": [
-				"php:${VERSION}-8.1",
-				"php:${VERSION}-8.1-bookworm"
-			],
-			"8.0-apache-bookworm": [
-				"php:${VERSION}-8.0",
-				"php:${VERSION}-8.0-bookworm"
-			],
-			"8.2-apache-bullseye": [
 				"php:${VERSION}-8-bullseye",
 				"php:${VERSION}-8.2-bullseye",
 				"php:${VERSION}-bullseye"
 			],
 			"8.1-apache-bullseye": [
+				"php:${VERSION}-8.1",
 				"php:${VERSION}-8.1-bullseye"
 			],
 			"8.0-apache-bullseye": [
+				"php:${VERSION}-8.0",
 				"php:${VERSION}-8.0-bullseye"
 			],
 			"8.2-apache-buster": [
