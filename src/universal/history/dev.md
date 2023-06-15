@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:2470b24c5ab8e6402e011a7b9342ab1129812104f2f92b4fc7604d20fd2064ef
+**Digest:** sha256:cbbdff052e492cab1c61b3cf2330213d831e3967aa187111714e6313a80323b7
 
 **Tags:**
 ```
@@ -26,11 +26,11 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 18.16.0<br />19.9.0 | /usr/local/share/nvm/versions/node/&lt;version&gt; |
+| [Node.js](https://nodejs.org/en/) | 18.16.0<br />20.3.0 | /usr/local/share/nvm/versions/node/&lt;version&gt; |
 | [Python](https://www.python.org/) | 3.10.8<br />3.9.16 | /usr/local/python/&lt;version&gt; |
 | [Java](https://adoptopenjdk.net/) | 11.0.19<br />17.0.7 | /usr/local/sdkman/candidates/java/&lt;version&gt; |
 | [.NET](https://dotnet.microsoft.com/) | 6<br />0<br />4<br />0<br />8<br />7<br />0<br />3<br />0<br />2 | /usr/local/dotnet |
-| [Ruby](https://www.ruby-lang.org/en/) | 3.0.6<br />3.1.4 | /usr/local/rvm/rubies/&lt;version&gt; |
+| [Ruby](https://www.ruby-lang.org/en/) | 3.1.4<br />3.2.2 | /usr/local/rvm/rubies/&lt;version&gt; |
 | [PHP](https://xdebug.org/) | 8.1.14<br />8.2.1 | /usr/local/php/&lt;version&gt; |
 | GCC | 9.4.0-1ubuntu1~20.04.1 | 
 | Clang | 10.0.0-4ubuntu1 | 
@@ -46,7 +46,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | 6c5a5983e2bccae5ac2b217b69210ecf3cd560f1 | /usr/local/nvs |
 | [rbenv](https://github.com/rbenv/rbenv.git) | af9201ea1ef7dca287a15fe30d51dd187403c993 | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 4effe8661b407c939cadb75280aafce6ba449057 | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | e4ca1b3dc3f76c5b7e123ade716ac5d4c6191dbd | /usr/local/share/ruby-build |
 
 **Pip / pipx installed tools and packages**
 
@@ -69,7 +69,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | flake8 | 6.0.0 |
 | autopep8 | 2.0.2 |
 | black | 23.3.0 |
-| yapf | 0.33.0 |
+| yapf | 0.40.0 |
 | mypy | 1.3.0 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.10.0 |
@@ -104,8 +104,8 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [git](https://github.com/git/git) | 2.41.0 | 
 | [Xdebug](https://xdebug.org/) | 3.2.1 | /usr/local/php/current |
 | [Composer](https://getcomposer.org/) | 2.5.8 | /usr/local/php/current/bin |
-| [kubectl](https://github.com/kubernetes/kubectl) | v1.27.2 | /usr/local/bin |
-| [Helm](https://github.com/helm/helm) | 3.12.0 | /usr/local/bin |
+| [kubectl](https://github.com/kubernetes/kubectl) | v1.27.3 | /usr/local/bin |
+| [Helm](https://github.com/helm/helm) | 3.12.1 | /usr/local/bin |
 | [Docker Compose](https://github.com/docker/compose) | 1.29.2 | /usr/local/bin |
 | [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
 | [GitHub CLI](https://github.com/cli/cli) | 2.30.0 | 
@@ -172,8 +172,8 @@ mcr.microsoft.com/devcontainers/universal:dev
 | man-db | 2.9.1-1 |
 | manpages | 5.05-1 |
 | manpages-dev | 5.05-1 |
-| moby-cli (Docker CLI) | 20.10.25+azure-ubuntu20.04u1 |
-| moby-engine (Docker Engine) | 20.10.25+azure-ubuntu20.04u1 |
+| moby-cli (Docker CLI) | 20.10.25+azure-ubuntu20.04u2 |
+| moby-engine (Docker Engine) | 20.10.25+azure-ubuntu20.04u2 |
 | nano | 4.8-1ubuntu1 |
 | ncdu | 1.14.1-1 |
 | net-tools | 1.60+git20180626.aebd88e-1ubuntu1 |

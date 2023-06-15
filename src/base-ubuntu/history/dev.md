@@ -10,7 +10,7 @@
 
 ## Variant: jammy
 
-**Digest:** sha256:7f9e06f4c4b6d037cff34d0fa8a5720b1c87d5282209d41b10ff472d4f15b01a
+**Digest:** sha256:99fef97edb52ea6136ff250b5ff1345447b376032db2587b5902bf574a0d8eab
 
 **Tags:**
 ```
@@ -85,7 +85,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 ## Variant: focal
 
-**Digest:** sha256:83a49bf19cf430d80f0c82a334285c92a8017af9322e75b62f7d74eda5108208
+**Digest:** sha256:d265560f79c34242d42d08407bd2c7c4a2d03e227c9c36b10436e8fdc0f93211
 
 **Tags:**
 ```

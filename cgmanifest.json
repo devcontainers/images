@@ -99,7 +99,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "nbconvert",
-                    "Version": "7.4.0"
+                    "Version": "7.5.0"
                 }
             }
         },
@@ -282,7 +282,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "1ba9a2591f15af5900f2ce2b3e2bf31771e3ac48"
+                    "commitHash": "414124abc90cdb85d7abcd328bafaebb2a32bbdb"
                 }
             }
         },
@@ -292,7 +292,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "a1ba7080ce1d046d675d7cf762fc48106e7430e5"
+                    "commitHash": "e61fc593761de7e8594357813b7b0ee2922ec291"
                 }
             }
         },
@@ -302,7 +302,37 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "85ee7ef3cd80ef0d3e1862f79fae6f37c3f8de7e"
+                    "commitHash": "a487471068f4cb1cbb4eeb340763cdcc0a75fd68"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "git",
+                "Git": {
+                    "Name": "vcpkg",
+                    "repositoryUrl": "https://github.com/microsoft/vcpkg",
+                    "commitHash": "2a0afc853e06d4f578dac8368f12592a86469a25"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "git",
+                "Git": {
+                    "Name": "vcpkg",
+                    "repositoryUrl": "https://github.com/microsoft/vcpkg",
+                    "commitHash": "382746822d965898c3574479e10a480f9c7a51a1"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: buildpack-deps",
+                    "Version": "bookworm-curl",
+                    "DownloadUrl": "https://hub.docker.com/_/buildpack-deps"
                 }
             }
         },
@@ -572,6 +602,36 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Image: node",
+                    "Version": "20-bookworm",
+                    "DownloadUrl": "https://hub.docker.com/_/node"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: node",
+                    "Version": "18-bookworm",
+                    "DownloadUrl": "https://hub.docker.com/_/node"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: node",
+                    "Version": "16-bookworm",
+                    "DownloadUrl": "https://hub.docker.com/_/node"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: node",
                     "Version": "20-bullseye",
                     "DownloadUrl": "https://hub.docker.com/_/node"
                 }
@@ -676,7 +736,7 @@
                 "Git": {
                     "Name": "ruby-build",
                     "repositoryUrl": "https://github.com/rbenv/ruby-build.git",
-                    "commitHash": "4effe8661b407c939cadb75280aafce6ba449057"
+                    "commitHash": "72b70a10498e49e75228b24d0cddc64a8de79a0a"
                 }
             }
         },
@@ -751,7 +811,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "yapf",
-                    "Version": "0.33.0"
+                    "Version": "0.40.0"
                 }
             }
         },
@@ -1019,6 +1079,16 @@
         },
         {
             "Component": {
+                "Type": "git",
+                "Git": {
+                    "Name": "ruby-build",
+                    "repositoryUrl": "https://github.com/rbenv/ruby-build.git",
+                    "commitHash": "e4ca1b3dc3f76c5b7e123ade716ac5d4c6191dbd"
+                }
+            }
+        },
+        {
+            "Component": {
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Image: ruby",
@@ -1110,6 +1180,16 @@
                 "Cargo": {
                     "Name": "clippy",
                     "Version": "1.70.0"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: rust",
+                    "Version": "1-bookworm",
+                    "DownloadUrl": "https://hub.docker.com/_/rust"
                 }
             }
         },
@@ -1229,7 +1309,7 @@
                 "Type": "linux",
                 "Linux": {
                     "Name": "moby-cli",
-                    "Version": "20.10.25+azure-ubuntu20.04u1",
+                    "Version": "20.10.25+azure-ubuntu20.04u2",
                     "Distribution": "ubuntu",
                     "Release": "20.04",
                     "Pool-URL": "https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod",
@@ -1242,7 +1322,7 @@
                 "Type": "linux",
                 "Linux": {
                     "Name": "moby-engine",
-                    "Version": "20.10.25+azure-ubuntu20.04u1",
+                    "Version": "20.10.25+azure-ubuntu20.04u2",
                     "Distribution": "ubuntu",
                     "Release": "20.04",
                     "Pool-URL": "https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod",
@@ -1384,7 +1464,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "kubectl",
-                    "Version": "v1.27.2",
+                    "Version": "v1.27.3",
                     "DownloadUrl": "https://github.com/kubernetes/kubectl"
                 }
             }
@@ -1394,7 +1474,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Helm",
-                    "Version": "3.12.0",
+                    "Version": "3.12.1",
                     "DownloadUrl": "https://github.com/helm/helm"
                 }
             }
