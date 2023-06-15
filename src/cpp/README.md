@@ -34,9 +34,9 @@ Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/devcontainers/cpp:0-bullseye`
-- `mcr.microsoft.com/devcontainers/cpp:0.205-bullseye`
-- `mcr.microsoft.com/devcontainers/cpp:0.205.0-bullseye`
+- `mcr.microsoft.com/devcontainers/cpp:1-bookworm`
+- `mcr.microsoft.com/devcontainers/cpp:1.0-bookworm`
+- `mcr.microsoft.com/devcontainers/cpp:1.0.0-bookworm`
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `0-debian-11`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 

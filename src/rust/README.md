@@ -28,11 +28,11 @@ Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/devcontainers/rust:0-1` (or `0-1-bookworm`, `0-1-bullseye`, `0-1-buster` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/rust:0.202-1` (or `0.202-1-bookworm`, `0.202-1-bullseye`, `0.202-1-buster` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/rust:0.202.0-1` (or `0.202.0-1-bookworm`, `0.202.0-1-bullseye`, `0.202.0-1-buster` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/rust:1-1` (or `1-1-bookworm`, `1-1-bullseye`, `1-1-buster` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/rust:1.0-1` (or `1.0-1-bookworm`, `1.0-1-bullseye`, `1.0-1-buster` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/rust:1.0.0-1` (or `1.0.0-1-bookworm`, `1.0.0-1-bullseye`, `1.0.0-1-buster` to pin to an OS version)
 
-However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `0-1`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
+However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `1-1`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/rust/tags/list).
 
