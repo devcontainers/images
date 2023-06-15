@@ -18,7 +18,7 @@
 
 ## Variant: 3.11-bullseye
 
-**Digest:** sha256:7424ac58b68e94bff419ca1250cc1dae16c4f8aedb342239681612592f2a2680
+**Digest:** sha256:cc83e167cc69135506f0c7c2a2b639db941184596e9d352653e86114db064951
 
 **Tags:**
 ```
@@ -59,7 +59,7 @@ mcr.microsoft.com/devcontainers/python:dev-bullseye
 | flake8 | 6.0.0 |
 | autopep8 | 2.0.2 |
 | black | 23.3.0 |
-| yapf | 0.33.0 |
+| yapf | 0.40.0 |
 | mypy | 1.3.0 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.10.0 |
@@ -120,7 +120,7 @@ mcr.microsoft.com/devcontainers/python:dev-bullseye
 
 ## Variant: 3.10-bullseye
 
-**Digest:** sha256:d5f51381859fa83d1507122ab5b7bbb081861f8dc9da596e157fc0b929659d1e
+**Digest:** sha256:db6ee61946c7711a147d602009829b3c17f8b6bc4d5bf0fb4940207a5ba17732
 
 **Tags:**
 ```
@@ -158,7 +158,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.10
 | flake8 | 6.0.0 |
 | autopep8 | 2.0.2 |
 | black | 23.3.0 |
-| yapf | 0.33.0 |
+| yapf | 0.40.0 |
 | mypy | 1.3.0 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.10.0 |
@@ -219,7 +219,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.10
 
 ## Variant: 3.9-bullseye
 
-**Digest:** sha256:d79823a1d902a433009655a34841bd93621ba88fc4210dd2d5493cabb8485f01
+**Digest:** sha256:55b7b01d9ce39cf3a3c12d8ac7de8769454ab41be8053aa23a2748fac720d15a
 
 **Tags:**
 ```
@@ -257,7 +257,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9
 | flake8 | 6.0.0 |
 | autopep8 | 2.0.2 |
 | black | 23.3.0 |
-| yapf | 0.33.0 |
+| yapf | 0.40.0 |
 | mypy | 1.3.0 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.10.0 |
@@ -318,7 +318,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9
 
 ## Variant: 3.8-bullseye
 
-**Digest:** sha256:aa49be3867ddd7ece4fde5bfcb35b69515ecc7b047fae8252abb1de2a3fde151
+**Digest:** sha256:d1477622eb1eeeef9722ae309a5ed0bf57425af5f5a4eafc70801366c9151624
 
 **Tags:**
 ```
@@ -356,7 +356,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8
 | flake8 | 6.0.0 |
 | autopep8 | 2.0.2 |
 | black | 23.3.0 |
-| yapf | 0.33.0 |
+| yapf | 0.40.0 |
 | mypy | 1.3.0 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.10.0 |
@@ -417,7 +417,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8
 
 ## Variant: 3.7-bullseye
 
-**Digest:** sha256:68170c0912533dc218a4379fa07ac3de21356e9bb6bc7a4198cf8f6088a6db73
+**Digest:** sha256:82b72e3f3f748dd01b765b7a537880b6c490aa906295bfb7b891c557f4a7c424
 
 **Tags:**
 ```
@@ -455,7 +455,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.7
 | flake8 | 5.0.4 |
 | autopep8 | 2.0.2 |
 | black | 23.3.0 |
-| yapf | 0.33.0 |
+| yapf | 0.40.0 |
 | mypy | 1.3.0 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.10.0 |
@@ -516,7 +516,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.7
 
 ## Variant: 3.11-buster
 
-**Digest:** sha256:e5d4c449cd044b07880a4e4014016da22e17b72849b0db8460fe78edbbfc11d3
+**Digest:** sha256:50999ca8fbfee27b67fd78a70808ffc481508b3b6da9ea02e5879c511952206c
 
 **Tags:**
 ```
@@ -555,7 +555,7 @@ mcr.microsoft.com/devcontainers/python:dev-buster
 | flake8 | 6.0.0 |
 | autopep8 | 2.0.2 |
 | black | 23.3.0 |
-| yapf | 0.33.0 |
+| yapf | 0.40.0 |
 | mypy | 1.3.0 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.10.0 |
@@ -617,7 +617,7 @@ mcr.microsoft.com/devcontainers/python:dev-buster
 
 ## Variant: 3.10-buster
 
-**Digest:** sha256:89e2b39b647b340f50ad2cf2bcdf5ba20c67ac5750db366ee353f1df3584872c
+**Digest:** sha256:6f556f8fc0aef7d3d7a1326faa870eda8a071fff4404df406f2e23c75b76ff36
 
 **Tags:**
 ```
@@ -654,7 +654,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.10-buster
 | flake8 | 6.0.0 |
 | autopep8 | 2.0.2 |
 | black | 23.3.0 |
-| yapf | 0.33.0 |
+| yapf | 0.40.0 |
 | mypy | 1.3.0 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.10.0 |
@@ -716,7 +716,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.10-buster
 
 ## Variant: 3.9-buster
 
-**Digest:** sha256:b6ce4adaf870fd33efa3f707f3ddb2a578197827a28ad5e9e5b9ddfadfa221e0
+**Digest:** sha256:b5930e333c6a016544579fe8967a30285d49e753eac6b813daee8eb0c56a1773
 
 **Tags:**
 ```
@@ -753,7 +753,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-buster
 | flake8 | 6.0.0 |
 | autopep8 | 2.0.2 |
 | black | 23.3.0 |
-| yapf | 0.33.0 |
+| yapf | 0.40.0 |
 | mypy | 1.3.0 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.10.0 |
@@ -815,7 +815,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-buster
 
 ## Variant: 3.8-buster
 
-**Digest:** sha256:fd505ffadb61ee7b0927b97b10457b3ec8483f4024f8c29394777e55dcf16436
+**Digest:** sha256:4afb71131575dd487e18f1e2929a98d8f5a81522460886482b466265ab231552
 
 **Tags:**
 ```
@@ -852,7 +852,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8-buster
 | flake8 | 6.0.0 |
 | autopep8 | 2.0.2 |
 | black | 23.3.0 |
-| yapf | 0.33.0 |
+| yapf | 0.40.0 |
 | mypy | 1.3.0 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.10.0 |
@@ -914,7 +914,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8-buster
 
 ## Variant: 3.7-buster
 
-**Digest:** sha256:ee89de01720a6602c1c0796567ba2c975e0f46ace5c8957b8e00a58d99121fcf
+**Digest:** sha256:a01105972f364ff4d7b549415f1e0d68b9f171b18442cfdc1cce34dd09c0a7ec
 
 **Tags:**
 ```
@@ -951,7 +951,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.7-buster
 | flake8 | 5.0.4 |
 | autopep8 | 2.0.2 |
 | black | 23.3.0 |
-| yapf | 0.33.0 |
+| yapf | 0.40.0 |
 | mypy | 1.3.0 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.10.0 |

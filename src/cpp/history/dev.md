@@ -5,21 +5,117 @@
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/cpp)
 
 **Image variations:**
+- [bookworm](#variant-bookworm)
 - [bullseye](#variant-bullseye)
 - [buster](#variant-buster)
 - [jammy](#variant-jammy)
 - [focal](#variant-focal)
 
+## Variant: bookworm
+
+**Digest:** sha256:99ca7375a8ec2111e5f2cbd6bc6015cb1156cde42f3fe6604e4b8f93bf48814e
+
+**Tags:**
+```
+mcr.microsoft.com/devcontainers/cpp:dev-bookworm
+mcr.microsoft.com/devcontainers/cpp:dev-debian-12
+mcr.microsoft.com/devcontainers/cpp:dev-debian12
+mcr.microsoft.com/devcontainers/cpp:dev-debian
+mcr.microsoft.com/devcontainers/cpp:dev
+```
+> *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
+
+**Linux distribution:** Debian GNU/Linux 12 (bookworm)
+
+**Architectures:** linux/amd64, linux/arm64
+
+**Available (non-root) user:** vscode
+
+### Contents
+**Languages and runtimes**
+
+| Language / runtime | Version | Path |
+|--------------------|---------|------|
+| GCC | 12.2.0-14 | 
+| Clang | 14.0.6 | 
+
+**Tools installed using git**
+
+| Tool | Commit | Path |
+|------|--------|------|
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cb8b677488c7a20278917af58dfccd72cd40e1b1 | /home/vscode/.oh-my-zsh |
+| [vcpkg](https://github.com/microsoft/vcpkg) | 414124abc90cdb85d7abcd328bafaebb2a32bbdb | /usr/local/vcpkg |
+
+**Other tools and utilities**
+
+| Tool | Version | Path |
+|------|---------|------|
+| [git](https://github.com/git/git) | 2.41.0 | 
+
+**Additional linux tools and packages**
+
+| Tool / library | Version |
+|----------------|---------|
+| apt-transport-https | 2.6.1 |
+| apt-utils | 2.6.1 |
+| bash-completion | 1:2.11-6 |
+| build-essential | 12.9 |
+| ca-certificates | 20230311 |
+| clang | 1:14.0-55.6 |
+| cmake | 3.25.1-1 |
+| cppcheck | 2.10-2 |
+| curl | 7.88.1-10 |
+| dialog | 1.3-20230209-1 |
+| gdb | 13.1-3 |
+| git | 1:2.39.2-1.1 |
+| gnupg2 | 2.2.40-1.1 |
+| htop | 3.2.2-2 |
+| iproute2 | 6.1.0-3 |
+| jq | 1.6-2.1 |
+| less | 590-2 |
+| libc6 | 2.36-9 |
+| libgssapi-krb5-2 | 1.20.1-2 |
+| libicu72 | 72.1-3 |
+| libkrb5-3 | 1.20.1-2 |
+| liblttng-ust1 | 2.13.5-1 |
+| libstdc++6 | 12.2.0-14 |
+| lldb | 1:14.0-55.6 |
+| llvm | 1:14.0-55.6 |
+| locales | 2.36-9 |
+| lsb-release | 12.0-1 |
+| lsof | 4.95.0-1 |
+| man-db | 2.11.2-2 |
+| manpages | 6.03-2 |
+| manpages-dev | 6.03-2 |
+| nano | 7.2-1 |
+| ncdu | 1.18-0.2 |
+| net-tools | 2.10-0.1 |
+| ninja-build | 1.11.1-1 |
+| openssh-client | 1:9.2p1-2 |
+| pkg-config | 1.8.1-1 |
+| procps | 2:4.0.2-3 |
+| psmisc | 23.6-1 |
+| rsync | 3.2.7-1 |
+| strace | 6.1-0.1 |
+| sudo | 1.9.13p3-1 |
+| tar | 1.34+dfsg-1.2 |
+| unzip | 6.0-28 |
+| valgrind | 1:3.19.0-1 |
+| vim-tiny | 2:9.0.1378-2 |
+| wget | 1.21.3-1+b2 |
+| zip | 3.0-13 |
+| zlib1g | 1:1.2.13.dfsg-1 |
+| zsh | 5.9-4+b2 |
+
 ## Variant: bullseye
 
-**Digest:** sha256:53e9981ca97d2a25b22212e71564c3e21adbeee33ce89f6c42b07214c73f1c78
+**Digest:** sha256:7e5416bd80cc2aa1fa3f0e98572b2391ee3109be89406c0211af8fa1a9a781c2
 
 **Tags:**
 ```
 mcr.microsoft.com/devcontainers/cpp:dev-bullseye
 mcr.microsoft.com/devcontainers/cpp:dev-debian-11
 mcr.microsoft.com/devcontainers/cpp:dev-debian11
-mcr.microsoft.com/devcontainers/cpp:dev-debian
 mcr.microsoft.com/devcontainers/cpp:dev
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
@@ -43,7 +139,7 @@ mcr.microsoft.com/devcontainers/cpp:dev
 | Tool | Commit | Path |
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cb8b677488c7a20278917af58dfccd72cd40e1b1 | /home/vscode/.oh-my-zsh |
-| [vcpkg](https://github.com/microsoft/vcpkg) | 1ba9a2591f15af5900f2ce2b3e2bf31771e3ac48 | /usr/local/vcpkg |
+| [vcpkg](https://github.com/microsoft/vcpkg) | e61fc593761de7e8594357813b7b0ee2922ec291 | /usr/local/vcpkg |
 
 **Other tools and utilities**
 
@@ -109,7 +205,7 @@ mcr.microsoft.com/devcontainers/cpp:dev
 
 ## Variant: buster
 
-**Digest:** sha256:7ddb750b396129fc7de7170fab43b101342ce7cf5ba97162fb692625c17bd669
+**Digest:** sha256:20a0fcaf564596322d602afcc4c561a61b1af10074f38666852ceb180342e1ed
 
 **Tags:**
 ```
@@ -138,7 +234,7 @@ mcr.microsoft.com/devcontainers/cpp:dev-debian10
 | Tool | Commit | Path |
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cb8b677488c7a20278917af58dfccd72cd40e1b1 | /home/vscode/.oh-my-zsh |
-| [vcpkg](https://github.com/microsoft/vcpkg) | a1ba7080ce1d046d675d7cf762fc48106e7430e5 | /usr/local/vcpkg |
+| [vcpkg](https://github.com/microsoft/vcpkg) | a487471068f4cb1cbb4eeb340763cdcc0a75fd68 | /usr/local/vcpkg |
 
 **Other tools and utilities**
 
@@ -205,7 +301,7 @@ mcr.microsoft.com/devcontainers/cpp:dev-debian10
 
 ## Variant: jammy
 
-**Digest:** sha256:0c7a6b7e729b596c46cf458e1054244efd18c76b37927ec9b85e7376941ef378
+**Digest:** sha256:1290b23e0ca2b5051c3351edd0c3665a9104829380a98c9b749f0368e4d12a6c
 
 **Tags:**
 ```
@@ -234,7 +330,7 @@ mcr.microsoft.com/devcontainers/cpp:dev-ubuntu22.04
 | Tool | Commit | Path |
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cb8b677488c7a20278917af58dfccd72cd40e1b1 | /home/vscode/.oh-my-zsh |
-| [vcpkg](https://github.com/microsoft/vcpkg) | 1ba9a2591f15af5900f2ce2b3e2bf31771e3ac48 | /usr/local/vcpkg |
+| [vcpkg](https://github.com/microsoft/vcpkg) | 2a0afc853e06d4f578dac8368f12592a86469a25 | /usr/local/vcpkg |
 
 **Other tools and utilities**
 
@@ -299,7 +395,7 @@ mcr.microsoft.com/devcontainers/cpp:dev-ubuntu22.04
 
 ## Variant: focal
 
-**Digest:** sha256:95c3c568c86e1f23b6c1fb2b1c7ee8c8e9a5037842d9e784e2256e270f906464
+**Digest:** sha256:8865c091920ea9085c226289b50dc394a3a167358d1a9d4aa0a6c34eee3d38d5
 
 **Tags:**
 ```
@@ -329,7 +425,7 @@ mcr.microsoft.com/devcontainers/cpp:dev-ubuntu
 | Tool | Commit | Path |
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cb8b677488c7a20278917af58dfccd72cd40e1b1 | /home/vscode/.oh-my-zsh |
-| [vcpkg](https://github.com/microsoft/vcpkg) | 85ee7ef3cd80ef0d3e1862f79fae6f37c3f8de7e | /usr/local/vcpkg |
+| [vcpkg](https://github.com/microsoft/vcpkg) | 382746822d965898c3574479e10a480f9c7a51a1 | /usr/local/vcpkg |
 
 **Other tools and utilities**
 

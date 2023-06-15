@@ -5,6 +5,9 @@
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/javascript-node)
 
 **Image variations:**
+- [20-bookworm](#variant-20-bookworm)
+- [18-bookworm](#variant-18-bookworm)
+- [16-bookworm](#variant-16-bookworm)
 - [20-bullseye](#variant-20-bullseye)
 - [18-bullseye](#variant-18-bullseye)
 - [16-bullseye](#variant-16-bullseye)
@@ -12,14 +15,272 @@
 - [18-buster](#variant-18-buster)
 - [16-buster](#variant-16-buster)
 
+## Variant: 20-bookworm
+
+**Digest:** sha256:14d6e01f7a3395bb1a0d7e279c94f64996b7f11f2cf1ac1f4b1b6999bc6e76fa
+
+**Tags:**
+```
+mcr.microsoft.com/devcontainers/javascript-node:dev-20-bookworm
+mcr.microsoft.com/devcontainers/javascript-node:dev-20
+mcr.microsoft.com/devcontainers/javascript-node:dev-bookworm
+```
+> *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
+
+**Linux distribution:** Debian GNU/Linux 12 (bookworm)
+
+**Architectures:** linux/amd64, linux/arm64
+
+**Available (non-root) user:** node
+
+### Contents
+**Languages and runtimes**
+
+| Language / runtime | Version | Path |
+|--------------------|---------|------|
+| [Node.js](https://nodejs.org/en/) | 20.3.0 | /usr/local |
+
+**Tools installed using git**
+
+| Tool | Commit | Path |
+|------|--------|------|
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cb8b677488c7a20278917af58dfccd72cd40e1b1 | /home/node/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
+
+**Npm globally installed tools and packages**
+
+| Tool / package | Version |
+|----------------|---------|
+| eslint | 8.42.0 |
+
+**Other tools and utilities**
+
+| Tool | Version | Path |
+|------|---------|------|
+| [git](https://github.com/git/git) | 2.41.0 | 
+
+**Additional linux tools and packages**
+
+| Tool / library | Version |
+|----------------|---------|
+| apt-transport-https | 2.6.1 |
+| apt-utils | 2.6.1 |
+| ca-certificates | 20230311 |
+| curl | 7.88.1-10 |
+| dialog | 1.3-20230209-1 |
+| git | 1:2.39.2-1.1 |
+| gnupg2 | 2.2.40-1.1 |
+| htop | 3.2.2-2 |
+| iproute2 | 6.1.0-3 |
+| jq | 1.6-2.1 |
+| less | 590-2 |
+| libc6 | 2.36-9 |
+| libgssapi-krb5-2 | 1.20.1-2 |
+| libicu72 | 72.1-3 |
+| libkrb5-3 | 1.20.1-2 |
+| liblttng-ust1 | 2.13.5-1 |
+| libstdc++6 | 12.2.0-14 |
+| locales | 2.36-9 |
+| lsb-release | 12.0-1 |
+| lsof | 4.95.0-1 |
+| man-db | 2.11.2-2 |
+| manpages | 6.03-2 |
+| manpages-dev | 6.03-2 |
+| nano | 7.2-1 |
+| ncdu | 1.18-0.2 |
+| net-tools | 2.10-0.1 |
+| openssh-client | 1:9.2p1-2 |
+| procps | 2:4.0.2-3 |
+| psmisc | 23.6-1 |
+| rsync | 3.2.7-1 |
+| strace | 6.1-0.1 |
+| sudo | 1.9.13p3-1 |
+| unzip | 6.0-28 |
+| vim-tiny | 2:9.0.1378-2 |
+| wget | 1.21.3-1+b2 |
+| zip | 3.0-13 |
+| zlib1g | 1:1.2.13.dfsg-1 |
+| zsh | 5.9-4+b2 |
+
+## Variant: 18-bookworm
+
+**Digest:** sha256:fd79a7bdf50c983d517db35822c25f9aa895ed3c07a32475b748a12672701432
+
+**Tags:**
+```
+mcr.microsoft.com/devcontainers/javascript-node:dev-18-bookworm
+mcr.microsoft.com/devcontainers/javascript-node:dev-18
+```
+> *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
+
+**Linux distribution:** Debian GNU/Linux 12 (bookworm)
+
+**Architectures:** linux/amd64, linux/arm64
+
+**Available (non-root) user:** node
+
+### Contents
+**Languages and runtimes**
+
+| Language / runtime | Version | Path |
+|--------------------|---------|------|
+| [Node.js](https://nodejs.org/en/) | 18.16.0 | /usr/local |
+
+**Tools installed using git**
+
+| Tool | Commit | Path |
+|------|--------|------|
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cb8b677488c7a20278917af58dfccd72cd40e1b1 | /home/node/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
+
+**Npm globally installed tools and packages**
+
+| Tool / package | Version |
+|----------------|---------|
+| eslint | 8.42.0 |
+
+**Other tools and utilities**
+
+| Tool | Version | Path |
+|------|---------|------|
+| [git](https://github.com/git/git) | 2.41.0 | 
+
+**Additional linux tools and packages**
+
+| Tool / library | Version |
+|----------------|---------|
+| apt-transport-https | 2.6.1 |
+| apt-utils | 2.6.1 |
+| ca-certificates | 20230311 |
+| curl | 7.88.1-10 |
+| dialog | 1.3-20230209-1 |
+| git | 1:2.39.2-1.1 |
+| gnupg2 | 2.2.40-1.1 |
+| htop | 3.2.2-2 |
+| iproute2 | 6.1.0-3 |
+| jq | 1.6-2.1 |
+| less | 590-2 |
+| libc6 | 2.36-9 |
+| libgssapi-krb5-2 | 1.20.1-2 |
+| libicu72 | 72.1-3 |
+| libkrb5-3 | 1.20.1-2 |
+| liblttng-ust1 | 2.13.5-1 |
+| libstdc++6 | 12.2.0-14 |
+| locales | 2.36-9 |
+| lsb-release | 12.0-1 |
+| lsof | 4.95.0-1 |
+| man-db | 2.11.2-2 |
+| manpages | 6.03-2 |
+| manpages-dev | 6.03-2 |
+| nano | 7.2-1 |
+| ncdu | 1.18-0.2 |
+| net-tools | 2.10-0.1 |
+| openssh-client | 1:9.2p1-2 |
+| procps | 2:4.0.2-3 |
+| psmisc | 23.6-1 |
+| rsync | 3.2.7-1 |
+| strace | 6.1-0.1 |
+| sudo | 1.9.13p3-1 |
+| unzip | 6.0-28 |
+| vim-tiny | 2:9.0.1378-2 |
+| wget | 1.21.3-1+b2 |
+| zip | 3.0-13 |
+| zlib1g | 1:1.2.13.dfsg-1 |
+| zsh | 5.9-4+b2 |
+
+## Variant: 16-bookworm
+
+**Digest:** sha256:908c436aee44117fdb7c27cb72441d9542e04741ca3ddabf7430a4e5eefa0a95
+
+**Tags:**
+```
+mcr.microsoft.com/devcontainers/javascript-node:dev-16-bookworm
+mcr.microsoft.com/devcontainers/javascript-node:dev-16
+```
+> *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
+
+**Linux distribution:** Debian GNU/Linux 12 (bookworm)
+
+**Architectures:** linux/amd64, linux/arm64
+
+**Available (non-root) user:** node
+
+### Contents
+**Languages and runtimes**
+
+| Language / runtime | Version | Path |
+|--------------------|---------|------|
+| [Node.js](https://nodejs.org/en/) | 16.20.0 | /usr/local |
+
+**Tools installed using git**
+
+| Tool | Commit | Path |
+|------|--------|------|
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cb8b677488c7a20278917af58dfccd72cd40e1b1 | /home/node/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
+
+**Npm globally installed tools and packages**
+
+| Tool / package | Version |
+|----------------|---------|
+| eslint | 8.42.0 |
+
+**Other tools and utilities**
+
+| Tool | Version | Path |
+|------|---------|------|
+| [git](https://github.com/git/git) | 2.41.0 | 
+
+**Additional linux tools and packages**
+
+| Tool / library | Version |
+|----------------|---------|
+| apt-transport-https | 2.6.1 |
+| apt-utils | 2.6.1 |
+| ca-certificates | 20230311 |
+| curl | 7.88.1-10 |
+| dialog | 1.3-20230209-1 |
+| git | 1:2.39.2-1.1 |
+| gnupg2 | 2.2.40-1.1 |
+| htop | 3.2.2-2 |
+| iproute2 | 6.1.0-3 |
+| jq | 1.6-2.1 |
+| less | 590-2 |
+| libc6 | 2.36-9 |
+| libgssapi-krb5-2 | 1.20.1-2 |
+| libicu72 | 72.1-3 |
+| libkrb5-3 | 1.20.1-2 |
+| liblttng-ust1 | 2.13.5-1 |
+| libstdc++6 | 12.2.0-14 |
+| locales | 2.36-9 |
+| lsb-release | 12.0-1 |
+| lsof | 4.95.0-1 |
+| man-db | 2.11.2-2 |
+| manpages | 6.03-2 |
+| manpages-dev | 6.03-2 |
+| nano | 7.2-1 |
+| ncdu | 1.18-0.2 |
+| net-tools | 2.10-0.1 |
+| openssh-client | 1:9.2p1-2 |
+| procps | 2:4.0.2-3 |
+| psmisc | 23.6-1 |
+| rsync | 3.2.7-1 |
+| strace | 6.1-0.1 |
+| sudo | 1.9.13p3-1 |
+| unzip | 6.0-28 |
+| vim-tiny | 2:9.0.1378-2 |
+| wget | 1.21.3-1+b2 |
+| zip | 3.0-13 |
+| zlib1g | 1:1.2.13.dfsg-1 |
+| zsh | 5.9-4+b2 |
+
 ## Variant: 20-bullseye
 
-**Digest:** sha256:5f12e58e26c358c001c91854c34aa6fe88b231ddde06f5dd6420934360f3c0af
+**Digest:** sha256:b36fc5b246e43db232e626bb6d02fa08d548b7637445f5d6117ceab9a1a56366
 
 **Tags:**
 ```
 mcr.microsoft.com/devcontainers/javascript-node:dev-20-bullseye
-mcr.microsoft.com/devcontainers/javascript-node:dev-20
 mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
@@ -102,12 +363,11 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 
 ## Variant: 18-bullseye
 
-**Digest:** sha256:9a27f0481ab487c5d58b9981f8482c0fb1fd8ffb9c08f6058be84766910f88f8
+**Digest:** sha256:c94b3cd4eeda7107d8e0ecc439cd4817fe375510270f30f6a2ab164a5a27b543
 
 **Tags:**
 ```
 mcr.microsoft.com/devcontainers/javascript-node:dev-18-bullseye
-mcr.microsoft.com/devcontainers/javascript-node:dev-18
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
@@ -189,12 +449,11 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18
 
 ## Variant: 16-bullseye
 
-**Digest:** sha256:5ed3d900bff460dbedcadc7997081a331b1bdfe831f129f8d1c50f26c22a4191
+**Digest:** sha256:b831f25fbda32cf9109d11c9a6e50d80f181d29189218b0ba813f1eceab98292
 
 **Tags:**
 ```
 mcr.microsoft.com/devcontainers/javascript-node:dev-16-bullseye
-mcr.microsoft.com/devcontainers/javascript-node:dev-16
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
@@ -276,7 +535,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16
 
 ## Variant: 20-buster
 
-**Digest:** sha256:50b1b2323124358ad0d25640b75904bde21d2ec2e34e3542e8a9c284bba47075
+**Digest:** sha256:4bc3dc95f3841913eadce96715814c45e1605088af1d9bff1ba2b10b12302113
 
 **Tags:**
 ```
@@ -364,7 +623,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-buster
 
 ## Variant: 18-buster
 
-**Digest:** sha256:de902f00648608396d5cc8a396f83f39f70e643152e9e42483c49e96328d3904
+**Digest:** sha256:caab0ca0fe7f1f952d9b771ecba93ef410fcc4efc44a9aadee222928b393c254
 
 **Tags:**
 ```
@@ -451,7 +710,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18-buster
 
 ## Variant: 16-buster
 
-**Digest:** sha256:af11be839275911e66b8ed4ec589d6118e9dc06477678172e04c97cfd6f8c31e
+**Digest:** sha256:f0e6c2d00e0c739051cc53854a43e9953638d04190332d7dee1c0e32e34c38e8
 
 **Tags:**
 ```
