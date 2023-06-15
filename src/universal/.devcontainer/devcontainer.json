@@ -72,7 +72,8 @@
         "./local-features/jekyll": "latest",
         "ghcr.io/devcontainers/features/oryx:1": "latest",
         "./local-features/setup-user": "latest",
-        "./local-features/patch-python": "latest"
+        "./local-features/patch-python": "latest",
+        "./local-features/patch-conda": "latest"
     },
     "overrideFeatureInstallOrder": [
         "ghcr.io/devcontainers/features/common-utils",
@@ -81,11 +82,12 @@
         "ghcr.io/devcontainers/features/hugo",
         "ghcr.io/devcontainers/features/node",
         "./local-features/nvs",
+        "ghcr.io/devcontainers/features/conda",
+        "./local-features/patch-conda",
         "ghcr.io/devcontainers/features/python",
         "./local-features/patch-python",
         "./local-features/machine-learning-packages",
         "ghcr.io/devcontainers/features/php",
-        "ghcr.io/devcontainers/features/conda",
         "ghcr.io/devcontainers/features/ruby",
         "ghcr.io/devcontainers/features/java",
         "ghcr.io/devcontainers/features/sshd",
