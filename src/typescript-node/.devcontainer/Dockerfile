@@ -1,6 +1,6 @@
-# [Choice] Node.js version (use -bullseye variants on local arm64/Apple Silicon): 20, 18, 16, 20-bullseye, 18-bullseye, 16-bullseye, 20-buster, 18-buster, 16-buster
-ARG VARIANT=20-bullseye
-FROM mcr.microsoft.com/devcontainers/javascript-node:0-${VARIANT}
+# [Choice] Node.js version (use -bookworm, or -bullseye variants on local arm64/Apple Silicon): 20, 18, 16, 20-bookworm, 18-bookworm, 16-bookworm, 20-bullseye, 18-bullseye, 16-bullseye, 20-buster, 18-buster, 16-buster
+ARG VARIANT=20-bookworm
+FROM mcr.microsoft.com/devcontainers/javascript-node:1-${VARIANT}
 
 # Install tslint, typescript. eslint is installed by javascript image
 ARG NODE_MODULES="tslint-to-eslint-config typescript"

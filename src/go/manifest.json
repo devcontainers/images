@@ -1,18 +1,28 @@
 {
   "version": "0.207.21",
   "variants": [
+		"1.20-bookworm",
     "1.20-bullseye",
     "1.20-buster",
+		"1.19-bookworm",
     "1.19-bullseye",
     "1.19-buster"
   ],
   "build": {
-    "latest": "1.20-bullseye",
+    "latest": "1.20-bookworm",
     "rootDistro": "debian",
     "tags": [
       "go:${VERSION}-${VARIANT}"
     ],
     "architectures": {
+			"1.20-bookworm": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "1.19-bookworm": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
       "1.20-bullseye": [
         "linux/amd64",
         "linux/arm64"
@@ -29,9 +39,13 @@
       ]
     },
     "variantTags": {
-      "1.20-bullseye": [
+      "1.20-bookworm": [
         "go:${VERSION}-1.20",
         "go:${VERSION}-1",
+        "go:${VERSION}-1-bookworm",
+        "go:${VERSION}-bookworm"
+      ],
+			"1.20-bullseye": [
         "go:${VERSION}-1-bullseye",
         "go:${VERSION}-bullseye"
       ],
@@ -39,7 +53,7 @@
         "go:${VERSION}-1-buster",
         "go:${VERSION}-buster"
       ],
-      "1.19-bullseye": [
+      "1.19-bookworm": [
         "go:${VERSION}-1.19"
       ]
     }

@@ -1,6 +1,9 @@
 {
 	"version": "0.205.2",
 	"variants": [
+		"20-bookworm",
+		"18-bookworm",
+		"16-bookworm",
 		"20-bullseye",
 		"18-bullseye",
 		"16-bullseye",
@@ -9,10 +12,22 @@
 		"16-buster"
 	],
 	"build": {
-		"latest": "20-buster",
+		"latest": "20-bookworm",
 		"rootDistro": "debian",
 		"parent": "javascript-node",
 		"architectures": {
+			"20-bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"18-bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"16-bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
 			"20-bullseye": [
 				"linux/amd64",
 				"linux/arm64"
@@ -39,15 +54,18 @@
 			"typescript-node:${VERSION}-${VARIANT}"
 		],
 		"variantTags": {
-			"20-bullseye": [
+			"20-bookworm": [
 				"typescript-node:${VERSION}-20",
-				"typescript-node:${VERSION}-bullseye"
+				"typescript-node:${VERSION}-bookworm"
 			],
-			"18-bullseye": [
+			"18-bookworm": [
 				"typescript-node:${VERSION}-18"
 			],
-			"16-bullseye": [
+			"16-bookworm": [
 				"typescript-node:${VERSION}-16"
+			],
+			"20-bullseye": [
+				"typescript-node:${VERSION}-bullseye"
 			],
 			"20-buster": [
 				"typescript-node:${VERSION}-buster"
