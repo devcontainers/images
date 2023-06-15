@@ -5,19 +5,103 @@
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/java)
 
 **Image variations:**
+- [17-bookworm](#variant-17-bookworm)
 - [17-bullseye](#variant-17-bullseye)
 - [17-buster](#variant-17-buster)
+- [11-bookworm](#variant-11-bookworm)
 - [11-bullseye](#variant-11-bullseye)
 - [11-buster](#variant-11-buster)
 
+## Variant: 17-bookworm
+
+**Digest:** sha256:635a7d74ca3d0f4e77f6db68c79ee0d01efa40f1e9fee4656a1120dd45f9569c
+
+**Tags:**
+```
+mcr.microsoft.com/devcontainers/java:dev-17-bookworm
+mcr.microsoft.com/devcontainers/java:dev-17
+mcr.microsoft.com/devcontainers/java:dev-17-jdk-bookworm
+mcr.microsoft.com/devcontainers/java:dev-bookworm
+```
+> *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
+
+**Linux distribution:** Debian GNU/Linux 12 (bookworm)
+
+**Architectures:** linux/amd64, linux/arm64
+
+**Available (non-root) user:** vscode
+
+### Contents
+**Languages and runtimes**
+
+| Language / runtime | Version | Path |
+|--------------------|---------|------|
+| [Java](https://adoptopenjdk.net/) | 17.0.7 | /usr/local/ |
+
+**Tools installed using git**
+
+| Tool | Commit | Path |
+|------|--------|------|
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cb8b677488c7a20278917af58dfccd72cd40e1b1 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
+
+**Other tools and utilities**
+
+| Tool | Version | Path |
+|------|---------|------|
+| [git](https://github.com/git/git) | 2.41.0 | 
+
+**Additional linux tools and packages**
+
+| Tool / library | Version |
+|----------------|---------|
+| apt-transport-https | 2.6.1 |
+| apt-utils | 2.6.1 |
+| ca-certificates | 20230311 |
+| curl | 7.88.1-10 |
+| dialog | 1.3-20230209-1 |
+| git | 1:2.39.2-1.1 |
+| gnupg2 | 2.2.40-1.1 |
+| htop | 3.2.2-2 |
+| iproute2 | 6.1.0-3 |
+| jq | 1.6-2.1 |
+| less | 590-2 |
+| libc6 | 2.36-9 |
+| libgssapi-krb5-2 | 1.20.1-2 |
+| libicu72 | 72.1-3 |
+| libkrb5-3 | 1.20.1-2 |
+| liblttng-ust1 | 2.13.5-1 |
+| libstdc++6 | 12.2.0-14 |
+| locales | 2.36-9 |
+| lsb-release | 12.0-1 |
+| lsof | 4.95.0-1 |
+| man-db | 2.11.2-2 |
+| manpages | 6.03-2 |
+| manpages-dev | 6.03-2 |
+| nano | 7.2-1 |
+| ncdu | 1.18-0.2 |
+| net-tools | 2.10-0.1 |
+| openssh-client | 1:9.2p1-2 |
+| procps | 2:4.0.2-3 |
+| psmisc | 23.6-1 |
+| rsync | 3.2.7-1 |
+| strace | 6.1-0.1 |
+| sudo | 1.9.13p3-1 |
+| unzip | 6.0-28 |
+| vim-tiny | 2:9.0.1378-2 |
+| wget | 1.21.3-1+b2 |
+| yarn | 1.22.19-1 |
+| zip | 3.0-13 |
+| zlib1g | 1:1.2.13.dfsg-1 |
+| zsh | 5.9-4+b2 |
+
 ## Variant: 17-bullseye
 
-**Digest:** sha256:c18684f02d182eca875ab39267c6ddc911a625f277a6aa0d4b2e5344cc648671
+**Digest:** sha256:bcbb9fb533f8f89c313c52b839fc1db9ce21cf6ac8790479f8cb898ba2c64d49
 
 **Tags:**
 ```
 mcr.microsoft.com/devcontainers/java:dev-17-bullseye
-mcr.microsoft.com/devcontainers/java:dev-17
 mcr.microsoft.com/devcontainers/java:dev-17-jdk-bullseye
 mcr.microsoft.com/devcontainers/java:dev-bullseye
 ```
@@ -96,7 +180,7 @@ mcr.microsoft.com/devcontainers/java:dev-bullseye
 
 ## Variant: 17-buster
 
-**Digest:** sha256:040cc9588dbc33f265f6e5e0772433503fe94b7fd2c0e2304c873740a518e4e3
+**Digest:** sha256:1c9abd61d471a5b424af13b2b79b0831d3e1fd2b404b1aff6fcbf0d467a1eac5
 
 **Tags:**
 ```
@@ -176,14 +260,95 @@ mcr.microsoft.com/devcontainers/java:dev-17-buster
 | zlib1g | 1:1.2.11.dfsg-1+deb10u2 |
 | zsh | 5.7.1-1+deb10u1 |
 
+## Variant: 11-bookworm
+
+**Digest:** sha256:f45a9b732f41e730e25b1844fff7212fa00de079a8cddd6f5fd0adf9819931f3
+
+**Tags:**
+```
+mcr.microsoft.com/devcontainers/java:dev-11-bookworm
+mcr.microsoft.com/devcontainers/java:dev-11
+mcr.microsoft.com/devcontainers/java:dev-11-jdk-bookworm
+```
+> *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
+
+**Linux distribution:** Debian GNU/Linux 12 (bookworm)
+
+**Architectures:** linux/amd64, linux/arm64
+
+**Available (non-root) user:** vscode
+
+### Contents
+**Languages and runtimes**
+
+| Language / runtime | Version | Path |
+|--------------------|---------|------|
+| [Java](https://adoptopenjdk.net/) | 11.0.19 | /usr/local/ |
+
+**Tools installed using git**
+
+| Tool | Commit | Path |
+|------|--------|------|
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cb8b677488c7a20278917af58dfccd72cd40e1b1 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
+
+**Other tools and utilities**
+
+| Tool | Version | Path |
+|------|---------|------|
+| [git](https://github.com/git/git) | 2.41.0 | 
+
+**Additional linux tools and packages**
+
+| Tool / library | Version |
+|----------------|---------|
+| apt-transport-https | 2.6.1 |
+| apt-utils | 2.6.1 |
+| ca-certificates | 20230311 |
+| curl | 7.88.1-10 |
+| dialog | 1.3-20230209-1 |
+| git | 1:2.39.2-1.1 |
+| gnupg2 | 2.2.40-1.1 |
+| htop | 3.2.2-2 |
+| iproute2 | 6.1.0-3 |
+| jq | 1.6-2.1 |
+| less | 590-2 |
+| libc6 | 2.36-9 |
+| libgssapi-krb5-2 | 1.20.1-2 |
+| libicu72 | 72.1-3 |
+| libkrb5-3 | 1.20.1-2 |
+| liblttng-ust1 | 2.13.5-1 |
+| libstdc++6 | 12.2.0-14 |
+| locales | 2.36-9 |
+| lsb-release | 12.0-1 |
+| lsof | 4.95.0-1 |
+| man-db | 2.11.2-2 |
+| manpages | 6.03-2 |
+| manpages-dev | 6.03-2 |
+| nano | 7.2-1 |
+| ncdu | 1.18-0.2 |
+| net-tools | 2.10-0.1 |
+| openssh-client | 1:9.2p1-2 |
+| procps | 2:4.0.2-3 |
+| psmisc | 23.6-1 |
+| rsync | 3.2.7-1 |
+| strace | 6.1-0.1 |
+| sudo | 1.9.13p3-1 |
+| unzip | 6.0-28 |
+| vim-tiny | 2:9.0.1378-2 |
+| wget | 1.21.3-1+b2 |
+| yarn | 1.22.19-1 |
+| zip | 3.0-13 |
+| zlib1g | 1:1.2.13.dfsg-1 |
+| zsh | 5.9-4+b2 |
+
 ## Variant: 11-bullseye
 
-**Digest:** sha256:eae2a1fa9e913cd6e0783b3f4e5783712c588df771b0bc075b88a16411b0c0f8
+**Digest:** sha256:ee665ac12c146ff6714e72d613a4845f38d6206edf6b306e7bf1074235b2f085
 
 **Tags:**
 ```
 mcr.microsoft.com/devcontainers/java:dev-11-bullseye
-mcr.microsoft.com/devcontainers/java:dev-11
 mcr.microsoft.com/devcontainers/java:dev-11-jdk-bullseye
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
@@ -261,7 +426,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bullseye
 
 ## Variant: 11-buster
 
-**Digest:** sha256:952029132f9f7627617592965b17189e19021fdccc78ddc9760562e412e9c1b4
+**Digest:** sha256:cce1807bb3593d93e8560ce856208014515fa4f03ce529804105112d91374ac9
 
 **Tags:**
 ```

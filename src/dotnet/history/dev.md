@@ -13,7 +13,7 @@
 
 ## Variant: 7.0-bullseye-slim
 
-**Digest:** sha256:1e240eba9e448944e6900d970d84eee2246539f84f6cbd21ad21d2bf8b0ee300
+**Digest:** sha256:02f25936416a560640f8f31f7f7873b31e368aeef749c54ad0dfacaf49d14984
 
 **Tags:**
 ```
@@ -34,7 +34,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-7.0-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [.NET](https://dotnet.microsoft.com/) | 7.0.302 (7.0.5) | /usr |
+| [.NET](https://dotnet.microsoft.com/) | 7.0.304 (7.0.7) | /usr |
 
 **Tools installed using git**
 
@@ -96,7 +96,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-7.0-bullseye
 
 ## Variant: 7.0-jammy
 
-**Digest:** sha256:9e9fa9652057cfc2842f1cc3cc2c9ab8fb2dd50acb102aa3095f13c4c8e8e5b2
+**Digest:** sha256:91df2585d9b443426406d54b0531b6e482515287855b942d9b25f31d1f2566a4
 
 **Tags:**
 ```
@@ -115,7 +115,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-7.0-jammy
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [.NET](https://dotnet.microsoft.com/) | 7.0.302 (7.0.5) | /usr |
+| [.NET](https://dotnet.microsoft.com/) | 7.0.304 (7.0.7) | /usr |
 
 **Tools installed using git**
 
@@ -176,7 +176,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-7.0-jammy
 
 ## Variant: 6.0-bullseye-slim
 
-**Digest:** sha256:a5165abada0374b02820155ddf83fa15d24c7ebc5f20d6b3485c7596a97ee8a8
+**Digest:** sha256:0d142575de9f9b71b5ae0d01046ed2432e65caabc486b3dd8dda69c46a3ce89d
 
 **Tags:**
 ```
@@ -197,7 +197,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [.NET](https://dotnet.microsoft.com/) | 6.0.408 (6.0.1) | /usr |
+| [.NET](https://dotnet.microsoft.com/) | 6.0.410 (6.0.1) | /usr |
 
 **Tools installed using git**
 
@@ -259,7 +259,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-bullseye
 
 ## Variant: 6.0-jammy
 
-**Digest:** sha256:8a8150687975afa83bdd38704069e49b0633751570c891ecb40d814cfaa9ab50
+**Digest:** sha256:891df0c30a5e59b8eb7cad8a22a50a5195cd2cf6ecc571de1d579899afe9dd60
 
 **Tags:**
 ```
@@ -278,7 +278,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-jammy
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [.NET](https://dotnet.microsoft.com/) | 6.0.408 (6.0.1) | /usr |
+| [.NET](https://dotnet.microsoft.com/) | 6.0.410 (6.0.1) | /usr |
 
 **Tools installed using git**
 
@@ -339,7 +339,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-jammy
 
 ## Variant: 6.0-focal
 
-**Digest:** sha256:92280b5447d6ea845a5125d9e9bc4eb971bff9030527f0c10f8c4e7fd16b1259
+**Digest:** sha256:a16afa98c7175adfa2d6fba7fc3b7ba57a29105906efe90bb18b2c9995fdc6bc
 
 **Tags:**
 ```
@@ -358,7 +358,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-focal
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [.NET](https://dotnet.microsoft.com/) | 6.0.408 (6.0.1) | /usr |
+| [.NET](https://dotnet.microsoft.com/) | 6.0.410 (6.0.1) | /usr |
 
 **Tools installed using git**
 
