@@ -217,3 +217,21 @@ checkDirectoryOwnership() {
         return 1
     fi
 }
+
+checkPythonPackageVersion()
+{
+    PYTHON_PATH=$1
+    PACKAGE=$2
+    REQUIRED_VERSION=$3
+
+    current_version=$(${PYTHON_PATH} -c "import ${PACKAGE}; print(${PACKAGE}.__version__)")
+    check-version-ge "${PACKAGE}-requirement" "${current_version}" "${REQUIRED_VERSION}"
+}
+
+checkCondaPackageVersion()
+{
+    PACKAGE=$1
+    REQUIRED_VERSION=$2
+    current_version=$(conda list "${PACKAGE}" | grep -w "${PACKAGE}" | awk '{print $2}')
+    check-version-ge "conda-${PACKAGE}-requirement" "${current_version}" "${REQUIRED_VERSION}"
+}
