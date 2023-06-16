@@ -1,4 +1,8 @@
 {
     "id": "patch-conda",
     "name": "Patch Conda Packages",
+    "install": {
+        "app": "",
+        "file": "install.sh"
+    }
 }

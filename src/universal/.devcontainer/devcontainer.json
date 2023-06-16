@@ -72,8 +72,8 @@
         "./local-features/jekyll": "latest",
         "ghcr.io/devcontainers/features/oryx:1": "latest",
         "./local-features/setup-user": "latest",
-        "./local-features/patch-python": {},
-        "./local-features/patch-conda": {}
+        "./local-features/patch-python": "latest",
+        "./local-features/patch-conda": "latest"
     },
     "overrideFeatureInstallOrder": [
         "ghcr.io/devcontainers/features/common-utils",
