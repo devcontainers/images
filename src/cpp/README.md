@@ -9,8 +9,8 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/cpp |
-| *Available image variants* | debian-11, debian-10, ubuntu-22.04, ubuntu-20.04 ([full list](https://mcr.microsoft.com/v2/devcontainers/cpp/tags/list)) |
-| *Published image architecture(s)* | x86-64, aarch64/arm64 for `debian-11`,and `ubuntu-22.04` variants |
+| *Available image variants* | debian-12, debian-11, debian-10, ubuntu-22.04, ubuntu-20.04 ([full list](https://mcr.microsoft.com/v2/devcontainers/cpp/tags/list)) |
+| *Published image architecture(s)* | x86-64, aarch64/arm64 for `debian-12`, `debian-11`,and `ubuntu-22.04` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian, Ubuntu |
 | *Languages, platforms* | C++ |
@@ -23,6 +23,7 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 
 - `mcr.microsoft.com/devcontainers/cpp` (latest Debian GA)
 - `mcr.microsoft.com/devcontainers/cpp:debian` (latest Debian GA)
+- `mcr.microsoft.com/devcontainers/cpp:debian-12` (or `bookworm`)
 - `mcr.microsoft.com/devcontainers/cpp:debian-11` (or `bullseye`)
 - `mcr.microsoft.com/devcontainers/cpp:debian-10` (or `buster`)
 - `mcr.microsoft.com/devcontainers/cpp:ubuntu` (latest Ubuntu LTS)
@@ -33,9 +34,9 @@ Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/devcontainers/cpp:0-bullseye`
-- `mcr.microsoft.com/devcontainers/cpp:0.205-bullseye`
-- `mcr.microsoft.com/devcontainers/cpp:0.205.0-bullseye`
+- `mcr.microsoft.com/devcontainers/cpp:1-bookworm`
+- `mcr.microsoft.com/devcontainers/cpp:1.0-bookworm`
+- `mcr.microsoft.com/devcontainers/cpp:1.0.0-bookworm`
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `0-debian-11`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 

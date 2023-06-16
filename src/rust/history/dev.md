@@ -5,12 +5,106 @@
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/rust)
 
 **Image variations:**
+- [bookworm](#variant-bookworm)
 - [buster](#variant-buster)
 - [bullseye](#variant-bullseye)
 
+## Variant: bookworm
+
+**Digest:** sha256:2ce494eaf8b8c497ed857824c05ec28dfb5b9f988f1d0c28fbe74a5a6eabeda7
+
+**Tags:**
+```
+mcr.microsoft.com/devcontainers/rust:dev-bookworm
+mcr.microsoft.com/devcontainers/rust:dev-1
+mcr.microsoft.com/devcontainers/rust:dev-1-bookworm
+```
+> *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
+
+**Linux distribution:** Debian GNU/Linux 12 (bookworm)
+
+**Architectures:** linux/amd64, linux/arm64
+
+**Available (non-root) user:** vscode
+
+### Contents
+**Languages and runtimes**
+
+| Language / runtime | Version | Path |
+|--------------------|---------|------|
+| [Rust](https://github.com/rust-lang/rust) | 1.70.0 | /usr/local/cargo<br />/usr/local/rustup |
+
+**Tools installed using git**
+
+| Tool | Commit | Path |
+|------|--------|------|
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cb8b677488c7a20278917af58dfccd72cd40e1b1 | /home/vscode/.oh-my-zsh |
+
+**Cargo / rustup (Rust) crates and tools**
+
+| Tool / crate | Version |
+|--------------|---------|
+| rustfmt | 1.5.2 |
+| rust-analysis | 1.70.0 |
+| rust-src | 1.70.0 |
+| clippy | 1.70.0 |
+
+**Other tools and utilities**
+
+| Tool | Version | Path |
+|------|---------|------|
+| [git](https://github.com/git/git) | 2.41.0 | 
+
+**Additional linux tools and packages**
+
+| Tool / library | Version |
+|----------------|---------|
+| apt-transport-https | 2.6.1 |
+| apt-utils | 2.6.1 |
+| ca-certificates | 20230311 |
+| curl | 7.88.1-10 |
+| dialog | 1.3-20230209-1 |
+| gcc | 4:12.2.0-3 |
+| git | 1:2.39.2-1.1 |
+| gnupg2 | 2.2.40-1.1 |
+| htop | 3.2.2-2 |
+| iproute2 | 6.1.0-3 |
+| jq | 1.6-2.1 |
+| less | 590-2 |
+| libc6 | 2.36-9 |
+| libc6-dev | 2.36-9 |
+| libgssapi-krb5-2 | 1.20.1-2 |
+| libicu72 | 72.1-3 |
+| libkrb5-3 | 1.20.1-2 |
+| liblttng-ust1 | 2.13.5-1 |
+| libstdc++6 | 12.2.0-14 |
+| lldb | 1:14.0-55.6 |
+| locales | 2.36-9 |
+| lsb-release | 12.0-1 |
+| lsof | 4.95.0-1 |
+| man-db | 2.11.2-2 |
+| manpages | 6.03-2 |
+| manpages-dev | 6.03-2 |
+| nano | 7.2-1 |
+| ncdu | 1.18-0.2 |
+| net-tools | 2.10-0.1 |
+| openssh-client | 1:9.2p1-2 |
+| procps | 2:4.0.2-3 |
+| psmisc | 23.6-1 |
+| python3-minimal | 3.11.2-1+b1 |
+| rsync | 3.2.7-1 |
+| strace | 6.1-0.1 |
+| sudo | 1.9.13p3-1 |
+| unzip | 6.0-28 |
+| vim-tiny | 2:9.0.1378-2 |
+| wget | 1.21.3-1+b2 |
+| zip | 3.0-13 |
+| zlib1g | 1:1.2.13.dfsg-1 |
+| zsh | 5.9-4+b2 |
+
 ## Variant: buster
 
-**Digest:** sha256:3a7d171cc3aeebbdef162e3eb2ed68ab4c818e2f4d892cda9c72bdca7ee29a7f
+**Digest:** sha256:0ff56547b4fdb9da55404a074de2e462d920bc77c9217241e470feb6734fc0bb
 
 **Tags:**
 ```
@@ -104,12 +198,11 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 
 ## Variant: bullseye
 
-**Digest:** sha256:7d1cca53d011b0d19bb2725c15e2f7d064193399198781101f2718dcd8a8ac63
+**Digest:** sha256:f8707d60e4b2bbfe691c847626c5e1c4c66462a1bd068eb13cbbd9851f18eb12
 
 **Tags:**
 ```
 mcr.microsoft.com/devcontainers/rust:dev-bullseye
-mcr.microsoft.com/devcontainers/rust:dev-1
 mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*

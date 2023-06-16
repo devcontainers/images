@@ -1,6 +1,7 @@
 {
-	"version": "1.0.18",
+	"version": "2.0.0",
 	"variants": [
+		"bookworm",
 		"bullseye",
 		"buster"
 	],
@@ -9,6 +10,10 @@
 		"rootDistro": "debian",
 		"parent": "base-debian",
 		"architectures": {
+			"bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
 			"bullseye": [
 				"linux/amd64",
 				"linux/arm64"
@@ -21,8 +26,11 @@
 			"java:${VERSION}-8-${VARIANT}"
 		],
 		"variantTags": {
-			"buster": [
+			"bookworm": [
 				"java:${VERSION}-8",
+				"java:${VERSION}-8-jdk-bookworm"
+			],
+			"buster": [
 				"java:${VERSION}-8-jdk-buster"
 			],
 			"bullseye": [

@@ -1,13 +1,18 @@
 {
-	"version": "0.203.12",
+	"version": "1.0.0",
 	"variants": [
+		"bookworm",
 		"buster",
 		"bullseye"
 	],
 	"build": {
-		"latest": "bullseye",
+		"latest": "bookworm",
 		"rootDistro": "debian",
 		"architectures": {
+			"bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
 			"bullseye": [
 				"linux/amd64",
 				"linux/arm64"
@@ -24,8 +29,11 @@
 				"rust:${VERSION}-1-buster"
 			],
 			"bullseye": [
-				"rust:${VERSION}-1",
 				"rust:${VERSION}-1-bullseye"
+			],
+			"bookworm": [
+				"rust:${VERSION}-1",
+				"rust:${VERSION}-1-bookworm"
 			]
 		}
 	},
