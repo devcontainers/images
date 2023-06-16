@@ -1,5 +1,5 @@
 {
-	"version": "0.204.11",
+	"version": "1.0.0",
 	"variants": [
 		"3.11-bookworm",
 		"3.10-bookworm",
