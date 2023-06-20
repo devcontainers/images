@@ -49,7 +49,7 @@ RUN python3 -m pip install --upgrade \
     cryptography
 
 # [Optional] Uncomment this section to install additional OS packages.
-# RUN apt-get updatcryptographye && export DEBIAN_FRONTEND=noninteractive \
+# RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
 
 # Create conda group, update conda directory permissions, 
