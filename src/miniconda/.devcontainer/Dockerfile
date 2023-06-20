@@ -43,10 +43,13 @@ RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then umask 0002 && /opt/conda/bi
 # They are installed by the base image (continuumio/miniconda3) which does not have the patch.
 RUN python3 -m pip install --upgrade \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32681
-    requests
+    requests \
+    # https://github.com/pyca/cryptography/security/advisories/GHSA-5cpq-8wj7-hf2v
+    pyopenssl \
+    cryptography
 
 # [Optional] Uncomment this section to install additional OS packages.
-# RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+# RUN apt-get updatcryptographye && export DEBIAN_FRONTEND=noninteractive \
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
 
 # Create conda group, update conda directory permissions, 
