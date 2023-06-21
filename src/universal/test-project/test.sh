@@ -199,5 +199,10 @@ checkCondaPackageVersion "requests" "2.31.0"
 checkCondaPackageVersion "cryptography" "41.0.0"
 checkCondaPackageVersion "pyopenssl" "23.2.0"
 
+## Test Conda
+check "conda-update-conda" bash -c "conda update -y conda"
+check "conda-install" bash -c "conda install -c conda-forge --yes tensorflow"
+check "conda-install" bash -c "conda install -c conda-forge --yes pytorch"
+
 # Report result
 reportResults
