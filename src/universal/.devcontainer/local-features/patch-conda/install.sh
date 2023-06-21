@@ -32,9 +32,10 @@ sudo_if() {
 update_package() {
     PYTHON_PATH=$1
     PACKAGE=$2
+    VERSION=$3
 
     sudo_if "$PYTHON_PATH -m pip uninstall --yes $PACKAGE"
-    sudo_if "$PYTHON_PATH -m pip install --upgrade --no-cache-dir $PACKAGE"
+    sudo_if "$PYTHON_PATH -m pip install --upgrade --no-cache-dir $PACKAGE==$VERSION"
 }
 
 sudo_if /opt/conda/bin/python3 -m pip install --upgrade pip
@@ -43,8 +44,8 @@ sudo_if /opt/conda/bin/python3 -m pip install --upgrade pip
 # They are installed by the conda feature and Conda distribution does not have the patches.
 
 # https://github.com/advisories/GHSA-5cpq-8wj7-hf2v
-update_package /opt/conda/bin/python3 pyopenssl
-update_package /opt/conda/bin/python3 cryptography
+update_package /opt/conda/bin/python3 pyopenssl "23.2.0"
+update_package /opt/conda/bin/python3 cryptography "41.0.0"
 
 # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32681
-update_package /opt/conda/bin/python3 requests
+update_package /opt/conda/bin/python3 requests "2.31.0"
