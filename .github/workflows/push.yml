@@ -1,17 +1,20 @@
 name: Build and push images
 
 on: 
-  workflow_dispatch:
+  push:
+    tags:
+    - 'v*'
 
 jobs:
   build-and-push:
     name: Build and push images
+    if: ${{ github.event.base_ref == 'refs/heads/main' }}
     strategy:
       matrix:
-        page: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-        page-total: [11]
+        page: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 50]
+        page-total: [50]
       fail-fast: false
-    runs-on: ubuntu-latest
+    runs-on: devcontainer-image-builder-ubuntu
     steps:
     - name: Free more space
       id: free_space 
@@ -26,6 +29,10 @@ jobs:
       id: checkout
       uses: actions/checkout@v1
 
+    - name: Get tag name
+      id: get_tag_name  
+      run: echo "::set-output name=tag::$(echo "${{ github.ref }}" | grep -oP 'refs/tags/\K(.+)')"
+
     - name: Azure CLI login
       id: az_login
       uses: azure/login@v1
@@ -35,42 +42,39 @@ jobs:
     - name: Build and push
       id: build_and_push
       env:
-        GITHUB_TOKEN: ${{ secrets.PAT }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        REGISTRY: ${{ secrets.REGISTRY }}
+        REGISTRY_BASE_PATH: ${{ secrets.REGISTRY_BASE_PATH }}
+        STUB_REGISTRY: ${{ secrets.STUB_REGISTRY }}
+        STUB_REGISTRY_BASE_PATH: ${{ secrets.STUB_REGISTRY_BASE_PATH }}
+        SECONDARY_REGISTRY_BASE_PATH: ${{ secrets.SECONDARY_REGISTRY_BASE_PATH }}
       run: |
         set -e
 
         # ACR login
-        ACR_REGISTRY_NAME=$(echo ${{ secrets.REGISTRY }} | grep -oP '(.+)(?=\.azurecr\.io)')
+        ACR_REGISTRY_NAME=$(echo "$REGISTRY" | grep -oP '(.+)(?=\.azurecr\.io)')
         az acr login --name $ACR_REGISTRY_NAME
 
         # Build and push images
         yarn install
-        npm install -g @devcontainers/cli@0.8.0
+        npm install -g @devcontainers/cli
         build/vscdc push  --page ${{ matrix.page }} \
                           --pageTotal ${{ matrix.page-total }} \
-                          --release v0.0.1 \
+                          --release ${{ steps.get_tag_name.outputs.tag }} \
                           --github-repo ${{ github.repository }} \
-                          --registry ${{ secrets.REGISTRY }} \
-                          --registry-path ${{ secrets.REGISTRY_BASE_PATH }} \
-                          --stub-registry ${{ secrets.STUB_REGISTRY }} \
-                          --stub-registry-path ${{ secrets.STUB_REGISTRY_BASE_PATH }}
+                          --registry "$REGISTRY" \
+                          --registry-path "$REGISTRY_BASE_PATH" \
+                          --stub-registry "$STUB_REGISTRY" \
+                          --stub-registry-path "$STUB_REGISTRY_BASE_PATH" \
+                          --secondary-registry-path "$SECONDARY_REGISTRY_BASE_PATH"
 
   image-info:
     name: Trigger info extraction
     needs: [build-and-push]
-    runs-on: ubuntu-latest
-    steps:
-      
-    - name: Trigger image info file generation 
-      id: image-info
-      run: |
-        set -e
-        echo '(*) Triggering CG manifest and image history generation using workflow_dispatch'
-
-        # Use alternate GitHub token due to https://github.community/t5/GitHub-Actions/Triggering-a-new-workflow-from-another-workflow/td-p/31676
-        curl -X POST \
-          -H "Authorization: token ${{ secrets.ALTERNATE_GITHUB_TOKEN }}" \
-          -H "Accept: application/vnd.github.v3+json" \
-          -H "Content-Type: application/json" \
-          https://api.github.com/repos/${{ github.repository }}/actions/workflows/version-history.yml/dispatches \
-          --data "{\"ref\": \"main\", \"inputs\": {\"release\": \"v0.0.1\", \"cg\": \"false\", \"push\": \"true\", \"overwrite\": \"false\"}"
+    uses: devcontainers/images/.github/workflows/version-history.yml@main
+    with:
+      release: "${{ github.ref }}"
+      cg: "false"
+      push: "true"
+      overwrite: "false"
+    secrets: inherit

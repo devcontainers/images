@@ -9,7 +9,7 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published image* | mcr.microsoft.com/devcontainers/python |
-| *Available image variants* | 3 / 3-bullseye, 3.6 / 3.6-bullseye, 3.7 / 3.7-bullseye, 3.8 / 3.8-bullseye, 3.9 / 3.9-bullseye, 3.10 / 3.10-bullseye, 3-buster, 3.6-buster, 3.7-buster, 3.8-buster, 3.9-buster, 3.10-buster ([full list](https://mcr.microsoft.com/v2/devcontainers/python/tags/list)) |
+| *Available image variants* | 3 / 3-bullseye, 3.7 / 3.7-bullseye, 3.8 / 3.8-bullseye, 3.9 / 3.9-bullseye, 3.10 / 3.10-bullseye, 3.11-bullseye, 3.11, 3-buster, 3.7-buster, 3.8-buster, 3.9-buster, 3.10-buster, 3.11-buster ([full list](https://mcr.microsoft.com/v2/devcontainers/python/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bullseye` variants |
 | *Container Host OS Support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
@@ -21,22 +21,24 @@ See **[history](history)** for information on the contents of published images.
 
 ### Configuration
 
-You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` with one of the following:
+You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` with one of the following:
 
 - `mcr.microsoft.com/devcontainers/python:3` (latest)
-- `mcr.microsoft.com/devcontainers/python:3.6` (or `3.6-bullseye`, `3.6-buster` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/python:3.7` (or `3.7-bullseye`, `3.7-buster` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/python:3.8` (or `3.8-bullseye`, `3.8-buster` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/python:3.9` (or `3.9-bullseye`, `3.9-buster` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/python:3.10` (or `3.10-bullseye`, `3.10-buster` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/python:3.11` (or `3.11-bullseye`, `3.11-buster` to pin to an OS version)
+
+Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
 - `mcr.microsoft.com/devcontainers/python:0-3.9` (or `0-3.9-bullseye`, `0-3.9-buster`)
-- `mcr.microsoft.com/devcontainers/python:0.202-3.9` (or `0.202-3.9-bullseye`, `0.202-3.9-buster`)
-- `mcr.microsoft.com/devcontainers/python:0.202.0-3.9` (or `0.202.0-3.9-bullseye`, `0.202.0-3.9-buster`)
+- `mcr.microsoft.com/devcontainers/python:0.203-3.9` (or `0.203-3.9-bullseye`, `0.203-3.9-buster`)
+- `mcr.microsoft.com/devcontainers/python:0.202.5-3.9` (or `0.202.5-3.9-bullseye`, `0.202.5-3.9-buster`)
 
-However, we only do security patching on the latest [non-breaking, in support](https://github.com/microsoft/vscode-dev-containers/issues/532) versions of images (e.g. `0-14`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
+However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `0-14`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/python/tags/list).
 
@@ -48,12 +50,14 @@ Beyond Python and `git`, this image / `Dockerfile` includes a number of Python t
 
 Given JavaScript front-end web client code written for use in conjunction with a Python back-end often requires the use of Node.js-based utilities to build, this container also includes `nvm` so that you can easily install Node.js. 
 
-Also, you can use a [Node feature](https://github.com/devcontainers/features/tree/main/src/node) to install any version of Node by adding the following to `.devcontainer.json`:
+Also, you can use a [Node feature](https://github.com/devcontainers/features/tree/main/src/node) to install any version of Node by adding the following to `devcontainer.json`:
 
 ```json
 {
   "features": {
-    "node": "latest"
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "latest"
+    }
   }
 }
 ```
@@ -90,11 +94,11 @@ RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requ
     && rm -rf /tmp/pip-tmp
 ```
 
-Since `requirements.txt` is likely in the folder you opened be sure to include `"context": ".."` to `.devcontainer.json`. This allows the Dockerfile to access everything in the opened folder.
+Since `requirements.txt` is likely in the folder you opened be sure to include `"context": ".."` to `devcontainer.json`. This allows the Dockerfile to access everything in the opened folder.
 
 #### [Optional] Allowing the non-root vscode user to pip install globally without sudo
 
-You can opt into using the `vscode` non-root user in the container by adding `"remoteUser": "vscode"` to `.devcontainer.json`. However, by default, this you will need to use `sudo` to perform global pip installs.
+You can opt into using the `vscode` non-root user in the container by adding `"remoteUser": "vscode"` to `devcontainer.json`. However, by default, this you will need to use `sudo` to perform global pip installs.
 
 ```bash
 sudo pip install <your-package-here>
@@ -124,7 +128,7 @@ RUN if ! cat /etc/group | grep -e "^pip-global:" > /dev/null 2>&1; then groupadd
 If you would prefer to have multiple Python versions in your container, use `Dockerfile` and update `FROM` statement:
 
 ```Dockerfile
-FROM ubuntu:bionic
+FROM ubuntu:jammy
 ARG PYTHON_PACKAGES="python3.5 python3.6 python3.7 python3.8 python3 python3-pip python3-venv"
 RUN apt-get update && apt-get install --no-install-recommends -yq software-properties-common \
      && add-apt-repository ppa:deadsnakes/ppa && apt-get update \

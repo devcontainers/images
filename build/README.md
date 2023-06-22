@@ -7,22 +7,21 @@ This folder contains scripts to build and push images into the Microsoft Contain
 The Node.js based build CLI (`build/vsdc`) has commands to:
 
 1. Build and push to a repository: `build/vsdc push`
-2. Build, push, and npm package assets that are modified as described above: `build/vsdc package`
-3. Generate manifest.json and history markdown files: `build/vsdc cg`, `build/vsdc info`
+2. Generate cgmanifest.json and history markdown files: `build/vsdc cg`, `build/vsdc info`
 
 Run with the `--help` option to see inputs.
 
 This CLI is used in the GitHub Actions workflows in this repository.
 
-- `push-dev.yml`: Pushes a "dev" tag for each image to be generated in this repository and fires repository dispatch to trigger manifest.json generation, and attaches an npm package with the images to the actions run.
-- `push-and-package.yml`: Triggers when a release tag is pushed (`vX.Y.Z`). Builds and pushes a release version of the images, creates a release, and attaches an npm package with the images to the release. Note that this update the tag with source files that contain a SHA hash for script sources. You may need to run `git fetch --tags --force` locally after it runs.
+- `push-dev.yml`: Pushes a "dev" tag for each image to be generated in this repository and fires repository dispatch to trigger cgmanifest.json generation.
+- `push.yml`: Triggers when a release tag is pushed (`vX.Y.Z`). Builds and pushes a release version of the images. Note that this update the tag with source files that contain a SHA hash for script sources. You may need to run `git fetch --tags --force` locally after it runs.
 - `push-again.yml`: A manually triggered workflow that can be used to push an updated version of an image for an existing release. This should only be used in cases where the image push to the registry only partially succeeded (e.g. `linux/amd64` was pushed, but a connection error happened when pushing `linux/arm64` for the same image.)
 - `smoke-*.yaml` (using the `smoke-test` action in this repository) - Runs a build without pushing and executes `test-project/test.sh` (if present) inside the container to verify that there are no breaking changes to the image when the repository contents are updated.
-- `version-history.yml`: Listens for workflow dispatch events to trigger manifest.json and history markdown generation.
+- `version-history.yml`: Listens for workflow dispatch events to trigger cgmanifest.json and history markdown generation.
 
 ## Setting up a container to be built
 
-> **Note:** Only Microsoft VS Code team members can currently onboard an image to this process since it requires access the Microsoft Container Registry. [See here for details](https://github.com/microsoft/vscode-internalbacklog/wiki/Remote-Container-Images-MCR-Setup).
+> **Note:** Only @devcontainers/maintainers can currently onboard an image to this process since it requires access the Microsoft Container Registry. [See here for details](https://github.com/microsoft/vscode-internalbacklog/wiki/Remote-Container-Images-MCR-Setup).
 >
 > However, if you have your own pre-built image or build process, you can simply reference it directly in you contributed container.
 
@@ -30,7 +29,7 @@ Image build/push to MCR is managed using config in `manifest.json` files that ar
 
 1. **Important:** Update any `ARG` values in your `Dockerfile` to reflect what you want in the image. Use boolean `ARGS` with `if` statements to skip installing certain things in the image.
 
-    > **Note:** The `build.args` and `build.dockerfile` properties are **intentionally ignored** during image build so that you can vary image defaults and .devcontainer.json defaults as appropriate. The only property considered is `build.context` since this may be required for the build to succeed.
+    > **Note:** The `build.args` and `build.dockerfile` properties are **intentionally ignored** during image build so that you can vary image defaults and devcontainer.json defaults as appropriate. The only property considered is `build.context` since this may be required for the build to succeed.
 
 2. Create a [`Dockerfile`](#creating-a-dockerfile)
 
@@ -47,7 +46,7 @@ Once you have your build configuration setup, you can use the `vscdc` CLI to tes
 1. First, build the image(s) using the CLI as follows:
 
    ```bash
-   build/vscdc push --no-push --registry mcr.microsoft.com --registry-path devcontainers --release main <you-image-name-here>
+   build/vscdc push --no-push --registry mcr.microsoft.com --registry-path devcontainers --release main <your-image-name-here>
    ```
 
 2. Use the Docker CLI to verify all of the expected images and tags and have the right contents:
@@ -56,11 +55,17 @@ Once you have your build configuration setup, you can use the `vscdc` CLI to tes
     docker run -it --init --privileged --rm mcr.microsoft.com/devcontainers/<expected-repository>:dev-<expected tag> bash
     ```
 
-3. Finally, test manifest/markdown generation by running:
+3. Test manifest generation by running:
 
    ```bash
-   build/vscdc cg --registry mcr.microsoft.com --registry-path devcontainers --release main <you-image-name-here>
+   build/vscdc cg --registry mcr.microsoft.com --registry-path devcontainers --release main <your-image-name-here>
    ```
+
+4. Test markdown image history by running:
+
+    ```bash
+        build/vscdc info --build --markdown --overwrite --registry mcr.microsoft.com --registry-path devcontainers --release main <your-image-name-here>
+    ```
 
 ## Creating a `Dockerfile`
 
@@ -68,9 +73,9 @@ In some cases you may want to include some special instructions for developers. 
 
 - `Dockerfile`: Dockerfile used to generate the image itself
 
-You can then reference `Dockerfile` in `.devcontainer.json` to make editing the file that is used to create the image easy.
+You can then reference `Dockerfile` in `devcontainer.json` to make editing the file that is used to create the image easy.
 
-If you're using the [variants property](#the-variants-property) in `manifest.json`, you can set up the custom stub so that you can specify the variant from `.devcontainer.json` by adding an argument called `VARIANT` right before the `FROM` statement that uses it.
+If you're using the [variants property](#the-variants-property) in `manifest.json`, you can set up the custom stub so that you can specify the variant from `devcontainer.json` by adding an argument called `VARIANT` right before the `FROM` statement that uses it.
 
 In your `Dockerfile`:
 
@@ -79,7 +84,7 @@ ARG VARIANT=3
 FROM mcr.microsoft.com/devcontainers/python:${VARIANT}
 ```
 
-In `.devcontainer.json`:
+In `devcontainer.json`:
 
 ```json
 "build": {
@@ -106,8 +111,8 @@ The `build` namespace includes properties that defines how the templates maps to
     "rootDistro": "debian",
     "latest": true,
     "tags": [
-        "base:${VERSION}-debian-9",
-        "base:${VERSION}-stretch"
+        "base:${VERSION}-debian-11",
+        "base:${VERSION}-bullseye"
     ]
 }
 ```
@@ -130,29 +135,29 @@ This results in just one "repository" in the registry much like you would see fo
 
 The package version is then automatically added to these various tags in the `${VERSION}` location for an item in the `tags` property array as a part of the release. For example, release 0.40.0 would result in:
 
-- 0.40.0-debian-9
-- 0.40-debian-9
-- 0-debian-9
-- debian-9 <= Equivalent of latest for debian-9 specifically
-- 0.40.0-stretch
-- 0.40-stretch
-- 0-stretch
-- stretch <= Equivalent of latest for stretch specifically
+- 0.40.0-debian-11
+- 0.40-debian-11
+- 0-debian-11
+- debian-11 <= Equivalent of latest for debian-11 specifically
+- 0.40.0-bullseye
+- 0.40-bullseye
+- 0-bullseye
+- bullseye <= Equivalent of latest for bullseye specifically
 
 In this case, Debian is also the one that is used for `latest` for the `base` repository, so that tag gets applied too.  If you ran only the Alpine or Ubuntu versions, the latest tag would not update.
 
 > **NOTE:** The version number used for this repository should be kept in sync with the VS Code Remote - Containers extension to make it easy for developers to find.
 
-There's a special "dev" version that can be used to build main on CI - I ended up needing this to test and others would if they base an image off of one of the MCR images.  e.g. `dev-debian-9`.
+There's a special "dev" version that can be used to build main on CI - I ended up needing this to test and others would if they base an image off of one of the MCR images.  e.g. `dev-debian-11`.
 
-### The `imageVersion` property
+### The `version` property
 
-While in most cases it makes sense to version the contents of a image with the repository, there may be scenarios where you want to be able to version independently. A good example of this [is the `codespaces` image](../src/codespaces/) where upstream edits could cause breaking changes in this image.
+While in most cases it makes sense to version the contents of a image with the repository, there may be scenarios where you want to be able to version independently. A good example of this [is the `universal` image](../src/universal/) where upstream edits could cause breaking changes in this image.
 
-When this is necessary, the `imageVersion` property in the `manifest.json` file can be set.
+When this is necessary, the `version` property in the `manifest.json` file can be set.
 
 ```json
-"imageVersion": "1.0.0"
+"version": "1.0.0"
 ```
 
 ### The `variants` property
@@ -197,7 +202,7 @@ In some cases you may want to have different tags for each variant in the `varia
 For example:
 
 ```jsonc
-"variants": ["buster", "bullseye",  "stretch"],
+"variants": ["buster", "bullseye"],
 "build": {
     "latest": "bullseye",
     "tags": [
@@ -212,10 +217,6 @@ For example:
         "buster": [
             "base:debian-10",
             "base:debian10"
-        ],
-        "stretch": [
-            "base:debian-9",
-            "base:debian9"
         ]
     },
     //...
@@ -275,14 +276,13 @@ Because of problems with different OS versions, you may need to specify differen
 "build": {
     "architectures": {
         "bullseye": ["linux/amd64", "linux/arm64"],
-        "buster": ["linux/amd64"],
-        "stretch": ["linux/amd64", "linux/arm64"]
+        "buster": ["linux/amd64"]
     },
     //...
 }
 ```
 
-This configuration will build ARM64 and x86_64 for Debian 11/bullseye and Debian 9/stretch but not Debian 10/buster.
+This configuration will build ARM64 and x86_64 for Debian 11/bullseye and Debian 9/bullseye but not Debian 10/buster.
 
 ### The `dependencies` namespace
 
@@ -319,7 +319,7 @@ Following this is a list of libraries installed in the image by its Dockerfile. 
 
 #### `dependencies.apt`, `dependencies.apk`
 
-These two properties are arrays of either strings or objects that reference apt or apk package names. Given most installed packages are there simply for visibility because they come with the distro, these are not tracked in `manifest.json` by default. When something comes from a 3rd party repository, the object syntax can be used to set `"cgIgnore": false`. An `annotation` property can also be used to for a description that should appear in history markdown files.
+These two properties are arrays of either strings or objects that reference apt or apk package names. Given most installed packages are there simply for visibility because they come with the distro, these are not tracked in `cgmanifest.json` by default. When something comes from a 3rd party repository, the object syntax can be used to set `"cgIgnore": false`. An `annotation` property can also be used to for a description that should appear in history markdown files.
 
 For example:
 
@@ -382,7 +382,6 @@ For example:
 
 ```json
 "cargo": {
-    "rls": null,
     "rustfmt": null,
     "rust-analysis": "rustc --version",
     "rust-src": "rustc --version",
@@ -496,7 +495,7 @@ This has a few advantages:
 3. Upstream changes that break existing images can be handled as needed.
 4. Developers can opt to use the image tag 0.35 to get the latest break fix version if desired or 0 to always get the latest non-breaking update.
 
-When necessary, a specific version can also be specified for an individual image using a `imageVersion` property, but this is generally the exception.
+When necessary, a specific version can also be specified for an individual image using a `version` property, but this is generally the exception.
 
 ### Release process and the contents of the npm package
 
@@ -516,19 +515,19 @@ This retains its value as a sample but minimizes the number of actual build step
 
 #### Repository contents
 
-Consequently, this user stub Dockerfile needs to be versioned with the `.devcontainer.json` file and can technically version independently of the actual main Dockerfile and image. Given this tie, it makes sense to keep this file with `.devcontainer.json` in the repository. The repository therefore would could contain:
+Consequently, this user stub Dockerfile needs to be versioned with the `devcontainer.json` file and can technically version independently of the actual main Dockerfile and image. Given this tie, it makes sense to keep this file with `devcontainer.json` in the repository. The repository therefore would could contain:
 
 ```text
 📁 .devcontainer
+     📄 base.Dockerfile
+     📄 devcontainer.json
      📄 Dockerfile
-     📄 .devcontainer.json
-     📄 Dockerfile
-📁 test-project
 📄 manifest.json
 📄 README.md
+📁 test-project
 ```
 
-The `manifest.json` file dictates how the build process should behave as [described above](#setting-up-a-container-to-be-built). In this case, `.devcontainer.json` points to `Dockerfile`, but this is the Dockerfile used to generate the actual image rather than the stub Dockerfile. The stub that references the image is in `Dockerfile`.  To make things easy, we can also automatically generate this stub at release time if only a Dockerfile is present. If no `Dockerfile` is found, the build process falls back to using `Dockerfile`.
+The `manifest.json` file dictates how the build process should behave as [described above](#setting-up-a-container-to-be-built). In this case, `devcontainer.json` points to `Dockerfile` used to generate the actual image.
 
 Testing, then, is as simple as it is now - open the folder in `devcontainers` in a container and edit / test as required. Anyone simply copying the folder contents then gets a fully working version of the container even if in-flight and there is no image for it yet.
 
@@ -565,27 +564,15 @@ When a release is cut, the contents of devcontainers repo are staged. The build 
     FROM mcr.microsoft.com/devcontainer/python:0-${VARIANT}
     ```
 
-4. `.devcontainer.json` is updated to point to `Dockerfile` and a comment is added that points to the image in this repository (along with its associated README for this specific version).
+4. `devcontainer.json` is updated to point to `Dockerfile` and a comment is added that points to the image in this repository (along with its associated README for this specific version).
 
     ```json
-    // For format details, see https://aka.ms/vscode-remote/.devcontainer.json
+    // For format details, see https://aka.ms/vscode-remote/devcontainer.json
     {
         "name": "Node.js 10",
         "dockerFile": "Dockerfile",
     }
     ```
-
-After everything builds successfully, the packaging process kicks off and performs the following:
-
-1. Runs through all Dockerfiles in the `containers` folder and makes sure any references to `mcr.microsoft.com/devcontainers` in other non-built dockerfiles reference the MAJOR version as described in step 3 above.
-
-2. These modified contents are then archived in an npm package exactly as they are today and shipped with the extension (and over time we could dynamically update this between extension releases).
-
-```text
-📁 .devcontainer
-     📄 .devcontainer.json
-     📄 Dockerfile
-```
 
 ## Linux ARM64 Specific Builds
 

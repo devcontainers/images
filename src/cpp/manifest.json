@@ -1,20 +1,18 @@
 {
+	"version": "0.206.9",
 	"variants": [
 		"bullseye",
 		"buster",
 		"jammy",
-		"focal",
-		"bionic"
+		"focal"
 	],
-	"imageVersion": "0.205.0",
 	"build": {
 		"latest": "bullseye",
 		"parent": {
-			"bullseye": "debian",
-			"buster": "debian",
-			"jammy": "ubuntu",
-			"focal": "ubuntu",
-			"bionic": "ubuntu"
+			"bullseye": "base-debian",
+			"buster": "base-debian",
+			"jammy": "base-ubuntu",
+			"focal": "base-ubuntu"
 		},
 		"rootDistro": "debian",
 		"architectures": {
@@ -31,10 +29,6 @@
 			],
 			"focal": [
 				"linux/amd64"
-			],
-			"bionic": [
-				"linux/amd64",
-				"linux/arm64"
 			]
 		},
 		"tags": [
@@ -51,10 +45,6 @@
 				"cpp:${VERSION}-debian-10",
 				"cpp:${VERSION}-debian10"
 			],
-			"stretch": [
-				"cpp:${VERSION}-debian-9",
-				"cpp:${VERSION}-debian9"
-			],
 			"jammy": [
 				"cpp:${VERSION}-ubuntu-22.04",
 				"cpp:${VERSION}-ubuntu22.04"
@@ -67,10 +57,6 @@
 				"cpp:${VERSION}-ubuntu-20.04",
 				"cpp:${VERSION}-ubuntu20.04",
 				"cpp:${VERSION}-ubuntu"
-			],
-			"bionic": [
-				"cpp:${VERSION}-ubuntu-18.04",
-				"cpp:${VERSION}-ubuntu18.04"
 			]
 		}
 	},
@@ -105,6 +91,9 @@
 			"Clang": {
 				"cgIgnore": true
 			}
+		},
+		"other": {
+			"git": {}
 		}
 	}
 }

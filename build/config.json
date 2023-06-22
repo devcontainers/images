@@ -1,6 +1,7 @@
 {
 	"containerRegistry": "devcon.azurecr.io",
 	"containerRegistryPath": "public/devcontainers",
+	"secondaryContainerRegistryPath": "public/vscode/devcontainers",
 	"stubRegistry": "mcr.microsoft.com",
 	"stubRegistryPath": "devcontainers",
 	"githubRepoName": "devcontainers/images",
@@ -20,7 +21,7 @@
 	],
 
 	"needsDedicatedPage": [ 
-		"codespaces",
+		"universal",
 		"php",
 		"python"
 	],
@@ -81,7 +82,7 @@
 			"libkrb5-3",
 			"libgssapi-krb5-2",
 			"libicu[0-9][0-9]",
-			"liblttng-ust0",
+			"liblttng-ust[0-9]",
 			"libstdc++6",
 			"zlib1g",
 			"locales",
@@ -151,7 +152,7 @@
 			"downloadUrl": "https://github.com/rvm/rvm"
 		},
 		"kubectl": {
-			"versionCommand": "kubectl version --client | grep -oP 'GitVersion\\s*:\\s*\\\"v\\K[0-9]+\\.[0-9]+\\.[0-9]+'",
+			"versionCommand": "kubectl version --client --output=json | jq -r '.clientVersion .gitVersion'",
 			"path": "/usr/local/bin",
 			"downloadUrl": "https://github.com/kubernetes/kubectl"
 		},

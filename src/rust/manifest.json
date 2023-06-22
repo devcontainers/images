@@ -1,9 +1,9 @@
 {
+	"version": "0.203.12",
 	"variants": [
 		"buster",
 		"bullseye"
 	],
-	"imageVersion": "0.202.0",
 	"build": {
 		"latest": "bullseye",
 		"rootDistro": "debian",
@@ -21,10 +21,10 @@
 		],
 		"variantTags": {
 			"buster": [
-				"rust:${VERSION}-1",
 				"rust:${VERSION}-1-buster"
 			],
 			"bullseye": [
+				"rust:${VERSION}-1",
 				"rust:${VERSION}-1-bullseye"
 			]
 		}
@@ -42,7 +42,6 @@
 			"Oh My Zsh!": "/home/vscode/.oh-my-zsh"
 		},
 		"cargo": {
-			"rls": null,
 			"rustfmt": null,
 			"rust-analysis": "rustc --version",
 			"rust-src": "rustc --version",
@@ -52,6 +51,9 @@
 			"Rust": {
 				"cgIgnore": true
 			}
+		},
+		"other": {
+			"git": {}
 		}
 	}
 }

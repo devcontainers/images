@@ -1,5 +1,5 @@
 {
-	"imageVersion": "0.202.3",
+	"version": "0.202.24",
 	"build": {
 		"latest": true,
 		"rootDistro": "debian",
@@ -36,7 +36,16 @@
 			"virtualenv",
 			"pipx"
 		],
+		"pip": [
+			"certifi",
+			"cryptography",
+			"pyOpenssl",
+			"setuptools",
+			"wheel",
+			"requests"
+		],
 		"other": {
+			"git": {},
 			"conda": {
 				"cgIgnore": true,
 				"path": "/opt/conda"

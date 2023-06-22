@@ -1,5 +1,5 @@
 {
-	"imageVersion": "0.202.6",
+	"version": "0.203.1",
 	"build": {
 		"latest": true,
 		"rootDistro": "debian",
@@ -23,15 +23,28 @@
 		"git": {
 			"Oh My Zsh!": "/home/vscode/.oh-my-zsh"
 		},
+		"pip": [
+			"joblib",
+			"cookiecutter",
+			"cryptography",
+			"mistune",
+			"numpy",
+			"certifi",
+			"setuptools",
+			"future",
+			"wheel",
+			"nbconvert",
+			"py",
+			"pyOpenssl",
+			"werkzeug",
+			"requests",
+			"tornado"
+		],
 		"other": {
+			"git": {},
 			"conda": {
 				"cgIgnore": true,
 				"path": "/opt/conda"
-			},
-			"anaconda": {
-				"cgIgnore": true,
-				"path": "/opt/conda",
-				"versionCommand": "conda list anaconda$ | grep -oP 'anaconda\\s+\\K[^\\s]+'"
 			}
 		},
 		"languages": {

@@ -9,30 +9,29 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/dotnet |
-| *Available image variants* | 3.1 / 3.1-focal, 5.0 / 5.0-focal, 6.0 /6.0-bullseye, 6.0-focal, 5.0-bullseye, 3.1-bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/dotnet/tags/list)) |
-| *Published image architecture(s)* | x86-64, arm64/aarch64 for `bullseye` variants |
+| *Available image variants* | 6.0 /6.0-bullseye, 6.0-jammy, 6.0-focal, 7.0 /7.0-bullseye, 7.0-jammy ([full list](https://mcr.microsoft.com/v2/devcontainers/dotnet/tags/list)) |
+| *Published image architecture(s)* | x86-64, arm64/aarch64 for `bullseye`, `jammy` variants |
 | *Container host OS support* | Linux, macOS, Windows |
-| *Container OS* | Ubuntu (`-focal`), Debian (`-bullseye`) |
+| *Container OS* | Ubuntu (`-focal`, `-jammy`), Debian (`-bullseye`) |
 | *Languages, platforms* | .NET, .NET Core, C# |
 
 See **[history](history)** for information on the contents of published images.
 
 ## Using this image
 
-Note that .NET 6.0 has switched its default OS to Debian 12 / bullseye. We also offer a `6.0-focal` image if you would prefer to use Ubuntu 20.04 / Focal.
-
-You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
+You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
 - `mcr.microsoft.com/devcontainers/dotnet` (latest)
-- `mcr.microsoft.com/devcontainers/dotnet:3.1` (or `3.1-bullseye`, `3.1-focal` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/dotnet:5.0` (or `5.0-bullseye`, `5.0-focal` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/dotnet:6.0` (or `6.0-bullseye`, `6.0-focal` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/dotnet:6.0` (or `6.0-bullseye`, `6.0-jammy`, `6.0-focal` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/dotnet:7.0` (or `7.0-bullseye`, `7.0-jammy` to pin to an OS version)
+
+Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/devcontainers/dotnet:0-3.1`
-- `mcr.microsoft.com/devcontainers/dotnet:0.202-3.1`
-- `mcr.microsoft.com/devcontainers/dotnet:0.202.0-3.1`
+- `mcr.microsoft.com/devcontainers/dotnet:0-7.0`
+- `mcr.microsoft.com/devcontainers/dotnet:0.204-7.0`
+- `mcr.microsoft.com/devcontainers/dotnet:0.204.0-7.0`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/dotnet/tags/list).
 
@@ -56,7 +55,7 @@ To enable HTTPS in ASP.NET, you can mount an exported copy of your local dev cer
     dotnet dev-certs https --trust; dotnet dev-certs https -ep "${HOME}/.aspnet/https/aspnetapp.pfx" -p "SecurePwdGoesHere"
     ```
 
-2. Add the following in to `.devcontainer.json`:
+2. Add the following in to `devcontainer.json`:
 
     ```json
     "remoteEnv": {
@@ -67,7 +66,7 @@ To enable HTTPS in ASP.NET, you can mount an exported copy of your local dev cer
 
 3. Finally, make the certificate available in the container as follows:
 
-    Add the following to `.devcontainer.json`:
+    Add the following to `devcontainer.json`:
 
     ```json
     "mounts": [ "source=${env:HOME}${env:USERPROFILE}/.aspnet/https,target=/home/vscode/.aspnet/https,type=bind" ]
@@ -77,12 +76,14 @@ To enable HTTPS in ASP.NET, you can mount an exported copy of your local dev cer
 
 Given JavaScript front-end web client code written for use in conjunction with an ASP.NET back-end often requires the use of Node.js-based utilities to build, this container also includes `nvm` so that you can easily install Node.js. 
 
-If you would like to install the Azure CLI, you can reference [a dev container feature](https://github.com/devcontainers/features) by adding the following to `.devcontainer.json`:
+If you would like to install the Azure CLI, you can reference [a dev container feature](https://github.com/devcontainers/features) by adding the following to `devcontainer.json`:
 
 ```json
 {
   "features": {
-    "azure-cli": "latest"
+    "ghcr.io/devcontainers/features/azure-cli:1": {
+      "version": "latest"
+    }
   }
 }
 ```

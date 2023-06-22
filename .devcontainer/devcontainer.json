@@ -1,15 +1,17 @@
 {
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:0-18",
     "features": {
-        "azure-cli": "latest"
-	},
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+        "ghcr.io/devcontainers/features/azure-cli:1": {}
+    },
     "postCreateCommand": "npm install -g @devcontainers/cli",
     "customizations": {
-        "codespaces": {
-            "repositories": {
-                "devcontainers/features": {
-                    "permissions": "write-all"
-                }
-            }
+        "vscode": {
+            "extensions": [
+                "mads-hartmann.bash-ide-vscode",
+                "dbaeumer.vscode-eslint",
+                "EditorConfig.EditorConfig"
+            ]
         }
     }
 }

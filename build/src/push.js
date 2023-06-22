@@ -11,7 +11,7 @@ const prep = require('./prep');
 const builderName = 'dev-containers-builder';
 
 async function push(repo, release, updateLatest, registry, registryPath, stubRegistry,
-    stubRegistryPath, pushImages, prepOnly, definitionsToSkip, page, pageTotal, replaceImages, definitionId) {
+    stubRegistryPath, pushImages, prepOnly, definitionsToSkip, page, pageTotal, replaceImages, definitionId, secondaryRegistryPath) {
 
     // Optional argument defaults
     prepOnly = typeof prepOnly === 'undefined' ? false : prepOnly;
@@ -26,7 +26,7 @@ async function push(repo, release, updateLatest, registry, registryPath, stubReg
     replaceImages = (configUtils.getVersionFromRelease(release, definitionId) == 'dev') || replaceImages;
 
     // Stage content
-    const stagingFolder = await configUtils.getStagingFolder(release);
+    let stagingFolder = await configUtils.getStagingFolder(release);
     await configUtils.loadConfig(stagingFolder);
 
     // Use or create a buildx / buildkit "builder" that using the docker-container driver which internally 
@@ -41,20 +41,44 @@ async function push(repo, release, updateLatest, registry, registryPath, stubReg
     await asyncUtils.spawn('docker', ['run', '--privileged', '--rm', 'tonistiigi/binfmt', '--install', 'all']);
 
     // Build and push subset of images
-    const definitionsToPush = definitionId ? [definitionId] : configUtils.getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip);
-    await asyncUtils.forEach(definitionsToPush, async (currentDefinitionId) => {
-        console.log(`**** Pushing ${currentDefinitionId} ${release} ****`);
-        await pushImage(
-            currentDefinitionId, repo, release, updateLatest, registry, registryPath, stubRegistry, stubRegistryPath, prepOnly, pushImages, replaceImages);
-    });
+    if (definitionId) {
+        const variants = configUtils.getVariants(definitionId) || [null];
+        await asyncUtils.forEach(variants, async (variant) => {
+            stagingFolder = await configUtils.getStagingFolder(release);
+            await configUtils.loadConfig(stagingFolder);
+
+            console.log(`**** Pushing ${definitionId}: ${variant} ${release} ****`);
+            await pushImage(
+                definitionId, variant, repo, release, updateLatest, registry, registryPath, stubRegistry, stubRegistryPath, prepOnly, pushImages, replaceImages, secondaryRegistryPath);
+        });
+    } else {
+        const definitionsToPush = configUtils.getSortedDefinitionBuildList(page, pageTotal, definitionsToSkip);
+        await asyncUtils.forEach(definitionsToPush, async (currentJob) => {
+            stagingFolder = await configUtils.getStagingFolder(release);
+            await configUtils.loadConfig(stagingFolder);
+
+            const registryName = registry.replace(/\.azurecr\.io.*/, '');
+            const spawnOpts = { stdio: 'inherit', shell: true };
+            await asyncUtils.spawn('az', [
+                'acr',
+                'login',
+                '--name',
+                registryName
+            ], spawnOpts);
+
+            console.log(`**** Pushing ${currentJob['id']}: ${currentJob['variant']} ${release} ****`);
+            await pushImage(
+                currentJob['id'], currentJob['variant'] || null, repo, release, updateLatest, registry, registryPath, stubRegistry, stubRegistryPath, prepOnly, pushImages, replaceImages, secondaryRegistryPath);
+        });
+    }
 
     return stagingFolder;
 }
 
-async function pushImage(definitionId, repo, release, updateLatest,
-    registry, registryPath, stubRegistry, stubRegistryPath, prepOnly, pushImages, replaceImage) {
+async function pushImage(definitionId, variant, repo, release, updateLatest,
+    registry, registryPath, stubRegistry, stubRegistryPath, prepOnly, pushImages, replaceImage, secondaryRegistryPath) {
     const definitionPath = configUtils.getDefinitionPath(definitionId);
-    const dotDevContainerPath = definitionPath;
+    const dotDevContainerPath = path.join(definitionPath, '.devcontainer');
     // Use Dockerfile for image build
     const dockerFilePath = path.join(dotDevContainerPath, 'Dockerfile');
 
@@ -63,107 +87,107 @@ async function pushImage(definitionId, repo, release, updateLatest,
         throw `Definition ${definitionId} does not exist! Invalid path: ${definitionPath}`;
     }
 
-    // Look for context in .devcontainer.json and use it to build the Dockerfile
-    console.log('(*) Reading .devcontainer.json...');
-    const devContainerJsonPath = path.join(dotDevContainerPath, '.devcontainer.json');
+    // Look for context in devcontainer.json and use it to build the Dockerfile
+    console.log('(*) Reading devcontainer.json...');
+    const devContainerJsonPath = path.join(dotDevContainerPath, 'devcontainer.json');
     const devContainerJsonRaw = await asyncUtils.readFile(devContainerJsonPath);
     const devContainerJson = jsonc.parse(devContainerJsonRaw);
 
-    // Process variants in reverse order to be sure the first one is tagged as "latest" if appropriate
-    const variants = configUtils.getVariants(definitionId) || [null];
-    for (let i = variants.length - 1; i > -1; i--) {
-        const variant = variants[i];
+    // Update common setup script download URL, SHA, parent tag if applicable
+    console.log(`(*) Prep Dockerfile for ${definitionId} ${variant ? 'variant "' + variant + '"' : ''}...`);
+    const prepResult = await prep.prepDockerFile(dockerFilePath,
+        definitionId, repo, release, registry, registryPath, stubRegistry, stubRegistryPath, true, variant);
 
-        // Update common setup script download URL, SHA, parent tag if applicable
-        console.log(`(*) Prep Dockerfile for ${definitionId} ${variant ? 'variant "' + variant + '"' : ''}...`);
-        const prepResult = await prep.prepDockerFile(dockerFilePath,
-            definitionId, repo, release, registry, registryPath, stubRegistry, stubRegistryPath, true, variant);
+    if (prepOnly) {
+        console.log(`(*) Skipping build and push to registry.`);
+    } else {
+        if (prepResult.shouldFlattenBaseImage) {
+            console.log(`(*) Flattening base image...`);
+            await flattenBaseImage(prepResult.baseImageTag, prepResult.flattenedBaseImageTag, pushImages);
+        }
 
-        if (prepOnly) {
-            console.log(`(*) Skipping build and push to registry.`);
-        } else {
-            if (prepResult.shouldFlattenBaseImage) {
-                console.log(`(*) Flattening base image...`);
-                await flattenBaseImage(prepResult.baseImageTag, prepResult.flattenedBaseImageTag, pushImages);
+        // Build image
+        console.log(`(*) Building image...`);
+        // Determine tags to use
+        const imageNamesWithVersionTags = configUtils.getTagList(definitionId, release, updateLatest, registry, registryPath, variant);
+        const imageName = imageNamesWithVersionTags[0].split(':')[0];
+
+        // Dual publish image to devcontainers and vscode/devcontainers
+        const secondaryImageNamesWithVersionTags = configUtils.getTagList(definitionId, release, updateLatest, registry, secondaryRegistryPath, variant);
+
+        console.log(`(*) Tags:${imageNamesWithVersionTags.reduce((prev, current) => prev += `\n     ${current}`, '')}`);
+        console.log(`(*) Secondary Tags:${secondaryImageNamesWithVersionTags.reduce((prev, current) => prev += `\n     ${current}`, '')}`);
+
+        const buildSettings = configUtils.getBuildSettings(definitionId);
+
+        let architectures = buildSettings.architectures;
+        switch (typeof architectures) {
+            case 'string': architectures = [architectures]; break;
+            case 'object': if (!Array.isArray(architectures)) { architectures = architectures[variant]; } break;
+            case 'undefined': architectures = ['linux/amd64']; break;
+        }
+
+        console.log(`(*) Target image architectures: ${architectures.reduce((prev, current) => prev += `\n     ${current}`, '')}`);
+        let localArchitecture = process.arch;
+        switch (localArchitecture) {
+            case 'arm': localArchitecture = 'linux/arm/v7'; break;
+            case 'aarch32': localArchitecture = 'linux/arm/v7'; break;
+            case 'aarch64': localArchitecture = 'linux/arm64'; break;
+            case 'x64': localArchitecture = 'linux/amd64'; break;
+            case 'x32': localArchitecture = 'linux/386'; break;
+            default: localArchitecture = `linux/${localArchitecture}`; break;
+        }
+
+        console.log(`(*) Local architecture: ${localArchitecture}`);
+        if (!pushImages) {
+            console.log(`(*) Push disabled: Only building local architecture (${localArchitecture}).`);
+        }
+
+        if (replaceImage || !await isDefinitionVersionAlreadyPublished(definitionId, release, registry, registryPath, variant)) {
+
+            let skipPersistingCustomizationsFromFeatures = false;
+            let platformParams = "";
+            // Universal image does not need to be multi-arch
+            // ubuntu:focal image supports multiarch but Universal does not. Hence, the build fails similar to https://github.com/docker/buildx/issues/235
+            if (definitionId !== "universal") {
+                platformParams = "--platform " + (pushImages ? architectures.reduce((prev, current) => prev + ',' + current, '').substring(1) : localArchitecture)
+            } else {
+                skipPersistingCustomizationsFromFeatures = true;
             }
 
-            // Build image
-            console.log(`(*) Building image...`);
-            // Determine tags to use
-            const imageNamesWithVersionTags = configUtils.getTagList(definitionId, release, updateLatest, registry, registryPath, variant);
-            const imageName = imageNamesWithVersionTags[0].split(':')[0];
+            const context = devContainerJson.build ? devContainerJson.build.context || '.' : devContainerJson.context || '.';
+            const workingDir = path.resolve(dotDevContainerPath, context);
+            let imageNameParams = imageNamesWithVersionTags.reduce((prev, current) => prev.concat(['--image-name', current]), []);
 
-            console.log(`(*) Tags:${imageNamesWithVersionTags.reduce((prev, current) => prev += `\n     ${current}`, '')}`);
-            const buildSettings = configUtils.getBuildSettings(definitionId);
+            const secondaryImageNameParams = secondaryImageNamesWithVersionTags.reduce((prev, current) => prev.concat(['--image-name', current]), []);
+            imageNameParams = imageNameParams.concat(secondaryImageNameParams);
 
-            let architectures = buildSettings.architectures;
-            switch (typeof architectures) {
-                case 'string': architectures = [architectures]; break;
-                case 'object': if (!Array.isArray(architectures)) { architectures = architectures[variant]; } break;
-                case 'undefined': architectures = ['linux/amd64']; break;
-            }
+            const spawnOpts = { stdio: 'inherit', cwd: workingDir, shell: true };
+            await asyncUtils.spawn('devcontainer', [
+                'build',
+                '--workspace-folder', definitionPath,
+                '--log-level ', 'info',
+                ...imageNameParams,
+                '--no-cache', 'true',
+                platformParams,
+                pushImages ? '--push' : '',
+                '--skip-persisting-customizations-from-features', skipPersistingCustomizationsFromFeatures,
+            ], spawnOpts);
 
-            console.log(`(*) Target image architectures: ${architectures.reduce((prev, current) => prev += `\n     ${current}`, '')}`);
-            let localArchitecture = process.arch;
-            switch(localArchitecture) {
-                case 'arm': localArchitecture = 'linux/arm/v7'; break;
-                case 'aarch32': localArchitecture = 'linux/arm/v7'; break;
-                case 'aarch64': localArchitecture = 'linux/arm64'; break;
-                case 'x64': localArchitecture = 'linux/amd64'; break;
-                case 'x32': localArchitecture = 'linux/386'; break;
-                default: localArchitecture = `linux/${localArchitecture}`; break;
-            }
-            
-            console.log(`(*) Local architecture: ${localArchitecture}`);
             if (!pushImages) {
-                console.log(`(*) Push disabled: Only building local architecture (${localArchitecture}).`);
+                console.log(`(*) Skipping push to registry.`);
             }
 
-            // TODO: add back version already published ; removed for testing purpose.
-            // if (replaceImage || !await isDefinitionVersionAlreadyPublished(definitionId, release, registry, registryPath, variant)) {
+            console.log("(*) Docker images", imageName);
+            await asyncUtils.spawn('docker', [`images`], spawnOpts);
 
-                let platformParams = "";
-                // Codespaces image does not need to be multi-arch
-                // ubuntu:focal image supports multiarch but codespaces doesn't. Hence, the build fails similar to https://github.com/docker/buildx/issues/235
-                if (definitionId != "codespaces") {
-                    platformParams = "--platform " + (pushImages ? architectures.reduce((prev, current) => prev + ',' + current, '').substring(1) : localArchitecture)
-                }
-
-                const context = devContainerJson.build ? devContainerJson.build.context || '.' : devContainerJson.context || '.';
-                const workingDir = path.resolve(dotDevContainerPath, context);
-                const imageNameParams = imageNamesWithVersionTags.reduce((prev, current) => prev.concat(['--image-name', current]), []);
-
-                // Do not build and push the "latest" tag when pushing the "dev" images
-                if (configUtils.getVersionFromRelease(release, definitionId) !== 'dev' || !pushImages) {
-                    imageNameParams.push('--image-name', imageName);
-                }
-
-                const spawnOpts = { stdio: 'inherit', cwd: workingDir, shell: true };
-                await asyncUtils.spawn('devcontainer', [
-                    'build',
-                    '--workspace-folder', definitionPath,
-                    '--log-level ', 'info',
-                    ...imageNameParams,
-                    '--no-cache', 'true',
-                    platformParams,
-                    pushImages ? '--push' : '', 
-                ], spawnOpts);
-
-                if (!pushImages) {
-                    console.log(`(*) Skipping push to registry.`);
-                }
-
-                console.log("(*) Docker images", imageName);
-                await asyncUtils.spawn('docker', [`images`], spawnOpts);
-
-            // } else {
-            //     console.log(`(*) Version already published. Skipping.`);
-            // }
+        } else {
+            console.log(`(*) Version already published. Skipping.`);
         }
     }
 
     await prep.createStub(
-        dotDevContainerPath, definitionId, repo, release, false, stubRegistry, stubRegistryPath);
+        dotDevContainerPath, definitionId, repo, release, stubRegistry, stubRegistryPath);
 
     console.log('(*) Done!\n');
 }

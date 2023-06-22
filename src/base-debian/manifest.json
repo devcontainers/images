@@ -1,0 +1,54 @@
+{
+	"version": "0.203.10",
+	"variants": [
+		"bookworm",
+		"buster",
+		"bullseye"
+	],
+	"build": {
+		"latest": "bookworm",
+		"rootDistro": "debian",
+		"architectures": {
+			"bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"bullseye": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"buster": [
+				"linux/amd64"
+			]
+		},
+		"tags": [
+			"base:${VERSION}-${VARIANT}"
+		],
+		"variantTags": {
+			"bookworm": [
+				"base:${VERSION}-debian-12",
+				"base:${VERSION}-debian12",
+				"base:${VERSION}-debian",
+				"base:${VERSION}"
+			],
+			"bullseye": [
+				"base:${VERSION}-debian-11",
+				"base:${VERSION}-debian11"
+			],
+			"buster": [
+				"base:${VERSION}-debian-10",
+				"base:${VERSION}-debian10"
+			]
+		}
+	},
+	"dependencies": {
+		"image": "buildpack-deps:${VARIANT}-curl",
+		"imageLink": "https://hub.docker.com/_/buildpack-deps",
+		"git": {
+			"Oh My Zsh!": "/home/vscode/.oh-my-zsh"
+		},
+		"other": {
+			"git": {}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+{
+    "id": "setup-user",
+    "name": "Setup user configs",
+    "containerEnv": {
+        "RUBY_HOME": "/usr/local/rvm/rubies/default",
+        "JAVA_ROOT": "/home/codespace/java",
+        "NODE_ROOT": "/home/codespace/nvm",
+        "PHP_ROOT": "/home/codespace/.php",
+        "PYTHON_ROOT": "/home/codespace/.python",
+        "RUBY_ROOT": "/home/codespace/.ruby",
+        "MAVEN_ROOT": "/home/codespace/.maven",
+        "HUGO_ROOT": "/home/codespace/.hugo",
+        "DOTNET_SKIP_FIRST_TIME_EXPERIENCE": "1",
+        "NUGET_XMLDOC_MODE": "skip",
+        "ORYX_ENV_TYPE": "vsonline-present",
+        "PYTHONIOENCODING": "UTF-8",
+        "NPM_GLOBAL": "/home/codespace/.npm-global",
+        "NVS_HOME": "/home/codespace/.nvs",
+        "RVM_PATH": "/usr/local/rvm",
+        "RAILS_DEVELOPMENT_HOSTS": ".githubpreview.dev,.preview.app.github.dev,.app.github.dev",
+        "GOROOT": "/usr/local/go",
+        "JUPYTERLAB_PATH": "/home/codespace/.local/bin",
+        "PATH": "/home/codespace/.dotnet:/home/codespace/nvm/current/bin:/home/codespace/.php/current/bin:/home/codespace/.python/current/bin:/home/codespace/java/current/bin:/home/codespace/.ruby/current/bin:/home/codespace/.local/bin:${PATH}"
+    },
+    "install": {
+        "app": "",
+        "file": "install.sh"
+    }
+}

@@ -1,8 +1,0 @@
-{
-    "id": "apache-config",
-    "name": "Apache configuration changes",
-    "install": {
-        "app": "",
-        "file": "install.sh"
-    }
-}

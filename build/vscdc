@@ -7,8 +7,6 @@
 const path = require('path');
 const push = require('./src/push').push;
 const patch = require('./src/patch');
-const package = require('./src/package').package;
-const prep = require('./src/prep');
 const generateImageInformationFiles = require('./src/image-info').generateImageInformationFiles;
 const configUtils = require('./src/utils/config');
 const packageJson = require('../package.json');
@@ -16,62 +14,6 @@ const packageJson = require('../package.json');
 console.log('devcontainers CLI\nCopyright (c) Microsoft Corporation. All rights reserved.\n')
 
 require('yargs')
-    .command('pack', 'package dev container images', (yargs) => {
-        yargs
-            .options({
-                'release': {
-                    describe: 'devcontainers release tag or a branch',
-                    default: `v${packageJson.version}`
-                },
-                'registry': {
-                    describe: 'container registry to push images to',
-                    default: configUtils.getConfig('containerRegistry', 'docker.io')
-                },
-                'registry-path': {
-                    describe: 'container registry path',
-                    default: configUtils.getConfig('containerRegistryPath', 'devcontainers')
-                },
-                'stub-registry': {
-                    describe: 'registry to add to stub',
-                    default: configUtils.getConfig('stubRegistry',
-                        configUtils.getConfig('containerRegistry', 'docker.io'))
-                },
-                'stub-registry-path': {
-                    describe: 'stub registry path',
-                    default: configUtils.getConfig('stubRegistryPath',
-                        configUtils.getConfig('containerRegistryPath', ''))
-                },
-                'github-repo': {
-                    describe: 'devcontainers repo name',
-                    default: configUtils.getConfig('githubRepoName', 'microsoft/devcontainers')
-                },
-                'package-only': {
-                    describe: 'whether to prep/build/push before packaging',
-                    type: 'boolean',
-                    default: false
-                },
-                'prep-and-package-only': {
-                    describe: 'prep and package, but do not build/push',
-                    type: 'boolean',
-                    default: false
-                },
-                'update-latest': {
-                    describe: 'whether to tag latest and {MAJOR}',
-                    type: 'boolean',
-                    default: true
-                },
-                'clean': {
-                    describe: 'whether to clean up staging folder when done',
-                    type: 'boolean',
-                    default: true
-                },
-                'skip-push': {
-                    describe: 'A space separated list of image names to skip build and push.',
-                    type: 'array',
-                    default: []
-                }
-            })
-    }, packCommand)
     .command('push [devcontainer]', 'push dev container images to a repository', (yargs) => {
         yargs
             .positional('devcontainer', {
@@ -139,10 +81,14 @@ require('yargs')
                     describe: 'A space separated list of image names to skip building and pushing.',
                     type: 'array',
                     default: []
+                },
+                'secondary-registry-path': {
+                    describe: 'Secondary container registry path',
+                    default: configUtils.getConfig('secondaryContainerRegistryPath', '')
                 }
             })
     }, pushCommand)
-    .command('cg [devcontainer]', 'generate manifest.json', (yargs) => {
+    .command('cg [devcontainer]', 'generate cgmanifest.json', (yargs) => {
         yargs
             .positional('devcontainer', {
                 describe: 'limits manifest generation to single image',
@@ -186,7 +132,7 @@ require('yargs')
                     default: false
                 },
                 'cg': {
-                    describe: 'whether to generate manifest.json',
+                    describe: 'whether to generate cgmanifest.json',
                     type: 'boolean',
                     default: true
                 },
@@ -200,7 +146,7 @@ require('yargs')
                     default: path.resolve(__dirname, '..', configUtils.getConfig('informationFileOutputPath', '.'))
                 },
                 'overwrite': {
-                    describe: 'whether to overwrite manifest.json or markdown files',
+                    describe: 'whether to overwrite cgmanifest.json or markdown files',
                     type: 'boolean',
                     default: true
                 }
@@ -245,7 +191,7 @@ require('yargs')
                     default: true
                 },
                 'cg': {
-                    describe: 'whether to generate manifest.json',
+                    describe: 'whether to generate cgmanifest.json',
                     type: 'boolean',
                     default: false
                 },
@@ -264,7 +210,7 @@ require('yargs')
                     default: path.resolve(__dirname, '..', configUtils.getConfig('informationFileOutputPath', '.'))
                 },
                 'overwrite': {
-                    describe: 'whether to overwrite manifest.json or markdown files',
+                    describe: 'whether to overwrite cgmanifest.json or markdown files',
                     type: 'boolean',
                     default: false
                 }
@@ -298,21 +244,9 @@ require('yargs')
 
 function pushCommand(argv) {
     push(argv.githubRepo, argv.release, argv.updateLatest, argv.registry, argv.registryPath, argv.stubRegistry,
-        argv.stubRegistryPath, argv.push, argv.prepOnly, argv.skip, argv.page, argv.pageTotal, argv.replaceImages, argv.devcontainer)
+        argv.stubRegistryPath, argv.push, argv.prepOnly, argv.skip, argv.page, argv.pageTotal, argv.replaceImages, argv.devcontainer, argv.secondaryRegistryPath)
         .catch((reason) => {
             console.error(`(!) Push failed - ${reason}`);
-            if(reason.stack) {
-                console.error(`    ${reason.stack}`);
-            }
-            process.exit(1);
-        });
-}
-
-function packCommand(argv) {
-    package(argv.githubRepo, argv.release, argv.updateLatest, argv.registry, argv.registryPath,
-        argv.stubRegistry, argv.stubRegistryPath, argv.prepAndPackageOnly, argv.packageOnly, argv.clean, argv.skipPush)
-        .catch((reason) => {
-            console.error(`(!) Packaging failed - ${reason}`);
             if(reason.stack) {
                 console.error(`    ${reason.stack}`);
             }
