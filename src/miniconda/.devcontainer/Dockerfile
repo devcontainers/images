@@ -41,7 +41,7 @@ RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then umask 0002 && /opt/conda/bi
 
 # Temporary: Upgrade python packages due to mentioned CVEs
 # They are installed by the base image (continuumio/miniconda3) which does not have the patch.
-RUN conda update -y --all \
+RUN conda config --set pip_interop_enabled True \
     # uninstall vulnerable packages 
     && python3 -m pip uninstall --yes \
     cryptography \
