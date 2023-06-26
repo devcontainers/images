@@ -11,7 +11,7 @@
 
 ## Variant: bookworm
 
-**Digest:** sha256:2ce494eaf8b8c497ed857824c05ec28dfb5b9f988f1d0c28fbe74a5a6eabeda7
+**Digest:** sha256:b2e7e6622b47b5699bf9bbea16c459c1d0eacf276305b6940719dc14fdb68f36
 
 **Tags:**
 ```
@@ -38,7 +38,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cb8b677488c7a20278917af58dfccd72cd40e1b1 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d5f1f50ad2d62363785464d5b6eef1a009243d7a | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 
@@ -104,7 +104,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bookworm
 
 ## Variant: buster
 
-**Digest:** sha256:0ff56547b4fdb9da55404a074de2e462d920bc77c9217241e470feb6734fc0bb
+**Digest:** sha256:e668e5b6ff6dcf06d5f0b781b84211ed64f87eb039f047fc6f79bf8302f8a5c0
 
 **Tags:**
 ```
@@ -130,7 +130,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cb8b677488c7a20278917af58dfccd72cd40e1b1 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8cbe98469d9862d37d43ca4229dc8e915ec377a9 | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 
@@ -198,7 +198,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 
 ## Variant: bullseye
 
-**Digest:** sha256:f8707d60e4b2bbfe691c847626c5e1c4c66462a1bd068eb13cbbd9851f18eb12
+**Digest:** sha256:2776961a91af3e7b05594da8672823c68759838965ae1d354cb05c4182b08a78
 
 **Tags:**
 ```
@@ -224,7 +224,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cb8b677488c7a20278917af58dfccd72cd40e1b1 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8cbe98469d9862d37d43ca4229dc8e915ec377a9 | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 

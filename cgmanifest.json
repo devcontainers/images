@@ -45,7 +45,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "mistune",
-                    "Version": "2.0.5"
+                    "Version": "3.0.1"
                 }
             }
         },
@@ -54,7 +54,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "numpy",
-                    "Version": "1.24.3"
+                    "Version": "1.25.0"
                 }
             }
         },
@@ -99,7 +99,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "nbconvert",
-                    "Version": "7.5.0"
+                    "Version": "7.6.0"
                 }
             }
         },
@@ -182,7 +182,17 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "cb8b677488c7a20278917af58dfccd72cd40e1b1"
+                    "commitHash": "8cbe98469d9862d37d43ca4229dc8e915ec377a9"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "git",
+                "Git": {
+                    "Name": "Oh My Zsh!",
+                    "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
+                    "commitHash": "d5f1f50ad2d62363785464d5b6eef1a009243d7a"
                 }
             }
         },
@@ -282,7 +292,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "414124abc90cdb85d7abcd328bafaebb2a32bbdb"
+                    "commitHash": "8f3e8d6e95c7f91edea60c47a7d1414ab5ca9492"
                 }
             }
         },
@@ -292,7 +302,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "e61fc593761de7e8594357813b7b0ee2922ec291"
+                    "commitHash": "288e8bebf4ca67c1f8ebd49366b03650cfd9eb7d"
                 }
             }
         },
@@ -302,27 +312,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "a487471068f4cb1cbb4eeb340763cdcc0a75fd68"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "git",
-                "Git": {
-                    "Name": "vcpkg",
-                    "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "2a0afc853e06d4f578dac8368f12592a86469a25"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "git",
-                "Git": {
-                    "Name": "vcpkg",
-                    "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "382746822d965898c3574479e10a480f9c7a51a1"
+                    "commitHash": "a26fc81350ab139c72dfeae07822ce3db3ca7ebb"
                 }
             }
         },
@@ -441,7 +431,7 @@
                 "Type": "go",
                 "Go": {
                     "Name": "golang.org/x/tools/gopls",
-                    "Version": "0.12.2"
+                    "Version": "0.12.4"
                 }
             }
         },
@@ -513,6 +503,16 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Image: golang",
+                    "Version": "1.20-bookworm",
+                    "DownloadUrl": "https://hub.docker.com/_/golang"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: golang",
                     "Version": "1.20-bullseye",
                     "DownloadUrl": "https://hub.docker.com/_/golang"
                 }
@@ -524,6 +524,16 @@
                 "Other": {
                     "Name": "Docker Image: golang",
                     "Version": "1.20-buster",
+                    "DownloadUrl": "https://hub.docker.com/_/golang"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: golang",
+                    "Version": "1.19-bookworm",
                     "DownloadUrl": "https://hub.docker.com/_/golang"
                 }
             }
@@ -583,7 +593,7 @@
                 "Type": "npm",
                 "Npm": {
                     "Name": "eslint",
-                    "Version": "8.42.0"
+                    "Version": "8.43.0"
                 }
             }
         },
@@ -593,7 +603,17 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "cb8b677488c7a20278917af58dfccd72cd40e1b1"
+                    "commitHash": "8cbe98469d9862d37d43ca4229dc8e915ec377a9"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "git",
+                "Git": {
+                    "Name": "Oh My Zsh!",
+                    "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
+                    "commitHash": "d5f1f50ad2d62363785464d5b6eef1a009243d7a"
                 }
             }
         },
@@ -726,7 +746,7 @@
                 "Git": {
                     "Name": "rbenv",
                     "repositoryUrl": "https://github.com/rbenv/rbenv.git",
-                    "commitHash": "af9201ea1ef7dca287a15fe30d51dd187403c993"
+                    "commitHash": "311217208122e4c7e49c2bff9069912e2a07e873"
                 }
             }
         },
@@ -736,7 +756,7 @@
                 "Git": {
                     "Name": "ruby-build",
                     "repositoryUrl": "https://github.com/rbenv/ruby-build.git",
-                    "commitHash": "72b70a10498e49e75228b24d0cddc64a8de79a0a"
+                    "commitHash": "895f8fa40f117afdc6b441de3557ba58193803e9"
                 }
             }
         },
@@ -747,6 +767,16 @@
                     "Name": "rvm",
                     "Version": "1.29.12",
                     "DownloadUrl": "https://github.com/rvm/rvm"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: mcr.microsoft.com/devcontainers/ruby",
+                    "Version": "3.2-bookworm",
+                    "DownloadUrl": "https://github.com/devcontainers/images"
                 }
             }
         },
@@ -811,7 +841,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "yapf",
-                    "Version": "0.40.0"
+                    "Version": "0.40.1"
                 }
             }
         },
@@ -820,7 +850,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "mypy",
-                    "Version": "1.3.0"
+                    "Version": "1.4.1"
                 }
             }
         },
@@ -856,7 +886,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "virtualenv",
-                    "Version": "20.23.0"
+                    "Version": "20.23.1"
                 }
             }
         },
@@ -896,6 +926,26 @@
                     "Name": "Composer",
                     "Version": "2.5.8",
                     "DownloadUrl": "https://getcomposer.org/"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: php",
+                    "Version": "8.2-apache-bookworm",
+                    "DownloadUrl": "https://hub.docker.com/_/php"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: php",
+                    "Version": "8.1-apache-bookworm",
+                    "DownloadUrl": "https://hub.docker.com/_/php"
                 }
             }
         },
@@ -964,7 +1014,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "setuptools",
-                    "Version": "67.8.0"
+                    "Version": "68.0.0"
                 }
             }
         },
@@ -974,6 +1024,56 @@
                 "Pip": {
                     "Name": "flake8",
                     "Version": "5.0.4"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: python",
+                    "Version": "3.11-bookworm",
+                    "DownloadUrl": "https://hub.docker.com/_/python"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: python",
+                    "Version": "3.10-bookworm",
+                    "DownloadUrl": "https://hub.docker.com/_/python"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: python",
+                    "Version": "3.9-bookworm",
+                    "DownloadUrl": "https://hub.docker.com/_/python"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: python",
+                    "Version": "3.8-bookworm",
+                    "DownloadUrl": "https://hub.docker.com/_/python"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: python",
+                    "Version": "3.7-bookworm",
+                    "DownloadUrl": "https://hub.docker.com/_/python"
                 }
             }
         },
@@ -1079,11 +1179,21 @@
         },
         {
             "Component": {
-                "Type": "git",
-                "Git": {
-                    "Name": "ruby-build",
-                    "repositoryUrl": "https://github.com/rbenv/ruby-build.git",
-                    "commitHash": "e4ca1b3dc3f76c5b7e123ade716ac5d4c6191dbd"
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: ruby",
+                    "Version": "3.2-bookworm",
+                    "DownloadUrl": "https://hub.docker.com/_/ruby"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: ruby",
+                    "Version": "3.1-bookworm",
+                    "DownloadUrl": "https://hub.docker.com/_/ruby"
                 }
             }
         },
@@ -1236,6 +1346,36 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Image: node",
+                    "Version": "20-bookworm",
+                    "DownloadUrl": "https://hub.docker.com/_/node"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: node",
+                    "Version": "18-bookworm",
+                    "DownloadUrl": "https://hub.docker.com/_/node"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: node",
+                    "Version": "16-bookworm",
+                    "DownloadUrl": "https://hub.docker.com/_/node"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: node",
                     "Version": "20-bullseye",
                     "DownloadUrl": "https://hub.docker.com/_/node"
                 }
@@ -1344,7 +1484,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "scipy",
-                    "Version": "1.10.1"
+                    "Version": "1.11.0"
                 }
             }
         },
@@ -1413,15 +1553,6 @@
         },
         {
             "Component": {
-                "Type": "Pip",
-                "Pip": {
-                    "Name": "wheel",
-                    "Version": "0.40.0"
-                }
-            }
-        },
-        {
-            "Component": {
                 "Type": "RubyGems",
                 "RubyGems": {
                     "Name": "rake",
@@ -1435,7 +1566,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "cb8b677488c7a20278917af58dfccd72cd40e1b1"
+                    "commitHash": "8cbe98469d9862d37d43ca4229dc8e915ec377a9"
                 }
             }
         },
@@ -1494,7 +1625,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "GitHub CLI",
-                    "Version": "2.30.0",
+                    "Version": "2.31.0",
                     "DownloadUrl": "https://github.com/cli/cli"
                 }
             }
