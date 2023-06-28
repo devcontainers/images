@@ -5,17 +5,14 @@
 		"3.10-bookworm",
 		"3.9-bookworm",
 		"3.8-bookworm",
-		"3.7-bookworm",
 		"3.11-bullseye",
 		"3.10-bullseye",
 		"3.9-bullseye",
 		"3.8-bullseye",
-		"3.7-bullseye",
 		"3.11-buster",
 		"3.10-buster",
 		"3.9-buster",
-		"3.8-buster",
-		"3.7-buster"
+		"3.8-buster"
 	],
 	"build": {
 		"latest": "3.11-bookworm",
@@ -37,10 +34,6 @@
 				"linux/amd64",
 				"linux/arm64"
 			],
-			"3.7-bookworm": [
-				"linux/amd64",
-				"linux/arm64"
-			],
 			"3.11-bullseye": [
 				"linux/amd64",
 				"linux/arm64"
@@ -57,10 +50,6 @@
 				"linux/amd64",
 				"linux/arm64"
 			],
-			"3.7-bullseye": [
-				"linux/amd64",
-				"linux/arm64"
-			],
 			"3.11-buster": [
 				"linux/amd64"
 			],
@@ -71,9 +60,6 @@
 				"linux/amd64"
 			],
 			"3.8-buster": [
-				"linux/amd64"
-			],
-			"3.7-buster": [
 				"linux/amd64"
 			]
 		},
@@ -95,9 +81,6 @@
 			],
 			"3.8-bookworm": [
 				"python:${VERSION}-3.8"
-			],
-			"3.7-bookworm": [
-				"python:${VERSION}-3.7"
 			],
 			"3.11-bullseye": [
 				"python:${VERSION}-3-bullseye",
