@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/miniconda)
 
-**Digest:** sha256:191ae9f459c8416d41dc00e35b864d69cf5c45bf4f3ba7e1dd0f20463bb46235
+**Digest:** sha256:e4a3c78dfa53d8617b55fc13218ec2bf440d04c277bc4bffeba6b95c1de6f360
 
 **Tags:**
 ```

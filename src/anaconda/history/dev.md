@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:e5e32436b7a69bbeff6330df98d43698a7c89d408fef2d3f98bfe6d8eab17bbf
+**Digest:** sha256:88778f8be3171f5c03793edcfad06eef7ebd37d8649d733ca040f464e61eab88
 
 **Tags:**
 ```
@@ -37,7 +37,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 
 | Tool / package | Version |
 |----------------|---------|
-| joblib | 1.2.0 |
+| joblib | 1.3.1 |
 | cookiecutter | 2.1.1 |
 | cryptography | 39.0.1 |
 | mistune | 3.0.1 |
