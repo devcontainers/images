@@ -18,7 +18,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "joblib",
-                    "Version": "1.2.0"
+                    "Version": "1.3.1"
                 }
             }
         },
@@ -182,17 +182,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "8cbe98469d9862d37d43ca4229dc8e915ec377a9"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "git",
-                "Git": {
-                    "Name": "Oh My Zsh!",
-                    "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "d5f1f50ad2d62363785464d5b6eef1a009243d7a"
+                    "commitHash": "fe4b5659863c388786986d70fa6d1bb66b00afb6"
                 }
             }
         },
@@ -292,7 +282,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "8f3e8d6e95c7f91edea60c47a7d1414ab5ca9492"
+                    "commitHash": "228987a6fdbd56739a16d47eacf6e79d71a47973"
                 }
             }
         },
@@ -302,17 +292,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "288e8bebf4ca67c1f8ebd49366b03650cfd9eb7d"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "git",
-                "Git": {
-                    "Name": "vcpkg",
-                    "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "a26fc81350ab139c72dfeae07822ce3db3ca7ebb"
+                    "commitHash": "84aba9a5c3b84043916f462db7985007cc404c03"
                 }
             }
         },
@@ -485,7 +465,7 @@
                 "Type": "go",
                 "Go": {
                     "Name": "github.com/go-delve/delve",
-                    "Version": "1.20.2"
+                    "Version": "1.21.0"
                 }
             }
         },
@@ -593,7 +573,7 @@
                 "Type": "npm",
                 "Npm": {
                     "Name": "eslint",
-                    "Version": "8.43.0"
+                    "Version": "8.44.0"
                 }
             }
         },
@@ -603,17 +583,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "8cbe98469d9862d37d43ca4229dc8e915ec377a9"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "git",
-                "Git": {
-                    "Name": "Oh My Zsh!",
-                    "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "d5f1f50ad2d62363785464d5b6eef1a009243d7a"
+                    "commitHash": "fe4b5659863c388786986d70fa6d1bb66b00afb6"
                 }
             }
         },
@@ -718,7 +688,7 @@
                 "Type": "RubyGems",
                 "RubyGems": {
                     "Name": "bundler",
-                    "Version": "2.4.14"
+                    "Version": "2.4.15"
                 }
             }
         },
@@ -1020,15 +990,6 @@
         },
         {
             "Component": {
-                "Type": "Pip",
-                "Pip": {
-                    "Name": "flake8",
-                    "Version": "5.0.4"
-                }
-            }
-        },
-        {
-            "Component": {
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Image: python",
@@ -1063,16 +1024,6 @@
                 "Other": {
                     "Name": "Docker Image: python",
                     "Version": "3.8-bookworm",
-                    "DownloadUrl": "https://hub.docker.com/_/python"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "other",
-                "Other": {
-                    "Name": "Docker Image: python",
-                    "Version": "3.7-bookworm",
                     "DownloadUrl": "https://hub.docker.com/_/python"
                 }
             }
@@ -1122,16 +1073,6 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Image: python",
-                    "Version": "3.7-bullseye",
-                    "DownloadUrl": "https://hub.docker.com/_/python"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "other",
-                "Other": {
-                    "Name": "Docker Image: python",
                     "Version": "3.11-buster",
                     "DownloadUrl": "https://hub.docker.com/_/python"
                 }
@@ -1163,16 +1104,6 @@
                 "Other": {
                     "Name": "Docker Image: python",
                     "Version": "3.8-buster",
-                    "DownloadUrl": "https://hub.docker.com/_/python"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "other",
-                "Other": {
-                    "Name": "Docker Image: python",
-                    "Version": "3.7-buster",
                     "DownloadUrl": "https://hub.docker.com/_/python"
                 }
             }
@@ -1337,7 +1268,7 @@
                 "Type": "npm",
                 "Npm": {
                     "Name": "typescript",
-                    "Version": "5.1.3"
+                    "Version": "5.1.6"
                 }
             }
         },
@@ -1475,7 +1406,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "pandas",
-                    "Version": "2.0.2"
+                    "Version": "2.0.3"
                 }
             }
         },
@@ -1484,7 +1415,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "scipy",
-                    "Version": "1.11.0"
+                    "Version": "1.11.1"
                 }
             }
         },
@@ -1511,7 +1442,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "scikit-learn",
-                    "Version": "1.2.2"
+                    "Version": "1.3.0"
                 }
             }
         },
@@ -1566,7 +1497,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "8cbe98469d9862d37d43ca4229dc8e915ec377a9"
+                    "commitHash": "fe4b5659863c388786986d70fa6d1bb66b00afb6"
                 }
             }
         },

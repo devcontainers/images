@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:6730539de301a55f863f4ecd11a8cbc65815ce618161c2d2ff1d5e182fce496d
+**Digest:** sha256:dc41ff4483b8c9d134c39c72a9d994ef4f2dc06b02e2702e28fb675ef7dfde62
 
 **Tags:**
 ```
@@ -26,7 +26,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 18.16.1<br />20.3.1 | /usr/local/share/nvm/versions/node/&lt;version&gt; |
+| [Node.js](https://nodejs.org/en/) | 18.16.1<br />20.4.0 | /usr/local/share/nvm/versions/node/&lt;version&gt; |
 | [Python](https://www.python.org/) | 3.10.8<br />3.9.16 | /usr/local/python/&lt;version&gt; |
 | [Java](https://adoptopenjdk.net/) | 11.0.19<br />17.0.7 | /usr/local/sdkman/candidates/java/&lt;version&gt; |
 | [.NET](https://dotnet.microsoft.com/) | 6<br />0<br />4<br />1<br />1<br />7<br />0<br />3<br />0<br />5 | /usr/local/dotnet |
@@ -42,7 +42,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8cbe98469d9862d37d43ca4229dc8e915ec377a9 | /home/codespace/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe4b5659863c388786986d70fa6d1bb66b00afb6 | /home/codespace/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | 6c5a5983e2bccae5ac2b217b69210ecf3cd560f1 | /usr/local/nvs |
 | [rbenv](https://github.com/rbenv/rbenv.git) | 311217208122e4c7e49c2bff9069912e2a07e873 | /usr/local/share/rbenv |
@@ -53,11 +53,11 @@ mcr.microsoft.com/devcontainers/universal:dev
 | Tool / package | Version |
 |----------------|---------|
 | numpy | 1.25.0 |
-| pandas | 2.0.2 |
-| scipy | 1.11.0 |
+| pandas | 2.0.3 |
+| scipy | 1.11.1 |
 | matplotlib | 3.7.1 |
 | seaborn | 0.12.2 |
-| scikit-learn | 1.2.2 |
+| scikit-learn | 1.3.0 |
 | torch | 2.0.1 |
 | requests | 2.31.0 |
 | plotly | 5.15.0 |
@@ -87,7 +87,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | github.com/mgechev/revive | 1.3.2 |
 | github.com/uudashr/gopkgs | latest |
 | github.com/ramya-rao-a/go-outline | latest |
-| github.com/go-delve/delve | 1.20.2 |
+| github.com/go-delve/delve | 1.21.0 |
 | github.com/golangci/golangci-lint | latest |
 
 **Ruby gems and tools**
@@ -111,7 +111,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [GitHub CLI](https://github.com/cli/cli) | 2.31.0 | 
 | [yarn](https://yarnpkg.com/) | 1.22.19 | /usr/bin |
 | [Maven](https://maven.apache.org/) | 3.9.3 | /usr/local/sdkman/candidates/maven/current/bin |
-| [Gradle](https://gradle.org/) | 8.1.1 | /usr/local/sdkman/candidates/gradle/current/bin |
+| [Gradle](https://gradle.org/) | 8.2 | /usr/local/sdkman/candidates/gradle/current/bin |
 | Docker (Moby) CLI &amp; Engine | 20.10.25+azure | 
 | [conda](https://github.com/conda/conda) | 23.1.0 | /opt/conda/bin |
 
