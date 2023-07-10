@@ -35,7 +35,7 @@ You can decide how often you want updates by referencing a [semantic version](ht
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/dotnet/tags/list).
 
-Alternatively, you can use the contents of `Dockerfile` to fully customize your container's contents or to build it for a container host architecture not supported by the image.
+Alternatively, you can use the contents of [.devcontainer](.devcontainer folder) to fully customize your container's contents or to build it for a container host architecture not supported by the image.
 
 ### Enabling HTTPS in ASP.NET using your own dev certificate
 
