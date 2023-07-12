@@ -41,7 +41,7 @@ However, we only do security patching on the latest [non-breaking, in support](h
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/python/tags/list).
 
-Alternatively, you can use the contents of `Dockerfile` to fully customize the your container's contents or build for a container architecture the image does not support.
+Alternatively, you can use the contents of [.devcontainer](.devcontainer) to fully customize the your container's contents or build for a container architecture the image does not support.
 
 Beyond Python and `git`, this image / `Dockerfile` includes a number of Python tools, `zsh`, [Oh My Zsh!](https://ohmyz.sh/), a non-root `vscode` user with `sudo` access, and a set of common dependencies for development.
 
