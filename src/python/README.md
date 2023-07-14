@@ -44,7 +44,7 @@ See [history](history) for information on the contents of each version and [here
 
 Alternatively, you can use the contents of [.devcontainer](.devcontainer) to fully customize the your container's contents or build for a container architecture the image does not support.
 
-Beyond Python and `git`, this image includes a number of Python tools, `zsh`, [Oh My Zsh!](https://ohmyz.sh/), a non-root `vscode` user with `sudo` access, and a set of common dependencies for development, see [.devcontainer/devcontainer.json](.devcontainer/devcontainer.json).
+Beyond Python and `git`, this image includes a number of Python tools, `zsh`, [Oh My Zsh!](https://ohmyz.sh/), a non-root `vscode` user with `sudo` access, and a set of common dependencies for development. See [.devcontainer](.devcontainer) for the full config.
 
 ### Installing Node.js
 
