@@ -21,7 +21,7 @@ See **[history](history)** for information on the contents of published images.
 
 ### Configuration
 
-You can directly reference pre-built versions of this image by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` with one of the following:
+You can directly reference [pre-built](https://containers.dev/implementors/reference/#prebuilding) versions of this image by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` with one of the following:
 
 - `mcr.microsoft.com/devcontainers/python:3`    (latest)
 - `mcr.microsoft.com/devcontainers/python:3.8`  (or `3.8-bookworm`, `3.8-bullseye`, `3.8-buster` to pin to an OS version)
