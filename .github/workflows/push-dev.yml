@@ -78,3 +78,5 @@ jobs:
       push: "true"
       overwrite: "true"
     secrets: inherit
+    DELETE
+    
