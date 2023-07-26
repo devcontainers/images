@@ -34,5 +34,8 @@ check "usr-local-etc-config-does-not-exist" test ! -f "/usr/local/etc/gitconfig"
 check "Oh My Zsh! theme" test -e $HOME/.oh-my-zsh/custom/themes/devcontainers.zsh-theme
 check "zsh theme symlink" test -e $HOME/.oh-my-zsh/custom/themes/codespaces.zsh-theme
 
+npm_version=$(npm --version)
+check-version-ge "npm-requirement" "${npm_version}" "9.8.1"
+
 # Report result
 reportResults
