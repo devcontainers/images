@@ -9,7 +9,7 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published image* | mcr.microsoft.com/devcontainers/python |
-| *Available image variants* | 3 / 3-bookworm, 3.7 / 3.7-bookworm, 3.8 / 3.8-bookworm, 3.9 / 3.9-bookworm, 3.10 / 3.10-bookworm, 3.11-bookworm, 3.11, 3-bullseye, 3.7-bullseye, 3.8-bullseye, 3.9-bullseye, 3.10-bullseye, 3.11-bullseye, 3.7-buster, 3.8-buster, 3.9-buster, 3.10-buster, 3.11-buster ([full list](https://mcr.microsoft.com/v2/devcontainers/python/tags/list)) |
+| *Available image variants* | 3 / 3-bookworm, 3.8 / 3.8-bookworm, 3.9 / 3.9-bookworm, 3.10 / 3.10-bookworm, 3.11-bookworm, 3.11, 3-bullseye, 3.8-bullseye, 3.9-bullseye, 3.10-bullseye, 3.11-bullseye, 3.8-buster, 3.9-buster, 3.10-buster, 3.11-buster ([full list](https://mcr.microsoft.com/v2/devcontainers/python/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm`, and `bullseye` variants |
 | *Container Host OS Support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
@@ -24,7 +24,6 @@ See **[history](history)** for information on the contents of published images.
 You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` with one of the following:
 
 - `mcr.microsoft.com/devcontainers/python:3`    (latest)
-- `mcr.microsoft.com/devcontainers/python:3.7`  (or `3.7-bookworm`, `3.7-bullseye`, `3.7-buster` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/python:3.8`  (or `3.8-bookworm`, `3.8-bullseye`, `3.8-buster` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/python:3.9`  (or `3.9-bookworm`, `3.9-bullseye`, `3.9-buster` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/python:3.10` (or `3.10-bookworm`, `3.10-bullseye`, `3.10-buster` to pin to an OS version)
@@ -129,7 +128,7 @@ If you would prefer to have multiple Python versions in your container, use `Doc
 
 ```Dockerfile
 FROM ubuntu:jammy
-ARG PYTHON_PACKAGES="python3.5 python3.6 python3.7 python3.8 python3 python3-pip python3-venv"
+ARG PYTHON_PACKAGES="python3.8 python3.9 python3 python3-pip python3-venv"
 RUN apt-get update && apt-get install --no-install-recommends -yq software-properties-common \
      && add-apt-repository ppa:deadsnakes/ppa && apt-get update \
      && apt-get install -yq --no-install-recommends ${PYTHON_PACKAGES} \
