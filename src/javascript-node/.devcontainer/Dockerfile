@@ -19,9 +19,10 @@ RUN \
     && chmod g+s ${NPM_GLOBAL} \
     && npm config -g set prefix ${NPM_GLOBAL} \
     && su ${USERNAME} -c "npm config -g set prefix ${NPM_GLOBAL}" \
-    && su ${USERNAME} -c "umask 0002 && npm install -g npm@9.8.1" \
-    # Install eslint
-    && su ${USERNAME} -c "umask 0002 && npm install -g eslint" \
+    && su ${USERNAME} -c "umask 0002 && npm install -g \
+        npm@9.8.1 \
+        # Install eslint
+        eslint" \
     && npm cache clean --force > /dev/null 2>&1
 
 # [Optional] Uncomment this section to install additional OS packages.
