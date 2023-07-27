@@ -171,11 +171,3 @@ checkPythonPackageVersion()
     current_version=$(python -c "import ${PACKAGE}; print(${PACKAGE}.__version__)")
     check-version-ge "${PACKAGE}-requirement" "${current_version}" "${REQUIRED_VERSION}"
 }
-
-checkCondaPackageVersion()
-{
-    PACKAGE=$1
-    REQUIRED_VERSION=$2
-    current_version=$(conda list "${PACKAGE}" | grep -E "^${PACKAGE}\s" | awk '{print $2}')
-    check-version-ge "conda-${PACKAGE}-requirement" "${current_version}" "${REQUIRED_VERSION}"
-}

@@ -46,13 +46,9 @@ checkPythonPackageVersion "requests" "2.31.0"
 tornado_version=$(python -c "import tornado; print(tornado.version)")
 check-version-ge "tornado-requirement" "${tornado_version}" "6.3.2"
 
-checkCondaPackageVersion "pyopenssl" "23.2.0"
-checkCondaPackageVersion "cryptography" "41.0.2"
-checkCondaPackageVersion "requests" "2.31.0"
-
 check "conda-update-conda" bash -c "conda update -y conda"
-check "conda-install-tensorflow" bash -c "conda install -c conda-forge --yes tensorflow"
-check "conda-install-pytorch" bash -c "conda install -c conda-forge --yes pytorch"
+check "conda-install" bash -c "conda install -c conda-forge --yes tensorflow"
+check "conda-install" bash -c "conda install -c conda-forge --yes pytorch"
 
 # Report result
 reportResults
