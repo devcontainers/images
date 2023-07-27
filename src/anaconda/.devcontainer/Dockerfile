@@ -74,6 +74,15 @@ RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then umask 0002 && /opt/conda/bi
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
 
+# Temporary: Upgrade python packages due to mentioned CVEs
+# They are installed by the base image (continuumio/anaconda3) which does not have the patch.
+RUN conda install \ 
+    # https://github.com/advisories/GHSA-5cpq-8wj7-hf2v
+    pyopenssl=23.2.0 \ 
+    cryptography=41.0.2 \
+    # https://github.com/advisories/GHSA-j8r2-6x86-q33q
+    requests=2.31.0
+
 # Create conda group, update conda directory permissions, 
 # add user to conda group
 # Note: We need to execute these commands after pip install / conda update 
