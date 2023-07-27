@@ -196,7 +196,7 @@ checkPythonPackageVersion "/usr/local/python/3.9.*/bin/python" "setuptools" "65.
 
 ## Conda Python
 checkCondaPackageVersion "requests" "2.31.0"
-checkCondaPackageVersion "cryptography" "41.0.0"
+checkCondaPackageVersion "cryptography" "41.0.2"
 checkCondaPackageVersion "pyopenssl" "23.2.0"
 
 ## Test Conda
