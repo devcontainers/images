@@ -1,0 +1,134 @@
+{
+	"version": "1.0.1",
+	"variants": [
+		"3.11-bookworm",
+		"3.10-bookworm",
+		"3.9-bookworm",
+		"3.8-bookworm",
+		"3.11-bullseye",
+		"3.10-bullseye",
+		"3.9-bullseye",
+		"3.8-bullseye",
+		"3.11-buster",
+		"3.10-buster",
+		"3.9-buster",
+		"3.8-buster"
+	],
+	"build": {
+		"latest": "3.11-bookworm",
+		"rootDistro": "debian",
+		"architectures": {
+			"3.11-bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"3.10-bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"3.9-bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"3.8-bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"3.11-bullseye": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"3.10-bullseye": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"3.9-bullseye": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"3.8-bullseye": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"3.11-buster": [
+				"linux/amd64"
+			],
+			"3.10-buster": [
+				"linux/amd64"
+			],
+			"3.9-buster": [
+				"linux/amd64"
+			],
+			"3.8-buster": [
+				"linux/amd64"
+			]
+		},
+		"tags": [
+			"python:${VERSION}-${VARIANT}"
+		],
+		"variantTags": {
+			"3.11-bookworm": [
+				"python:${VERSION}-3.11",
+				"python:${VERSION}-3",
+				"python:${VERSION}-3-bookworm",
+				"python:${VERSION}-bookworm"
+			],
+			"3.10-bookworm": [
+				"python:${VERSION}-3.10"
+			],
+			"3.9-bookworm": [
+				"python:${VERSION}-3.9"
+			],
+			"3.8-bookworm": [
+				"python:${VERSION}-3.8"
+			],
+			"3.11-bullseye": [
+				"python:${VERSION}-3-bullseye",
+				"python:${VERSION}-bullseye"
+			],
+			"3.11-buster": [
+				"python:${VERSION}-3-buster",
+				"python:${VERSION}-buster"
+			]
+		}
+	},
+	"dependencies": {
+		"image": "python:${VARIANT}",
+		"imageLink": "https://hub.docker.com/_/python",
+		"apt": [
+			{
+				"cgIgnore": false,
+				"name": "yarn"
+			}
+		],
+		"git": {
+			"Oh My Zsh!": "/home/vscode/.oh-my-zsh",
+			"nvm": "/usr/local/share/nvm"
+		},
+		"pipx": [
+			"pylint",
+			"flake8",
+			"autopep8",
+			"black",
+			"yapf",
+			"mypy",
+			"pydocstyle",
+			"pycodestyle",
+			"bandit",
+			"virtualenv",
+			"pipx"
+		],
+		"pip": [
+			"setuptools"
+		],
+		"languages": {
+			"Python": {
+				"cgIgnore": true,
+				"path": "/usr/local"
+			}
+		},
+		"other": {
+			"git": {}
+		}
+	}
+}

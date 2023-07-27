@@ -1,0 +1,79 @@
+{
+	"version": "2.0.0",
+	"variants": [
+		"3.2-bookworm",
+		"3.2-bullseye",
+		"3.2-buster"
+	],
+	"build": {
+		"latest": "3.2-bookworm",
+		"parent": "ruby",
+		"rootDistro": "debian",
+		"architectures": {
+			"3.2-bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"3.2-bullseye": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"3.2-buster": [
+				"linux/amd64"
+			]
+		},
+		"tags": [
+			"jekyll:${VERSION}-${VARIANT}"
+		],
+		"variantTags": {
+			"3.2-bookworm": [
+				"jekyll:${VERSION}",
+				"jekyll:${VERSION}-bookworm"
+			],
+			"3.2-bullseye": [
+				"jekyll:${VERSION}-bullseye"
+			],
+			"3.2-buster": [
+				"jekyll:${VERSION}-buster"
+			]
+		}
+	},
+	"dependencies": {
+		"image": "mcr.microsoft.com/devcontainers/ruby:${VARIANT}",
+		"imageLink": "https://github.com/devcontainers/images",
+		"debian": [
+			{
+				"cgIgnore": false,
+				"name": "yarn"
+			}
+		],
+		"git": {
+			"Oh My Zsh!": "/home/vscode/.oh-my-zsh",
+			"nvm": "/usr/local/share/nvm",
+			"rbenv": "/usr/local/share/rbenv",
+			"ruby-build": "/usr/local/share/ruby-build"
+		},
+		"gem": [
+			"rake",
+			"ruby-debug-ide",
+			"debase",
+			"bundler",
+			"jekyll",
+			"github-pages"
+		],
+		"other": {
+			"git": {},
+			"rvm": null
+		},
+		"languages": {
+			"Ruby": {
+				"cgIgnore": true,
+				"path": "/usr/local"
+			},
+			"Jekyll": {
+				"cgIgnore": true,
+				"path": "/usr/local/bundle/bin"
+			}
+		}
+	}
+}

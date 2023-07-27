@@ -1,0 +1,44 @@
+{
+	"version": "1.0.14",
+	"variants": [
+		"jammy",
+		"focal"
+	],
+	"build": {
+		"latest": false,
+		"rootDistro": "debian",
+		"architectures": {
+			"jammy": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"focal": [
+				"linux/amd64"
+			]
+		},
+		"tags": [
+			"base:${VERSION}-${VARIANT}"
+		],
+		"variantTags": {
+			"jammy": [
+				"base:${VERSION}-ubuntu-22.04",
+				"base:${VERSION}-ubuntu22.04",
+				"base:${VERSION}-ubuntu"
+			],
+			"focal": [
+				"base:${VERSION}-ubuntu-20.04",
+				"base:${VERSION}-ubuntu20.04"
+			]
+		}
+	},
+	"dependencies": {
+		"image": "buildpack-deps:${VARIANT}-curl",
+		"imageLink": "https://hub.docker.com/_/buildpack-deps",
+		"git": {
+			"Oh My Zsh!": "/home/vscode/.oh-my-zsh"
+		},
+		"other": {
+			"git": {}
+		}
+	}
+}

@@ -1,0 +1,106 @@
+{
+	"version": "1.0.1",
+	"variants": [
+		"bookworm",
+		"bullseye",
+		"buster",
+		"jammy",
+		"focal"
+	],
+	"build": {
+		"latest": "bookworm",
+		"parent": {
+			"bookworm": "base-debian",
+			"bullseye": "base-debian",
+			"buster": "base-debian",
+			"jammy": "base-ubuntu",
+			"focal": "base-ubuntu"
+		},
+		"rootDistro": "debian",
+		"architectures": {
+			"bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"bullseye": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"buster": [
+				"linux/amd64"
+			],
+			"jammy": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"focal": [
+				"linux/amd64"
+			]
+		},
+		"tags": [
+			"cpp:${VERSION}-${VARIANT}"
+		],
+		"variantTags": {
+			"bookworm": [
+				"cpp:${VERSION}-debian-12",
+				"cpp:${VERSION}-debian12",
+				"cpp:${VERSION}-debian",
+				"cpp:${VERSION}"
+			],
+			"bullseye": [
+				"cpp:${VERSION}-debian-11",
+				"cpp:${VERSION}-debian11",
+				"cpp:${VERSION}"
+			],
+			"buster": [
+				"cpp:${VERSION}-debian-10",
+				"cpp:${VERSION}-debian10"
+			],
+			"jammy": [
+				"cpp:${VERSION}-ubuntu-22.04",
+				"cpp:${VERSION}-ubuntu22.04"
+			],
+			"focal": [
+				"cpp:${VERSION}-ubuntu-20.04",
+				"cpp:${VERSION}-ubuntu20.04",
+				"cpp:${VERSION}-ubuntu"
+			]
+		}
+	},
+	"dependencies": {
+		"image": "buildpack-deps:${VARIANT}-curl",
+		"imageLink": "https://hub.docker.com/_/buildpack-deps",
+		"apt": [
+			"build-essential",
+			"cmake",
+			"cppcheck",
+			"valgrind",
+			"clang",
+			"lldb",
+			"llvm",
+			"gdb",
+			"tar",
+			"curl",
+			"zip",
+			"unzip",
+			"pkg-config",
+			"bash-completion",
+			"ninja-build"
+		],
+		"git": {
+			"Oh My Zsh!": "/home/vscode/.oh-my-zsh",
+			"vcpkg": "/usr/local/vcpkg"
+		},
+		"languages": {
+			"GCC": {
+				"cgIgnore": true
+			},
+			"Clang": {
+				"cgIgnore": true
+			}
+		},
+		"other": {
+			"git": {}
+		}
+	}
+}

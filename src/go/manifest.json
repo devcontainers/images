@@ -1,0 +1,98 @@
+{
+  "version": "1.0.1",
+  "variants": [
+		"1.20-bookworm",
+    "1.20-bullseye",
+    "1.20-buster",
+		"1.19-bookworm",
+    "1.19-bullseye",
+    "1.19-buster"
+  ],
+  "build": {
+    "latest": "1.20-bookworm",
+    "rootDistro": "debian",
+    "tags": [
+      "go:${VERSION}-${VARIANT}"
+    ],
+    "architectures": {
+			"1.20-bookworm": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "1.19-bookworm": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "1.20-bullseye": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "1.19-bullseye": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "1.20-buster": [
+        "linux/amd64"
+      ],
+      "1.19-buster": [
+        "linux/amd64"
+      ]
+    },
+    "variantTags": {
+      "1.20-bookworm": [
+        "go:${VERSION}-1.20",
+        "go:${VERSION}-1",
+        "go:${VERSION}-1-bookworm",
+        "go:${VERSION}-bookworm"
+      ],
+			"1.20-bullseye": [
+        "go:${VERSION}-1-bullseye",
+        "go:${VERSION}-bullseye"
+      ],
+      "1.20-buster": [
+        "go:${VERSION}-1-buster",
+        "go:${VERSION}-buster"
+      ],
+      "1.19-bookworm": [
+        "go:${VERSION}-1.19"
+      ]
+    }
+  },
+  "dependencies": {
+    "image": "golang:${VARIANT}",
+    "imageLink": "https://hub.docker.com/_/golang",
+    "debian": [
+      {
+        "cgIgnore": false,
+        "name": "yarn"
+      },
+      "g++",
+      "gcc",
+      "libc6-dev",
+      "make",
+      "pkg-config"
+    ],
+    "git": {
+      "Oh My Zsh!": "/home/vscode/.oh-my-zsh",
+      "nvm": "/usr/local/share/nvm"
+    },
+    "go": {
+      "golang.org/x/tools/gopls": null,
+      "honnef.co/go/tools": null,
+      "golang.org/x/lint": null,
+      "github.com/mgechev/revive": null,
+      "github.com/uudashr/gopkgs": null,
+      "github.com/ramya-rao-a/go-outline": null,
+      "github.com/go-delve/delve": null,
+      "github.com/golangci/golangci-lint": null
+    },
+    "languages": {
+      "Go": {
+        "cgIgnore": true
+      }
+    },
+		"other": {
+			"git": {}
+		}
+  }
+}

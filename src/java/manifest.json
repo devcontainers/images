@@ -1,0 +1,119 @@
+{
+	"version": "1.0.1",
+	"variants": [
+		"17-bookworm",
+		"17-bullseye",
+		"17-buster",
+		"11-bookworm",
+		"11-bullseye",
+		"11-buster"
+	],
+	"build": {
+		"latest": "17-bookworm",
+		"rootDistro": "debian",
+		"parent": "base-debian",
+		"idMismatch": "true",
+		"variantBuildArgs": {
+			"17-bookworm": {
+				"TARGET_JAVA_VERSION": "17",
+				"BASE_IMAGE_VERSION_CODENAME": "bookworm"
+			},
+			"11-bookworm": {
+				"TARGET_JAVA_VERSION": "11",
+				"BASE_IMAGE_VERSION_CODENAME": "bookworm"
+			},
+			"17-bullseye": {
+				"TARGET_JAVA_VERSION": "17",
+				"BASE_IMAGE_VERSION_CODENAME": "bullseye"
+			},
+			"11-bullseye": {
+				"TARGET_JAVA_VERSION": "11",
+				"BASE_IMAGE_VERSION_CODENAME": "bullseye"
+			},
+			"17-buster": {
+				"TARGET_JAVA_VERSION": "17",
+				"BASE_IMAGE_VERSION_CODENAME": "buster"
+			},
+			"11-buster": {
+				"TARGET_JAVA_VERSION": "11",
+				"BASE_IMAGE_VERSION_CODENAME": "buster"
+			}
+		},
+		"architectures": {
+			"17-bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"11-bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"17-bullseye": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"11-bullseye": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"17-buster": [
+				"linux/amd64"
+			],
+			"11-buster": [
+				"linux/amd64"
+			]
+		},
+		"tags": [
+			"java:${VERSION}-${VARIANT}"
+		],
+		"variantTags": {
+			"17-bookworm": [
+				"java:${VERSION}-17",
+				"java:${VERSION}-17-jdk-bookworm",
+				"java:${VERSION}-bookworm"
+			],
+			"11-bookworm": [
+				"java:${VERSION}-11",
+				"java:${VERSION}-11-jdk-bookworm"
+			],
+			"17-bullseye": [
+				"java:${VERSION}-17-jdk-bullseye",
+				"java:${VERSION}-bullseye"
+			],
+			"11-bullseye": [
+				"java:${VERSION}-11-jdk-bullseye"
+			],
+			"17-jdk-buster": [
+				"java:${VERSION}-17-jdk-buster",
+				"java:${VERSION}-buster"
+			],
+			"11-buster": [
+				"java:${VERSION}-11-jdk-buster"
+			]
+		}
+	},
+	"dependencies": {
+		"image": "buildpack-deps:${BASE_IMAGE_VERSION_CODENAME}-curl",
+		"imageLink": "https://hub.docker.com/_/buildpack-deps",
+		"apt": [
+			{
+				"cgIgnore": false,
+				"name": "yarn"
+			}
+		],
+		"git": {
+			"Oh My Zsh!": "/home/vscode/.oh-my-zsh",
+			"nvm": "/usr/local/share/nvm"
+		},
+		"other": {
+			"git": {},
+			"SDKMAN!": null
+		},
+		"languages": {
+			"Java": {
+				"cgIgnore": true,
+				"path": "/usr/local/"
+			}
+		}
+	}
+}

@@ -1,17 +1,9 @@
-name: 'VSCDC smoke test'
+name: 'Smoke test'
 inputs:
-  definition:
-    description: 'Definition to test'
-    required: true
-    default: 'debian'
   image:
-    description: 'Image to run smoke test in'
+    description: 'Image to test'
     required: true
-    default: 'none'
-  user:
-    description: 'User in container image to use for smoke test'
-    required: true
-    default: 'vscode'
+    default: 'base-debian'
 
 runs:
   using: composite
@@ -21,14 +13,15 @@ runs:
       uses: actions/checkout@v2
       with:
         repository: 'devcontainers/images'
+        path: '__build'
         ref: 'main'
 
     - name: Build image
       id: build_image
       shell: bash
-      run: ${{ github.action_path }}/build.sh ${{ inputs.definition }}
+      run: ${{ github.action_path }}/build.sh ${{ inputs.image }}
 
     - name: Test image
       id: test_image
       shell: bash
-      run: ${{ github.action_path }}/test.sh  ${{ inputs.definition }} ${{ inputs.image }} ${{ inputs.user }}
+      run: ${{ github.action_path }}/test.sh  ${{ inputs.image }}
