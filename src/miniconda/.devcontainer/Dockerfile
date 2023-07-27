@@ -41,9 +41,10 @@ RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then umask 0002 && /opt/conda/bi
 
 # Temporary: Upgrade python packages due to mentioned CVEs
 # They are installed by the base image (continuumio/miniconda3) which does not have the patch.
-RUN python3 -m pip install --upgrade \
-    # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32681
-    requests
+RUN conda install \ 
+    # https://github.com/pyca/cryptography/security/advisories/GHSA-5cpq-8wj7-hf2v
+    pyopenssl=23.2.0 \ 
+    cryptography=41.0.2
 
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
