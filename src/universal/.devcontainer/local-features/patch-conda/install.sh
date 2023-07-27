@@ -52,7 +52,7 @@ sudo_if /opt/conda/bin/python3 -m pip install --upgrade pip
 
 # https://github.com/advisories/GHSA-5cpq-8wj7-hf2v
 update_conda_package pyopenssl "23.2.0"
-update_conda_package cryptography "41.0.0"
+update_conda_package cryptography "41.0.2"
 
 # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32681
 update_conda_package requests "2.31.0"
