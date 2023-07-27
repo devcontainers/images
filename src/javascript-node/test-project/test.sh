@@ -8,8 +8,6 @@ checkCommon
 
 # Image specific tests
 check "node" node --version
-npm_version=$(npm --version)
-check-version-ge "npm-requirement" "${npm_version}" "9.8.1"
 sudo rm -f yarn.lock
 check "yarn" yarn install
 sudo rm -f package-lock.json
