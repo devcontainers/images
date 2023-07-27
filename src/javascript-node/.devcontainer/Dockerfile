@@ -8,9 +8,6 @@ ARG NPM_GLOBAL=/usr/local/share/npm-global
 # Add NPM global to PATH.
 ENV PATH=${NPM_GLOBAL}/bin:${PATH}
 
-# [Temporal] Bump npm version due to GHSA-c2qf-rxjj-qqgw
-RUN npm install -g npm@9.8.1
-
 RUN \
     # Configure global npm install location, use group to adapt to UID/GID changes
     if ! cat /etc/group | grep -e "^npm:" > /dev/null 2>&1; then groupadd -r npm; fi \
@@ -22,8 +19,11 @@ RUN \
     && chmod g+s ${NPM_GLOBAL} \
     && npm config -g set prefix ${NPM_GLOBAL} \
     && su ${USERNAME} -c "npm config -g set prefix ${NPM_GLOBAL}" \
-    # Install eslint
-    && su ${USERNAME} -c "umask 0002 && npm install -g eslint" \
+    && su ${USERNAME} -c "umask 0002 && npm install -g \
+        # [Temporal] Bump npm version due to GHSA-c2qf-rxjj-qqgw
+        npm@9.8.1 \
+        # Install eslint
+        eslint" \
     && npm cache clean --force > /dev/null 2>&1
 
 # [Optional] Uncomment this section to install additional OS packages.
