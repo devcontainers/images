@@ -177,6 +177,6 @@ checkCondaPackageVersion()
 {
     PACKAGE=$1
     REQUIRED_VERSION=$2
-    current_version=$(conda list "${PACKAGE}" | grep -w "${PACKAGE}" | awk '{print $2}')
+    current_version=$(conda list "${PACKAGE}" | grep -E "^${PACKAGE}\s" | awk '{print $2}')
     check-version-ge "conda-${PACKAGE}-requirement" "${current_version}" "${REQUIRED_VERSION}"
 }
