@@ -9,7 +9,7 @@ ARG NPM_GLOBAL=/usr/local/share/npm-global
 ENV PATH=${NPM_GLOBAL}/bin:${PATH}
 
 # [Temporal] Bump npm version due to GHSA-c2qf-rxjj-qqgw
-RUN npm install -g npm@9.8.1
+RUN npm install -g npm@9.8.0
 
 RUN \
     # Configure global npm install location, use group to adapt to UID/GID changes
