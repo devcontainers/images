@@ -26,6 +26,7 @@ checkCondaPackageVersion "cryptography" "41.0.0"
 checkCondaPackageVersion "pyopenssl" "23.2.0"
 checkCondaPackageVersion "setuptools" "65.5.1"
 checkCondaPackageVersion "wheel" "0.38.1"
+checkCondaPackageVersion "requests" "2.31.0"
 
 check "conda-update-conda" bash -c "conda update -y conda"
 check "conda-install-tensorflow" bash -c "conda install -c conda-forge --yes tensorflow"
