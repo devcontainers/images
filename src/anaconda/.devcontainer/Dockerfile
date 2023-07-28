@@ -1,4 +1,4 @@
-FROM continuumio/anaconda3 as upstream
+FROM continuumio/anaconda3:2023.03-1 as upstream
 
 # Verify OS version is expected one
 RUN . /etc/os-release && if [ "${VERSION_CODENAME}" != "bullseye" ]; then exit 1; fi
@@ -58,9 +58,7 @@ RUN python3 -m pip install \
     werkzeug \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32862
     nbconvert \
-    # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32681
-    requests \
-    # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28370
+   # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28370
     tornado
 
 # Copy environment.yml (if found) to a temp location so we can update the environment. Also
