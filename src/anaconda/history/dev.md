@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:88778f8be3171f5c03793edcfad06eef7ebd37d8649d733ca040f464e61eab88
+**Digest:** sha256:4c4cdfc8842b047dd8182616c57569616859bbf4b22d4f7c4db2d3d02b5ca62c
 
 **Tags:**
 ```
@@ -23,9 +23,9 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Python](https://www.python.org/) | 3.10.9 | /opt/conda |
-| [Jupyter Notebooks](https://jupyter.org/) | 6.5.2 | /opt/conda |
-| [Jupyter Lab](https://jupyter.org/) | 3.5.3 | /opt/conda |
+| [Python](https://www.python.org/) | 3.11.3 | /opt/conda |
+| [Jupyter Notebooks](https://jupyter.org/) | 6.5.4 | /opt/conda |
+| [Jupyter Lab](https://jupyter.org/) | 3.6.3 | /opt/conda |
 
 **Tools installed using git**
 
@@ -38,16 +38,15 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | Tool / package | Version |
 |----------------|---------|
 | joblib | 1.3.1 |
-| cookiecutter | 2.1.1 |
+| cookiecutter | 2.2.3 |
 | cryptography | 39.0.1 |
 | mistune | 3.0.1 |
-| numpy | 1.25.0 |
-| certifi | 2022.12.7 |
-| setuptools | 65.6.3 |
+| numpy | 1.25.1 |
+| certifi | 2023.5.7 |
+| setuptools | 67.8.0 |
 | future | 0.18.3 |
 | wheel | 0.38.4 |
-| nbconvert | 7.6.0 |
-| py | 1.11.0 |
+| nbconvert | 7.7.3 |
 | requests | 2.31.0 |
 | tornado | 6.3.2 |
 
@@ -56,7 +55,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | Tool | Version | Path |
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.41.0 | 
-| [conda](https://github.com/conda/conda) | 23.3.1 | /opt/conda |
+| [conda](https://github.com/conda/conda) | 23.5.2 | /opt/conda |
 
 **Additional linux tools and packages**
 
