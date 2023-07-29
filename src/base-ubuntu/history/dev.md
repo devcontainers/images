@@ -10,7 +10,7 @@
 
 ## Variant: jammy
 
-**Digest:** sha256:e89582ba7a0d2f3de442a57cad76f869a7bd31c4f704bbe47de253a2266e9586
+**Digest:** sha256:5a2a29d6167027931ada0783e85eee5cf211f728193108624c452594f9ad2e1d
 
 **Tags:**
 ```
@@ -32,7 +32,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe4b5659863c388786986d70fa6d1bb66b00afb6 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4188b22aea3356a02768505103e42a96d18547a3 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -47,7 +47,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 | apt-transport-https | 2.4.9 |
 | apt-utils | 2.4.9 |
 | ca-certificates | 20230311ubuntu0.22.04.1 |
-| curl | 7.81.0-1ubuntu1.10 |
+| curl | 7.81.0-1ubuntu1.13 |
 | dialog | 1.3-20211214-1 |
 | git | 1:2.34.1-1ubuntu1.9 |
 | gnupg2 | 2.2.27-3ubuntu2.1 |
@@ -70,7 +70,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 | nano | 6.2-1 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1ubuntu5 |
-| openssh-client | 1:8.9p1-3ubuntu0.1 |
+| openssh-client | 1:8.9p1-3ubuntu0.3 |
 | procps | 2:3.3.17-6ubuntu2 |
 | psmisc | 23.4-2build3 |
 | rsync | 3.2.7-0ubuntu0.22.04.2 |
@@ -85,7 +85,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 ## Variant: focal
 
-**Digest:** sha256:017783346758505223d1218796df2ab59db925cac0d810edaa25080c5ce3f211
+**Digest:** sha256:cac95ca910aeacc938fbcabd69079101ccdfccdcb6cfb0be2d4e5a5b4e150e19
 
 **Tags:**
 ```
@@ -106,7 +106,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe4b5659863c388786986d70fa6d1bb66b00afb6 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4188b22aea3356a02768505103e42a96d18547a3 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -121,7 +121,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 | apt-transport-https | 2.0.9 |
 | apt-utils | 2.0.9 |
 | ca-certificates | 20230311ubuntu0.20.04.1 |
-| curl | 7.68.0-1ubuntu2.18 |
+| curl | 7.68.0-1ubuntu2.19 |
 | dialog | 1.3-20190808-1 |
 | git | 1:2.25.1-1ubuntu3.11 |
 | gnupg2 | 2.2.19-3ubuntu2.2 |
@@ -146,7 +146,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 | nano | 4.8-1ubuntu1 |
 | ncdu | 1.14.1-1 |
 | net-tools | 1.60+git20180626.aebd88e-1ubuntu1 |
-| openssh-client | 1:8.2p1-4ubuntu0.7 |
+| openssh-client | 1:8.2p1-4ubuntu0.8 |
 | procps | 2:3.3.16-1ubuntu2.3 |
 | psmisc | 23.3-1 |
 | rsync | 3.1.3-8ubuntu0.5 |

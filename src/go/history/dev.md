@@ -14,7 +14,7 @@
 
 ## Variant: 1.20-bookworm
 
-**Digest:** sha256:66daf3dd3a4f40e678bd84e434beaca0d76dc2aceb3cb288b05a5c6243bf2d4a
+**Digest:** sha256:a70c18244cc615a6b3057f9fc48c9132aa137d317fe0431e88211ca1dc445ea4
 
 **Tags:**
 ```
@@ -37,13 +37,13 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | 1.20.5 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.20.6 | /usr/local/go |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe4b5659863c388786986d70fa6d1bb66b00afb6 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4188b22aea3356a02768505103e42a96d18547a3 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Go tools and modules**
@@ -72,7 +72,7 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
 | ca-certificates | 20230311 |
-| curl | 7.88.1-10 |
+| curl | 7.88.1-10+deb12u1 |
 | dialog | 1.3-20230209-1 |
 | g++ | 4:12.2.0-3 |
 | gcc | 4:12.2.0-3 |
@@ -82,14 +82,14 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 | iproute2 | 6.1.0-3 |
 | jq | 1.6-2.1 |
 | less | 590-2 |
-| libc6 | 2.36-9 |
-| libc6-dev | 2.36-9 |
+| libc6 | 2.36-9+deb12u1 |
+| libc6-dev | 2.36-9+deb12u1 |
 | libgssapi-krb5-2 | 1.20.1-2 |
 | libicu72 | 72.1-3 |
 | libkrb5-3 | 1.20.1-2 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14 |
-| locales | 2.36-9 |
+| locales | 2.36-9+deb12u1 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | make | 4.3-4.1 |
@@ -105,7 +105,7 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 | psmisc | 23.6-1 |
 | rsync | 3.2.7-1 |
 | strace | 6.1-0.1 |
-| sudo | 1.9.13p3-1 |
+| sudo | 1.9.13p3-1+deb12u1 |
 | unzip | 6.0-28 |
 | vim-tiny | 2:9.0.1378-2 |
 | wget | 1.21.3-1+b2 |
@@ -116,7 +116,7 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 
 ## Variant: 1.20-bullseye
 
-**Digest:** sha256:6d9ddabc5f0e877a270e2126dee5e2c0c8f2f229aec03fb76877ee0198f23ee7
+**Digest:** sha256:a2d00d0666ea45ec3c6b17e91bfe8420c66b000225990600952d54a7e34a0838
 
 **Tags:**
 ```
@@ -137,13 +137,13 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | 1.20.5 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.20.6 | /usr/local/go |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe4b5659863c388786986d70fa6d1bb66b00afb6 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4188b22aea3356a02768505103e42a96d18547a3 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Go tools and modules**
@@ -217,7 +217,7 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 
 ## Variant: 1.20-buster
 
-**Digest:** sha256:8c111c48ee316cbeeeac0fe9a67fece0952cfcf893335b0d7bb5a6e046083ec2
+**Digest:** sha256:3ddf93cb4890e609a1be37397d258b6b90bedb1e90c78888a45fd97d15cf9893
 
 **Tags:**
 ```
@@ -244,7 +244,7 @@ mcr.microsoft.com/devcontainers/go:dev-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe4b5659863c388786986d70fa6d1bb66b00afb6 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4188b22aea3356a02768505103e42a96d18547a3 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Go tools and modules**
@@ -319,7 +319,7 @@ mcr.microsoft.com/devcontainers/go:dev-buster
 
 ## Variant: 1.19-bookworm
 
-**Digest:** sha256:d9a73cab6c1c5964e1428f000d9dcc6121524144b2c76eedafbf243328926a18
+**Digest:** sha256:3ab367484e5b8bc5c094c514a566d611201376434366ed556fa47fed0a95c33f
 
 **Tags:**
 ```
@@ -339,13 +339,13 @@ mcr.microsoft.com/devcontainers/go:dev-1.19
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | 1.19.10 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.19.11 | /usr/local/go |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe4b5659863c388786986d70fa6d1bb66b00afb6 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4188b22aea3356a02768505103e42a96d18547a3 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Go tools and modules**
@@ -374,7 +374,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.19
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
 | ca-certificates | 20230311 |
-| curl | 7.88.1-10 |
+| curl | 7.88.1-10+deb12u1 |
 | dialog | 1.3-20230209-1 |
 | g++ | 4:12.2.0-3 |
 | gcc | 4:12.2.0-3 |
@@ -384,14 +384,14 @@ mcr.microsoft.com/devcontainers/go:dev-1.19
 | iproute2 | 6.1.0-3 |
 | jq | 1.6-2.1 |
 | less | 590-2 |
-| libc6 | 2.36-9 |
-| libc6-dev | 2.36-9 |
+| libc6 | 2.36-9+deb12u1 |
+| libc6-dev | 2.36-9+deb12u1 |
 | libgssapi-krb5-2 | 1.20.1-2 |
 | libicu72 | 72.1-3 |
 | libkrb5-3 | 1.20.1-2 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14 |
-| locales | 2.36-9 |
+| locales | 2.36-9+deb12u1 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | make | 4.3-4.1 |
@@ -407,7 +407,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.19
 | psmisc | 23.6-1 |
 | rsync | 3.2.7-1 |
 | strace | 6.1-0.1 |
-| sudo | 1.9.13p3-1 |
+| sudo | 1.9.13p3-1+deb12u1 |
 | unzip | 6.0-28 |
 | vim-tiny | 2:9.0.1378-2 |
 | wget | 1.21.3-1+b2 |
@@ -418,7 +418,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.19
 
 ## Variant: 1.19-bullseye
 
-**Digest:** sha256:dc8fee3652eec9a1aa8fef53581c05c779c07792c2491e5aafe9322b415bfe1e
+**Digest:** sha256:ad62f8a10be1e3f9431e2f131932bdeebb46ceba7a9d0805745a6a9b1e079487
 
 **Tags:**
 ```
@@ -437,13 +437,13 @@ mcr.microsoft.com/devcontainers/go:dev-1.19-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | 1.19.10 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.19.11 | /usr/local/go |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe4b5659863c388786986d70fa6d1bb66b00afb6 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4188b22aea3356a02768505103e42a96d18547a3 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Go tools and modules**
@@ -517,7 +517,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.19-bullseye
 
 ## Variant: 1.19-buster
 
-**Digest:** sha256:50e8886bbd03e60f7348d94ec3b2a0b728cd58626eaefbd994422526a8e2ee34
+**Digest:** sha256:f97f43394a140860ca1da24c9b434777ffd164147b8e2c5dc64c2472f67d33bf
 
 **Tags:**
 ```
@@ -542,7 +542,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.19-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe4b5659863c388786986d70fa6d1bb66b00afb6 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4188b22aea3356a02768505103e42a96d18547a3 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Go tools and modules**

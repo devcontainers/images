@@ -17,7 +17,7 @@
 
 ## Variant: 20-bookworm
 
-**Digest:** sha256:938d74331c40f9fac511a6c0f1effd5f3ce36e3be5229455ca3bce9679dbecce
+**Digest:** sha256:6e88dd9a29590d6c0fa71f2e1fe546dfbb1075aa1adb792e06d857ea80ffa4a3
 
 **Tags:**
 ```
@@ -38,20 +38,20 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 20.3.1 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 20.5.0 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe4b5659863c388786986d70fa6d1bb66b00afb6 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4188b22aea3356a02768505103e42a96d18547a3 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.44.0 |
+| eslint | 8.46.0 |
 
 **Other tools and utilities**
 
@@ -66,7 +66,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bookworm
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
 | ca-certificates | 20230311 |
-| curl | 7.88.1-10 |
+| curl | 7.88.1-10+deb12u1 |
 | dialog | 1.3-20230209-1 |
 | git | 1:2.39.2-1.1 |
 | gnupg2 | 2.2.40-1.1 |
@@ -74,13 +74,13 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bookworm
 | iproute2 | 6.1.0-3 |
 | jq | 1.6-2.1 |
 | less | 590-2 |
-| libc6 | 2.36-9 |
+| libc6 | 2.36-9+deb12u1 |
 | libgssapi-krb5-2 | 1.20.1-2 |
 | libicu72 | 72.1-3 |
 | libkrb5-3 | 1.20.1-2 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14 |
-| locales | 2.36-9 |
+| locales | 2.36-9+deb12u1 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
@@ -94,7 +94,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bookworm
 | psmisc | 23.6-1 |
 | rsync | 3.2.7-1 |
 | strace | 6.1-0.1 |
-| sudo | 1.9.13p3-1 |
+| sudo | 1.9.13p3-1+deb12u1 |
 | unzip | 6.0-28 |
 | vim-tiny | 2:9.0.1378-2 |
 | wget | 1.21.3-1+b2 |
@@ -104,7 +104,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bookworm
 
 ## Variant: 18-bookworm
 
-**Digest:** sha256:f7dbd6b42a64e18ce9afa6ea4111731ee204d63a1508ba4eb4de024f8023bfd0
+**Digest:** sha256:b34fced9dec2df1d18ff642f14a0d205c241247dc1e70e61dc9497d22cfff2ae
 
 **Tags:**
 ```
@@ -124,20 +124,20 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 18.16.1 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 18.17.0 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe4b5659863c388786986d70fa6d1bb66b00afb6 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4188b22aea3356a02768505103e42a96d18547a3 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.44.0 |
+| eslint | 8.46.0 |
 
 **Other tools and utilities**
 
@@ -152,7 +152,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
 | ca-certificates | 20230311 |
-| curl | 7.88.1-10 |
+| curl | 7.88.1-10+deb12u1 |
 | dialog | 1.3-20230209-1 |
 | git | 1:2.39.2-1.1 |
 | gnupg2 | 2.2.40-1.1 |
@@ -160,13 +160,13 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18
 | iproute2 | 6.1.0-3 |
 | jq | 1.6-2.1 |
 | less | 590-2 |
-| libc6 | 2.36-9 |
+| libc6 | 2.36-9+deb12u1 |
 | libgssapi-krb5-2 | 1.20.1-2 |
 | libicu72 | 72.1-3 |
 | libkrb5-3 | 1.20.1-2 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14 |
-| locales | 2.36-9 |
+| locales | 2.36-9+deb12u1 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
@@ -180,7 +180,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18
 | psmisc | 23.6-1 |
 | rsync | 3.2.7-1 |
 | strace | 6.1-0.1 |
-| sudo | 1.9.13p3-1 |
+| sudo | 1.9.13p3-1+deb12u1 |
 | unzip | 6.0-28 |
 | vim-tiny | 2:9.0.1378-2 |
 | wget | 1.21.3-1+b2 |
@@ -190,7 +190,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18
 
 ## Variant: 16-bookworm
 
-**Digest:** sha256:1bdea84df1b2ddf2818c0c34de0e068ec92ff7298432036a1fa81b6b39906811
+**Digest:** sha256:ac4bae2027d01c5d845f73aa9769aacf6e9579f1d5223ad8001c66a1b3225045
 
 **Tags:**
 ```
@@ -216,14 +216,14 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe4b5659863c388786986d70fa6d1bb66b00afb6 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4188b22aea3356a02768505103e42a96d18547a3 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.44.0 |
+| eslint | 8.46.0 |
 
 **Other tools and utilities**
 
@@ -238,7 +238,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
 | ca-certificates | 20230311 |
-| curl | 7.88.1-10 |
+| curl | 7.88.1-10+deb12u1 |
 | dialog | 1.3-20230209-1 |
 | git | 1:2.39.2-1.1 |
 | gnupg2 | 2.2.40-1.1 |
@@ -246,13 +246,13 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16
 | iproute2 | 6.1.0-3 |
 | jq | 1.6-2.1 |
 | less | 590-2 |
-| libc6 | 2.36-9 |
+| libc6 | 2.36-9+deb12u1 |
 | libgssapi-krb5-2 | 1.20.1-2 |
 | libicu72 | 72.1-3 |
 | libkrb5-3 | 1.20.1-2 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14 |
-| locales | 2.36-9 |
+| locales | 2.36-9+deb12u1 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
@@ -266,7 +266,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16
 | psmisc | 23.6-1 |
 | rsync | 3.2.7-1 |
 | strace | 6.1-0.1 |
-| sudo | 1.9.13p3-1 |
+| sudo | 1.9.13p3-1+deb12u1 |
 | unzip | 6.0-28 |
 | vim-tiny | 2:9.0.1378-2 |
 | wget | 1.21.3-1+b2 |
@@ -276,7 +276,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16
 
 ## Variant: 20-bullseye
 
-**Digest:** sha256:fcb11497bae6447b7ece3bf1b6e2ce44b6b607b41981000817373ae33f69ad5b
+**Digest:** sha256:4d233581d044912c2bcdc418f8ae112c6d89a2f6171ff7774fafdeae17b1d460
 
 **Tags:**
 ```
@@ -296,20 +296,20 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 20.3.1 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 20.5.0 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe4b5659863c388786986d70fa6d1bb66b00afb6 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4188b22aea3356a02768505103e42a96d18547a3 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.44.0 |
+| eslint | 8.46.0 |
 
 **Other tools and utilities**
 
@@ -363,7 +363,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 
 ## Variant: 18-bullseye
 
-**Digest:** sha256:7bc75975d275aec940b340757a4a78152e5e9c1efa34e4bb59cbc3a207ba1967
+**Digest:** sha256:d0281854d910ebc94626bb0a93d68ca5cc2358bf9a7aa90642ecee5a28386b0e
 
 **Tags:**
 ```
@@ -382,20 +382,20 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 18.16.1 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 18.17.0 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe4b5659863c388786986d70fa6d1bb66b00afb6 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4188b22aea3356a02768505103e42a96d18547a3 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.44.0 |
+| eslint | 8.46.0 |
 
 **Other tools and utilities**
 
@@ -449,7 +449,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18-bullseye
 
 ## Variant: 16-bullseye
 
-**Digest:** sha256:716c3a4b22354c9ef20b0ce0b7f8ea5bfc3697410e67e9f8daa636845ed7850f
+**Digest:** sha256:5fe88e8f61b7dfdeef885434292b3007d1b54f12fb100cfcde568da756bdc8a8
 
 **Tags:**
 ```
@@ -474,14 +474,14 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe4b5659863c388786986d70fa6d1bb66b00afb6 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4188b22aea3356a02768505103e42a96d18547a3 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.44.0 |
+| eslint | 8.46.0 |
 
 **Other tools and utilities**
 
@@ -535,7 +535,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16-bullseye
 
 ## Variant: 20-buster
 
-**Digest:** sha256:938dc3024ae0e1b8531a1e55e3fb74473caed4207db208e575261778f182cea2
+**Digest:** sha256:340c94ad6c28b20f3c0d5486d2aba8d2f3c37814c669ed783c6d0738c72a8e56
 
 **Tags:**
 ```
@@ -555,20 +555,20 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 20.3.1 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 20.5.0 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe4b5659863c388786986d70fa6d1bb66b00afb6 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4188b22aea3356a02768505103e42a96d18547a3 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.44.0 |
+| eslint | 8.46.0 |
 
 **Other tools and utilities**
 
@@ -623,7 +623,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-buster
 
 ## Variant: 18-buster
 
-**Digest:** sha256:01395bd3fbc2568576bb8968ffdf6c137170e60c573f5a500c50bc69615fc77d
+**Digest:** sha256:7951905605767578e687880fa5e833054cd4da507749ac310c60e2590ec7e0fa
 
 **Tags:**
 ```
@@ -642,20 +642,20 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 18.16.1 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 18.17.0 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe4b5659863c388786986d70fa6d1bb66b00afb6 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4188b22aea3356a02768505103e42a96d18547a3 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.44.0 |
+| eslint | 8.46.0 |
 
 **Other tools and utilities**
 
@@ -710,7 +710,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18-buster
 
 ## Variant: 16-buster
 
-**Digest:** sha256:eef4e0d98fc7401d77d7d27fd15d1e2ef62a9a1303e7ca93c23169d90b243702
+**Digest:** sha256:d4fbb91ce8ab4ff19b8d82e53a70f5f9c16ea7f120ac59c6a81b6bdac4c4f64b
 
 **Tags:**
 ```
@@ -735,14 +735,14 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe4b5659863c388786986d70fa6d1bb66b00afb6 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4188b22aea3356a02768505103e42a96d18547a3 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.44.0 |
+| eslint | 8.46.0 |
 
 **Other tools and utilities**
 

@@ -11,7 +11,7 @@
 
 ## Variant: bookworm
 
-**Digest:** sha256:194e0f5191790b42ef2bba51cff56af34ebd315080ebdbf106d561b308a354b8
+**Digest:** sha256:6b4cefc31435d65c9952490338da59d450b1842f3d23dcb477e2ff0fb65b6be7
 
 **Tags:**
 ```
@@ -32,13 +32,13 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 1.8.0_372<br />bash: line 1: /usr/local/openjdk-*/bin/java: No such file or directory | /usr/local/sdkman/candidates/java/current<br />/usr/local |
+| [Java](https://adoptopenjdk.net/) | 1.8.0_382<br />bash: line 1: /usr/local/openjdk-*/bin/java: No such file or directory | /usr/local/sdkman/candidates/java/current<br />/usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe4b5659863c388786986d70fa6d1bb66b00afb6 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4188b22aea3356a02768505103e42a96d18547a3 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -54,7 +54,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bookworm
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
 | ca-certificates | 20230311 |
-| curl | 7.88.1-10 |
+| curl | 7.88.1-10+deb12u1 |
 | dialog | 1.3-20230209-1 |
 | git | 1:2.39.2-1.1 |
 | gnupg2 | 2.2.40-1.1 |
@@ -62,13 +62,13 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bookworm
 | iproute2 | 6.1.0-3 |
 | jq | 1.6-2.1 |
 | less | 590-2 |
-| libc6 | 2.36-9 |
+| libc6 | 2.36-9+deb12u1 |
 | libgssapi-krb5-2 | 1.20.1-2 |
 | libicu72 | 72.1-3 |
 | libkrb5-3 | 1.20.1-2 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14 |
-| locales | 2.36-9 |
+| locales | 2.36-9+deb12u1 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
@@ -82,7 +82,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bookworm
 | psmisc | 23.6-1 |
 | rsync | 3.2.7-1 |
 | strace | 6.1-0.1 |
-| sudo | 1.9.13p3-1 |
+| sudo | 1.9.13p3-1+deb12u1 |
 | unzip | 6.0-28 |
 | vim-tiny | 2:9.0.1378-2 |
 | wget | 1.21.3-1+b2 |
@@ -93,7 +93,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bookworm
 
 ## Variant: bullseye
 
-**Digest:** sha256:aaf4daa234dc384607052f1184fcfae5fb1a0d3c97f5c2e467ae5aaca20411fa
+**Digest:** sha256:41323b16bbdb97dc46a4d9f9fdeeb2680abc9afc1e90760812e392f98cc32a3b
 
 **Tags:**
 ```
@@ -113,13 +113,13 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 1.8.0_372<br />bash: line 1: /usr/local/openjdk-*/bin/java: No such file or directory | /usr/local/sdkman/candidates/java/current<br />/usr/local |
+| [Java](https://adoptopenjdk.net/) | 1.8.0_382<br />bash: line 1: /usr/local/openjdk-*/bin/java: No such file or directory | /usr/local/sdkman/candidates/java/current<br />/usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe4b5659863c388786986d70fa6d1bb66b00afb6 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4188b22aea3356a02768505103e42a96d18547a3 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -175,7 +175,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bullseye
 
 ## Variant: buster
 
-**Digest:** sha256:1bc3c425b7c4cfa616414ecb2a8c7237312a00c81e3187c605d21d6c56a520c4
+**Digest:** sha256:f227a7aecb78fdef3d70801863ebfa1db4dbbfd48a31c06c16a83e917e23050a
 
 **Tags:**
 ```
@@ -195,13 +195,13 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 1.8.0_372<br />bash: /usr/local/openjdk-*/bin/java: No such file or directory | /usr/local/sdkman/candidates/java/current<br />/usr/local |
+| [Java](https://adoptopenjdk.net/) | 1.8.0_382<br />bash: /usr/local/openjdk-*/bin/java: No such file or directory | /usr/local/sdkman/candidates/java/current<br />/usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe4b5659863c388786986d70fa6d1bb66b00afb6 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4188b22aea3356a02768505103e42a96d18547a3 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Other tools and utilities**

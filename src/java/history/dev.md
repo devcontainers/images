@@ -14,7 +14,7 @@
 
 ## Variant: 17-bookworm
 
-**Digest:** sha256:27d3f03d67177a100eb674810fce9e1d83d161076473fed4becef94283d26e0d
+**Digest:** sha256:3edc7330a7d8fae227f9ad7537f15744839af4babf0b63757f4860c79f1d1cf1
 
 **Tags:**
 ```
@@ -36,13 +36,13 @@ mcr.microsoft.com/devcontainers/java:dev-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 17.0.7 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 17.0.8 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe4b5659863c388786986d70fa6d1bb66b00afb6 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4188b22aea3356a02768505103e42a96d18547a3 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -58,7 +58,7 @@ mcr.microsoft.com/devcontainers/java:dev-bookworm
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
 | ca-certificates | 20230311 |
-| curl | 7.88.1-10 |
+| curl | 7.88.1-10+deb12u1 |
 | dialog | 1.3-20230209-1 |
 | git | 1:2.39.2-1.1 |
 | gnupg2 | 2.2.40-1.1 |
@@ -66,13 +66,13 @@ mcr.microsoft.com/devcontainers/java:dev-bookworm
 | iproute2 | 6.1.0-3 |
 | jq | 1.6-2.1 |
 | less | 590-2 |
-| libc6 | 2.36-9 |
+| libc6 | 2.36-9+deb12u1 |
 | libgssapi-krb5-2 | 1.20.1-2 |
 | libicu72 | 72.1-3 |
 | libkrb5-3 | 1.20.1-2 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14 |
-| locales | 2.36-9 |
+| locales | 2.36-9+deb12u1 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
@@ -86,7 +86,7 @@ mcr.microsoft.com/devcontainers/java:dev-bookworm
 | psmisc | 23.6-1 |
 | rsync | 3.2.7-1 |
 | strace | 6.1-0.1 |
-| sudo | 1.9.13p3-1 |
+| sudo | 1.9.13p3-1+deb12u1 |
 | unzip | 6.0-28 |
 | vim-tiny | 2:9.0.1378-2 |
 | wget | 1.21.3-1+b2 |
@@ -97,7 +97,7 @@ mcr.microsoft.com/devcontainers/java:dev-bookworm
 
 ## Variant: 17-bullseye
 
-**Digest:** sha256:1474434de5fa26d149e38d6aadbe3067860e521c70ada921ea92453481f0a33c
+**Digest:** sha256:df657f3902dcd1a2d55d94c151ac823b078be4354b5a6f2799ea4f97a512a7bf
 
 **Tags:**
 ```
@@ -118,13 +118,13 @@ mcr.microsoft.com/devcontainers/java:dev-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 17.0.7 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 17.0.8 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe4b5659863c388786986d70fa6d1bb66b00afb6 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4188b22aea3356a02768505103e42a96d18547a3 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -180,7 +180,7 @@ mcr.microsoft.com/devcontainers/java:dev-bullseye
 
 ## Variant: 17-buster
 
-**Digest:** sha256:5a3c2f54ff7674ea07121716c1917e782fe9919185b717288731a9239e43d79f
+**Digest:** sha256:c8d466d028e0ea2d23537693929f2a28878de600e330893df93827e288f14bb9
 
 **Tags:**
 ```
@@ -199,13 +199,13 @@ mcr.microsoft.com/devcontainers/java:dev-17-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 17.0.7 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 17.0.8 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe4b5659863c388786986d70fa6d1bb66b00afb6 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4188b22aea3356a02768505103e42a96d18547a3 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -262,7 +262,7 @@ mcr.microsoft.com/devcontainers/java:dev-17-buster
 
 ## Variant: 11-bookworm
 
-**Digest:** sha256:fa777923d6aa58ad92e75f2ead7987d9e8c0adde822e3212f81b824e7e57aac0
+**Digest:** sha256:04bef1695d377d370c19271db791165c9d5e44fe75c88109135202ddba53c580
 
 **Tags:**
 ```
@@ -283,13 +283,13 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 11.0.19 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 11.0.20 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe4b5659863c388786986d70fa6d1bb66b00afb6 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4188b22aea3356a02768505103e42a96d18547a3 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -305,7 +305,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bookworm
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
 | ca-certificates | 20230311 |
-| curl | 7.88.1-10 |
+| curl | 7.88.1-10+deb12u1 |
 | dialog | 1.3-20230209-1 |
 | git | 1:2.39.2-1.1 |
 | gnupg2 | 2.2.40-1.1 |
@@ -313,13 +313,13 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bookworm
 | iproute2 | 6.1.0-3 |
 | jq | 1.6-2.1 |
 | less | 590-2 |
-| libc6 | 2.36-9 |
+| libc6 | 2.36-9+deb12u1 |
 | libgssapi-krb5-2 | 1.20.1-2 |
 | libicu72 | 72.1-3 |
 | libkrb5-3 | 1.20.1-2 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14 |
-| locales | 2.36-9 |
+| locales | 2.36-9+deb12u1 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
@@ -333,7 +333,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bookworm
 | psmisc | 23.6-1 |
 | rsync | 3.2.7-1 |
 | strace | 6.1-0.1 |
-| sudo | 1.9.13p3-1 |
+| sudo | 1.9.13p3-1+deb12u1 |
 | unzip | 6.0-28 |
 | vim-tiny | 2:9.0.1378-2 |
 | wget | 1.21.3-1+b2 |
@@ -344,7 +344,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bookworm
 
 ## Variant: 11-bullseye
 
-**Digest:** sha256:56e7a6bd39072c24c8b553c86cb8cf3e8381b2dd215fa220ebe67b67cbf3fd60
+**Digest:** sha256:8fbc37e8c824fec40579acf1d37e6d10280fdd299e9c5a71ee1b126257893ba0
 
 **Tags:**
 ```
@@ -364,13 +364,13 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 11.0.19 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 11.0.20 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe4b5659863c388786986d70fa6d1bb66b00afb6 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4188b22aea3356a02768505103e42a96d18547a3 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -426,7 +426,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bullseye
 
 ## Variant: 11-buster
 
-**Digest:** sha256:a5e56f9ee47708f31e73cb515f6084db2c7d423d4e387f8f48f2ec084b5f8929
+**Digest:** sha256:82cc029dd3c9b3aef4c9cb157d1b4443b2f7a52cb11ceff46f7a6d03fc03aad5
 
 **Tags:**
 ```
@@ -446,13 +446,13 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 11.0.19 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 11.0.20 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe4b5659863c388786986d70fa6d1bb66b00afb6 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4188b22aea3356a02768505103e42a96d18547a3 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 
 **Other tools and utilities**
