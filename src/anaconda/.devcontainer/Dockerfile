@@ -1,4 +1,4 @@
-FROM continuumio/anaconda3 as upstream
+FROM continuumio/anaconda3:2023.03-1 as upstream
 
 # Verify OS version is expected one
 RUN . /etc/os-release && if [ "${VERSION_CODENAME}" != "bullseye" ]; then exit 1; fi
@@ -58,9 +58,7 @@ RUN python3 -m pip install \
     werkzeug \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32862
     nbconvert \
-    # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32681
-    requests \
-    # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28370
+   # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28370
     tornado
 
 # Copy environment.yml (if found) to a temp location so we can update the environment. Also
@@ -73,6 +71,15 @@ RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then umask 0002 && /opt/conda/bi
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
+
+# Temporary: Upgrade python packages due to mentioned CVEs
+# They are installed by the base image (continuumio/anaconda3) which does not have the patch.
+RUN conda install \ 
+    # https://github.com/advisories/GHSA-5cpq-8wj7-hf2v
+    pyopenssl=23.2.0 \ 
+    cryptography=41.0.2 \
+    # https://github.com/advisories/GHSA-j8r2-6x86-q33q
+    requests=2.31.0
 
 # Create conda group, update conda directory permissions, 
 # add user to conda group
