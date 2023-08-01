@@ -38,7 +38,10 @@
 			"pyOpenssl",
 			"werkzeug",
 			"requests",
-			"tornado"
+			"tornado",
+			"pygments",
+			"torch",
+			"transformers"
 		],
 		"other": {
 			"git": {},
