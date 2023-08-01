@@ -58,8 +58,12 @@ RUN python3 -m pip install \
     werkzeug \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32862
     nbconvert \
-   # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28370
-    tornado
+    # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28370
+    tornado \
+    # https://github.com/advisories/GHSA-47fc-vmwq-366v
+    torch==1.13.1 \
+    # https://github.com/advisories/GHSA-282v-666c-3fvg
+    transformers==4.30.0
 
 # Copy environment.yml (if found) to a temp location so we can update the environment. Also
 # copy "noop.txt" so the COPY instruction does not fail if no environment.yml exists.
@@ -79,7 +83,9 @@ RUN conda install \
     pyopenssl=23.2.0 \ 
     cryptography=41.0.2 \
     # https://github.com/advisories/GHSA-j8r2-6x86-q33q
-    requests=2.31.0
+    requests=2.31.0 \
+    # https://github.com/advisories/GHSA-mrwq-x4v8-fh7p
+    pygments=2.15.0
 
 # Create conda group, update conda directory permissions, 
 # add user to conda group
