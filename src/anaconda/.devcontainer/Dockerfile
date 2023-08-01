@@ -43,13 +43,22 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && echo "conda activate base" >> ~/.bashrc \
     && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts/add-notice.sh
 
+# Copy environment.yml (if found) to a temp location so we can update the environment. Also
+# copy "noop.txt" so the COPY instruction does not fail if no environment.yml exists.
+# COPY environment.yml* .devcontainer/noop.txt /tmp/conda-tmp/
+COPY environment.yml* noop.txt /tmp/conda-tmp/
+RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then umask 0002 && /opt/conda/bin/conda env update -n base -f /tmp/conda-tmp/environment.yml; fi \
+    && rm -rf /tmp/conda-tmp
+
 # We need to execute pip install / conda update commands under 
 # container user since pip doesn't preserve directory permissions
 USER ${USERNAME} 
 
 # Temporary: Upgrade python packages due to mentioned CVEs
 # They are installed by the base image (continuumio/anaconda3) which does not have the patch.
-RUN python3 -m pip install \
+RUN \
+    # Install packages via pip
+    python3 -m pip install \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21797
     --upgrade joblib \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24065
@@ -67,22 +76,9 @@ RUN python3 -m pip install \
     # https://github.com/advisories/GHSA-47fc-vmwq-366v
     torch==1.13.1 \
     # https://github.com/advisories/GHSA-282v-666c-3fvg
-    transformers==4.30.0
-
-# Copy environment.yml (if found) to a temp location so we can update the environment. Also
-# copy "noop.txt" so the COPY instruction does not fail if no environment.yml exists.
-# COPY environment.yml* .devcontainer/noop.txt /tmp/conda-tmp/
-COPY environment.yml* noop.txt /tmp/conda-tmp/
-RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then umask 0002 && /opt/conda/bin/conda env update -n base -f /tmp/conda-tmp/environment.yml; fi \
-    && rm -rf /tmp/conda-tmp
-
-# [Optional] Uncomment this section to install additional OS packages.
-# RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-#     && apt-get -y install --no-install-recommends <your-package-list-here>
-
-# Temporary: Upgrade python packages due to mentioned CVEs
-# They are installed by the base image (continuumio/anaconda3) which does not have the patch.
-RUN conda install \ 
+    transformers==4.30.0 \ 
+    # Install packages via conda
+    && conda install \ 
     # https://github.com/advisories/GHSA-5cpq-8wj7-hf2v
     pyopenssl=23.2.0 \ 
     cryptography=41.0.2 \
@@ -93,3 +89,7 @@ RUN conda install \
 
 # Switch back to the root user for backward compatibility
 USER root
+
+# [Optional] Uncomment this section to install additional OS packages.
+# RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+#     && apt-get -y install --no-install-recommends <your-package-list-here>
