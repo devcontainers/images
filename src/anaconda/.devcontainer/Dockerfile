@@ -43,10 +43,6 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && echo "conda activate base" >> ~/.bashrc \
     && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts/add-notice.sh
 
-# We need to execute pip install / conda update commands under 
-# container user since pip doesn't preserve directory permissions
-USER ${USERNAME} 
-
 # Temporary: Upgrade python packages due to mentioned CVEs
 # They are installed by the base image (continuumio/anaconda3) which does not have the patch.
 RUN python3 -m pip install \
@@ -91,5 +87,12 @@ RUN conda install \
     # https://github.com/advisories/GHSA-mrwq-x4v8-fh7p
     pygments=2.15.1
 
-# Switch back to the root user for backward compatibility
-USER root
+# Create conda group, update conda directory permissions, 
+# add user to conda group
+# Note: We need to execute these commands after pip install / conda update 
+# since pip doesn't preserve directory permissions
+RUN groupadd -r conda --gid 900 \
+    && chown -R :conda /opt/conda \
+    && chmod -R g+w /opt/conda \
+    && find /opt -type d | xargs -n 1 chmod g+s \
+    && usermod -aG conda ${USERNAME}
