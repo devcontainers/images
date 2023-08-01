@@ -52,7 +52,7 @@ check-version-ge "tornado-requirement" "${tornado_version}" "6.3.2"
 checkCondaPackageVersion "pyopenssl" "23.2.0"
 checkCondaPackageVersion "cryptography" "41.0.2"
 checkCondaPackageVersion "requests" "2.31.0"
-checkCondaPackageVersion "pygments" "2.15.0"
+checkCondaPackageVersion "pygments" "2.15.1"
 
 check "conda-update-conda" bash -c "conda update -y conda"
 check "conda-install-tensorflow" bash -c "conda install -c conda-forge --yes tensorflow"

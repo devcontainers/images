@@ -85,7 +85,7 @@ RUN conda install \
     # https://github.com/advisories/GHSA-j8r2-6x86-q33q
     requests=2.31.0 \
     # https://github.com/advisories/GHSA-mrwq-x4v8-fh7p
-    pygments=2.15.0
+    pygments=2.15.1
 
 # Create conda group, update conda directory permissions, 
 # add user to conda group
