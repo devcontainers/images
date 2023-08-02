@@ -30,7 +30,6 @@ RUN conda install \
 
 # Reset and copy updated files with updated privs to keep image size down
 FROM mcr.microsoft.com/devcontainers/base:0-bullseye
-COPY --from=upstream /opt /opt/
 
 ARG USERNAME=vscode
 
@@ -39,7 +38,7 @@ RUN groupadd -r conda --gid 900 \
     && usermod -aG conda ${USERNAME}
 
 # Copy opt folder, set ownership and group permissions
-COPY --chown=${USERNAME}:conda --chmod=g+s --from=upstream /opt /opt/
+COPY --chown=:conda --chmod=070 --from=upstream /opt /opt/
 
 USER root
 
