@@ -14,7 +14,7 @@
 
 ## Variant: 1.20-bookworm
 
-**Digest:** sha256:65e35e1c38682d940188c633a6c1f76c5797a8afb75031c466e139febdbf3fa8
+**Digest:** sha256:5f1234c8e607ee897d5a5b72aa8cf57b44976e39f956394fe62856b31ac4efae
 
 **Tags:**
 ```
@@ -37,7 +37,7 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | 1.20.6 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.20.7 | /usr/local/go |
 
 **Tools installed using git**
 
@@ -50,7 +50,7 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 
 | Tool / module | Version |
 |---------------|---------|
-| golang.org/x/tools/gopls | 0.12.4 |
+| golang.org/x/tools/gopls | 0.13.1 |
 | honnef.co/go/tools | 0.4.2 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
 | github.com/mgechev/revive | 1.3.2 |
@@ -116,7 +116,7 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 
 ## Variant: 1.20-bullseye
 
-**Digest:** sha256:c0958e6fd7b4afc78ad5fee29fa4269a0164d59be6f6df3fa2794258f1d0ba24
+**Digest:** sha256:f9291d00e689dc4226e66f891e7cc97c26966c64421aa452313190650ab97e20
 
 **Tags:**
 ```
@@ -137,7 +137,7 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | 1.20.6 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.20.7 | /usr/local/go |
 
 **Tools installed using git**
 
@@ -150,7 +150,7 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 
 | Tool / module | Version |
 |---------------|---------|
-| golang.org/x/tools/gopls | 0.12.4 |
+| golang.org/x/tools/gopls | 0.13.1 |
 | honnef.co/go/tools | 0.4.2 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
 | github.com/mgechev/revive | 1.3.2 |
@@ -217,7 +217,7 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 
 ## Variant: 1.20-buster
 
-**Digest:** sha256:cfb36c47506516d7fc51df2972037e4e739a9d828b9befd6f18da55ba1e62aec
+**Digest:** sha256:e6e0e86788e863d2a97de81cd8e626ab0ee3a3c193e16ecba21ef64d2504ce2f
 
 **Tags:**
 ```
@@ -251,7 +251,7 @@ mcr.microsoft.com/devcontainers/go:dev-buster
 
 | Tool / module | Version |
 |---------------|---------|
-| golang.org/x/tools/gopls | 0.12.4 |
+| golang.org/x/tools/gopls | 0.13.1 |
 | honnef.co/go/tools | 0.4.2 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
 | github.com/mgechev/revive | 1.3.2 |
@@ -319,7 +319,7 @@ mcr.microsoft.com/devcontainers/go:dev-buster
 
 ## Variant: 1.19-bookworm
 
-**Digest:** sha256:6594fc5d2f636bd70e108ee1f8496d7513283eb04f5b74bdaeaab9a6bacd3ebd
+**Digest:** sha256:332c254b88c0880b6a17123923e246bddbf963da20cfecd2244fdf0c19b432e8
 
 **Tags:**
 ```
@@ -339,7 +339,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.19
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | 1.19.11 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.19.12 | /usr/local/go |
 
 **Tools installed using git**
 
@@ -352,7 +352,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.19
 
 | Tool / module | Version |
 |---------------|---------|
-| golang.org/x/tools/gopls | 0.12.4 |
+| golang.org/x/tools/gopls | 0.13.1 |
 | honnef.co/go/tools | 0.4.2 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
 | github.com/mgechev/revive | 1.3.2 |
@@ -418,7 +418,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.19
 
 ## Variant: 1.19-bullseye
 
-**Digest:** sha256:a74843143d3b024ce6b353a057b4929e239c282b433f38c94b07214211c26401
+**Digest:** sha256:19984455f8f5ea842dbc49b75c15ed445183b1defdf13708c93c2c286978e4f0
 
 **Tags:**
 ```
@@ -437,7 +437,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.19-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | 1.19.11 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.19.12 | /usr/local/go |
 
 **Tools installed using git**
 
@@ -450,7 +450,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.19-bullseye
 
 | Tool / module | Version |
 |---------------|---------|
-| golang.org/x/tools/gopls | 0.12.4 |
+| golang.org/x/tools/gopls | 0.13.1 |
 | honnef.co/go/tools | 0.4.2 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
 | github.com/mgechev/revive | 1.3.2 |
@@ -517,7 +517,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.19-bullseye
 
 ## Variant: 1.19-buster
 
-**Digest:** sha256:11ed23012596de75bcb681f8feb0184439a49d9402beb00835d54352a8466186
+**Digest:** sha256:f23c797739682e43c88a8c1c45d6d0cab99227193695fada8cf90e049d154ad4
 
 **Tags:**
 ```
@@ -549,7 +549,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.19-buster
 
 | Tool / module | Version |
 |---------------|---------|
-| golang.org/x/tools/gopls | 0.12.4 |
+| golang.org/x/tools/gopls | 0.13.1 |
 | honnef.co/go/tools | 0.4.2 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
 | github.com/mgechev/revive | 1.3.2 |

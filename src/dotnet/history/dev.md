@@ -13,7 +13,7 @@
 
 ## Variant: 7.0-bullseye-slim
 
-**Digest:** sha256:78a113efa53b9b2e5017203ce3724f715b0790249891616c7c97aef0e96e5a09
+**Digest:** sha256:d996c29e9da1e36d9ac5e75d3ef37a65721588720f2a8f34b20f59c73b543fd2
 
 **Tags:**
 ```
@@ -96,7 +96,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-7.0-bullseye
 
 ## Variant: 7.0-jammy
 
-**Digest:** sha256:54709e114b3fb579e3c2542ba9d4def85490daa85549ba0a21ac6cd903733532
+**Digest:** sha256:65931bf091c2ee883ec3c40da1e6fa038e785ee8fb5dce51746f33c507f3d252
 
 **Tags:**
 ```
@@ -150,7 +150,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-7.0-jammy
 | libicu70 | 70.1-2 |
 | libkrb5-3 | 1.19.2-2ubuntu0.2 |
 | liblttng-ust1 | 2.13.1-1ubuntu1 |
-| libstdc++6 | 12.1.0-2ubuntu1~22.04 |
+| libstdc++6 | 12.3.0-1ubuntu1~22.04 |
 | locales | 2.35-0ubuntu3.1 |
 | lsb-release | 11.1.0ubuntu4 |
 | lsof | 4.93.2+dfsg-1.1build2 |
@@ -176,7 +176,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-7.0-jammy
 
 ## Variant: 6.0-bullseye-slim
 
-**Digest:** sha256:9eb4db3a1eeebeef6d58cc4e814d8dd804508e605b21559ea5d73d05177319ff
+**Digest:** sha256:680c55aea0de9f7ffda296187450f0b9a047112906bff6897c550dc1cbfb6227
 
 **Tags:**
 ```
@@ -259,7 +259,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-bullseye
 
 ## Variant: 6.0-jammy
 
-**Digest:** sha256:c723dd672a8eda581768f12db9b12a6ffa6c51057bb26228a2b0e1f3fc1bc482
+**Digest:** sha256:d7ae9521df14f484fbce96103a97671ef0069bc74a6fc7e8c53d453358c6265e
 
 **Tags:**
 ```
@@ -313,7 +313,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-jammy
 | libicu70 | 70.1-2 |
 | libkrb5-3 | 1.19.2-2ubuntu0.2 |
 | liblttng-ust1 | 2.13.1-1ubuntu1 |
-| libstdc++6 | 12.1.0-2ubuntu1~22.04 |
+| libstdc++6 | 12.3.0-1ubuntu1~22.04 |
 | locales | 2.35-0ubuntu3.1 |
 | lsb-release | 11.1.0ubuntu4 |
 | lsof | 4.93.2+dfsg-1.1build2 |
@@ -339,7 +339,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-jammy
 
 ## Variant: 6.0-focal
 
-**Digest:** sha256:7c777d5217ace160877cf972a7810efb70642d6df4421a7cd3eca9f9fbf62f96
+**Digest:** sha256:227d2c4fab2384d2f3b454fcfedfa02ac0c14a5a8ecc68a8e28108a780befece
 
 **Tags:**
 ```
@@ -389,13 +389,13 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-focal
 | jq | 1.6-1ubuntu0.20.04.1 |
 | less | 551-1ubuntu0.1 |
 | libc6 | 2.31-0ubuntu9.9 |
-| libgcc1 | 1:10.3.0-1ubuntu1~20.04 |
+| libgcc1 | 1:10.5.0-1ubuntu1~20.04 |
 | libgssapi-krb5-2 | 1.17-6ubuntu4.3 |
 | libicu66 | 66.1-2ubuntu2.1 |
 | libkrb5-3 | 1.17-6ubuntu4.3 |
 | liblttng-ust0 | 2.11.0-1 |
 | libssl1.1 | 1.1.1f-1ubuntu2.19 |
-| libstdc++6 | 10.3.0-1ubuntu1~20.04 |
+| libstdc++6 | 10.5.0-1ubuntu1~20.04 |
 | locales | 2.31-0ubuntu9.9 |
 | lsb-release | 11.1.0ubuntu2 |
 | lsof | 4.93.2+dfsg-1ubuntu0.20.04.1 |

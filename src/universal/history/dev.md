@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:a81a91274064585b29c55a5678cc13aaac8583b4d913200346c9b2d441f06a1e
+**Digest:** sha256:e4b9031d88e0b676bfdb3d00e2e713cf0e8189d7c5b7b3d47b8beaff8e1599e3
 
 **Tags:**
 ```
@@ -34,7 +34,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [PHP](https://xdebug.org/) | 8.1.14<br />8.2.1 | /usr/local/php/&lt;version&gt; |
 | GCC | 9.4.0-1ubuntu1~20.04.1 | 
 | Clang | 10.0.0-4ubuntu1 | 
-| [Go](https://golang.org/dl) | 1.20.6 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.20.7 | /usr/local/go |
 | [Jekyll](https://jekyllrb.com/) | 4.3.2 | 
 | [Jupyter Lab](https://jupyter.org/) | 4.0.3 | /home/codespace/.local/bin/jupyter-lab |
 
@@ -46,13 +46,13 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | 3d492d49ec6b500bc57f2f00f96a321812a998e2 | /usr/local/nvs |
 | [rbenv](https://github.com/rbenv/rbenv.git) | 4fec76f267b3865d84a4994e8004e36c2a3c4d70 | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 35e5d2a29df62213e930e9617894e0a8eed9da70 | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 9862a16796e40958ee78633427acadfb53d885d3 | /usr/local/share/ruby-build |
 
 **Pip / pipx installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| numpy | 1.25.1 |
+| numpy | 1.25.2 |
 | pandas | 2.0.3 |
 | scipy | 1.11.1 |
 | matplotlib | 3.7.2 |
@@ -66,13 +66,13 @@ mcr.microsoft.com/devcontainers/universal:dev
 | setuptools | 68.0.0 |
 | wheel | 0.38.4 |
 | pylint | 2.17.5 |
-| flake8 | 6.0.0 |
+| flake8 | 6.1.0 |
 | autopep8 | 2.0.2 |
 | black | 23.7.0 |
 | yapf | 0.40.1 |
 | mypy | 1.4.1 |
 | pydocstyle | 6.3.0 |
-| pycodestyle | 2.10.0 |
+| pycodestyle | 2.11.0 |
 | bandit | 1.7.5 |
 | virtualenv | 20.24.2 |
 | pipx | 1.2.0 |
@@ -81,7 +81,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool / module | Version |
 |---------------|---------|
-| golang.org/x/tools/gopls | 0.12.4 |
+| golang.org/x/tools/gopls | 0.13.1 |
 | honnef.co/go/tools | 0.4.2 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
 | github.com/mgechev/revive | 1.3.2 |
@@ -113,7 +113,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [Maven](https://maven.apache.org/) | 3.9.3 | /usr/local/sdkman/candidates/maven/current/bin |
 | [Gradle](https://gradle.org/) | 8.2.1 | /usr/local/sdkman/candidates/gradle/current/bin |
 | Docker (Moby) CLI &amp; Engine | 23.0.6+azure | 
-| [conda](https://github.com/conda/conda) | 23.1.0 | /opt/conda/bin |
+| [conda](https://github.com/conda/conda) | 23.7.2 | /opt/conda/bin |
 
 **Additional linux tools and packages**
 
@@ -145,7 +145,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | libc6-dev | 2.31-0ubuntu9.9 |
 | libcups2 | 2.3.1-9ubuntu1.4 |
 | libgbm1 | 21.2.6-0ubuntu0.1~20.04.2 |
-| libgcc1 | 1:10.3.0-1ubuntu1~20.04 |
+| libgcc1 | 1:10.5.0-1ubuntu1~20.04 |
 | libgssapi-krb5-2 | 1.17-6ubuntu4.3 |
 | libgtk-3-0 | 3.24.20-0ubuntu1.1 |
 | libicu66 | 66.1-2ubuntu2.1 |
@@ -157,7 +157,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | libpangocairo-1.0-0 | 1.44.7-2ubuntu4 |
 | libsecret-1-dev | 0.20.4-0ubuntu1 |
 | libssl1.1 | 1.1.1f-1ubuntu2.19 |
-| libstdc++6 | 10.3.0-1ubuntu1~20.04 |
+| libstdc++6 | 10.5.0-1ubuntu1~20.04 |
 | libx11-6 | 2:1.6.9-2ubuntu1.5 |
 | libx11-xcb1 | 2:1.6.9-2ubuntu1.5 |
 | libxcomposite1 | 1:0.4.5-1 |

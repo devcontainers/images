@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/miniconda)
 
-**Digest:** sha256:b45c62acaa727a0670cae6712c11cf21683b864f3c7975b177e1d77094c332f2
+**Digest:** sha256:d2dfc2e2f74bf5330c9e3d4e62aacac497b5ef8261cdf3a7ab46786b46283fd4
 
 **Tags:**
 ```
@@ -41,13 +41,13 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | wheel | 0.38.4 |
 | requests | 2.31.0 |
 | pylint | 2.17.5 |
-| flake8 | 6.0.0 |
+| flake8 | 6.1.0 |
 | autopep8 | 2.0.2 |
 | black | 23.7.0 |
 | yapf | 0.40.1 |
 | mypy | 1.4.1 |
 | pydocstyle | 6.3.0 |
-| pycodestyle | 2.10.0 |
+| pycodestyle | 2.11.0 |
 | bandit | 1.7.5 |
 | virtualenv | 20.24.2 |
 | pipx | 1.2.0 |
@@ -57,7 +57,7 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | Tool | Version | Path |
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.41.0 | 
-| [conda](https://github.com/conda/conda) | 23.7.1 | /opt/conda |
+| [conda](https://github.com/conda/conda) | 23.7.2 | /opt/conda |
 
 **Additional linux tools and packages**
 
