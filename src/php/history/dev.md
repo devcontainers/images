@@ -16,7 +16,7 @@
 
 ## Variant: 8.2-apache-bookworm
 
-**Digest:** sha256:1f69e120244d06b2145b8a75dbc337b4d392418ffa4fc39680f3054144e0a451
+**Digest:** sha256:66f6935845ffdf53d61eadeac2f0addd2a8a0a9f97fcf026ec7637883c676b04
 
 **Tags:**
 ```
@@ -103,7 +103,7 @@ mcr.microsoft.com/devcontainers/php:dev-bookworm
 
 ## Variant: 8.1-apache-bookworm
 
-**Digest:** sha256:d207ff11e3f86daefeb63b60999625d5fd1592e46a1acc94e32b31fc1d93629e
+**Digest:** sha256:fb9de7dfe60c3ee8512d3c3a20f9ea6955f6e4a66e6f2573eb6fa36af1937c49
 
 **Tags:**
 ```
@@ -187,7 +187,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-bookworm
 
 ## Variant: 8.2-apache-bullseye
 
-**Digest:** sha256:43c9121954c15f52ea13d7ac82da8840c593b55317ff9d348369f06f96263078
+**Digest:** sha256:5c904d5286350fe22c333781b74a9e7ef6661c4aedccecbff23ac3856a3e9b77
 
 **Tags:**
 ```
@@ -273,7 +273,7 @@ mcr.microsoft.com/devcontainers/php:dev-bullseye
 
 ## Variant: 8.1-apache-bullseye
 
-**Digest:** sha256:0220277574515f85e6bff1eba67b41bc9aad5796ee8581f9b55bf837209ea8e2
+**Digest:** sha256:3711ad743940bd7caf4fcbc7daec389ed1dd9a74efad84a4674ea24344f50033
 
 **Tags:**
 ```
@@ -357,7 +357,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-bullseye
 
 ## Variant: 8.0-apache-bullseye
 
-**Digest:** sha256:437a1ecb31c33341a6720d5cf43abb7cf9edda935cfaca3b96933cba52260a29
+**Digest:** sha256:50f9fdc1ac0643d6147eba7931efee8f2ad8b45111c3f1ff0ae4730ce9d953f7
 
 **Tags:**
 ```
@@ -442,7 +442,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-bullseye
 
 ## Variant: 8.2-apache-buster
 
-**Digest:** sha256:1837724ad1c50fbc304f7626cb080ba40b5c57b6c6015f39bf0f9a7282f75b31
+**Digest:** sha256:b27328b48c81a4a612ab1cc9218b1519412c957f232b153d26c2a84cc56baf9e
 
 **Tags:**
 ```
@@ -529,7 +529,7 @@ mcr.microsoft.com/devcontainers/php:dev-buster
 
 ## Variant: 8.1-apache-buster
 
-**Digest:** sha256:4df619cbd59e14964f9dcbb41e615bafa62b7d997d6af81d7550e900a29ba513
+**Digest:** sha256:bc6e2736c46b9c7e3a5ec7710b0685aa06620e01af3090829537d5e5342ebbf1
 
 **Tags:**
 ```
@@ -614,7 +614,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-buster
 
 ## Variant: 8.0-apache-buster
 
-**Digest:** sha256:c62a7f72b7a0d01e03b4784120e7adbc58313d0ad97ec61dc66f0f06c8fae63b
+**Digest:** sha256:d0dcfce1942a2426d503d924660f667a29044ed65d32efa4b6ecfc3e397654cf
 
 **Tags:**
 ```

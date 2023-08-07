@@ -17,7 +17,7 @@
 
 ## Variant: 20-bookworm
 
-**Digest:** sha256:ce36d7f66d73ff588f33ae61bdef79b855c1dfea7c400b9698b65d3a922c5616
+**Digest:** sha256:5f11bd4438322f5fde834019561dc79f7f9c41699c07948d1dfd970c365f0282
 
 **Tags:**
 ```
@@ -52,7 +52,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bookworm
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.45.0 |
+| eslint | 8.46.0 |
 | tslint-to-eslint-config | 2.14.0 |
 | typescript | 5.1.6 |
 
@@ -107,7 +107,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bookworm
 
 ## Variant: 18-bookworm
 
-**Digest:** sha256:6111aa9d78de23526d7e188574e89def1f0338024ec5ca008f19eebb9fa9e2ec
+**Digest:** sha256:0d0cc3384b7a56f35dfa5f2dd93246317ee07ef672054cbb56abc6db8ba66e33
 
 **Tags:**
 ```
@@ -141,7 +141,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-18
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.45.0 |
+| eslint | 8.46.0 |
 | tslint-to-eslint-config | 2.14.0 |
 | typescript | 5.1.6 |
 
@@ -196,7 +196,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-18
 
 ## Variant: 16-bookworm
 
-**Digest:** sha256:0af60508e3edbbf5a9e21fa3dee28d9ed3f4e02d318d07b86b9f0813de2b00e7
+**Digest:** sha256:6fd9adf1963234019ffa3b4fb52279b711b992a306d716a28e565a4c5ee773cc
 
 **Tags:**
 ```
@@ -230,7 +230,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.45.0 |
+| eslint | 8.46.0 |
 | tslint-to-eslint-config | 2.14.0 |
 | typescript | 5.1.6 |
 
@@ -285,7 +285,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16
 
 ## Variant: 20-bullseye
 
-**Digest:** sha256:2483d5437264303e028550c817bd2fc41dfd7940741e514ac0e0bd1375e8cfdf
+**Digest:** sha256:949d094e1f6d459a74d5f0456a7a2aca72891bea091700fd4b905ad37b1d25b7
 
 **Tags:**
 ```
@@ -319,7 +319,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bullseye
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.45.0 |
+| eslint | 8.46.0 |
 | tslint-to-eslint-config | 2.14.0 |
 | typescript | 5.1.6 |
 
@@ -375,7 +375,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bullseye
 
 ## Variant: 18-bullseye
 
-**Digest:** sha256:4768e280dc0cde3b3e5c75dcd644872d59857d087d96bcf31b6a922411c89a91
+**Digest:** sha256:0074d24c0e1ad5f2cd78c4fc5db64b4522186781c7b7bbfc20c49cff0a0b0c9a
 
 **Tags:**
 ```
@@ -408,7 +408,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-18-bullseye
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.45.0 |
+| eslint | 8.46.0 |
 | tslint-to-eslint-config | 2.14.0 |
 | typescript | 5.1.6 |
 
@@ -464,7 +464,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-18-bullseye
 
 ## Variant: 16-bullseye
 
-**Digest:** sha256:a5cfa4f65930dfc65b3e39470906642a977aaf6331371b48b5bb6fde0f92bb78
+**Digest:** sha256:0f1dc7d72548adc79d5274f4ec58db09855645ce38df88a89f25aaaeabc3ac46
 
 **Tags:**
 ```
@@ -497,7 +497,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16-bullseye
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.45.0 |
+| eslint | 8.46.0 |
 | tslint-to-eslint-config | 2.14.0 |
 | typescript | 5.1.6 |
 
@@ -553,7 +553,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16-bullseye
 
 ## Variant: 20-buster
 
-**Digest:** sha256:5c7911037ac61b483c15aa9813d35553045fdef2aa642cab436e6484e555c936
+**Digest:** sha256:4021945765f807eefdb13b3932aaff851eaa5e9d53bdf939852d00692b97858a
 
 **Tags:**
 ```
@@ -587,7 +587,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-buster
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.45.0 |
+| eslint | 8.46.0 |
 | tslint-to-eslint-config | 2.14.0 |
 | typescript | 5.1.6 |
 
@@ -644,7 +644,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-buster
 
 ## Variant: 18-buster
 
-**Digest:** sha256:8150f91febe5cf04541d799aa62c2f7e9fcc414b01bd1a8e9668fe92b78a7466
+**Digest:** sha256:31052974ae13ba89f199ca51dfe0b99ea1517f48ef81bb4de500d7faa01fd89c
 
 **Tags:**
 ```
@@ -677,7 +677,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-18-buster
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.45.0 |
+| eslint | 8.46.0 |
 | tslint-to-eslint-config | 2.14.0 |
 | typescript | 5.1.6 |
 
@@ -734,7 +734,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-18-buster
 
 ## Variant: 16-buster
 
-**Digest:** sha256:31fa56018315aaa19e8a12972b862385ddc426ac759d66de2f531eb14c8159d2
+**Digest:** sha256:7ae5b9a1d566f537468554399adf375a07d189aa020d90f23810ffb7f83e3b9e
 
 **Tags:**
 ```
@@ -767,7 +767,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-16-buster
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.45.0 |
+| eslint | 8.46.0 |
 | tslint-to-eslint-config | 2.14.0 |
 | typescript | 5.1.6 |
 

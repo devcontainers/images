@@ -36,7 +36,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "cryptography",
-                    "Version": "39.0.1"
+                    "Version": "41.0.2"
                 }
             }
         },
@@ -54,7 +54,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "numpy",
-                    "Version": "1.25.1"
+                    "Version": "1.25.2"
                 }
             }
         },
@@ -63,7 +63,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "certifi",
-                    "Version": "2023.5.7"
+                    "Version": "2023.7.22"
                 }
             }
         },
@@ -72,7 +72,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "setuptools",
-                    "Version": "67.8.0"
+                    "Version": "65.6.3"
                 }
             }
         },
@@ -107,7 +107,8 @@
             "Component": {
                 "Type": "Pip",
                 "Pip": {
-                    "Name": "py"
+                    "Name": "py",
+                    "Version": "1.11.0"
                 }
             }
         },
@@ -281,7 +282,17 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "8184c5e06c6bbf0f9ba67ab9e9b8b5b5202d6c08"
+                    "commitHash": "980ec0f49d81f794778386f7bd518b2cc9c092f0"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "git",
+                "Git": {
+                    "Name": "vcpkg",
+                    "repositoryUrl": "https://github.com/microsoft/vcpkg",
+                    "commitHash": "a28aae61c575c6b5b2318d3d2dd97de1e55dc049"
                 }
             }
         },
@@ -400,7 +411,7 @@
                 "Type": "go",
                 "Go": {
                     "Name": "golang.org/x/tools/gopls",
-                    "Version": "0.12.4"
+                    "Version": "0.13.1"
                 }
             }
         },
@@ -562,7 +573,7 @@
                 "Type": "npm",
                 "Npm": {
                     "Name": "eslint",
-                    "Version": "8.45.0"
+                    "Version": "8.46.0"
                 }
             }
         },
@@ -677,7 +688,7 @@
                 "Type": "RubyGems",
                 "RubyGems": {
                     "Name": "bundler",
-                    "Version": "2.4.17"
+                    "Version": "2.4.18"
                 }
             }
         },
@@ -715,7 +726,7 @@
                 "Git": {
                     "Name": "ruby-build",
                     "repositoryUrl": "https://github.com/rbenv/ruby-build.git",
-                    "commitHash": "35e5d2a29df62213e930e9617894e0a8eed9da70"
+                    "commitHash": "9862a16796e40958ee78633427acadfb53d885d3"
                 }
             }
         },
@@ -763,17 +774,8 @@
             "Component": {
                 "Type": "Pip",
                 "Pip": {
-                    "Name": "certifi",
-                    "Version": "2023.7.22"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "Pip",
-                "Pip": {
-                    "Name": "cryptography",
-                    "Version": "41.0.2"
+                    "Name": "setuptools",
+                    "Version": "67.8.0"
                 }
             }
         },
@@ -791,7 +793,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "flake8",
-                    "Version": "6.0.0"
+                    "Version": "6.1.0"
                 }
             }
         },
@@ -845,7 +847,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "pycodestyle",
-                    "Version": "2.10.0"
+                    "Version": "2.11.0"
                 }
             }
         },
@@ -1564,7 +1566,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Go",
-                    "Version": "1.20.6",
+                    "Version": "1.20.7",
                     "DownloadUrl": "https://golang.org/dl"
                 }
             }

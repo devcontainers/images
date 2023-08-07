@@ -11,7 +11,7 @@
 
 ## Variant: bookworm
 
-**Digest:** sha256:8cfbffecac06ff2a0aea61529b1f6abb277311c8b6c20bb0d4d52066023859e4
+**Digest:** sha256:6eb35ad37251d325601cc1323f1ea83b868b87eaefb3e5bc76a79790591e346c
 
 **Tags:**
 ```
@@ -93,7 +93,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bookworm
 
 ## Variant: bullseye
 
-**Digest:** sha256:21ba9ca29411a2f8ab9e21948aa17b2fc26034c13cff643487c6a2e85c416662
+**Digest:** sha256:0b8bb35bbe5ed70f315c9e86d57185c6d7fb6b8b819de7bce5ff25b484c43136
 
 **Tags:**
 ```
@@ -175,7 +175,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bullseye
 
 ## Variant: buster
 
-**Digest:** sha256:b040f16121ca3d693c0b64029b0fae746c866be1c8093fd9de9e2900f4b553d5
+**Digest:** sha256:86265a78001bcff8876e739b7907373078e16187098d6b865d8a7e7bf27ac6b6
 
 **Tags:**
 ```
