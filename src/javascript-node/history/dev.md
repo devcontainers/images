@@ -17,7 +17,7 @@
 
 ## Variant: 20-bookworm
 
-**Digest:** sha256:720d72323a3951f078cdff03210d1825d0434415502f18b5400c1436a81c0f3e
+**Digest:** sha256:25c8268b5d1ec4e1df5b2a81b9bbdfe0de4343be8a88306cf8b7742f44b109b3
 
 **Tags:**
 ```
@@ -51,7 +51,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bookworm
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.45.0 |
+| eslint | 8.46.0 |
 
 **Other tools and utilities**
 
@@ -104,7 +104,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bookworm
 
 ## Variant: 18-bookworm
 
-**Digest:** sha256:67d27e8c706119e321f0fb682b7f62c9294cf9fe7760071a9c437202a4044fe1
+**Digest:** sha256:0e58456dd40a60e22e3ccb1c54dccc42e5d04eaca6ab7b4705ce62b175c1647b
 
 **Tags:**
 ```
@@ -137,7 +137,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.45.0 |
+| eslint | 8.46.0 |
 
 **Other tools and utilities**
 
@@ -190,7 +190,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18
 
 ## Variant: 16-bookworm
 
-**Digest:** sha256:222f5c9669681ebe30e72e824d68243641118781b4d20b90e757dfaba0e894e2
+**Digest:** sha256:6994807d9b929395c77d39c5e17d6d4dd52d241b9c36bc0e7fe5c33de7eade12
 
 **Tags:**
 ```
@@ -223,7 +223,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.45.0 |
+| eslint | 8.46.0 |
 
 **Other tools and utilities**
 
@@ -276,7 +276,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16
 
 ## Variant: 20-bullseye
 
-**Digest:** sha256:30500e0a22eab4d83feac50cf25f7c486bfbb479e3603f818e0f3e8cc5afa2b3
+**Digest:** sha256:0e125f1ff9a97945f312b4742e6108a03ec14eab5484a6332f6740a5a6e4d0a7
 
 **Tags:**
 ```
@@ -309,7 +309,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.45.0 |
+| eslint | 8.46.0 |
 
 **Other tools and utilities**
 
@@ -363,7 +363,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 
 ## Variant: 18-bullseye
 
-**Digest:** sha256:e90cac644ab4c28ec467ab405ec40f75f26d431ab31f906413b523119dd3c736
+**Digest:** sha256:9ae387962e6fe203988ec81d68710b0a4871d55e3f4bc9779852982f03b63c2c
 
 **Tags:**
 ```
@@ -395,7 +395,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18-bullseye
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.45.0 |
+| eslint | 8.46.0 |
 
 **Other tools and utilities**
 
@@ -449,7 +449,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18-bullseye
 
 ## Variant: 16-bullseye
 
-**Digest:** sha256:bb9a9373b925a71a4151e60df9e2be05aa1709f84d6a3c610e7d82b27a32e3b6
+**Digest:** sha256:d35bc2051d8a1e7c6c20caeadaadfb5bad268251ce51df975b1084c08dd828d2
 
 **Tags:**
 ```
@@ -481,7 +481,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16-bullseye
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.45.0 |
+| eslint | 8.46.0 |
 
 **Other tools and utilities**
 
@@ -535,7 +535,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16-bullseye
 
 ## Variant: 20-buster
 
-**Digest:** sha256:502e258a6e26254c9a2cb424d02dc80b749ac96c53d0183c93edcb84fc4c1664
+**Digest:** sha256:7dd3355d67030f0a6cabac76df7530c8a6f42ff0ec6da7ebe9be1e07f79aafec
 
 **Tags:**
 ```
@@ -568,7 +568,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-buster
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.45.0 |
+| eslint | 8.46.0 |
 
 **Other tools and utilities**
 
@@ -623,7 +623,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-buster
 
 ## Variant: 18-buster
 
-**Digest:** sha256:764be6b1ca6c1d909c12694ecfff1a2239cdc4960840f971c1877ccaab61e22c
+**Digest:** sha256:f4d3d1d4501b3bd28b5ad4ba7aebf5d46f3a1eedf4822a9f60d6c9602a296628
 
 **Tags:**
 ```
@@ -655,7 +655,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18-buster
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.45.0 |
+| eslint | 8.46.0 |
 
 **Other tools and utilities**
 
@@ -710,7 +710,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18-buster
 
 ## Variant: 16-buster
 
-**Digest:** sha256:4568c76f1d36c7c5523e29712af8e9c026fbf92557abbaeea437438dc3a8f299
+**Digest:** sha256:b11de20d0fb73e44f9cdf79316f5a6b64bb34b638cecaced31e21433fc82a9ba
 
 **Tags:**
 ```
@@ -742,7 +742,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-16-buster
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.45.0 |
+| eslint | 8.46.0 |
 
 **Other tools and utilities**
 
