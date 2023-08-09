@@ -55,9 +55,6 @@ check "torch" python -c "import torch; print(torch.__version__)"
 check "requests" python -c "import requests; print(requests.__version__)"
 check "jupyterlab-git" bash -c "python3 -m pip list | grep jupyterlab-git"
 
-setuptools_version=$(python3 -c "import setuptools; print(setuptools.__version__)")
-check-version-ge "setuptools-requirement" "${setuptools_version}" "65.5.1"
-
 # Check JupyterLab
 check "jupyter-lab" jupyter-lab --version
 check "jupyter-lab config" grep ".*.allow_origin = '*'" /home/codespace/.jupyter/jupyter_server_config.py
@@ -187,16 +184,25 @@ check "java-version-on-path-is-12.0.2" java --version | grep 12.0.2
 MAVEN_PATH=$(cd /usr/local/sdkman/candidates/maven/3*/lib/ && pwd)
 check "commons-io-lib" bash -c "ls ${MAVEN_PATH} | grep commons-io-2.11.jar"
 
-wheel_version=$(python -c "import wheel; print(wheel.__version__)")
-check-version-ge "wheel-requirement" "${wheel_version}" "0.38.1"
-
 ls -la /home/codespace
 
-setuptools_version_py_current=$(python -c "import setuptools; print(setuptools.__version__)")
-check-version-ge "setuptools-requirement-python_current" "${setuptools_version_py_current}" "65.5.1"
+## Python - current
+checkPythonPackageVersion "python" "wheel" "0.38.1"
+checkPythonPackageVersion "python" "setuptools" "65.5.1"
+checkPythonPackageVersion "python" "requests" "2.31.0"
 
-setuptools_version_py_39=$(/usr/local/python/3.9.*/bin/python -c "import setuptools; print(setuptools.__version__)")
-check-version-ge "setuptools-requirement-python_39" "${setuptools_version_py_39}" "65.5.1"
+## Python 3.9
+checkPythonPackageVersion "/usr/local/python/3.9.*/bin/python" "setuptools" "65.5.1"
+
+## Conda Python
+checkCondaPackageVersion "requests" "2.31.0"
+checkCondaPackageVersion "cryptography" "41.0.2"
+checkCondaPackageVersion "pyopenssl" "23.2.0"
+
+## Test Conda
+check "conda-update-conda" bash -c "conda update -y conda"
+check "conda-install" bash -c "conda install -c conda-forge --yes tensorflow"
+check "conda-install" bash -c "conda install -c conda-forge --yes pytorch"
 
 # Report result
 reportResults
