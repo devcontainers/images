@@ -117,7 +117,7 @@
 			"torch",
 			"requests",
 			"plotly",
-			"jupyterlab-git",
+			"jupyterlab_git",
 			"certifi",
 			"setuptools",
 			"wheel"
