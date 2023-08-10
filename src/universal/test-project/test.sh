@@ -95,6 +95,8 @@ count=$(ls /usr/local/share/nvm/versions/node | wc -l)
 expectedCount=2
 checkVersionCount "two versions of node are present" $count $expectedCount
 echo $(echo "node versions" && ls -a /usr/local/share/nvm/versions/node)
+npm_version=$(npm --version)
+check-version-ge "npm-requirement" "${npm_version}" "9.8.1"
 
 # PHP
 check "php" php --version
