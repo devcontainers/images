@@ -55,8 +55,8 @@ checkCondaPackageVersion "requests" "2.31.0"
 checkCondaPackageVersion "pygments" "2.15.1"
 
 check "conda-update-conda" bash -c "conda update -y conda"
-check "conda-install-tensorflow" bash -c "conda install -c conda-forge --yes tensorflow"
-check "conda-install-pytorch" bash -c "conda install -c conda-forge --yes pytorch"
+check "conda-install-tensorflow" bash -c "conda create --name test-env -c conda-forge --yes tensorflow"
+check "conda-install-pytorch" bash -c "conda create --name test-env -c conda-forge --yes pytorch"
 
 # Report result
 reportResults
