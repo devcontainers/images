@@ -1,13 +1,13 @@
-FROM continuumio/anaconda3:2023.03-1 as upstream
+FROM continuumio/anaconda3 as upstream
 
 # Verify OS version is expected one
 RUN . /etc/os-release && if [ "${VERSION_CODENAME}" != "bullseye" ]; then exit 1; fi
 
 # Temporary: Upgrade python packages due to mentioned CVEs
 # They are installed by the base image (continuumio/anaconda3) which does not have the patch.
-RUN python3 -m pip install \
+RUN python3 -m pip install --upgrade \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21797
-    --upgrade joblib \
+    joblib \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24065
     cookiecutter \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-34749
@@ -20,8 +20,6 @@ RUN python3 -m pip install \
     nbconvert \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28370
     tornado \
-    # https://github.com/advisories/GHSA-47fc-vmwq-366v
-    torch==1.13.1 \
     # https://github.com/advisories/GHSA-282v-666c-3fvg
     transformers==4.30.0
 
@@ -30,9 +28,7 @@ RUN conda install \
     pyopenssl=23.2.0 \ 
     cryptography=41.0.2 \
     # https://github.com/advisories/GHSA-j8r2-6x86-q33q
-    requests=2.31.0 \
-    # https://github.com/advisories/GHSA-mrwq-x4v8-fh7p
-    pygments=2.15.1
+    requests=2.31.0
 
 # Reset and copy updated files with updated privs to keep image size down
 FROM mcr.microsoft.com/devcontainers/base:1-bullseye
