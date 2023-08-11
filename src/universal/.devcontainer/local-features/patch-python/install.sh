@@ -37,8 +37,6 @@ update_package() {
     sudo_if "$PYTHON_PATH -m pip install --user --upgrade --no-cache-dir $PACKAGE"
 }
 
-sudo_if /usr/local/python/3.10.*/bin/python -m pip install --upgrade pip
-
 # Temporary: Upgrade python packages due to security vulnerabilities
 # They are installed by the base image (python) which does not have the patch.
 
