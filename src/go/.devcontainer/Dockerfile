@@ -1,4 +1,4 @@
-# [Choice] Go version (use -bookworm, or -bullseye variants on local arm64/Apple Silicon): 1, 1.20, 1.19, 1-bookworm, 1.20-bookworm, 1.19-bookworm, 1-bullseye, 1.20-bullseye, 1.19-bullseye, 1-buster, 1.20-buster, 1.19-buster
+# [Choice] Go version (use -bookworm, or -bullseye variants on local arm64/Apple Silicon): 1, 1.21, 1.20, 1-bookworm, 1.21-bookworm, 1.20-bookworm, 1-bullseye, 1.21-bullseye, 1.20-bullseye
 ARG VARIANT=1.20-bookworm
 FROM golang:${VARIANT}
 
