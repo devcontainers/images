@@ -36,9 +36,10 @@
 			"nbconvert",
 			"py",
 			"pyOpenssl",
-			"werkzeug",
+			"Werkzeug",
 			"requests",
-			"tornado"
+			"tornado",
+			"transformers"
 		],
 		"other": {
 			"git": {},

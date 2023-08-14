@@ -1,25 +1,27 @@
-FROM continuumio/anaconda3:2023.03-1 as upstream
+FROM continuumio/anaconda3 as upstream
 
 # Verify OS version is expected one
 RUN . /etc/os-release && if [ "${VERSION_CODENAME}" != "bullseye" ]; then exit 1; fi
 
 # Temporary: Upgrade python packages due to mentioned CVEs
 # They are installed by the base image (continuumio/anaconda3) which does not have the patch.
-RUN python3 -m pip install \
+RUN python3 -m pip install --upgrade \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21797
-    --upgrade joblib \
+    joblib==1.3.1 \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24065
-    cookiecutter \
+    cookiecutter==2.2.3 \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-34749
-    mistune \
+    mistune==3.0.1 \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-34141
-    numpy \
+    numpy==1.25.2 \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-25577
-    werkzeug \
+    werkzeug==2.3.6 \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32862
-    nbconvert \
-   # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28370
-    tornado
+    nbconvert==7.7.3 \
+    # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28370
+    tornado==6.3.2 \
+    # https://github.com/advisories/GHSA-282v-666c-3fvg
+    transformers==4.30.0
 
 RUN conda install \ 
     # https://github.com/advisories/GHSA-5cpq-8wj7-hf2v
