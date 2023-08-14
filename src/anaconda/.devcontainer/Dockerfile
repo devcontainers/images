@@ -7,19 +7,19 @@ RUN . /etc/os-release && if [ "${VERSION_CODENAME}" != "bullseye" ]; then exit 1
 # They are installed by the base image (continuumio/anaconda3) which does not have the patch.
 RUN python3 -m pip install --upgrade \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21797
-    joblib \
+    joblib==1.3.1 \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24065
-    cookiecutter \
+    cookiecutter==2.2.3 \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-34749
-    mistune \
+    mistune==3.0.1 \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-34141
-    numpy \
+    numpy==1.25.2 \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-25577
-    werkzeug \
+    werkzeug==2.3.6 \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32862
-    nbconvert \
+    nbconvert==7.7.3 \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28370
-    tornado \
+    tornado==6.3.2 \
     # https://github.com/advisories/GHSA-282v-666c-3fvg
     transformers==4.30.0
 
