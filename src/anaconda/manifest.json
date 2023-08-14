@@ -29,6 +29,8 @@
 			"cryptography",
 			"mistune",
 			"numpy",
+			"certifi",
+			"setuptools",
 			"future",
 			"wheel",
 			"nbconvert",
