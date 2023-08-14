@@ -68,7 +68,7 @@ Given JavaScript front-end web client code written for use in conjunction with a
 
 #### Using different Conda channels
 
-This devcontainer is based on the `ContinuumIO/anaconda3` docker image, which has all the `anaconda3` packages from defaults installed into the so-called base Conda's environment. It is recommended not to install packages from different channels in one environment since it could cause conflicts. When installing a package from a different channel (e.g., `conda-forge`) is required, the better approach is to create a new Conda environment.
+This image is based on the `ContinuumIO/anaconda3` docker image, which has all the `anaconda3` packages from defaults installed into the base conda's environment. It is recommended not to install packages from different channels in one environment since it could cause conflicts. When installing a package from a different channel (e.g., `conda-forge`) is required, the better approach is to create a new conda environment.
 
 ```bash
 conda create --name <env_name> -c <channel> --yes <package_name>
