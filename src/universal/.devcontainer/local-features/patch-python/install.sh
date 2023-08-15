@@ -39,6 +39,8 @@ update_package() {
 
 # Temporary: Upgrade python packages due to security vulnerabilities
 # They are installed by the base image (python) which does not have the patch.
+ls -la /usr/local/python/3.9.16/lib/python3.9
+ls -la /usr/local/python/3.10.8/lib/python3.10
 
 # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40897
 update_package /usr/local/python/3.9.*/bin/python setuptools==65.5.1
