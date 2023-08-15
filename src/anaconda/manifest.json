@@ -1,5 +1,5 @@
 {
-	"version": "0.203.3",
+	"version": "0.204.0",
 	"build": {
 		"latest": true,
 		"rootDistro": "debian",
@@ -36,9 +36,10 @@
 			"nbconvert",
 			"py",
 			"pyOpenssl",
-			"werkzeug",
+			"Werkzeug",
 			"requests",
-			"tornado"
+			"tornado",
+			"transformers"
 		],
 		"other": {
 			"git": {},
