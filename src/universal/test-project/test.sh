@@ -53,7 +53,7 @@ check "seaborn" python -c "import seaborn; print(seaborn.__version__)"
 check "scikit-learn" python -c "import sklearn; print(sklearn.__version__)"
 check "torch" python -c "import torch; print(torch.__version__)"
 check "requests" python -c "import requests; print(requests.__version__)"
-check "jupyterlab-git" bash -c "python3 -m pip list | grep jupyterlab-git"
+check "jupyterlab-git" python -c "import jupyterlab_git; print(jupyterlab_git.__version__)"
 
 # Check JupyterLab
 check "jupyter-lab" jupyter-lab --version
@@ -95,6 +95,8 @@ count=$(ls /usr/local/share/nvm/versions/node | wc -l)
 expectedCount=2
 checkVersionCount "two versions of node are present" $count $expectedCount
 echo $(echo "node versions" && ls -a /usr/local/share/nvm/versions/node)
+checkBundledNpmVersion "default" "9.8.0"
+checkBundledNpmVersion "18" "9.8.1"
 
 # PHP
 check "php" php --version
