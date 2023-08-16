@@ -27,7 +27,7 @@
             "additionalVersions": "3.9.16",
             "installJupyterlab": "true",
             "configureJupyterlabAllowOrigin": "*",
-            "useOryxIfAvailable": "false",
+            "useOryxIfAvailable": "false"
         },
         "./local-features/machine-learning-packages": "latest",
         "ghcr.io/devcontainers/features/php:1": {
