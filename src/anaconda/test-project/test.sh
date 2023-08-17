@@ -44,6 +44,8 @@ checkPythonPackageVersion "requests" "2.31.0"
 checkPythonPackageVersion "cryptography" "41.0.2"
 checkPythonPackageVersion "torch" "1.13.1"
 checkPythonPackageVersion "transformers" "4.30.0"
+checkPythonPackageVersion "mpmath" "1.3.0"
+checkPythonPackageVersion "aiohttp" "3.8.5"
 
 # The `tornado` package doesn't have the `__version__` attribute so we can use the `version` attribute.
 tornado_version=$(python -c "import tornado; print(tornado.version)")
@@ -53,6 +55,8 @@ checkCondaPackageVersion "pyopenssl" "23.2.0"
 checkCondaPackageVersion "cryptography" "41.0.2"
 checkCondaPackageVersion "requests" "2.31.0"
 checkCondaPackageVersion "pygments" "2.15.1"
+checkCondaPackageVersion "mpmath" "1.3.0"
+checkCondaPackageVersion "aiohttp" "3.8.5"
 
 check "conda-update-conda" bash -c "conda update -y conda"
 check "conda-install-tensorflow" bash -c "conda create --name test-env -c conda-forge --yes tensorflow"
