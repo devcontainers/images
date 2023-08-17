@@ -5,6 +5,15 @@ RUN . /etc/os-release && if [ "${VERSION_CODENAME}" != "bullseye" ]; then exit 1
 
 # Temporary: Upgrade python packages due to mentioned CVEs
 # They are installed by the base image (continuumio/anaconda3) which does not have the patch.
+RUN conda install \ 
+    # https://github.com/advisories/GHSA-5cpq-8wj7-hf2v
+    pyopenssl=23.2.0 \ 
+    cryptography=41.0.2 \
+    # https://github.com/advisories/GHSA-j8r2-6x86-q33q
+    requests=2.31.0 \
+    # https://github.com/advisories/GHSA-f865-m6cq-j9vx
+    mpmath==1.3.0
+
 RUN python3 -m pip install --upgrade \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21797
     joblib==1.3.1 \
@@ -21,14 +30,9 @@ RUN python3 -m pip install --upgrade \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28370
     tornado==6.3.2 \
     # https://github.com/advisories/GHSA-282v-666c-3fvg
-    transformers==4.30.0
-
-RUN conda install \ 
-    # https://github.com/advisories/GHSA-5cpq-8wj7-hf2v
-    pyopenssl=23.2.0 \ 
-    cryptography=41.0.2 \
-    # https://github.com/advisories/GHSA-j8r2-6x86-q33q
-    requests=2.31.0
+    transformers==4.30.0 \
+    # https://github.com/advisories/GHSA-45c4-8wx5-qw6w
+    aiohttp==3.8.5
 
 # Reset and copy updated files with updated privs to keep image size down
 FROM mcr.microsoft.com/devcontainers/base:1-bullseye
