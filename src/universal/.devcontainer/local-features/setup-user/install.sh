@@ -20,11 +20,6 @@ chmod +x /etc/profile.d/00-restore-env.sh
 
 export DEBIAN_FRONTEND=noninteractive
 
-# Temporary: Due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0536 & https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0155
-rm -rf /usr/local/nvs/deps/node_modules/follow-redirects/*
-curl -sSL https://github.com/follow-redirects/follow-redirects/archive/refs/tags/v1.15.2.tar.gz | tar -xzC /tmp 2>&1
-mv /tmp/follow-redirects-1.15.2/*  /usr/local/nvs/deps/node_modules/follow-redirects/
-
 sudo_if() {
     COMMAND="$*"
     if [ "$(id -u)" -eq 0 ] && [ "$USERNAME" != "root" ]; then
