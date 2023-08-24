@@ -20,13 +20,6 @@ chmod +x /etc/profile.d/00-restore-env.sh
 
 export DEBIAN_FRONTEND=noninteractive
 
-# Temporary: Due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-29425
-MAVEN_PATH=$(cd /usr/local/sdkman/candidates/maven/3*/lib/ && pwd)
-rm -f ${MAVEN_PATH}/commons-io-*
-curl -sSL https://github.com/apache/commons-io/archive/refs/tags/commons-io-2.11.0-RC1.tar.gz | tar -xzC /tmp 2>&1
-jar cf ${MAVEN_PATH}/commons-io-2.11.jar /tmp/commons-io-commons-io-2.11.0-RC1
-rm -rf /tmp/commons-io-commons-io-2.11.0-RC1
-
 # Temporary: Due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0536 & https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0155
 rm -rf /usr/local/nvs/deps/node_modules/follow-redirects/*
 curl -sSL https://github.com/follow-redirects/follow-redirects/archive/refs/tags/v1.15.2.tar.gz | tar -xzC /tmp 2>&1
