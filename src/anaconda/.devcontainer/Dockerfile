@@ -8,7 +8,7 @@ RUN . /etc/os-release && if [ "${VERSION_CODENAME}" != "bullseye" ]; then exit 1
 RUN conda install \ 
     # https://github.com/advisories/GHSA-5cpq-8wj7-hf2v
     pyopenssl=23.2.0 \ 
-    # cryptography=41.0.2 \
+    # cryptography=41.0.2 # Disabled temporarily due to issue with conda \
     # https://github.com/advisories/GHSA-j8r2-6x86-q33q
     requests=2.31.0 \
     # https://github.com/advisories/GHSA-f865-m6cq-j9vx
