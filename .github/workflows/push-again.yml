@@ -28,14 +28,14 @@ jobs:
 
     - name: Checkout ref
       id: checkout_ref
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         path: 'ref'
         ref: ${{ github.ref }}
         
     - name: Checkout release
       id: checkout_release
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         path: 'release'
         ref: ${{ github.event.inputs.release }}
