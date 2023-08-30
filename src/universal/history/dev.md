@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:e4b9031d88e0b676bfdb3d00e2e713cf0e8189d7c5b7b3d47b8beaff8e1599e3
+**Digest:** sha256:0c784bfc0ec8bcac69f623ea1d0fd5b23ba60696e0a84e9d7f53fcb661285967
 
 **Tags:**
 ```
@@ -26,27 +26,27 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 18.17.0<br />20.5.0 | /usr/local/share/nvm/versions/node/&lt;version&gt; |
+| [Node.js](https://nodejs.org/en/) | 18.17.1<br />20.5.1 | /usr/local/share/nvm/versions/node/&lt;version&gt; |
 | [Python](https://www.python.org/) | 3.10.8<br />3.9.16 | /usr/local/python/&lt;version&gt; |
 | [Java](https://adoptopenjdk.net/) | 11.0.20<br />17.0.8 | /usr/local/sdkman/candidates/java/&lt;version&gt; |
-| [.NET](https://dotnet.microsoft.com/) | 6<br />0<br />4<br />1<br />2<br />7<br />0<br />3<br />0<br />6 | /usr/local/dotnet |
+| [.NET](https://dotnet.microsoft.com/) | 6<br />0<br />4<br />1<br />3<br />7<br />0<br />3<br />0<br />6 | /usr/local/dotnet |
 | [Ruby](https://www.ruby-lang.org/en/) | 3.1.4<br />3.2.2 | /usr/local/rvm/rubies/&lt;version&gt; |
 | [PHP](https://xdebug.org/) | 8.1.14<br />8.2.1 | /usr/local/php/&lt;version&gt; |
-| GCC | 9.4.0-1ubuntu1~20.04.1 | 
+| GCC | 9.4.0-1ubuntu1~20.04.2 | 
 | Clang | 10.0.0-4ubuntu1 | 
-| [Go](https://golang.org/dl) | 1.20.7 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.21.0 | /usr/local/go |
 | [Jekyll](https://jekyllrb.com/) | 4.3.2 | 
-| [Jupyter Lab](https://jupyter.org/) | 4.0.3 | /home/codespace/.local/bin/jupyter-lab |
+| [Jupyter Lab](https://jupyter.org/) | 4.0.5 | /home/codespace/.local/bin/jupyter-lab |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4188b22aea3356a02768505103e42a96d18547a3 | /home/codespace/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 0ccd099bff8e384043883c4ae01b589794b13d72 | /usr/local/share/nvm |
-| [nvs](https://github.com/jasongin/nvs) | 3d492d49ec6b500bc57f2f00f96a321812a998e2 | /usr/local/nvs |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | bf774211916c8a9d57b2b56c7846cd0b3d91baab | /home/codespace/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
+| [nvs](https://github.com/jasongin/nvs) | d1df6ef535df2600177732c5cc446259ffdb94a4 | /usr/local/nvs |
 | [rbenv](https://github.com/rbenv/rbenv.git) | 4fec76f267b3865d84a4994e8004e36c2a3c4d70 | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 9862a16796e40958ee78633427acadfb53d885d3 | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 4d4678bc1ed89aa6900c0ea0da23495445dbcf50 | /usr/local/share/ruby-build |
 
 **Pip / pipx installed tools and packages**
 
@@ -54,37 +54,37 @@ mcr.microsoft.com/devcontainers/universal:dev
 |----------------|---------|
 | numpy | 1.25.2 |
 | pandas | 2.0.3 |
-| scipy | 1.11.1 |
+| scipy | 1.11.2 |
 | matplotlib | 3.7.2 |
 | seaborn | 0.12.2 |
 | scikit-learn | 1.3.0 |
 | torch | 2.0.1 |
 | requests | 2.31.0 |
-| plotly | 5.15.0 |
-| jupyterlab-git | 0.41.0 |
+| plotly | 5.16.1 |
+| jupyterlab_git | 0.42.0 |
 | certifi | 2023.7.22 |
 | setuptools | 68.0.0 |
-| wheel | 0.38.4 |
+| wheel | 0.41.2 |
 | pylint | 2.17.5 |
 | flake8 | 6.1.0 |
-| autopep8 | 2.0.2 |
+| autopep8 | 2.0.4 |
 | black | 23.7.0 |
 | yapf | 0.40.1 |
-| mypy | 1.4.1 |
+| mypy | 1.5.1 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.11.0 |
 | bandit | 1.7.5 |
-| virtualenv | 20.24.2 |
+| virtualenv | 20.24.3 |
 | pipx | 1.2.0 |
 
 **Go tools and modules**
 
 | Tool / module | Version |
 |---------------|---------|
-| golang.org/x/tools/gopls | 0.13.1 |
+| golang.org/x/tools/gopls | 0.13.2 |
 | honnef.co/go/tools | 0.4.2 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
-| github.com/mgechev/revive | 1.3.2 |
+| github.com/mgechev/revive | 1.3.3 |
 | github.com/uudashr/gopkgs | latest |
 | github.com/ramya-rao-a/go-outline | latest |
 | github.com/go-delve/delve | 1.21.0 |
@@ -101,19 +101,19 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.41.0 | 
+| [git](https://github.com/git/git) | 2.42.0 | 
 | [Xdebug](https://xdebug.org/) | 3.2.2 | /usr/local/php/current |
 | [Composer](https://getcomposer.org/) | 2.5.8 | /usr/local/php/current/bin |
-| [kubectl](https://github.com/kubernetes/kubectl) | v1.27.4 | /usr/local/bin |
-| [Helm](https://github.com/helm/helm) | 3.12.2 | /usr/local/bin |
+| [kubectl](https://github.com/kubernetes/kubectl) | v1.28.1 | /usr/local/bin |
+| [Helm](https://github.com/helm/helm) | 3.12.3 | /usr/local/bin |
 | [Docker Compose](https://github.com/docker/compose) | 1.29.2 | /usr/local/bin |
 | [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
-| [GitHub CLI](https://github.com/cli/cli) | 2.32.1 | 
+| [GitHub CLI](https://github.com/cli/cli) | 2.33.0 | 
 | [yarn](https://yarnpkg.com/) | 1.22.19 | /usr/bin |
-| [Maven](https://maven.apache.org/) | 3.9.3 | /usr/local/sdkman/candidates/maven/current/bin |
-| [Gradle](https://gradle.org/) | 8.2.1 | /usr/local/sdkman/candidates/gradle/current/bin |
+| [Maven](https://maven.apache.org/) | 3.9.4 | /usr/local/sdkman/candidates/maven/current/bin |
+| [Gradle](https://gradle.org/) | 8.3 | /usr/local/sdkman/candidates/gradle/current/bin |
 | Docker (Moby) CLI &amp; Engine | 23.0.6+azure | 
-| [conda](https://github.com/conda/conda) | 23.7.2 | /opt/conda/bin |
+| [conda](https://github.com/conda/conda) | 23.7.3 | /opt/conda/bin |
 
 **Additional linux tools and packages**
 
@@ -177,8 +177,8 @@ mcr.microsoft.com/devcontainers/universal:dev
 | nano | 4.8-1ubuntu1 |
 | ncdu | 1.14.1-1 |
 | net-tools | 1.60+git20180626.aebd88e-1ubuntu1 |
-| openssh-client | 1:8.2p1-4ubuntu0.8 |
-| openssh-server | 1:8.2p1-4ubuntu0.8 |
+| openssh-client | 1:8.2p1-4ubuntu0.9 |
+| openssh-server | 1:8.2p1-4ubuntu0.9 |
 | pigz | 2.4-1 |
 | pkg-config | 0.29.1-0ubuntu4 |
 | procps | 2:3.3.16-1ubuntu2.3 |
@@ -187,15 +187,15 @@ mcr.microsoft.com/devcontainers/universal:dev
 | python3-minimal | 3.8.2-0ubuntu2 |
 | rsync | 3.1.3-8ubuntu0.5 |
 | sed | 4.7-1 |
-| software-properties-common | 0.99.9.11 |
+| software-properties-common | 0.99.9.12 |
 | strace | 5.5-3ubuntu1 |
 | sudo | 1.8.31-1ubuntu1.5 |
 | tar | 1.30+dfsg-7ubuntu0.20.04.3 |
 | unzip | 6.0-25ubuntu1.1 |
 | valgrind | 1:3.15.0-1ubuntu9.1 |
-| vim | 2:8.1.2269-1ubuntu5.15 |
-| vim-doc | 2:8.1.2269-1ubuntu5.15 |
-| vim-tiny | 2:8.1.2269-1ubuntu5.15 |
+| vim | 2:8.1.2269-1ubuntu5.17 |
+| vim-doc | 2:8.1.2269-1ubuntu5.17 |
+| vim-tiny | 2:8.1.2269-1ubuntu5.17 |
 | wget | 1.20.3-1ubuntu2 |
 | xtail | 2.1-6 |
 | zip | 3.0-11build1 |

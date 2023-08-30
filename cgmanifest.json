@@ -36,7 +36,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "cryptography",
-                    "Version": "41.0.2"
+                    "Version": "39.0.1"
                 }
             }
         },
@@ -72,7 +72,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "setuptools",
-                    "Version": "65.6.3"
+                    "Version": "67.8.0"
                 }
             }
         },
@@ -107,8 +107,7 @@
             "Component": {
                 "Type": "Pip",
                 "Pip": {
-                    "Name": "py",
-                    "Version": "1.11.0"
+                    "Name": "py"
                 }
             }
         },
@@ -124,7 +123,8 @@
             "Component": {
                 "Type": "Pip",
                 "Pip": {
-                    "Name": "werkzeug"
+                    "Name": "Werkzeug",
+                    "Version": "2.3.6"
                 }
             }
         },
@@ -148,11 +148,20 @@
         },
         {
             "Component": {
+                "Type": "Pip",
+                "Pip": {
+                    "Name": "transformers",
+                    "Version": "4.30.0"
+                }
+            }
+        },
+        {
+            "Component": {
                 "Type": "git",
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "46c70406dd0b26bbd61210873ad6c86d9e8ee5da"
+                    "commitHash": "4188b22aea3356a02768505103e42a96d18547a3"
                 }
             }
         },
@@ -161,7 +170,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "git",
-                    "Version": "2.41.0",
+                    "Version": "2.42.0",
                     "DownloadUrl": "https://github.com/git/git"
                 }
             }
@@ -182,7 +191,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "4188b22aea3356a02768505103e42a96d18547a3"
+                    "commitHash": "bf774211916c8a9d57b2b56c7846cd0b3d91baab"
                 }
             }
         },
@@ -282,7 +291,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "980ec0f49d81f794778386f7bd518b2cc9c092f0"
+                    "commitHash": "2cf957350da28ad032178a974607f59f961217d9"
                 }
             }
         },
@@ -292,7 +301,17 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "a28aae61c575c6b5b2318d3d2dd97de1e55dc049"
+                    "commitHash": "927bc12e31148b0d44ae9d174b96c20e3bcf08eb"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "git",
+                "Git": {
+                    "Name": "vcpkg",
+                    "repositoryUrl": "https://github.com/microsoft/vcpkg",
+                    "commitHash": "c3caf911bfd2a2ec7ddabf1ba36791821c528fad"
                 }
             }
         },
@@ -352,7 +371,7 @@
                 "Git": {
                     "Name": "nvm",
                     "repositoryUrl": "https://github.com/nvm-sh/nvm.git",
-                    "commitHash": "0ccd099bff8e384043883c4ae01b589794b13d72"
+                    "commitHash": "c92adb3c479d70bb29f4399a808c972ef41510e7"
                 }
             }
         },
@@ -411,7 +430,7 @@
                 "Type": "go",
                 "Go": {
                     "Name": "golang.org/x/tools/gopls",
-                    "Version": "0.13.1"
+                    "Version": "0.13.2"
                 }
             }
         },
@@ -438,7 +457,7 @@
                 "Type": "go",
                 "Go": {
                     "Name": "github.com/mgechev/revive",
-                    "Version": "1.3.2"
+                    "Version": "1.3.3"
                 }
             }
         },
@@ -483,6 +502,16 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Image: golang",
+                    "Version": "1.21-bookworm",
+                    "DownloadUrl": "https://hub.docker.com/_/golang"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: golang",
                     "Version": "1.20-bookworm",
                     "DownloadUrl": "https://hub.docker.com/_/golang"
                 }
@@ -493,47 +522,17 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Image: golang",
+                    "Version": "1.21-bullseye",
+                    "DownloadUrl": "https://hub.docker.com/_/golang"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: golang",
                     "Version": "1.20-bullseye",
-                    "DownloadUrl": "https://hub.docker.com/_/golang"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "other",
-                "Other": {
-                    "Name": "Docker Image: golang",
-                    "Version": "1.20-buster",
-                    "DownloadUrl": "https://hub.docker.com/_/golang"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "other",
-                "Other": {
-                    "Name": "Docker Image: golang",
-                    "Version": "1.19-bookworm",
-                    "DownloadUrl": "https://hub.docker.com/_/golang"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "other",
-                "Other": {
-                    "Name": "Docker Image: golang",
-                    "Version": "1.19-bullseye",
-                    "DownloadUrl": "https://hub.docker.com/_/golang"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "other",
-                "Other": {
-                    "Name": "Docker Image: golang",
-                    "Version": "1.19-buster",
                     "DownloadUrl": "https://hub.docker.com/_/golang"
                 }
             }
@@ -573,7 +572,7 @@
                 "Type": "npm",
                 "Npm": {
                     "Name": "eslint",
-                    "Version": "8.46.0"
+                    "Version": "8.48.0"
                 }
             }
         },
@@ -583,7 +582,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "4188b22aea3356a02768505103e42a96d18547a3"
+                    "commitHash": "bf774211916c8a9d57b2b56c7846cd0b3d91baab"
                 }
             }
         },
@@ -688,7 +687,7 @@
                 "Type": "RubyGems",
                 "RubyGems": {
                     "Name": "bundler",
-                    "Version": "2.4.18"
+                    "Version": "2.4.19"
                 }
             }
         },
@@ -726,7 +725,7 @@
                 "Git": {
                     "Name": "ruby-build",
                     "repositoryUrl": "https://github.com/rbenv/ruby-build.git",
-                    "commitHash": "9862a16796e40958ee78633427acadfb53d885d3"
+                    "commitHash": "4d4678bc1ed89aa6900c0ea0da23495445dbcf50"
                 }
             }
         },
@@ -774,15 +773,6 @@
             "Component": {
                 "Type": "Pip",
                 "Pip": {
-                    "Name": "setuptools",
-                    "Version": "67.8.0"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "Pip",
-                "Pip": {
                     "Name": "pylint",
                     "Version": "2.17.5"
                 }
@@ -802,7 +792,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "autopep8",
-                    "Version": "2.0.2"
+                    "Version": "2.0.4"
                 }
             }
         },
@@ -829,7 +819,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "mypy",
-                    "Version": "1.4.1"
+                    "Version": "1.5.1"
                 }
             }
         },
@@ -865,7 +855,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "virtualenv",
-                    "Version": "20.24.2"
+                    "Version": "20.24.3"
                 }
             }
         },
@@ -875,6 +865,16 @@
                 "Pip": {
                     "Name": "pipx",
                     "Version": "1.2.0"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "git",
+                "Git": {
+                    "Name": "Oh My Zsh!",
+                    "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
+                    "commitHash": "46c70406dd0b26bbd61210873ad6c86d9e8ee5da"
                 }
             }
         },
@@ -993,7 +993,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "setuptools",
-                    "Version": "68.0.0"
+                    "Version": "68.1.2"
                 }
             }
         },
@@ -1202,7 +1202,7 @@
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "rustfmt",
-                    "Version": "1.5.2"
+                    "Version": "1.6.0"
                 }
             }
         },
@@ -1211,7 +1211,7 @@
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "rust-analysis",
-                    "Version": "1.71.0"
+                    "Version": "1.72.0"
                 }
             }
         },
@@ -1220,7 +1220,7 @@
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "rust-src",
-                    "Version": "1.71.0"
+                    "Version": "1.72.0"
                 }
             }
         },
@@ -1229,7 +1229,7 @@
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "clippy",
-                    "Version": "1.71.0"
+                    "Version": "1.72.0"
                 }
             }
         },
@@ -1277,7 +1277,7 @@
                 "Type": "npm",
                 "Npm": {
                     "Name": "typescript",
-                    "Version": "5.1.6"
+                    "Version": "5.2.2"
                 }
             }
         },
@@ -1424,7 +1424,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "scipy",
-                    "Version": "1.11.1"
+                    "Version": "1.11.2"
                 }
             }
         },
@@ -1469,7 +1469,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "plotly",
-                    "Version": "5.15.0"
+                    "Version": "5.16.1"
                 }
             }
         },
@@ -1477,8 +1477,26 @@
             "Component": {
                 "Type": "Pip",
                 "Pip": {
-                    "Name": "jupyterlab-git",
-                    "Version": "0.41.0"
+                    "Name": "jupyterlab_git",
+                    "Version": "0.42.0"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "Pip",
+                "Pip": {
+                    "Name": "setuptools",
+                    "Version": "68.0.0"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "Pip",
+                "Pip": {
+                    "Name": "wheel",
+                    "Version": "0.41.2"
                 }
             }
         },
@@ -1497,7 +1515,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "4188b22aea3356a02768505103e42a96d18547a3"
+                    "commitHash": "bf774211916c8a9d57b2b56c7846cd0b3d91baab"
                 }
             }
         },
@@ -1507,7 +1525,7 @@
                 "Git": {
                     "Name": "nvs",
                     "repositoryUrl": "https://github.com/jasongin/nvs",
-                    "commitHash": "3d492d49ec6b500bc57f2f00f96a321812a998e2"
+                    "commitHash": "d1df6ef535df2600177732c5cc446259ffdb94a4"
                 }
             }
         },
@@ -1526,7 +1544,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "kubectl",
-                    "Version": "v1.27.4",
+                    "Version": "v1.28.1",
                     "DownloadUrl": "https://github.com/kubernetes/kubectl"
                 }
             }
@@ -1536,7 +1554,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Helm",
-                    "Version": "3.12.2",
+                    "Version": "3.12.3",
                     "DownloadUrl": "https://github.com/helm/helm"
                 }
             }
@@ -1556,7 +1574,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "GitHub CLI",
-                    "Version": "2.32.1",
+                    "Version": "2.33.0",
                     "DownloadUrl": "https://github.com/cli/cli"
                 }
             }
@@ -1566,7 +1584,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Go",
-                    "Version": "1.20.7",
+                    "Version": "1.21.0",
                     "DownloadUrl": "https://golang.org/dl"
                 }
             }
