@@ -48,7 +48,7 @@ checkPythonPackageVersion "aiohttp" "3.8.5"
 
 # The `tornado` package doesn't have the `__version__` attribute so we can use the `version` attribute.
 tornado_version=$(python -c "import tornado; print(tornado.version)")
-check-version-ge "tornado-requirement" "${tornado_version}" "6.3.2"
+check-version-ge "tornado-requirement" "${tornado_version}" "6.3.3"
 
 checkCondaPackageVersion "pyopenssl" "23.2.0"
 # checkCondaPackageVersion "cryptography" "41.0.2" # Disabled temporarily due to issue with conda

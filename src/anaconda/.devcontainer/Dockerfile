@@ -27,8 +27,8 @@ RUN python3 -m pip install --upgrade \
     werkzeug==2.3.6 \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32862
     nbconvert==7.7.3 \
-    # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28370
-    tornado==6.3.2 \
+    # https://github.com/advisories/GHSA-qppv-j76h-2rpx
+    tornado==6.3.3 \
     # https://github.com/advisories/GHSA-282v-666c-3fvg
     transformers==4.30.0 \
     # https://github.com/advisories/GHSA-45c4-8wx5-qw6w
