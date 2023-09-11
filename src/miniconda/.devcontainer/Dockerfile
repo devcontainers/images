@@ -10,7 +10,7 @@ RUN conda install \
     requests=2.31.0
 
 # Reset and copy updated files with updated privs to keep image size down
-FROM mcr.microsoft.com/devcontainers/base:0-bullseye
+FROM mcr.microsoft.com/devcontainers/base:1-bullseye
 
 ARG USERNAME=vscode
 
