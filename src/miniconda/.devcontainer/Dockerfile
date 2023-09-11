@@ -44,7 +44,7 @@ RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then umask 0002 && /opt/conda/bi
 RUN conda install \ 
     # https://github.com/pyca/cryptography/security/advisories/GHSA-5cpq-8wj7-hf2v
     pyopenssl=23.2.0 \ 
-    # cryptography=41.0.2 # Disabled temporarily due to issue with conda \
+    cryptography=41.0.2 \
     # https://github.com/advisories/GHSA-j8r2-6x86-q33q
     requests=2.31.0
 
