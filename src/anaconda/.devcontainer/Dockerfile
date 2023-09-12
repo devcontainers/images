@@ -6,9 +6,10 @@ RUN . /etc/os-release && if [ "${VERSION_CODENAME}" != "bullseye" ]; then exit 1
 # Temporary: Upgrade python packages due to mentioned CVEs
 # They are installed by the base image (continuumio/anaconda3) which does not have the patch.
 RUN conda install \ 
-    # https://github.com/advisories/GHSA-5cpq-8wj7-hf2v
+    # pyopenssl should be updated to be compatible with latest version of cryptography
     pyopenssl=23.2.0 \ 
-    cryptography=41.0.2 \
+    # https://github.com/advisories/GHSA-jm77-qphf-c4w8
+    cryptography=41.0.3 \
     # https://github.com/advisories/GHSA-j8r2-6x86-q33q
     requests=2.31.0 \
     # https://github.com/advisories/GHSA-f865-m6cq-j9vx
