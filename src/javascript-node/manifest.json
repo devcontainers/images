@@ -3,13 +3,10 @@
 	"variants": [
 		"20-bookworm",
 		"18-bookworm",
-		"16-bookworm",
 		"20-bullseye",
 		"18-bullseye",
-		"16-bullseye",
 		"20-buster",
-		"18-buster",
-		"16-buster"
+		"18-buster"
 	],
 	"build": {
 		"latest": "20-bookworm",
@@ -23,10 +20,6 @@
 				"linux/amd64",
 				"linux/arm64"
 			],
-			"16-bookworm": [
-				"linux/amd64",
-				"linux/arm64"
-			],
 			"20-bullseye": [
 				"linux/amd64",
 				"linux/arm64"
@@ -35,17 +28,10 @@
 				"linux/amd64",
 				"linux/arm64"
 			],
-			"16-bullseye": [
-				"linux/amd64",
-				"linux/arm64"
-			],
 			"20-buster": [
 				"linux/amd64"
 			],
 			"18-buster": [
-				"linux/amd64"
-			],
-			"16-buster": [
 				"linux/amd64"
 			]
 		},
@@ -59,9 +45,6 @@
 			],
 			"18-bookworm": [
 				"javascript-node:${VERSION}-18"
-			],
-			"16-bookworm": [
-				"javascript-node:${VERSION}-16"
 			],
 			"20-bullseye": [
 				"javascript-node:${VERSION}-bullseye"
