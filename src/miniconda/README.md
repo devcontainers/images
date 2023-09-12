@@ -67,6 +67,10 @@ Given JavaScript front-end web client code written for use in conjunction with a
 }
 ```
 
+#### Using different Conda channels
+
+This image is based on the `ContinuumIO/miniconda3` docker image, which has the conda and its dependencies (*installed from conda's default channel*) in the base environment. It is not recommended to install packages from different channels in one environment since it could cause conflicts. When installing a package from a different channel (e.g., `conda-forge`) is required, the better approach is to create a new conda environment.
+
 #### Installing or updating Python utilities
 
 This container installs all Python development utilities using [pipx](https://pipxproject.github.io/pipx/) to avoid impacting the global Python environment. You can use this same utility add additional utilities in an isolated environment. For example:
