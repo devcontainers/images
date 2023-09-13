@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/miniconda)
 
-**Digest:** sha256:b2187150ad92c5123882ee47c70310f417ddf0e4c297b9b18997dfc665f795ba
+**Digest:** sha256:1eb05c11c5f768273b8567c9cd3ab0084cad96489b2ac9b72fab763d7b215c51
 
 **Tags:**
 ```
@@ -29,27 +29,27 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 46c70406dd0b26bbd61210873ad6c86d9e8ee5da | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4188b22aea3356a02768505103e42a96d18547a3 | /home/vscode/.oh-my-zsh |
 
 **Pip / pipx installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
 | certifi | 2023.7.22 |
-| cryptography | 39.0.1 |
+| cryptography | 41.0.3 |
 | setuptools | 67.8.0 |
 | wheel | 0.38.4 |
 | requests | 2.31.0 |
 | pylint | 2.17.5 |
 | flake8 | 6.1.0 |
 | autopep8 | 2.0.4 |
-| black | 23.7.0 |
+| black | 23.9.1 |
 | yapf | 0.40.1 |
 | mypy | 1.5.1 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.11.0 |
 | bandit | 1.7.5 |
-| virtualenv | 20.24.3 |
+| virtualenv | 20.24.5 |
 | pipx | 1.2.0 |
 
 **Other tools and utilities**

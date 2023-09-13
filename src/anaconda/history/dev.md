@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:2b1b47b01abf4898a6c47da40b5862c293101a53f83ea66d2655bb6d1f8a2137
+**Digest:** sha256:030651592e72f96f5e570a97400d6224db2096c66bb9dba2d19828292816154f
 
 **Tags:**
 ```
@@ -39,7 +39,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 |----------------|---------|
 | joblib | 1.3.1 |
 | cookiecutter | 2.2.3 |
-| cryptography | 39.0.1 |
+| cryptography | 41.0.3 |
 | mistune | 3.0.1 |
 | numpy | 1.25.2 |
 | certifi | 2023.7.22 |
@@ -49,7 +49,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | nbconvert | 7.7.3 |
 | Werkzeug | 2.3.6 |
 | requests | 2.31.0 |
-| tornado | 6.3.2 |
+| tornado | 6.3.3 |
 | transformers | 4.30.0 |
 
 **Other tools and utilities**
