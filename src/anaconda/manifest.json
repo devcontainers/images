@@ -39,7 +39,8 @@
 			"Werkzeug",
 			"requests",
 			"tornado",
-			"transformers"
+			"transformers",
+			"jupyter_server"
 		],
 		"other": {
 			"git": {},
