@@ -196,13 +196,13 @@ checkPythonPackageVersion "/usr/local/python/3.9.*/bin/python" "setuptools" "65.
 
 ## Conda Python
 checkCondaPackageVersion "requests" "2.31.0"
-checkCondaPackageVersion "cryptography" "41.0.2"
+checkCondaPackageVersion "cryptography" "41.0.3"
 checkCondaPackageVersion "pyopenssl" "23.2.0"
 
 ## Test Conda
 check "conda-update-conda" bash -c "conda update -y conda"
-check "conda-install" bash -c "conda install -c conda-forge --yes tensorflow"
-check "conda-install" bash -c "conda install -c conda-forge --yes pytorch"
+check "conda-install-tensorflow" bash -c "conda create --name test-env -c conda-forge --yes tensorflow"
+check "conda-install-pytorch" bash -c "conda create --name test-env -c conda-forge --yes pytorch"
 
 # Report result
 reportResults
