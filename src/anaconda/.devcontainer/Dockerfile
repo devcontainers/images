@@ -33,7 +33,9 @@ RUN python3 -m pip install --upgrade \
     # https://github.com/advisories/GHSA-qppv-j76h-2rpx
     tornado==6.3.3 \
     # https://github.com/advisories/GHSA-282v-666c-3fvg
-    transformers==4.30.0
+    transformers==4.30.0 \ 
+    # https://github.com/advisories/GHSA-r726-vmfq-j9j3 
+    jupyter_server==2.7.2
 
 # Reset and copy updated files with updated privs to keep image size down
 FROM mcr.microsoft.com/devcontainers/base:1-bullseye
