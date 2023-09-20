@@ -14,7 +14,7 @@ on:
 jobs:
   build-and-push:
     name: Build and push images
-    if: ${{ github.ref == *'refs/heads/'* }}
+    if: ${{ startsWith(github.ref, 'refs/heads/') }}
     runs-on: ubuntu-latest
     steps:
     - name: Free more space
