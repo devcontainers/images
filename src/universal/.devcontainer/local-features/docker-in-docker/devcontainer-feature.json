@@ -1,0 +1,72 @@
+{
+    "id": "docker-in-docker",
+    "version": "2.5.0",
+    "name": "Docker (Docker-in-Docker)",
+    "documentationURL": "https://github.com/devcontainers/features/tree/main/src/docker-in-docker",
+    "description": "Create child containers *inside* a container, independent from the host's docker instance. Installs Docker extension in the container along with needed CLIs.",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "none",
+                "20.10"
+            ],
+            "default": "latest",
+            "description": "Select or enter a Docker/Moby Engine version. (Availability can vary by OS version.)"
+        },
+        "moby": {
+            "type": "boolean",
+            "default": true,
+            "description": "Install OSS Moby build instead of Docker CE"
+        },
+        "dockerDashComposeVersion": {
+            "type": "string",
+            "enum": [
+                "none",
+                "v1",
+                "v2"
+            ],
+            "default": "v1",
+            "description": "Default version of Docker Compose (v1 or v2 or none)"
+        },
+        "azureDnsAutoDetection": {
+            "type": "boolean",
+            "default": true,
+            "description": "Allow automatically setting the dockerd DNS server when the installation script detects it is running in Azure"
+        },
+        "dockerDefaultAddressPool": {
+            "type": "string",
+            "default": "",
+            "proposals": [],
+            "description": "Define default address pools for Docker networks. e.g. base=192.168.0.0/16,size=24"
+        },
+        "installDockerBuildx": {
+            "type": "boolean",
+            "default": true,
+            "description": "Install Docker Buildx"
+        }
+    },
+    "entrypoint": "/usr/local/share/docker-init.sh",
+    "privileged": true,
+    "containerEnv": {
+        "DOCKER_BUILDKIT": "1"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-azuretools.vscode-docker"
+            ]
+        }
+    },
+    "mounts": [
+        {
+            "source": "dind-var-lib-docker-${devcontainerId}",
+            "target": "/var/lib/docker",
+            "type": "volume"
+        }
+    ],
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
