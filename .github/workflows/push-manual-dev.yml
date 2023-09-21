@@ -1,12 +1,8 @@
-name: Push dev-image manually
+name: Re-push image
 
 on:
   workflow_dispatch:
     inputs:
-      release:
-        description: 'Release branch'
-        required: true
-        default: 'main'
       image:
         description: 'Image ID'
         required: true
@@ -73,7 +69,7 @@ jobs:
         ln -s "$GITHUB_WORKSPACE/ref/node_modules" node_modules
 
         build/vscdc push  --replace-images \
-                          --release ${{ github.event.inputs.release }} \
+                          --release main \
                           --registry "$REGISTRY" \
                           --registry-path "$REGISTRY_BASE_PATH" \
                           --stub-registry "$STUB_REGISTRY" \
