@@ -457,7 +457,7 @@ do
     fi
 
     retry_count=0
-    until [ "${docker_ok}" = "true"  ] || [ "${retry_count}" -eq "5" ];
+    until [ "${docker_ok}" = "true"  ] || [ "${retry_count}" -eq "10" ];
     do
         sleep 1s
         set +e
