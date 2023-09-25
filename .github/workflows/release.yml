@@ -1,0 +1,45 @@
+name: Initiate Release
+
+on:
+  push:
+    tags:
+    - 'v*'
+
+jobs:
+  update-lockfiles:
+    name: Update lockfiles
+    if: ${{ github.event.base_ref == 'refs/heads/main' }}
+    permissions:
+      contents: write
+      pull-requests: write
+    runs-on: ubuntu-latest
+    env:
+        GITHUB_TOKEN: ${{ secrets.PAT }}
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Update lockfiles
+      run: |
+        set -e
+        ls ./src -1 | xargs -L 1 -d '\n' devcontainer features upgrade --workspace-folder
+    - name: Commit lockfiles
+      run: |
+        set -e
+        git config --global user.email github-actions@github.com
+        git config --global user.name github-actions
+        git config pull.rebase false
+
+        branch=releases/$(echo "${{ github.ref }}" | grep -oP 'refs/tags/\K(.+)')
+        git checkout -b $branch
+        message="Release ${{ github.ref }}"
+        git add 'src/**/devcontainer-lock.json'
+        git commit -m "$message"
+        git push origin $branch
+        gh api \
+          --method POST \
+          -H "Accept: application/vnd.github+json" \
+          /repos/${GITHUB_REPOSITORY}/pulls \
+          -f title="$message" \
+        -f body="$message" \
+        -f head="$branch" \
+        -f base='main'
