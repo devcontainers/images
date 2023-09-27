@@ -1,0 +1,93 @@
+{
+    "build": {
+        "dockerfile": "./Dockerfile",
+        "context": "."
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "username": "codespace",
+            "userUid": "1000",
+            "userGid": "1000"
+        },
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "20",
+            "additionalVersions": "18"
+        },
+        "./local-features/nvs": "latest",
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "3.10.8",
+            "additionalVersions": "3.9.16",
+            "installJupyterlab": "false",
+            "configureJupyterlabAllowOrigin": "*",
+            "useOryxIfAvailable": "false"
+        },
+        "ghcr.io/devcontainers/features/java:1": {
+            "version": "17",
+            "additionalVersions": "11",
+            "installGradle": "true",
+            "installMaven": "true"
+        },
+        "ghcr.io/devcontainers/features/sshd:1": {
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/git:1": {
+            "version": "latest",
+            "ppa": "false"
+        },
+        "ghcr.io/devcontainers/features/git-lfs:1": {
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/github-cli:1": {
+            "version": "latest"
+        },
+		// Temporarily pinning until we investigate issue with docker start
+        "ghcr.io/devcontainers/features/docker-in-docker:2.3.1": {
+            "version": "latest"
+        },
+        "./local-features/setup-user": "latest",
+        "./local-features/patch-python": {}
+    },
+    "overrideFeatureInstallOrder": [
+        "ghcr.io/devcontainers/features/common-utils",
+        "ghcr.io/devcontainers/features/git",
+        "ghcr.io/devcontainers/features/node",
+        "./local-features/nvs",
+        "ghcr.io/devcontainers/features/python",
+        "./local-features/patch-python",
+        "ghcr.io/devcontainers/features/java",
+        "ghcr.io/devcontainers/features/sshd",
+        "ghcr.io/devcontainers/features/git-lfs",
+        "ghcr.io/devcontainers/features/github-cli",
+        "ghcr.io/devcontainers/features/docker-in-docker",
+        "./local-features/setup-user"
+    ],
+    "remoteUser": "codespace",
+    "containerUser": "codespace",
+
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    // "forwardPorts": [],
+
+    // Configure tool-specific properties.
+    "customizations": {
+        // Configure properties specific to VS Code.
+        "vscode": {
+            // Set *default* container specific settings.json values on container create.
+            "settings": {
+                "python.defaultInterpreterPath": "/home/codespace/.python/current/bin/python3",
+                "python.formatting.autopep8Path": "/usr/local/py-utils/bin/autopep8",
+                "python.formatting.blackPath": "/usr/local/py-utils/bin/black",
+                "python.linting.flake8Path": "/usr/local/py-utils/bin/flake8",
+                "python.linting.flake8Enabled": false,
+                "python.linting.mypyPath": "/usr/local/py-utils/bin/mypy",
+                "python.linting.mypyEnabled": false,
+                "python.linting.pylintPath": "/usr/local/py-utils/bin/pylint",
+                "python.linting.pylintEnabled": false,,
+                "lldb.executable": "/usr/bin/lldb"
+            },
+            // Add the IDs of extensions you want installed when the container is created.
+            "extensions": [
+                "GitHub.vscode-pull-request-github"
+            ]
+        }
+    }
+}
