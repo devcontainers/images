@@ -445,6 +445,16 @@ dockerd_start="AZURE_DNS_AUTO_DETECTION=${AZURE_DNS_AUTO_DETECTION} DOCKER_DEFAU
 INNEREOF
 )"
 
+sudo_if() {
+    COMMAND="$*"
+
+    if [ "$(id -u)" -ne 0 ]; then
+        sudo $COMMAND
+    else
+        $COMMAND
+    fi
+}
+
 retry_docker_start_count=0
 docker_ok="false"
 
@@ -470,6 +480,8 @@ do
     
     if [ "${docker_ok}" != "true" ]; then
         echo "(*) Failed to start docker, retrying..."
+        sudo_if pkill dockerd
+        sudo_if pkill containerd
     fi
     
     retry_docker_start_count=`expr $retry_docker_start_count + 1`
