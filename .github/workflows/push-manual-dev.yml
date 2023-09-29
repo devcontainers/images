@@ -1,4 +1,4 @@
-name: Re-push image
+name: Manually build and push dev images
 
 on:
   workflow_dispatch:
@@ -11,7 +11,7 @@ jobs:
   build-and-push:
     name: Build and push images
     if: ${{ startsWith(github.ref, 'refs/heads/') }}
-    runs-on: ubuntu-latest
+    runs-on: devcontainer-image-builder-ubuntu
     steps:
     - name: Free more space
       id: free_space 
