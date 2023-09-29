@@ -11,7 +11,7 @@
 
 ## Variant: bookworm
 
-**Digest:** sha256:1b46ad14c0baf91ffe430ab0a0a381aa5d924f55c67c6a25c4ad36965837da0c
+**Digest:** sha256:019fde3660ba4c1b8f6938f43c9d3a663346189609f8b5cddb624bed9456aaca
 
 **Tags:**
 ```
@@ -38,7 +38,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 01f55123118601a935f28ff6c49e625448bdd32d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d3b6f1fd5e42deafb3a6458213762a492e484073 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -93,7 +93,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bookworm
 
 ## Variant: bullseye
 
-**Digest:** sha256:904f6fbaf10ccce3e80191d3a13529ace072014046edf6292df8ad04f125e3e2
+**Digest:** sha256:974e958c0e9e8cdd072bc7c33e30e628aa71c9dd85446309dcc444e618b2c141
 
 **Tags:**
 ```
@@ -119,7 +119,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 38ef5192cb1c43159b516d15ab8fed96f847b36b | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 0e1e877ea9182f87b3ab34cbc2ea944b34f5345e | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -175,7 +175,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bullseye
 
 ## Variant: buster
 
-**Digest:** sha256:b1928c322928853073e7567510b8f2b4030223aeae9879ac2c8042fa1be43cc1
+**Digest:** sha256:d07df994628b4795a2e0309ca332ccaa21959c497d89ef8dad83ea1642d7a6d8
 
 **Tags:**
 ```
@@ -201,7 +201,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 01f55123118601a935f28ff6c49e625448bdd32d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d3b6f1fd5e42deafb3a6458213762a492e484073 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 
 **Other tools and utilities**
