@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/miniconda)
 
-**Digest:** sha256:1eb05c11c5f768273b8567c9cd3ab0084cad96489b2ac9b72fab763d7b215c51
+**Digest:** sha256:929207de4598db6f8918a4ba024a3f9a7d508fb45fadc4478be4816fa6d64eaa
 
 **Tags:**
 ```
@@ -29,7 +29,7 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4188b22aea3356a02768505103e42a96d18547a3 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4167474f124bfc39d0e6cd612c95acf0a1ae9904 | /home/vscode/.oh-my-zsh |
 
 **Pip / pipx installed tools and packages**
 
@@ -40,11 +40,11 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | setuptools | 67.8.0 |
 | wheel | 0.38.4 |
 | requests | 2.31.0 |
-| pylint | 2.17.5 |
+| pylint | 2.17.7 |
 | flake8 | 6.1.0 |
 | autopep8 | 2.0.4 |
 | black | 23.9.1 |
-| yapf | 0.40.1 |
+| yapf | 0.40.2 |
 | mypy | 1.5.1 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.11.0 |
@@ -57,7 +57,7 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | Tool | Version | Path |
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.42.0 | 
-| [conda](https://github.com/conda/conda) | 23.7.3 | /opt/conda |
+| [conda](https://github.com/conda/conda) | 23.7.4 | /opt/conda |
 
 **Additional linux tools and packages**
 

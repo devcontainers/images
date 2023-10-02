@@ -16,7 +16,7 @@
 
 ## Variant: 3.2-bookworm
 
-**Digest:** sha256:840ca49e9aa50dc012c9615fa657a23356968f26df01ea574d0a523265f2709e
+**Digest:** sha256:dde1fd855513e7412f71b8f659884706de19587fd2ddf5c06f11778615d8bc98
 
 **Tags:**
 ```
@@ -45,10 +45,10 @@ mcr.microsoft.com/devcontainers/ruby:dev-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 38ef5192cb1c43159b516d15ab8fed96f847b36b | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 27402e2603b9354f419af3695bad8ff17ed33bac | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
-| [rbenv](https://github.com/rbenv/rbenv.git) | 5d78e473993b113073b36cbdded6453bd89c48ce | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | c6e924edc8d9a896c8a2f5b32bfc97fcae5fa5ce | /usr/local/share/ruby-build |
+| [rbenv](https://github.com/rbenv/rbenv.git) | 6e58140657a2e7df52f3e4d5828fae80b5c9691f | /usr/local/share/rbenv |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 27a5309660b51bca8a28871813b9d95a76abcb29 | /usr/local/share/ruby-build |
 
 **Other tools and utilities**
 
@@ -104,7 +104,7 @@ mcr.microsoft.com/devcontainers/ruby:dev-bookworm
 
 ## Variant: 3.1-bookworm
 
-**Digest:** sha256:7bbe15eb9315fe50c79b40f0e549a88a2d50a7766b8fec438e36b479fc5fb48b
+**Digest:** sha256:f75aafdd6cdf5dbfe6eebb2c187417e7169b8a49549cf5fe5c230ec47d471c34
 
 **Tags:**
 ```
@@ -130,10 +130,10 @@ mcr.microsoft.com/devcontainers/ruby:dev-3.1
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 38ef5192cb1c43159b516d15ab8fed96f847b36b | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 27402e2603b9354f419af3695bad8ff17ed33bac | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
-| [rbenv](https://github.com/rbenv/rbenv.git) | 5d78e473993b113073b36cbdded6453bd89c48ce | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | c6e924edc8d9a896c8a2f5b32bfc97fcae5fa5ce | /usr/local/share/ruby-build |
+| [rbenv](https://github.com/rbenv/rbenv.git) | 6e58140657a2e7df52f3e4d5828fae80b5c9691f | /usr/local/share/rbenv |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 27a5309660b51bca8a28871813b9d95a76abcb29 | /usr/local/share/ruby-build |
 
 **Other tools and utilities**
 
@@ -189,7 +189,7 @@ mcr.microsoft.com/devcontainers/ruby:dev-3.1
 
 ## Variant: 3.2-bullseye
 
-**Digest:** sha256:9617ad835d7899a62df28b3f2ada4d1e9c3aab04b971c4158a0fcd8378aa6036
+**Digest:** sha256:7dd60584851cd0e3f780aed5945b014e2983ddab7c90ea1bd6c92add32b18658
 
 **Tags:**
 ```
@@ -216,10 +216,10 @@ mcr.microsoft.com/devcontainers/ruby:dev-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 01f55123118601a935f28ff6c49e625448bdd32d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 27402e2603b9354f419af3695bad8ff17ed33bac | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
-| [rbenv](https://github.com/rbenv/rbenv.git) | 5d78e473993b113073b36cbdded6453bd89c48ce | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | c6e924edc8d9a896c8a2f5b32bfc97fcae5fa5ce | /usr/local/share/ruby-build |
+| [rbenv](https://github.com/rbenv/rbenv.git) | 6e58140657a2e7df52f3e4d5828fae80b5c9691f | /usr/local/share/rbenv |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 27a5309660b51bca8a28871813b9d95a76abcb29 | /usr/local/share/ruby-build |
 
 **Other tools and utilities**
 
@@ -276,7 +276,7 @@ mcr.microsoft.com/devcontainers/ruby:dev-bullseye
 
 ## Variant: 3.1-bullseye
 
-**Digest:** sha256:4eb6c3653b925b65c41b75e82452364f3f5a544ed13221e45d2f98461afeec36
+**Digest:** sha256:10d85ccfabf1838a3d9a8b7e4aaeda4a8620679deee4f62dd84b2298745a2cb9
 
 **Tags:**
 ```
@@ -301,10 +301,10 @@ mcr.microsoft.com/devcontainers/ruby:dev-3.1-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 38ef5192cb1c43159b516d15ab8fed96f847b36b | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 27402e2603b9354f419af3695bad8ff17ed33bac | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
-| [rbenv](https://github.com/rbenv/rbenv.git) | 5d78e473993b113073b36cbdded6453bd89c48ce | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | c6e924edc8d9a896c8a2f5b32bfc97fcae5fa5ce | /usr/local/share/ruby-build |
+| [rbenv](https://github.com/rbenv/rbenv.git) | 6e58140657a2e7df52f3e4d5828fae80b5c9691f | /usr/local/share/rbenv |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 27a5309660b51bca8a28871813b9d95a76abcb29 | /usr/local/share/ruby-build |
 
 **Other tools and utilities**
 
@@ -361,7 +361,7 @@ mcr.microsoft.com/devcontainers/ruby:dev-3.1-bullseye
 
 ## Variant: 3.0-bullseye
 
-**Digest:** sha256:4f53d1d8a177f09129f6fa9ccf95876bdc7f04e90ffa58f2a3efcd2c25428438
+**Digest:** sha256:ddb45d4e331ee89b541e2f9f8225029127a4b3e89e485e38043605c624da31be
 
 **Tags:**
 ```
@@ -387,10 +387,10 @@ mcr.microsoft.com/devcontainers/ruby:dev-3.0
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 01f55123118601a935f28ff6c49e625448bdd32d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 27402e2603b9354f419af3695bad8ff17ed33bac | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
-| [rbenv](https://github.com/rbenv/rbenv.git) | 5d78e473993b113073b36cbdded6453bd89c48ce | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | c6e924edc8d9a896c8a2f5b32bfc97fcae5fa5ce | /usr/local/share/ruby-build |
+| [rbenv](https://github.com/rbenv/rbenv.git) | 6e58140657a2e7df52f3e4d5828fae80b5c9691f | /usr/local/share/rbenv |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 27a5309660b51bca8a28871813b9d95a76abcb29 | /usr/local/share/ruby-build |
 
 **Other tools and utilities**
 
@@ -447,7 +447,7 @@ mcr.microsoft.com/devcontainers/ruby:dev-3.0
 
 ## Variant: 3.2-buster
 
-**Digest:** sha256:78c16f3c3d6e58b5a7f41349f11a5eb7585eed17364458b013786e8adf5b096f
+**Digest:** sha256:ffb4041980680940629a5e61396c1b9f410eedaafad5c8b0035992b1ceda814f
 
 **Tags:**
 ```
@@ -474,10 +474,10 @@ mcr.microsoft.com/devcontainers/ruby:dev-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 01f55123118601a935f28ff6c49e625448bdd32d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 27402e2603b9354f419af3695bad8ff17ed33bac | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
-| [rbenv](https://github.com/rbenv/rbenv.git) | 5d78e473993b113073b36cbdded6453bd89c48ce | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | c6e924edc8d9a896c8a2f5b32bfc97fcae5fa5ce | /usr/local/share/ruby-build |
+| [rbenv](https://github.com/rbenv/rbenv.git) | 6e58140657a2e7df52f3e4d5828fae80b5c9691f | /usr/local/share/rbenv |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 27a5309660b51bca8a28871813b9d95a76abcb29 | /usr/local/share/ruby-build |
 
 **Other tools and utilities**
 
@@ -526,7 +526,7 @@ mcr.microsoft.com/devcontainers/ruby:dev-buster
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u5 |
 | unzip | 6.0-23+deb10u3 |
-| vim-tiny | 2:8.1.0875-5+deb10u5 |
+| vim-tiny | 2:8.1.0875-5+deb10u6 |
 | wget | 1.20.1-1.1 |
 | yarn | 1.22.19-1 |
 | zip | 3.0-11+b1 |
@@ -535,7 +535,7 @@ mcr.microsoft.com/devcontainers/ruby:dev-buster
 
 ## Variant: 3.1-buster
 
-**Digest:** sha256:5e89c00cf2be5095cd3f7fef652083da68001deefd3b9ff66a860267af8dc2e8
+**Digest:** sha256:dfe5289352d2469ec02cb2248b5fca09ff7b501034abe5d252320c3dbf539761
 
 **Tags:**
 ```
@@ -560,10 +560,10 @@ mcr.microsoft.com/devcontainers/ruby:dev-3.1-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 38ef5192cb1c43159b516d15ab8fed96f847b36b | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 27402e2603b9354f419af3695bad8ff17ed33bac | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
-| [rbenv](https://github.com/rbenv/rbenv.git) | 5d78e473993b113073b36cbdded6453bd89c48ce | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | c6e924edc8d9a896c8a2f5b32bfc97fcae5fa5ce | /usr/local/share/ruby-build |
+| [rbenv](https://github.com/rbenv/rbenv.git) | 6e58140657a2e7df52f3e4d5828fae80b5c9691f | /usr/local/share/rbenv |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 27a5309660b51bca8a28871813b9d95a76abcb29 | /usr/local/share/ruby-build |
 
 **Other tools and utilities**
 
@@ -612,7 +612,7 @@ mcr.microsoft.com/devcontainers/ruby:dev-3.1-buster
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u5 |
 | unzip | 6.0-23+deb10u3 |
-| vim-tiny | 2:8.1.0875-5+deb10u5 |
+| vim-tiny | 2:8.1.0875-5+deb10u6 |
 | wget | 1.20.1-1.1 |
 | yarn | 1.22.19-1 |
 | zip | 3.0-11+b1 |
@@ -621,7 +621,7 @@ mcr.microsoft.com/devcontainers/ruby:dev-3.1-buster
 
 ## Variant: 3.0-buster
 
-**Digest:** sha256:8207bfc2d9ef3fe3deb60779149173d73ebf3aefa99bdb9e5aa7f5b3ad5c6d78
+**Digest:** sha256:8555938c42793e3dd504ed70d6dfb467a743a12ef77a1332239bab2cc5b5432e
 
 **Tags:**
 ```
@@ -646,10 +646,10 @@ mcr.microsoft.com/devcontainers/ruby:dev-3.0-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 38ef5192cb1c43159b516d15ab8fed96f847b36b | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 27402e2603b9354f419af3695bad8ff17ed33bac | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
-| [rbenv](https://github.com/rbenv/rbenv.git) | 5d78e473993b113073b36cbdded6453bd89c48ce | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | c6e924edc8d9a896c8a2f5b32bfc97fcae5fa5ce | /usr/local/share/ruby-build |
+| [rbenv](https://github.com/rbenv/rbenv.git) | 6e58140657a2e7df52f3e4d5828fae80b5c9691f | /usr/local/share/rbenv |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 27a5309660b51bca8a28871813b9d95a76abcb29 | /usr/local/share/ruby-build |
 
 **Other tools and utilities**
 
@@ -698,7 +698,7 @@ mcr.microsoft.com/devcontainers/ruby:dev-3.0-buster
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u5 |
 | unzip | 6.0-23+deb10u3 |
-| vim-tiny | 2:8.1.0875-5+deb10u5 |
+| vim-tiny | 2:8.1.0875-5+deb10u6 |
 | wget | 1.20.1-1.1 |
 | yarn | 1.22.19-1 |
 | zip | 3.0-11+b1 |

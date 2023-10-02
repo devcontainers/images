@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:030651592e72f96f5e570a97400d6224db2096c66bb9dba2d19828292816154f
+**Digest:** sha256:f262ebfeb20d1e2c5c426d1d31e6b45f03a9a97a2ad125253800140870599cee
 
 **Tags:**
 ```
@@ -23,7 +23,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Python](https://www.python.org/) | 3.11.3 | /opt/conda |
+| [Python](https://www.python.org/) | 3.11.5 | /opt/conda |
 | [Jupyter Notebooks](https://jupyter.org/) | 6.5.4 | /opt/conda |
 | [Jupyter Lab](https://jupyter.org/) | 3.6.3 | /opt/conda |
 
@@ -31,7 +31,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4188b22aea3356a02768505103e42a96d18547a3 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4167474f124bfc39d0e6cd612c95acf0a1ae9904 | /home/vscode/.oh-my-zsh |
 
 **Pip / pipx installed tools and packages**
 
@@ -43,7 +43,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | mistune | 3.0.1 |
 | numpy | 1.25.2 |
 | certifi | 2023.7.22 |
-| setuptools | 67.8.0 |
+| setuptools | 68.0.0 |
 | future | 0.18.3 |
 | wheel | 0.38.4 |
 | nbconvert | 7.7.3 |
@@ -51,13 +51,14 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | requests | 2.31.0 |
 | tornado | 6.3.3 |
 | transformers | 4.30.0 |
+| jupyter_server | 2.7.2 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.42.0 | 
-| [conda](https://github.com/conda/conda) | 23.7.3 | /opt/conda |
+| [conda](https://github.com/conda/conda) | 23.7.4 | /opt/conda |
 
 **Additional linux tools and packages**
 
