@@ -61,7 +61,8 @@
         "ghcr.io/devcontainers/features/github-cli:1": {
             "version": "latest"
         },
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {
+		// Temporarily pinning until we investigate issue with docker start
+		"ghcr.io/devcontainers/features/docker-in-docker:2.3.1": {
             "version": "latest"
         },
         "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
