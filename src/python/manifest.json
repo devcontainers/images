@@ -1,5 +1,5 @@
 {
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"variants": [
 		"3.12-bookworm",
 		"3.11-bookworm",
@@ -11,7 +11,6 @@
 		"3.10-bullseye",
 		"3.9-bullseye",
 		"3.8-bullseye",
-		"3.12-buster",
 		"3.11-buster",
 		"3.10-buster",
 		"3.9-buster",
@@ -61,9 +60,6 @@
 				"linux/amd64",
 				"linux/arm64"
 			],
-			"3.12-buster": [
-				"linux/amd64"
-			],
 			"3.11-buster": [
 				"linux/amd64"
 			],
@@ -103,7 +99,7 @@
 				"python:${VERSION}-3-bullseye",
 				"python:${VERSION}-bullseye"
 			],
-			"3.12-buster": [
+			"3.11-buster": [
 				"python:${VERSION}-3-buster",
 				"python:${VERSION}-buster"
 			]
