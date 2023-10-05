@@ -362,8 +362,6 @@ EOF
 tee -a /usr/local/share/docker-init.sh > /dev/null \
 << 'EOF'
 dockerd_start="AZURE_DNS_AUTO_DETECTION=${AZURE_DNS_AUTO_DETECTION} DOCKER_DEFAULT_ADDRESS_POOL=${DOCKER_DEFAULT_ADDRESS_POOL} $(cat << 'INNEREOF'
-    # Stop dockerd and containerd in case they are already running
-    docker info > /dev/null 2>&1 && pkill dockerd && pkill containerd
     # explicitly remove dockerd and containerd PID file to ensure that it can start properly if it was stopped uncleanly
     find /run /var/run -iname 'docker*.pid' -delete || :
     find /run /var/run -iname 'container*.pid' -delete || :
