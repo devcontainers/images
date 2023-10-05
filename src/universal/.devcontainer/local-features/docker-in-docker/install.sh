@@ -476,10 +476,12 @@ do
         retry_count=`expr $retry_count + 1`
     done
     
-    if [ "${docker_ok}" != "true" ]; then
+    if [ "${docker_ok}" != "true" ] && [ "${retry_docker_start_count}" != "4" ]; then
         echo "(*) Failed to start docker, retrying..."
-        sudo_if pkill dockerd
-        sudo_if pkill containerd
+        set +e
+            sudo_if pkill dockerd
+            sudo_if pkill containerd
+        set -e
     fi
     
     retry_docker_start_count=`expr $retry_docker_start_count + 1`
