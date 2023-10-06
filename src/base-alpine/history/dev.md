@@ -12,7 +12,7 @@
 
 ## Variant: 3.18
 
-**Digest:** sha256:6bcf272618880d4461a2ad33584f49990c67e6a6c1b9e46d55df0421426aa68c
+**Digest:** sha256:c57f9d0848689002ae4baf77385332dd5beadec5a6c71cd0f6c2707189a462d0
 
 **Tags:**
 ```
@@ -33,7 +33,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 38ef5192cb1c43159b516d15ab8fed96f847b36b | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f36c6db0eac17b022eee87411e6996a5f5fc8457 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -52,7 +52,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 | htop | 3.2.2-r1 |
 | net-tools | 2.10-r3 |
 | psmisc | 23.6-r2 |
-| curl | 8.2.1-r0 |
+| curl | 8.3.0-r0 |
 | wget | 1.21.4-r0 |
 | rsync | 3.2.7-r4 |
 | ca-certificates | 20230506-r0 |
@@ -83,7 +83,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 ## Variant: 3.17
 
-**Digest:** sha256:1b2731c270be8c4bd6f548013ab6948b3dc70386c10fa960b4fd909ac183f465
+**Digest:** sha256:1bf0d0b35bd841a70f27bdbca032fa44e9e6dc35b6d3f82e02410f7b8d042f0a
 
 **Tags:**
 ```
@@ -103,7 +103,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.17
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 38ef5192cb1c43159b516d15ab8fed96f847b36b | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f36c6db0eac17b022eee87411e6996a5f5fc8457 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -122,7 +122,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.17
 | htop | 3.2.1-r1 |
 | net-tools | 2.10-r0 |
 | psmisc | 23.5-r0 |
-| curl | 8.2.1-r0 |
+| curl | 8.3.0-r0 |
 | wget | 1.21.4-r0 |
 | rsync | 3.2.7-r0 |
 | ca-certificates | 20230506-r0 |
@@ -153,7 +153,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.17
 
 ## Variant: 3.16
 
-**Digest:** sha256:a54248763cc81ccc6cd2a5c8819e3f2ce7be285ca6a91a70e882aee16369027b
+**Digest:** sha256:17ec072267c785757ba4ff4c690d630e1cadd028afe9ad9eac048c8c73639d5c
 
 **Tags:**
 ```
@@ -173,7 +173,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.16
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 38ef5192cb1c43159b516d15ab8fed96f847b36b | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f36c6db0eac17b022eee87411e6996a5f5fc8457 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -192,7 +192,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.16
 | htop | 3.2.0-r1 |
 | net-tools | 2.10-r0 |
 | psmisc | 23.5-r0 |
-| curl | 8.2.1-r0 |
+| curl | 8.3.0-r0 |
 | wget | 1.21.3-r0 |
 | rsync | 3.2.7-r0 |
 | ca-certificates | 20230506-r0 |
@@ -206,7 +206,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.16
 | libstdc++ | 11.2.1_git20220219-r2 |
 | krb5-libs | 1.19.4-r0 |
 | libintl | 0.21-r2 |
-| libssl1.1 | 1.1.1v-r0 |
+| libssl1.1 | 1.1.1w-r0 |
 | lttng-ust | 2.13.2-r0 |
 | tzdata | 2023c-r0 |
 | userspace-rcu | 0.13.1-r0 |
@@ -223,7 +223,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.16
 
 ## Variant: 3.15
 
-**Digest:** sha256:9665d443ccec3a1fbc4bd0d13795f10cb995aa6075d2318ec5ec11e7d463423d
+**Digest:** sha256:378c0eeef7b11b5f753c8869c5e67793ceaa4c122dbda1ebd41ba77b5a1c3339
 
 **Tags:**
 ```
@@ -243,7 +243,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.15
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 38ef5192cb1c43159b516d15ab8fed96f847b36b | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f36c6db0eac17b022eee87411e6996a5f5fc8457 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -262,7 +262,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.15
 | htop | 3.1.1-r0 |
 | net-tools | 1.60_git20140218-r2 |
 | psmisc | 23.4-r0 |
-| curl | 8.2.1-r0 |
+| curl | 8.3.0-r0 |
 | wget | 1.21.2-r2 |
 | rsync | 3.2.5-r0 |
 | ca-certificates | 20230506-r0 |
@@ -276,7 +276,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.15
 | libstdc++ | 10.3.1_git20211027-r0 |
 | krb5-libs | 1.19.4-r0 |
 | libintl | 0.21-r0 |
-| libssl1.1 | 1.1.1v-r0 |
+| libssl1.1 | 1.1.1w-r0 |
 | lttng-ust | 2.12.0-r3 |
 | tzdata | 2023c-r0 |
 | userspace-rcu | 0.12.2-r0 |

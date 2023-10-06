@@ -5,10 +5,12 @@
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/python)
 
 **Image variations:**
+- [3.12-bookworm](#variant-312-bookworm)
 - [3.11-bookworm](#variant-311-bookworm)
 - [3.10-bookworm](#variant-310-bookworm)
 - [3.9-bookworm](#variant-39-bookworm)
 - [3.8-bookworm](#variant-38-bookworm)
+- [3.12-bullseye](#variant-312-bullseye)
 - [3.11-bullseye](#variant-311-bullseye)
 - [3.10-bullseye](#variant-310-bullseye)
 - [3.9-bullseye](#variant-39-bullseye)
@@ -18,14 +20,14 @@
 - [3.9-buster](#variant-39-buster)
 - [3.8-buster](#variant-38-buster)
 
-## Variant: 3.11-bookworm
+## Variant: 3.12-bookworm
 
-**Digest:** sha256:20917765504a72950d5b7896b46c9444862c74113f211e92f59bcf3cb7eeb2c6
+**Digest:** sha256:cf247152118f16586791e8bfe228d9d567a02565eded5b0b5200ca5004fed586
 
 **Tags:**
 ```
-mcr.microsoft.com/devcontainers/python:dev-3.11-bookworm
-mcr.microsoft.com/devcontainers/python:dev-3.11
+mcr.microsoft.com/devcontainers/python:dev-3.12-bookworm
+mcr.microsoft.com/devcontainers/python:dev-3.12
 mcr.microsoft.com/devcontainers/python:dev-3
 mcr.microsoft.com/devcontainers/python:dev-3-bookworm
 mcr.microsoft.com/devcontainers/python:dev-bookworm
@@ -43,13 +45,13 @@ mcr.microsoft.com/devcontainers/python:dev-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Python](https://www.python.org/) | 3.11.5 | /usr/local |
+| [Python](https://www.python.org/) | 3.12.0 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 38ef5192cb1c43159b516d15ab8fed96f847b36b | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f36c6db0eac17b022eee87411e6996a5f5fc8457 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -57,11 +59,11 @@ mcr.microsoft.com/devcontainers/python:dev-bookworm
 | Tool / package | Version |
 |----------------|---------|
 | setuptools | 68.2.2 |
-| pylint | 2.17.5 |
+| pylint | 3.0.0 |
 | flake8 | 6.1.0 |
 | autopep8 | 2.0.4 |
 | black | 23.9.1 |
-| yapf | 0.40.1 |
+| yapf | 0.40.2 |
 | mypy | 1.5.1 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.11.0 |
@@ -90,13 +92,111 @@ mcr.microsoft.com/devcontainers/python:dev-bookworm
 | iproute2 | 6.1.0-3 |
 | jq | 1.6-2.1 |
 | less | 590-2 |
-| libc6 | 2.36-9+deb12u1 |
+| libc6 | 2.36-9+deb12u3 |
 | libgssapi-krb5-2 | 1.20.1-2 |
 | libicu72 | 72.1-3 |
 | libkrb5-3 | 1.20.1-2 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14 |
-| locales | 2.36-9+deb12u1 |
+| locales | 2.36-9+deb12u3 |
+| lsb-release | 12.0-1 |
+| lsof | 4.95.0-1 |
+| man-db | 2.11.2-2 |
+| manpages | 6.03-2 |
+| manpages-dev | 6.03-2 |
+| nano | 7.2-1 |
+| ncdu | 1.18-0.2 |
+| net-tools | 2.10-0.1 |
+| openssh-client | 1:9.2p1-2 |
+| procps | 2:4.0.2-3 |
+| psmisc | 23.6-1 |
+| rsync | 3.2.7-1 |
+| strace | 6.1-0.1 |
+| sudo | 1.9.13p3-1+deb12u1 |
+| unzip | 6.0-28 |
+| vim-tiny | 2:9.0.1378-2 |
+| wget | 1.21.3-1+b2 |
+| yarn | 1.22.19-1 |
+| zip | 3.0-13 |
+| zlib1g | 1:1.2.13.dfsg-1 |
+| zsh | 5.9-4+b2 |
+
+## Variant: 3.11-bookworm
+
+**Digest:** sha256:74aaf3cdc0c5435a638d637ff73a46b37782366a9dafcd613f4a05b2eedfd29c
+
+**Tags:**
+```
+mcr.microsoft.com/devcontainers/python:dev-3.11-bookworm
+mcr.microsoft.com/devcontainers/python:dev-3.11
+```
+> *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
+
+**Linux distribution:** Debian GNU/Linux 12 (bookworm)
+
+**Architectures:** linux/amd64, linux/arm64
+
+**Available (non-root) user:** vscode
+
+### Contents
+**Languages and runtimes**
+
+| Language / runtime | Version | Path |
+|--------------------|---------|------|
+| [Python](https://www.python.org/) | 3.11.6 | /usr/local |
+
+**Tools installed using git**
+
+| Tool | Commit | Path |
+|------|--------|------|
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f36c6db0eac17b022eee87411e6996a5f5fc8457 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
+
+**Pip / pipx installed tools and packages**
+
+| Tool / package | Version |
+|----------------|---------|
+| setuptools | 68.2.2 |
+| pylint | 3.0.0 |
+| flake8 | 6.1.0 |
+| autopep8 | 2.0.4 |
+| black | 23.9.1 |
+| yapf | 0.40.2 |
+| mypy | 1.5.1 |
+| pydocstyle | 6.3.0 |
+| pycodestyle | 2.11.0 |
+| bandit | 1.7.5 |
+| virtualenv | 20.24.5 |
+| pipx | 1.2.0 |
+
+**Other tools and utilities**
+
+| Tool | Version | Path |
+|------|---------|------|
+| [git](https://github.com/git/git) | 2.42.0 | 
+
+**Additional linux tools and packages**
+
+| Tool / library | Version |
+|----------------|---------|
+| apt-transport-https | 2.6.1 |
+| apt-utils | 2.6.1 |
+| ca-certificates | 20230311 |
+| curl | 7.88.1-10+deb12u1 |
+| dialog | 1.3-20230209-1 |
+| git | 1:2.39.2-1.1 |
+| gnupg2 | 2.2.40-1.1 |
+| htop | 3.2.2-2 |
+| iproute2 | 6.1.0-3 |
+| jq | 1.6-2.1 |
+| less | 590-2 |
+| libc6 | 2.36-9+deb12u3 |
+| libgssapi-krb5-2 | 1.20.1-2 |
+| libicu72 | 72.1-3 |
+| libkrb5-3 | 1.20.1-2 |
+| liblttng-ust1 | 2.13.5-1 |
+| libstdc++6 | 12.2.0-14 |
+| locales | 2.36-9+deb12u3 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
@@ -121,7 +221,7 @@ mcr.microsoft.com/devcontainers/python:dev-bookworm
 
 ## Variant: 3.10-bookworm
 
-**Digest:** sha256:20fa47d08a595219f482059f72aa31f7dba2768eeafa0f3e014a4471028e7cba
+**Digest:** sha256:d83fe002d9fd8ee1fe0767a7093dab99f6f73e468f38be2a30455601d3907734
 
 **Tags:**
 ```
@@ -147,7 +247,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.10
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 38ef5192cb1c43159b516d15ab8fed96f847b36b | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f36c6db0eac17b022eee87411e6996a5f5fc8457 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -155,11 +255,11 @@ mcr.microsoft.com/devcontainers/python:dev-3.10
 | Tool / package | Version |
 |----------------|---------|
 | setuptools | 68.2.2 |
-| pylint | 2.17.5 |
+| pylint | 3.0.0 |
 | flake8 | 6.1.0 |
 | autopep8 | 2.0.4 |
 | black | 23.9.1 |
-| yapf | 0.40.1 |
+| yapf | 0.40.2 |
 | mypy | 1.5.1 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.11.0 |
@@ -188,13 +288,13 @@ mcr.microsoft.com/devcontainers/python:dev-3.10
 | iproute2 | 6.1.0-3 |
 | jq | 1.6-2.1 |
 | less | 590-2 |
-| libc6 | 2.36-9+deb12u1 |
+| libc6 | 2.36-9+deb12u3 |
 | libgssapi-krb5-2 | 1.20.1-2 |
 | libicu72 | 72.1-3 |
 | libkrb5-3 | 1.20.1-2 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14 |
-| locales | 2.36-9+deb12u1 |
+| locales | 2.36-9+deb12u3 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
@@ -219,7 +319,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.10
 
 ## Variant: 3.9-bookworm
 
-**Digest:** sha256:e81aa55344f5edaf718a452af0f7297329fd7cecbdc18f19e0ba1673150b688d
+**Digest:** sha256:e5ec73f0a3af799a8814b49f2d76e50a023e5b5ec627e1a8d008ab198e099bd8
 
 **Tags:**
 ```
@@ -245,7 +345,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 38ef5192cb1c43159b516d15ab8fed96f847b36b | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f36c6db0eac17b022eee87411e6996a5f5fc8457 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -253,11 +353,11 @@ mcr.microsoft.com/devcontainers/python:dev-3.9
 | Tool / package | Version |
 |----------------|---------|
 | setuptools | 68.2.2 |
-| pylint | 2.17.5 |
+| pylint | 3.0.0 |
 | flake8 | 6.1.0 |
 | autopep8 | 2.0.4 |
 | black | 23.9.1 |
-| yapf | 0.40.1 |
+| yapf | 0.40.2 |
 | mypy | 1.5.1 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.11.0 |
@@ -286,13 +386,13 @@ mcr.microsoft.com/devcontainers/python:dev-3.9
 | iproute2 | 6.1.0-3 |
 | jq | 1.6-2.1 |
 | less | 590-2 |
-| libc6 | 2.36-9+deb12u1 |
+| libc6 | 2.36-9+deb12u3 |
 | libgssapi-krb5-2 | 1.20.1-2 |
 | libicu72 | 72.1-3 |
 | libkrb5-3 | 1.20.1-2 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14 |
-| locales | 2.36-9+deb12u1 |
+| locales | 2.36-9+deb12u3 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
@@ -317,7 +417,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9
 
 ## Variant: 3.8-bookworm
 
-**Digest:** sha256:5d37ecbe71f4e911f4f4cced152097f940da9d6ec77f5247ecf0f6a1f396a70e
+**Digest:** sha256:2859e92b416a23d5e37b55b684fef045b631d8e5726a5d7481c63cae6ad2a377
 
 **Tags:**
 ```
@@ -343,7 +443,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 38ef5192cb1c43159b516d15ab8fed96f847b36b | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f36c6db0eac17b022eee87411e6996a5f5fc8457 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -351,11 +451,11 @@ mcr.microsoft.com/devcontainers/python:dev-3.8
 | Tool / package | Version |
 |----------------|---------|
 | setuptools | 68.2.2 |
-| pylint | 2.17.5 |
+| pylint | 3.0.0 |
 | flake8 | 6.1.0 |
 | autopep8 | 2.0.4 |
 | black | 23.9.1 |
-| yapf | 0.40.1 |
+| yapf | 0.40.2 |
 | mypy | 1.5.1 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.11.0 |
@@ -384,13 +484,13 @@ mcr.microsoft.com/devcontainers/python:dev-3.8
 | iproute2 | 6.1.0-3 |
 | jq | 1.6-2.1 |
 | less | 590-2 |
-| libc6 | 2.36-9+deb12u1 |
+| libc6 | 2.36-9+deb12u3 |
 | libgssapi-krb5-2 | 1.20.1-2 |
 | libicu72 | 72.1-3 |
 | libkrb5-3 | 1.20.1-2 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14 |
-| locales | 2.36-9+deb12u1 |
+| locales | 2.36-9+deb12u3 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
@@ -413,13 +513,13 @@ mcr.microsoft.com/devcontainers/python:dev-3.8
 | zlib1g | 1:1.2.13.dfsg-1 |
 | zsh | 5.9-4+b2 |
 
-## Variant: 3.11-bullseye
+## Variant: 3.12-bullseye
 
-**Digest:** sha256:a0cc1e6b8a9d0c095b3cfb7f4d3a63ac2c8f58555e08aa7dc93f6217d7236745
+**Digest:** sha256:ac2026cd46133055b0828ea4a551a96700cad3e0a5852330ae885495e3a08fbe
 
 **Tags:**
 ```
-mcr.microsoft.com/devcontainers/python:dev-3.11-bullseye
+mcr.microsoft.com/devcontainers/python:dev-3.12-bullseye
 mcr.microsoft.com/devcontainers/python:dev-3-bullseye
 mcr.microsoft.com/devcontainers/python:dev-bullseye
 ```
@@ -436,13 +536,13 @@ mcr.microsoft.com/devcontainers/python:dev-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Python](https://www.python.org/) | 3.11.5 | /usr/local |
+| [Python](https://www.python.org/) | 3.12.0 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 38ef5192cb1c43159b516d15ab8fed96f847b36b | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f36c6db0eac17b022eee87411e6996a5f5fc8457 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -450,11 +550,11 @@ mcr.microsoft.com/devcontainers/python:dev-bullseye
 | Tool / package | Version |
 |----------------|---------|
 | setuptools | 68.2.2 |
-| pylint | 2.17.5 |
+| pylint | 3.0.1 |
 | flake8 | 6.1.0 |
 | autopep8 | 2.0.4 |
 | black | 23.9.1 |
-| yapf | 0.40.1 |
+| yapf | 0.40.2 |
 | mypy | 1.5.1 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.11.0 |
@@ -483,14 +583,112 @@ mcr.microsoft.com/devcontainers/python:dev-bullseye
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
 | less | 551-2 |
-| libc6 | 2.31-13+deb11u6 |
+| libc6 | 2.31-13+deb11u7 |
 | libgssapi-krb5-2 | 1.18.3-6+deb11u3 |
 | libicu67 | 67.1-7 |
 | libkrb5-3 | 1.18.3-6+deb11u3 |
 | liblttng-ust0 | 2.12.1-1 |
 | libssl1.1 | 1.1.1n-0+deb11u5 |
 | libstdc++6 | 10.2.1-6 |
-| locales | 2.31-13+deb11u6 |
+| locales | 2.31-13+deb11u7 |
+| lsb-release | 11.1.0 |
+| lsof | 4.93.2+dfsg-1.1 |
+| man-db | 2.9.4-2 |
+| manpages | 5.10-1 |
+| manpages-dev | 5.10-1 |
+| nano | 5.4-2+deb11u2 |
+| ncdu | 1.15.1-1 |
+| net-tools | 1.60+git20181103.0eebece-1 |
+| openssh-client | 1:8.4p1-5+deb11u1 |
+| procps | 2:3.3.17-5 |
+| psmisc | 23.4-2 |
+| rsync | 3.2.3-4+deb11u1 |
+| strace | 5.10-1 |
+| sudo | 1.9.5p2-3+deb11u1 |
+| unzip | 6.0-26+deb11u1 |
+| vim-tiny | 2:8.2.2434-3+deb11u1 |
+| wget | 1.21-1+deb11u1 |
+| yarn | 1.22.19-1 |
+| zip | 3.0-12 |
+| zlib1g | 1:1.2.11.dfsg-2+deb11u2 |
+| zsh | 5.8-6+deb11u1 |
+
+## Variant: 3.11-bullseye
+
+**Digest:** sha256:dc5946b4e98e705cf7a16861c772c9a095dddac9d4ceb4f1fcd1d0d70d8e3f78
+
+**Tags:**
+```
+mcr.microsoft.com/devcontainers/python:dev-3.11-bullseye
+```
+> *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
+
+**Linux distribution:** Debian GNU/Linux 11 (bullseye)
+
+**Architectures:** linux/amd64, linux/arm64
+
+**Available (non-root) user:** vscode
+
+### Contents
+**Languages and runtimes**
+
+| Language / runtime | Version | Path |
+|--------------------|---------|------|
+| [Python](https://www.python.org/) | 3.11.6 | /usr/local |
+
+**Tools installed using git**
+
+| Tool | Commit | Path |
+|------|--------|------|
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f36c6db0eac17b022eee87411e6996a5f5fc8457 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
+
+**Pip / pipx installed tools and packages**
+
+| Tool / package | Version |
+|----------------|---------|
+| setuptools | 68.2.2 |
+| pylint | 3.0.0 |
+| flake8 | 6.1.0 |
+| autopep8 | 2.0.4 |
+| black | 23.9.1 |
+| yapf | 0.40.2 |
+| mypy | 1.5.1 |
+| pydocstyle | 6.3.0 |
+| pycodestyle | 2.11.0 |
+| bandit | 1.7.5 |
+| virtualenv | 20.24.5 |
+| pipx | 1.2.0 |
+
+**Other tools and utilities**
+
+| Tool | Version | Path |
+|------|---------|------|
+| [git](https://github.com/git/git) | 2.42.0 | 
+
+**Additional linux tools and packages**
+
+| Tool / library | Version |
+|----------------|---------|
+| apt-transport-https | 2.2.4 |
+| apt-utils | 2.2.4 |
+| ca-certificates | 20210119 |
+| curl | 7.74.0-1.3+deb11u7 |
+| dialog | 1.3-20201126-1 |
+| git | 1:2.30.2-1+deb11u2 |
+| gnupg2 | 2.2.27-2+deb11u2 |
+| htop | 3.0.5-7 |
+| iproute2 | 5.10.0-4 |
+| jq | 1.6-2.1 |
+| less | 551-2 |
+| libc6 | 2.31-13+deb11u7 |
+| libgssapi-krb5-2 | 1.18.3-6+deb11u3 |
+| libicu67 | 67.1-7 |
+| libkrb5-3 | 1.18.3-6+deb11u3 |
+| liblttng-ust0 | 2.12.1-1 |
+| libssl1.1 | 1.1.1n-0+deb11u5 |
+| libstdc++6 | 10.2.1-6 |
+| locales | 2.31-13+deb11u7 |
 | lsb-release | 11.1.0 |
 | lsof | 4.93.2+dfsg-1.1 |
 | man-db | 2.9.4-2 |
@@ -515,7 +713,7 @@ mcr.microsoft.com/devcontainers/python:dev-bullseye
 
 ## Variant: 3.10-bullseye
 
-**Digest:** sha256:9af007c989c224400483b4938d053bbba9d8a5bd6c6177f5b91b31ddb09c4cdb
+**Digest:** sha256:bf14ccf70491ad2f8801cfa3c451442c1a5d17c33ff058c663ce9e659d90360d
 
 **Tags:**
 ```
@@ -540,7 +738,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.10-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 38ef5192cb1c43159b516d15ab8fed96f847b36b | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f36c6db0eac17b022eee87411e6996a5f5fc8457 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -548,11 +746,11 @@ mcr.microsoft.com/devcontainers/python:dev-3.10-bullseye
 | Tool / package | Version |
 |----------------|---------|
 | setuptools | 68.2.2 |
-| pylint | 2.17.5 |
+| pylint | 3.0.0 |
 | flake8 | 6.1.0 |
 | autopep8 | 2.0.4 |
 | black | 23.9.1 |
-| yapf | 0.40.1 |
+| yapf | 0.40.2 |
 | mypy | 1.5.1 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.11.0 |
@@ -581,14 +779,14 @@ mcr.microsoft.com/devcontainers/python:dev-3.10-bullseye
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
 | less | 551-2 |
-| libc6 | 2.31-13+deb11u6 |
+| libc6 | 2.31-13+deb11u7 |
 | libgssapi-krb5-2 | 1.18.3-6+deb11u3 |
 | libicu67 | 67.1-7 |
 | libkrb5-3 | 1.18.3-6+deb11u3 |
 | liblttng-ust0 | 2.12.1-1 |
 | libssl1.1 | 1.1.1n-0+deb11u5 |
 | libstdc++6 | 10.2.1-6 |
-| locales | 2.31-13+deb11u6 |
+| locales | 2.31-13+deb11u7 |
 | lsb-release | 11.1.0 |
 | lsof | 4.93.2+dfsg-1.1 |
 | man-db | 2.9.4-2 |
@@ -613,7 +811,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.10-bullseye
 
 ## Variant: 3.9-bullseye
 
-**Digest:** sha256:cc401a162c423eb99b84a7206ad3d3d3204e1bd11aa1949ff99927460417717e
+**Digest:** sha256:cf20d0a717d00ea97cd1ca526463dd04305b0611860a97ea036eee38d6e27709
 
 **Tags:**
 ```
@@ -638,7 +836,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 38ef5192cb1c43159b516d15ab8fed96f847b36b | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f36c6db0eac17b022eee87411e6996a5f5fc8457 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -646,11 +844,11 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-bullseye
 | Tool / package | Version |
 |----------------|---------|
 | setuptools | 68.2.2 |
-| pylint | 2.17.5 |
+| pylint | 3.0.0 |
 | flake8 | 6.1.0 |
 | autopep8 | 2.0.4 |
 | black | 23.9.1 |
-| yapf | 0.40.1 |
+| yapf | 0.40.2 |
 | mypy | 1.5.1 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.11.0 |
@@ -679,14 +877,14 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-bullseye
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
 | less | 551-2 |
-| libc6 | 2.31-13+deb11u6 |
+| libc6 | 2.31-13+deb11u7 |
 | libgssapi-krb5-2 | 1.18.3-6+deb11u3 |
 | libicu67 | 67.1-7 |
 | libkrb5-3 | 1.18.3-6+deb11u3 |
 | liblttng-ust0 | 2.12.1-1 |
 | libssl1.1 | 1.1.1n-0+deb11u5 |
 | libstdc++6 | 10.2.1-6 |
-| locales | 2.31-13+deb11u6 |
+| locales | 2.31-13+deb11u7 |
 | lsb-release | 11.1.0 |
 | lsof | 4.93.2+dfsg-1.1 |
 | man-db | 2.9.4-2 |
@@ -711,7 +909,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-bullseye
 
 ## Variant: 3.8-bullseye
 
-**Digest:** sha256:a90b07542ef3960c1704b9a46d7eb7eb8b89d791b05b7113dc1e00f0fbc813a8
+**Digest:** sha256:ec23b99008f95f1ccb6633aa549aa4986028d5f834d8523cb6a7467e08ac81af
 
 **Tags:**
 ```
@@ -736,7 +934,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 38ef5192cb1c43159b516d15ab8fed96f847b36b | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f36c6db0eac17b022eee87411e6996a5f5fc8457 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -744,11 +942,11 @@ mcr.microsoft.com/devcontainers/python:dev-3.8-bullseye
 | Tool / package | Version |
 |----------------|---------|
 | setuptools | 68.2.2 |
-| pylint | 2.17.5 |
+| pylint | 3.0.0 |
 | flake8 | 6.1.0 |
 | autopep8 | 2.0.4 |
 | black | 23.9.1 |
-| yapf | 0.40.1 |
+| yapf | 0.40.2 |
 | mypy | 1.5.1 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.11.0 |
@@ -777,14 +975,14 @@ mcr.microsoft.com/devcontainers/python:dev-3.8-bullseye
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
 | less | 551-2 |
-| libc6 | 2.31-13+deb11u6 |
+| libc6 | 2.31-13+deb11u7 |
 | libgssapi-krb5-2 | 1.18.3-6+deb11u3 |
 | libicu67 | 67.1-7 |
 | libkrb5-3 | 1.18.3-6+deb11u3 |
 | liblttng-ust0 | 2.12.1-1 |
 | libssl1.1 | 1.1.1n-0+deb11u5 |
 | libstdc++6 | 10.2.1-6 |
-| locales | 2.31-13+deb11u6 |
+| locales | 2.31-13+deb11u7 |
 | lsb-release | 11.1.0 |
 | lsof | 4.93.2+dfsg-1.1 |
 | man-db | 2.9.4-2 |
@@ -809,7 +1007,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8-bullseye
 
 ## Variant: 3.11-buster
 
-**Digest:** sha256:0997fc004cb80705d31b7310eb4fa1b438e90e1e86e356fcfb7d0962886d5944
+**Digest:** sha256:e998203938e4c7cb46b9f6d8f358f69a373ca39de795e2eaff09de4d4c4ca260
 
 **Tags:**
 ```
@@ -836,7 +1034,7 @@ mcr.microsoft.com/devcontainers/python:dev-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 38ef5192cb1c43159b516d15ab8fed96f847b36b | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f36c6db0eac17b022eee87411e6996a5f5fc8457 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -844,11 +1042,11 @@ mcr.microsoft.com/devcontainers/python:dev-buster
 | Tool / package | Version |
 |----------------|---------|
 | setuptools | 68.2.2 |
-| pylint | 2.17.5 |
+| pylint | 3.0.0 |
 | flake8 | 6.1.0 |
 | autopep8 | 2.0.4 |
 | black | 23.9.1 |
-| yapf | 0.40.1 |
+| yapf | 0.40.2 |
 | mypy | 1.5.1 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.11.0 |
@@ -901,7 +1099,7 @@ mcr.microsoft.com/devcontainers/python:dev-buster
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u5 |
 | unzip | 6.0-23+deb10u3 |
-| vim-tiny | 2:8.1.0875-5+deb10u5 |
+| vim-tiny | 2:8.1.0875-5+deb10u6 |
 | wget | 1.20.1-1.1 |
 | yarn | 1.22.19-1 |
 | zip | 3.0-11+b1 |
@@ -910,7 +1108,7 @@ mcr.microsoft.com/devcontainers/python:dev-buster
 
 ## Variant: 3.10-buster
 
-**Digest:** sha256:0742745e19b8197ff41a494d49a666e048b34a794ee073957a63a8331051d879
+**Digest:** sha256:ab42f293765de1e4554b8d533f859208f5b7bc2654510bdd34247e3d8812a507
 
 **Tags:**
 ```
@@ -935,7 +1133,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.10-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 38ef5192cb1c43159b516d15ab8fed96f847b36b | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f36c6db0eac17b022eee87411e6996a5f5fc8457 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -943,11 +1141,11 @@ mcr.microsoft.com/devcontainers/python:dev-3.10-buster
 | Tool / package | Version |
 |----------------|---------|
 | setuptools | 68.2.2 |
-| pylint | 2.17.5 |
+| pylint | 3.0.0 |
 | flake8 | 6.1.0 |
 | autopep8 | 2.0.4 |
 | black | 23.9.1 |
-| yapf | 0.40.1 |
+| yapf | 0.40.2 |
 | mypy | 1.5.1 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.11.0 |
@@ -1000,7 +1198,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.10-buster
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u5 |
 | unzip | 6.0-23+deb10u3 |
-| vim-tiny | 2:8.1.0875-5+deb10u5 |
+| vim-tiny | 2:8.1.0875-5+deb10u6 |
 | wget | 1.20.1-1.1 |
 | yarn | 1.22.19-1 |
 | zip | 3.0-11+b1 |
@@ -1009,7 +1207,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.10-buster
 
 ## Variant: 3.9-buster
 
-**Digest:** sha256:7b47d1e7e626b779aa276e0da7b5ce6424b68735dd2711d302b0bd037018e2f5
+**Digest:** sha256:1087d43026cf45bc82f0366bfbc7444e0b6b341108471d89f075b3398bb5c921
 
 **Tags:**
 ```
@@ -1034,7 +1232,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 38ef5192cb1c43159b516d15ab8fed96f847b36b | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f36c6db0eac17b022eee87411e6996a5f5fc8457 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -1042,11 +1240,11 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-buster
 | Tool / package | Version |
 |----------------|---------|
 | setuptools | 68.2.2 |
-| pylint | 2.17.5 |
+| pylint | 3.0.0 |
 | flake8 | 6.1.0 |
 | autopep8 | 2.0.4 |
 | black | 23.9.1 |
-| yapf | 0.40.1 |
+| yapf | 0.40.2 |
 | mypy | 1.5.1 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.11.0 |
@@ -1099,7 +1297,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-buster
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u5 |
 | unzip | 6.0-23+deb10u3 |
-| vim-tiny | 2:8.1.0875-5+deb10u5 |
+| vim-tiny | 2:8.1.0875-5+deb10u6 |
 | wget | 1.20.1-1.1 |
 | yarn | 1.22.19-1 |
 | zip | 3.0-11+b1 |
@@ -1108,7 +1306,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-buster
 
 ## Variant: 3.8-buster
 
-**Digest:** sha256:13083bda50226461f6dc15e228f8988d2ae21e3ea3ab8c8955774ba0f7f75f37
+**Digest:** sha256:aa99dd19324a4f9a9088017b4ada1458049f9ab4c01dcd2014b1bf416eef2e71
 
 **Tags:**
 ```
@@ -1133,7 +1331,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 38ef5192cb1c43159b516d15ab8fed96f847b36b | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f36c6db0eac17b022eee87411e6996a5f5fc8457 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -1141,11 +1339,11 @@ mcr.microsoft.com/devcontainers/python:dev-3.8-buster
 | Tool / package | Version |
 |----------------|---------|
 | setuptools | 68.2.2 |
-| pylint | 2.17.5 |
+| pylint | 3.0.0 |
 | flake8 | 6.1.0 |
 | autopep8 | 2.0.4 |
 | black | 23.9.1 |
-| yapf | 0.40.1 |
+| yapf | 0.40.2 |
 | mypy | 1.5.1 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.11.0 |
@@ -1198,7 +1396,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8-buster
 | strace | 4.26-0.2 |
 | sudo | 1.8.27-1+deb10u5 |
 | unzip | 6.0-23+deb10u3 |
-| vim-tiny | 2:8.1.0875-5+deb10u5 |
+| vim-tiny | 2:8.1.0875-5+deb10u6 |
 | wget | 1.20.1-1.1 |
 | yarn | 1.22.19-1 |
 | zip | 3.0-11+b1 |
