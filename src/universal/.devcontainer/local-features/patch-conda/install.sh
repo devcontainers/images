@@ -52,8 +52,9 @@ sudo_if /opt/conda/bin/python3 -m pip install --upgrade pip
 
 # pyopenssl should be updated to be compatible with latest version of cryptography
 update_conda_package pyopenssl "23.2.0"
-# https://github.com/advisories/GHSA-jm77-qphf-c4w8
-update_conda_package cryptography "41.0.3"
+
+# https://github.com/advisories/GHSA-v8gr-m533-ghj9
+update_python_package /opt/conda/bin/python3 cryptography "41.0.4"
 
 # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32681
 update_conda_package requests "2.31.0"
