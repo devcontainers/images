@@ -58,3 +58,6 @@ update_python_package /opt/conda/bin/python3 cryptography "41.0.4"
 
 # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32681
 update_conda_package requests "2.31.0"
+
+# https://github.com/advisories/GHSA-v8gr-m533-ghj9
+update_python_package /opt/conda/bin/python3 urllib3 "1.26.17"
