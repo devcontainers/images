@@ -21,6 +21,7 @@ check "usr-local-etc-config-does-not-exist" test ! -f "/usr/local/etc/gitconfig"
 checkPythonPackageVersion "cryptography" "41.0.3"
 checkPythonPackageVersion "setuptools" "65.5.1"
 checkPythonPackageVersion "wheel" "0.38.1"
+checkPythonPackageVersion "urllib3" "1.26.17"
 
 checkCondaPackageVersion "cryptography" "41.0.3"
 checkCondaPackageVersion "pyopenssl" "23.2.0"
