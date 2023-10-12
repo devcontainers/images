@@ -1,0 +1,42 @@
+# New sonar cloud connection
+
+!Build Status
+
+## Introduction
+
+Introduction: A brief description of your project and its purpose.
+Features: A list of features that your project provides.
+Installation: Instructions on how to install and set up your project.
+Usage: Instructions on how to use your project.
+Contributing: Guidelines on how to contribute to your project.
+License: Information about the license under which your project is released.
+
+## Features
+
+- Cloud CI Integrations: SonarCloud integrates with popular cloud CI platforms such as Travis, Azure DevOps, BitBucket, and AppVeyor to help you automate the measurement of your technical debt, including code semantics, testing coverage, and vulnerabilities 1.
+- Deep Code Analysis: SonarCloud uses state-of-the-art techniques in static code analysis to explore all source files, whether in branches or pull requests, to reach a green Quality Gate and promote the build 2.
+- Thousands of Rules: SonarCloud has thousands of rules to track down hard-to-find bugs and quality issues thanks to powerful static code analyzers 3.
+
+## Installation
+
+Instructions on how to install your project.
+
+## Usage
+
+Instructions on how to use your project.
+
+## Create a SonarCloud account: If you don’t have a SonarCloud account, create one by visiting the SonarCloud website and clicking on the “Sign Up” button.
+
+Create a new project: Once you have created an account, log in to your SonarCloud account and create a new project by clicking on the “Create new project” button. You will be prompted to enter the name of your project and select the language of your project.
+
+Configure your build system: After creating a new project, you need to configure your build system to run the SonarCloud analysis. You can use one of the many SonarCloud plugins available for popular build systems like Maven, Gradle, and Jenkins.
+
+Run the analysis: Once you have configured your build system, run the SonarCloud analysis by executing the appropriate command in your terminal or build script. The analysis results will be uploaded to your SonarCloud account.
+
+View the results: After running the analysis, you can view the results of the analysis on your SonarCloud dashboard. The dashboard provides detailed information about code quality, code coverage, and other metrics.
+
+Instructions on how to contribute to your project.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details.
