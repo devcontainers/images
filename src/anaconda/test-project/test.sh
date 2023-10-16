@@ -46,6 +46,7 @@ checkPythonPackageVersion "mpmath" "1.3.0"
 checkPythonPackageVersion "aiohttp" "3.8.5"
 checkPythonPackageVersion "jupyter_server" "2.7.2"
 checkPythonPackageVersion "urllib3" "1.26.17"
+checkPythonPackageVersion "imagecodecs" "2023.9.18"
 
 # The `tornado` package doesn't have the `__version__` attribute so we can use the `version` attribute.
 tornado_version=$(python -c "import tornado; print(tornado.version)")
