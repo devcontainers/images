@@ -1,5 +1,5 @@
 {
-	"version": "0.204.14",
+	"version": "1.0.0",
 	"variants": [
 		"7.0-bookworm-slim",
 		"7.0-bullseye-slim",
