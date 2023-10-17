@@ -13,10 +13,14 @@ USERNAME=${1:-"vscode"}
 # The buster pkg repo install cmake version < 3.15 which is required to run bootstrap-vcpkg.sh on ARM64
 VCPKG_UNSUPPORTED_ARM64_VERSION_CODENAMES="buster"
 
-# Exit early if ARM64 OS does not have cmake version required to build Vcpkg
-if [ "$(dpkg --print-architecture)" = "arm64" ] && [[ "${VCPKG_UNSUPPORTED_ARM64_VERSION_CODENAMES}" = *"${VERSION_CODENAME}"* ]] then
-    echo "OS ${VERSION_CODENAME} ARM64 pkg repo installs cmake version < 3.15, which is required to build Vcpkg."
-    exit 0
+if [ "$(dpkg --print-architecture)" = "arm64" ]; then
+    # Exit early if ARM64 OS does not have cmake version required to build Vcpkg
+    if [[ "${VCPKG_UNSUPPORTED_ARM64_VERSION_CODENAMES}" = *"${VERSION_CODENAME}"* ]]; then
+        echo "OS ${VERSION_CODENAME} ARM64 pkg repo installs cmake version < 3.15, which is required to build Vcpkg."
+        exit 0
+    fi
+
+    export VCPKG_FORCE_SYSTEM_BINARIES=1
 fi
 
 # Add to bashrc/zshrc files for all users.
@@ -82,6 +86,13 @@ export VCPKG_ROOT="${VCPKG_ROOT}"
 if [[ "\${PATH}" != *"\${VCPKG_ROOT}"* ]]; then export PATH="\${PATH}:\${VCPKG_ROOT}"; fi
 EOF
 )"
+
+if [[ -n "$VCPKG_FORCE_SYSTEM_BINARIES" ]]; then
+    updaterc "$(cat << EOF
+export VCPKG_FORCE_SYSTEM_BINARIES=1
+EOF
+)"
+fi
 
 # Give read/write permissions to the user group.
 chown -R ":vcpkg" "${VCPKG_ROOT}" "${VCPKG_DOWNLOADS}"
