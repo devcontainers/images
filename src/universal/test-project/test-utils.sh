@@ -217,3 +217,36 @@ checkDirectoryOwnership() {
         return 1
     fi
 }
+
+checkPythonPackageVersion()
+{
+    PYTHON_PATH=$1
+    PACKAGE=$2
+    REQUIRED_VERSION=$3
+
+    current_version=$(${PYTHON_PATH} -c "import ${PACKAGE}; print(${PACKAGE}.__version__)")
+    check-version-ge "${PACKAGE}-requirement" "${current_version}" "${REQUIRED_VERSION}"
+}
+
+checkCondaPackageVersion()
+{
+    PACKAGE=$1
+    REQUIRED_VERSION=$2
+    current_version=$(conda list "${PACKAGE}" | grep -E "^${PACKAGE}\s" | awk '{print $2}')
+    check-version-ge "conda-${PACKAGE}-requirement" "${current_version}" "${REQUIRED_VERSION}"
+}
+
+checkBundledNpmVersion()
+{
+    NODE_VERSION=$1
+    REQUIRED_NPM_VERSION=$2
+    bash -c ". /usr/local/share/nvm/nvm.sh && nvm use ${NODE_VERSION}"
+
+    current_npm_version=$(npm --version)
+
+    if [[ "$NODE_VERSION" != "default" ]]; then
+      bash -c ". /usr/local/share/nvm/nvm.sh && nvm use default"
+    fi
+    
+    check-version-ge "node-${NODE_VERSION}-requirement" "${current_npm_version}" "${REQUIRED_NPM_VERSION}"
+}

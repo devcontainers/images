@@ -31,7 +31,6 @@ check "usr-local-etc-config-does-not-exist" test ! -f "/usr/local/etc/gitconfig"
 
 checkPythonPackageVersion "joblib" "1.2.0"
 checkPythonPackageVersion "cookiecutter" "2.1.1"
-checkPythonPackageVersion "cryptography" "38.0.3"
 checkPythonPackageVersion "mistune" "2.0.3"
 checkPythonPackageVersion "numpy" "1.22"
 checkPythonPackageVersion "setuptools" "65.5.1"
@@ -41,14 +40,28 @@ checkPythonPackageVersion "nbconvert" "6.5.1"
 checkPythonPackageVersion "werkzeug" "2.2.3"
 checkPythonPackageVersion "certifi" "2022.12.07"
 checkPythonPackageVersion "requests" "2.31.0"
+checkPythonPackageVersion "cryptography" "41.0.3"
+checkPythonPackageVersion "transformers" "4.30.0"
+checkPythonPackageVersion "mpmath" "1.3.0"
+checkPythonPackageVersion "aiohttp" "3.8.5"
+checkPythonPackageVersion "jupyter_server" "2.7.2"
+checkPythonPackageVersion "urllib3" "1.26.17"
 
 # The `tornado` package doesn't have the `__version__` attribute so we can use the `version` attribute.
 tornado_version=$(python -c "import tornado; print(tornado.version)")
-check-version-ge "tornado-requirement" "${tornado_version}" "6.3.2"
+check-version-ge "tornado-requirement" "${tornado_version}" "6.3.3"
+
+checkCondaPackageVersion "pyopenssl" "23.2.0"
+checkCondaPackageVersion "cryptography" "41.0.3"
+checkCondaPackageVersion "requests" "2.31.0"
+checkCondaPackageVersion "pygments" "2.15.1"
+checkCondaPackageVersion "mpmath" "1.3.0"
+checkCondaPackageVersion "aiohttp" "3.8.5"
+checkCondaPackageVersion "pillow" "10.0.1"
 
 check "conda-update-conda" bash -c "conda update -y conda"
-check "conda-install" bash -c "conda install -c conda-forge --yes tensorflow"
-check "conda-install" bash -c "conda install -c conda-forge --yes pytorch"
+check "conda-install-tensorflow" bash -c "conda create --name test-env -c conda-forge --yes tensorflow"
+check "conda-install-pytorch" bash -c "conda create --name test-env -c conda-forge --yes pytorch"
 
 # Report result
 reportResults

@@ -1,8 +1,10 @@
 {
-	"version": "0.204.11",
+	"version": "1.0.0",
 	"variants": [
+		"7.0-bookworm-slim",
 		"7.0-bullseye-slim",
 		"7.0-jammy",
+		"6.0-bookworm-slim",
 		"6.0-bullseye-slim",
 		"6.0-jammy",
 		"6.0-focal"
@@ -14,11 +16,19 @@
 			"dotnet:${VERSION}-${VARIANT}"
 		],
 		"architectures": {
+			"7.0-bookworm-slim": [
+				"linux/amd64",
+				"linux/arm64"
+			],
 			"7.0-bullseye-slim": [
 				"linux/amd64",
 				"linux/arm64"
 			],
 			"7.0-jammy": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"6.0-bookworm-slim": [
 				"linux/amd64",
 				"linux/arm64"
 			],
@@ -35,12 +45,18 @@
 			]
 		},
 		"variantTags": {
-			"7.0-bullseye-slim": [
+			"7.0-bookworm-slim": [
 				"dotnet:${VERSION}-7.0",
+				"dotnet:${VERSION}-7.0-bookworm"
+			],
+			"7.0-bullseye-slim": [
 				"dotnet:${VERSION}-7.0-bullseye"
 			],
-			"6.0-bullseye-slim": [
+			"6.0-bookworm-slim": [
 				"dotnet:${VERSION}-6.0",
+				"dotnet:${VERSION}-6.0-bookworm"
+			],
+			"6.0-bullseye-slim": [
 				"dotnet:${VERSION}-6.0-bullseye"
 			]
 		}

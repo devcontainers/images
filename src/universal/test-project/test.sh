@@ -53,10 +53,7 @@ check "seaborn" python -c "import seaborn; print(seaborn.__version__)"
 check "scikit-learn" python -c "import sklearn; print(sklearn.__version__)"
 check "torch" python -c "import torch; print(torch.__version__)"
 check "requests" python -c "import requests; print(requests.__version__)"
-check "jupyterlab-git" bash -c "python3 -m pip list | grep jupyterlab-git"
-
-setuptools_version=$(python3 -c "import setuptools; print(setuptools.__version__)")
-check-version-ge "setuptools-requirement" "${setuptools_version}" "65.5.1"
+check "jupyterlab-git" python -c "import jupyterlab_git; print(jupyterlab_git.__version__)"
 
 # Check JupyterLab
 check "jupyter-lab" jupyter-lab --version
@@ -98,6 +95,8 @@ count=$(ls /usr/local/share/nvm/versions/node | wc -l)
 expectedCount=2
 checkVersionCount "two versions of node are present" $count $expectedCount
 echo $(echo "node versions" && ls -a /usr/local/share/nvm/versions/node)
+checkBundledNpmVersion "default" "9.8.0"
+checkBundledNpmVersion "18" "9.8.1"
 
 # PHP
 check "php" php --version
@@ -184,19 +183,26 @@ check "java-12.0.2-installed-by-oryx" ls /opt/java/ | grep 12.0.2
 check "java-version-on-path-is-12.0.2" java --version | grep 12.0.2
 
 # Test patches
-MAVEN_PATH=$(cd /usr/local/sdkman/candidates/maven/3*/lib/ && pwd)
-check "commons-io-lib" bash -c "ls ${MAVEN_PATH} | grep commons-io-2.11.jar"
-
-wheel_version=$(python -c "import wheel; print(wheel.__version__)")
-check-version-ge "wheel-requirement" "${wheel_version}" "0.38.1"
 
 ls -la /home/codespace
 
-setuptools_version_py_current=$(python -c "import setuptools; print(setuptools.__version__)")
-check-version-ge "setuptools-requirement-python_current" "${setuptools_version_py_current}" "65.5.1"
+## Python - current
+checkPythonPackageVersion "python" "setuptools" "65.5.1"
+checkPythonPackageVersion "python" "requests" "2.31.0"
 
-setuptools_version_py_39=$(/usr/local/python/3.9.*/bin/python -c "import setuptools; print(setuptools.__version__)")
-check-version-ge "setuptools-requirement-python_39" "${setuptools_version_py_39}" "65.5.1"
+## Python 3.9
+checkPythonPackageVersion "/usr/local/python/3.9.*/bin/python" "setuptools" "65.5.1"
+
+## Conda Python
+checkCondaPackageVersion "requests" "2.31.0"
+checkCondaPackageVersion "cryptography" "41.0.4"
+checkCondaPackageVersion "pyopenssl" "23.2.0"
+checkCondaPackageVersion "urllib3" "1.26.17"
+
+## Test Conda
+check "conda-update-conda" bash -c "conda update -y conda"
+check "conda-install-tensorflow" bash -c "conda create --name test-env -c conda-forge --yes tensorflow"
+check "conda-install-pytorch" bash -c "conda create --name test-env -c conda-forge --yes pytorch"
 
 # Report result
 reportResults

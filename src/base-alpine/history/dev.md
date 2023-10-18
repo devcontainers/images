@@ -12,7 +12,7 @@
 
 ## Variant: 3.18
 
-**Digest:** sha256:ac2a8eee4ddc6bf369bbcf9526242501fbbd68f7b4d10b479e7c02474563a7a8
+**Digest:** sha256:c57f9d0848689002ae4baf77385332dd5beadec5a6c71cd0f6c2707189a462d0
 
 **Tags:**
 ```
@@ -33,26 +33,26 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe4b5659863c388786986d70fa6d1bb66b00afb6 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f36c6db0eac17b022eee87411e6996a5f5fc8457 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.41.0 | 
+| [git](https://github.com/git/git) | 2.42.0 | 
 
 **Additional linux tools and packages**
 
 | Tool / library | Version |
 |----------------|---------|
-| openssh-client-default | 9.3_p1-r3 |
+| openssh-client-default | 9.3_p2-r0 |
 | gnupg | 2.4.3-r0 |
-| procps-ng | 4.0.3-r1 |
+| procps-ng | 4.0.4-r0 |
 | lsof | 4.98.0-r2 |
 | htop | 3.2.2-r1 |
 | net-tools | 2.10-r3 |
 | psmisc | 23.6-r2 |
-| curl | 8.1.2-r0 |
+| curl | 8.3.0-r0 |
 | wget | 1.21.4-r0 |
 | rsync | 3.2.7-r4 |
 | ca-certificates | 20230506-r0 |
@@ -66,7 +66,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 | libstdc++ | 12.2.1_git20220924-r10 |
 | krb5-libs | 1.20.1-r1 |
 | libintl | 0.21.1-r7 |
-| libssl1.1 | 1.1.1u-r0 |
+| libssl1.1 | 1.1.1u-r1 |
 | lttng-ust | 2.13.5-r2 |
 | tzdata | 2023c-r1 |
 | userspace-rcu | 0.14.0-r1 |
@@ -83,7 +83,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 ## Variant: 3.17
 
-**Digest:** sha256:b6ae1d3b02c4d2b9c960d1a02ceee62c66157c42343882e5d5f57f1407fa6856
+**Digest:** sha256:1bf0d0b35bd841a70f27bdbca032fa44e9e6dc35b6d3f82e02410f7b8d042f0a
 
 **Tags:**
 ```
@@ -103,26 +103,26 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.17
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe4b5659863c388786986d70fa6d1bb66b00afb6 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f36c6db0eac17b022eee87411e6996a5f5fc8457 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.41.0 | 
+| [git](https://github.com/git/git) | 2.42.0 | 
 
 **Additional linux tools and packages**
 
 | Tool / library | Version |
 |----------------|---------|
-| openssh-client-default | 9.1_p1-r3 |
+| openssh-client-default | 9.1_p1-r4 |
 | gnupg | 2.2.40-r0 |
 | procps | 3.3.17-r2 |
 | lsof | 4.96.4-r0 |
 | htop | 3.2.1-r1 |
 | net-tools | 2.10-r0 |
 | psmisc | 23.5-r0 |
-| curl | 8.1.2-r0 |
+| curl | 8.3.0-r0 |
 | wget | 1.21.4-r0 |
 | rsync | 3.2.7-r0 |
 | ca-certificates | 20230506-r0 |
@@ -136,7 +136,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.17
 | libstdc++ | 12.2.1_git20220924-r4 |
 | krb5-libs | 1.20.1-r0 |
 | libintl | 0.21.1-r1 |
-| libssl1.1 | 1.1.1u-r0 |
+| libssl1.1 | 1.1.1u-r1 |
 | lttng-ust | 2.13.3-r0 |
 | tzdata | 2023c-r0 |
 | userspace-rcu | 0.13.2-r0 |
@@ -153,7 +153,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.17
 
 ## Variant: 3.16
 
-**Digest:** sha256:7f7d6068da6647c88bdb1cf1561c55e18171ebb73bb784074cd759f86fcb80e8
+**Digest:** sha256:17ec072267c785757ba4ff4c690d630e1cadd028afe9ad9eac048c8c73639d5c
 
 **Tags:**
 ```
@@ -173,26 +173,26 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.16
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe4b5659863c388786986d70fa6d1bb66b00afb6 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f36c6db0eac17b022eee87411e6996a5f5fc8457 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.41.0 | 
+| [git](https://github.com/git/git) | 2.42.0 | 
 
 **Additional linux tools and packages**
 
 | Tool / library | Version |
 |----------------|---------|
-| openssh-client-default | 9.0_p1-r3 |
+| openssh-client-default | 9.0_p1-r4 |
 | gnupg | 2.2.35-r4 |
 | procps | 3.3.17-r1 |
 | lsof | 4.95.0-r0 |
 | htop | 3.2.0-r1 |
 | net-tools | 2.10-r0 |
 | psmisc | 23.5-r0 |
-| curl | 8.1.2-r0 |
+| curl | 8.3.0-r0 |
 | wget | 1.21.3-r0 |
 | rsync | 3.2.7-r0 |
 | ca-certificates | 20230506-r0 |
@@ -206,7 +206,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.16
 | libstdc++ | 11.2.1_git20220219-r2 |
 | krb5-libs | 1.19.4-r0 |
 | libintl | 0.21-r2 |
-| libssl1.1 | 1.1.1u-r1 |
+| libssl1.1 | 1.1.1w-r0 |
 | lttng-ust | 2.13.2-r0 |
 | tzdata | 2023c-r0 |
 | userspace-rcu | 0.13.1-r0 |
@@ -223,7 +223,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.16
 
 ## Variant: 3.15
 
-**Digest:** sha256:b0f0169665df5577346b73b271b861f8b775cb7fde6bc3b0c0c2cad5744f7e9b
+**Digest:** sha256:378c0eeef7b11b5f753c8869c5e67793ceaa4c122dbda1ebd41ba77b5a1c3339
 
 **Tags:**
 ```
@@ -243,13 +243,13 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.15
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fe4b5659863c388786986d70fa6d1bb66b00afb6 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f36c6db0eac17b022eee87411e6996a5f5fc8457 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.41.0 | 
+| [git](https://github.com/git/git) | 2.42.0 | 
 
 **Additional linux tools and packages**
 
@@ -262,7 +262,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.15
 | htop | 3.1.1-r0 |
 | net-tools | 1.60_git20140218-r2 |
 | psmisc | 23.4-r0 |
-| curl | 8.1.2-r0 |
+| curl | 8.3.0-r0 |
 | wget | 1.21.2-r2 |
 | rsync | 3.2.5-r0 |
 | ca-certificates | 20230506-r0 |
@@ -276,7 +276,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.15
 | libstdc++ | 10.3.1_git20211027-r0 |
 | krb5-libs | 1.19.4-r0 |
 | libintl | 0.21-r0 |
-| libssl1.1 | 1.1.1u-r1 |
+| libssl1.1 | 1.1.1w-r0 |
 | lttng-ust | 2.12.0-r3 |
 | tzdata | 2023c-r0 |
 | userspace-rcu | 0.12.2-r0 |

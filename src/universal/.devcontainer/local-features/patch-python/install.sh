@@ -34,15 +34,15 @@ update_package() {
     PACKAGE=$2
 
     sudo_if "$PYTHON_PATH -m pip uninstall --yes $PACKAGE"
-    sudo_if "$PYTHON_PATH -m pip install --user --upgrade --no-cache-dir $PACKAGE"
+    sudo_if "$PYTHON_PATH -m pip install --upgrade --no-cache-dir $PACKAGE"
 }
 
 # Temporary: Upgrade python packages due to security vulnerabilities
 # They are installed by the base image (python) which does not have the patch.
 
 # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40897
-update_package /usr/local/python/3.9.*/bin/python setuptools
-update_package /usr/local/python/3.10.*/bin/python setuptools
+update_package /usr/local/python/3.9.*/bin/python setuptools==65.5.1
+update_package /usr/local/python/3.10.*/bin/python setuptools==68.0.0
 
 # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32681
-update_package /usr/local/python/3.10.*/bin/python requests
+update_package /usr/local/python/3.10.*/bin/python requests==2.31.0

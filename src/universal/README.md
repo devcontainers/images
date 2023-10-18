@@ -49,7 +49,7 @@ While the image itself works unmodified, you can also directly reference pre-bui
 
 `mcr.microsoft.com/devcontainers/universal:2-linux`
 
-Alternatively, you can use the contents of the `Dockerfile` to fully customize your container's contents or to build it for a container host architecture not supported by the image.
+Alternatively, you can use the contents of [.devcontainer](.devcontainer) to fully customize your container's contents or to build it for a container host architecture not supported by the image.
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
