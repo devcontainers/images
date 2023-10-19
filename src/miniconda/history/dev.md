@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/miniconda)
 
-**Digest:** sha256:efade7050048594a17696cd2c807469d7880357f626b3ccb9e556393ab0827d4
+**Digest:** sha256:6531097968cb09823cf27e839357b2db186120d7ee6d95155bedca325db9e3e2
 
 **Tags:**
 ```
@@ -40,14 +40,14 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | setuptools | 67.8.0 |
 | wheel | 0.38.4 |
 | requests | 2.31.0 |
-| pylint | 3.0.0 |
+| pylint | 3.0.1 |
 | flake8 | 6.1.0 |
 | autopep8 | 2.0.4 |
-| black | 23.9.1 |
+| black | 23.10.0 |
 | yapf | 0.40.2 |
-| mypy | 1.5.1 |
+| mypy | 1.6.0 |
 | pydocstyle | 6.3.0 |
-| pycodestyle | 2.11.0 |
+| pycodestyle | 2.11.1 |
 | bandit | 1.7.5 |
 | virtualenv | 20.24.5 |
 | pipx | 1.2.0 |
@@ -66,7 +66,7 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | apt-transport-https | 2.2.4 |
 | apt-utils | 2.2.4 |
 | ca-certificates | 20210119 |
-| curl | 7.74.0-1.3+deb11u7 |
+| curl | 7.74.0-1.3+deb11u10 |
 | dialog | 1.3-20201126-1 |
 | git | 1:2.30.2-1+deb11u2 |
 | gnupg2 | 2.2.27-2+deb11u2 |
@@ -75,11 +75,11 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | jq | 1.6-2.1 |
 | less | 551-2 |
 | libc6 | 2.31-13+deb11u7 |
-| libgssapi-krb5-2 | 1.18.3-6+deb11u3 |
+| libgssapi-krb5-2 | 1.18.3-6+deb11u4 |
 | libicu67 | 67.1-7 |
-| libkrb5-3 | 1.18.3-6+deb11u3 |
+| libkrb5-3 | 1.18.3-6+deb11u4 |
 | liblttng-ust0 | 2.12.1-1 |
-| libssl1.1 | 1.1.1n-0+deb11u5 |
+| libssl1.1 | 1.1.1w-0+deb11u1 |
 | libstdc++6 | 10.2.1-6 |
 | locales | 2.31-13+deb11u7 |
 | lsb-release | 11.1.0 |
@@ -90,7 +90,7 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | nano | 5.4-2+deb11u2 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
-| openssh-client | 1:8.4p1-5+deb11u1 |
+| openssh-client | 1:8.4p1-5+deb11u2 |
 | procps | 2:3.3.17-5 |
 | psmisc | 23.4-2 |
 | rsync | 3.2.3-4+deb11u1 |
