@@ -11,7 +11,7 @@
 
 ## Variant: bookworm
 
-**Digest:** sha256:e9f4cb68a9aa32377ac93ae271266712f530c99f51525d56fad9bf15b792fbaf
+**Digest:** sha256:0fb3a1580578574badd1c4128c15857b540af76535271e9b142b36eb8ec8a028
 
 **Tags:**
 ```
@@ -38,7 +38,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f36c6db0eac17b022eee87411e6996a5f5fc8457 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 96c976637a4112e1e72a1a449ac51d78acc67597 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -54,7 +54,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bookworm
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
 | ca-certificates | 20230311 |
-| curl | 7.88.1-10+deb12u1 |
+| curl | 7.88.1-10+deb12u4 |
 | dialog | 1.3-20230209-1 |
 | git | 1:2.39.2-1.1 |
 | gnupg2 | 2.2.40-1.1 |
@@ -63,9 +63,9 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bookworm
 | jq | 1.6-2.1 |
 | less | 590-2 |
 | libc6 | 2.36-9+deb12u3 |
-| libgssapi-krb5-2 | 1.20.1-2 |
+| libgssapi-krb5-2 | 1.20.1-2+deb12u1 |
 | libicu72 | 72.1-3 |
-| libkrb5-3 | 1.20.1-2 |
+| libkrb5-3 | 1.20.1-2+deb12u1 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14 |
 | locales | 2.36-9+deb12u3 |
@@ -77,7 +77,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bookworm
 | nano | 7.2-1 |
 | ncdu | 1.18-0.2 |
 | net-tools | 2.10-0.1 |
-| openssh-client | 1:9.2p1-2 |
+| openssh-client | 1:9.2p1-2+deb12u1 |
 | procps | 2:4.0.2-3 |
 | psmisc | 23.6-1 |
 | rsync | 3.2.7-1 |
@@ -93,7 +93,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bookworm
 
 ## Variant: bullseye
 
-**Digest:** sha256:f1b57e08690e57465b9be6006892ddcfaca8d654b94a28eeeac579e64799cf73
+**Digest:** sha256:670f52af9147c4e184b752c8bc3b670f1ee2b1cbfcb2c6e7674a7e728422069d
 
 **Tags:**
 ```
@@ -119,7 +119,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f36c6db0eac17b022eee87411e6996a5f5fc8457 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 96c976637a4112e1e72a1a449ac51d78acc67597 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -135,7 +135,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bullseye
 | apt-transport-https | 2.2.4 |
 | apt-utils | 2.2.4 |
 | ca-certificates | 20210119 |
-| curl | 7.74.0-1.3+deb11u7 |
+| curl | 7.74.0-1.3+deb11u10 |
 | dialog | 1.3-20201126-1 |
 | git | 1:2.30.2-1+deb11u2 |
 | gnupg2 | 2.2.27-2+deb11u2 |
@@ -144,11 +144,11 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bullseye
 | jq | 1.6-2.1 |
 | less | 551-2 |
 | libc6 | 2.31-13+deb11u7 |
-| libgssapi-krb5-2 | 1.18.3-6+deb11u3 |
+| libgssapi-krb5-2 | 1.18.3-6+deb11u4 |
 | libicu67 | 67.1-7 |
-| libkrb5-3 | 1.18.3-6+deb11u3 |
+| libkrb5-3 | 1.18.3-6+deb11u4 |
 | liblttng-ust0 | 2.12.1-1 |
-| libssl1.1 | 1.1.1n-0+deb11u5 |
+| libssl1.1 | 1.1.1w-0+deb11u1 |
 | libstdc++6 | 10.2.1-6 |
 | locales | 2.31-13+deb11u7 |
 | lsb-release | 11.1.0 |
@@ -159,7 +159,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bullseye
 | nano | 5.4-2+deb11u2 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
-| openssh-client | 1:8.4p1-5+deb11u1 |
+| openssh-client | 1:8.4p1-5+deb11u2 |
 | procps | 2:3.3.17-5 |
 | psmisc | 23.4-2 |
 | rsync | 3.2.3-4+deb11u1 |
@@ -175,7 +175,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bullseye
 
 ## Variant: buster
 
-**Digest:** sha256:01d1225ae3f3711546b1c8fef67b2b489bc20032bffb112aae3551d2533ed543
+**Digest:** sha256:6dcb2b02721a69f3195bf9721c18af9ab3648f87ab3ad401ab52ea8aa7038ba8
 
 **Tags:**
 ```
@@ -201,7 +201,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f36c6db0eac17b022eee87411e6996a5f5fc8457 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 96c976637a4112e1e72a1a449ac51d78acc67597 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -217,7 +217,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-buster
 | apt-transport-https | 1.8.2.3 |
 | apt-utils | 1.8.2.3 |
 | ca-certificates | 20200601~deb10u2 |
-| curl | 7.64.0-4+deb10u6 |
+| curl | 7.64.0-4+deb10u7 |
 | dialog | 1.3-20190211-1 |
 | git | 1:2.20.1-2+deb10u8 |
 | gnupg2 | 2.2.12-1+deb10u2 |
