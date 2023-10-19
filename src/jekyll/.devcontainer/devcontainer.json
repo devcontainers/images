@@ -1,8 +1,9 @@
 {
-	"build": {
-		"dockerfile": "./Dockerfile",
-		"context": "."
-	},
+	"image": "mcr.microsoft.com/devcontainers/ruby:3.2-bookworm",
+	// "build": {
+	// 	"dockerfile": "./Dockerfile",
+	// 	"context": "."
+	// },
 	"features": {
 		"ghcr.io/devcontainers/features/node:1": {
             "version": "none"
