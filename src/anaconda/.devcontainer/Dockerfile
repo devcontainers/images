@@ -44,7 +44,7 @@ RUN python3 -m pip install --upgrade \
     # https://github.com/advisories/GHSA-v845-jxx5-vc9f
     urllib3==1.26.17 \
     # https://github.com/advisories/GHSA-94vc-p8w7-5p49
-    imagecodecs==2023.9.18
+    imagecodecs[all]==2023.9.18
 
 # Reset and copy updated files with updated privs to keep image size down
 FROM mcr.microsoft.com/devcontainers/base:1-bullseye
