@@ -12,7 +12,7 @@
 
 ## Variant: 1.21-bookworm
 
-**Digest:** sha256:5533335dafd6b6ace83db6942b42d108a6dcffd91ffb9cd92257b4d6a17ef855
+**Digest:** sha256:aa84f603ba6b4bac4f03008978b43c752c08cbd90f7b7e150b8de9be47f4ab43
 
 **Tags:**
 ```
@@ -41,7 +41,7 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f10cd5281d805bb5679dd46b304d9b8997f98981 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1868c15ec6b13c2da20375780f1e8b8f61458be5 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 
 **Go tools and modules**
@@ -114,7 +114,7 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 
 ## Variant: 1.20-bookworm
 
-**Digest:** sha256:45099116b10dae8f7f77e36235a48f24d53ef3c6d59b5c30cad10f5714e703c9
+**Digest:** sha256:6227a7f44b00a76550d400bd12002ea58c3a2b18461d35ac205458338ecb341f
 
 **Tags:**
 ```
@@ -140,7 +140,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.20
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f10cd5281d805bb5679dd46b304d9b8997f98981 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1868c15ec6b13c2da20375780f1e8b8f61458be5 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 
 **Go tools and modules**
@@ -213,7 +213,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.20
 
 ## Variant: 1.21-bullseye
 
-**Digest:** sha256:4242b65fcd3cc633fb9354a4df0143e3e2950b9f2fac0228059318e57c9bbbad
+**Digest:** sha256:000027c247d79363276673f13cba7866882f86da8a55bc22435d026f563ba400
 
 **Tags:**
 ```
@@ -240,7 +240,7 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 96c976637a4112e1e72a1a449ac51d78acc67597 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1868c15ec6b13c2da20375780f1e8b8f61458be5 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 
 **Go tools and modules**
@@ -314,7 +314,7 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 
 ## Variant: 1.20-bullseye
 
-**Digest:** sha256:8a616013e94d33e1aa7ec68a83fa433060c27067600731bf6cd6807c93968be6
+**Digest:** sha256:257cc8f26fd7c9d9d2c768802febda1c4e9cfe42209e1a2d106dffee87d5b470
 
 **Tags:**
 ```
@@ -339,7 +339,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.20-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 104041a018dc9a3eb74f93815192dba4c9386e1a | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1868c15ec6b13c2da20375780f1e8b8f61458be5 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 
 **Go tools and modules**

@@ -11,7 +11,7 @@
 
 ## Variant: bookworm
 
-**Digest:** sha256:040fb156d4f2bc9d6ff569ea59cf4f1ab1a1ce3a3add301470eec8af9baa08be
+**Digest:** sha256:b58fc5014bef3550a36b907eb901c0b543f76986af47a79c39d914862d54bde1
 
 **Tags:**
 ```
@@ -34,7 +34,7 @@ mcr.microsoft.com/devcontainers/base:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 96c976637a4112e1e72a1a449ac51d78acc67597 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1868c15ec6b13c2da20375780f1e8b8f61458be5 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -87,7 +87,7 @@ mcr.microsoft.com/devcontainers/base:dev
 
 ## Variant: buster
 
-**Digest:** sha256:11115977cdc109434c4502f35e55510bbd0b860a51266f899a2bcfe4d13cc170
+**Digest:** sha256:3c9cb01f3c9df22507b091bcd0b2ff193a4c6d9dd0c732cd09b44b51d64b3c85
 
 **Tags:**
 ```
@@ -108,7 +108,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian10
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 96c976637a4112e1e72a1a449ac51d78acc67597 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1868c15ec6b13c2da20375780f1e8b8f61458be5 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -133,9 +133,9 @@ mcr.microsoft.com/devcontainers/base:dev-debian10
 | less | 487-0.1+b1 |
 | libc6 | 2.28-10+deb10u2 |
 | libgcc1 | 1:8.3.0-6 |
-| libgssapi-krb5-2 | 1.17-3+deb10u5 |
+| libgssapi-krb5-2 | 1.17-3+deb10u6 |
 | libicu63 | 63.1-6+deb10u3 |
-| libkrb5-3 | 1.17-3+deb10u5 |
+| libkrb5-3 | 1.17-3+deb10u6 |
 | liblttng-ust0 | 2.10.3-1 |
 | libssl1.1 | 1.1.1n-0+deb10u6 |
 | libstdc++6 | 8.3.0-6 |
@@ -163,7 +163,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian10
 
 ## Variant: bullseye
 
-**Digest:** sha256:64c70acc1a5918d0bd3f38a729d4a373e05f23d433843e0d69e35a7424143bc0
+**Digest:** sha256:2446f417c226f221b935cf49e856860a94ff319ba59752fe300b8831a0612ce3
 
 **Tags:**
 ```
@@ -184,7 +184,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian11
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 96c976637a4112e1e72a1a449ac51d78acc67597 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1868c15ec6b13c2da20375780f1e8b8f61458be5 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 

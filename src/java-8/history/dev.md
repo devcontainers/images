@@ -11,7 +11,7 @@
 
 ## Variant: bookworm
 
-**Digest:** sha256:0fb3a1580578574badd1c4128c15857b540af76535271e9b142b36eb8ec8a028
+**Digest:** sha256:d08741dda19228763ed064a69de36bdf7130697e3c3225c1ebd3a6246bd53af3
 
 **Tags:**
 ```
@@ -38,7 +38,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 96c976637a4112e1e72a1a449ac51d78acc67597 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1868c15ec6b13c2da20375780f1e8b8f61458be5 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -93,7 +93,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bookworm
 
 ## Variant: bullseye
 
-**Digest:** sha256:670f52af9147c4e184b752c8bc3b670f1ee2b1cbfcb2c6e7674a7e728422069d
+**Digest:** sha256:1ae9ce6175ee96f5f0165eccf8e5c60547a759b9c9e7a0095cef048db151d9b1
 
 **Tags:**
 ```
@@ -113,13 +113,13 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 1.8.0_382<br />bash: line 1: /usr/local/openjdk-*/bin/java: No such file or directory | /usr/local/sdkman/candidates/java/current<br />/usr/local |
+| [Java](https://adoptopenjdk.net/) | 1.8.0_392<br />bash: line 1: /usr/local/openjdk-*/bin/java: No such file or directory | /usr/local/sdkman/candidates/java/current<br />/usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 96c976637a4112e1e72a1a449ac51d78acc67597 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1868c15ec6b13c2da20375780f1e8b8f61458be5 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -175,7 +175,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bullseye
 
 ## Variant: buster
 
-**Digest:** sha256:6dcb2b02721a69f3195bf9721c18af9ab3648f87ab3ad401ab52ea8aa7038ba8
+**Digest:** sha256:a190ada332778a151c77b1b723816922165d4662c895c7a34e48eff0ef4512b6
 
 **Tags:**
 ```
@@ -201,7 +201,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 96c976637a4112e1e72a1a449ac51d78acc67597 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1868c15ec6b13c2da20375780f1e8b8f61458be5 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -227,9 +227,9 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-buster
 | less | 487-0.1+b1 |
 | libc6 | 2.28-10+deb10u2 |
 | libgcc1 | 1:8.3.0-6 |
-| libgssapi-krb5-2 | 1.17-3+deb10u5 |
+| libgssapi-krb5-2 | 1.17-3+deb10u6 |
 | libicu63 | 63.1-6+deb10u3 |
-| libkrb5-3 | 1.17-3+deb10u5 |
+| libkrb5-3 | 1.17-3+deb10u6 |
 | liblttng-ust0 | 2.10.3-1 |
 | libssl1.1 | 1.1.1n-0+deb10u6 |
 | libstdc++6 | 8.3.0-6 |
