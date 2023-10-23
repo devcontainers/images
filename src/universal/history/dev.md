@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:d301a505c7a12b841c8a3c90608cb71a22cffe1cd8937275a60bc25f73c829cc
+**Digest:** sha256:74741e0c2fffe760a57bc8afcb2b0e9e98d2f47f3b2edbf2784e48b02fca1867
 
 **Tags:**
 ```
@@ -42,11 +42,11 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 96c976637a4112e1e72a1a449ac51d78acc67597 | /home/codespace/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1868c15ec6b13c2da20375780f1e8b8f61458be5 | /home/codespace/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | 22ae0829b84624c49192112213d2556b9d42d99e | /usr/local/nvs |
 | [rbenv](https://github.com/rbenv/rbenv.git) | d6bb1c63964304d9d3cdac783a65d66d56b35736 | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 1dc3628be359e75d7b3e8fe895e85b78e2b17dcb | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 39f77ffd17379f64ad4d3376d3e0aab68ea69a43 | /usr/local/share/ruby-build |
 
 **Pip / pipx installed tools and packages**
 
@@ -57,24 +57,24 @@ mcr.microsoft.com/devcontainers/universal:dev
 | scipy | 1.11.3 |
 | matplotlib | 3.8.0 |
 | seaborn | 0.13.0 |
-| scikit-learn | 1.3.1 |
+| scikit-learn | 1.3.2 |
 | torch | 2.1.0 |
 | requests | 2.31.0 |
 | plotly | 5.17.0 |
 | jupyterlab_git | 0.43.0 |
 | certifi | 2023.7.22 |
 | setuptools | 68.0.0 |
-| pylint | 3.0.1 |
+| pylint | 3.0.2 |
 | flake8 | 6.1.0 |
 | autopep8 | 2.0.4 |
 | black | 23.10.0 |
 | yapf | 0.40.2 |
-| mypy | 1.6.0 |
+| mypy | 1.6.1 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.11.1 |
 | bandit | 1.7.5 |
 | virtualenv | 20.24.5 |
-| pipx | 1.2.0 |
+| pipx | 1.2.1 |
 
 **Go tools and modules**
 
@@ -103,7 +103,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [git](https://github.com/git/git) | 2.42.0 | 
 | [Xdebug](https://xdebug.org/) | 3.2.2 | /usr/local/php/current |
 | [Composer](https://getcomposer.org/) | 2.6.5 | /usr/local/php/current/bin |
-| [kubectl](https://github.com/kubernetes/kubectl) | v1.28.2 | /usr/local/bin |
+| [kubectl](https://github.com/kubernetes/kubectl) | v1.28.3 | /usr/local/bin |
 | [Helm](https://github.com/helm/helm) | 3.13.1 | /usr/local/bin |
 | [Docker Compose](https://github.com/docker/compose) | 1.29.2 | /usr/local/bin |
 | [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |

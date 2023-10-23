@@ -14,7 +14,7 @@
 
 ## Variant: 20-bookworm
 
-**Digest:** sha256:da296e31fa57c8d594ad452a854c04eb58cd2b8480587fd2eb3e46a0f70693bf
+**Digest:** sha256:37d58de73731f3c0c942003e978cf82fd6e3a5d1703a98cb03ec051d82d30ee0
 
 **Tags:**
 ```
@@ -41,14 +41,14 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f10cd5281d805bb5679dd46b304d9b8997f98981 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1868c15ec6b13c2da20375780f1e8b8f61458be5 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.51.0 |
+| eslint | 8.52.0 |
 
 **Other tools and utilities**
 
@@ -101,7 +101,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bookworm
 
 ## Variant: 18-bookworm
 
-**Digest:** sha256:f74626e7ef8c168e46f115cf988adb91c21e2e38f000d0253fb44fd7fce82b47
+**Digest:** sha256:bf50e071e395c86720fbdac419b3a1f9f09d507cb8b22efb2ed1e0e89dee80fd
 
 **Tags:**
 ```
@@ -127,14 +127,14 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 96c976637a4112e1e72a1a449ac51d78acc67597 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1868c15ec6b13c2da20375780f1e8b8f61458be5 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.51.0 |
+| eslint | 8.52.0 |
 
 **Other tools and utilities**
 
@@ -187,7 +187,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18
 
 ## Variant: 20-bullseye
 
-**Digest:** sha256:0bd70a3b38490fa852226d90ef15ccc5c3cd609133207a1e7cb14194699204e6
+**Digest:** sha256:58c5dd0383cb0e3eae73e789d5c5e42a864c203b98e1c84c53806ab5f109066f
 
 **Tags:**
 ```
@@ -213,14 +213,14 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f10cd5281d805bb5679dd46b304d9b8997f98981 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1868c15ec6b13c2da20375780f1e8b8f61458be5 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.51.0 |
+| eslint | 8.52.0 |
 
 **Other tools and utilities**
 
@@ -274,7 +274,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 
 ## Variant: 18-bullseye
 
-**Digest:** sha256:c670c0c09a1970bd2f0f4fa82b9d17f39342543a4dd47a1b4e763d3c5c66f3ca
+**Digest:** sha256:969487a945797f4078d985f4a07c2f9fface6e1b1332d99655de1d1401b9d737
 
 **Tags:**
 ```
@@ -299,14 +299,14 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f10cd5281d805bb5679dd46b304d9b8997f98981 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1868c15ec6b13c2da20375780f1e8b8f61458be5 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.51.0 |
+| eslint | 8.52.0 |
 
 **Other tools and utilities**
 
@@ -360,7 +360,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18-bullseye
 
 ## Variant: 20-buster
 
-**Digest:** sha256:7e85382f393e46168424954680125f92efa589aca31a54d7b50eaab03973ffd0
+**Digest:** sha256:0b23143955cb502e99f6ac2d707d2aed78052846aca1d08fa59af38635419daf
 
 **Tags:**
 ```
@@ -386,14 +386,14 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 0da416986aadbaf89dc5596b01f9b42403f4d9fd | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1868c15ec6b13c2da20375780f1e8b8f61458be5 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.51.0 |
+| eslint | 8.52.0 |
 
 **Other tools and utilities**
 
@@ -418,9 +418,9 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-buster
 | less | 487-0.1+b1 |
 | libc6 | 2.28-10+deb10u2 |
 | libgcc1 | 1:8.3.0-6 |
-| libgssapi-krb5-2 | 1.17-3+deb10u5 |
+| libgssapi-krb5-2 | 1.17-3+deb10u6 |
 | libicu63 | 63.1-6+deb10u3 |
-| libkrb5-3 | 1.17-3+deb10u5 |
+| libkrb5-3 | 1.17-3+deb10u6 |
 | liblttng-ust0 | 2.10.3-1 |
 | libssl1.1 | 1.1.1n-0+deb10u6 |
 | libstdc++6 | 8.3.0-6 |
@@ -448,7 +448,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-buster
 
 ## Variant: 18-buster
 
-**Digest:** sha256:297b40a6c497318fb067a3d56118f8b80c2a7ffa1c217fa2b93d0ac7e69bab81
+**Digest:** sha256:a6e8a964a25e14134a0d6191a7e2500db44a001b54bae3144115ab64d8ff3a93
 
 **Tags:**
 ```
@@ -473,14 +473,14 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 96c976637a4112e1e72a1a449ac51d78acc67597 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1868c15ec6b13c2da20375780f1e8b8f61458be5 | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 8.51.0 |
+| eslint | 8.52.0 |
 
 **Other tools and utilities**
 
@@ -505,9 +505,9 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-18-buster
 | less | 487-0.1+b1 |
 | libc6 | 2.28-10+deb10u2 |
 | libgcc1 | 1:8.3.0-6 |
-| libgssapi-krb5-2 | 1.17-3+deb10u5 |
+| libgssapi-krb5-2 | 1.17-3+deb10u6 |
 | libicu63 | 63.1-6+deb10u3 |
-| libkrb5-3 | 1.17-3+deb10u5 |
+| libkrb5-3 | 1.17-3+deb10u6 |
 | liblttng-ust0 | 2.10.3-1 |
 | libssl1.1 | 1.1.1n-0+deb10u6 |
 | libstdc++6 | 8.3.0-6 |
