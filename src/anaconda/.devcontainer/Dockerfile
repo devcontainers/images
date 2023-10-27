@@ -17,7 +17,9 @@ RUN conda install \
     # https://github.com/advisories/GHSA-45c4-8wx5-qw6w
     aiohttp=3.8.5 \
     # https://github.com/advisories/GHSA-j7hp-h8jx-5ppr
-    pillow=10.0.1
+    pillow=10.0.1 \
+    # https://github.com/advisories/GHSA-v845-jxx5-vc9f
+    urllib3==1.26.18
 
 RUN python3 -m pip install --upgrade \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21797
@@ -37,9 +39,7 @@ RUN python3 -m pip install --upgrade \
     # https://github.com/advisories/GHSA-282v-666c-3fvg
     transformers==4.30.0 \ 
     # https://github.com/advisories/GHSA-r726-vmfq-j9j3 
-    jupyter_server==2.7.2 \
-    # https://github.com/advisories/GHSA-v845-jxx5-vc9f
-    urllib3==1.26.17
+    jupyter_server==2.7.2
 
 # Reset and copy updated files with updated privs to keep image size down
 FROM mcr.microsoft.com/devcontainers/base:1-bullseye
