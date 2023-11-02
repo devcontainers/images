@@ -10,7 +10,7 @@
 
 ## Variant: jammy
 
-**Digest:** sha256:ee16919902cdd94e75743901a239cb59eca25135fa77ba3416a37352eee59bcd
+**Digest:** sha256:420aa56785c9330d3f00c63185d193a95f3ae29423b02019e2abaeace288521b
 
 **Tags:**
 ```
@@ -32,7 +32,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1868c15ec6b13c2da20375780f1e8b8f61458be5 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 38c01a235fef0d990be5ece0d62f94fd06b10571 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -77,7 +77,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 | strace | 5.16-0ubuntu3 |
 | sudo | 1.9.9-1ubuntu2.4 |
 | unzip | 6.0-26ubuntu3.1 |
-| vim-tiny | 2:8.2.3995-1ubuntu2.12 |
+| vim-tiny | 2:8.2.3995-1ubuntu2.13 |
 | wget | 1.21.2-2ubuntu1 |
 | zip | 3.0-12build2 |
 | zlib1g | 1:1.2.11.dfsg-2ubuntu9.2 |
@@ -85,7 +85,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 ## Variant: focal
 
-**Digest:** sha256:cd72724baa441662cc728ae4f61f27bff0e891444fa8cd4909231f23db456f28
+**Digest:** sha256:c6e5ce91650e3e8c2816ff6714e526d80d66326c71296f11a2eab39efec750ec
 
 **Tags:**
 ```
@@ -106,7 +106,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1868c15ec6b13c2da20375780f1e8b8f61458be5 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 38c01a235fef0d990be5ece0d62f94fd06b10571 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -135,7 +135,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 | libicu66 | 66.1-2ubuntu2.1 |
 | libkrb5-3 | 1.17-6ubuntu4.3 |
 | liblttng-ust0 | 2.11.0-1 |
-| libssl1.1 | 1.1.1f-1ubuntu2.19 |
+| libssl1.1 | 1.1.1f-1ubuntu2.20 |
 | libstdc++6 | 10.5.0-1ubuntu1~20.04 |
 | locales | 2.31-0ubuntu9.12 |
 | lsb-release | 11.1.0ubuntu2 |
@@ -153,7 +153,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 | strace | 5.5-3ubuntu1 |
 | sudo | 1.8.31-1ubuntu1.5 |
 | unzip | 6.0-25ubuntu1.1 |
-| vim-tiny | 2:8.1.2269-1ubuntu5.18 |
+| vim-tiny | 2:8.1.2269-1ubuntu5.20 |
 | wget | 1.20.3-1ubuntu2 |
 | zip | 3.0-11build1 |
 | zlib1g | 1:1.2.11.dfsg-2ubuntu1.5 |
