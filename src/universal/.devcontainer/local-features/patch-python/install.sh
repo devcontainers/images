@@ -32,9 +32,10 @@ sudo_if() {
 update_package() {
     PYTHON_PATH=$1
     PACKAGE=$2
+    VERSION=$3
 
     sudo_if "$PYTHON_PATH -m pip uninstall --yes $PACKAGE"
-    sudo_if "$PYTHON_PATH -m pip install --upgrade --no-cache-dir $PACKAGE"
+    sudo_if "$PYTHON_PATH -m pip install --upgrade --no-cache-dir $PACKAGE==$VERSION"
     sudo_if "$PYTHON_PATH -m pip show --no-python-version-warning $PACKAGE"
 }
 
@@ -42,4 +43,4 @@ update_package() {
 # They are installed by the base image (python) which does not have the patch.
 
 # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40897
-update_package /usr/local/python/3.9.*/bin/python setuptools==65.5.1
+update_package /usr/local/python/3.9.*/bin/python setuptools 65.5.1
