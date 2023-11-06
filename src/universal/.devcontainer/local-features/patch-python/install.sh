@@ -35,6 +35,7 @@ update_package() {
 
     sudo_if "$PYTHON_PATH -m pip uninstall --yes $PACKAGE"
     sudo_if "$PYTHON_PATH -m pip install --upgrade --no-cache-dir $PACKAGE"
+    sudo_if "$PYTHON_PATH -m pip show --no-python-version-warning $PACKAGE"
 }
 
 # Temporary: Upgrade python packages due to security vulnerabilities

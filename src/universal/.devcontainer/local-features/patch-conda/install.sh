@@ -36,6 +36,7 @@ update_python_package() {
 
     sudo_if "$PYTHON_PATH -m pip uninstall --yes $PACKAGE"
     sudo_if "$PYTHON_PATH -m pip install --upgrade --no-cache-dir $PACKAGE==$VERSION"
+    sudo_if "$PYTHON_PATH -m pip show --no-python-version-warning $PACKAGE"
 }
 
 update_conda_package() {
