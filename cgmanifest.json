@@ -170,7 +170,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "f36c6db0eac17b022eee87411e6996a5f5fc8457"
+                    "commitHash": "632ed413a9ce62747ded83d7736491b081be4b49"
                 }
             }
         },
@@ -179,7 +179,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "git",
-                    "Version": "2.42.0",
+                    "Version": "2.42.1",
                     "DownloadUrl": "https://github.com/git/git"
                 }
             }
@@ -191,16 +191,6 @@
                     "Name": "Docker Image: continuumio/anaconda3",
                     "Version": "latest",
                     "DownloadUrl": "https://hub.docker.com/r/continuumio/anaconda3"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "git",
-                "Git": {
-                    "Name": "Oh My Zsh!",
-                    "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "38c01a235fef0d990be5ece0d62f94fd06b10571"
                 }
             }
         },
@@ -230,16 +220,6 @@
                 "Other": {
                     "Name": "Docker Image: alpine",
                     "Version": "3.16",
-                    "DownloadUrl": "https://hub.docker.com/_/alpine"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "other",
-                "Other": {
-                    "Name": "Docker Image: alpine",
-                    "Version": "3.15",
                     "DownloadUrl": "https://hub.docker.com/_/alpine"
                 }
             }
@@ -300,37 +280,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "354a05b99db8bec88347a8d35b46fbe7ef4c16da"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "git",
-                "Git": {
-                    "Name": "vcpkg",
-                    "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "e9fba6ac4fb8eccd57a2dc0cbde77db201b89c21"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "git",
-                "Git": {
-                    "Name": "vcpkg",
-                    "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "d2b53e3bcbd18913b3f992dc371e19cdbcaf2841"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "git",
-                "Git": {
-                    "Name": "vcpkg",
-                    "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "51b14cd4e1230dd51c11ffeff6f7d53c61cc5297"
+                    "commitHash": "d8079ecd674fe5632277d78d761333467955adb1"
                 }
             }
         },
@@ -538,16 +488,6 @@
         },
         {
             "Component": {
-                "Type": "git",
-                "Git": {
-                    "Name": "Oh My Zsh!",
-                    "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "632ed413a9ce62747ded83d7736491b081be4b49"
-                }
-            }
-        },
-        {
-            "Component": {
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Image: golang",
@@ -621,7 +561,7 @@
                 "Type": "npm",
                 "Npm": {
                     "Name": "eslint",
-                    "Version": "8.52.0"
+                    "Version": "8.53.0"
                 }
             }
         },
@@ -631,7 +571,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "38c01a235fef0d990be5ece0d62f94fd06b10571"
+                    "commitHash": "632ed413a9ce62747ded83d7736491b081be4b49"
                 }
             }
         },
@@ -744,7 +684,7 @@
                 "Git": {
                     "Name": "ruby-build",
                     "repositoryUrl": "https://github.com/rbenv/ruby-build.git",
-                    "commitHash": "b54a73b127cc62dd13d615698307fbc73c71eecc"
+                    "commitHash": "469a0af96d4eea931a94da2a9d2b17b29d548c2b"
                 }
             }
         },
@@ -1522,7 +1462,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "38c01a235fef0d990be5ece0d62f94fd06b10571"
+                    "commitHash": "632ed413a9ce62747ded83d7736491b081be4b49"
                 }
             }
         },
