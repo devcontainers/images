@@ -196,6 +196,16 @@
         },
         {
             "Component": {
+                "Type": "git",
+                "Git": {
+                    "Name": "Oh My Zsh!",
+                    "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
+                    "commitHash": "b6bb133f230847ed0b3f9f4e25f2ceb874ca6c91"
+                }
+            }
+        },
+        {
+            "Component": {
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Image: alpine",
@@ -280,7 +290,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "d8079ecd674fe5632277d78d761333467955adb1"
+                    "commitHash": "61f610845fb206298a69f708104a51d651872877"
                 }
             }
         },
@@ -571,7 +581,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "632ed413a9ce62747ded83d7736491b081be4b49"
+                    "commitHash": "b6bb133f230847ed0b3f9f4e25f2ceb874ca6c91"
                 }
             }
         },
@@ -646,7 +656,7 @@
                 "Type": "RubyGems",
                 "RubyGems": {
                     "Name": "bundler",
-                    "Version": "2.4.21"
+                    "Version": "2.4.22"
                 }
             }
         },
@@ -684,7 +694,7 @@
                 "Git": {
                     "Name": "ruby-build",
                     "repositoryUrl": "https://github.com/rbenv/ruby-build.git",
-                    "commitHash": "469a0af96d4eea931a94da2a9d2b17b29d548c2b"
+                    "commitHash": "6d5c4314ce2d85d5705571fddd5b9e3c9f93ebf2"
                 }
             }
         },
@@ -769,7 +779,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "black",
-                    "Version": "23.10.1"
+                    "Version": "23.11.0"
                 }
             }
         },
@@ -787,7 +797,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "mypy",
-                    "Version": "1.6.1"
+                    "Version": "1.7.0"
                 }
             }
         },
@@ -1363,7 +1373,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "numpy",
-                    "Version": "1.26.1"
+                    "Version": "1.26.2"
                 }
             }
         },
@@ -1372,7 +1382,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "pandas",
-                    "Version": "2.1.2"
+                    "Version": "2.1.3"
                 }
             }
         },
@@ -1462,7 +1472,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "632ed413a9ce62747ded83d7736491b081be4b49"
+                    "commitHash": "b6bb133f230847ed0b3f9f4e25f2ceb874ca6c91"
                 }
             }
         },
@@ -1501,7 +1511,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Helm",
-                    "Version": "3.13.1",
+                    "Version": "3.13.2",
                     "DownloadUrl": "https://github.com/helm/helm"
                 }
             }
@@ -1531,7 +1541,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Go",
-                    "Version": "1.21.3",
+                    "Version": "1.21.4",
                     "DownloadUrl": "https://golang.org/dl"
                 }
             }
