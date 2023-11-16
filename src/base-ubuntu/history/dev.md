@@ -10,7 +10,7 @@
 
 ## Variant: jammy
 
-**Digest:** sha256:174fd97435c5fc0654899a204f16b12baf56defb301e98af35dc1285a6814ee5
+**Digest:** sha256:47c76dba7a995bfa9270496a912148ff804c9cf68088452d723fda65eda3a307
 
 **Tags:**
 ```
@@ -32,7 +32,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | b6bb133f230847ed0b3f9f4e25f2ceb874ca6c91 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | c8e600f39779c6d2ef75b40304b5391a541c41df | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -44,8 +44,8 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 | Tool / library | Version |
 |----------------|---------|
-| apt-transport-https | 2.4.10 |
-| apt-utils | 2.4.10 |
+| apt-transport-https | 2.4.11 |
+| apt-utils | 2.4.11 |
 | ca-certificates | 20230311ubuntu0.22.04.1 |
 | curl | 7.81.0-1ubuntu1.14 |
 | dialog | 1.3-20211214-1 |
@@ -71,7 +71,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1ubuntu5 |
 | openssh-client | 1:8.9p1-3ubuntu0.4 |
-| procps | 2:3.3.17-6ubuntu2 |
+| procps | 2:3.3.17-6ubuntu2.1 |
 | psmisc | 23.4-2build3 |
 | rsync | 3.2.7-0ubuntu0.22.04.2 |
 | strace | 5.16-0ubuntu3 |
@@ -85,7 +85,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 ## Variant: focal
 
-**Digest:** sha256:34fb624619e06a24e5459f6cb67b23d35c949a85b0da882a6daec38ec6015b27
+**Digest:** sha256:b79f704d124e73eb412054297e7186c7dfbc1f73a9520818caeac987c3e0b0f2
 
 **Tags:**
 ```
@@ -106,7 +106,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | b6bb133f230847ed0b3f9f4e25f2ceb874ca6c91 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | c8e600f39779c6d2ef75b40304b5391a541c41df | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -118,8 +118,8 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 
 | Tool / library | Version |
 |----------------|---------|
-| apt-transport-https | 2.0.9 |
-| apt-utils | 2.0.9 |
+| apt-transport-https | 2.0.10 |
+| apt-utils | 2.0.10 |
 | ca-certificates | 20230311ubuntu0.20.04.1 |
 | curl | 7.68.0-1ubuntu2.20 |
 | dialog | 1.3-20190808-1 |
@@ -147,7 +147,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 | ncdu | 1.14.1-1 |
 | net-tools | 1.60+git20180626.aebd88e-1ubuntu1 |
 | openssh-client | 1:8.2p1-4ubuntu0.9 |
-| procps | 2:3.3.16-1ubuntu2.3 |
+| procps | 2:3.3.16-1ubuntu2.4 |
 | psmisc | 23.3-1 |
 | rsync | 3.1.3-8ubuntu0.7 |
 | strace | 5.5-3ubuntu1 |
