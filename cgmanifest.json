@@ -200,7 +200,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "b6bb133f230847ed0b3f9f4e25f2ceb874ca6c91"
+                    "commitHash": "c8e600f39779c6d2ef75b40304b5391a541c41df"
                 }
             }
         },
@@ -290,7 +290,17 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "61f610845fb206298a69f708104a51d651872877"
+                    "commitHash": "b61706e96cde9bdb6ecab86156fb44547cdafb28"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "git",
+                "Git": {
+                    "Name": "vcpkg",
+                    "repositoryUrl": "https://github.com/microsoft/vcpkg",
+                    "commitHash": "2b14b606cea54573eec11080a3ac00737958b6d6"
                 }
             }
         },
@@ -351,6 +361,26 @@
                     "Name": "nvm",
                     "repositoryUrl": "https://github.com/nvm-sh/nvm.git",
                     "commitHash": "c92adb3c479d70bb29f4399a808c972ef41510e7"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: mcr.microsoft.com/dotnet/sdk",
+                    "Version": "8.0-bookworm-slim",
+                    "DownloadUrl": "https://hub.docker.com/_/microsoft-dotnet-sdk"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: mcr.microsoft.com/dotnet/sdk",
+                    "Version": "8.0-jammy",
+                    "DownloadUrl": "https://hub.docker.com/_/microsoft-dotnet-sdk"
                 }
             }
         },
@@ -581,7 +611,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "b6bb133f230847ed0b3f9f4e25f2ceb874ca6c91"
+                    "commitHash": "c8e600f39779c6d2ef75b40304b5391a541c41df"
                 }
             }
         },
@@ -694,7 +724,7 @@
                 "Git": {
                     "Name": "ruby-build",
                     "repositoryUrl": "https://github.com/rbenv/ruby-build.git",
-                    "commitHash": "6d5c4314ce2d85d5705571fddd5b9e3c9f93ebf2"
+                    "commitHash": "a6a79ac48da6515986645455651b31bae0204ee3"
                 }
             }
         },
@@ -1347,7 +1377,7 @@
                 "Type": "linux",
                 "Linux": {
                     "Name": "moby-cli",
-                    "Version": "23.0.7+azure-ubuntu20.04u1",
+                    "Version": "24.0.7-ubuntu20.04u1",
                     "Distribution": "ubuntu",
                     "Release": "20.04",
                     "Pool-URL": "https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod",
@@ -1360,7 +1390,7 @@
                 "Type": "linux",
                 "Linux": {
                     "Name": "moby-engine",
-                    "Version": "23.0.7+azure-ubuntu20.04u1",
+                    "Version": "24.0.7-ubuntu20.04u1",
                     "Distribution": "ubuntu",
                     "Release": "20.04",
                     "Pool-URL": "https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod",
@@ -1427,7 +1457,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "torch",
-                    "Version": "2.1.0"
+                    "Version": "2.1.1"
                 }
             }
         },
@@ -1472,7 +1502,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "b6bb133f230847ed0b3f9f4e25f2ceb874ca6c91"
+                    "commitHash": "c8e600f39779c6d2ef75b40304b5391a541c41df"
                 }
             }
         },
@@ -1501,7 +1531,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "kubectl",
-                    "Version": "v1.28.3",
+                    "Version": "v1.28.4",
                     "DownloadUrl": "https://github.com/kubernetes/kubectl"
                 }
             }
@@ -1531,7 +1561,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "GitHub CLI",
-                    "Version": "2.38.0",
+                    "Version": "2.39.1",
                     "DownloadUrl": "https://github.com/cli/cli"
                 }
             }
