@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:ec4bba66239344bbac2f3d7df35379d255b36dff35c1d021be6c55584c864315
+**Digest:** sha256:5385b2e64730ba01be1ad69e8fc57a950913e2407663ac5a732c0a3e35e91b65
 
 **Tags:**
 ```
@@ -36,17 +36,17 @@ mcr.microsoft.com/devcontainers/universal:dev
 | Clang | 10.0.0-4ubuntu1 | 
 | [Go](https://golang.org/dl) | 1.21.4 | /usr/local/go |
 | [Jekyll](https://jekyllrb.com/) | 4.3.2 | 
-| [Jupyter Lab](https://jupyter.org/) | 4.0.8 | /home/codespace/.local/bin/jupyter-lab |
+| [Jupyter Lab](https://jupyter.org/) | 4.0.9 | /home/codespace/.local/bin/jupyter-lab |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | c8e600f39779c6d2ef75b40304b5391a541c41df | /home/codespace/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e6a1db213d66efdaec00469e58d4f9f3f2a78bd0 | /home/codespace/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | c92adb3c479d70bb29f4399a808c972ef41510e7 | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | 22ae0829b84624c49192112213d2556b9d42d99e | /usr/local/nvs |
 | [rbenv](https://github.com/rbenv/rbenv.git) | d6bb1c63964304d9d3cdac783a65d66d56b35736 | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | a6a79ac48da6515986645455651b31bae0204ee3 | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | d312f5a403cfeab40bf6135c5df115002f8675fa | /usr/local/share/ruby-build |
 
 **Pip / pipx installed tools and packages**
 
@@ -54,15 +54,15 @@ mcr.microsoft.com/devcontainers/universal:dev
 |----------------|---------|
 | numpy | 1.26.2 |
 | pandas | 2.1.3 |
-| scipy | 1.11.3 |
-| matplotlib | 3.8.1 |
+| scipy | 1.11.4 |
+| matplotlib | 3.8.2 |
 | seaborn | 0.13.0 |
 | scikit-learn | 1.3.2 |
 | torch | 2.1.1 |
 | requests | 2.31.0 |
 | plotly | 5.18.0 |
 | jupyterlab_git | 0.44.0 |
-| certifi | 2023.7.22 |
+| certifi | 2023.11.17 |
 | setuptools | 68.2.2 |
 | pylint | 3.0.2 |
 | flake8 | 6.1.0 |
@@ -80,7 +80,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool / module | Version |
 |---------------|---------|
-| golang.org/x/tools/gopls | 0.14.1 |
+| golang.org/x/tools/gopls | 0.14.2 |
 | honnef.co/go/tools | 0.4.5 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
 | github.com/mgechev/revive | 1.3.4 |

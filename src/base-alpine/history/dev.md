@@ -11,7 +11,7 @@
 
 ## Variant: 3.18
 
-**Digest:** sha256:0f878ade541931d4f1c9f8fc5c24befc310349aa94351e1db88b9f9922419793
+**Digest:** sha256:2c4c5b91808ac666563a39505e6d68037623e6722ea488d6e66cd2ad77265e1d
 
 **Tags:**
 ```
@@ -32,7 +32,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | c8e600f39779c6d2ef75b40304b5391a541c41df | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e6a1db213d66efdaec00469e58d4f9f3f2a78bd0 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -82,7 +82,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 ## Variant: 3.17
 
-**Digest:** sha256:8fc65d53890cbc80338f069b0c7ac0848faafdb2ae131275b0001c39ff28d14f
+**Digest:** sha256:73ba5639eab7fda8f285c74c1c65b2eff0b1f162e771042bce8afa72cbc36983
 
 **Tags:**
 ```
@@ -102,7 +102,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.17
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | c8e600f39779c6d2ef75b40304b5391a541c41df | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e6a1db213d66efdaec00469e58d4f9f3f2a78bd0 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -152,7 +152,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.17
 
 ## Variant: 3.16
 
-**Digest:** sha256:6c460f78169180c40f05f8d193f0af6230b79ed62191d267dd60e80575a7ab78
+**Digest:** sha256:2e488b675d13009dca3dd1c123b18540b7bef08cd9bd1e9f75b2f4be5442e70b
 
 **Tags:**
 ```
@@ -172,7 +172,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.16
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | c8e600f39779c6d2ef75b40304b5391a541c41df | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e6a1db213d66efdaec00469e58d4f9f3f2a78bd0 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -205,7 +205,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.16
 | libstdc++ | 11.2.1_git20220219-r2 |
 | krb5-libs | 1.19.4-r0 |
 | libintl | 0.21-r2 |
-| libssl1.1 | 1.1.1w-r0 |
+| libssl1.1 | 1.1.1w-r1 |
 | lttng-ust | 2.13.2-r0 |
 | tzdata | 2023c-r0 |
 | userspace-rcu | 0.13.1-r0 |
