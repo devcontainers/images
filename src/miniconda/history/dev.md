@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/miniconda)
 
-**Digest:** sha256:1b09e52b8c57803ff12831d95d2a7c704c66a31a4bf87512ddf902e8a43fae83
+**Digest:** sha256:4da82fe1c4a76441601886a315eb6b62d6d730c35eb8744919cc40d980b31b2f
 
 **Tags:**
 ```
@@ -57,7 +57,7 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | Tool | Version | Path |
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.42.1 | 
-| [conda](https://github.com/conda/conda) | 23.9.0 | /opt/conda |
+| [conda](https://github.com/conda/conda) | 23.10.0 | /opt/conda |
 
 **Additional linux tools and packages**
 
