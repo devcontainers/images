@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:2689bc7375cc3ba91de6fb352c7dfe16fb48068a40274fa039f9cd594e9b9d4d
+**Digest:** sha256:da7a7d27b49c755a9eb069f209490e53d8c7315768808a0cb9343dea34ff4bf4
 
 **Tags:**
 ```
@@ -42,7 +42,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | cryptography | 41.0.3 |
 | mistune | 3.0.1 |
 | numpy | 1.25.2 |
-| certifi | 2023.7.22 |
+| certifi | 2023.11.17 |
 | setuptools | 68.0.0 |
 | future | 0.18.3 |
 | wheel | 0.38.4 |
@@ -57,7 +57,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.42.1 | 
+| [git](https://github.com/git/git) | 2.43.0 | 
 | [conda](https://github.com/conda/conda) | 23.7.4 | /opt/conda |
 
 **Additional linux tools and packages**
