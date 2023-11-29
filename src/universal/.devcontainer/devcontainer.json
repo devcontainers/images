@@ -12,7 +12,7 @@
         "ghcr.io/devcontainers/features/dotnet:2": {
             "version": "8.0.0",
             "installUsingApt": "false",
-            "additionalVersions": "6"
+            "additionalVersions": "6.0.25"
         },
         "ghcr.io/devcontainers/features/hugo:1": {
             "version": "latest"
