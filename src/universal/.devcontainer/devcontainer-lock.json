@@ -15,10 +15,10 @@
       "resolved": "ghcr.io/devcontainers/features/docker-in-docker@sha256:f6a73ee06601d703db7d95d03e415cab229e78df92bb5002e8559bcfc047fec6",
       "integrity": "sha256:f6a73ee06601d703db7d95d03e415cab229e78df92bb5002e8559bcfc047fec6"
     },
-    "ghcr.io/devcontainers/features/dotnet:2": {
-      "version": "2.0.1",
-      "resolved": "ghcr.io/devcontainers/features/dotnet@sha256:0bddaf888065650a56abdca16d1c2669aeb0259cf6bbe0879d12cd7e11164fe8",
-      "integrity": "sha256:0bddaf888065650a56abdca16d1c2669aeb0259cf6bbe0879d12cd7e11164fe8"
+    "ghcr.io/devcontainers/features/dotnet:1": {
+      "version": "1.1.4",
+      "resolved": "ghcr.io/devcontainers/features/dotnet@sha256:0961cacbf160e67472c610b8a2836151854eca8657f14ee5fde604285829c2e4",
+      "integrity": "sha256:0961cacbf160e67472c610b8a2836151854eca8657f14ee5fde604285829c2e4"
     },
     "ghcr.io/devcontainers/features/git-lfs:1": {
       "version": "1.1.1",
