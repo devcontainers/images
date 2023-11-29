@@ -9,8 +9,8 @@
             "userUid": "1000",
             "userGid": "1000"
         },
-        "ghcr.io/devcontainers/features/dotnet:1": {
-            "version": "7.0.306",
+        "ghcr.io/devcontainers/features/dotnet:2": {
+            "version": "8.0.0",
             "installUsingApt": "false",
             "additionalVersions": "6"
         },
