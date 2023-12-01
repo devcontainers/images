@@ -44,7 +44,7 @@
         },
         "ghcr.io/devcontainers/features/java:1": {
             "version": "21",
-            "additionalVersions": "11,17",
+            "additionalVersions": "17",
             "installGradle": "true",
             "installMaven": "true"
         },
