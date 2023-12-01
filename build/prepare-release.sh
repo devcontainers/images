@@ -2,17 +2,16 @@
 
 # This script is used to prepare a release of the dev containers.
 # It will bump the version of the manifest.json file and run the devcontainer upgrade command.
-# It will only run on the images that have been modified since the last release commit that is passed in as the first argument.
-# If the second argument is "monthly", it will run on all images.
+# It will only run on the images that have been modified since the last release.
+# If no commit hash is provided, it will run in monthly release mode and bump the version of all images.
 # Example adhoc release: ./build/prepare-release.sh 1c6f558dc86aafd7749074ec44e238f331303517
-# Example monthly release: ./build/prepare-release.sh 1c6f558dc86aafd7749074ec44e238f331303517 monthly
+# Example monthly release: ./build/prepare-release.sh
 
 
 SCRIPT_SOURCE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 SRC_DIR=$(readlink -m $SCRIPT_SOURCE_DIR/../src)
 MANIFEST_FILE="manifest.json"
 COMMIT_HASH=$1
-RELEASE_TYPE=$2
 
 get_modified_images() {
 	git diff --name-only --diff-filter=ACMRTUB ${COMMIT_HASH} HEAD ${SRC_DIR} | while read file; do
@@ -65,11 +64,7 @@ monthly_release() {
 
 main() {
 	if [ "$COMMIT_HASH" == "" ]; then
-		echo "Commit hash is required"
-		exit 1
-	fi
-
-	if [ "$RELEASE_TYPE" == "monthly" ]; then
+		echo "No commit hash provided, running in monthly release mode"
 		monthly_release
 	else
 		adhoc_release
