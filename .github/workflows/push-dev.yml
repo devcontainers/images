@@ -20,6 +20,7 @@ jobs:
         page-total: [66]
       fail-fast: false
     runs-on: devcontainer-image-builder-ubuntu
+    environment: azure
     steps:
     - name: Free more space
       id: free_space 
@@ -78,6 +79,7 @@ jobs:
   image-info:
     name: Trigger info extraction
     needs: [build-and-push]
+    environment: azure
     uses: devcontainers/images/.github/workflows/version-history.yml@main
     with:
       release: "${{ github.ref }}"
