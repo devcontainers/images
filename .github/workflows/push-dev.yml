@@ -20,6 +20,7 @@ jobs:
         page-total: [66]
       fail-fast: false
     runs-on: devcontainer-image-builder-ubuntu
+    environment: documentation
     steps:
     - name: Free more space
       id: free_space 
