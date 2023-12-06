@@ -44,6 +44,7 @@ update_package() {
 
 # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40897
 update_package /usr/local/python/3.9.*/bin/python setuptools 65.5.1
+update_package /usr/local/python/3.10.*/bin/python setuptools 68.2.2
 
 # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45803
 update_package /usr/local/python/3.10.*/bin/python urllib3 2.0.7
