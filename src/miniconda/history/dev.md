@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/miniconda)
 
-**Digest:** sha256:35d6936bbeb34117922bf22391b76ff15e57a3e8712116af048fab904dfab25c
+**Digest:** sha256:7d62c57e51c659d5c25e1b39811294a82fdf3a75bed3b640a40378b505434fe1
 
 **Tags:**
 ```
@@ -49,15 +49,15 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.11.1 |
 | bandit | 1.7.5 |
-| virtualenv | 20.24.7 |
-| pipx | 1.2.1 |
+| virtualenv | 20.25.0 |
+| pipx | 1.3.3 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.43.0 | 
-| [conda](https://github.com/conda/conda) | 23.10.0 | /opt/conda |
+| [conda](https://github.com/conda/conda) | 23.11.0 | /opt/conda |
 
 **Additional linux tools and packages**
 
