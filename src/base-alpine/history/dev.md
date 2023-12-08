@@ -11,7 +11,7 @@
 
 ## Variant: 3.18
 
-**Digest:** sha256:52a091930608fbae5053780a4988efb71dd81e122c091a14d9138e04b5734960
+**Digest:** sha256:92a0b54f504fd71cef1da838cfeaa23c7873ceadb969dcb8b74ec29f34629aaf
 
 **Tags:**
 ```
@@ -32,7 +32,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7e3fdf33ec53821e574b8d6df43bec7264c507ee | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 48ccc7b36de8efb2bd7beb9bd6e0a6f6fe03b95d | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -51,7 +51,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 | htop | 3.2.2-r1 |
 | net-tools | 2.10-r3 |
 | psmisc | 23.6-r2 |
-| curl | 8.4.0-r0 |
+| curl | 8.5.0-r0 |
 | wget | 1.21.4-r0 |
 | rsync | 3.2.7-r4 |
 | ca-certificates | 20230506-r0 |
@@ -82,7 +82,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 ## Variant: 3.17
 
-**Digest:** sha256:0a574b311f97a67869c0ce5a3b283fa5ad8567c8835e9c81d1307d5a54e3dcc6
+**Digest:** sha256:49dde297551af9c023a4394c27d48b6a45c4c995d2c85521beaf15f841a939c1
 
 **Tags:**
 ```
@@ -102,7 +102,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.17
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7e3fdf33ec53821e574b8d6df43bec7264c507ee | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 48ccc7b36de8efb2bd7beb9bd6e0a6f6fe03b95d | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -121,7 +121,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.17
 | htop | 3.2.1-r1 |
 | net-tools | 2.10-r0 |
 | psmisc | 23.5-r0 |
-| curl | 8.4.0-r0 |
+| curl | 8.5.0-r0 |
 | wget | 1.21.4-r0 |
 | rsync | 3.2.7-r0 |
 | ca-certificates | 20230506-r0 |
@@ -152,7 +152,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.17
 
 ## Variant: 3.16
 
-**Digest:** sha256:7f230af0606b4352d6bd716f230dcc169262d45f15ab8156f27f7522f6281fa4
+**Digest:** sha256:a25db308ff3378bc53e2e9f4f6e696e6cca861645642809a3a4659d3072cbbb0
 
 **Tags:**
 ```
@@ -172,7 +172,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.16
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7e3fdf33ec53821e574b8d6df43bec7264c507ee | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 48ccc7b36de8efb2bd7beb9bd6e0a6f6fe03b95d | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -191,14 +191,14 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.16
 | htop | 3.2.0-r1 |
 | net-tools | 2.10-r0 |
 | psmisc | 23.5-r0 |
-| curl | 8.4.0-r0 |
+| curl | 8.5.0-r0 |
 | wget | 1.21.3-r0 |
 | rsync | 3.2.7-r0 |
 | ca-certificates | 20230506-r0 |
 | unzip | 6.0-r9 |
 | zip | 3.0-r9 |
 | nano | 6.3-r0 |
-| vim | 8.2.5000-r0 |
+| vim | 8.2.5000-r1 |
 | less | 590-r1 |
 | jq | 1.6-r1 |
 | libgcc | 11.2.1_git20220219-r2 |
