@@ -14,8 +14,8 @@ RUN conda install \
     requests=2.31.0 \
     # https://github.com/advisories/GHSA-f865-m6cq-j9vx
     mpmath=1.3.0 \
-    # https://github.com/advisories/GHSA-45c4-8wx5-qw6w
-    aiohttp=3.8.5 \
+    # https://github.com/advisories/GHSA-gfw2-4jvh-wgfg
+    aiohttp=3.8.6 \
     # https://github.com/advisories/GHSA-j7hp-h8jx-5ppr
     pillow=10.0.1 \
     # https://github.com/advisories/GHSA-v845-jxx5-vc9f
