@@ -8,11 +8,9 @@ RUN conda install \
     # https://github.com/advisories/GHSA-jm77-qphf-c4w8
     cryptography=41.0.3 \
     # https://github.com/advisories/GHSA-j8r2-6x86-q33q
-    requests=2.31.0
-
-RUN python3 -m pip install --upgrade \
+    requests=2.31.0 \
     # https://github.com/advisories/GHSA-v845-jxx5-vc9f
-    urllib3==1.26.17
+    urllib3==1.26.18
 
 # Reset and copy updated files with updated privs to keep image size down
 FROM mcr.microsoft.com/devcontainers/base:1-bullseye

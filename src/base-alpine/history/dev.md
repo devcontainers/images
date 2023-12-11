@@ -8,11 +8,10 @@
 - [3.18](#variant-318)
 - [3.17](#variant-317)
 - [3.16](#variant-316)
-- [3.15](#variant-315)
 
 ## Variant: 3.18
 
-**Digest:** sha256:c57f9d0848689002ae4baf77385332dd5beadec5a6c71cd0f6c2707189a462d0
+**Digest:** sha256:92a0b54f504fd71cef1da838cfeaa23c7873ceadb969dcb8b74ec29f34629aaf
 
 **Tags:**
 ```
@@ -33,13 +32,13 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f36c6db0eac17b022eee87411e6996a5f5fc8457 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 48ccc7b36de8efb2bd7beb9bd6e0a6f6fe03b95d | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.42.0 | 
+| [git](https://github.com/git/git) | 2.43.0 | 
 
 **Additional linux tools and packages**
 
@@ -52,14 +51,14 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 | htop | 3.2.2-r1 |
 | net-tools | 2.10-r3 |
 | psmisc | 23.6-r2 |
-| curl | 8.3.0-r0 |
+| curl | 8.5.0-r0 |
 | wget | 1.21.4-r0 |
 | rsync | 3.2.7-r4 |
 | ca-certificates | 20230506-r0 |
 | unzip | 6.0-r14 |
 | zip | 3.0-r12 |
 | nano | 7.2-r1 |
-| vim | 9.0.1568-r0 |
+| vim | 9.0.2073-r0 |
 | less | 633-r0 |
 | jq | 1.6-r3 |
 | libgcc | 12.2.1_git20220924-r10 |
@@ -83,7 +82,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 ## Variant: 3.17
 
-**Digest:** sha256:1bf0d0b35bd841a70f27bdbca032fa44e9e6dc35b6d3f82e02410f7b8d042f0a
+**Digest:** sha256:49dde297551af9c023a4394c27d48b6a45c4c995d2c85521beaf15f841a939c1
 
 **Tags:**
 ```
@@ -103,13 +102,13 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.17
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f36c6db0eac17b022eee87411e6996a5f5fc8457 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 48ccc7b36de8efb2bd7beb9bd6e0a6f6fe03b95d | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.42.0 | 
+| [git](https://github.com/git/git) | 2.43.0 | 
 
 **Additional linux tools and packages**
 
@@ -117,12 +116,12 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.17
 |----------------|---------|
 | openssh-client-default | 9.1_p1-r4 |
 | gnupg | 2.2.40-r0 |
-| procps | 3.3.17-r2 |
+| procps | 3.3.17-r3 |
 | lsof | 4.96.4-r0 |
 | htop | 3.2.1-r1 |
 | net-tools | 2.10-r0 |
 | psmisc | 23.5-r0 |
-| curl | 8.3.0-r0 |
+| curl | 8.5.0-r0 |
 | wget | 1.21.4-r0 |
 | rsync | 3.2.7-r0 |
 | ca-certificates | 20230506-r0 |
@@ -153,7 +152,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.17
 
 ## Variant: 3.16
 
-**Digest:** sha256:17ec072267c785757ba4ff4c690d630e1cadd028afe9ad9eac048c8c73639d5c
+**Digest:** sha256:a25db308ff3378bc53e2e9f4f6e696e6cca861645642809a3a4659d3072cbbb0
 
 **Tags:**
 ```
@@ -173,13 +172,13 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.16
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f36c6db0eac17b022eee87411e6996a5f5fc8457 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 48ccc7b36de8efb2bd7beb9bd6e0a6f6fe03b95d | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.42.0 | 
+| [git](https://github.com/git/git) | 2.43.0 | 
 
 **Additional linux tools and packages**
 
@@ -187,26 +186,26 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.16
 |----------------|---------|
 | openssh-client-default | 9.0_p1-r4 |
 | gnupg | 2.2.35-r4 |
-| procps | 3.3.17-r1 |
+| procps | 3.3.17-r2 |
 | lsof | 4.95.0-r0 |
 | htop | 3.2.0-r1 |
 | net-tools | 2.10-r0 |
 | psmisc | 23.5-r0 |
-| curl | 8.3.0-r0 |
+| curl | 8.5.0-r0 |
 | wget | 1.21.3-r0 |
 | rsync | 3.2.7-r0 |
 | ca-certificates | 20230506-r0 |
 | unzip | 6.0-r9 |
 | zip | 3.0-r9 |
 | nano | 6.3-r0 |
-| vim | 8.2.5000-r0 |
+| vim | 8.2.5000-r1 |
 | less | 590-r1 |
 | jq | 1.6-r1 |
 | libgcc | 11.2.1_git20220219-r2 |
 | libstdc++ | 11.2.1_git20220219-r2 |
 | krb5-libs | 1.19.4-r0 |
 | libintl | 0.21-r2 |
-| libssl1.1 | 1.1.1w-r0 |
+| libssl1.1 | 1.1.1w-r1 |
 | lttng-ust | 2.13.2-r0 |
 | tzdata | 2023c-r0 |
 | userspace-rcu | 0.13.1-r0 |
@@ -220,74 +219,4 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.16
 | shadow | 4.10-r3 |
 | strace | 5.17-r0 |
 | man-pages | 5.13-r1 |
-
-## Variant: 3.15
-
-**Digest:** sha256:378c0eeef7b11b5f753c8869c5e67793ceaa4c122dbda1ebd41ba77b5a1c3339
-
-**Tags:**
-```
-mcr.microsoft.com/devcontainers/base:dev-alpine-3.15
-mcr.microsoft.com/devcontainers/base:dev-alpine3.15
-```
-> *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
-
-**Linux distribution:** Alpine Linux v3.15
-
-**Architectures:** linux/amd64, linux/arm64
-
-**Available (non-root) user:** vscode
-
-### Contents
-**Tools installed using git**
-
-| Tool | Commit | Path |
-|------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f36c6db0eac17b022eee87411e6996a5f5fc8457 | /home/vscode/.oh-my-zsh |
-
-**Other tools and utilities**
-
-| Tool | Version | Path |
-|------|---------|------|
-| [git](https://github.com/git/git) | 2.42.0 | 
-
-**Additional linux tools and packages**
-
-| Tool / library | Version |
-|----------------|---------|
-| openssh-client-default | 8.8_p1-r1 |
-| gnupg | 2.2.31-r2 |
-| procps | 3.3.17-r0 |
-| lsof | 4.94.0-r0 |
-| htop | 3.1.1-r0 |
-| net-tools | 1.60_git20140218-r2 |
-| psmisc | 23.4-r0 |
-| curl | 8.3.0-r0 |
-| wget | 1.21.2-r2 |
-| rsync | 3.2.5-r0 |
-| ca-certificates | 20230506-r0 |
-| unzip | 6.0-r9 |
-| zip | 3.0-r9 |
-| nano | 5.9-r0 |
-| vim | 8.2.4836-r0 |
-| less | 590-r1 |
-| jq | 1.6-r1 |
-| libgcc | 10.3.1_git20211027-r0 |
-| libstdc++ | 10.3.1_git20211027-r0 |
-| krb5-libs | 1.19.4-r0 |
-| libintl | 0.21-r0 |
-| libssl1.1 | 1.1.1w-r0 |
-| lttng-ust | 2.12.0-r3 |
-| tzdata | 2023c-r0 |
-| userspace-rcu | 0.12.2-r0 |
-| zlib | 1.2.12-r3 |
-| sudo | 1.9.13_p3-r2 |
-| coreutils | 9.0-r2 |
-| sed | 4.8-r0 |
-| grep | 3.7-r0 |
-| which | 2.21-r2 |
-| ncdu | 1.16-r0 |
-| shadow | 4.8.1-r1 |
-| strace | 5.14-r0 |
-| man-pages | 5.13-r0 |
 

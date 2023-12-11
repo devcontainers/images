@@ -45,11 +45,7 @@ checkPythonPackageVersion "transformers" "4.30.0"
 checkPythonPackageVersion "mpmath" "1.3.0"
 checkPythonPackageVersion "aiohttp" "3.8.5"
 checkPythonPackageVersion "jupyter_server" "2.7.2"
-checkPythonPackageVersion "urllib3" "1.26.17"
-
-# The `tornado` package doesn't have the `__version__` attribute so we can use the `version` attribute.
-tornado_version=$(python -c "import tornado; print(tornado.version)")
-check-version-ge "tornado-requirement" "${tornado_version}" "6.3.3"
+checkPythonPackageVersion "tornado" "6.3.3"
 
 checkCondaPackageVersion "pyopenssl" "23.2.0"
 checkCondaPackageVersion "cryptography" "41.0.3"
@@ -58,6 +54,7 @@ checkCondaPackageVersion "pygments" "2.15.1"
 checkCondaPackageVersion "mpmath" "1.3.0"
 checkCondaPackageVersion "aiohttp" "3.8.5"
 checkCondaPackageVersion "pillow" "10.0.1"
+checkCondaPackageVersion "urllib3" "1.26.17"
 
 check "conda-update-conda" bash -c "conda update -y conda"
 check "conda-install-tensorflow" bash -c "conda create --name test-env -c conda-forge --yes tensorflow"
