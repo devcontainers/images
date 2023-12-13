@@ -2,15 +2,9 @@ FROM continuumio/miniconda3 as upstream
 
 # Temporary: Upgrade python packages due to mentioned CVEs
 # They are installed by the base image (continuumio/miniconda3) which does not have the patch.
-RUN conda install \ 
-    # pyopenssl should be updated to be compatible with latest version of cryptography
-    pyopenssl=23.2.0 \ 
-    # https://github.com/advisories/GHSA-jm77-qphf-c4w8
-    cryptography=41.0.3 \
-    # https://github.com/advisories/GHSA-j8r2-6x86-q33q
-    requests=2.31.0 \
-    # https://github.com/advisories/GHSA-v845-jxx5-vc9f
-    urllib3==1.26.18
+# RUN conda install \ 
+    # https://github.com/advisories/<CVE_ID>
+    # <package_name> = <version>
 
 # Reset and copy updated files with updated privs to keep image size down
 FROM mcr.microsoft.com/devcontainers/base:1-bullseye
