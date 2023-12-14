@@ -5,9 +5,9 @@ RUN . /etc/os-release && if [ "${VERSION_CODENAME}" != "bullseye" ]; then exit 1
 
 # Temporary: Upgrade python packages due to mentioned CVEs
 # They are installed by the base image (continuumio/anaconda3) which does not have the patch.
-RUN conda install \
-    # https://github.com/advisories/GHSA-gfw2-4jvh-wgfg
-    aiohttp=3.8.6 \
+RUN conda install \ 
+    # https://github.com/advisories/GHSA-q3qx-c6g2-7pw2
+    aiohttp=3.9.0 \
     # https://github.com/advisories/GHSA-j7hp-h8jx-5ppr
     pillow=10.0.1 \
     # https://github.com/advisories/GHSA-v845-jxx5-vc9f
