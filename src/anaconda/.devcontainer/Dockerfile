@@ -33,11 +33,7 @@ RUN python3 -m pip install --upgrade \
     # https://github.com/advisories/GHSA-5wvp-7f3h-6wmm
     pyarrow==14.0.1 \
     # https://github.com/advisories/GHSA-jfhm-5ghh-2f97
-    cryptography==41.0.6 \
-    # https://github.com/advisories/GHSA-v68g-wm8c-6x7j
-    transformers==4.36.0 \
-    # https://github.com/advisories/GHSA-94vc-p8w7-5p49
-    imagecodecs==2023.9.18 
+    cryptography==41.0.6
 
 # Reset and copy updated files with updated privs to keep image size down
 FROM mcr.microsoft.com/devcontainers/base:1-bullseye
