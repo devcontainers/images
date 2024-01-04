@@ -11,7 +11,9 @@ RUN conda install \
     # https://github.com/advisories/GHSA-j7hp-h8jx-5ppr
     pillow=10.0.1 \
     # https://github.com/advisories/GHSA-v845-jxx5-vc9f
-    urllib3==1.26.18
+    urllib3==1.26.18 \
+    # https://github.com/advisories/GHSA-jfhm-5ghh-2f97
+    cryptography==41.0.7
 
 RUN python3 -m pip install --upgrade \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21797
