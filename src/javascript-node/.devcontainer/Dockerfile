@@ -8,9 +8,6 @@ ARG NPM_GLOBAL=/usr/local/share/npm-global
 # Add NPM global to PATH.
 ENV PATH=${NPM_GLOBAL}/bin:${PATH}
 
-# [Temporal] Bump npm version due to GHSA-c2qf-rxjj-qqgw
-RUN npm install -g npm@9.8.1
-
 RUN \
     # Configure global npm install location, use group to adapt to UID/GID changes
     if ! cat /etc/group | grep -e "^npm:" > /dev/null 2>&1; then groupadd -r npm; fi \
