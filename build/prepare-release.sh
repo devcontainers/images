@@ -47,6 +47,8 @@ release_image() {
 	echo "-----------------------------------------------"
 
 	bump_version $image
+
+	rm "${image}/.devcontainer/devcontainer-lock.json"
 	devcontainer upgrade --workspace-folder $image
 }
 
