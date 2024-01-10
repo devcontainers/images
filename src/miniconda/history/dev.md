@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/miniconda)
 
-**Digest:** sha256:7d62c57e51c659d5c25e1b39811294a82fdf3a75bed3b640a40378b505434fe1
+**Digest:** sha256:4ddd8036b69727d4d0c3c6f7a728d6d6f2bcbf7bb3c441447a1c9233c2288b66
 
 **Tags:**
 ```
@@ -29,35 +29,35 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 632ed413a9ce62747ded83d7736491b081be4b49 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 48ccc7b36de8efb2bd7beb9bd6e0a6f6fe03b95d | /home/vscode/.oh-my-zsh |
 
 **Pip / pipx installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| certifi | 2023.11.17 |
+| certifi | 2023.7.22 |
 | cryptography | 41.0.3 |
 | setuptools | 68.0.0 |
 | wheel | 0.41.2 |
 | requests | 2.31.0 |
-| pylint | 3.0.2 |
-| flake8 | 6.1.0 |
+| pylint | 3.0.3 |
+| flake8 | 7.0.0 |
 | autopep8 | 2.0.4 |
-| black | 23.11.0 |
+| black | 23.12.1 |
 | yapf | 0.40.2 |
-| mypy | 1.7.1 |
+| mypy | 1.8.0 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.11.1 |
-| bandit | 1.7.5 |
+| bandit | 1.7.6 |
 | virtualenv | 20.25.0 |
-| pipx | 1.3.3 |
+| pipx | 1.4.1 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.43.0 | 
-| [conda](https://github.com/conda/conda) | 23.11.0 | /opt/conda |
+| [conda](https://github.com/conda/conda) | 23.10.0 | /opt/conda |
 
 **Additional linux tools and packages**
 
@@ -66,7 +66,7 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | apt-transport-https | 2.2.4 |
 | apt-utils | 2.2.4 |
 | ca-certificates | 20210119 |
-| curl | 7.74.0-1.3+deb11u10 |
+| curl | 7.74.0-1.3+deb11u11 |
 | dialog | 1.3-20201126-1 |
 | git | 1:2.30.2-1+deb11u2 |
 | gnupg2 | 2.2.27-2+deb11u2 |
@@ -90,7 +90,7 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | nano | 5.4-2+deb11u2 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
-| openssh-client | 1:8.4p1-5+deb11u2 |
+| openssh-client | 1:8.4p1-5+deb11u3 |
 | procps | 2:3.3.17-5 |
 | psmisc | 23.4-2 |
 | rsync | 3.2.3-4+deb11u1 |

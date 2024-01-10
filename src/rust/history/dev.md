@@ -11,7 +11,7 @@
 
 ## Variant: bookworm
 
-**Digest:** sha256:4299eee1594d404fe8a6581fbb568c08227b81af72e62efc3bd09e814c7aec4b
+**Digest:** sha256:e6b4a65a86fc3c73c9d828c79014f28f921671b5ded1a3d6f0262d4f317b46f6
 
 **Tags:**
 ```
@@ -32,22 +32,22 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Rust](https://github.com/rust-lang/rust) | 1.74.0 | /usr/local/cargo<br />/usr/local/rustup |
+| [Rust](https://github.com/rust-lang/rust) | 1.75.0 | /usr/local/cargo<br />/usr/local/rustup |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 48ccc7b36de8efb2bd7beb9bd6e0a6f6fe03b95d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 
 | Tool / crate | Version |
 |--------------|---------|
-| rustfmt | 1.6.0 |
-| rust-analysis | 1.74.0 |
-| rust-src | 1.74.0 |
-| clippy | 1.74.0 |
+| rustfmt | 1.7.0 |
+| rust-analysis | 1.75.0 |
+| rust-src | 1.75.0 |
+| clippy | 1.75.0 |
 
 **Other tools and utilities**
 
@@ -62,7 +62,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bookworm
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
 | ca-certificates | 20230311 |
-| curl | 7.88.1-10+deb12u4 |
+| curl | 7.88.1-10+deb12u5 |
 | dialog | 1.3-20230209-1 |
 | gcc | 4:12.2.0-3 |
 | git | 1:2.39.2-1.1 |
@@ -88,7 +88,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bookworm
 | nano | 7.2-1 |
 | ncdu | 1.18-0.2 |
 | net-tools | 2.10-0.1 |
-| openssh-client | 1:9.2p1-2+deb12u1 |
+| openssh-client | 1:9.2p1-2+deb12u2 |
 | procps | 2:4.0.2-3 |
 | psmisc | 23.6-1 |
 | python3-minimal | 3.11.2-1+b1 |
@@ -104,7 +104,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bookworm
 
 ## Variant: buster
 
-**Digest:** sha256:997f56b8b4d85007fe63d573fd6f263fd227a57767e0c7722d201d9396f36d1f
+**Digest:** sha256:1862358d1e33c3e65111198b7cdf7fb04af90bfcb2bea426170a1ca0db9425d7
 
 **Tags:**
 ```
@@ -124,22 +124,22 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Rust](https://github.com/rust-lang/rust) | 1.74.0 | /usr/local/cargo<br />/usr/local/rustup |
+| [Rust](https://github.com/rust-lang/rust) | 1.75.0 | /usr/local/cargo<br />/usr/local/rustup |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 48ccc7b36de8efb2bd7beb9bd6e0a6f6fe03b95d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 
 | Tool / crate | Version |
 |--------------|---------|
-| rustfmt | 1.6.0 |
-| rust-analysis | 1.74.0 |
-| rust-src | 1.74.0 |
-| clippy | 1.74.0 |
+| rustfmt | 1.7.0 |
+| rust-analysis | 1.75.0 |
+| rust-src | 1.75.0 |
+| clippy | 1.75.0 |
 
 **Other tools and utilities**
 
@@ -154,7 +154,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 | apt-transport-https | 1.8.2.3 |
 | apt-utils | 1.8.2.3 |
 | ca-certificates | 20200601~deb10u2 |
-| curl | 7.64.0-4+deb10u7 |
+| curl | 7.64.0-4+deb10u8 |
 | dialog | 1.3-20190211-1 |
 | gcc | 4:8.3.0-1 |
 | git | 1:2.20.1-2+deb10u8 |
@@ -182,7 +182,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 | nano | 3.2-3 |
 | ncdu | 1.13-1+b1 |
 | net-tools | 1.60+git20180626.aebd88e-1 |
-| openssh-client | 1:7.9p1-10+deb10u3 |
+| openssh-client | 1:7.9p1-10+deb10u4 |
 | procps | 2:3.3.15-2 |
 | psmisc | 23.2-1+deb10u1 |
 | python3-minimal | 3.7.3-1 |
@@ -198,7 +198,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-buster
 
 ## Variant: bullseye
 
-**Digest:** sha256:96957bf42db24f0718fcb6ed1ba715d01042ad68b21b266ae5452cb4663e9b8e
+**Digest:** sha256:83295751bca8028ce68c4261ef11add1afae8d33e7299bc95f5b7d8abfeb0d19
 
 **Tags:**
 ```
@@ -218,22 +218,22 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Rust](https://github.com/rust-lang/rust) | 1.74.0 | /usr/local/cargo<br />/usr/local/rustup |
+| [Rust](https://github.com/rust-lang/rust) | 1.75.0 | /usr/local/cargo<br />/usr/local/rustup |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 48ccc7b36de8efb2bd7beb9bd6e0a6f6fe03b95d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 
 | Tool / crate | Version |
 |--------------|---------|
-| rustfmt | 1.6.0 |
-| rust-analysis | 1.74.0 |
-| rust-src | 1.74.0 |
-| clippy | 1.74.0 |
+| rustfmt | 1.7.0 |
+| rust-analysis | 1.75.0 |
+| rust-src | 1.75.0 |
+| clippy | 1.75.0 |
 
 **Other tools and utilities**
 
@@ -248,7 +248,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 | apt-transport-https | 2.2.4 |
 | apt-utils | 2.2.4 |
 | ca-certificates | 20210119 |
-| curl | 7.74.0-1.3+deb11u10 |
+| curl | 7.74.0-1.3+deb11u11 |
 | dialog | 1.3-20201126-1 |
 | gcc | 4:10.2.1-1 |
 | git | 1:2.30.2-1+deb11u2 |
@@ -275,7 +275,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 | nano | 5.4-2+deb11u2 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
-| openssh-client | 1:8.4p1-5+deb11u2 |
+| openssh-client | 1:8.4p1-5+deb11u3 |
 | procps | 2:3.3.17-5 |
 | psmisc | 23.4-2 |
 | python3-minimal | 3.9.2-3 |

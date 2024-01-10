@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:facfbe27e9e9c6812a318515f1aabb84065c033acf11e5a1ad7768e14ba49031
+**Digest:** sha256:bb3f394fbecb78f1ead99020fc58d9ad60fed3e8731d2e3ed8cc4571bfb6261e
 
 **Tags:**
 ```
@@ -31,7 +31,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 632ed413a9ce62747ded83d7736491b081be4b49 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 48ccc7b36de8efb2bd7beb9bd6e0a6f6fe03b95d | /home/vscode/.oh-my-zsh |
 
 **Pip / pipx installed tools and packages**
 
@@ -39,7 +39,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 |----------------|---------|
 | joblib | 1.3.1 |
 | cookiecutter | 2.2.3 |
-| cryptography | 41.0.3 |
+| cryptography | 41.0.7 |
 | mistune | 3.0.1 |
 | numpy | 1.25.2 |
 | certifi | 2023.11.17 |
@@ -50,7 +50,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | Werkzeug | 2.3.6 |
 | requests | 2.31.0 |
 | tornado | 6.3.3 |
-| transformers | 4.30.0 |
+| transformers | 4.36.0 |
 | jupyter_server | 2.7.2 |
 
 **Other tools and utilities**
@@ -67,7 +67,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | apt-transport-https | 2.2.4 |
 | apt-utils | 2.2.4 |
 | ca-certificates | 20210119 |
-| curl | 7.74.0-1.3+deb11u10 |
+| curl | 7.74.0-1.3+deb11u11 |
 | dialog | 1.3-20201126-1 |
 | git | 1:2.30.2-1+deb11u2 |
 | gnupg2 | 2.2.27-2+deb11u2 |
@@ -91,7 +91,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | nano | 5.4-2+deb11u2 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
-| openssh-client | 1:8.4p1-5+deb11u2 |
+| openssh-client | 1:8.4p1-5+deb11u3 |
 | procps | 2:3.3.17-5 |
 | psmisc | 23.4-2 |
 | rsync | 3.2.3-4+deb11u1 |
