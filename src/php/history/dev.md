@@ -18,7 +18,7 @@
 
 ## Variant: 8.3-apache-bookworm
 
-**Digest:** sha256:a76b6a2479bf764c0807f8798bc4371601161fbdeba7e14bfa1eb81eb62f4087
+**Digest:** sha256:fec434296c7ff1fd0bb87d2aabf48e3e27d38e7fdce6bd0773b757cf34a46ec3
 
 **Tags:**
 ```
@@ -42,13 +42,13 @@ mcr.microsoft.com/devcontainers/php:dev-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [PHP](https://xdebug.org/) | 8.3.0 | /usr/local |
+| [PHP](https://xdebug.org/) | 8.3.1 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 48ccc7b36de8efb2bd7beb9bd6e0a6f6fe03b95d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -56,8 +56,8 @@ mcr.microsoft.com/devcontainers/php:dev-bookworm
 | Tool | Version | Path |
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.43.0 | 
-| [Xdebug](https://xdebug.org/) | 3.3.0 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.6.5 | /usr/local |
+| [Xdebug](https://xdebug.org/) | 3.3.1 | /usr/local/lib/php/extensions |
+| [Composer](https://getcomposer.org/) | 2.6.6 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -66,7 +66,7 @@ mcr.microsoft.com/devcontainers/php:dev-bookworm
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
 | ca-certificates | 20230311 |
-| curl | 7.88.1-10+deb12u4 |
+| curl | 7.88.1-10+deb12u5 |
 | dialog | 1.3-20230209-1 |
 | git | 1:2.39.2-1.1 |
 | gnupg2 | 2.2.40-1.1 |
@@ -89,7 +89,7 @@ mcr.microsoft.com/devcontainers/php:dev-bookworm
 | nano | 7.2-1 |
 | ncdu | 1.18-0.2 |
 | net-tools | 2.10-0.1 |
-| openssh-client | 1:9.2p1-2+deb12u1 |
+| openssh-client | 1:9.2p1-2+deb12u2 |
 | procps | 2:4.0.2-3 |
 | psmisc | 23.6-1 |
 | rsync | 3.2.7-1 |
@@ -105,7 +105,7 @@ mcr.microsoft.com/devcontainers/php:dev-bookworm
 
 ## Variant: 8.2-apache-bookworm
 
-**Digest:** sha256:24ab4ae022195d1093b2de13a48961ceb4e6cbe61f20532ddf8c6d0c315125ed
+**Digest:** sha256:824b8a62334a5f937dc7cb7c4dff513d220798f56b4c8bbd598609b05acf2137
 
 **Tags:**
 ```
@@ -126,13 +126,13 @@ mcr.microsoft.com/devcontainers/php:dev-8.2-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [PHP](https://xdebug.org/) | 8.2.13 | /usr/local |
+| [PHP](https://xdebug.org/) | 8.2.14 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 48ccc7b36de8efb2bd7beb9bd6e0a6f6fe03b95d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -140,8 +140,8 @@ mcr.microsoft.com/devcontainers/php:dev-8.2-bookworm
 | Tool | Version | Path |
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.43.0 | 
-| [Xdebug](https://xdebug.org/) | 3.3.0 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.6.5 | /usr/local |
+| [Xdebug](https://xdebug.org/) | 3.3.1 | /usr/local/lib/php/extensions |
+| [Composer](https://getcomposer.org/) | 2.6.6 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -150,7 +150,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.2-bookworm
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
 | ca-certificates | 20230311 |
-| curl | 7.88.1-10+deb12u4 |
+| curl | 7.88.1-10+deb12u5 |
 | dialog | 1.3-20230209-1 |
 | git | 1:2.39.2-1.1 |
 | gnupg2 | 2.2.40-1.1 |
@@ -173,7 +173,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.2-bookworm
 | nano | 7.2-1 |
 | ncdu | 1.18-0.2 |
 | net-tools | 2.10-0.1 |
-| openssh-client | 1:9.2p1-2+deb12u1 |
+| openssh-client | 1:9.2p1-2+deb12u2 |
 | procps | 2:4.0.2-3 |
 | psmisc | 23.6-1 |
 | rsync | 3.2.7-1 |
@@ -189,7 +189,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.2-bookworm
 
 ## Variant: 8.1-apache-bookworm
 
-**Digest:** sha256:0ec2bffdc16731079ce1ebaf86105e6b1d27e88325e68606d3864c7915524e26
+**Digest:** sha256:e450c81b9ba5bdb2dcc2e5a84d0aaddedfa909062414ba0a924aca87db0c914f
 
 **Tags:**
 ```
@@ -210,13 +210,13 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [PHP](https://xdebug.org/) | 8.1.26 | /usr/local |
+| [PHP](https://xdebug.org/) | 8.1.27 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 48ccc7b36de8efb2bd7beb9bd6e0a6f6fe03b95d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -224,8 +224,8 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-bookworm
 | Tool | Version | Path |
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.43.0 | 
-| [Xdebug](https://xdebug.org/) | 3.3.0 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.6.5 | /usr/local |
+| [Xdebug](https://xdebug.org/) | 3.3.1 | /usr/local/lib/php/extensions |
+| [Composer](https://getcomposer.org/) | 2.6.6 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -234,7 +234,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-bookworm
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
 | ca-certificates | 20230311 |
-| curl | 7.88.1-10+deb12u4 |
+| curl | 7.88.1-10+deb12u5 |
 | dialog | 1.3-20230209-1 |
 | git | 1:2.39.2-1.1 |
 | gnupg2 | 2.2.40-1.1 |
@@ -257,7 +257,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-bookworm
 | nano | 7.2-1 |
 | ncdu | 1.18-0.2 |
 | net-tools | 2.10-0.1 |
-| openssh-client | 1:9.2p1-2+deb12u1 |
+| openssh-client | 1:9.2p1-2+deb12u2 |
 | procps | 2:4.0.2-3 |
 | psmisc | 23.6-1 |
 | rsync | 3.2.7-1 |
@@ -273,7 +273,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-bookworm
 
 ## Variant: 8.3-apache-bullseye
 
-**Digest:** sha256:add634db5c329d1f290cec042c61fbea2794ea71031826befde0281bd327f889
+**Digest:** sha256:289ef57c2163bc14f3aa4bb1991cf14042a276a686f7212cb5e7581965754dbe
 
 **Tags:**
 ```
@@ -295,13 +295,13 @@ mcr.microsoft.com/devcontainers/php:dev-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [PHP](https://xdebug.org/) | 8.3.0 | /usr/local |
+| [PHP](https://xdebug.org/) | 8.3.1 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 48ccc7b36de8efb2bd7beb9bd6e0a6f6fe03b95d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -309,8 +309,8 @@ mcr.microsoft.com/devcontainers/php:dev-bullseye
 | Tool | Version | Path |
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.43.0 | 
-| [Xdebug](https://xdebug.org/) | 3.3.0 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.6.5 | /usr/local |
+| [Xdebug](https://xdebug.org/) | 3.3.1 | /usr/local/lib/php/extensions |
+| [Composer](https://getcomposer.org/) | 2.6.6 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -319,7 +319,7 @@ mcr.microsoft.com/devcontainers/php:dev-bullseye
 | apt-transport-https | 2.2.4 |
 | apt-utils | 2.2.4 |
 | ca-certificates | 20210119 |
-| curl | 7.74.0-1.3+deb11u10 |
+| curl | 7.74.0-1.3+deb11u11 |
 | dialog | 1.3-20201126-1 |
 | git | 1:2.30.2-1+deb11u2 |
 | gnupg2 | 2.2.27-2+deb11u2 |
@@ -343,7 +343,7 @@ mcr.microsoft.com/devcontainers/php:dev-bullseye
 | nano | 5.4-2+deb11u2 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
-| openssh-client | 1:8.4p1-5+deb11u2 |
+| openssh-client | 1:8.4p1-5+deb11u3 |
 | procps | 2:3.3.17-5 |
 | psmisc | 23.4-2 |
 | rsync | 3.2.3-4+deb11u1 |
@@ -359,7 +359,7 @@ mcr.microsoft.com/devcontainers/php:dev-bullseye
 
 ## Variant: 8.2-apache-bullseye
 
-**Digest:** sha256:f4c882ce5dbbb18b054ca6a9120e1982f1d23c11329f9444dd766fd703ef80a7
+**Digest:** sha256:54d342983aa186d7fc17c1e6db1cafb6e7834269a425120f1745b47ab14d6e30
 
 **Tags:**
 ```
@@ -379,13 +379,13 @@ mcr.microsoft.com/devcontainers/php:dev-8.2-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [PHP](https://xdebug.org/) | 8.2.13 | /usr/local |
+| [PHP](https://xdebug.org/) | 8.2.14 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 48ccc7b36de8efb2bd7beb9bd6e0a6f6fe03b95d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -393,8 +393,8 @@ mcr.microsoft.com/devcontainers/php:dev-8.2-bullseye
 | Tool | Version | Path |
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.43.0 | 
-| [Xdebug](https://xdebug.org/) | 3.3.0 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.6.5 | /usr/local |
+| [Xdebug](https://xdebug.org/) | 3.3.1 | /usr/local/lib/php/extensions |
+| [Composer](https://getcomposer.org/) | 2.6.6 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -403,7 +403,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.2-bullseye
 | apt-transport-https | 2.2.4 |
 | apt-utils | 2.2.4 |
 | ca-certificates | 20210119 |
-| curl | 7.74.0-1.3+deb11u10 |
+| curl | 7.74.0-1.3+deb11u11 |
 | dialog | 1.3-20201126-1 |
 | git | 1:2.30.2-1+deb11u2 |
 | gnupg2 | 2.2.27-2+deb11u2 |
@@ -427,7 +427,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.2-bullseye
 | nano | 5.4-2+deb11u2 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
-| openssh-client | 1:8.4p1-5+deb11u2 |
+| openssh-client | 1:8.4p1-5+deb11u3 |
 | procps | 2:3.3.17-5 |
 | psmisc | 23.4-2 |
 | rsync | 3.2.3-4+deb11u1 |
@@ -443,7 +443,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.2-bullseye
 
 ## Variant: 8.1-apache-bullseye
 
-**Digest:** sha256:de5e7be4b8b5d542cf5eaae0e3634067aa6c62b0339c2101e23067568f2558f7
+**Digest:** sha256:c770d54abb86d2ad593ae8d0728cc7df4fa0a2713c9099f3c56d88d0f6d9b837
 
 **Tags:**
 ```
@@ -463,13 +463,13 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [PHP](https://xdebug.org/) | 8.1.26 | /usr/local |
+| [PHP](https://xdebug.org/) | 8.1.27 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 48ccc7b36de8efb2bd7beb9bd6e0a6f6fe03b95d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -477,8 +477,8 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-bullseye
 | Tool | Version | Path |
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.43.0 | 
-| [Xdebug](https://xdebug.org/) | 3.3.0 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.6.5 | /usr/local |
+| [Xdebug](https://xdebug.org/) | 3.3.1 | /usr/local/lib/php/extensions |
+| [Composer](https://getcomposer.org/) | 2.6.6 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -487,7 +487,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-bullseye
 | apt-transport-https | 2.2.4 |
 | apt-utils | 2.2.4 |
 | ca-certificates | 20210119 |
-| curl | 7.74.0-1.3+deb11u10 |
+| curl | 7.74.0-1.3+deb11u11 |
 | dialog | 1.3-20201126-1 |
 | git | 1:2.30.2-1+deb11u2 |
 | gnupg2 | 2.2.27-2+deb11u2 |
@@ -511,7 +511,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-bullseye
 | nano | 5.4-2+deb11u2 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
-| openssh-client | 1:8.4p1-5+deb11u2 |
+| openssh-client | 1:8.4p1-5+deb11u3 |
 | procps | 2:3.3.17-5 |
 | psmisc | 23.4-2 |
 | rsync | 3.2.3-4+deb11u1 |
@@ -527,7 +527,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-bullseye
 
 ## Variant: 8.0-apache-bullseye
 
-**Digest:** sha256:194c0c49549177b0578641c5f2278dd7253f0d6880b4e2f82e9d29089fbf9e96
+**Digest:** sha256:1e705d95fbe1fcf9a441f027120e1caf579fa84f319aa6637948a12fcbd45cc9
 
 **Tags:**
 ```
@@ -554,7 +554,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 48ccc7b36de8efb2bd7beb9bd6e0a6f6fe03b95d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -562,8 +562,8 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-bullseye
 | Tool | Version | Path |
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.43.0 | 
-| [Xdebug](https://xdebug.org/) | 3.3.0 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.6.5 | /usr/local |
+| [Xdebug](https://xdebug.org/) | 3.3.1 | /usr/local/lib/php/extensions |
+| [Composer](https://getcomposer.org/) | 2.6.6 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -572,7 +572,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-bullseye
 | apt-transport-https | 2.2.4 |
 | apt-utils | 2.2.4 |
 | ca-certificates | 20210119 |
-| curl | 7.74.0-1.3+deb11u10 |
+| curl | 7.74.0-1.3+deb11u11 |
 | dialog | 1.3-20201126-1 |
 | git | 1:2.30.2-1+deb11u2 |
 | gnupg2 | 2.2.27-2+deb11u2 |
@@ -596,7 +596,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-bullseye
 | nano | 5.4-2+deb11u2 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
-| openssh-client | 1:8.4p1-5+deb11u2 |
+| openssh-client | 1:8.4p1-5+deb11u3 |
 | procps | 2:3.3.17-5 |
 | psmisc | 23.4-2 |
 | rsync | 3.2.3-4+deb11u1 |
@@ -612,7 +612,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-bullseye
 
 ## Variant: 8.2-apache-buster
 
-**Digest:** sha256:2614a7cfc440a1e4215887ce423089600b8feda150455c1c44c7cbe99382809a
+**Digest:** sha256:5a8c67b90337d1e09af021469bfac5a30a0579c22b8d7936ab0427daba972526
 
 **Tags:**
 ```
@@ -640,7 +640,7 @@ mcr.microsoft.com/devcontainers/php:dev-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 48ccc7b36de8efb2bd7beb9bd6e0a6f6fe03b95d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -648,8 +648,8 @@ mcr.microsoft.com/devcontainers/php:dev-buster
 | Tool | Version | Path |
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.43.0 | 
-| [Xdebug](https://xdebug.org/) | 3.3.0 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.6.5 | /usr/local |
+| [Xdebug](https://xdebug.org/) | 3.3.1 | /usr/local/lib/php/extensions |
+| [Composer](https://getcomposer.org/) | 2.6.6 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -658,7 +658,7 @@ mcr.microsoft.com/devcontainers/php:dev-buster
 | apt-transport-https | 1.8.2.3 |
 | apt-utils | 1.8.2.3 |
 | ca-certificates | 20200601~deb10u2 |
-| curl | 7.64.0-4+deb10u7 |
+| curl | 7.64.0-4+deb10u8 |
 | dialog | 1.3-20190211-1 |
 | git | 1:2.20.1-2+deb10u8 |
 | gnupg2 | 2.2.12-1+deb10u2 |
@@ -683,7 +683,7 @@ mcr.microsoft.com/devcontainers/php:dev-buster
 | nano | 3.2-3 |
 | ncdu | 1.13-1+b1 |
 | net-tools | 1.60+git20180626.aebd88e-1 |
-| openssh-client | 1:7.9p1-10+deb10u3 |
+| openssh-client | 1:7.9p1-10+deb10u4 |
 | procps | 2:3.3.15-2 |
 | psmisc | 23.2-1+deb10u1 |
 | rsync | 3.1.3-6 |
@@ -699,7 +699,7 @@ mcr.microsoft.com/devcontainers/php:dev-buster
 
 ## Variant: 8.1-apache-buster
 
-**Digest:** sha256:e77ed57a5bdf89318ac45da5757ec8d63f00f65a95725596270c980cac17c5ce
+**Digest:** sha256:fc348f15b293cf82a896830cec01a8788786ebb35b049483a023420e7a6831e1
 
 **Tags:**
 ```
@@ -725,7 +725,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 48ccc7b36de8efb2bd7beb9bd6e0a6f6fe03b95d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -733,8 +733,8 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-buster
 | Tool | Version | Path |
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.43.0 | 
-| [Xdebug](https://xdebug.org/) | 3.3.0 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.6.5 | /usr/local |
+| [Xdebug](https://xdebug.org/) | 3.3.1 | /usr/local/lib/php/extensions |
+| [Composer](https://getcomposer.org/) | 2.6.6 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -743,7 +743,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-buster
 | apt-transport-https | 1.8.2.3 |
 | apt-utils | 1.8.2.3 |
 | ca-certificates | 20200601~deb10u2 |
-| curl | 7.64.0-4+deb10u7 |
+| curl | 7.64.0-4+deb10u8 |
 | dialog | 1.3-20190211-1 |
 | git | 1:2.20.1-2+deb10u8 |
 | gnupg2 | 2.2.12-1+deb10u2 |
@@ -768,7 +768,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-buster
 | nano | 3.2-3 |
 | ncdu | 1.13-1+b1 |
 | net-tools | 1.60+git20180626.aebd88e-1 |
-| openssh-client | 1:7.9p1-10+deb10u3 |
+| openssh-client | 1:7.9p1-10+deb10u4 |
 | procps | 2:3.3.15-2 |
 | psmisc | 23.2-1+deb10u1 |
 | rsync | 3.1.3-6 |
@@ -784,7 +784,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-buster
 
 ## Variant: 8.0-apache-buster
 
-**Digest:** sha256:9ee49326a20bbf8494db6a35dfe1682fa870fa8784e743f09c7db74163027ca8
+**Digest:** sha256:b73c22f46a34c7062a04085cd6589d42c274868166a9c65ed1e3d8f7b1a8fe2e
 
 **Tags:**
 ```
@@ -810,7 +810,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 48ccc7b36de8efb2bd7beb9bd6e0a6f6fe03b95d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -818,8 +818,8 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-buster
 | Tool | Version | Path |
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.43.0 | 
-| [Xdebug](https://xdebug.org/) | 3.3.0 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.6.5 | /usr/local |
+| [Xdebug](https://xdebug.org/) | 3.3.1 | /usr/local/lib/php/extensions |
+| [Composer](https://getcomposer.org/) | 2.6.6 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -828,7 +828,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-buster
 | apt-transport-https | 1.8.2.3 |
 | apt-utils | 1.8.2.3 |
 | ca-certificates | 20200601~deb10u2 |
-| curl | 7.64.0-4+deb10u7 |
+| curl | 7.64.0-4+deb10u8 |
 | dialog | 1.3-20190211-1 |
 | git | 1:2.20.1-2+deb10u8 |
 | gnupg2 | 2.2.12-1+deb10u2 |
@@ -853,7 +853,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.0-buster
 | nano | 3.2-3 |
 | ncdu | 1.13-1+b1 |
 | net-tools | 1.60+git20180626.aebd88e-1 |
-| openssh-client | 1:7.9p1-10+deb10u3 |
+| openssh-client | 1:7.9p1-10+deb10u4 |
 | procps | 2:3.3.15-2 |
 | psmisc | 23.2-1+deb10u1 |
 | rsync | 3.1.3-6 |

@@ -36,7 +36,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "cryptography",
-                    "Version": "41.0.3"
+                    "Version": "41.0.7"
                 }
             }
         },
@@ -151,7 +151,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "transformers",
-                    "Version": "4.30.0"
+                    "Version": "4.36.0"
                 }
             }
         },
@@ -170,7 +170,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "632ed413a9ce62747ded83d7736491b081be4b49"
+                    "commitHash": "48ccc7b36de8efb2bd7beb9bd6e0a6f6fe03b95d"
                 }
             }
         },
@@ -200,7 +200,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "48ccc7b36de8efb2bd7beb9bd6e0a6f6fe03b95d"
+                    "commitHash": "5ea2c68be88452b33b35ba8004fc9094618bcd87"
                 }
             }
         },
@@ -290,7 +290,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "42301df395852935d105799de93abf5481f34f1a"
+                    "commitHash": "c9919121dde6f61c0436adda94624636e041226b"
                 }
             }
         },
@@ -300,7 +300,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "3135b990681223c46d2bce0793e04036d88f307c"
+                    "commitHash": "3bc5ff7f7ab72b57f0945d35bbbdaac2060bc268"
                 }
             }
         },
@@ -486,7 +486,7 @@
                 "Type": "go",
                 "Go": {
                     "Name": "github.com/mgechev/revive",
-                    "Version": "1.3.4"
+                    "Version": "1.3.6"
                 }
             }
         },
@@ -513,7 +513,7 @@
                 "Type": "go",
                 "Go": {
                     "Name": "github.com/go-delve/delve",
-                    "Version": "1.21.2"
+                    "Version": "1.22.0"
                 }
             }
         },
@@ -601,7 +601,7 @@
                 "Type": "npm",
                 "Npm": {
                     "Name": "eslint",
-                    "Version": "8.55.0"
+                    "Version": "8.56.0"
                 }
             }
         },
@@ -611,7 +611,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "48ccc7b36de8efb2bd7beb9bd6e0a6f6fe03b95d"
+                    "commitHash": "5ea2c68be88452b33b35ba8004fc9094618bcd87"
                 }
             }
         },
@@ -686,7 +686,7 @@
                 "Type": "RubyGems",
                 "RubyGems": {
                     "Name": "bundler",
-                    "Version": "2.4.22"
+                    "Version": "2.5.4"
                 }
             }
         },
@@ -695,7 +695,7 @@
                 "Type": "RubyGems",
                 "RubyGems": {
                     "Name": "jekyll",
-                    "Version": "4.3.2"
+                    "Version": "4.3.3"
                 }
             }
         },
@@ -714,7 +714,7 @@
                 "Git": {
                     "Name": "rbenv",
                     "repositoryUrl": "https://github.com/rbenv/rbenv.git",
-                    "commitHash": "d10388a0529cb4f05b170395bb01c257a8186062"
+                    "commitHash": "e8b7a27ee67a5751b899215b4d35fd86ab552dae"
                 }
             }
         },
@@ -724,7 +724,7 @@
                 "Git": {
                     "Name": "ruby-build",
                     "repositoryUrl": "https://github.com/rbenv/ruby-build.git",
-                    "commitHash": "cba395e4a6b02e56c058822ce4d9b2e686d20ec5"
+                    "commitHash": "3b79c2931a9eb0e122ba2d2371b1420d5329d4fb"
                 }
             }
         },
@@ -772,6 +772,24 @@
             "Component": {
                 "Type": "Pip",
                 "Pip": {
+                    "Name": "certifi",
+                    "Version": "2023.7.22"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "Pip",
+                "Pip": {
+                    "Name": "cryptography",
+                    "Version": "41.0.3"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "Pip",
+                "Pip": {
                     "Name": "wheel",
                     "Version": "0.41.2"
                 }
@@ -782,7 +800,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "pylint",
-                    "Version": "3.0.2"
+                    "Version": "3.0.3"
                 }
             }
         },
@@ -791,7 +809,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "flake8",
-                    "Version": "6.1.0"
+                    "Version": "7.0.0"
                 }
             }
         },
@@ -809,7 +827,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "black",
-                    "Version": "23.11.0"
+                    "Version": "23.12.1"
                 }
             }
         },
@@ -827,7 +845,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "mypy",
-                    "Version": "1.7.1"
+                    "Version": "1.8.0"
                 }
             }
         },
@@ -854,7 +872,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "bandit",
-                    "Version": "1.7.5"
+                    "Version": "1.7.6"
                 }
             }
         },
@@ -872,7 +890,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "pipx",
-                    "Version": "1.3.3"
+                    "Version": "1.4.1"
                 }
             }
         },
@@ -891,7 +909,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Xdebug",
-                    "Version": "3.3.0",
+                    "Version": "3.3.1",
                     "DownloadUrl": "https://xdebug.org/"
                 }
             }
@@ -901,7 +919,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Composer",
-                    "Version": "2.6.5",
+                    "Version": "2.6.6",
                     "DownloadUrl": "https://getcomposer.org/"
                 }
             }
@@ -1011,7 +1029,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "setuptools",
-                    "Version": "69.0.2"
+                    "Version": "69.0.3"
                 }
             }
         },
@@ -1240,7 +1258,7 @@
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "rustfmt",
-                    "Version": "1.6.0"
+                    "Version": "1.7.0"
                 }
             }
         },
@@ -1249,7 +1267,7 @@
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "rust-analysis",
-                    "Version": "1.74.0"
+                    "Version": "1.75.0"
                 }
             }
         },
@@ -1258,7 +1276,7 @@
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "rust-src",
-                    "Version": "1.74.0"
+                    "Version": "1.75.0"
                 }
             }
         },
@@ -1267,7 +1285,7 @@
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "clippy",
-                    "Version": "1.74.0"
+                    "Version": "1.75.0"
                 }
             }
         },
@@ -1306,7 +1324,7 @@
                 "Type": "npm",
                 "Npm": {
                     "Name": "tslint-to-eslint-config",
-                    "Version": "2.14.1"
+                    "Version": "2.14.3"
                 }
             }
         },
@@ -1384,7 +1402,7 @@
                 "Type": "linux",
                 "Linux": {
                     "Name": "git-lfs",
-                    "Version": "3.4.0",
+                    "Version": "3.4.1",
                     "Distribution": "ubuntu",
                     "Release": "20.04",
                     "Pool-URL": "https://packagecloud.io/github/git-lfs/ubuntu",
@@ -1423,7 +1441,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "numpy",
-                    "Version": "1.26.2"
+                    "Version": "1.26.3"
                 }
             }
         },
@@ -1432,7 +1450,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "pandas",
-                    "Version": "2.1.3"
+                    "Version": "2.1.4"
                 }
             }
         },
@@ -1459,7 +1477,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "seaborn",
-                    "Version": "0.13.0"
+                    "Version": "0.13.1"
                 }
             }
         },
@@ -1477,7 +1495,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "torch",
-                    "Version": "2.1.1"
+                    "Version": "2.1.2"
                 }
             }
         },
@@ -1531,7 +1549,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "48ccc7b36de8efb2bd7beb9bd6e0a6f6fe03b95d"
+                    "commitHash": "5ea2c68be88452b33b35ba8004fc9094618bcd87"
                 }
             }
         },
@@ -1550,7 +1568,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Xdebug",
-                    "Version": "3.3.0",
+                    "Version": "3.3.1",
                     "DownloadUrl": "https://xdebug.org/"
                 }
             }
@@ -1560,7 +1578,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "kubectl",
-                    "Version": "v1.28.4",
+                    "Version": "v1.29.0",
                     "DownloadUrl": "https://github.com/kubernetes/kubectl"
                 }
             }
@@ -1570,7 +1588,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Helm",
-                    "Version": "3.13.2",
+                    "Version": "3.13.3",
                     "DownloadUrl": "https://github.com/helm/helm"
                 }
             }
@@ -1590,7 +1608,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "GitHub CLI",
-                    "Version": "2.40.0",
+                    "Version": "2.41.0",
                     "DownloadUrl": "https://github.com/cli/cli"
                 }
             }
