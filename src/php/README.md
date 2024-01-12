@@ -9,7 +9,7 @@
 | *Categories* | Languages |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/php |
-| *Available image variants* | 8 / 8-bookworm, 8.3 / 8.3-bookworm, 8.2 / 8.2-bookworm, 8.1 / 8.1-bookworm, 8.0 / 8.0-bookworm, 8-bullseye, 8.3-bullseye, 8.2-bullseye, 8.1-bullseye, 8.0-bullseye, 8-buster, 8.2-buster, 8.1-buster, 8.0-buster ([full list](https://mcr.microsoft.com/v2/devcontainers/php/tags/list)) |
+| *Available image variants* | 8 / 8-bookworm, 8.3 / 8.3-bookworm, 8.2 / 8.2-bookworm, 8.1 / 8.1-bookworm, 8-bullseye, 8.3-bullseye, 8.2-bullseye, 8.1-bullseye, 8-buster, 8.2-buster, 8.1-buster ([full list](https://mcr.microsoft.com/v2/devcontainers/php/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm`, and `bullseye` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
@@ -26,7 +26,6 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 - `mcr.microsoft.com/devcontainers/php:8.3` (or `8.3-bookworm`, `8.3-bullseye` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/php:8.2` (or `8.2-bookworm`, `8.2-bullseye`, `8.2-buster` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/php:8.1` (or `8.1-bookworm`, `8.1-bullseye`, `8.1-buster` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/php:8.0` (or `8.0-bullseye`, `8.0-buster` to pin to an OS version)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
