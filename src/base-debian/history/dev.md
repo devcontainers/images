@@ -11,7 +11,7 @@
 
 ## Variant: bookworm
 
-**Digest:** sha256:c59754a860906864f0c29a50975af84bc257e46d3c9840850e7780b72f840dc6
+**Digest:** sha256:1ca4e67e89991ff59f3438a411f0a6bb3507c502bb376d7ab97f4f7bb8eb0072
 
 **Tags:**
 ```
@@ -34,7 +34,7 @@ mcr.microsoft.com/devcontainers/base:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7e3fdf33ec53821e574b8d6df43bec7264c507ee | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -49,7 +49,7 @@ mcr.microsoft.com/devcontainers/base:dev
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
 | ca-certificates | 20230311 |
-| curl | 7.88.1-10+deb12u4 |
+| curl | 7.88.1-10+deb12u5 |
 | dialog | 1.3-20230209-1 |
 | git | 1:2.39.2-1.1 |
 | gnupg2 | 2.2.40-1.1 |
@@ -72,7 +72,7 @@ mcr.microsoft.com/devcontainers/base:dev
 | nano | 7.2-1 |
 | ncdu | 1.18-0.2 |
 | net-tools | 2.10-0.1 |
-| openssh-client | 1:9.2p1-2+deb12u1 |
+| openssh-client | 1:9.2p1-2+deb12u2 |
 | procps | 2:4.0.2-3 |
 | psmisc | 23.6-1 |
 | rsync | 3.2.7-1 |
@@ -87,7 +87,7 @@ mcr.microsoft.com/devcontainers/base:dev
 
 ## Variant: buster
 
-**Digest:** sha256:7a10ff8635ead378f65110e05c7743e22f619fa57835830c0c6330dfe9d8a4c0
+**Digest:** sha256:a4f8725d86ccc88c2d95d327e604182a57ed9af425472152c2a25ef2644b40f0
 
 **Tags:**
 ```
@@ -108,7 +108,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian10
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7e3fdf33ec53821e574b8d6df43bec7264c507ee | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -123,7 +123,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian10
 | apt-transport-https | 1.8.2.3 |
 | apt-utils | 1.8.2.3 |
 | ca-certificates | 20200601~deb10u2 |
-| curl | 7.64.0-4+deb10u7 |
+| curl | 7.64.0-4+deb10u8 |
 | dialog | 1.3-20190211-1 |
 | git | 1:2.20.1-2+deb10u8 |
 | gnupg2 | 2.2.12-1+deb10u2 |
@@ -148,7 +148,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian10
 | nano | 3.2-3 |
 | ncdu | 1.13-1+b1 |
 | net-tools | 1.60+git20180626.aebd88e-1 |
-| openssh-client | 1:7.9p1-10+deb10u3 |
+| openssh-client | 1:7.9p1-10+deb10u4 |
 | procps | 2:3.3.15-2 |
 | psmisc | 23.2-1+deb10u1 |
 | rsync | 3.1.3-6 |
@@ -163,7 +163,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian10
 
 ## Variant: bullseye
 
-**Digest:** sha256:16e93187e33f72cdb133eab65f40d5196c7d2e75fafdba8904be8665969e33cb
+**Digest:** sha256:17f251c3344a8d0104f6290879ef83b9ee8c2a3402b3f849eb5a4f9d1379ecce
 
 **Tags:**
 ```
@@ -184,7 +184,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian11
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7e3fdf33ec53821e574b8d6df43bec7264c507ee | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -199,7 +199,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian11
 | apt-transport-https | 2.2.4 |
 | apt-utils | 2.2.4 |
 | ca-certificates | 20210119 |
-| curl | 7.74.0-1.3+deb11u10 |
+| curl | 7.74.0-1.3+deb11u11 |
 | dialog | 1.3-20201126-1 |
 | git | 1:2.30.2-1+deb11u2 |
 | gnupg2 | 2.2.27-2+deb11u2 |
@@ -223,7 +223,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian11
 | nano | 5.4-2+deb11u2 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
-| openssh-client | 1:8.4p1-5+deb11u2 |
+| openssh-client | 1:8.4p1-5+deb11u3 |
 | procps | 2:3.3.17-5 |
 | psmisc | 23.4-2 |
 | rsync | 3.2.3-4+deb11u1 |
