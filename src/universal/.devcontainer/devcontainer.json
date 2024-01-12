@@ -11,7 +11,8 @@
         },
         "ghcr.io/devcontainers/features/dotnet:2": {
             "version": "8.0.x",
-            "additionalVersions": "7.0.306, 6.0"
+            "dotnetRuntimeVersions": "7.0.x, 6.0.x",
+            "aspNetCoreRuntimeVersions": "7.0, 6.0.x"
         },
         "ghcr.io/devcontainers/features/hugo:1": {
             "version": "latest"
