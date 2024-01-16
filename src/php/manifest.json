@@ -1,5 +1,5 @@
 {
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"variants": [
 		"8.3-apache-bookworm",
 		"8.2-apache-bookworm",
@@ -7,10 +7,8 @@
 		"8.3-apache-bullseye",
 		"8.2-apache-bullseye",
 		"8.1-apache-bullseye",
-		"8.0-apache-bullseye",
 		"8.2-apache-buster",
-		"8.1-apache-buster",
-		"8.0-apache-buster"
+		"8.1-apache-buster"
 	],
 	"build": {
 		"latest": "8.3-apache-bookworm",
@@ -40,17 +38,10 @@
 				"linux/amd64",
 				"linux/arm64"
 			],
-			"8.0-apache-bullseye": [
-				"linux/amd64",
-				"linux/arm64"
-			],
 			"8.2-apache-buster": [
 				"linux/amd64"
 			],
 			"8.1-apache-buster": [
-				"linux/amd64"
-			],
-			"8.0-apache-buster": [
 				"linux/amd64"
 			]
 		},
@@ -84,10 +75,6 @@
 			"8.1-apache-bullseye": [
 				"php:${VERSION}-8.1-bullseye"
 			],
-			"8.0-apache-bullseye": [
-				"php:${VERSION}-8.0",
-				"php:${VERSION}-8.0-bullseye"
-			],
 			"8.2-apache-buster": [
 				"php:${VERSION}-8-buster",
 				"php:${VERSION}-8.2-buster",
@@ -95,9 +82,6 @@
 			],
 			"8.1-apache-buster": [
 				"php:${VERSION}-8.1-buster"
-			],
-			"8.0-apache-buster": [
-				"php:${VERSION}-8.0-buster"
 			]
 		}
 	},
