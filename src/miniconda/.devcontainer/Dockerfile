@@ -6,6 +6,10 @@ FROM continuumio/miniconda3 as upstream
     # https://github.com/advisories/<CVE_ID>
     # <package_name> = <version>
 
+RUN conda install \
+    # https://github.com/advisories/GHSA-jfhm-5ghh-2f97
+    cryptography==41.0.7
+
 # Reset and copy updated files with updated privs to keep image size down
 FROM mcr.microsoft.com/devcontainers/base:1-bullseye
 
