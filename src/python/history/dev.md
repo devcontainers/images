@@ -22,7 +22,7 @@
 
 ## Variant: 3.12-bookworm
 
-**Digest:** sha256:e4b0e7582bb5572b31a319240e7cd55486124048ed33146d28fb42b1a5732107
+**Digest:** sha256:c92bc88f492bba705b3516db778606b91bc079e2caff5dbebd51453feee4e733
 
 **Tags:**
 ```
@@ -51,7 +51,7 @@ mcr.microsoft.com/devcontainers/python:dev-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8be4789bbbef06fe5eed581dc8c58df51e3cd9fd | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -69,7 +69,7 @@ mcr.microsoft.com/devcontainers/python:dev-bookworm
 | pycodestyle | 2.11.1 |
 | bandit | 1.7.6 |
 | virtualenv | 20.25.0 |
-| pipx | 1.4.1 |
+| pipx | 1.4.2 |
 
 **Other tools and utilities**
 
@@ -123,7 +123,7 @@ mcr.microsoft.com/devcontainers/python:dev-bookworm
 
 ## Variant: 3.11-bookworm
 
-**Digest:** sha256:401ab8a37295d9feeaae42735406b8525b1a8cc23308140284604363c1821fc5
+**Digest:** sha256:5404e6fb687ceef577ba5c874ffbe92b8cf0abda9127fe0db6311810fc9c4056
 
 **Tags:**
 ```
@@ -149,7 +149,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.11
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8be4789bbbef06fe5eed581dc8c58df51e3cd9fd | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -167,7 +167,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.11
 | pycodestyle | 2.11.1 |
 | bandit | 1.7.6 |
 | virtualenv | 20.25.0 |
-| pipx | 1.4.1 |
+| pipx | 1.4.2 |
 
 **Other tools and utilities**
 
@@ -221,7 +221,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.11
 
 ## Variant: 3.10-bookworm
 
-**Digest:** sha256:42b40593dabbb6105e0ce325bdba8dd1f8ccac9b9d01f591fb9bc7f914f66577
+**Digest:** sha256:302569a03b0c140a2e382dab800e22d279b9e552a5b90928d48404d709d391c8
 
 **Tags:**
 ```
@@ -247,7 +247,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.10
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8be4789bbbef06fe5eed581dc8c58df51e3cd9fd | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -265,7 +265,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.10
 | pycodestyle | 2.11.1 |
 | bandit | 1.7.6 |
 | virtualenv | 20.25.0 |
-| pipx | 1.4.1 |
+| pipx | 1.4.2 |
 
 **Other tools and utilities**
 
@@ -319,7 +319,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.10
 
 ## Variant: 3.9-bookworm
 
-**Digest:** sha256:c77f880faba2962e2e4f599bb4d56e89f118880108647cc46cd80778c5f34370
+**Digest:** sha256:c47fe6bdb6ddb993ee1ee2ed95bbd1573e6cbf2592cc3ef3916014210a769b22
 
 **Tags:**
 ```
@@ -345,7 +345,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8be4789bbbef06fe5eed581dc8c58df51e3cd9fd | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -363,7 +363,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9
 | pycodestyle | 2.11.1 |
 | bandit | 1.7.6 |
 | virtualenv | 20.25.0 |
-| pipx | 1.4.1 |
+| pipx | 1.4.2 |
 
 **Other tools and utilities**
 
@@ -417,7 +417,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9
 
 ## Variant: 3.8-bookworm
 
-**Digest:** sha256:c8d56c26ee17d6fb6407dde9689cc2654a656907d2e4ce3836cc7f3bca907169
+**Digest:** sha256:65691afd6fbe246c13da9139a72048edd550715ded17a76eeabcd5a341ed49ac
 
 **Tags:**
 ```
@@ -443,7 +443,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8be4789bbbef06fe5eed581dc8c58df51e3cd9fd | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -461,7 +461,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8
 | pycodestyle | 2.11.1 |
 | bandit | 1.7.6 |
 | virtualenv | 20.25.0 |
-| pipx | 1.4.1 |
+| pipx | 1.4.2 |
 
 **Other tools and utilities**
 
@@ -515,7 +515,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8
 
 ## Variant: 3.12-bullseye
 
-**Digest:** sha256:d5715add18d22f83bfed7893a9255f060685309e0c52cd27b35211fba0d201d6
+**Digest:** sha256:7608f3478e7f9a95e06bb5285dcb556f2f0ea749be783806a567713e4c46bfbd
 
 **Tags:**
 ```
@@ -542,7 +542,7 @@ mcr.microsoft.com/devcontainers/python:dev-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8be4789bbbef06fe5eed581dc8c58df51e3cd9fd | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -560,7 +560,7 @@ mcr.microsoft.com/devcontainers/python:dev-bullseye
 | pycodestyle | 2.11.1 |
 | bandit | 1.7.6 |
 | virtualenv | 20.25.0 |
-| pipx | 1.4.1 |
+| pipx | 1.4.2 |
 
 **Other tools and utilities**
 
@@ -615,7 +615,7 @@ mcr.microsoft.com/devcontainers/python:dev-bullseye
 
 ## Variant: 3.11-bullseye
 
-**Digest:** sha256:4f49b17fd31c3306f847851b939bb6117a7d6a4a2e3acdd90761171e65134b3f
+**Digest:** sha256:e56622cf8ac760853f0386a3e045005b28178ed5cd99f695bb2b4babb7a4982b
 
 **Tags:**
 ```
@@ -640,7 +640,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.11-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8be4789bbbef06fe5eed581dc8c58df51e3cd9fd | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -658,7 +658,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.11-bullseye
 | pycodestyle | 2.11.1 |
 | bandit | 1.7.6 |
 | virtualenv | 20.25.0 |
-| pipx | 1.4.1 |
+| pipx | 1.4.2 |
 
 **Other tools and utilities**
 
@@ -713,7 +713,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.11-bullseye
 
 ## Variant: 3.10-bullseye
 
-**Digest:** sha256:840ffc87c610113d614ff696c76806e15ccda3e34ce3333116e0a2a7c4e08351
+**Digest:** sha256:a9e92bc61d9601165effca2067293bb4bdeca2b7abeb0fb775ebd47cb832b24f
 
 **Tags:**
 ```
@@ -738,7 +738,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.10-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8be4789bbbef06fe5eed581dc8c58df51e3cd9fd | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -756,7 +756,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.10-bullseye
 | pycodestyle | 2.11.1 |
 | bandit | 1.7.6 |
 | virtualenv | 20.25.0 |
-| pipx | 1.4.1 |
+| pipx | 1.4.2 |
 
 **Other tools and utilities**
 
@@ -811,7 +811,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.10-bullseye
 
 ## Variant: 3.9-bullseye
 
-**Digest:** sha256:4dc698e8ec84fd927f3b3f782c3860df08b5a149fd6d2ae9d653f8fc54641392
+**Digest:** sha256:0558c6f189e1fd450eb63a9118e9ccf0ab88f81bc73c957588f4936687bb0ade
 
 **Tags:**
 ```
@@ -836,7 +836,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8be4789bbbef06fe5eed581dc8c58df51e3cd9fd | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -854,7 +854,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-bullseye
 | pycodestyle | 2.11.1 |
 | bandit | 1.7.6 |
 | virtualenv | 20.25.0 |
-| pipx | 1.4.1 |
+| pipx | 1.4.2 |
 
 **Other tools and utilities**
 
@@ -909,7 +909,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-bullseye
 
 ## Variant: 3.8-bullseye
 
-**Digest:** sha256:c4cfc6a2f444f72ef745d0aeadb9b494a9fd3182e97ac79b9df1f582b283ed0d
+**Digest:** sha256:7eec59ae94eb33778cd9736e9316c23d6774a035ddee80ecadc3a9ea7c067732
 
 **Tags:**
 ```
@@ -934,7 +934,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8be4789bbbef06fe5eed581dc8c58df51e3cd9fd | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -952,7 +952,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8-bullseye
 | pycodestyle | 2.11.1 |
 | bandit | 1.7.6 |
 | virtualenv | 20.25.0 |
-| pipx | 1.4.1 |
+| pipx | 1.4.2 |
 
 **Other tools and utilities**
 
@@ -1007,7 +1007,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8-bullseye
 
 ## Variant: 3.11-buster
 
-**Digest:** sha256:d8dc3215b92bdfa43d0ba25562bf43701c4141869c3ca1a626e63381859d981e
+**Digest:** sha256:94271b18316e942d2580553ac1af9aed4a9b2d7d8d7de61bbd322aa61db9905d
 
 **Tags:**
 ```
@@ -1034,7 +1034,7 @@ mcr.microsoft.com/devcontainers/python:dev-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8be4789bbbef06fe5eed581dc8c58df51e3cd9fd | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -1052,7 +1052,7 @@ mcr.microsoft.com/devcontainers/python:dev-buster
 | pycodestyle | 2.11.1 |
 | bandit | 1.7.6 |
 | virtualenv | 20.25.0 |
-| pipx | 1.4.1 |
+| pipx | 1.4.2 |
 
 **Other tools and utilities**
 
@@ -1108,7 +1108,7 @@ mcr.microsoft.com/devcontainers/python:dev-buster
 
 ## Variant: 3.10-buster
 
-**Digest:** sha256:52c972d8b5ff0a48673eb7051f8431d6cb71a1c1e372e99b51eb596452198dc4
+**Digest:** sha256:dec4cd6f19112fb75c5d9268a58ace2836588cbefdeaf4308bc4526fa6042534
 
 **Tags:**
 ```
@@ -1133,7 +1133,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.10-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8be4789bbbef06fe5eed581dc8c58df51e3cd9fd | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -1151,7 +1151,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.10-buster
 | pycodestyle | 2.11.1 |
 | bandit | 1.7.6 |
 | virtualenv | 20.25.0 |
-| pipx | 1.4.1 |
+| pipx | 1.4.2 |
 
 **Other tools and utilities**
 
@@ -1207,7 +1207,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.10-buster
 
 ## Variant: 3.9-buster
 
-**Digest:** sha256:2b884caed5360377b43ae3f3c2675337a67423cb96382c7fe9817d72cd3c9fd7
+**Digest:** sha256:0342af1987346e8279a109dc5b2e3f276263b81d45883bde4c645a3cf02ae3f7
 
 **Tags:**
 ```
@@ -1232,7 +1232,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8be4789bbbef06fe5eed581dc8c58df51e3cd9fd | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -1250,7 +1250,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-buster
 | pycodestyle | 2.11.1 |
 | bandit | 1.7.6 |
 | virtualenv | 20.25.0 |
-| pipx | 1.4.1 |
+| pipx | 1.4.2 |
 
 **Other tools and utilities**
 
@@ -1306,7 +1306,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-buster
 
 ## Variant: 3.8-buster
 
-**Digest:** sha256:cacbe47e8a28cfc59832055b1b491dd4e6d075ff10416d3f95df6191263f54c7
+**Digest:** sha256:ced22be0a7ba04f6810eefc4f1a9f27ab4016222581e65ce88768f014498c6c0
 
 **Tags:**
 ```
@@ -1331,7 +1331,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8be4789bbbef06fe5eed581dc8c58df51e3cd9fd | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -1349,7 +1349,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8-buster
 | pycodestyle | 2.11.1 |
 | bandit | 1.7.6 |
 | virtualenv | 20.25.0 |
-| pipx | 1.4.1 |
+| pipx | 1.4.2 |
 
 **Other tools and utilities**
 
