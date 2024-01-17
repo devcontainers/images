@@ -5,19 +5,89 @@
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/base-alpine)
 
 **Image variations:**
+- [3.19](#variant-319)
 - [3.18](#variant-318)
 - [3.17](#variant-317)
 - [3.16](#variant-316)
 
+## Variant: 3.19
+
+**Digest:** sha256:2adaee9443cdba77130832d96063bce2230e9d6a639aaa5dfd72d103ea530198
+
+**Tags:**
+```
+mcr.microsoft.com/devcontainers/base:dev-alpine-3.19
+mcr.microsoft.com/devcontainers/base:dev-alpine3.19
+mcr.microsoft.com/devcontainers/base:dev-alpine
+```
+> *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
+
+**Linux distribution:** Alpine Linux v3.19
+
+**Architectures:** linux/amd64, linux/arm64
+
+**Available (non-root) user:** vscode
+
+### Contents
+**Tools installed using git**
+
+| Tool | Commit | Path |
+|------|--------|------|
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8be4789bbbef06fe5eed581dc8c58df51e3cd9fd | /home/vscode/.oh-my-zsh |
+
+**Other tools and utilities**
+
+| Tool | Version | Path |
+|------|---------|------|
+| [git](https://github.com/git/git) | 2.43.0 | 
+
+**Additional linux tools and packages**
+
+| Tool / library | Version |
+|----------------|---------|
+| openssh-client-default | 9.6_p1-r0 |
+| gnupg | 2.4.3-r1 |
+| procps-ng | 4.0.4-r0 |
+| lsof | 4.99.0-r0 |
+| htop | 3.2.2-r1 |
+| net-tools | 2.10-r3 |
+| psmisc | 23.6-r2 |
+| curl | 8.5.0-r0 |
+| wget | 1.21.4-r0 |
+| rsync | 3.2.7-r4 |
+| ca-certificates | 20230506-r0 |
+| unzip | 6.0-r14 |
+| zip | 3.0-r12 |
+| nano | 7.2-r1 |
+| vim | 9.0.2127-r0 |
+| less | 643-r1 |
+| jq | 1.7.1-r0 |
+| libgcc | 13.2.1_git20231014-r0 |
+| libstdc++ | 13.2.1_git20231014-r0 |
+| krb5-libs | 1.21.2-r0 |
+| libintl | 0.22.3-r0 |
+| lttng-ust | 2.13.6-r0 |
+| tzdata | 2023d-r0 |
+| userspace-rcu | 0.14.0-r2 |
+| zlib | 1.3-r2 |
+| sudo | 1.9.15_p2-r0 |
+| coreutils | 9.4-r1 |
+| sed | 4.9-r2 |
+| grep | 3.11-r0 |
+| which | 2.21-r4 |
+| ncdu | 1.19-r0 |
+| shadow | 4.14.2-r0 |
+| strace | 6.6-r0 |
+| man-pages | 6.05.01-r0 |
+
 ## Variant: 3.18
 
-**Digest:** sha256:da1effb5281c71055cd58d6827c202558772693e86ad805a76ee047fdccc56e0
+**Digest:** sha256:694ed2c432f08a1de08dd58e51918764f502e87be38555ab31ab6e938fc804b9
 
 **Tags:**
 ```
 mcr.microsoft.com/devcontainers/base:dev-alpine-3.18
 mcr.microsoft.com/devcontainers/base:dev-alpine3.18
-mcr.microsoft.com/devcontainers/base:dev-alpine
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
@@ -32,7 +102,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8be4789bbbef06fe5eed581dc8c58df51e3cd9fd | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -82,7 +152,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 ## Variant: 3.17
 
-**Digest:** sha256:6e40d84a0e67bee1e7d0edcd46b16401682260626eb10bf9c75be9de53845cd3
+**Digest:** sha256:8bdf4198927751ebbcc853988717a14a4762dfa3a2ad02f63cc22f84ea54963f
 
 **Tags:**
 ```
@@ -102,7 +172,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.17
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8be4789bbbef06fe5eed581dc8c58df51e3cd9fd | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -152,7 +222,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.17
 
 ## Variant: 3.16
 
-**Digest:** sha256:4f81d6081f6df5ae12f70dd1620b600e78b37b2a89d9c6459104007913b567b0
+**Digest:** sha256:023abcf952e14a371a95cd3611c308a0195e28250ec048af1d5f78b328088dae
 
 **Tags:**
 ```
@@ -172,7 +242,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.16
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8be4789bbbef06fe5eed581dc8c58df51e3cd9fd | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
