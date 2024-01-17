@@ -170,7 +170,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "48ccc7b36de8efb2bd7beb9bd6e0a6f6fe03b95d"
+                    "commitHash": "5ea2c68be88452b33b35ba8004fc9094618bcd87"
                 }
             }
         },
@@ -200,7 +200,17 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "5ea2c68be88452b33b35ba8004fc9094618bcd87"
+                    "commitHash": "8be4789bbbef06fe5eed581dc8c58df51e3cd9fd"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: alpine",
+                    "Version": "3.19",
+                    "DownloadUrl": "https://hub.docker.com/_/alpine"
                 }
             }
         },
@@ -290,17 +300,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "c9919121dde6f61c0436adda94624636e041226b"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "git",
-                "Git": {
-                    "Name": "vcpkg",
-                    "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "3bc5ff7f7ab72b57f0945d35bbbdaac2060bc268"
+                    "commitHash": "53bef8994c541b6561884a8395ea35715ece75db"
                 }
             }
         },
@@ -528,6 +528,16 @@
         },
         {
             "Component": {
+                "Type": "git",
+                "Git": {
+                    "Name": "Oh My Zsh!",
+                    "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
+                    "commitHash": "c0074974313215360a9529e01204792cdf6ca473"
+                }
+            }
+        },
+        {
+            "Component": {
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Image: golang",
@@ -611,7 +621,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "5ea2c68be88452b33b35ba8004fc9094618bcd87"
+                    "commitHash": "8be4789bbbef06fe5eed581dc8c58df51e3cd9fd"
                 }
             }
         },
@@ -724,7 +734,7 @@
                 "Git": {
                     "Name": "ruby-build",
                     "repositoryUrl": "https://github.com/rbenv/ruby-build.git",
-                    "commitHash": "3b79c2931a9eb0e122ba2d2371b1420d5329d4fb"
+                    "commitHash": "33168b3e6706f5a6dc7242a7d77de29ba8e111b2"
                 }
             }
         },
@@ -890,7 +900,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "pipx",
-                    "Version": "1.4.1"
+                    "Version": "1.4.2"
                 }
             }
         },
@@ -989,16 +999,6 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Image: php",
-                    "Version": "8.0-apache-bullseye",
-                    "DownloadUrl": "https://hub.docker.com/_/php"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "other",
-                "Other": {
-                    "Name": "Docker Image: php",
                     "Version": "8.2-apache-buster",
                     "DownloadUrl": "https://hub.docker.com/_/php"
                 }
@@ -1010,16 +1010,6 @@
                 "Other": {
                     "Name": "Docker Image: php",
                     "Version": "8.1-apache-buster",
-                    "DownloadUrl": "https://hub.docker.com/_/php"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "other",
-                "Other": {
-                    "Name": "Docker Image: php",
-                    "Version": "8.0-apache-buster",
                     "DownloadUrl": "https://hub.docker.com/_/php"
                 }
             }
@@ -1549,7 +1539,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "5ea2c68be88452b33b35ba8004fc9094618bcd87"
+                    "commitHash": "8be4789bbbef06fe5eed581dc8c58df51e3cd9fd"
                 }
             }
         },
@@ -1608,7 +1598,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "GitHub CLI",
-                    "Version": "2.41.0",
+                    "Version": "2.42.0",
                     "DownloadUrl": "https://github.com/cli/cli"
                 }
             }
@@ -1618,7 +1608,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Go",
-                    "Version": "1.21.5",
+                    "Version": "1.21.6",
                     "DownloadUrl": "https://golang.org/dl"
                 }
             }

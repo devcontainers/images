@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:82bd54227b107b7bea9f0257ba5e74381b7c90bd7cbd222e6df4e66079b6886d
+**Digest:** sha256:3cfaa1b73a44088b825a995a249505a4c57190369b58c43b385c0186bcf6ea9f
 
 **Tags:**
 ```
@@ -26,15 +26,15 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 18.19.0<br />20.10.0 | /usr/local/share/nvm/versions/node/&lt;version&gt; |
+| [Node.js](https://nodejs.org/en/) | 18.19.0<br />20.11.0 | /usr/local/share/nvm/versions/node/&lt;version&gt; |
 | [Python](https://www.python.org/) | 3.10.13<br />3.9.18 | /usr/local/python/&lt;version&gt; |
 | [Java](https://adoptopenjdk.net/) | 17.0.9<br />21.0.1 | /usr/local/sdkman/candidates/java/&lt;version&gt; |
-| [.NET](https://dotnet.microsoft.com/) | 6<br />0<br />4<br />1<br />7<br />7<br />0<br />3<br />0<br />6 | /usr/local/dotnet |
+| [.NET](https://dotnet.microsoft.com/) | 6<br />0<br />4<br />1<br />8<br />7<br />0<br />3<br />0<br />6 | /usr/local/dotnet |
 | [Ruby](https://www.ruby-lang.org/en/) | 3.1.4<br />3.2.2 | /usr/local/rvm/rubies/&lt;version&gt; |
 | [PHP](https://xdebug.org/) | 8.2.13<br />8.3.0 | /usr/local/php/&lt;version&gt; |
 | GCC | 9.4.0-1ubuntu1~20.04.2 | 
 | Clang | 10.0.0-4ubuntu1 | 
-| [Go](https://golang.org/dl) | 1.21.5 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.21.6 | /usr/local/go |
 | [Jekyll](https://jekyllrb.com/) | 4.3.3 | 
 | [Jupyter Lab](https://jupyter.org/) | 4.0.10 | /home/codespace/.local/bin/jupyter-lab |
 
@@ -42,11 +42,11 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/codespace/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8be4789bbbef06fe5eed581dc8c58df51e3cd9fd | /home/codespace/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | 22ae0829b84624c49192112213d2556b9d42d99e | /usr/local/nvs |
 | [rbenv](https://github.com/rbenv/rbenv.git) | e8b7a27ee67a5751b899215b4d35fd86ab552dae | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 3b79c2931a9eb0e122ba2d2371b1420d5329d4fb | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 33168b3e6706f5a6dc7242a7d77de29ba8e111b2 | /usr/local/share/ruby-build |
 
 **Pip / pipx installed tools and packages**
 
@@ -74,7 +74,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | pycodestyle | 2.11.1 |
 | bandit | 1.7.6 |
 | virtualenv | 20.25.0 |
-| pipx | 1.4.1 |
+| pipx | 1.4.2 |
 
 **Go tools and modules**
 
@@ -107,7 +107,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [Helm](https://github.com/helm/helm) | 3.13.3 | /usr/local/bin |
 | [Docker Compose](https://github.com/docker/compose) | 1.29.2 | /usr/local/bin |
 | [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
-| [GitHub CLI](https://github.com/cli/cli) | 2.41.0 | 
+| [GitHub CLI](https://github.com/cli/cli) | 2.42.0 | 
 | [yarn](https://yarnpkg.com/) | 1.22.19 | /usr/bin |
 | [Maven](https://maven.apache.org/) | 3.9.6 | /usr/local/sdkman/candidates/maven/current/bin |
 | [Gradle](https://gradle.org/) | 8.5 | /usr/local/sdkman/candidates/gradle/current/bin |
