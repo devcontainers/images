@@ -16,7 +16,7 @@
 
 ## Variant: 8.3-apache-bookworm
 
-**Digest:** sha256:2ba4dd263c5cd49836f364b7b2bad6c2641ee871e4230bea9d42890e6e6f4263
+**Digest:** sha256:41cf991b2d61b67323c341ebabeb07e23e66368e7118b05339c3bca45c963112
 
 **Tags:**
 ```
@@ -40,13 +40,13 @@ mcr.microsoft.com/devcontainers/php:dev-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [PHP](https://xdebug.org/) | 8.3.1 | /usr/local |
+| [PHP](https://xdebug.org/) | 8.3.2 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8be4789bbbef06fe5eed581dc8c58df51e3cd9fd | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f7b647e1b13ed9cd2f34f3559c112e61b8c03108 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -103,7 +103,7 @@ mcr.microsoft.com/devcontainers/php:dev-bookworm
 
 ## Variant: 8.2-apache-bookworm
 
-**Digest:** sha256:c092b30c21f3ee2c712f566553e4aa2e300291886169e3eead1b606331587761
+**Digest:** sha256:2389224db1e38abc46667b5d42f37e97bbfe07aa65457a591387041bd747e7aa
 
 **Tags:**
 ```
@@ -124,13 +124,13 @@ mcr.microsoft.com/devcontainers/php:dev-8.2-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [PHP](https://xdebug.org/) | 8.2.14 | /usr/local |
+| [PHP](https://xdebug.org/) | 8.2.15 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8be4789bbbef06fe5eed581dc8c58df51e3cd9fd | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f7b647e1b13ed9cd2f34f3559c112e61b8c03108 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -187,7 +187,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.2-bookworm
 
 ## Variant: 8.1-apache-bookworm
 
-**Digest:** sha256:bb546ba57eb4eb680a94cd0ec5d769cb022d3b82cb9020fb96636fbb95d2acf1
+**Digest:** sha256:b20ff9b1602c16688f26edbb449a818593475e1a1ef185a96a51b52616a7563f
 
 **Tags:**
 ```
@@ -214,7 +214,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8be4789bbbef06fe5eed581dc8c58df51e3cd9fd | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f7b647e1b13ed9cd2f34f3559c112e61b8c03108 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -271,7 +271,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-bookworm
 
 ## Variant: 8.3-apache-bullseye
 
-**Digest:** sha256:293273c16bd8cc5cb48cbaa2666dd048c3e6e1ac7a8c712e588bf03baeb403b5
+**Digest:** sha256:3b42e572ad9b953d8e20920e60fe508e50fb95d756ac64d5439a4614b7e5f9a0
 
 **Tags:**
 ```
@@ -293,13 +293,13 @@ mcr.microsoft.com/devcontainers/php:dev-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [PHP](https://xdebug.org/) | 8.3.1 | /usr/local |
+| [PHP](https://xdebug.org/) | 8.3.2 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8be4789bbbef06fe5eed581dc8c58df51e3cd9fd | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f7b647e1b13ed9cd2f34f3559c112e61b8c03108 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -357,7 +357,7 @@ mcr.microsoft.com/devcontainers/php:dev-bullseye
 
 ## Variant: 8.2-apache-bullseye
 
-**Digest:** sha256:688f36808d05424d93cff257e06b19656ca860c908ee0d147fb5012b157bb507
+**Digest:** sha256:2e81d59fa0a75b8523304a61a993909c14217ace2a8260ea54f65dbf91f6df84
 
 **Tags:**
 ```
@@ -377,13 +377,13 @@ mcr.microsoft.com/devcontainers/php:dev-8.2-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [PHP](https://xdebug.org/) | 8.2.14 | /usr/local |
+| [PHP](https://xdebug.org/) | 8.2.15 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8be4789bbbef06fe5eed581dc8c58df51e3cd9fd | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f7b647e1b13ed9cd2f34f3559c112e61b8c03108 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -441,7 +441,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.2-bullseye
 
 ## Variant: 8.1-apache-bullseye
 
-**Digest:** sha256:d3fa2e0a5e7c778b3445afd7672f955ffb850eebb9134ee86cc6123519439195
+**Digest:** sha256:ff4197666dfa7d92d9bf39353f4533328db09b47a4caad370caf3223e77252e1
 
 **Tags:**
 ```
@@ -467,7 +467,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8be4789bbbef06fe5eed581dc8c58df51e3cd9fd | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f7b647e1b13ed9cd2f34f3559c112e61b8c03108 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -525,7 +525,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-bullseye
 
 ## Variant: 8.2-apache-buster
 
-**Digest:** sha256:12df2ab0025fed4f4a4de6aaf58da173d504fed0dd01c4dd05c19d07ada15131
+**Digest:** sha256:2acb7b9154cfa98e92092a82f161360b93e23ea2d1cb5a72bbd6801592bd5f45
 
 **Tags:**
 ```
@@ -553,7 +553,7 @@ mcr.microsoft.com/devcontainers/php:dev-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8be4789bbbef06fe5eed581dc8c58df51e3cd9fd | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f7b647e1b13ed9cd2f34f3559c112e61b8c03108 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -612,7 +612,7 @@ mcr.microsoft.com/devcontainers/php:dev-buster
 
 ## Variant: 8.1-apache-buster
 
-**Digest:** sha256:01a9734fe454ee5e8993e7b99414d9f1609dde73b1f55584687df4769b89a485
+**Digest:** sha256:b83cd9beab345a8bd40a874affb850a950a3d83ca303f25abff4579debb64dcf
 
 **Tags:**
 ```
@@ -638,7 +638,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8be4789bbbef06fe5eed581dc8c58df51e3cd9fd | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f7b647e1b13ed9cd2f34f3559c112e61b8c03108 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**

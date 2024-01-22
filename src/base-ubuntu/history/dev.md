@@ -10,7 +10,7 @@
 
 ## Variant: jammy
 
-**Digest:** sha256:22a4b44881fba7ae01a3f74838def44e26143e5f2c1648fe62fb9a1d84342287
+**Digest:** sha256:d62ad033bedd480ae2f73e5839387be9246e6ed2ee9343cb3c401c2cb6ed260b
 
 **Tags:**
 ```
@@ -32,7 +32,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8be4789bbbef06fe5eed581dc8c58df51e3cd9fd | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f7b647e1b13ed9cd2f34f3559c112e61b8c03108 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -85,7 +85,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 ## Variant: focal
 
-**Digest:** sha256:6ba04b88d7eed651a222114e28452ca7b34241ea9af62ddfe5e0fdd466ec518d
+**Digest:** sha256:59161aad152ff7d08e778bf8d1fb5c74f1cc7da2d9e22a3c355d7b5b979075d1
 
 **Tags:**
 ```
@@ -106,7 +106,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8be4789bbbef06fe5eed581dc8c58df51e3cd9fd | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f7b647e1b13ed9cd2f34f3559c112e61b8c03108 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 

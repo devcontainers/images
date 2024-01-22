@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:3cfaa1b73a44088b825a995a249505a4c57190369b58c43b385c0186bcf6ea9f
+**Digest:** sha256:5b34be9dbc5da6936014b8125c79b8401a3fcda8775b7615df5ba1090a7d3461
 
 **Tags:**
 ```
@@ -30,34 +30,34 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [Python](https://www.python.org/) | 3.10.13<br />3.9.18 | /usr/local/python/&lt;version&gt; |
 | [Java](https://adoptopenjdk.net/) | 17.0.9<br />21.0.1 | /usr/local/sdkman/candidates/java/&lt;version&gt; |
 | [.NET](https://dotnet.microsoft.com/) | 6<br />0<br />4<br />1<br />8<br />7<br />0<br />3<br />0<br />6 | /usr/local/dotnet |
-| [Ruby](https://www.ruby-lang.org/en/) | 3.1.4<br />3.2.2 | /usr/local/rvm/rubies/&lt;version&gt; |
+| [Ruby](https://www.ruby-lang.org/en/) | 3.1.4<br />3.2.3 | /usr/local/rvm/rubies/&lt;version&gt; |
 | [PHP](https://xdebug.org/) | 8.2.13<br />8.3.0 | /usr/local/php/&lt;version&gt; |
 | GCC | 9.4.0-1ubuntu1~20.04.2 | 
 | Clang | 10.0.0-4ubuntu1 | 
 | [Go](https://golang.org/dl) | 1.21.6 | /usr/local/go |
 | [Jekyll](https://jekyllrb.com/) | 4.3.3 | 
-| [Jupyter Lab](https://jupyter.org/) | 4.0.10 | /home/codespace/.local/bin/jupyter-lab |
+| [Jupyter Lab](https://jupyter.org/) | 4.0.11 | /home/codespace/.local/bin/jupyter-lab |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8be4789bbbef06fe5eed581dc8c58df51e3cd9fd | /home/codespace/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f7b647e1b13ed9cd2f34f3559c112e61b8c03108 | /home/codespace/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | 22ae0829b84624c49192112213d2556b9d42d99e | /usr/local/nvs |
 | [rbenv](https://github.com/rbenv/rbenv.git) | e8b7a27ee67a5751b899215b4d35fd86ab552dae | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 33168b3e6706f5a6dc7242a7d77de29ba8e111b2 | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | e1b36a32fb87d61955ac38f1889b7e3cb3b2f407 | /usr/local/share/ruby-build |
 
 **Pip / pipx installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
 | numpy | 1.26.3 |
-| pandas | 2.1.4 |
-| scipy | 1.11.4 |
+| pandas | 2.2.0 |
+| scipy | 1.12.0 |
 | matplotlib | 3.8.2 |
 | seaborn | 0.13.1 |
-| scikit-learn | 1.3.2 |
+| scikit-learn | 1.4.0 |
 | torch | 2.1.2 |
 | requests | 2.31.0 |
 | plotly | 5.18.0 |
@@ -74,7 +74,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | pycodestyle | 2.11.1 |
 | bandit | 1.7.6 |
 | virtualenv | 20.25.0 |
-| pipx | 1.4.2 |
+| pipx | 1.4.3 |
 
 **Go tools and modules**
 
@@ -103,11 +103,11 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [git](https://github.com/git/git) | 2.43.0 | 
 | [Xdebug](https://xdebug.org/) | 3.3.1 | /usr/local/php/current |
 | [Composer](https://getcomposer.org/) | 2.6.6 | /usr/local/php/current/bin |
-| [kubectl](https://github.com/kubernetes/kubectl) | v1.29.0 | /usr/local/bin |
-| [Helm](https://github.com/helm/helm) | 3.13.3 | /usr/local/bin |
+| [kubectl](https://github.com/kubernetes/kubectl) | v1.29.1 | /usr/local/bin |
+| [Helm](https://github.com/helm/helm) | 3.14.0 | /usr/local/bin |
 | [Docker Compose](https://github.com/docker/compose) | 1.29.2 | /usr/local/bin |
 | [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
-| [GitHub CLI](https://github.com/cli/cli) | 2.42.0 | 
+| [GitHub CLI](https://github.com/cli/cli) | 2.42.1 | 
 | [yarn](https://yarnpkg.com/) | 1.22.19 | /usr/bin |
 | [Maven](https://maven.apache.org/) | 3.9.6 | /usr/local/sdkman/candidates/maven/current/bin |
 | [Gradle](https://gradle.org/) | 8.5 | /usr/local/sdkman/candidates/gradle/current/bin |
