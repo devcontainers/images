@@ -1,8 +1,10 @@
 {
-	"version": "1.0.7",
+	"version": "1.1.0",
 	"variants": [
+		"3.3-bookworm",
 		"3.2-bookworm",
 		"3.1-bookworm",
+		"3.3-bullseye",
 		"3.2-bullseye",
 		"3.1-bullseye",
 		"3.0-bullseye",
@@ -11,14 +13,22 @@
 		"3.0-buster"
 	],
 	"build": {
-		"latest": "3.2-bookworm",
+		"latest": "3.3-bookworm",
 		"rootDistro": "debian",
 		"architectures": {
+			"3.3-bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
 			"3.2-bookworm": [
 				"linux/amd64",
 				"linux/arm64"
 			],
 			"3.1-bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"3.3-bullseye": [
 				"linux/amd64",
 				"linux/arm64"
 			],
@@ -48,11 +58,14 @@
 			"ruby:${VERSION}-${VARIANT}"
 		],
 		"variantTags": {
-			"3.2-bookworm": [
+			"3.3-bookworm": [
 				"ruby:${VERSION}-3",
-				"ruby:${VERSION}-3.2",
+				"ruby:${VERSION}-3.3",
 				"ruby:${VERSION}-3-bookworm",
 				"ruby:${VERSION}-bookworm"
+			],
+			"3.2-bookworm": [
+				"ruby:${VERSION}-3.2"
 			],
 			"3.1-bookworm": [
 				"ruby:${VERSION}-3.1"
@@ -60,9 +73,12 @@
 			"3.0-bullseye": [
 				"ruby:${VERSION}-3.0"
 			],
-			"3.2-bullseye": [
+			"3.3-bullseye": [
 				"ruby:${VERSION}-3-bullseye",
 				"ruby:${VERSION}-bullseye"
+			],
+			"3.2-bullseye": [
+				"ruby:${VERSION}-3.2-bullseye"
 			],
 			"3.2-buster": [
 				"ruby:${VERSION}-3-buster",
