@@ -12,7 +12,7 @@
 
 ## Variant: 1.21-bookworm
 
-**Digest:** sha256:fb31b650513f5e5f9fd9f7a69ee61619db47d2b3d4de72ea220b6b0861239ca4
+**Digest:** sha256:6aa233997b46b7a171ee628cf8ab1554cbca4862cfeb5fb8f307dac997c1e074
 
 **Tags:**
 ```
@@ -114,7 +114,7 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 
 ## Variant: 1.20-bookworm
 
-**Digest:** sha256:9202e876fa70fdcb406630715b6aa6bf173cb4c84a9786dd8589c08dde51d053
+**Digest:** sha256:c05ef06be1f6cebc7c5660267d3e503f3bc5e6b9f8033615674330e136b9bc8f
 
 **Tags:**
 ```
@@ -213,7 +213,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.20
 
 ## Variant: 1.21-bullseye
 
-**Digest:** sha256:29baa1ee59eec4edc85794776503371f3f1026bcb4f667bdc182e3c34ad8beb8
+**Digest:** sha256:ddc874b09227a9dbf815d5d667f6a01e7bde0a75fc19cd959f3e29ed260e72d8
 
 **Tags:**
 ```
@@ -314,7 +314,7 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 
 ## Variant: 1.20-bullseye
 
-**Digest:** sha256:205b8e96b07d7d4b1f4a509c2ff8705de3e5185dccbe043031926eefe4629d01
+**Digest:** sha256:b7fee0f4959f5892975fe6b5651686b90461d259c415c9fcabdddb39d7535d94
 
 **Tags:**
 ```

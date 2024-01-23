@@ -22,7 +22,7 @@
 
 ## Variant: 3.12-bookworm
 
-**Digest:** sha256:2850f6a009e2ccfbfe00a4e2272c28db5d7cfd513d64b045783f7dd2084c9380
+**Digest:** sha256:7113b034bf33b3f4b6bd4e4c735ea18fb6f76e29c89df0e5666bc6a7438596d0
 
 **Tags:**
 ```
@@ -123,7 +123,7 @@ mcr.microsoft.com/devcontainers/python:dev-bookworm
 
 ## Variant: 3.11-bookworm
 
-**Digest:** sha256:89155d9ac9041cdb02c393112b3594f1c7debc3e2772231395941712585f52c8
+**Digest:** sha256:f9014346d0cef748b9ed74df78d90774af4b5cd82edbded0b6f18c043a20be7f
 
 **Tags:**
 ```
@@ -221,7 +221,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.11
 
 ## Variant: 3.10-bookworm
 
-**Digest:** sha256:39c7da3c5781befb2859893bbf0820ae5139deb6dd7e6132be421d7fa1eff4d0
+**Digest:** sha256:35e24d9268155b66910a1d8df86c4f54a30f2dfa54dd74d3f53c2d3803638322
 
 **Tags:**
 ```
@@ -319,7 +319,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.10
 
 ## Variant: 3.9-bookworm
 
-**Digest:** sha256:d3814c26dc59675b77c543e788d5efab7796f962499919de9f873d2e3d4b11a8
+**Digest:** sha256:d08b1c068ec132bc97106a58284fc127d2560955efeea7081ebb97d5a60c624a
 
 **Tags:**
 ```
@@ -417,7 +417,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9
 
 ## Variant: 3.8-bookworm
 
-**Digest:** sha256:dab45f943ff3b9bcd8c89033a81178799aced12869feb9b33eb0512b41354078
+**Digest:** sha256:5c500fc6075f48a097f5a6cb384c79e46f913fbf462772c69481544082aa4b69
 
 **Tags:**
 ```
@@ -515,7 +515,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8
 
 ## Variant: 3.12-bullseye
 
-**Digest:** sha256:370e4b8a41f0a34f720047ef37e71a735df06d18171de82f2b86fd2fd6c26068
+**Digest:** sha256:3e5a6886db393be8cdda802355a16b3bd3e8d837b469013b1fe3c8fdebad7090
 
 **Tags:**
 ```
@@ -615,7 +615,7 @@ mcr.microsoft.com/devcontainers/python:dev-bullseye
 
 ## Variant: 3.11-bullseye
 
-**Digest:** sha256:046dcd5fb78d04219e4937aad4318021ae12c1de33a8657581d3f3cfe86740c9
+**Digest:** sha256:a3be42d71cd1673e0c3109ba5e0545f17a94e51dadd7ee96cc85855634fd2541
 
 **Tags:**
 ```
@@ -713,7 +713,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.11-bullseye
 
 ## Variant: 3.10-bullseye
 
-**Digest:** sha256:2edc04d1f4141b0bad30c516962780acc48845e5c6f3398df47dc97ac374f840
+**Digest:** sha256:46d818fc9c923a1639b446d050c621c0900b629742337e4f1a1a8564d28022c8
 
 **Tags:**
 ```
@@ -811,7 +811,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.10-bullseye
 
 ## Variant: 3.9-bullseye
 
-**Digest:** sha256:379805a9cc461d118b408cfcbcf400e3c068ed77d9efbd70df75d9705b109dd7
+**Digest:** sha256:3f68ce886de2b672a0ab58c7626efda660924bd0fd847b3977ed477cbde2ab0f
 
 **Tags:**
 ```
@@ -909,7 +909,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-bullseye
 
 ## Variant: 3.8-bullseye
 
-**Digest:** sha256:55050a419ec3b08120846f90c88364e39fe8bb62fef4673983f261534e8b693f
+**Digest:** sha256:4ee7d2012e20ec7154a6b5915f4968c7c29a012f7f9db64f1f0ece3df665ad73
 
 **Tags:**
 ```
@@ -1007,7 +1007,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.8-bullseye
 
 ## Variant: 3.11-buster
 
-**Digest:** sha256:912f4384bd4d4e180cbc400914db26e05cfbc6b356fbfed85cdefb68bfde99d7
+**Digest:** sha256:63e2d2f3f4777544f190b0610f50a25c452578bd43992de77243a952c6711ba7
 
 **Tags:**
 ```
@@ -1108,7 +1108,7 @@ mcr.microsoft.com/devcontainers/python:dev-buster
 
 ## Variant: 3.10-buster
 
-**Digest:** sha256:fd8f847c53f4c7d3e65769fd20e78b9ee34815de2e843efa48d63eab0c7bd74e
+**Digest:** sha256:e8f81e2937601749dd76eea606357a1e11d4c495839e4280855f6d80a2bd5c3d
 
 **Tags:**
 ```
@@ -1207,7 +1207,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.10-buster
 
 ## Variant: 3.9-buster
 
-**Digest:** sha256:86743d7a1ab45a7662d8cbbb879a1f0d6c39758be4a5092ebe7191171ec0f987
+**Digest:** sha256:673f857eed7bb9368ef065263cc0df75a4c7fc073e903e9f2c4b95c6c4df821e
 
 **Tags:**
 ```
@@ -1306,7 +1306,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.9-buster
 
 ## Variant: 3.8-buster
 
-**Digest:** sha256:3342dcf6186d2921ad740ca5b88575d7e7ff6ae7f4602786eeaa6f1d8409dcf6
+**Digest:** sha256:1f2f21aa61c2099935a22f5d693d849668e3283610ba8542ccafb98c2a1ab34b
 
 **Tags:**
 ```

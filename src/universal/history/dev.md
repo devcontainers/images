@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:5b34be9dbc5da6936014b8125c79b8401a3fcda8775b7615df5ba1090a7d3461
+**Digest:** sha256:ba2c560967d290c58959400081d13c3c996102ff791f7be0f280d7612d37b81c
 
 **Tags:**
 ```

@@ -17,7 +17,7 @@
 
 ## Variant: 21-bookworm
 
-**Digest:** sha256:080d664e96d4b84a8470a7f8f0b5a2665b8d83dd4b44fe4b66b221366dd785ac
+**Digest:** sha256:e5e548063071272ce84f3dc4849225ccd3cee4cc4894f2bc7fbd017f1412efbb
 
 **Tags:**
 ```
@@ -39,7 +39,7 @@ mcr.microsoft.com/devcontainers/java:dev-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 21.0.1 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 21.0.2 | /usr/local/ |
 
 **Tools installed using git**
 
@@ -100,7 +100,7 @@ mcr.microsoft.com/devcontainers/java:dev-bookworm
 
 ## Variant: 21-bullseye
 
-**Digest:** sha256:d859410cc9203f9ffaf53e463ee5351baf874207bb9d8d99dcf7fa1764f3074f
+**Digest:** sha256:33ddcb2f69cccbd2494999cbb4d9e36c00417fea090605d7a7036b87b9b08105
 
 **Tags:**
 ```
@@ -121,7 +121,7 @@ mcr.microsoft.com/devcontainers/java:dev-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 21.0.1 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 21.0.2 | /usr/local/ |
 
 **Tools installed using git**
 
@@ -183,7 +183,7 @@ mcr.microsoft.com/devcontainers/java:dev-bullseye
 
 ## Variant: 21-buster
 
-**Digest:** sha256:fc36b323a95ed4065ce4ecba8c43ca32ec2bef73210d5da8b0d6e2dd997ff680
+**Digest:** sha256:accbd0616588d0dcfb7fd138131a0c79add777576f7d2c46d544edc1ed3146dd
 
 **Tags:**
 ```
@@ -202,7 +202,7 @@ mcr.microsoft.com/devcontainers/java:dev-21-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 21.0.1 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 21.0.2 | /usr/local/ |
 
 **Tools installed using git**
 
@@ -265,7 +265,7 @@ mcr.microsoft.com/devcontainers/java:dev-21-buster
 
 ## Variant: 17-bookworm
 
-**Digest:** sha256:941d429e3b2fd60b98b7b637a0b91135ea18d0faf9986f0e905c226407d7c0be
+**Digest:** sha256:e8e9e302390613630d54c746fa620754a92080005f53bd51936c308c2b37d96b
 
 **Tags:**
 ```
@@ -286,7 +286,7 @@ mcr.microsoft.com/devcontainers/java:dev-17-jdk-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 17.0.9 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 17.0.10 | /usr/local/ |
 
 **Tools installed using git**
 
@@ -347,7 +347,7 @@ mcr.microsoft.com/devcontainers/java:dev-17-jdk-bookworm
 
 ## Variant: 17-bullseye
 
-**Digest:** sha256:7bcbbc7dc6a35b2b3e3d75427415a8614672de143b83b05a178d40d7efdd536a
+**Digest:** sha256:b7aca049e60e9f3c6b90e51e95a19397cbee9b8e38a7f2f1294067840b692745
 
 **Tags:**
 ```
@@ -367,7 +367,7 @@ mcr.microsoft.com/devcontainers/java:dev-17-jdk-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 17.0.9 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 17.0.10 | /usr/local/ |
 
 **Tools installed using git**
 
@@ -429,7 +429,7 @@ mcr.microsoft.com/devcontainers/java:dev-17-jdk-bullseye
 
 ## Variant: 17-buster
 
-**Digest:** sha256:a6afd544386293ab7ea2a3a42bb6dc674caaeae763f5a489fb119d6a876e5ce7
+**Digest:** sha256:836b8a1e30d20b5c72c107d717cd3c43c03c07f844c494879fc927a67b2d4cc0
 
 **Tags:**
 ```
@@ -448,7 +448,7 @@ mcr.microsoft.com/devcontainers/java:dev-17-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 17.0.9 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 17.0.10 | /usr/local/ |
 
 **Tools installed using git**
 
@@ -511,7 +511,7 @@ mcr.microsoft.com/devcontainers/java:dev-17-buster
 
 ## Variant: 11-bookworm
 
-**Digest:** sha256:839ace5c24d5442d8a637a508ef84be12b49853799e86a70d1c23b397279f187
+**Digest:** sha256:7276d470f1b73cedbc2e54847e5605d5576d2a2c2d9adbc5c905a5dc6b368ec5
 
 **Tags:**
 ```
@@ -532,7 +532,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 11.0.21 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 11.0.22 | /usr/local/ |
 
 **Tools installed using git**
 
@@ -593,7 +593,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bookworm
 
 ## Variant: 11-bullseye
 
-**Digest:** sha256:bae8a2744152bce30a9e6fc8c25233cc1feb547993f2f20e7d80ef9407ced3c6
+**Digest:** sha256:0f58d9ff9e9c01c13094d3c9dd0973eafbcb4b6005b9c52efa5a32b855abeffa
 
 **Tags:**
 ```
@@ -613,7 +613,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 11.0.21 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 11.0.22 | /usr/local/ |
 
 **Tools installed using git**
 
@@ -675,7 +675,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bullseye
 
 ## Variant: 11-buster
 
-**Digest:** sha256:76d8baa1f48b7ca95d70bd4a2be61ddefdad67d0b7b80c91d3cdcfa886ec390e
+**Digest:** sha256:9b5cfc1f0ad0b18a08fa5acc3c4c1e18480e78fe6a9be46ac26904f45d5be661
 
 **Tags:**
 ```
@@ -695,7 +695,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 11.0.21 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 11.0.22 | /usr/local/ |
 
 **Tools installed using git**
 

@@ -16,7 +16,7 @@
 
 ## Variant: 8.3-apache-bookworm
 
-**Digest:** sha256:41cf991b2d61b67323c341ebabeb07e23e66368e7118b05339c3bca45c963112
+**Digest:** sha256:7cb303194e69d6cb00e815e877ecfece46a6fcf702570f130cb0f7f430b313ea
 
 **Tags:**
 ```
@@ -103,7 +103,7 @@ mcr.microsoft.com/devcontainers/php:dev-bookworm
 
 ## Variant: 8.2-apache-bookworm
 
-**Digest:** sha256:2389224db1e38abc46667b5d42f37e97bbfe07aa65457a591387041bd747e7aa
+**Digest:** sha256:f6499c893387321f0df35bc5f53f8f2af5166446ebd8f5b1b6dc65367ccb19cc
 
 **Tags:**
 ```
@@ -187,7 +187,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.2-bookworm
 
 ## Variant: 8.1-apache-bookworm
 
-**Digest:** sha256:b20ff9b1602c16688f26edbb449a818593475e1a1ef185a96a51b52616a7563f
+**Digest:** sha256:0c8c57e79f7395ad39e3c3d9864264d7cb24b8e111b6127add7a875229eb67a1
 
 **Tags:**
 ```
@@ -271,7 +271,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-bookworm
 
 ## Variant: 8.3-apache-bullseye
 
-**Digest:** sha256:3b42e572ad9b953d8e20920e60fe508e50fb95d756ac64d5439a4614b7e5f9a0
+**Digest:** sha256:16b3544ff0a4694794a10d278a9d5facd8bba0f354dec9f700cdf27ee32ad361
 
 **Tags:**
 ```
@@ -357,7 +357,7 @@ mcr.microsoft.com/devcontainers/php:dev-bullseye
 
 ## Variant: 8.2-apache-bullseye
 
-**Digest:** sha256:2e81d59fa0a75b8523304a61a993909c14217ace2a8260ea54f65dbf91f6df84
+**Digest:** sha256:7d864194110d539da7d87b070277b0eef78875b1b7b92bb048ac395b262541db
 
 **Tags:**
 ```
@@ -441,7 +441,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.2-bullseye
 
 ## Variant: 8.1-apache-bullseye
 
-**Digest:** sha256:ff4197666dfa7d92d9bf39353f4533328db09b47a4caad370caf3223e77252e1
+**Digest:** sha256:131a691e8efb1de0e68de48d6d2938ff8133c0b8f935e67ad862581b7f419b77
 
 **Tags:**
 ```
@@ -525,7 +525,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-bullseye
 
 ## Variant: 8.2-apache-buster
 
-**Digest:** sha256:2acb7b9154cfa98e92092a82f161360b93e23ea2d1cb5a72bbd6801592bd5f45
+**Digest:** sha256:022d44ce3b30910378bff8262e71726e4021f859c02e11533b663e730604f447
 
 **Tags:**
 ```
@@ -612,7 +612,7 @@ mcr.microsoft.com/devcontainers/php:dev-buster
 
 ## Variant: 8.1-apache-buster
 
-**Digest:** sha256:b83cd9beab345a8bd40a874affb850a950a3d83ca303f25abff4579debb64dcf
+**Digest:** sha256:02011e75521f4252c5d7a2c64dc57f5050ac034b81b65fe34a65c4cf027f5029
 
 **Tags:**
 ```
