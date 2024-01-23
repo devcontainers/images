@@ -11,7 +11,7 @@
 
 ## Variant: bookworm
 
-**Digest:** sha256:10ac07fae8fb2e326d1c21f573673d4725a3788a7e5f3bfb75075417d4b2fa3b
+**Digest:** sha256:9b284a00d6c9d317e7ba1f7e85b794368313882c23320c10a01c31ebc7dac58e
 
 **Tags:**
 ```
@@ -32,7 +32,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 1.8.0_392<br />bash: line 1: /usr/local/openjdk-*/bin/java: No such file or directory | /usr/local/sdkman/candidates/java/current<br />/usr/local |
+| [Java](https://adoptopenjdk.net/) | 1.8.0_402<br />bash: line 1: /usr/local/openjdk-*/bin/java: No such file or directory | /usr/local/sdkman/candidates/java/current<br />/usr/local |
 
 **Tools installed using git**
 
@@ -93,7 +93,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bookworm
 
 ## Variant: bullseye
 
-**Digest:** sha256:372f8843e107eef60cb836a66efae4f4c2f86084922d16fd4e56b1330a000898
+**Digest:** sha256:4c61041ae08e6b7e19f6b46c1aa922e6f01404396e4faa8c069bb581b9f6aa44
 
 **Tags:**
 ```
@@ -113,7 +113,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 1.8.0_392<br />bash: line 1: /usr/local/openjdk-*/bin/java: No such file or directory | /usr/local/sdkman/candidates/java/current<br />/usr/local |
+| [Java](https://adoptopenjdk.net/) | 1.8.0_402<br />bash: line 1: /usr/local/openjdk-*/bin/java: No such file or directory | /usr/local/sdkman/candidates/java/current<br />/usr/local |
 
 **Tools installed using git**
 
@@ -175,7 +175,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bullseye
 
 ## Variant: buster
 
-**Digest:** sha256:9534c4d31de57bd8caba64c0d8cd42756b7f75f9a1babe2ee51aa94a7daf8e52
+**Digest:** sha256:578f8f38f850030940e915825e961d0ccd07d836dfb39110df027dc5c84c9e44
 
 **Tags:**
 ```
@@ -195,7 +195,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-buster
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 1.8.0_392<br />bash: /usr/local/openjdk-*/bin/java: No such file or directory | /usr/local/sdkman/candidates/java/current<br />/usr/local |
+| [Java](https://adoptopenjdk.net/) | 1.8.0_402<br />bash: /usr/local/openjdk-*/bin/java: No such file or directory | /usr/local/sdkman/candidates/java/current<br />/usr/local |
 
 **Tools installed using git**
 

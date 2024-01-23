@@ -300,7 +300,17 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "a1a1cbc975abf909a6c8985a6a2b8fe20bbd9bd6"
+                    "commitHash": "2b681d95e08447fde261b4404fbeab324f7d1e5b"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "git",
+                "Git": {
+                    "Name": "vcpkg",
+                    "repositoryUrl": "https://github.com/microsoft/vcpkg",
+                    "commitHash": "fa6e6a6ec3224f1d3697d544edef6272a59cd834"
                 }
             }
         },
@@ -591,7 +601,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Eclipse Temurin",
-                    "Version": "1.8.0_392",
+                    "Version": "1.8.0_402",
                     "DownloadUrl": "https://adoptium.net/"
                 }
             }
@@ -743,7 +753,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Image: mcr.microsoft.com/devcontainers/ruby",
-                    "Version": "3.2-bookworm",
+                    "Version": "3.3-bookworm",
                     "DownloadUrl": "https://github.com/devcontainers/images"
                 }
             }
@@ -753,17 +763,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Image: mcr.microsoft.com/devcontainers/ruby",
-                    "Version": "3.2-bullseye",
-                    "DownloadUrl": "https://github.com/devcontainers/images"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "other",
-                "Other": {
-                    "Name": "Docker Image: mcr.microsoft.com/devcontainers/ruby",
-                    "Version": "3.2-buster",
+                    "Version": "3.3-bullseye",
                     "DownloadUrl": "https://github.com/devcontainers/images"
                 }
             }

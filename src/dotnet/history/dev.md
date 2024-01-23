@@ -17,7 +17,7 @@
 
 ## Variant: 8.0-bookworm-slim
 
-**Digest:** sha256:b5843a172287d640c1b95bbb67eaaa8919bb0d72e13321a8f613dcc648c81d36
+**Digest:** sha256:e5f98d911902ac874c80206a5244e915d66655bccfee414c48ffec5b394ed976
 
 **Tags:**
 ```
@@ -99,7 +99,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-bookworm
 
 ## Variant: 8.0-jammy
 
-**Digest:** sha256:85968c720fb15a00c94e5ccc14270e2c02693d9a1ab1e4a34c14084e03aa1bd3
+**Digest:** sha256:394662a21c283235fde52bd4c53dcdbb37d3ddc1c9266460fb8e1a44664ee1d6
 
 **Tags:**
 ```
@@ -179,7 +179,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-jammy
 
 ## Variant: 7.0-bookworm-slim
 
-**Digest:** sha256:fa2e13cb4032024b6c6bfbc57623ac1f1d94799a70b49a476a2b6240e231b0ee
+**Digest:** sha256:28cb5b63f931527781b272343868981f2f4db396f4163f1d1f1ed4007c22b241
 
 **Tags:**
 ```
@@ -261,7 +261,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-7.0-bookworm
 
 ## Variant: 7.0-bullseye-slim
 
-**Digest:** sha256:f6040711dd50620a56292dd356d8ecfbb73c7e3f1cd4a1f570fc2d056fb22839
+**Digest:** sha256:8f92e0699e948cc478f3ca01e4bc18e6636fd5cd271936acbb93b4d2aee5f602
 
 **Tags:**
 ```
@@ -343,7 +343,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-7.0-bullseye
 
 ## Variant: 7.0-jammy
 
-**Digest:** sha256:e8bb8c5df4ac7bcf90ce7da69643f883c375ba4560584351076fe4fd15f2a6dc
+**Digest:** sha256:c4c449663210381061185977f2167c4db56f5ad77fdcf08702ef86bc22d5186f
 
 **Tags:**
 ```
@@ -423,7 +423,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-7.0-jammy
 
 ## Variant: 6.0-bookworm-slim
 
-**Digest:** sha256:4853509a2984d10997156321a7b2d68cc23fc72e7d54b854e5dcfc556441753f
+**Digest:** sha256:f19bf37314aecb69ecd45b46cf9fb1da24dd82614e8ce06a9d750647209919a7
 
 **Tags:**
 ```
@@ -505,7 +505,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-bookworm
 
 ## Variant: 6.0-bullseye-slim
 
-**Digest:** sha256:c9cf3f7a7a71ef898c2efda6f3a5ad4f38b7097c819510ecb18048f847a11e22
+**Digest:** sha256:b1a9f05ffd176f8829f1d18d25057e4ef855d86344d3997f6a209acb06d0d8df
 
 **Tags:**
 ```
@@ -587,7 +587,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-bullseye
 
 ## Variant: 6.0-jammy
 
-**Digest:** sha256:ff4b0b569c22eb1246783552be7e6ed0568a0a5838afc3cb4cbfd5bff487f2cf
+**Digest:** sha256:b47c2e01a10098333fab8ac1ccf0de065af0ce6e6a0fd9be73a9dfcf8d3b2508
 
 **Tags:**
 ```
@@ -667,7 +667,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-jammy
 
 ## Variant: 6.0-focal
 
-**Digest:** sha256:65cecc1a644929e5d1b63d8f14de273d1cfd1b3b1bb2e535ef836e8e959696b3
+**Digest:** sha256:20b0e45c189be52ac51a1de651dbc6d50ab342a82e52fb5cee0375a6ea3a21f8
 
 **Tags:**
 ```

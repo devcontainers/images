@@ -14,7 +14,7 @@
 
 ## Variant: 20-bookworm
 
-**Digest:** sha256:6e8b60f15df51da4e5304bcaa9e16e50e110d6ffef6538e6ec2a1c026342eec4
+**Digest:** sha256:72371d88c7f20434ce47c6b7a9d5ae3983cf9afac85366691d4df861e4c43d32
 
 **Tags:**
 ```
@@ -104,7 +104,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bookworm
 
 ## Variant: 18-bookworm
 
-**Digest:** sha256:5584273ae2158d29defad8c87ba3ad0e01e8dbf0d27f1a92bff36bb20e2c4d54
+**Digest:** sha256:1f40ee374de2a4cfe73cc29095fa44d3ad20d5685af20616809f0391d919dd8e
 
 **Tags:**
 ```
@@ -193,7 +193,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-18
 
 ## Variant: 20-bullseye
 
-**Digest:** sha256:1a0da58bba8b6263880b9824451cf9226c74263344243071b1615abb0125f0ab
+**Digest:** sha256:98a6c1155f11db2476480f250fe7f1bd484c2e6a70d63cb8fdeb51fa76196819
 
 **Tags:**
 ```
@@ -283,7 +283,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bullseye
 
 ## Variant: 18-bullseye
 
-**Digest:** sha256:6501eb6425bff2af32bc79e1b18c49e57a405cc36a5c72fbd4340016db758d96
+**Digest:** sha256:a4f400dfdf81c02a2e4f6a862a6621c5fe92c97a379e9860297b4f788186a13e
 
 **Tags:**
 ```
@@ -372,7 +372,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-18-bullseye
 
 ## Variant: 20-buster
 
-**Digest:** sha256:ca8eb45bf3049e5528d351aa49f68f9eb744a6d86bd62099319423a607bcba3b
+**Digest:** sha256:9e9fda6f22ce976783a8e7f641f05563f7381bf03b25b812f8ebf0461d110636
 
 **Tags:**
 ```
@@ -463,7 +463,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-buster
 
 ## Variant: 18-buster
 
-**Digest:** sha256:33b2f07c4d7c8f0395293204bfd286ce3afa37285dbce06b52b19d1acd7e03b5
+**Digest:** sha256:6950ec936868608b3a7465d67e0dc95e1de784b852899428e51e1c1ec2181f18
 
 **Tags:**
 ```

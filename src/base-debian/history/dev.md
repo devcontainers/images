@@ -11,7 +11,7 @@
 
 ## Variant: bookworm
 
-**Digest:** sha256:4237579c881bbecd54c25607de0ac2256df0ad023408b1264eb07177a9fe40ed
+**Digest:** sha256:a965a735488c8e7d76fc4b905ea34330e83fed6c3914ad681c7dd7be2601dc83
 
 **Tags:**
 ```
@@ -87,7 +87,7 @@ mcr.microsoft.com/devcontainers/base:dev
 
 ## Variant: buster
 
-**Digest:** sha256:811821bbb370c51c300b13052518705be6934dafaf62549a41d80a80efc01869
+**Digest:** sha256:de2b7a9c0a029c2f367ae0083dd4103199970d5fe06edb480ab3441c0e838a4e
 
 **Tags:**
 ```
@@ -163,7 +163,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian10
 
 ## Variant: bullseye
 
-**Digest:** sha256:983349688042c7244b9e7b936195c20410090bc16d97181710f0dcfb5613ef2d
+**Digest:** sha256:be3f603053bc7dd5fdd14efcb4c5594ce4d497d1135d4d23d111dcc2381f41e5
 
 **Tags:**
 ```
