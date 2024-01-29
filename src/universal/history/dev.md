@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:ba2c560967d290c58959400081d13c3c996102ff791f7be0f280d7612d37b81c
+**Digest:** sha256:60827f43dfe797eba391126e6e93069015efeb9ff752366ba89763ba378d811d
 
 **Tags:**
 ```
@@ -28,7 +28,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 |--------------------|---------|------|
 | [Node.js](https://nodejs.org/en/) | 18.19.0<br />20.11.0 | /usr/local/share/nvm/versions/node/&lt;version&gt; |
 | [Python](https://www.python.org/) | 3.10.13<br />3.9.18 | /usr/local/python/&lt;version&gt; |
-| [Java](https://adoptopenjdk.net/) | 17.0.9<br />21.0.1 | /usr/local/sdkman/candidates/java/&lt;version&gt; |
+| [Java](https://adoptopenjdk.net/) | 17.0.10<br />21.0.2 | /usr/local/sdkman/candidates/java/&lt;version&gt; |
 | [.NET](https://dotnet.microsoft.com/) | 6<br />0<br />4<br />1<br />8<br />7<br />0<br />3<br />0<br />6 | /usr/local/dotnet |
 | [Ruby](https://www.ruby-lang.org/en/) | 3.1.4<br />3.2.3 | /usr/local/rvm/rubies/&lt;version&gt; |
 | [PHP](https://xdebug.org/) | 8.2.13<br />8.3.0 | /usr/local/php/&lt;version&gt; |
@@ -42,7 +42,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f7b647e1b13ed9cd2f34f3559c112e61b8c03108 | /home/codespace/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 80c114cb3a64044ea50b623f96a35bc022db5e8d | /home/codespace/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | 22ae0829b84624c49192112213d2556b9d42d99e | /usr/local/nvs |
 | [rbenv](https://github.com/rbenv/rbenv.git) | e8b7a27ee67a5751b899215b4d35fd86ab552dae | /usr/local/share/rbenv |
@@ -56,7 +56,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | pandas | 2.2.0 |
 | scipy | 1.12.0 |
 | matplotlib | 3.8.2 |
-| seaborn | 0.13.1 |
+| seaborn | 0.13.2 |
 | scikit-learn | 1.4.0 |
 | torch | 2.1.2 |
 | requests | 2.31.0 |
@@ -67,12 +67,12 @@ mcr.microsoft.com/devcontainers/universal:dev
 | pylint | 3.0.3 |
 | flake8 | 7.0.0 |
 | autopep8 | 2.0.4 |
-| black | 23.12.1 |
+| black | 24.1.1 |
 | yapf | 0.40.2 |
 | mypy | 1.8.0 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.11.1 |
-| bandit | 1.7.6 |
+| bandit | 1.7.7 |
 | virtualenv | 20.25.0 |
 | pipx | 1.4.3 |
 
@@ -111,7 +111,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [yarn](https://yarnpkg.com/) | 1.22.19 | /usr/bin |
 | [Maven](https://maven.apache.org/) | 3.9.6 | /usr/local/sdkman/candidates/maven/current/bin |
 | [Gradle](https://gradle.org/) | 8.5 | /usr/local/sdkman/candidates/gradle/current/bin |
-| Docker (Moby) CLI &amp; Engine | 24.0.7 | 
+| Docker (Moby) CLI &amp; Engine | 24.0.8 | 
 | [conda](https://github.com/conda/conda) | 23.11.0 | /opt/conda/bin |
 
 **Additional linux tools and packages**
@@ -171,8 +171,8 @@ mcr.microsoft.com/devcontainers/universal:dev
 | man-db | 2.9.1-1 |
 | manpages | 5.05-1 |
 | manpages-dev | 5.05-1 |
-| moby-cli (Docker CLI) | 24.0.7-ubuntu20.04u1 |
-| moby-engine (Docker Engine) | 24.0.7-ubuntu20.04u1 |
+| moby-cli (Docker CLI) | 24.0.8-ubuntu20.04u1 |
+| moby-engine (Docker Engine) | 24.0.8-ubuntu20.04u1 |
 | nano | 4.8-1ubuntu1 |
 | ncdu | 1.14.1-1 |
 | net-tools | 1.60+git20180626.aebd88e-1ubuntu1 |
