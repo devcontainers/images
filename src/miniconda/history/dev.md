@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/miniconda)
 
-**Digest:** sha256:55f1110a740059e793dcfff52b94b01b17922c66612d6b28d5edd52a9d0bc117
+**Digest:** sha256:d4eca1b9c40b140cd305ba6b91390edc60cc99163d278430bfa005ead2efa7f9
 
 **Tags:**
 ```
@@ -43,12 +43,12 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | pylint | 3.0.3 |
 | flake8 | 7.0.0 |
 | autopep8 | 2.0.4 |
-| black | 23.12.1 |
+| black | 24.1.1 |
 | yapf | 0.40.2 |
 | mypy | 1.8.0 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.11.1 |
-| bandit | 1.7.6 |
+| bandit | 1.7.7 |
 | virtualenv | 20.25.0 |
 | pipx | 1.4.3 |
 
