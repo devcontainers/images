@@ -1,40 +1,33 @@
 {
-	"version": "2.0.6",
+	"version": "2.1.0",
 	"variants": [
-		"3.2-bookworm",
-		"3.2-bullseye",
-		"3.2-buster"
+		"3.3-bookworm",
+		"3.3-bullseye"
 	],
 	"build": {
-		"latest": "3.2-bookworm",
+		"latest": "3.3-bookworm",
 		"parent": "ruby",
 		"rootDistro": "debian",
 		"architectures": {
-			"3.2-bookworm": [
+			"3.3-bookworm": [
 				"linux/amd64",
 				"linux/arm64"
 			],
-			"3.2-bullseye": [
+			"3.3-bullseye": [
 				"linux/amd64",
 				"linux/arm64"
-			],
-			"3.2-buster": [
-				"linux/amd64"
 			]
 		},
 		"tags": [
 			"jekyll:${VERSION}-${VARIANT}"
 		],
 		"variantTags": {
-			"3.2-bookworm": [
+			"3.3-bookworm": [
 				"jekyll:${VERSION}",
 				"jekyll:${VERSION}-bookworm"
 			],
-			"3.2-bullseye": [
+			"3.3-bullseye": [
 				"jekyll:${VERSION}-bullseye"
-			],
-			"3.2-buster": [
-				"jekyll:${VERSION}-buster"
 			]
 		}
 	},

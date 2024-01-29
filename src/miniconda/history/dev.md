@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/miniconda)
 
-**Digest:** sha256:8605bc80d2e4424b13753ede80a60961cf0a3d8160ccb826034bef47afb297da
+**Digest:** sha256:55f1110a740059e793dcfff52b94b01b17922c66612d6b28d5edd52a9d0bc117
 
 **Tags:**
 ```
@@ -35,8 +35,8 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 
 | Tool / package | Version |
 |----------------|---------|
-| certifi | 2023.7.22 |
-| cryptography | 41.0.3 |
+| certifi | 2023.11.17 |
+| cryptography | 41.0.7 |
 | setuptools | 68.0.0 |
 | wheel | 0.41.2 |
 | requests | 2.31.0 |
@@ -50,14 +50,14 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | pycodestyle | 2.11.1 |
 | bandit | 1.7.6 |
 | virtualenv | 20.25.0 |
-| pipx | 1.4.2 |
+| pipx | 1.4.3 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.43.0 | 
-| [conda](https://github.com/conda/conda) | 23.10.0 | /opt/conda |
+| [conda](https://github.com/conda/conda) | 23.11.0 | /opt/conda |
 
 **Additional linux tools and packages**
 

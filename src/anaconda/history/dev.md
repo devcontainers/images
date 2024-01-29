@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:8a22bb69f8798d212810bf707015c8ab3b0f93b5789562c87fc47c91e9c6439b
+**Digest:** sha256:b533d98a36761d262d9cf8dcf336256177719591e0e857fe143f3f4efe27a491
 
 **Tags:**
 ```
