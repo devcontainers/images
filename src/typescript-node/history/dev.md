@@ -14,7 +14,7 @@
 
 ## Variant: 20-bookworm
 
-**Digest:** sha256:72371d88c7f20434ce47c6b7a9d5ae3983cf9afac85366691d4df861e4c43d32
+**Digest:** sha256:6d34e59290699cd6bf4703d516084b6b9dc8ef664705b5b5b1bd5157e11b3e94
 
 **Tags:**
 ```
@@ -42,7 +42,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f7b647e1b13ed9cd2f34f3559c112e61b8c03108 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 80c114cb3a64044ea50b623f96a35bc022db5e8d | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
@@ -104,7 +104,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bookworm
 
 ## Variant: 18-bookworm
 
-**Digest:** sha256:1f40ee374de2a4cfe73cc29095fa44d3ad20d5685af20616809f0391d919dd8e
+**Digest:** sha256:8d19c8392f785868cc3bb8b736a725c08357d91a19dcbd26fa4b3d34f661a395
 
 **Tags:**
 ```
@@ -131,7 +131,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-18
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f7b647e1b13ed9cd2f34f3559c112e61b8c03108 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 80c114cb3a64044ea50b623f96a35bc022db5e8d | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
@@ -193,7 +193,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-18
 
 ## Variant: 20-bullseye
 
-**Digest:** sha256:98a6c1155f11db2476480f250fe7f1bd484c2e6a70d63cb8fdeb51fa76196819
+**Digest:** sha256:09bc3ac09a110c7b5065ebf5aa8202e34a84271422e44aa18e7c8973d354150a
 
 **Tags:**
 ```
@@ -220,7 +220,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f7b647e1b13ed9cd2f34f3559c112e61b8c03108 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 80c114cb3a64044ea50b623f96a35bc022db5e8d | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
@@ -283,7 +283,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bullseye
 
 ## Variant: 18-bullseye
 
-**Digest:** sha256:a4f400dfdf81c02a2e4f6a862a6621c5fe92c97a379e9860297b4f788186a13e
+**Digest:** sha256:a539f9287a95cd3b809467311d8d02017f56d4f884e4d100ee3679ce8ff2f3f0
 
 **Tags:**
 ```
@@ -309,7 +309,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-18-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f7b647e1b13ed9cd2f34f3559c112e61b8c03108 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 80c114cb3a64044ea50b623f96a35bc022db5e8d | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
@@ -372,7 +372,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-18-bullseye
 
 ## Variant: 20-buster
 
-**Digest:** sha256:9e9fda6f22ce976783a8e7f641f05563f7381bf03b25b812f8ebf0461d110636
+**Digest:** sha256:6ae1286a2fd691227f777d0895f5e12f6b3420b05217ec17c2361961308afe81
 
 **Tags:**
 ```
@@ -399,7 +399,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f7b647e1b13ed9cd2f34f3559c112e61b8c03108 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 80c114cb3a64044ea50b623f96a35bc022db5e8d | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
@@ -463,7 +463,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-buster
 
 ## Variant: 18-buster
 
-**Digest:** sha256:6950ec936868608b3a7465d67e0dc95e1de784b852899428e51e1c1ec2181f18
+**Digest:** sha256:83ebd315f1da76b860676f78bb67c2c145ce2e98f41d48eeacd5c8c56afe4c7c
 
 **Tags:**
 ```
@@ -489,7 +489,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-18-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f7b647e1b13ed9cd2f34f3559c112e61b8c03108 | /home/node/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 80c114cb3a64044ea50b623f96a35bc022db5e8d | /home/node/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
