@@ -58,6 +58,7 @@ checkCondaPackageVersion "mpmath" "1.3.0"
 checkCondaPackageVersion "aiohttp" "3.9.0"
 checkCondaPackageVersion "urllib3" "1.26.17"
 checkCondaPackageVersion "pyarrow" "14.0.1"
+checkCondaPackageVersion "jupyterlab" "4.0.8"
 
 check "conda-update-conda" bash -c "conda update -y conda"
 check "conda-install-tensorflow" bash -c "conda create --name test-env -c conda-forge --yes tensorflow"
