@@ -200,7 +200,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "f7b647e1b13ed9cd2f34f3559c112e61b8c03108"
+                    "commitHash": "80c114cb3a64044ea50b623f96a35bc022db5e8d"
                 }
             }
         },
@@ -300,17 +300,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "2b681d95e08447fde261b4404fbeab324f7d1e5b"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "git",
-                "Git": {
-                    "Name": "vcpkg",
-                    "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "fa6e6a6ec3224f1d3697d544edef6272a59cd834"
+                    "commitHash": "7032c5759f823fc8699a5c37d5f7072464ccb9a8"
                 }
             }
         },
@@ -621,7 +611,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "f7b647e1b13ed9cd2f34f3559c112e61b8c03108"
+                    "commitHash": "80c114cb3a64044ea50b623f96a35bc022db5e8d"
                 }
             }
         },
@@ -809,7 +799,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "black",
-                    "Version": "23.12.1"
+                    "Version": "24.1.1"
                 }
             }
         },
@@ -854,7 +844,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "bandit",
-                    "Version": "1.7.6"
+                    "Version": "1.7.7"
                 }
             }
         },
@@ -1397,7 +1387,7 @@
                 "Type": "linux",
                 "Linux": {
                     "Name": "moby-cli",
-                    "Version": "24.0.7-ubuntu20.04u1",
+                    "Version": "24.0.8-ubuntu20.04u1",
                     "Distribution": "ubuntu",
                     "Release": "20.04",
                     "Pool-URL": "https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod",
@@ -1410,7 +1400,7 @@
                 "Type": "linux",
                 "Linux": {
                     "Name": "moby-engine",
-                    "Version": "24.0.7-ubuntu20.04u1",
+                    "Version": "24.0.8-ubuntu20.04u1",
                     "Distribution": "ubuntu",
                     "Release": "20.04",
                     "Pool-URL": "https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod",
@@ -1459,7 +1449,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "seaborn",
-                    "Version": "0.13.1"
+                    "Version": "0.13.2"
                 }
             }
         },
@@ -1531,7 +1521,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "f7b647e1b13ed9cd2f34f3559c112e61b8c03108"
+                    "commitHash": "80c114cb3a64044ea50b623f96a35bc022db5e8d"
                 }
             }
         },
