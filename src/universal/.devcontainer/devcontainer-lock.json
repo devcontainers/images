@@ -61,9 +61,9 @@
       "integrity": "sha256:7d31b83459dd5110c37e7f5acb2920335cb1e5ebf014326d7eb6a0b290cc820a"
     },
     "ghcr.io/devcontainers/features/oryx:1": {
-      "version": "1.1.0",
-      "resolved": "ghcr.io/devcontainers/features/oryx@sha256:c83715c52f96077e3ba3a0ef986b76c6faba5bbc5d08935627bc61a579613176",
-      "integrity": "sha256:c83715c52f96077e3ba3a0ef986b76c6faba5bbc5d08935627bc61a579613176"
+      "version": "1.2.0",
+      "resolved": "ghcr.io/devcontainers/features/oryx@sha256:6e7ea6baf731ceae44c946567cb2f7497da22b82ef89384a49f5639d17f765f5",
+      "integrity": "sha256:6e7ea6baf731ceae44c946567cb2f7497da22b82ef89384a49f5639d17f765f5"
     },
     "ghcr.io/devcontainers/features/php:1": {
       "version": "1.1.2",
