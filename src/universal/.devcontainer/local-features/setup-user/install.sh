@@ -59,15 +59,20 @@ mkdir -p /home/${USERNAME}/.ruby
 ln -snf /usr/local/rvm/rubies/default $RUBY_PATH
 
 DOTNET_PATH="/home/${USERNAME}/.dotnet"
+
+# Required due to https://github.com/devcontainers/features/pull/628/files#r1276659825
+chown -R "${USERNAME}:${USERNAME}" /usr/share/dotnet
+chmod g+r+w+s /usr/share/dotnet
+chmod -R g+r+w /usr/share/dotnet
+
 ln -snf /usr/share/dotnet $DOTNET_PATH
 mkdir -p /opt/dotnet/lts
 cp -R /usr/share/dotnet/dotnet /opt/dotnet/lts
 cp -R /usr/share/dotnet/LICENSE.txt /opt/dotnet/lts
 cp -R /usr/share/dotnet/ThirdPartyNotices.txt /opt/dotnet/lts
 
-# Required due to https://github.com/devcontainers/features/pull/628/files#r1276659825
-chown -R "${USERNAME}:${USERNAME}" "${DOTNET_PATH}"
-chmod -R g+r+w+s "${DOTNET_PATH}"
+ls -la "/home/codespace"
+ls -la "/usr/share"
 
 MAVEN_PATH="/home/${USERNAME}/.maven/current"
 mkdir -p /home/${USERNAME}/.maven
