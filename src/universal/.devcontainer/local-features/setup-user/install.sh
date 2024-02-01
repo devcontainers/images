@@ -59,11 +59,11 @@ mkdir -p /home/${USERNAME}/.ruby
 ln -snf /usr/local/rvm/rubies/default $RUBY_PATH
 
 DOTNET_PATH="/home/${USERNAME}/.dotnet"
-ln -snf /usr/local/dotnet/current $DOTNET_PATH
+ln -snf /usr/share/dotnet $DOTNET_PATH
 mkdir -p /opt/dotnet/lts
-cp -R /usr/local/dotnet/current/dotnet /opt/dotnet/lts
-cp -R /usr/local/dotnet/current/LICENSE.txt /opt/dotnet/lts
-cp -R /usr/local/dotnet/current/ThirdPartyNotices.txt /opt/dotnet/lts
+cp -R /usr/share/dotnet/dotnet /opt/dotnet/lts
+cp -R /usr/share/dotnet/LICENSE.txt /opt/dotnet/lts
+cp -R /usr/share/dotnet/ThirdPartyNotices.txt /opt/dotnet/lts
 
 MAVEN_PATH="/home/${USERNAME}/.maven/current"
 mkdir -p /home/${USERNAME}/.maven
