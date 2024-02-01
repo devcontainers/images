@@ -65,6 +65,10 @@ cp -R /usr/share/dotnet/dotnet /opt/dotnet/lts
 cp -R /usr/share/dotnet/LICENSE.txt /opt/dotnet/lts
 cp -R /usr/share/dotnet/ThirdPartyNotices.txt /opt/dotnet/lts
 
+# Required due to https://github.com/devcontainers/features/pull/628/files#r1276659825
+chown -R "${USERNAME}:${USERNAME}" "${DOTNET_PATH}"
+chmod -R g+r+w+s "${DOTNET_PATH}"
+
 MAVEN_PATH="/home/${USERNAME}/.maven/current"
 mkdir -p /home/${USERNAME}/.maven
 ln -snf /usr/local/sdkman/candidates/maven/current $MAVEN_PATH
