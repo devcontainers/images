@@ -48,6 +48,7 @@ checkPythonPackageVersion "jupyter_server" "2.7.2"
 checkPythonPackageVersion "tornado" "6.3.3"
 checkPythonPackageVersion "pyarrow" "14.0.1"
 checkPythonPackageVersion "pillow" "10.2.0"
+checkPythonPackageVersion "jupyterlab" "4.0.11"
 
 checkCondaPackageVersion "pyopenssl" "23.2.0"
 checkCondaPackageVersion "cryptography" "41.0.7"
