@@ -175,8 +175,8 @@
 			},
 			".NET": {
 				"cgIgnore": true,
-				"versionCommand": "ls /usr/local/dotnet | grep -oE '[0-9]'",
-				"path": "/usr/local/dotnet"
+				"versionCommand": "dotnet --version",
+				"path": "/usr/share/dotnet/dotnet"
 			},
 			"Ruby": {
 				"cgIgnore": true,
