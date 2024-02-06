@@ -3,7 +3,7 @@
 # This script is used to prepare a release of the dev containers.
 # It will bump the version of the manifest.json file and run the devcontainer upgrade command.
 # It will only run on the images that have been modified since the last release.
-# If no commit hash is provided, it will run in monthly release mode and bump the version of all images.
+# If no commit hash (of last release) is provided, it will run in monthly release mode and bump the version of all images.
 # Example adhoc release: ./build/prepare-release.sh 1c6f558dc86aafd7749074ec44e238f331303517
 # Example monthly release: ./build/prepare-release.sh
 
