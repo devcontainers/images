@@ -16,7 +16,7 @@
 
 ## Variant: 8.3-apache-bookworm
 
-**Digest:** sha256:2c90054a53cf48ba9a16eeaf5a58377be4d89d51c495822311c03aeb0b94daf4
+**Digest:** sha256:e07208e614e41e5d3439a9f5e0df6d8a3170054d52a595d786e1d5c28fd57f02
 
 **Tags:**
 ```
@@ -46,7 +46,7 @@ mcr.microsoft.com/devcontainers/php:dev-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 80c114cb3a64044ea50b623f96a35bc022db5e8d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 212437090032ea1c8c7ccbc1bc2937083c2e7185 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -72,13 +72,13 @@ mcr.microsoft.com/devcontainers/php:dev-bookworm
 | iproute2 | 6.1.0-3 |
 | jq | 1.6-2.1 |
 | less | 590-2 |
-| libc6 | 2.36-9+deb12u3 |
+| libc6 | 2.36-9+deb12u4 |
 | libgssapi-krb5-2 | 1.20.1-2+deb12u1 |
 | libicu72 | 72.1-3 |
 | libkrb5-3 | 1.20.1-2+deb12u1 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14 |
-| locales | 2.36-9+deb12u3 |
+| locales | 2.36-9+deb12u4 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
@@ -103,7 +103,7 @@ mcr.microsoft.com/devcontainers/php:dev-bookworm
 
 ## Variant: 8.2-apache-bookworm
 
-**Digest:** sha256:e9062527b17c6da6e05240b3ee9df9da82e49f7da38ab2389bdcdc2627bcd411
+**Digest:** sha256:33a4e1a8d4e70bcdd9e7a9cd4c95fc6867f9a011d15d59943b9051ad75c096be
 
 **Tags:**
 ```
@@ -130,7 +130,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.2-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 80c114cb3a64044ea50b623f96a35bc022db5e8d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 212437090032ea1c8c7ccbc1bc2937083c2e7185 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -156,13 +156,13 @@ mcr.microsoft.com/devcontainers/php:dev-8.2-bookworm
 | iproute2 | 6.1.0-3 |
 | jq | 1.6-2.1 |
 | less | 590-2 |
-| libc6 | 2.36-9+deb12u3 |
+| libc6 | 2.36-9+deb12u4 |
 | libgssapi-krb5-2 | 1.20.1-2+deb12u1 |
 | libicu72 | 72.1-3 |
 | libkrb5-3 | 1.20.1-2+deb12u1 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14 |
-| locales | 2.36-9+deb12u3 |
+| locales | 2.36-9+deb12u4 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
@@ -187,7 +187,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.2-bookworm
 
 ## Variant: 8.1-apache-bookworm
 
-**Digest:** sha256:be7a40db92892d91bbb93c0d75c8e865a0aa2da393e64b7e0f051e70ffb2221b
+**Digest:** sha256:91a9621ba06c8438e61eb3c65bd8cc46f88aaf5346c74c33a72b4c1518cd9cd2
 
 **Tags:**
 ```
@@ -214,7 +214,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 80c114cb3a64044ea50b623f96a35bc022db5e8d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 212437090032ea1c8c7ccbc1bc2937083c2e7185 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -240,13 +240,13 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-bookworm
 | iproute2 | 6.1.0-3 |
 | jq | 1.6-2.1 |
 | less | 590-2 |
-| libc6 | 2.36-9+deb12u3 |
+| libc6 | 2.36-9+deb12u4 |
 | libgssapi-krb5-2 | 1.20.1-2+deb12u1 |
 | libicu72 | 72.1-3 |
 | libkrb5-3 | 1.20.1-2+deb12u1 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14 |
-| locales | 2.36-9+deb12u3 |
+| locales | 2.36-9+deb12u4 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
@@ -271,7 +271,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-bookworm
 
 ## Variant: 8.3-apache-bullseye
 
-**Digest:** sha256:e899fc241cd50a4655c322fd970c6e1a411002bc0e98dbda34b33e7abcc3706e
+**Digest:** sha256:08537441d6cb6bae427554f622c9c577361357af43fa6618ce36a93725bc082f
 
 **Tags:**
 ```
@@ -299,7 +299,7 @@ mcr.microsoft.com/devcontainers/php:dev-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 80c114cb3a64044ea50b623f96a35bc022db5e8d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 212437090032ea1c8c7ccbc1bc2937083c2e7185 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -357,7 +357,7 @@ mcr.microsoft.com/devcontainers/php:dev-bullseye
 
 ## Variant: 8.2-apache-bullseye
 
-**Digest:** sha256:636d32c3f9189f4a8d69e288a9f7d2b0966ffe47a5c71032140938545e3da719
+**Digest:** sha256:5884808d7f2979a4be7512178759b3ad1a23352d261098be0f6ac6afcebe5d1d
 
 **Tags:**
 ```
@@ -383,7 +383,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.2-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 80c114cb3a64044ea50b623f96a35bc022db5e8d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 212437090032ea1c8c7ccbc1bc2937083c2e7185 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -441,7 +441,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.2-bullseye
 
 ## Variant: 8.1-apache-bullseye
 
-**Digest:** sha256:a8bd8886d043436ec83aad750593632b9c2b9c700835ba430fa994b4b953be1f
+**Digest:** sha256:931c1b01623e6e70f79a9483d4a7eb079a2bb870bbe6436b4c455d898c5b430f
 
 **Tags:**
 ```
@@ -467,7 +467,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 80c114cb3a64044ea50b623f96a35bc022db5e8d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 212437090032ea1c8c7ccbc1bc2937083c2e7185 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -525,7 +525,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-bullseye
 
 ## Variant: 8.2-apache-buster
 
-**Digest:** sha256:5502193b21f4ad51cbed7406e6709e451481371ab69ffbd74ba6c41ada2c9c14
+**Digest:** sha256:bd94cdf4bb55345f2661b2988c9624f83f36b909ac4315e3c352f58e9f87d63c
 
 **Tags:**
 ```
@@ -553,7 +553,7 @@ mcr.microsoft.com/devcontainers/php:dev-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 80c114cb3a64044ea50b623f96a35bc022db5e8d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 212437090032ea1c8c7ccbc1bc2937083c2e7185 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -590,7 +590,7 @@ mcr.microsoft.com/devcontainers/php:dev-buster
 | locales | 2.28-10+deb10u2 |
 | lsb-release | 10.2019051400 |
 | lsof | 4.91+dfsg-1 |
-| man-db | 2.8.5-2 |
+| man-db | 2.8.5-2+deb10u1 |
 | manpages | 4.16-2 |
 | manpages-dev | 4.16-2 |
 | nano | 3.2-3 |
@@ -601,7 +601,7 @@ mcr.microsoft.com/devcontainers/php:dev-buster
 | psmisc | 23.2-1+deb10u1 |
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
-| sudo | 1.8.27-1+deb10u5 |
+| sudo | 1.8.27-1+deb10u6 |
 | unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u6 |
 | wget | 1.20.1-1.1 |
@@ -612,7 +612,7 @@ mcr.microsoft.com/devcontainers/php:dev-buster
 
 ## Variant: 8.1-apache-buster
 
-**Digest:** sha256:0c29da8a0647de993356e95f3716ce7ebc5643f3ce426265a836a6373bc243c4
+**Digest:** sha256:0920259d08445532f30e9ed4d71bcd9f6a046d01a32e322bd4be0bb240695238
 
 **Tags:**
 ```
@@ -638,7 +638,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 80c114cb3a64044ea50b623f96a35bc022db5e8d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 212437090032ea1c8c7ccbc1bc2937083c2e7185 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -675,7 +675,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-buster
 | locales | 2.28-10+deb10u2 |
 | lsb-release | 10.2019051400 |
 | lsof | 4.91+dfsg-1 |
-| man-db | 2.8.5-2 |
+| man-db | 2.8.5-2+deb10u1 |
 | manpages | 4.16-2 |
 | manpages-dev | 4.16-2 |
 | nano | 3.2-3 |
@@ -686,7 +686,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.1-buster
 | psmisc | 23.2-1+deb10u1 |
 | rsync | 3.1.3-6 |
 | strace | 4.26-0.2 |
-| sudo | 1.8.27-1+deb10u5 |
+| sudo | 1.8.27-1+deb10u6 |
 | unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u6 |
 | wget | 1.20.1-1.1 |

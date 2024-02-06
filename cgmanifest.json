@@ -200,7 +200,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "80c114cb3a64044ea50b623f96a35bc022db5e8d"
+                    "commitHash": "212437090032ea1c8c7ccbc1bc2937083c2e7185"
                 }
             }
         },
@@ -300,7 +300,17 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "7032c5759f823fc8699a5c37d5f7072464ccb9a8"
+                    "commitHash": "fecdd89f28ed883b26a48c2b30085f6384070bb8"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "git",
+                "Git": {
+                    "Name": "vcpkg",
+                    "repositoryUrl": "https://github.com/microsoft/vcpkg",
+                    "commitHash": "710677da49b03885c65c8b5ca43072d4b1acde75"
                 }
             }
         },
@@ -611,7 +621,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "80c114cb3a64044ea50b623f96a35bc022db5e8d"
+                    "commitHash": "212437090032ea1c8c7ccbc1bc2937083c2e7185"
                 }
             }
         },
@@ -1387,7 +1397,7 @@
                 "Type": "linux",
                 "Linux": {
                     "Name": "moby-cli",
-                    "Version": "24.0.8-ubuntu20.04u1",
+                    "Version": "24.0.9-ubuntu20.04u1",
                     "Distribution": "ubuntu",
                     "Release": "20.04",
                     "Pool-URL": "https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod",
@@ -1400,7 +1410,7 @@
                 "Type": "linux",
                 "Linux": {
                     "Name": "moby-engine",
-                    "Version": "24.0.8-ubuntu20.04u1",
+                    "Version": "24.0.9-ubuntu20.04u1",
                     "Distribution": "ubuntu",
                     "Release": "20.04",
                     "Pool-URL": "https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod",
@@ -1467,7 +1477,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "torch",
-                    "Version": "2.1.2"
+                    "Version": "2.2.0"
                 }
             }
         },
@@ -1486,6 +1496,15 @@
                 "Pip": {
                     "Name": "jupyterlab_git",
                     "Version": "0.50.0"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "Pip",
+                "Pip": {
+                    "Name": "certifi",
+                    "Version": "2024.2.2"
                 }
             }
         },
@@ -1521,7 +1540,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "80c114cb3a64044ea50b623f96a35bc022db5e8d"
+                    "commitHash": "212437090032ea1c8c7ccbc1bc2937083c2e7185"
                 }
             }
         },
@@ -1580,7 +1599,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "GitHub CLI",
-                    "Version": "2.42.1",
+                    "Version": "2.43.1",
                     "DownloadUrl": "https://github.com/cli/cli"
                 }
             }

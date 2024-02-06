@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:365bd3262648cc2489d2ef562134bc4b500f27e3bb79d565789fa1ee5772b332
+**Digest:** sha256:965375477f5a21a0ca8b2fd4c98e3f81ffb323c082dfed7bea6aa40165ecb22a
 
 **Tags:**
 ```
@@ -25,7 +25,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 |--------------------|---------|------|
 | [Python](https://www.python.org/) | 3.11.5 | /opt/conda |
 | [Jupyter Notebooks](https://jupyter.org/) | 6.5.4 | /opt/conda |
-| [Jupyter Lab](https://jupyter.org/) | 3.6.3 | /opt/conda |
+| [Jupyter Lab](https://jupyter.org/) | 4.0.11 | /opt/conda |
 
 **Tools installed using git**
 
