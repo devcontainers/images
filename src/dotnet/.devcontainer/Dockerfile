@@ -10,7 +10,10 @@ ENV NUGET_XMLDOC_MODE=
 # They are installed by the base image (mcr.microsoft.com/dotnet/sdk) which does not have the patch.
 # https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-0057
 RUN apt-get update && \
-    wget https://github.com/PowerShell/PowerShell/releases/download/v7.4.1/powershell_7.4.1-1.deb_amd64.deb && \
-    dpkg -i powershell_7.4.1-1.deb_amd64.deb && \
+    apt-get install -y wget && \
+    ARCHITECTURE=$(dpkg --print-architecture) && \
+    POWERSHELL_FILE_NAME="powershell_7.4.1-1.deb_${ARCHITECTURE}.deb" && \
+    wget https://github.com/PowerShell/PowerShell/releases/download/v7.4.1/${POWERSHELL_FILE_NAME} && \
+    dpkg -i ${POWERSHELL_FILE_NAME} && \
     apt-get install -f && \
-    rm powershell_7.4.1-1.deb_amd64.deb
+    rm ${POWERSHELL_FILE_NAME}
