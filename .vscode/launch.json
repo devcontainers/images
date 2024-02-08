@@ -19,7 +19,7 @@
                 "--page",
                 "1",
                 "--pageTotal",
-                "66"
+                "70"
             ],
             "console": "integratedTerminal",
         }
