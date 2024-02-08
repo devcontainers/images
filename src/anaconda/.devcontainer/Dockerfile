@@ -5,9 +5,7 @@ RUN . /etc/os-release && if [ "${VERSION_CODENAME}" != "bullseye" ]; then exit 1
 
 # Temporary: Upgrade python packages due to mentioned CVEs
 # They are installed by the base image (continuumio/anaconda3) which does not have the patch.
-RUN conda install \ 
-    # https://github.com/advisories/GHSA-q3qx-c6g2-7pw2
-    aiohttp=3.9.0 \
+RUN conda install \
     # https://github.com/advisories/GHSA-v845-jxx5-vc9f
     urllib3==1.26.18 \
     # https://github.com/advisories/GHSA-jfhm-5ghh-2f97
@@ -37,7 +35,9 @@ RUN python3 -m pip install --upgrade \
     # https://github.com/advisories/GHSA-3f63-hfp8-52jq
     pillow==10.2.0 \
     # https://github.com/advisories/GHSA-44cc-43rp-5947
-    jupyterlab==4.0.11
+    jupyterlab==4.0.11 \
+    # https://github.com/advisories/GHSA-5h86-8mv2-jq9f
+    aiohttp==3.9.2
 
 # Reset and copy updated files with updated privs to keep image size down
 FROM mcr.microsoft.com/devcontainers/base:1-bullseye
