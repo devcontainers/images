@@ -14,7 +14,7 @@ on:
 jobs:
   smoke-test:
     name: Smoke test
-    runs-on: ubuntu-latest
+    runs-on: devcontainer-image-builder-ubuntu
     steps:
 
     - name: Checkout
