@@ -72,6 +72,9 @@ jobs:
     name: Trigger info extraction
     needs: [build-and-push]
     uses: devcontainers/images/.github/workflows/version-history.yml@main
+    permissions:
+      contents: write
+      pull-requests: write
     with:
       release: "${{ github.ref }}"
       cg: "false"
