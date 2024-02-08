@@ -10,7 +10,7 @@
 | *Categories* | Core, Languages |
 | *Definition type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/go |
-| *Available image variants* | 1 / 1-bookworm, 1.21 / 1.21-bookworm, 1.20 / 1.20-bookworm, 1-bullseye, 1.21-bullseye, 1.20-bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/go/tags/list)) |
+| *Available image variants* | 1 / 1-bookworm, 1.22 / 1.22-bookworm, 1.21 / 1.21-bookworm, 1.20 / 1.20-bookworm, 1-bullseye, 1.22-bullseye, 1.21-bullseye, 1.20-bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/go/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm`, and `bullseye` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
@@ -24,6 +24,7 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 
 - `mcr.microsoft.com/devcontainers/go` (latest)
 - `mcr.microsoft.com/devcontainers/go:1` (or `1-bookworm`, `1-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/go:1.22` (or `1.22-bookworm`, `1.22-bullseye` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/go:1.21` (or `1.21-bookworm`, `1.21-bullseye` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/go:1.20` (or `1.20-bookworm`, `1.20-bullseye` to pin to an OS version)
 
