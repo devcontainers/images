@@ -10,7 +10,7 @@
 
 ## Variant: 3.3-bookworm
 
-**Digest:** sha256:76ca81f04c251e8900737801a917f13f9863ea024ef2ae1d9d7e0954f65c6705
+**Digest:** sha256:c997f575f777b40a263146f944c097038e2e678fb5c8bad7269039e1ec843298
 
 **Tags:**
 ```
@@ -38,7 +38,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 212437090032ea1c8c7ccbc1bc2937083c2e7185 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8f22370af8bd390ea3b8610da1ccf388826d909d | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 | [rbenv](https://github.com/rbenv/rbenv.git) | e8b7a27ee67a5751b899215b4d35fd86ab552dae | /usr/local/share/rbenv |
 | [ruby-build](https://github.com/rbenv/ruby-build.git) | e1b36a32fb87d61955ac38f1889b7e3cb3b2f407 | /usr/local/share/ruby-build |
@@ -47,15 +47,15 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bookworm
 
 | Tool / gem | Version |
 |------------|---------|
-| bundler | 2.5.5 |
+| bundler | 2.5.6 |
 | jekyll | 4.3.3 |
-| github-pages | 228 |
+| github-pages | 229 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.43.0 | 
+| [git](https://github.com/git/git) | 2.43.1 | 
 | [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
 
 **Additional linux tools and packages**
@@ -104,7 +104,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bookworm
 
 ## Variant: 3.3-bullseye
 
-**Digest:** sha256:64f64b9be840f5ebe9137d11788be5f99d7c47a458ea573a1bdb2e07f73fbda3
+**Digest:** sha256:e49e801ee1e6524c4cf41590ac3ff6531b289163ad0f6ccc9b2d244f4489b4a7
 
 **Tags:**
 ```
@@ -131,7 +131,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 212437090032ea1c8c7ccbc1bc2937083c2e7185 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8f22370af8bd390ea3b8610da1ccf388826d909d | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 | [rbenv](https://github.com/rbenv/rbenv.git) | e8b7a27ee67a5751b899215b4d35fd86ab552dae | /usr/local/share/rbenv |
 | [ruby-build](https://github.com/rbenv/ruby-build.git) | e1b36a32fb87d61955ac38f1889b7e3cb3b2f407 | /usr/local/share/ruby-build |
@@ -140,15 +140,15 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 
 | Tool / gem | Version |
 |------------|---------|
-| bundler | 2.5.5 |
+| bundler | 2.5.6 |
 | jekyll | 4.3.3 |
-| github-pages | 228 |
+| github-pages | 229 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.43.0 | 
+| [git](https://github.com/git/git) | 2.43.1 | 
 | [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
 
 **Additional linux tools and packages**
@@ -166,14 +166,14 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
 | less | 551-2 |
-| libc6 | 2.31-13+deb11u7 |
+| libc6 | 2.31-13+deb11u8 |
 | libgssapi-krb5-2 | 1.18.3-6+deb11u4 |
 | libicu67 | 67.1-7 |
 | libkrb5-3 | 1.18.3-6+deb11u4 |
 | liblttng-ust0 | 2.12.1-1 |
 | libssl1.1 | 1.1.1w-0+deb11u1 |
 | libstdc++6 | 10.2.1-6 |
-| locales | 2.31-13+deb11u7 |
+| locales | 2.31-13+deb11u8 |
 | lsb-release | 11.1.0 |
 | lsof | 4.93.2+dfsg-1.1 |
 | man-db | 2.9.4-2 |

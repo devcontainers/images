@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:de58bab56e2a217b7dbd4e401b8b5c39cab4c125d778e3565675b05051ba1b9b
+**Digest:** sha256:1bc804ee5e899729d99138a1e538c7ce6c5fa8c3a43fbd863230483653bf626a
 
 **Tags:**
 ```
@@ -34,7 +34,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [PHP](https://xdebug.org/) | 8.2.13<br />8.3.0 | /usr/local/php/&lt;version&gt; |
 | GCC | 9.4.0-1ubuntu1~20.04.2 | 
 | Clang | 10.0.0-4ubuntu1 | 
-| [Go](https://golang.org/dl) | 1.21.6 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.22.0 | /usr/local/go |
 | [Jekyll](https://jekyllrb.com/) | 4.3.3 | 
 | [Jupyter Lab](https://jupyter.org/) | 4.1.0 | /home/codespace/.local/bin/jupyter-lab |
 
@@ -42,7 +42,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 212437090032ea1c8c7ccbc1bc2937083c2e7185 | /home/codespace/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8f22370af8bd390ea3b8610da1ccf388826d909d | /home/codespace/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | 22ae0829b84624c49192112213d2556b9d42d99e | /usr/local/nvs |
 | [rbenv](https://github.com/rbenv/rbenv.git) | e8b7a27ee67a5751b899215b4d35fd86ab552dae | /usr/local/share/rbenv |
@@ -52,7 +52,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool / package | Version |
 |----------------|---------|
-| numpy | 1.26.3 |
+| numpy | 1.26.4 |
 | pandas | 2.2.0 |
 | scipy | 1.12.0 |
 | matplotlib | 3.8.2 |
@@ -83,7 +83,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | golang.org/x/tools/gopls | 0.14.2 |
 | honnef.co/go/tools | 0.4.5 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
-| github.com/mgechev/revive | 1.3.6 |
+| github.com/mgechev/revive | 1.3.7 |
 | github.com/uudashr/gopkgs | latest |
 | github.com/ramya-rao-a/go-outline | latest |
 | github.com/go-delve/delve | 1.22.0 |
@@ -100,9 +100,9 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.43.0 | 
+| [git](https://github.com/git/git) | 2.43.1 | 
 | [Xdebug](https://xdebug.org/) | 3.3.1 | /usr/local/php/current |
-| [Composer](https://getcomposer.org/) | 2.6.6 | /usr/local/php/current/bin |
+| [Composer](https://getcomposer.org/) | 2.7.1 | /usr/local/php/current/bin |
 | [kubectl](https://github.com/kubernetes/kubectl) | v1.29.1 | /usr/local/bin |
 | [Helm](https://github.com/helm/helm) | 3.14.0 | /usr/local/bin |
 | [Docker Compose](https://github.com/docker/compose) | 1.29.2 | /usr/local/bin |
