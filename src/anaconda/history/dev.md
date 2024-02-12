@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:965375477f5a21a0ca8b2fd4c98e3f81ffb323c082dfed7bea6aa40165ecb22a
+**Digest:** sha256:325da1654aca86e62d4acfb6d0ec94fbccf68e4f431121ad67710583c50797ea
 
 **Tags:**
 ```
@@ -31,7 +31,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5ea2c68be88452b33b35ba8004fc9094618bcd87 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 883da63320806532f3d3246b03f934e15aff3bab | /home/vscode/.oh-my-zsh |
 
 **Pip / pipx installed tools and packages**
 
@@ -42,7 +42,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | cryptography | 41.0.7 |
 | mistune | 3.0.1 |
 | numpy | 1.25.2 |
-| certifi | 2023.11.17 |
+| certifi | 2024.2.2 |
 | setuptools | 68.0.0 |
 | future | 0.18.3 |
 | wheel | 0.38.4 |
@@ -57,7 +57,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.43.0 | 
+| [git](https://github.com/git/git) | 2.43.1 | 
 | [conda](https://github.com/conda/conda) | 23.7.4 | /opt/conda |
 
 **Additional linux tools and packages**
@@ -75,14 +75,14 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
 | less | 551-2 |
-| libc6 | 2.31-13+deb11u7 |
+| libc6 | 2.31-13+deb11u8 |
 | libgssapi-krb5-2 | 1.18.3-6+deb11u4 |
 | libicu67 | 67.1-7 |
 | libkrb5-3 | 1.18.3-6+deb11u4 |
 | liblttng-ust0 | 2.12.1-1 |
 | libssl1.1 | 1.1.1w-0+deb11u1 |
 | libstdc++6 | 10.2.1-6 |
-| locales | 2.31-13+deb11u7 |
+| locales | 2.31-13+deb11u8 |
 | lsb-release | 11.1.0 |
 | lsof | 4.93.2+dfsg-1.1 |
 | man-db | 2.9.4-2 |
