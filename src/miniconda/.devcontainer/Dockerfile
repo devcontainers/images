@@ -10,6 +10,10 @@ RUN conda install \
     # https://github.com/advisories/GHSA-3ww4-gg4f-jr7f
     cryptography==42.0.2
 
+RUN python3 -m pip install --upgrade \
+    # installed for compatibility with cryptography v42.0.2
+    pyopenssl==24.0.0
+
 # Reset and copy updated files with updated privs to keep image size down
 FROM mcr.microsoft.com/devcontainers/base:1-bullseye
 
