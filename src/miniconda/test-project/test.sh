@@ -23,7 +23,6 @@ checkPythonPackageVersion "setuptools" "65.5.1"
 checkPythonPackageVersion "wheel" "0.38.1"
 
 checkCondaPackageVersion "cryptography" "42.0.2"
-checkCondaPackageVersion "pyopenssl" "23.2.0"
 checkCondaPackageVersion "setuptools" "65.5.1"
 checkCondaPackageVersion "wheel" "0.38.1"
 checkCondaPackageVersion "requests" "2.31.0"
