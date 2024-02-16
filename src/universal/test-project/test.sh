@@ -121,6 +121,8 @@ checkOSPackages "additional-os-packages" vim xtail software-properties-common
 check "gh" gh --version
 check "git-lfs" git-lfs --version
 check "docker" docker --version
+check "docker compose" bash -c "docker compose version | grep -E '2.[0-9]+.[0-9]+'"
+check "docker-compose" bash -c "docker-compose --version | grep -E '2.[0-9]+.[0-9]+'"
 check "kubectl" kubectl version --client
 check "helm" helm version
 
