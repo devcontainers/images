@@ -33,5 +33,7 @@ check "conda-update-conda" bash -c "conda update -y conda"
 check "conda-install-tensorflow" bash -c "conda create --name test-env -c conda-forge --yes tensorflow"
 check "conda-install-pytorch" bash -c "conda create --name test-env -c conda-forge --yes pytorch"
 
+checkPipWorkingCorrectly
+
 # Report result
 reportResults

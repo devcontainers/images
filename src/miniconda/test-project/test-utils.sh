@@ -180,3 +180,29 @@ checkCondaPackageVersion()
     current_version=$(conda list "${PACKAGE}" | grep -E "^${PACKAGE}\s" | awk '{print $2}')
     check-version-ge "conda-${PACKAGE}-requirement" "${current_version}" "${REQUIRED_VERSION}"
 }
+
+# Function to check if a package is installed
+checkPackageInstalled() {
+    if python -c "import $1" &>/dev/null; then
+        echo -e "\n✅ Passed! \n$1 is installed"
+    else
+        echo -e "$1 is NOT installed\n"
+        echoStderr "❌ check failed."
+    fi
+}
+
+# Function to install a package using pip
+installPackage() {
+    python3 -m pip install "$1"
+}
+
+checkPipWorkingCorrectly() {
+    # List of packages to install via pip
+    packages=("numpy" "requests" "matplotlib")
+    # Install packages and check if installation was successful
+    for package in "${packages[@]}"; do
+        echo -e "\n🧪 Testing pip install $package\n"
+        installPackage "$package"
+        checkPackageInstalled "$package"
+    done
+}
