@@ -8,9 +8,7 @@ FROM continuumio/miniconda3 as upstream
 
 RUN python3 -m pip install --upgrade \
     # https://github.com/advisories/GHSA-6vqw-3v5j-54x4
-    cryptography==42.0.4
-
-RUN python3 -m pip install --upgrade \
+    cryptography==42.0.4 \
     # installed for compatibility with cryptography v42.0.4
     pyopenssl==24.0.0 
 
