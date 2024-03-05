@@ -10,7 +10,7 @@
 
 ## Variant: jammy
 
-**Digest:** sha256:3d82dcee848c332ce4c2b4177f8c82747c2290e035f6eb5036748441f73a4bf9
+**Digest:** sha256:76a8438bb82e047de4f0116f263abbd3f591f8eb7eaeb4dcc05e95554cf01df7
 
 **Tags:**
 ```
@@ -21,7 +21,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
-**Linux distribution:** Ubuntu 22.04.3 LTS (debian-like distro)
+**Linux distribution:** Ubuntu 22.04.4 LTS (debian-like distro)
 
 **Architectures:** linux/amd64, linux/arm64
 
@@ -32,13 +32,13 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8f22370af8bd390ea3b8610da1ccf388826d909d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fd01fd66ce27c669e5ffaea94460a37423d1e134 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.43.1 | 
+| [git](https://github.com/git/git) | 2.44.0 | 
 
 **Additional linux tools and packages**
 
@@ -54,7 +54,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 | htop | 3.0.5-7build2 |
 | iproute2 | 5.15.0-1ubuntu2 |
 | jq | 1.6-2.1ubuntu3 |
-| less | 590-1ubuntu0.22.04.1 |
+| less | 590-1ubuntu0.22.04.2 |
 | libc6 | 2.35-0ubuntu3.6 |
 | libgssapi-krb5-2 | 1.19.2-2ubuntu0.3 |
 | libicu70 | 70.1-2 |
@@ -76,7 +76,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 | rsync | 3.2.7-0ubuntu0.22.04.2 |
 | strace | 5.16-0ubuntu3 |
 | sudo | 1.9.9-1ubuntu2.4 |
-| unzip | 6.0-26ubuntu3.1 |
+| unzip | 6.0-26ubuntu3.2 |
 | vim-tiny | 2:8.2.3995-1ubuntu2.15 |
 | wget | 1.21.2-2ubuntu1 |
 | zip | 3.0-12build2 |
@@ -85,7 +85,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 ## Variant: focal
 
-**Digest:** sha256:0a79f1e6f33faa25c2669fe6d5e124eba3c30d923f0ab88f8856ff6982ef77ea
+**Digest:** sha256:9a3f2532fe6d2a76cb257befcb205ea130f81a5831d4f6eb5a9109c9f8681fee
 
 **Tags:**
 ```
@@ -106,13 +106,13 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8f22370af8bd390ea3b8610da1ccf388826d909d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fd01fd66ce27c669e5ffaea94460a37423d1e134 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.43.1 | 
+| [git](https://github.com/git/git) | 2.44.0 | 
 
 **Additional linux tools and packages**
 
@@ -128,14 +128,14 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 | htop | 2.2.0-2build1 |
 | iproute2 | 5.5.0-1ubuntu1 |
 | jq | 1.6-1ubuntu0.20.04.1 |
-| less | 551-1ubuntu0.1 |
+| less | 551-1ubuntu0.2 |
 | libc6 | 2.31-0ubuntu9.14 |
 | libgcc1 | 1:10.5.0-1ubuntu1~20.04 |
 | libgssapi-krb5-2 | 1.17-6ubuntu4.4 |
 | libicu66 | 66.1-2ubuntu2.1 |
 | libkrb5-3 | 1.17-6ubuntu4.4 |
 | liblttng-ust0 | 2.11.0-1 |
-| libssl1.1 | 1.1.1f-1ubuntu2.21 |
+| libssl1.1 | 1.1.1f-1ubuntu2.22 |
 | libstdc++6 | 10.5.0-1ubuntu1~20.04 |
 | locales | 2.31-0ubuntu9.14 |
 | lsb-release | 11.1.0ubuntu2 |
@@ -152,7 +152,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 | rsync | 3.1.3-8ubuntu0.7 |
 | strace | 5.5-3ubuntu1 |
 | sudo | 1.8.31-1ubuntu1.5 |
-| unzip | 6.0-25ubuntu1.1 |
+| unzip | 6.0-25ubuntu1.2 |
 | vim-tiny | 2:8.1.2269-1ubuntu5.21 |
 | wget | 1.20.3-1ubuntu2 |
 | zip | 3.0-11build1 |
