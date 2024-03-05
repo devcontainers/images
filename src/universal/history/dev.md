@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:1bc804ee5e899729d99138a1e538c7ce6c5fa8c3a43fbd863230483653bf626a
+**Digest:** sha256:44cbcf279331478c78588fcd4450eeb8c1ee54d547288e64047e147cc356a83b
 
 **Tags:**
 ```
@@ -26,67 +26,67 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 18.19.0<br />20.11.0 | /usr/local/share/nvm/versions/node/&lt;version&gt; |
+| [Node.js](https://nodejs.org/en/) | 18.19.1<br />20.11.1 | /usr/local/share/nvm/versions/node/&lt;version&gt; |
 | [Python](https://www.python.org/) | 3.10.13<br />3.9.18 | /usr/local/python/&lt;version&gt; |
 | [Java](https://adoptopenjdk.net/) | 17.0.10<br />21.0.2 | /usr/local/sdkman/candidates/java/&lt;version&gt; |
-| [.NET](https://dotnet.microsoft.com/) | 8.0.101 | /usr/share/dotnet/dotnet |
+| [.NET](https://dotnet.microsoft.com/) | 8.0.201 | /usr/share/dotnet/dotnet |
 | [Ruby](https://www.ruby-lang.org/en/) | 3.1.4<br />3.2.3 | /usr/local/rvm/rubies/&lt;version&gt; |
 | [PHP](https://xdebug.org/) | 8.2.13<br />8.3.0 | /usr/local/php/&lt;version&gt; |
 | GCC | 9.4.0-1ubuntu1~20.04.2 | 
 | Clang | 10.0.0-4ubuntu1 | 
 | [Go](https://golang.org/dl) | 1.22.0 | /usr/local/go |
 | [Jekyll](https://jekyllrb.com/) | 4.3.3 | 
-| [Jupyter Lab](https://jupyter.org/) | 4.1.0 | /home/codespace/.local/bin/jupyter-lab |
+| [Jupyter Lab](https://jupyter.org/) | 4.1.3 | /home/codespace/.local/bin/jupyter-lab |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8f22370af8bd390ea3b8610da1ccf388826d909d | /home/codespace/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fd01fd66ce27c669e5ffaea94460a37423d1e134 | /home/codespace/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
-| [nvs](https://github.com/jasongin/nvs) | 22ae0829b84624c49192112213d2556b9d42d99e | /usr/local/nvs |
+| [nvs](https://github.com/jasongin/nvs) | fe734a2f57fea0065ce70260b441752e3f6c30ae | /usr/local/nvs |
 | [rbenv](https://github.com/rbenv/rbenv.git) | e8b7a27ee67a5751b899215b4d35fd86ab552dae | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | e1b36a32fb87d61955ac38f1889b7e3cb3b2f407 | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 09da542276c0bd9c23d34a71eeaba5aafe5fa975 | /usr/local/share/ruby-build |
 
 **Pip / pipx installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
 | numpy | 1.26.4 |
-| pandas | 2.2.0 |
+| pandas | 2.2.1 |
 | scipy | 1.12.0 |
-| matplotlib | 3.8.2 |
+| matplotlib | 3.8.3 |
 | seaborn | 0.13.2 |
-| scikit-learn | 1.4.0 |
-| torch | 2.2.0 |
+| scikit-learn | 1.4.1.post1 |
+| torch | 2.2.1 |
 | requests | 2.31.0 |
-| plotly | 5.18.0 |
+| plotly | 5.19.0 |
 | jupyterlab_git | 0.50.0 |
 | certifi | 2024.2.2 |
 | setuptools | 68.2.2 |
-| pylint | 3.0.3 |
+| pylint | 3.1.0 |
 | flake8 | 7.0.0 |
 | autopep8 | 2.0.4 |
-| black | 24.1.1 |
+| black | 24.2.0 |
 | yapf | 0.40.2 |
 | mypy | 1.8.0 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.11.1 |
 | bandit | 1.7.7 |
-| virtualenv | 20.25.0 |
+| virtualenv | 20.25.1 |
 | pipx | 1.4.3 |
 
 **Go tools and modules**
 
 | Tool / module | Version |
 |---------------|---------|
-| golang.org/x/tools/gopls | 0.14.2 |
-| honnef.co/go/tools | 0.4.5 |
+| golang.org/x/tools/gopls | 0.15.1 |
+| honnef.co/go/tools | 0.4.6 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
 | github.com/mgechev/revive | 1.3.7 |
 | github.com/uudashr/gopkgs | latest |
 | github.com/ramya-rao-a/go-outline | latest |
-| github.com/go-delve/delve | 1.22.0 |
+| github.com/go-delve/delve | 1.22.1 |
 | github.com/golangci/golangci-lint | latest |
 
 **Ruby gems and tools**
@@ -100,19 +100,19 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.43.1 | 
+| [git](https://github.com/git/git) | 2.44.0 | 
 | [Xdebug](https://xdebug.org/) | 3.3.1 | /usr/local/php/current |
 | [Composer](https://getcomposer.org/) | 2.7.1 | /usr/local/php/current/bin |
-| [kubectl](https://github.com/kubernetes/kubectl) | v1.29.1 | /usr/local/bin |
-| [Helm](https://github.com/helm/helm) | 3.14.0 | /usr/local/bin |
-| [Docker Compose](https://github.com/docker/compose) | 1.29.2 | /usr/local/bin |
+| [kubectl](https://github.com/kubernetes/kubectl) | v1.29.2 | /usr/local/bin |
+| [Helm](https://github.com/helm/helm) | 3.14.2 | /usr/local/bin |
+| [Docker Compose](https://github.com/docker/compose) | 2.24.6 | /usr/local/bin |
 | [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
-| [GitHub CLI](https://github.com/cli/cli) | 2.43.1 | 
+| [GitHub CLI](https://github.com/cli/cli) | 2.45.0 | 
 | [yarn](https://yarnpkg.com/) | 1.22.19 | /usr/bin |
 | [Maven](https://maven.apache.org/) | 3.9.6 | /usr/local/sdkman/candidates/maven/current/bin |
 | [Gradle](https://gradle.org/) | 8.6 | /usr/local/sdkman/candidates/gradle/current/bin |
 | Docker (Moby) CLI &amp; Engine | 24.0.9 | 
-| [conda](https://github.com/conda/conda) | 24.1.0 | /opt/conda/bin |
+| [conda](https://github.com/conda/conda) | 24.1.2 | /opt/conda/bin |
 
 **Additional linux tools and packages**
 
@@ -137,7 +137,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | iproute2 | 5.5.0-1ubuntu1 |
 | iptables | 1.8.4-3ubuntu2.1 |
 | jq | 1.6-1ubuntu0.20.04.1 |
-| less | 551-1ubuntu0.1 |
+| less | 551-1ubuntu0.2 |
 | libatk-bridge2.0-0 | 2.34.2-0ubuntu2~20.04.1 |
 | libatk1.0-0 | 2.35.1-1ubuntu2 |
 | libc6 | 2.31-0ubuntu9.14 |
@@ -155,7 +155,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | libpango-1.0-0 | 1.44.7-2ubuntu4 |
 | libpangocairo-1.0-0 | 1.44.7-2ubuntu4 |
 | libsecret-1-dev | 0.20.4-0ubuntu1 |
-| libssl1.1 | 1.1.1f-1ubuntu2.21 |
+| libssl1.1 | 1.1.1f-1ubuntu2.22 |
 | libstdc++6 | 10.5.0-1ubuntu1~20.04 |
 | libx11-6 | 2:1.6.9-2ubuntu1.6 |
 | libx11-xcb1 | 2:1.6.9-2ubuntu1.6 |
@@ -190,7 +190,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | strace | 5.5-3ubuntu1 |
 | sudo | 1.8.31-1ubuntu1.5 |
 | tar | 1.30+dfsg-7ubuntu0.20.04.4 |
-| unzip | 6.0-25ubuntu1.1 |
+| unzip | 6.0-25ubuntu1.2 |
 | valgrind | 1:3.15.0-1ubuntu9.1 |
 | vim | 2:8.1.2269-1ubuntu5.21 |
 | vim-doc | 2:8.1.2269-1ubuntu5.21 |
