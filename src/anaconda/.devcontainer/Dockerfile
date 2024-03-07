@@ -37,7 +37,9 @@ RUN python3 -m pip install --upgrade \
     # https://github.com/advisories/GHSA-5h86-8mv2-jq9f
     aiohttp==3.9.2 \
     # https://github.com/advisories/GHSA-6vqw-3v5j-54x4
-    cryptography==42.0.4
+    cryptography==42.0.4 \
+    # https://github.com/advisories/GHSA-2mqj-m65w-jghx
+    gitpython==3.1.41
 
 # Reset and copy updated files with updated privs to keep image size down
 FROM mcr.microsoft.com/devcontainers/base:1-bullseye
