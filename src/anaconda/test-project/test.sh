@@ -49,6 +49,7 @@ checkPythonPackageVersion "tornado" "6.3.3"
 checkPythonPackageVersion "pyarrow" "14.0.1"
 checkPythonPackageVersion "pillow" "10.2.0"
 checkPythonPackageVersion "jupyterlab" "4.0.11"
+checkPythonPackageVersion "jupyter-lsp" "2.2.2"
 
 checkCondaPackageVersion "pyopenssl" "23.2.0"
 checkCondaPackageVersion "requests" "2.31.0"
