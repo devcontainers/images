@@ -38,6 +38,8 @@ RUN python3 -m pip install --upgrade \
     aiohttp==3.9.2 \
     # https://github.com/advisories/GHSA-6vqw-3v5j-54x4
     cryptography==42.0.4 \
+    # https://github.com/advisories/GHSA-2mqj-m65w-jghx
+    gitpython==3.1.41 \
     # https://github.com/advisories/GHSA-4qhp-652w-c22x
     jupyter-lsp==2.2.2
 
