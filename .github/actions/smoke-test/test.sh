@@ -1,5 +1,8 @@
 #/bin/bash
 IMAGE="$1"
+THRESHOLD_IN_GB="$2"
+
+source $(pwd)/.github/actions/smoke-test/check-image-size.sh
 
 export DOCKER_BUILDKIT=1
 set -e
@@ -11,6 +14,11 @@ devcontainer exec --workspace-folder $(pwd)/src/$IMAGE  --id-label ${id_label} /
 
 echo "(*) Docker image details..."
 docker images
+# Checking size of universal image
+
+if [ $IMAGE == "universal" ]; then
+    check_image_size $IMAGE $THRESHOLD_IN_GB
+fi
 
 # Clean up
 docker rm -f $(docker container ls -f "label=${id_label}" -q)
