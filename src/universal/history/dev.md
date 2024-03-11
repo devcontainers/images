@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:44cbcf279331478c78588fcd4450eeb8c1ee54d547288e64047e147cc356a83b
+**Digest:** sha256:aa01fbd18a9960c176e8f5594c6980aaca8cfb6c087f165a4ec7bb241d365c9e
 
 **Tags:**
 ```
@@ -34,15 +34,15 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [PHP](https://xdebug.org/) | 8.2.13<br />8.3.0 | /usr/local/php/&lt;version&gt; |
 | GCC | 9.4.0-1ubuntu1~20.04.2 | 
 | Clang | 10.0.0-4ubuntu1 | 
-| [Go](https://golang.org/dl) | 1.22.0 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.22.1 | /usr/local/go |
 | [Jekyll](https://jekyllrb.com/) | 4.3.3 | 
-| [Jupyter Lab](https://jupyter.org/) | 4.1.3 | /home/codespace/.local/bin/jupyter-lab |
+| [Jupyter Lab](https://jupyter.org/) | 4.1.4 | /home/codespace/.local/bin/jupyter-lab |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fd01fd66ce27c669e5ffaea94460a37423d1e134 | /home/codespace/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4fd2af0a82e2826317d9551ecd8d5f44553828d7 | /home/codespace/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | fe734a2f57fea0065ce70260b441752e3f6c30ae | /usr/local/nvs |
 | [rbenv](https://github.com/rbenv/rbenv.git) | e8b7a27ee67a5751b899215b4d35fd86ab552dae | /usr/local/share/rbenv |
@@ -69,10 +69,10 @@ mcr.microsoft.com/devcontainers/universal:dev
 | autopep8 | 2.0.4 |
 | black | 24.2.0 |
 | yapf | 0.40.2 |
-| mypy | 1.8.0 |
+| mypy | 1.9.0 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.11.1 |
-| bandit | 1.7.7 |
+| bandit | 1.7.8 |
 | virtualenv | 20.25.1 |
 | pipx | 1.4.3 |
 
@@ -105,7 +105,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [Composer](https://getcomposer.org/) | 2.7.1 | /usr/local/php/current/bin |
 | [kubectl](https://github.com/kubernetes/kubectl) | v1.29.2 | /usr/local/bin |
 | [Helm](https://github.com/helm/helm) | 3.14.2 | /usr/local/bin |
-| [Docker Compose](https://github.com/docker/compose) | 2.24.6 | /usr/local/bin |
+| [Docker Compose](https://github.com/docker/compose) | 2.24.7 | /usr/local/bin |
 | [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
 | [GitHub CLI](https://github.com/cli/cli) | 2.45.0 | 
 | [yarn](https://yarnpkg.com/) | 1.22.19 | /usr/bin |
@@ -131,7 +131,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | gcc | 4:9.3.0-1ubuntu2 |
 | gdb | 9.2-0ubuntu1~20.04.1 |
 | git | 1:2.25.1-1ubuntu3.11 |
-| git-lfs (Git Large File Support) | 3.4.1 |
+| git-lfs (Git Large File Support) | 3.5.1 |
 | gnupg2 | 2.2.19-3ubuntu2.2 |
 | htop | 2.2.0-2build1 |
 | iproute2 | 5.5.0-1ubuntu1 |

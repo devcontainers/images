@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:0229de3856063d83e80f6f9226a953c2eef2fbd4c75b1401437db8b69b9ddd1e
+**Digest:** sha256:7cd8ee54ef3ce8c7d767b227fabffb7b4b674e2d00311694ae8503f223ae8668
 
 **Tags:**
 ```
@@ -31,7 +31,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 883da63320806532f3d3246b03f934e15aff3bab | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fd01fd66ce27c669e5ffaea94460a37423d1e134 | /home/vscode/.oh-my-zsh |
 
 **Pip / pipx installed tools and packages**
 
@@ -57,7 +57,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.43.0 | 
+| [git](https://github.com/git/git) | 2.44.0 | 
 | [conda](https://github.com/conda/conda) | 24.1.2 | /opt/conda |
 
 **Additional linux tools and packages**

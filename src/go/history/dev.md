@@ -12,7 +12,7 @@
 
 ## Variant: 1.22-bookworm
 
-**Digest:** sha256:45bf326203d21e108438c347f6e23ae0cd26070e2a1e82c6643bb4158d84a110
+**Digest:** sha256:274c1679dd6d0a0de5d5eee3441da5e771e12fd167c0b33501687a75ef36aa4e
 
 **Tags:**
 ```
@@ -35,13 +35,13 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | 1.22.0 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.22.1 | /usr/local/go |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fd01fd66ce27c669e5ffaea94460a37423d1e134 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4fd2af0a82e2826317d9551ecd8d5f44553828d7 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Go tools and modules**
@@ -114,7 +114,7 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 
 ## Variant: 1.21-bookworm
 
-**Digest:** sha256:9bbd7a6e16dadf7063d8f606c70af26e8fd8683c271ceb2e99840b9e0c3c3d59
+**Digest:** sha256:2fe7995f5760125ccb6cf4e90001694b7711b1bcdc6173d273e0edad8c5b68b5
 
 **Tags:**
 ```
@@ -134,13 +134,13 @@ mcr.microsoft.com/devcontainers/go:dev-1.21
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | 1.21.7 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.21.8 | /usr/local/go |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fd01fd66ce27c669e5ffaea94460a37423d1e134 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4fd2af0a82e2826317d9551ecd8d5f44553828d7 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Go tools and modules**
@@ -213,7 +213,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.21
 
 ## Variant: 1.22-bullseye
 
-**Digest:** sha256:893d04e12ed1a30f6359e5476abfd37101b5cf2e55194f323d8a0f5bfaef6eee
+**Digest:** sha256:676a164e15de81b30b0a16024b6ee88b04785a5e428df11e23cdc9504287e49a
 
 **Tags:**
 ```
@@ -234,13 +234,13 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | 1.22.0 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.22.1 | /usr/local/go |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fd01fd66ce27c669e5ffaea94460a37423d1e134 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4fd2af0a82e2826317d9551ecd8d5f44553828d7 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Go tools and modules**
@@ -314,7 +314,7 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 
 ## Variant: 1.21-bullseye
 
-**Digest:** sha256:7382cfc85e0a6d738acc628be87c2fc43a2fe9fb7a66bb7387a5050699c851e7
+**Digest:** sha256:61520f45300bf51ed7c9a627d9db4bd43a5ac0fb2d70e06a05544adceb1824eb
 
 **Tags:**
 ```
@@ -333,13 +333,13 @@ mcr.microsoft.com/devcontainers/go:dev-1.21-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | 1.21.7 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.21.8 | /usr/local/go |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fd01fd66ce27c669e5ffaea94460a37423d1e134 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4fd2af0a82e2826317d9551ecd8d5f44553828d7 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Go tools and modules**
