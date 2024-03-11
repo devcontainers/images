@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/miniconda)
 
-**Digest:** sha256:014b66ba2e057414e736b21320e19c4d7456588be20887ae63535fbc583ebd06
+**Digest:** sha256:e2dea0044b7e8f4e264d73c6f7e28ebe6fd201b9c63a97ab2bd9fa84de579852
 
 **Tags:**
 ```
@@ -29,7 +29,7 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 883da63320806532f3d3246b03f934e15aff3bab | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fd01fd66ce27c669e5ffaea94460a37423d1e134 | /home/vscode/.oh-my-zsh |
 
 **Pip / pipx installed tools and packages**
 
@@ -45,10 +45,10 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | autopep8 | 2.0.4 |
 | black | 24.2.0 |
 | yapf | 0.40.2 |
-| mypy | 1.8.0 |
+| mypy | 1.9.0 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.11.1 |
-| bandit | 1.7.7 |
+| bandit | 1.7.8 |
 | virtualenv | 20.25.1 |
 | pipx | 1.4.3 |
 
