@@ -55,6 +55,7 @@ RUN apt-get update \
         uuid-dev \
         curl \
         gettext \
+        inotify-tools \
     && rm -rf /var/lib/apt/lists/* \
     # This is the folder containing 'links' to benv and build script generator
     && apt-get update \
