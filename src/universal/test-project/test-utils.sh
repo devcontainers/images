@@ -130,7 +130,8 @@ checkCommon()
         zlib1g \
         locales \
         gettext \
-        sudo"
+        sudo \
+        inotify-tools"
 
     # Actual tests
     checkOSPackages "common-os-packages" ${PACKAGE_LIST}
