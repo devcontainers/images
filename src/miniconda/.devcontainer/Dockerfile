@@ -30,7 +30,7 @@ USER root
 # Copy scripts to execute
 COPY add-notice.sh /tmp/library-scripts/
 
-# Setup conda to mirror contents from https://github.com/ContinuumIO/docker-images/blob/master/miniconda3/debian/Dockerfile
+# Setup conda to mirror contents from https://github.com/ContinuumIO/docker-images/blob/main/miniconda3/debian/Dockerfile
 ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
     PATH=/opt/conda/bin:$PATH
@@ -56,7 +56,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && echo "conda activate base" >> ~/.bashrc \
     && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts/add-notice.sh
 
-# Copy environment.yml (if found) to a temp locaition so we update the environment. Also
+# Copy environment.yml (if found) to a temp location so we update the environment. Also
 # copy "noop.txt" so the COPY instruction does not fail if no environment.yml exists.
 COPY environment.yml* noop.txt /tmp/conda-tmp/
 RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then umask 0002 && /opt/conda/bin/conda env update -n base -f /tmp/conda-tmp/environment.yml; fi \
