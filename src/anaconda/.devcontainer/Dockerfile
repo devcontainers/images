@@ -41,7 +41,9 @@ RUN python3 -m pip install --upgrade \
     # https://github.com/advisories/GHSA-2mqj-m65w-jghx
     gitpython==3.1.41 \
     # https://github.com/advisories/GHSA-4qhp-652w-c22x
-    jupyter-lsp==2.2.2
+    jupyter-lsp==2.2.2 \
+    # https://github.com/advisories/GHSA-fj7x-q9j7-g6q6
+    black==24.3.0
 
 # Reset and copy updated files with updated privs to keep image size down
 FROM mcr.microsoft.com/devcontainers/base:1-bullseye
