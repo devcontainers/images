@@ -10,7 +10,7 @@
 
 ## Variant: jammy
 
-**Digest:** sha256:1c55f7dabde47b4504ad0d8c8f6f56f4dff766b89c9d989b185737ccbc98e35c
+**Digest:** sha256:3bbec5897a27e6290e991312247a6a06ba993998d8da97d2659ce96d6d2e2f42
 
 **Tags:**
 ```
@@ -32,7 +32,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4fd2af0a82e2826317d9551ecd8d5f44553828d7 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6dfa9507ce0eb0f4d386bd03268e33943ea55c0f | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -44,10 +44,10 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 | Tool / library | Version |
 |----------------|---------|
-| apt-transport-https | 2.4.11 |
-| apt-utils | 2.4.11 |
+| apt-transport-https | 2.4.12 |
+| apt-utils | 2.4.12 |
 | ca-certificates | 20230311ubuntu0.22.04.1 |
-| curl | 7.81.0-1ubuntu1.15 |
+| curl | 7.81.0-1ubuntu1.16 |
 | dialog | 1.3-20211214-1 |
 | git | 1:2.34.1-1ubuntu1.10 |
 | gnupg2 | 2.2.27-3ubuntu2.1 |
@@ -77,7 +77,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 | strace | 5.16-0ubuntu3 |
 | sudo | 1.9.9-1ubuntu2.4 |
 | unzip | 6.0-26ubuntu3.2 |
-| vim-tiny | 2:8.2.3995-1ubuntu2.15 |
+| vim-tiny | 2:8.2.3995-1ubuntu2.16 |
 | wget | 1.21.2-2ubuntu1 |
 | zip | 3.0-12build2 |
 | zlib1g | 1:1.2.11.dfsg-2ubuntu9.2 |
@@ -85,7 +85,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 ## Variant: focal
 
-**Digest:** sha256:dbda4e8fa539892867899434c309f7711ad3bd4881c2e5cea50b4d198ddb15ad
+**Digest:** sha256:7f1e11fea75c97067c6d0ac3b768045660317afd64709e47400f9d46403da90d
 
 **Tags:**
 ```
@@ -106,7 +106,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4fd2af0a82e2826317d9551ecd8d5f44553828d7 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6dfa9507ce0eb0f4d386bd03268e33943ea55c0f | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -121,7 +121,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 | apt-transport-https | 2.0.10 |
 | apt-utils | 2.0.10 |
 | ca-certificates | 20230311ubuntu0.20.04.1 |
-| curl | 7.68.0-1ubuntu2.21 |
+| curl | 7.68.0-1ubuntu2.22 |
 | dialog | 1.3-20190808-1 |
 | git | 1:2.25.1-1ubuntu3.11 |
 | gnupg2 | 2.2.19-3ubuntu2.2 |
@@ -153,7 +153,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 | strace | 5.5-3ubuntu1 |
 | sudo | 1.8.31-1ubuntu1.5 |
 | unzip | 6.0-25ubuntu1.2 |
-| vim-tiny | 2:8.1.2269-1ubuntu5.21 |
+| vim-tiny | 2:8.1.2269-1ubuntu5.22 |
 | wget | 1.20.3-1ubuntu2 |
 | zip | 3.0-11build1 |
 | zlib1g | 1:1.2.11.dfsg-2ubuntu1.5 |
