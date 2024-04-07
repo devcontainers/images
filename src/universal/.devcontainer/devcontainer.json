@@ -108,6 +108,7 @@
     // "forwardPorts": [],
 
     // Configure tool-specific properties.
+    "onCreateCommand": "chmod +x ./.devcontainer/OnCreateCommand.sh; ./.devcontainer/OnCreateCommand.sh;",
     "customizations": {
         // Configure properties specific to VS Code.
         "vscode": {
