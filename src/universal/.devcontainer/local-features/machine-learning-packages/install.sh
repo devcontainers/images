@@ -31,10 +31,18 @@ export DEBIAN_FRONTEND=noninteractive
 
 install_python_package() {
     PACKAGE=${1:-""}
-
+    shift  # Remove the first argument (PACKAGE) from the list of arguments
     sudo_if /usr/local/python/current/bin/python -m pip uninstall --yes $PACKAGE
-    echo "Installing $PACKAGE..."
-    sudo_if /usr/local/python/current/bin/python -m pip install --user --upgrade --no-cache-dir $PACKAGE
+    # Install the package with any remaining arguments (if provided)
+    if [ $# -gt 0 ]; then
+        # Additional arguments are provided (e.g., -f URL)
+        echo "Installing $PACKAGE with options: $@"
+        sudo_if /usr/local/python/current/bin/python -m pip install --user --upgrade --no-cache-dir $PACKAGE "$@"
+    else
+        # No additional arguments provided
+        echo "Installing $PACKAGE..."
+        sudo_if /usr/local/python/current/bin/python -m pip install --user --upgrade --no-cache-dir $PACKAGE
+    fi
 }
 
 if [[ "$(python --version)" != "" ]] && [[ "$(pip --version)" != "" ]]; then
@@ -44,10 +52,41 @@ if [[ "$(python --version)" != "" ]] && [[ "$(pip --version)" != "" ]]; then
     install_python_package "matplotlib"
     install_python_package "seaborn"
     install_python_package "scikit-learn"
+    install_python_package "torch" -f https://download.pytorch.org/whl/cpu/torch_stable.html
     install_python_package "requests"
     install_python_package "plotly"
 else
     "(*) Error: Need to install python and pip."
 fi
+
+INSTALL_TORCH_FOR_GPU="/usr/local/share/installTorchForGPU.sh"
+
+# Save the script to INSTALL_TORCH_FOR_GPU
+cat << 'EOF' > "$INSTALL_TORCH_FOR_GPU"
+#!/bin/bash
+
+echo -e "\nAttempting to install Torch with GPU Acceleration if NVIDIA GPU is available"
+# Check if lspci is available
+if ! command -v lspci &> /dev/null; then
+    echo "lspci not found. Attempting to install pciutils..."
+    sudo apt-get update
+    sudo apt-get install -y pciutils
+else
+    echo "lspci found. No need to install"
+fi
+
+set +e
+GPU=$(lspci | grep -i NVIDIA || true)  # Use `|| true` to prevent script from exiting on grep failure
+set -e
+
+if [ -n "$GPU" ]; then
+    echo "GPU Detected. Installing Torch with GPU support."
+    install_python_package "torch"
+else 
+    echo "GPU Not Detected. Torch without GPU Acceleration is already installed."
+fi
+EOF
+
+chmod 755 "$INSTALL_TORCH_FOR_GPU"
 
 echo "Done!"
