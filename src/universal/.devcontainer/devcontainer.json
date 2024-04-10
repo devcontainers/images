@@ -72,7 +72,7 @@
         },
         "./local-features/jekyll": "latest",
         "ghcr.io/devcontainers/features/oryx:1": "latest",
-        "./local-features/setup-user": "latest",
+        // "./local-features/setup-user": "latest",
         "./local-features/patch-python": {},
         "./local-features/patch-conda": {}
     },
@@ -99,7 +99,7 @@
         "ghcr.io/devcontainers/features/go",
         "./local-features/jekyll",
         "ghcr.io/devcontainers/features/oryx",
-        "./local-features/setup-user"
+        // "./local-features/setup-user"
     ],
     "remoteUser": "codespace",
     "containerUser": "codespace",
