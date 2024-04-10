@@ -109,17 +109,17 @@ EOF
 
 chmod 755 "$INSTALL_TORCH_FOR_GPU"
 
-set -x
+# set -x
 
-# Get the container ID of the current running container
-CONTAINER_ID=$(cat /proc/self/cgroup | grep "docker" | sed s/\\//\\n/g | tail -1)
+# # Get the container ID of the current running container
+# CONTAINER_ID=$(cat /proc/self/cgroup | grep "docker" | sed s/\\//\\n/g | tail -1)
 
-IMAGE_NAME=$(docker inspect --format='{{.Config.Image}}' "$CONTAINER_ID")
+# IMAGE_NAME=$(docker inspect --format='{{.Config.Image}}' "$CONTAINER_ID")
 
-echo $IMAGE_NAME
+# echo $IMAGE_NAME
 
-echo $CONTAINER_ID  
+# echo $CONTAINER_ID  
 
-set +x
+# set +x
 
 echo "Done!"

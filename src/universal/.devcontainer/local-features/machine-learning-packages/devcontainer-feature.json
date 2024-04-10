@@ -1,7 +1,7 @@
 {
     "id": "machine-learning-packages",
     "name": "Machine learning packages",
-	// "postCreateCommand": "chmod 755 /usr/local/share/startContainer.sh; /usr/local/share/startContainer.sh",
+	"postCreateCommand": "chmod 755 startContainer.sh; ./startContainer.sh;",
 	"installsAfter": [
 		"ghcr.io/devcontainers/features/python"
 	]
