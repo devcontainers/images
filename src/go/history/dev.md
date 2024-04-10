@@ -12,7 +12,7 @@
 
 ## Variant: 1.22-bookworm
 
-**Digest:** sha256:274c1679dd6d0a0de5d5eee3441da5e771e12fd167c0b33501687a75ef36aa4e
+**Digest:** sha256:abad5317d6072bc02593aa54509c31054d3b441defeb6f75e42ae1fcbd0932d6
 
 **Tags:**
 ```
@@ -41,14 +41,14 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4fd2af0a82e2826317d9551ecd8d5f44553828d7 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6dfa9507ce0eb0f4d386bd03268e33943ea55c0f | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Go tools and modules**
 
 | Tool / module | Version |
 |---------------|---------|
-| golang.org/x/tools/gopls | 0.15.1 |
+| golang.org/x/tools/gopls | 0.15.2 |
 | honnef.co/go/tools | 0.4.6 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
 | github.com/mgechev/revive | 1.3.7 |
@@ -114,7 +114,7 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 
 ## Variant: 1.21-bookworm
 
-**Digest:** sha256:2fe7995f5760125ccb6cf4e90001694b7711b1bcdc6173d273e0edad8c5b68b5
+**Digest:** sha256:aff85e8ef6fed1b14860c1103cbfd4772324b66bceb353cf7374b4742245cf66
 
 **Tags:**
 ```
@@ -140,14 +140,14 @@ mcr.microsoft.com/devcontainers/go:dev-1.21
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4fd2af0a82e2826317d9551ecd8d5f44553828d7 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6dfa9507ce0eb0f4d386bd03268e33943ea55c0f | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Go tools and modules**
 
 | Tool / module | Version |
 |---------------|---------|
-| golang.org/x/tools/gopls | 0.15.1 |
+| golang.org/x/tools/gopls | 0.15.2 |
 | honnef.co/go/tools | 0.4.6 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
 | github.com/mgechev/revive | 1.3.7 |
@@ -213,7 +213,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.21
 
 ## Variant: 1.22-bullseye
 
-**Digest:** sha256:676a164e15de81b30b0a16024b6ee88b04785a5e428df11e23cdc9504287e49a
+**Digest:** sha256:5125f3831747fed1f873fa465f173ffe6655a33314973c93ebbe30688e6447ae
 
 **Tags:**
 ```
@@ -240,14 +240,14 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4fd2af0a82e2826317d9551ecd8d5f44553828d7 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6dfa9507ce0eb0f4d386bd03268e33943ea55c0f | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Go tools and modules**
 
 | Tool / module | Version |
 |---------------|---------|
-| golang.org/x/tools/gopls | 0.15.1 |
+| golang.org/x/tools/gopls | 0.15.2 |
 | honnef.co/go/tools | 0.4.6 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
 | github.com/mgechev/revive | 1.3.7 |
@@ -314,7 +314,7 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 
 ## Variant: 1.21-bullseye
 
-**Digest:** sha256:61520f45300bf51ed7c9a627d9db4bd43a5ac0fb2d70e06a05544adceb1824eb
+**Digest:** sha256:a4efd295fe1e8ee32e5e7ba1969901160123eb76a17c3dd7e5ba1ce697d13f9f
 
 **Tags:**
 ```
@@ -339,14 +339,14 @@ mcr.microsoft.com/devcontainers/go:dev-1.21-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 4fd2af0a82e2826317d9551ecd8d5f44553828d7 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6dfa9507ce0eb0f4d386bd03268e33943ea55c0f | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Go tools and modules**
 
 | Tool / module | Version |
 |---------------|---------|
-| golang.org/x/tools/gopls | 0.15.1 |
+| golang.org/x/tools/gopls | 0.15.2 |
 | honnef.co/go/tools | 0.4.6 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
 | github.com/mgechev/revive | 1.3.7 |

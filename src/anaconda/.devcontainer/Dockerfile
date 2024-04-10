@@ -30,8 +30,8 @@ RUN python3 -m pip install --upgrade \
     pyarrow==14.0.1 \
     # https://github.com/advisories/GHSA-v68g-wm8c-6x7j
     transformers==4.36.0 \
-    # https://github.com/advisories/GHSA-3f63-hfp8-52jq
-    pillow==10.2.0 \
+    # https://github.com/advisories/GHSA-44wm-f244-xhp3
+    pillow==10.3.0 \
     # https://github.com/advisories/GHSA-44cc-43rp-5947
     jupyterlab==4.0.11 \
     # https://github.com/advisories/GHSA-5h86-8mv2-jq9f
