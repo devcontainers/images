@@ -9,10 +9,10 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/dotnet |
-| *Available image variants* | 6.0 /6.0-bullseye, 6.0-jammy, 6.0-focal, 7.0 /7.0-bullseye, 7.0-jammy ([full list](https://mcr.microsoft.com/v2/devcontainers/dotnet/tags/list)) |
-| *Published image architecture(s)* | x86-64, arm64/aarch64 for `bullseye`, `jammy` variants |
+| *Available image variants* | 8.0 /8.0-bookworm, 8.0-jammy, 7.0 /7.0-bookworm, 7.0-bullseye, 7.0-jammy, 6.0 /6.0-bookworm, 6.0-bullseye, 6.0-jammy, 6.0-focal ([full list](https://mcr.microsoft.com/v2/devcontainers/dotnet/tags/list)) |
+| *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm`, `bullseye`, `jammy` variants |
 | *Container host OS support* | Linux, macOS, Windows |
-| *Container OS* | Ubuntu (`-focal`, `-jammy`), Debian (`-bullseye`) |
+| *Container OS* | Ubuntu (`-focal`, `-jammy`), Debian (`-bullseye`, `-bookworm`) |
 | *Languages, platforms* | .NET, .NET Core, C# |
 
 See **[history](history)** for information on the contents of published images.
@@ -22,20 +22,22 @@ See **[history](history)** for information on the contents of published images.
 You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
 - `mcr.microsoft.com/devcontainers/dotnet` (latest)
-- `mcr.microsoft.com/devcontainers/dotnet:6.0` (or `6.0-bullseye`, `6.0-jammy`, `6.0-focal` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/dotnet:7.0` (or `7.0-bullseye`, `7.0-jammy` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/dotnet:8.0` (or `8.0-bookworm`, `8.0-jammy` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/dotnet:7.0` (or `7.0-bookworm`, `7.0-bullseye`, `7.0-jammy` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/dotnet:6.0` (or `6.0-bookworm`, `6.0-bullseye`, `6.0-jammy`, `6.0-focal` to pin to an OS version)
+
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/devcontainers/dotnet:0-7.0`
-- `mcr.microsoft.com/devcontainers/dotnet:0.204-7.0`
-- `mcr.microsoft.com/devcontainers/dotnet:0.204.0-7.0`
+- `mcr.microsoft.com/devcontainers/dotnet:1-7.0`
+- `mcr.microsoft.com/devcontainers/dotnet:1.0-7.0`
+- `mcr.microsoft.com/devcontainers/dotnet:1.0.0-7.0`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/dotnet/tags/list).
 
-Alternatively, you can use the contents of `Dockerfile` to fully customize your container's contents or to build it for a container host architecture not supported by the image.
+Alternatively, you can use the contents of [.devcontainer](.devcontainer) to fully customize your container's contents or to build it for a container host architecture not supported by the image.
 
 ### Enabling HTTPS in ASP.NET using your own dev certificate
 

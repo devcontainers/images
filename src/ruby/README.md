@@ -9,7 +9,7 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/ruby |
-| *Available image variants* | 3 / 3-bookworm, 3.2 / 3.2-bookworm, 3.1 / 3.1-bookworm, 3.0 / 3.0-bullseye, 3-bullseye, 3.2-bullseye, 3.1-bullseye, 3-buster, 3.2-buster, 3.1-buster, 3.0-buster ([full list](https://mcr.microsoft.com/v2/devcontainers/ruby/tags/list)) |
+| *Available image variants* | 3 / 3-bookworm, 3.3 / 3.3-bookworm, 3.2 / 3.2-bookworm, 3.1 / 3.1-bookworm, 3.0 / 3.0-bullseye, 3-bullseye, 3.3-bullseye, 3.2-bullseye, 3.1-bullseye, 3-buster, 3.2-buster, 3.1-buster, 3.0-buster ([full list](https://mcr.microsoft.com/v2/devcontainers/ruby/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm` , and `bullseye` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
@@ -23,6 +23,7 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 
 - `mcr.microsoft.com/devcontainers/ruby`     (latest)
 - `mcr.microsoft.com/devcontainers/ruby:3`   (or `3-bookworm`, `3-bullseye`, `3-buster` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/ruby:3.3` (or `3.3-bookworm`, `3.3-bullseye` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/ruby:3.2` (or `3.2-bookworm`, `3.2-bullseye`, `3.2-buster` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/ruby:3.1` (or `3.1-bookworm`, `3.1-bullseye`, `3.1-buster` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/ruby:3.0` (or `3.0-bullseye`, `3.0-buster` to pin to an OS version)
@@ -39,7 +40,7 @@ However, we only do security patching on the latest [non-breaking, in support](h
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/ruby/tags/list).
 
-Alternatively, you can use the contents of `Dockerfile` to fully customize your container's contents or to build it for a container host architecture not supported by the image.
+Alternatively, you can use the contents of [.devcontainer](.devcontainer) to fully customize your container's contents or to build it for a container host architecture not supported by the image.
 
 ### Installing Node.js
 

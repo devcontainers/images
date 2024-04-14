@@ -9,7 +9,7 @@
 | *Categories* | Core, Other |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/base:alpine |
-| *Available image variants* | alpine-3.18, alpine-3.17, alpine-3.16, alpine-3.15 ([full list](https://mcr.microsoft.com/v2/devcontainers/base/tags/list)) |
+| *Available image variants* | alpine-3.19, alpine-3.18, alpine-3.17, alpine-3.16 ([full list](https://mcr.microsoft.com/v2/devcontainers/base/tags/list)) |
 | *Published image architecture(s)* | x86-64, aarch64/arm64 |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Alpine Linux |
@@ -22,10 +22,10 @@ See **[history](history)** for information on the contents of published images.
 You can also directly reference pre-built versions of `.devcontainer/Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
 - `mcr.microsoft.com/devcontainers/base:alpine` (latest)
+- `mcr.microsoft.com/devcontainers/base:alpine-3.19`
 - `mcr.microsoft.com/devcontainers/base:alpine-3.18`
 - `mcr.microsoft.com/devcontainers/base:alpine-3.17`
 - `mcr.microsoft.com/devcontainers/base:alpine-3.16`
-- `mcr.microsoft.com/devcontainers/base:alpine-3.15`
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 

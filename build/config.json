@@ -226,7 +226,7 @@
 			"downloadUrl":"https://xdebug.org/"
 		},
 		"Java": {
-			"versionCommand": "java --version | grep -oP 'openjdk\\s+\\K[0-9]+\\.[0-9]+\\.[0-9]+'",
+			"versionCommand": "java --version | grep -oP 'openjdk\\s+\\K[0-9]+\\.[0-9]+\\.[0-9]+|[0-9]{2}' | head -n 1",
 			"downloadUrl": "https://adoptopenjdk.net/"
 		},
 		".NET": {

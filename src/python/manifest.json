@@ -1,10 +1,12 @@
 {
-	"version": "1.0.1",
+	"version": "1.1.8",
 	"variants": [
+		"3.12-bookworm",
 		"3.11-bookworm",
 		"3.10-bookworm",
 		"3.9-bookworm",
 		"3.8-bookworm",
+		"3.12-bullseye",
 		"3.11-bullseye",
 		"3.10-bullseye",
 		"3.9-bullseye",
@@ -15,9 +17,13 @@
 		"3.8-buster"
 	],
 	"build": {
-		"latest": "3.11-bookworm",
+		"latest": "3.12-bookworm",
 		"rootDistro": "debian",
 		"architectures": {
+			"3.12-bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
 			"3.11-bookworm": [
 				"linux/amd64",
 				"linux/arm64"
@@ -31,6 +37,10 @@
 				"linux/arm64"
 			],
 			"3.8-bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"3.12-bullseye": [
 				"linux/amd64",
 				"linux/arm64"
 			],
@@ -67,11 +77,14 @@
 			"python:${VERSION}-${VARIANT}"
 		],
 		"variantTags": {
-			"3.11-bookworm": [
-				"python:${VERSION}-3.11",
+			"3.12-bookworm": [
+				"python:${VERSION}-3.12",
 				"python:${VERSION}-3",
 				"python:${VERSION}-3-bookworm",
 				"python:${VERSION}-bookworm"
+			],
+			"3.11-bookworm": [
+				"python:${VERSION}-3.11"
 			],
 			"3.10-bookworm": [
 				"python:${VERSION}-3.10"
@@ -82,7 +95,7 @@
 			"3.8-bookworm": [
 				"python:${VERSION}-3.8"
 			],
-			"3.11-bullseye": [
+			"3.12-bullseye": [
 				"python:${VERSION}-3-bullseye",
 				"python:${VERSION}-bullseye"
 			],

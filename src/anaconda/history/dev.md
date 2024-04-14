@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:88778f8be3171f5c03793edcfad06eef7ebd37d8649d733ca040f464e61eab88
+**Digest:** sha256:9ff0d07597c74a045b2c485e999b9826fec6555f24306a06ac989e2ff82a1221
 
 **Tags:**
 ```
@@ -23,40 +23,42 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Python](https://www.python.org/) | 3.10.9 | /opt/conda |
-| [Jupyter Notebooks](https://jupyter.org/) | 6.5.2 | /opt/conda |
-| [Jupyter Lab](https://jupyter.org/) | 3.5.3 | /opt/conda |
+| [Python](https://www.python.org/) | 3.11.7 | /opt/conda |
+| [Jupyter Notebooks](https://jupyter.org/) | 7.0.8 | /opt/conda |
+| [Jupyter Lab](https://jupyter.org/) | 4.0.11 | /opt/conda |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 46c70406dd0b26bbd61210873ad6c86d9e8ee5da | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fd01fd66ce27c669e5ffaea94460a37423d1e134 | /home/vscode/.oh-my-zsh |
 
 **Pip / pipx installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
 | joblib | 1.3.1 |
-| cookiecutter | 2.1.1 |
-| cryptography | 39.0.1 |
+| cookiecutter | 2.2.3 |
+| cryptography | 42.0.4 |
 | mistune | 3.0.1 |
-| numpy | 1.25.0 |
-| certifi | 2022.12.7 |
-| setuptools | 65.6.3 |
+| numpy | 1.25.2 |
+| certifi | 2024.2.2 |
+| setuptools | 68.2.2 |
 | future | 0.18.3 |
-| wheel | 0.38.4 |
-| nbconvert | 7.6.0 |
-| py | 1.11.0 |
+| wheel | 0.41.2 |
+| nbconvert | 7.7.3 |
+| Werkzeug | 2.3.6 |
 | requests | 2.31.0 |
-| tornado | 6.3.2 |
+| tornado | 6.3.3 |
+| transformers | 4.36.0 |
+| jupyter_server | 2.7.2 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.41.0 | 
-| [conda](https://github.com/conda/conda) | 23.3.1 | /opt/conda |
+| [git](https://github.com/git/git) | 2.44.0 | 
+| [conda](https://github.com/conda/conda) | 24.3.0 | /opt/conda |
 
 **Additional linux tools and packages**
 
@@ -65,7 +67,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | apt-transport-https | 2.2.4 |
 | apt-utils | 2.2.4 |
 | ca-certificates | 20210119 |
-| curl | 7.74.0-1.3+deb11u7 |
+| curl | 7.74.0-1.3+deb11u11 |
 | dialog | 1.3-20201126-1 |
 | git | 1:2.30.2-1+deb11u2 |
 | gnupg2 | 2.2.27-2+deb11u2 |
@@ -73,14 +75,14 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
 | less | 551-2 |
-| libc6 | 2.31-13+deb11u6 |
-| libgssapi-krb5-2 | 1.18.3-6+deb11u3 |
+| libc6 | 2.31-13+deb11u8 |
+| libgssapi-krb5-2 | 1.18.3-6+deb11u4 |
 | libicu67 | 67.1-7 |
-| libkrb5-3 | 1.18.3-6+deb11u3 |
+| libkrb5-3 | 1.18.3-6+deb11u4 |
 | liblttng-ust0 | 2.12.1-1 |
-| libssl1.1 | 1.1.1n-0+deb11u5 |
+| libssl1.1 | 1.1.1w-0+deb11u1 |
 | libstdc++6 | 10.2.1-6 |
-| locales | 2.31-13+deb11u6 |
+| locales | 2.31-13+deb11u8 |
 | lsb-release | 11.1.0 |
 | lsof | 4.93.2+dfsg-1.1 |
 | man-db | 2.9.4-2 |
@@ -89,7 +91,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | nano | 5.4-2+deb11u2 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
-| openssh-client | 1:8.4p1-5+deb11u1 |
+| openssh-client | 1:8.4p1-5+deb11u3 |
 | procps | 2:3.3.17-5 |
 | psmisc | 23.4-2 |
 | rsync | 3.2.3-4+deb11u1 |

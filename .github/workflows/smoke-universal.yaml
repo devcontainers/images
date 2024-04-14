@@ -14,7 +14,7 @@ on:
 jobs:
   smoke-test:
     name: Smoke test
-    runs-on: ubuntu-latest
+    runs-on: devcontainer-image-builder-ubuntu
     steps:
     - name: Checkout
       id: checkout
@@ -26,3 +26,4 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         image: universal
+        threshold: 14

@@ -9,7 +9,7 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published image* | mcr.microsoft.com/devcontainers/python |
-| *Available image variants* | 3 / 3-bookworm, 3.8 / 3.8-bookworm, 3.9 / 3.9-bookworm, 3.10 / 3.10-bookworm, 3.11-bookworm, 3.11, 3-bullseye, 3.8-bullseye, 3.9-bullseye, 3.10-bullseye, 3.11-bullseye, 3.8-buster, 3.9-buster, 3.10-buster, 3.11-buster ([full list](https://mcr.microsoft.com/v2/devcontainers/python/tags/list)) |
+| *Available image variants* | 3 / 3-bookworm, 3.8 / 3.8-bookworm, 3.9 / 3.9-bookworm, 3.10 / 3.10-bookworm, 3.11-bookworm / 3.11, 3.12-bookworm / 3.12, 3-bullseye, 3.8-bullseye, 3.9-bullseye, 3.10-bullseye, 3.11-bullseye, 12-bullseye, 3.8-buster, 3.9-buster, 3.10-buster, 3.11-buster ([full list](https://mcr.microsoft.com/v2/devcontainers/python/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm`, and `bullseye` variants |
 | *Container Host OS Support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
@@ -28,6 +28,7 @@ You can directly reference [pre-built](https://containers.dev/implementors/refer
 - `mcr.microsoft.com/devcontainers/python:3.9`  (or `3.9-bookworm`, `3.9-bullseye`, `3.9-buster` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/python:3.10` (or `3.10-bookworm`, `3.10-bullseye`, `3.10-buster` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/python:3.11` (or `3.11-bookworm`, `3.11-bullseye`, `3.11-buster` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/python:3.12` (or `3.12-bookworm`, `3.12-bullseye`, `3.12-buster` to pin to an OS version)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 

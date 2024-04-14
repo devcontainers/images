@@ -4,13 +4,17 @@ inputs:
     description: 'Image to test'
     required: true
     default: 'base-debian'
+  threshold:
+    description: 'Threshold (in GB) to validate that the image size does not excced this limit'
+    required: false
+    default: 14
 
 runs:
   using: composite
   steps:
     - name: Checkout main
       id: checkout_release
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         repository: 'devcontainers/images'
         path: '__build'
@@ -24,4 +28,4 @@ runs:
     - name: Test image
       id: test_image
       shell: bash
-      run: ${{ github.action_path }}/test.sh  ${{ inputs.image }}
+      run: ${{ github.action_path }}/test.sh  ${{ inputs.image }} ${{ inputs.threshold }}

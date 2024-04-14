@@ -20,18 +20,6 @@ chmod +x /etc/profile.d/00-restore-env.sh
 
 export DEBIAN_FRONTEND=noninteractive
 
-# Temporary: Due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-29425
-MAVEN_PATH=$(cd /usr/local/sdkman/candidates/maven/3*/lib/ && pwd)
-rm -f ${MAVEN_PATH}/commons-io-*
-curl -sSL https://github.com/apache/commons-io/archive/refs/tags/commons-io-2.11.0-RC1.tar.gz | tar -xzC /tmp 2>&1
-jar cf ${MAVEN_PATH}/commons-io-2.11.jar /tmp/commons-io-commons-io-2.11.0-RC1
-rm -rf /tmp/commons-io-commons-io-2.11.0-RC1
-
-# Temporary: Due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0536 & https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0155
-rm -rf /usr/local/nvs/deps/node_modules/follow-redirects/*
-curl -sSL https://github.com/follow-redirects/follow-redirects/archive/refs/tags/v1.15.2.tar.gz | tar -xzC /tmp 2>&1
-mv /tmp/follow-redirects-1.15.2/*  /usr/local/nvs/deps/node_modules/follow-redirects/
-
 sudo_if() {
     COMMAND="$*"
     if [ "$(id -u)" -eq 0 ] && [ "$USERNAME" != "root" ]; then
@@ -71,11 +59,17 @@ mkdir -p /home/${USERNAME}/.ruby
 ln -snf /usr/local/rvm/rubies/default $RUBY_PATH
 
 DOTNET_PATH="/home/${USERNAME}/.dotnet"
-ln -snf /usr/local/dotnet/current $DOTNET_PATH
+
+# Required due to https://github.com/devcontainers/features/pull/628/files#r1276659825
+chown -R "${USERNAME}:${USERNAME}" /usr/share/dotnet
+chmod g+r+w+s /usr/share/dotnet
+chmod -R g+r+w /usr/share/dotnet
+
+ln -snf /usr/share/dotnet $DOTNET_PATH
 mkdir -p /opt/dotnet/lts
-cp -R /usr/local/dotnet/current/dotnet /opt/dotnet/lts
-cp -R /usr/local/dotnet/current/LICENSE.txt /opt/dotnet/lts
-cp -R /usr/local/dotnet/current/ThirdPartyNotices.txt /opt/dotnet/lts
+cp -R /usr/share/dotnet/dotnet /opt/dotnet/lts
+cp -R /usr/share/dotnet/LICENSE.txt /opt/dotnet/lts
+cp -R /usr/share/dotnet/ThirdPartyNotices.txt /opt/dotnet/lts
 
 MAVEN_PATH="/home/${USERNAME}/.maven/current"
 mkdir -p /home/${USERNAME}/.maven
@@ -96,5 +90,10 @@ chmod -R g+r+w "${OPT_DIR}"
 find "${OPT_DIR}" -type d | xargs -n 1 chmod g+s
 
 echo "Defaults secure_path=\"${DOTNET_PATH}:${NODE_PATH}/bin:${PHP_PATH}/bin:${PYTHON_PATH}/bin:${JAVA_PATH}/bin:${RUBY_PATH}/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin:/usr/local/share:/home/${USERNAME}/.local/bin:${PATH}\"" >> /etc/sudoers.d/$USERNAME
+
+# Temporary: Due to GHSA-c2qf-rxjj-qqgw
+bash -c ". /usr/local/share/nvm/nvm.sh && nvm use 18"
+bash -c "npm -g install -g npm@9.8.1"
+bash -c ". /usr/local/share/nvm/nvm.sh && nvm use stable"
 
 echo "Done!"

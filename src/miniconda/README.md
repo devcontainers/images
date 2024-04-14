@@ -34,7 +34,7 @@ You can decide how often you want updates by referencing a [semantic version](ht
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/miniconda/tags/list).
 
-Alternatively, you can use the contents of `Dockerfile` to fully customize your container's contents or to build it for a container host architecture not supported by the image.
+Alternatively, you can use the contents of [.devcontainer](.devcontainer) to fully customize your container's contents or to build it for a container host architecture not supported by the image.
 
 ### Using Conda
 This dev container and its associated image includes [the `conda` package manager](https://aka.ms/vscode-remote/conda/about). Additional packages installed using Conda will be downloaded from Anaconda or another repository if you configure one. To reconfigure Conda in this container to access an alternative repository, please see information on [configuring Conda channels here](https://aka.ms/vscode-remote/conda/channel-setup).
@@ -66,6 +66,10 @@ Given JavaScript front-end web client code written for use in conjunction with a
   }
 }
 ```
+
+#### Using different Conda channels
+
+This image is based on the `ContinuumIO/miniconda3` docker image, which has the conda and its dependencies (*installed from conda's default channel*) in the base environment. It is not recommended to install packages from different channels in one environment since it could cause conflicts. When installing a package from a different channel (e.g., `conda-forge`) is required, the better approach is to create a new conda environment.
 
 #### Installing or updating Python utilities
 
