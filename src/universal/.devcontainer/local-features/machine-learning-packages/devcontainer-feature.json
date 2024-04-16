@@ -1,7 +1,7 @@
 {
     "id": "machine-learning-packages",
     "name": "Machine learning packages",
-	"postCreateCommand": "chmod 755 startContainer.sh; ./startContainer.sh;",
+	"postCreateCommand": "sudo chmod +x /usr/local/share/installTorchForGPU.sh; cd /usr/local/share/; ./installTorchForGPU.sh;",
 	"installsAfter": [
 		"ghcr.io/devcontainers/features/python"
 	]

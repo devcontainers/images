@@ -46,15 +46,15 @@ install_python_package() {
 }
 
 if [[ "$(python --version)" != "" ]] && [[ "$(pip --version)" != "" ]]; then
-    # install_python_package "numpy"
-    # install_python_package "pandas"
-    # install_python_package "scipy"
-    # install_python_package "matplotlib"
-    # install_python_package "seaborn"
-    # install_python_package "scikit-learn"
+    install_python_package "numpy"
+    install_python_package "pandas"
+    install_python_package "scipy"
+    install_python_package "matplotlib"
+    install_python_package "seaborn"
+    install_python_package "scikit-learn"
     install_python_package "torch" -f https://download.pytorch.org/whl/cpu/torch_stable.html
-    # install_python_package "requests"
-    # install_python_package "plotly"
+    install_python_package "requests"
+    install_python_package "plotly"
 else
     "(*) Error: Need to install python and pip."
 fi
@@ -66,23 +66,13 @@ cat << 'EOF' > "$INSTALL_TORCH_FOR_GPU"
 #!/bin/bash
 
 echo -e "\nAttempting to install Torch with GPU Acceleration if NVIDIA GPU is available..\n"
-USERNAME="codespace"
-
-sudo_if() {
-    COMMAND="$*"
-    if [ "$(id -u)" -eq 0 ] && [ "$USERNAME" != "root" ]; then
-        su - "$USERNAME" -c "$COMMAND"
-    else
-        "$COMMAND"
-    fi
-}
 
 install_torch_package() {
     cd ..
-    echo "Current working directory: $(pwd)"
-    sudo_if /python/current/bin/python -m pip uninstall --yes torch
+    cd python/current/bin
+    python -m pip uninstall --yes torch
     echo "Installing $PACKAGE..."
-    sudo_if /python/current/bin/python -m pip install --user --upgrade --no-cache-dir torch
+    python -m pip install --user --upgrade --no-cache-dir torch
 }
 
 # Check if lspci is available
@@ -96,8 +86,6 @@ set +e
 GPU=$(lspci | grep -i NVIDIA || true)  # Used `|| true` to prevent script from exiting on grep failure
 set -e
 
-install_torch_package
-
 if [ -n "$GPU" ]; then
     echo "GPU Detected. Installing Torch with GPU support."
     install_torch_package
@@ -106,20 +94,5 @@ else
 fi
 
 EOF
-
-chmod 755 "$INSTALL_TORCH_FOR_GPU"
-
-# set -x
-
-# # Get the container ID of the current running container
-# CONTAINER_ID=$(cat /proc/self/cgroup | grep "docker" | sed s/\\//\\n/g | tail -1)
-
-# IMAGE_NAME=$(docker inspect --format='{{.Config.Image}}' "$CONTAINER_ID")
-
-# echo $IMAGE_NAME
-
-# echo $CONTAINER_ID  
-
-# set +x
 
 echo "Done!"
