@@ -31,18 +31,9 @@ export DEBIAN_FRONTEND=noninteractive
 
 install_python_package() {
     PACKAGE=${1:-""}
-    shift  # Remove the first argument (PACKAGE) from the list of arguments
     sudo_if /usr/local/python/current/bin/python -m pip uninstall --yes $PACKAGE
-    # Install the package with any remaining arguments (if provided)
-    if [ $# -gt 0 ]; then
-        # Additional arguments are provided (e.g., -f URL)
-        echo "Installing $PACKAGE with options: $@"
-        sudo_if /usr/local/python/current/bin/python -m pip install --user --upgrade --no-cache-dir $PACKAGE "$@"
-    else
-        # No additional arguments provided
-        echo "Installing $PACKAGE..."
-        sudo_if /usr/local/python/current/bin/python -m pip install --user --upgrade --no-cache-dir $PACKAGE
-    fi
+    echo "Installing $PACKAGE..."
+    sudo_if /usr/local/python/current/bin/python -m pip install --user --upgrade --no-cache-dir $PACKAGE "$@"
 }
 
 if [[ "$(python --version)" != "" ]] && [[ "$(pip --version)" != "" ]]; then
@@ -64,8 +55,6 @@ INSTALL_TORCH_FOR_GPU="/usr/local/share/installTorchForGPU.sh"
 # Save the script to INSTALL_TORCH_FOR_GPU
 cat << 'EOF' > "$INSTALL_TORCH_FOR_GPU"
 #!/bin/bash
-
-echo -e "\nAttempting to install Torch with GPU Acceleration if NVIDIA GPU is available..\n"
 
 install_torch_package() {
     cd ..
@@ -89,10 +78,9 @@ set -e
 if [ -n "$GPU" ]; then
     echo "GPU Detected. Installing Torch with GPU support."
     install_torch_package
-else 
-    echo "GPU Not Detected. Torch without GPU Acceleration is already installed."
 fi
 
 EOF
+sudo chmod +x /usr/local/share/installTorchForGPU.sh; 
 
 echo "Done!"
