@@ -35,7 +35,7 @@ RUN python3 -m pip install --upgrade \
     # https://github.com/advisories/GHSA-44cc-43rp-5947
     jupyterlab==4.0.11 \
     # https://github.com/advisories/GHSA-5h86-8mv2-jq9f
-    aiohttp==3.9.2 \
+    aiohttp==3.9.4 \
     # https://github.com/advisories/GHSA-6vqw-3v5j-54x4
     cryptography==42.0.4 \
     # https://github.com/advisories/GHSA-2mqj-m65w-jghx
