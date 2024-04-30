@@ -5,19 +5,9 @@ RUN . /etc/os-release && if [ "${VERSION_CODENAME}" != "bullseye" ]; then exit 1
 
 # Temporary: Upgrade python packages due to mentioned CVEs
 # They are installed by the base image (continuumio/anaconda3) which does not have the patch.
-RUN conda install \ 
-    # pyopenssl should be updated to be compatible with latest version of cryptography
-    pyopenssl=23.2.0 \ 
-    # https://github.com/advisories/GHSA-jm77-qphf-c4w8
-    cryptography=41.0.3 \
-    # https://github.com/advisories/GHSA-j8r2-6x86-q33q
-    requests=2.31.0 \
-    # https://github.com/advisories/GHSA-f865-m6cq-j9vx
-    mpmath=1.3.0 \
-    # https://github.com/advisories/GHSA-45c4-8wx5-qw6w
-    aiohttp=3.8.5 \
-    # https://github.com/advisories/GHSA-j7hp-h8jx-5ppr
-    pillow=10.0.1
+RUN conda install \
+    # https://github.com/advisories/GHSA-v845-jxx5-vc9f
+    urllib3==1.26.18
 
 RUN python3 -m pip install --upgrade \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21797
@@ -34,14 +24,26 @@ RUN python3 -m pip install --upgrade \
     nbconvert==7.7.3 \
     # https://github.com/advisories/GHSA-qppv-j76h-2rpx
     tornado==6.3.3 \
-    # https://github.com/advisories/GHSA-282v-666c-3fvg
-    transformers==4.30.0 \ 
     # https://github.com/advisories/GHSA-r726-vmfq-j9j3 
     jupyter_server==2.7.2 \
-    # https://github.com/advisories/GHSA-v845-jxx5-vc9f
-    urllib3==1.26.17 \ 
-    # https://github.com/advisories/GHSA-94vc-p8w7-5p49
-    imagecodecs==2023.9.18
+    # https://github.com/advisories/GHSA-5wvp-7f3h-6wmm
+    pyarrow==14.0.1 \
+    # https://github.com/advisories/GHSA-v68g-wm8c-6x7j
+    transformers==4.36.0 \
+    # https://github.com/advisories/GHSA-44wm-f244-xhp3
+    pillow==10.3.0 \
+    # https://github.com/advisories/GHSA-44cc-43rp-5947
+    jupyterlab==4.0.11 \
+    # https://github.com/advisories/GHSA-5h86-8mv2-jq9f
+    aiohttp==3.9.4 \
+    # https://github.com/advisories/GHSA-6vqw-3v5j-54x4
+    cryptography==42.0.4 \
+    # https://github.com/advisories/GHSA-2mqj-m65w-jghx
+    gitpython==3.1.41 \
+    # https://github.com/advisories/GHSA-4qhp-652w-c22x
+    jupyter-lsp==2.2.2 \
+    # https://github.com/advisories/GHSA-jjg7-2v4v-x38h
+    idna==3.7
 
 # Reset and copy updated files with updated privs to keep image size down
 FROM mcr.microsoft.com/devcontainers/base:1-bullseye

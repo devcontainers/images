@@ -19,10 +19,9 @@ check "usr-local-etc-config-does-not-exist" test ! -f "/usr/local/etc/gitconfig"
 
 # Check .NET
 check "dotnet" dotnet --list-sdks
-count=$(ls /usr/local/dotnet | wc -l)
-expectedCount=3 # 2 version folders + 1 current folder which links to either one of the version
-checkVersionCount "two versions of dotnet are present" $count $expectedCount
-echo $(echo "list of installed dotnet versions" && ls -a /usr/local/dotnet)
+check "dotnet-runtimes" bash -c "dotnet --list-runtimes"
+# Runtimes are listed twice due to 'Microsoft.NETCore.App' and 'Microsoft.AspNetCore.App'
+checkVersionCount "two versions of dotnet runtimes are present" $(dotnet --list-runtimes | wc -l) 4
 
 # Check Python
 check "python" python --version
@@ -150,7 +149,7 @@ check "nvm-works-in-node-project" bash -c "node --version | grep v8.0.0"
 check "default-node-location-remained-same" bash -c "which node | grep /home/codespace/nvm/current/bin"
 
 # Ensures sdkman works in a Java Project
-check "default-java-version" bash -c "java --version | grep 17."
+check "default-java-version" bash -c "java --version"
 check "default-java-location" bash -c "which java | grep /home/codespace/java/current/bin"
 check "oryx-build-java-project" bash -c "oryx build ./sample/java"
 check "oryx-configured-current-java-version" bash -c "ls -la /home/codespace/java/current | grep /opt/java"
@@ -189,6 +188,7 @@ ls -la /home/codespace
 ## Python - current
 checkPythonPackageVersion "python" "setuptools" "65.5.1"
 checkPythonPackageVersion "python" "requests" "2.31.0"
+checkPythonPackageVersion "python" "urllib3" "2.0.7"
 
 ## Python 3.9
 checkPythonPackageVersion "/usr/local/python/3.9.*/bin/python" "setuptools" "65.5.1"

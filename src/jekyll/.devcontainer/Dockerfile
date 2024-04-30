@@ -1,5 +1,4 @@
-# [Choice] Debian OS version (use 3.2-bookworm, or 3.2-bullseye on local arm64/Apple Silicon): 3.2-bookworm, 3.2-bullseye, 3.2-buster
-ARG VARIANT=3.2-bookworm
+ARG VARIANT=3.3-bookworm
 FROM mcr.microsoft.com/devcontainers/ruby:${VARIANT}
 
 USER root

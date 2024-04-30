@@ -1,19 +1,23 @@
 {
-	"version": "1.0.4",
+	"version": "1.2.3",
 	"variants": [
+		"8.3-apache-bookworm",
 		"8.2-apache-bookworm",
 		"8.1-apache-bookworm",
+		"8.3-apache-bullseye",
 		"8.2-apache-bullseye",
 		"8.1-apache-bullseye",
-		"8.0-apache-bullseye",
 		"8.2-apache-buster",
-		"8.1-apache-buster",
-		"8.0-apache-buster"
+		"8.1-apache-buster"
 	],
 	"build": {
-		"latest": "8.2-apache-bookworm",
+		"latest": "8.3-apache-bookworm",
 		"rootDistro": "debian",
 		"architectures": {
+			"8.3-apache-bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
 			"8.2-apache-bookworm": [
 				"linux/amd64",
 				"linux/arm64"
@@ -22,15 +26,15 @@
 				"linux/amd64",
 				"linux/arm64"
 			],
+			"8.3-apache-bullseye": [
+				"linux/amd64",
+				"linux/arm64"
+			],
 			"8.2-apache-bullseye": [
 				"linux/amd64",
 				"linux/arm64"
 			],
 			"8.1-apache-bullseye": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"8.0-apache-bullseye": [
 				"linux/amd64",
 				"linux/arm64"
 			],
@@ -39,37 +43,37 @@
 			],
 			"8.1-apache-buster": [
 				"linux/amd64"
-			],
-			"8.0-apache-buster": [
-				"linux/amd64"
 			]
 		},
 		"tags": [
 			"php:${VERSION}-${VARIANT}"
 		],
 		"variantTags": {
-			"8.2-apache-bookworm": [
+			"8.3-apache-bookworm": [
 				"php:${VERSION}-8",
-				"php:${VERSION}-8.2",
+				"php:${VERSION}-8.3",
 				"php:${VERSION}-8-bookworm",
-				"php:${VERSION}-8.2-bookworm",
+				"php:${VERSION}-8.3-bookworm",
 				"php:${VERSION}-bookworm"
+			],
+			"8.2-apache-bookworm": [
+				"php:${VERSION}-8.2",
+				"php:${VERSION}-8.2-bookworm"
 			],
 			"8.1-apache-bookworm": [
 				"php:${VERSION}-8.1",
 				"php:${VERSION}-8.1-bookworm"
 			],
-			"8.2-apache-bullseye": [
+			"8.3-apache-bullseye": [
 				"php:${VERSION}-8-bullseye",
-				"php:${VERSION}-8.2-bullseye",
+				"php:${VERSION}-8.3-bullseye",
 				"php:${VERSION}-bullseye"
+			],
+			"8.2-apache-bullseye": [
+				"php:${VERSION}-8.2-bullseye"
 			],
 			"8.1-apache-bullseye": [
 				"php:${VERSION}-8.1-bullseye"
-			],
-			"8.0-apache-bullseye": [
-				"php:${VERSION}-8.0",
-				"php:${VERSION}-8.0-bullseye"
 			],
 			"8.2-apache-buster": [
 				"php:${VERSION}-8-buster",
@@ -78,9 +82,6 @@
 			],
 			"8.1-apache-buster": [
 				"php:${VERSION}-8.1-buster"
-			],
-			"8.0-apache-buster": [
-				"php:${VERSION}-8.0-buster"
 			]
 		}
 	},

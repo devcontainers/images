@@ -1,24 +1,24 @@
 {
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {
-      "version": "2.2.0",
-      "resolved": "ghcr.io/devcontainers/features/common-utils@sha256:8d0f43896efd556a53e5881a726417e50fcdda874fd535919a8f8feeac42383e",
-      "integrity": "sha256:8d0f43896efd556a53e5881a726417e50fcdda874fd535919a8f8feeac42383e"
+      "version": "2.4.3",
+      "resolved": "ghcr.io/devcontainers/features/common-utils@sha256:e9e1d402031416ed5fc500f242c27ffa1043a27b5ba612e6596ea62503c8ae70",
+      "integrity": "sha256:e9e1d402031416ed5fc500f242c27ffa1043a27b5ba612e6596ea62503c8ae70"
     },
     "ghcr.io/devcontainers/features/git:1": {
-      "version": "1.1.5",
-      "resolved": "ghcr.io/devcontainers/features/git@sha256:2ab83ca71d55d5c00a1255b07f3a83a53cd2de77ce8b9637abad38095d672a5b",
-      "integrity": "sha256:2ab83ca71d55d5c00a1255b07f3a83a53cd2de77ce8b9637abad38095d672a5b"
+      "version": "1.2.0",
+      "resolved": "ghcr.io/devcontainers/features/git@sha256:afa1f582e09d6b4e78d21baad80f4729af763c3910e152101f55273fd2921fb5",
+      "integrity": "sha256:afa1f582e09d6b4e78d21baad80f4729af763c3910e152101f55273fd2921fb5"
     },
     "ghcr.io/devcontainers/features/node:1": {
-      "version": "1.3.1",
-      "resolved": "ghcr.io/devcontainers/features/node@sha256:7d31b83459dd5110c37e7f5acb2920335cb1e5ebf014326d7eb6a0b290cc820a",
-      "integrity": "sha256:7d31b83459dd5110c37e7f5acb2920335cb1e5ebf014326d7eb6a0b290cc820a"
+      "version": "1.4.1",
+      "resolved": "ghcr.io/devcontainers/features/node@sha256:6c4f444d8e3eb68594d60ec128bce76a80647edc2b9a94960ca377895855145f",
+      "integrity": "sha256:6c4f444d8e3eb68594d60ec128bce76a80647edc2b9a94960ca377895855145f"
     },
     "ghcr.io/devcontainers/features/python:1": {
-      "version": "1.2.1",
-      "resolved": "ghcr.io/devcontainers/features/python@sha256:787f7e59e8c2d2304a29e9d77aa2a03ad0bdcabe4747cf4c3ab85734510d9732",
-      "integrity": "sha256:787f7e59e8c2d2304a29e9d77aa2a03ad0bdcabe4747cf4c3ab85734510d9732"
+      "version": "1.4.2",
+      "resolved": "ghcr.io/devcontainers/features/python@sha256:bf021f1800543f08bf029c449a3f25341be782b620802befa1f8e6ee51cf6cf6",
+      "integrity": "sha256:bf021f1800543f08bf029c449a3f25341be782b620802befa1f8e6ee51cf6cf6"
     }
   }
 }

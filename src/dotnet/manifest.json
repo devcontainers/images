@@ -1,6 +1,8 @@
 {
-	"version": "0.204.14",
+	"version": "1.1.6",
 	"variants": [
+		"8.0-bookworm-slim",
+		"8.0-jammy",
 		"7.0-bookworm-slim",
 		"7.0-bullseye-slim",
 		"7.0-jammy",
@@ -10,12 +12,20 @@
 		"6.0-focal"
 	],
 	"build": {
-		"latest": "7.0-bullseye-slim",
+		"latest": "8.0-bookworm-slim",
 		"rootDistro": "debian",
 		"tags": [
 			"dotnet:${VERSION}-${VARIANT}"
 		],
 		"architectures": {
+			"8.0-bookworm-slim": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"8.0-jammy": [
+				"linux/amd64",
+				"linux/arm64"
+			],
 			"7.0-bookworm-slim": [
 				"linux/amd64",
 				"linux/arm64"
@@ -45,6 +55,10 @@
 			]
 		},
 		"variantTags": {
+			"8.0-bookworm-slim": [
+				"dotnet:${VERSION}-8.0",
+				"dotnet:${VERSION}-8.0-bookworm"
+			],
 			"7.0-bookworm-slim": [
 				"dotnet:${VERSION}-7.0",
 				"dotnet:${VERSION}-7.0-bookworm"

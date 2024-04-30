@@ -1,5 +1,4 @@
-# [Choice] Go version (use -bookworm, or -bullseye variants on local arm64/Apple Silicon): 1, 1.21, 1.20, 1-bookworm, 1.21-bookworm, 1.20-bookworm, 1-bullseye, 1.21-bullseye, 1.20-bullseye
-ARG VARIANT=1.21-bookworm
+ARG VARIANT=1.22-bookworm
 FROM golang:${VARIANT}
 
 # [Optional] Uncomment the next line to use go get to install anything else you need

@@ -130,7 +130,8 @@ checkCommon()
         zlib1g \
         locales \
         gettext \
-        sudo"
+        sudo \
+        inotify-tools"
 
     # Actual tests
     checkOSPackages "common-os-packages" ${PACKAGE_LIST}
@@ -224,7 +225,7 @@ checkPythonPackageVersion()
     PACKAGE=$2
     REQUIRED_VERSION=$3
 
-    current_version=$(${PYTHON_PATH} -c "import ${PACKAGE}; print(${PACKAGE}.__version__)")
+    current_version=$(${PYTHON_PATH} -c "import importlib.metadata; print(importlib.metadata.version('${PACKAGE}'))")
     check-version-ge "${PACKAGE}-requirement" "${current_version}" "${REQUIRED_VERSION}"
 }
 

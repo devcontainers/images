@@ -2,17 +2,15 @@ FROM continuumio/miniconda3 as upstream
 
 # Temporary: Upgrade python packages due to mentioned CVEs
 # They are installed by the base image (continuumio/miniconda3) which does not have the patch.
-RUN conda install \ 
-    # pyopenssl should be updated to be compatible with latest version of cryptography
-    pyopenssl=23.2.0 \ 
-    # https://github.com/advisories/GHSA-jm77-qphf-c4w8
-    cryptography=41.0.3 \
-    # https://github.com/advisories/GHSA-j8r2-6x86-q33q
-    requests=2.31.0
+# RUN conda install \ 
+    # https://github.com/advisories/<CVE_ID>
+    # <package_name> = <version>
 
 RUN python3 -m pip install --upgrade \
-    # https://github.com/advisories/GHSA-v845-jxx5-vc9f
-    urllib3==1.26.17
+    # https://github.com/advisories/GHSA-6vqw-3v5j-54x4
+    cryptography==42.0.4 \
+    # installed for compatibility with cryptography v42.0.4
+    pyopenssl==24.0.0 
 
 # Reset and copy updated files with updated privs to keep image size down
 FROM mcr.microsoft.com/devcontainers/base:1-bullseye
@@ -32,7 +30,7 @@ USER root
 # Copy scripts to execute
 COPY add-notice.sh /tmp/library-scripts/
 
-# Setup conda to mirror contents from https://github.com/ContinuumIO/docker-images/blob/master/miniconda3/debian/Dockerfile
+# Setup conda to mirror contents from https://github.com/ContinuumIO/docker-images/blob/main/miniconda3/debian/Dockerfile
 ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
     PATH=/opt/conda/bin:$PATH
@@ -58,7 +56,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && echo "conda activate base" >> ~/.bashrc \
     && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts/add-notice.sh
 
-# Copy environment.yml (if found) to a temp locaition so we update the environment. Also
+# Copy environment.yml (if found) to a temp location so we update the environment. Also
 # copy "noop.txt" so the COPY instruction does not fail if no environment.yml exists.
 COPY environment.yml* noop.txt /tmp/conda-tmp/
 RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then umask 0002 && /opt/conda/bin/conda env update -n base -f /tmp/conda-tmp/environment.yml; fi \
