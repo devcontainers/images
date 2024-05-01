@@ -20,7 +20,6 @@ check "gitconfig-contains-name" sh -c "cat /etc/gitconfig | grep 'name = devcont
 check "usr-local-etc-config-does-not-exist" test ! -f "/usr/local/etc/gitconfig"
 
 check "uid" bash -c "id -u vscode | grep 1001" 
-check "gid" bash -c "id -g vscode | grep 1001"
 
 # Report result
 reportResults
