@@ -9,4 +9,4 @@ npm install -g @devcontainers/cli
 
 echo "(*) Building image - ${IMAGE}"
 id_label="test-container=${IMAGE}"
-devcontainer up --id-label ${id_label} --workspace-folder "src/${IMAGE}/" --update-remote-user-uid-default never
+devcontainer up --id-label ${id_label} --workspace-folder "src/${IMAGE}/" --update-remote-user-uid-default off
