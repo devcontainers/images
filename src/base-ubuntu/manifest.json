@@ -1,5 +1,5 @@
 {
-	"version": "2.0.0",
+	"version": "1.0.23",
 	"variants": [
 		"noble",
 		"jammy",
@@ -27,12 +27,12 @@
 		"variantTags": {
 			"noble": [
 				"base:${VERSION}-ubuntu-24.04",
-				"base:${VERSION}-ubuntu24.04",
-				"base:${VERSION}-ubuntu"
+				"base:${VERSION}-ubuntu24.04"
 			],
 			"jammy": [
 				"base:${VERSION}-ubuntu-22.04",
-				"base:${VERSION}-ubuntu22.04"
+				"base:${VERSION}-ubuntu22.04",
+				"base:${VERSION}-ubuntu"
 			],
 			"focal": [
 				"base:${VERSION}-ubuntu-20.04",
