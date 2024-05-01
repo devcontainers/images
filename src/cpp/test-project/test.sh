@@ -17,11 +17,11 @@ if [ "$(dpkg --print-architecture)" = "amd64" ] ; then
     VCPKG_FORCE_SYSTEM_BINARIES=1 check "vcpkg-from-root" ${VCPKG_ROOT}/vcpkg --version
     VCPKG_FORCE_SYSTEM_BINARIES=1 check "vcpkg-from-bin" vcpkg --version
 fi 
-check "g++" bash -c "sudo g++ -g main.cpp -o main.out"
+check "g++" sh -c "g++ -g main.cpp -o main.out"
 rm main.out
 mkdir -p build
 cd build
-check "cmake" cmake ..
+check "cmake" sh -c "cmake .."
 cd ..
 rm -rf build
 
