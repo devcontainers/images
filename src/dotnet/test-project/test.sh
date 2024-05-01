@@ -8,8 +8,8 @@ checkCommon
 
 # Image specific tests
 check "dotnet" dotnet --info
-check "nuget" bash -c "dotnet restore"
-check "msbuild" bash -c "dotnet msbuild"
+check "nuget" bash -c "sudo dotnet restore"
+check "msbuild" bash -c "sudo dotnet msbuild"
 sudo rm -rf obj bin
 check "nvm" bash -c ". /usr/local/share/nvm/nvm.sh && nvm install 10"
 check "nvm-node" bash -c ". /usr/local/share/nvm/nvm.sh && node --version"
