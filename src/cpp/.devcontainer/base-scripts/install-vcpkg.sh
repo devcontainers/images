@@ -10,10 +10,15 @@ USERNAME=${1:-"vscode"}
 
 . /etc/os-release
 
-# Exit early if ARM64 OS does not have cmake version required to build Vcpkg
+# The buster pkg repo install cmake version < 3.15 which is required to run bootstrap-vcpkg.sh on ARM64
+VCPKG_UNSUPPORTED_ARM64_VERSION_CODENAMES="buster"
+
 if [ "$(dpkg --print-architecture)" = "arm64" ]; then
-    echo "OS ${VERSION_CODENAME} ARM64 pkg repo installs cmake version < 3.15, which is required to build Vcpkg."
-    exit 0
+    # Exit early if ARM64 OS does not have cmake version required to build Vcpkg
+    if [[ "${VCPKG_UNSUPPORTED_ARM64_VERSION_CODENAMES}" = *"${VERSION_CODENAME}"* ]]; then
+        echo "OS ${VERSION_CODENAME} ARM64 pkg repo installs cmake version < 3.15, which is required to build Vcpkg."
+        exit 0
+    fi
 fi
 
 # Add to bashrc/zshrc files for all users.
