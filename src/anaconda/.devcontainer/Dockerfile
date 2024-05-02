@@ -7,7 +7,9 @@ RUN . /etc/os-release && if [ "${VERSION_CODENAME}" != "bullseye" ]; then exit 1
 # They are installed by the base image (continuumio/anaconda3) which does not have the patch.
 RUN conda install \
     # https://github.com/advisories/GHSA-v845-jxx5-vc9f
-    urllib3==1.26.18
+    urllib3==1.26.18 \
+    # https://github.com/advisories/GHSA-mr82-8j83-vxmv
+    pydantic==2.5.3
 
 RUN python3 -m pip install --upgrade \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21797
