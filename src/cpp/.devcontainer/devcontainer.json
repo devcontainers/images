@@ -3,20 +3,21 @@
 		"dockerfile": "./Dockerfile",
 		"context": "."
 	},
-
 	"features": {
 		"ghcr.io/devcontainers/features/git:1": {
-            "version": "latest",
-            "ppa": "false"
-        }
-    },
-
-	"capAdd": ["SYS_PTRACE"],
-	"securityOpt": ["seccomp=unconfined"],
+			"version": "latest",
+			"ppa": "false"
+		}
+	},
+	"capAdd": [
+		"SYS_PTRACE"
+	],
+	"securityOpt": [
+		"seccomp=unconfined"
+	],
 	"containerEnv": {
-        "VCPKG_FORCE_SYSTEM_BINARIES": "1"
-    },
-
+		"VCPKG_FORCE_SYSTEM_BINARIES": "1"
+	},
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
