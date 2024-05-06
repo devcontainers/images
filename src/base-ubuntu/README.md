@@ -9,8 +9,8 @@
 | *Categories* | Core, Other |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/base:ubuntu |
-| *Available image variants* | ubuntu-22.04 / jammy, ubuntu-20.04 / focal ([full list](https://mcr.microsoft.com/v2/devcontainers/base/tags/list)) |
-| *Published image architecture(s)* | x86-64, aarch64/arm64 for `ubuntu-22.04` (`jammy`) variant  |
+| *Available image variants* | ubuntu-24.04 / noble, ubuntu-22.04 / jammy, ubuntu-20.04 / focal ([full list](https://mcr.microsoft.com/v2/devcontainers/base/tags/list)) |
+| *Published image architecture(s)* | x86-64, aarch64/arm64 for `ubuntu-22.04` (`jammy`) and `ubuntu-24.04` (`noble`) variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Ubuntu |
 | *Languages, platforms* | Any |
@@ -22,6 +22,7 @@ See **[history](history)** for information on the contents of published images.
 You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
 - `mcr.microsoft.com/devcontainers/base:ubuntu` (latest LTS release)
+- `mcr.microsoft.com/devcontainers/base:ubuntu-24.04` (or `noble`)
 - `mcr.microsoft.com/devcontainers/base:ubuntu-22.04` (or `jammy`)
 - `mcr.microsoft.com/devcontainers/base:ubuntu-20.04` (or `focal`)
 
