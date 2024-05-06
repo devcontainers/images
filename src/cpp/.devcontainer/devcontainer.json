@@ -15,9 +15,6 @@
 	"securityOpt": [
 		"seccomp=unconfined"
 	],
-	"containerEnv": {
-		"VCPKG_FORCE_SYSTEM_BINARIES": "1"
-	},
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
