@@ -1,7 +1,6 @@
 {
     "id": "machine-learning-packages",
     "name": "Machine learning packages",
-	"postCreateCommand": "./usr/local/share/installTorchForGPU.sh;",
 	"installsAfter": [
 		"ghcr.io/devcontainers/features/python"
 	]

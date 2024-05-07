@@ -31,9 +31,10 @@ export DEBIAN_FRONTEND=noninteractive
 
 install_python_package() {
     PACKAGE=${1:-""}
+
     sudo_if /usr/local/python/current/bin/python -m pip uninstall --yes $PACKAGE
-    echo "Installing $PACKAGE...."
-    sudo_if /usr/local/python/current/bin/python -m pip install --user --upgrade --no-cache-dir $PACKAGE "$@"
+    echo "Installing $PACKAGE..."
+    sudo_if /usr/local/python/current/bin/python -m pip install --user --upgrade --no-cache-dir $PACKAGE
 }
 
 if [[ "$(python --version)" != "" ]] && [[ "$(pip --version)" != "" ]]; then
@@ -49,38 +50,5 @@ if [[ "$(python --version)" != "" ]] && [[ "$(pip --version)" != "" ]]; then
 else
     "(*) Error: Need to install python and pip."
 fi
-
-INSTALL_TORCH_FOR_GPU="/usr/local/share/installTorchForGPU.sh"
-
-# Save the script to INSTALL_TORCH_FOR_GPU
-cat << 'EOF' > "$INSTALL_TORCH_FOR_GPU"
-#!/bin/bash
-
-install_torch_package() {
-    cd ..
-    cd python/current/bin
-    python -m pip uninstall --yes torch
-    echo "Installing $PACKAGE..."
-    python -m pip install --user --upgrade --no-cache-dir torch
-}
-
-# Check if lspci is available
-if ! command -v lspci &> /dev/null; then
-    echo -e "\nlspci not found. Attempting to install pciutils...\n"
-    sudo apt-get update
-    sudo apt-get install -y pciutils
-fi
-
-set +e
-GPU=$(lspci | grep -i NVIDIA || true)  # Used `|| true` to prevent script from exiting on grep failure
-set -e
-
-if [ -n "$GPU" ]; then
-    echo "GPU Detected. Installing Torch with GPU support."
-    install_torch_package
-fi
-
-EOF
-sudo chmod +x /usr/local/share/installTorchForGPU.sh; 
 
 echo "Done!"
