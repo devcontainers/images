@@ -51,6 +51,7 @@ check_packages() {
 }
 
 export DEBIAN_FRONTEND=noninteractive
+export VCPKG_FORCE_SYSTEM_BINARIES=1
 
 # Install additional packages needed by vcpkg: https://github.com/microsoft/vcpkg/blob/master/README.md#installing-linux-developer-tools
 check_packages build-essential tar curl zip unzip pkg-config bash-completion ninja-build
