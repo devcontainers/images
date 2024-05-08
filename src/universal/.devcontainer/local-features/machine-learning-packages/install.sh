@@ -31,10 +31,16 @@ export DEBIAN_FRONTEND=noninteractive
 
 install_python_package() {
     PACKAGE=${1:-""}
+    shift
+    OPTIONS=$@
 
     sudo_if /usr/local/python/current/bin/python -m pip uninstall --yes $PACKAGE
     echo "Installing $PACKAGE..."
-    sudo_if /usr/local/python/current/bin/python -m pip install --user --upgrade --no-cache-dir $PACKAGE
+    if [ -n "$OPTIONS" ]; then
+        sudo_if /usr/local/python/current/bin/python -m pip install --user --upgrade --no-cache-dir "$PACKAGE" "$OPTIONS"
+    else
+        sudo_if /usr/local/python/current/bin/python -m pip install --user --upgrade --no-cache-dir "$PACKAGE"
+    fi
 }
 
 if [[ "$(python --version)" != "" ]] && [[ "$(pip --version)" != "" ]]; then
