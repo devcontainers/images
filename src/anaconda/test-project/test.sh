@@ -52,6 +52,7 @@ checkPythonPackageVersion "jupyterlab" "4.0.11"
 checkPythonPackageVersion "gitpython" "3.1.41"
 checkPythonPackageVersion "jupyter-lsp" "2.2.2"
 checkPythonPackageVersion "idna" "3.7"
+checkPythonPackageVersion "tqdm" "4.66.3"
 
 checkCondaPackageVersion "pyopenssl" "23.2.0"
 checkCondaPackageVersion "requests" "2.31.0"
