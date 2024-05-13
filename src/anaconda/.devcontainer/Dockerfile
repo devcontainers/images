@@ -20,8 +20,8 @@ RUN python3 -m pip install --upgrade \
     mistune==3.0.1 \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-34141
     numpy==1.25.2 \
-    # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-25577
-    werkzeug==2.3.6 \
+    # https://github.com/advisories/GHSA-2g68-c3qc-8985
+    werkzeug==3.0.3 \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32862
     nbconvert==7.7.3 \
     # https://github.com/advisories/GHSA-qppv-j76h-2rpx
