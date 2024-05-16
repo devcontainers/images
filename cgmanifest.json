@@ -170,7 +170,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "130002a79e8567befa409177990bb2724b8edefc"
+                    "commitHash": "8c5f64cc2f0e75399a1e906e39713ed25b65ece1"
                 }
             }
         },
@@ -179,7 +179,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "git",
-                    "Version": "2.44.0",
+                    "Version": "2.45.0",
                     "DownloadUrl": "https://github.com/git/git"
                 }
             }
@@ -200,17 +200,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "668ca3a32dae5ff5d164fc3be565f1e2ece248db"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "other",
-                "Other": {
-                    "Name": "git",
-                    "Version": "2.45.0",
-                    "DownloadUrl": "https://github.com/git/git"
+                    "commitHash": "b0561d28b5a3efbbcca4700626fa32e62c23959b"
                 }
             }
         },
@@ -320,7 +310,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "28b1cf627c0570b3e094192df2fce31a3a2bc1d3"
+                    "commitHash": "3dcd8bb40bc2bbedf206e0bf0dc72c26e2aa2ddd"
                 }
             }
         },
@@ -350,6 +340,16 @@
                 "Other": {
                     "Name": "Docker Image: buildpack-deps",
                     "Version": "buster-curl",
+                    "DownloadUrl": "https://hub.docker.com/_/buildpack-deps"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: buildpack-deps",
+                    "Version": "noble-curl",
                     "DownloadUrl": "https://hub.docker.com/_/buildpack-deps"
                 }
             }
@@ -548,16 +548,6 @@
         },
         {
             "Component": {
-                "Type": "git",
-                "Git": {
-                    "Name": "Oh My Zsh!",
-                    "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "8c5f64cc2f0e75399a1e906e39713ed25b65ece1"
-                }
-            }
-        },
-        {
-            "Component": {
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Image: golang",
@@ -641,7 +631,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "668ca3a32dae5ff5d164fc3be565f1e2ece248db"
+                    "commitHash": "b0561d28b5a3efbbcca4700626fa32e62c23959b"
                 }
             }
         },
@@ -1335,6 +1325,16 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Image: node",
+                    "Version": "22-bookworm",
+                    "DownloadUrl": "https://hub.docker.com/_/node"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: node",
                     "Version": "20-bookworm",
                     "DownloadUrl": "https://hub.docker.com/_/node"
                 }
@@ -1346,6 +1346,16 @@
                 "Other": {
                     "Name": "Docker Image: node",
                     "Version": "18-bookworm",
+                    "DownloadUrl": "https://hub.docker.com/_/node"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: node",
+                    "Version": "22-bullseye",
                     "DownloadUrl": "https://hub.docker.com/_/node"
                 }
             }
@@ -1533,7 +1543,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "668ca3a32dae5ff5d164fc3be565f1e2ece248db"
+                    "commitHash": "5947c3c3c91d04fa0bff45866938027b85b56c6e"
                 }
             }
         },
@@ -1592,7 +1602,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "GitHub CLI",
-                    "Version": "2.49.0",
+                    "Version": "2.49.1",
                     "DownloadUrl": "https://github.com/cli/cli"
                 }
             }
@@ -1602,7 +1612,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Go",
-                    "Version": "1.22.2",
+                    "Version": "1.22.3",
                     "DownloadUrl": "https://golang.org/dl"
                 }
             }
