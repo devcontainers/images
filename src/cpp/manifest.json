@@ -1,9 +1,10 @@
 {
-	"version": "1.0.10",
+	"version": "1.2.0",
 	"variants": [
 		"bookworm",
 		"bullseye",
 		"buster",
+		"noble",
 		"jammy",
 		"focal"
 	],
@@ -13,6 +14,7 @@
 			"bookworm": "base-debian",
 			"bullseye": "base-debian",
 			"buster": "base-debian",
+			"noble": "base-ubuntu",
 			"jammy": "base-ubuntu",
 			"focal": "base-ubuntu"
 		},
@@ -28,6 +30,10 @@
 			],
 			"buster": [
 				"linux/amd64"
+			],
+			"noble": [
+				"linux/amd64",
+				"linux/arm64"
 			],
 			"jammy": [
 				"linux/amd64",
@@ -55,6 +61,10 @@
 			"buster": [
 				"cpp:${VERSION}-debian-10",
 				"cpp:${VERSION}-debian10"
+			],
+			"noble": [
+				"cpp:${VERSION}-ubuntu-24.04",
+				"cpp:${VERSION}-ubuntu24.04"
 			],
 			"jammy": [
 				"cpp:${VERSION}-ubuntu-22.04",

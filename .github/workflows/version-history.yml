@@ -101,7 +101,7 @@ jobs:
 
         branch=automated-update-for-image-history-$GITHUB_RUN_ID
         git checkout -b $branch
-        message='Automated update for image history [skip ci]'
+        message='Automated update for image history'
 
         # Add / update and commit
         git add -A

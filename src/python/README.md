@@ -21,7 +21,7 @@ See **[history](history)** for information on the contents of published images.
 
 ### Configuration
 
-You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` with one of the following:
+You can directly reference [pre-built](https://containers.dev/implementors/reference/#prebuilding) versions of this image by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` with one of the following:
 
 - `mcr.microsoft.com/devcontainers/python:3`    (latest)
 - `mcr.microsoft.com/devcontainers/python:3.8`  (or `3.8-bookworm`, `3.8-bullseye`, `3.8-buster` to pin to an OS version)
@@ -38,13 +38,14 @@ You can decide how often you want updates by referencing a [semantic version](ht
 - `mcr.microsoft.com/devcontainers/python:1.0-3.9` (or `1.0-3.9-bullseye`, `1.0-3.9-buster`)
 - `mcr.microsoft.com/devcontainers/python:1.0.0-3.9` (or `1.0.0-3.9-bullseye`, `1.0.0-3.9-buster`)
 
-However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `1-14`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
+However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `1-3`). 
+You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/python/tags/list).
 
 Alternatively, you can use the contents of [.devcontainer](.devcontainer) to fully customize the your container's contents or build for a container architecture the image does not support.
 
-Beyond Python and `git`, this image / `Dockerfile` includes a number of Python tools, `zsh`, [Oh My Zsh!](https://ohmyz.sh/), a non-root `vscode` user with `sudo` access, and a set of common dependencies for development.
+Beyond Python and `git`, this image includes a number of Python tools, `zsh`, [Oh My Zsh!](https://ohmyz.sh/), a non-root `vscode` user with `sudo` access, and a set of common dependencies for development. See [.devcontainer](.devcontainer) for the full config.
 
 ### Installing Node.js
 
@@ -64,7 +65,7 @@ Also, you can use a [Node feature](https://github.com/devcontainers/features/tre
 
 #### Installing or updating Python utilities
 
-This container installs all Python development utilities using [pipx](https://pipxproject.github.io/pipx/) to avoid impacting the global Python environment. You can use this same utility add additional utilities in an isolated environment. For example:
+This container installs all Python development utilities using [pipx](https://pipxproject.github.io/pipx/) to avoid impacting the global Python environment. You can use this same utility to add additional utilities in an isolated environment. For example:
 
 ```bash
 pipx install prospector
@@ -74,7 +75,7 @@ See the [pipx documentation](https://pipxproject.github.io/pipx/docs/) for addit
 
 #### Using the forwardPorts property
 
-By default, frameworks like Flask only listens to localhost inside the container. As a result, we recommend using the `forwardPorts` property (available in v0.98.0+) to make these ports available locally.
+By default, frameworks like Flask only listen to localhost inside the container. As a result, we recommend using the `forwardPorts` property (available in v0.98.0+) to make these ports available locally.
 
 ```json
 "forwardPorts": [5000]
@@ -98,7 +99,7 @@ Since `requirements.txt` is likely in the folder you opened be sure to include `
 
 #### [Optional] Allowing the non-root vscode user to pip install globally without sudo
 
-You can opt into using the `vscode` non-root user in the container by adding `"remoteUser": "vscode"` to `devcontainer.json`. However, by default, this you will need to use `sudo` to perform global pip installs.
+You can opt into using the `vscode` non-root user in the container by adding `"remoteUser": "vscode"` to `devcontainer.json`. However, by default, you will need to use `sudo` to perform global pip installs.
 
 ```bash
 sudo pip install <your-package-here>
@@ -125,7 +126,7 @@ RUN if ! cat /etc/group | grep -e "^pip-global:" > /dev/null 2>&1; then groupadd
 
 #### [Optional] Installing multiple versions of Python in the same image
 
-If you would prefer to have multiple Python versions in your container, use `Dockerfile` and update `FROM` statement:
+If you would prefer to have multiple Python versions in your container, use `Dockerfile` and update the `FROM` statement:
 
 ```Dockerfile
 FROM ubuntu:jammy

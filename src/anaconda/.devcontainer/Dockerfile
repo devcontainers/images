@@ -7,7 +7,9 @@ RUN . /etc/os-release && if [ "${VERSION_CODENAME}" != "bullseye" ]; then exit 1
 # They are installed by the base image (continuumio/anaconda3) which does not have the patch.
 RUN conda install \
     # https://github.com/advisories/GHSA-v845-jxx5-vc9f
-    urllib3==1.26.18
+    urllib3==1.26.18 \
+    # https://github.com/advisories/GHSA-mr82-8j83-vxmv
+    pydantic==2.5.3
 
 RUN python3 -m pip install --upgrade \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21797
@@ -18,8 +20,8 @@ RUN python3 -m pip install --upgrade \
     mistune==3.0.1 \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-34141
     numpy==1.25.2 \
-    # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-25577
-    werkzeug==2.3.6 \
+    # https://github.com/advisories/GHSA-2g68-c3qc-8985
+    werkzeug==3.0.3 \
     # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32862
     nbconvert==7.7.3 \
     # https://github.com/advisories/GHSA-qppv-j76h-2rpx
@@ -35,15 +37,17 @@ RUN python3 -m pip install --upgrade \
     # https://github.com/advisories/GHSA-44cc-43rp-5947
     jupyterlab==4.0.11 \
     # https://github.com/advisories/GHSA-5h86-8mv2-jq9f
-    aiohttp==3.9.2 \
+    aiohttp==3.9.4 \
     # https://github.com/advisories/GHSA-6vqw-3v5j-54x4
     cryptography==42.0.4 \
     # https://github.com/advisories/GHSA-2mqj-m65w-jghx
     gitpython==3.1.41 \
     # https://github.com/advisories/GHSA-4qhp-652w-c22x
     jupyter-lsp==2.2.2 \
-    # https://github.com/advisories/GHSA-fj7x-q9j7-g6q6
-    black==24.3.0
+    # https://github.com/advisories/GHSA-jjg7-2v4v-x38h
+    idna==3.7 \ 
+    # https://github.com/advisories/GHSA-h75v-3vvj-5mfj
+    jinja2==3.1.4
 
 # Reset and copy updated files with updated privs to keep image size down
 FROM mcr.microsoft.com/devcontainers/base:1-bullseye

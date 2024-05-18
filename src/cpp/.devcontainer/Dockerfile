@@ -1,4 +1,3 @@
-# [Choice] Debian / Ubuntu version (use Debian 12, Debian 11, Ubuntu 22.04 on local arm64/Apple Silicon): debian-12, debian-11, debian-10, ubuntu-22.04, ubuntu-20.04
 ARG VARIANT=debian-12
 FROM mcr.microsoft.com/devcontainers/base:${VARIANT}
 USER root

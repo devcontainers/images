@@ -28,6 +28,7 @@ checkCondaPackageVersion "setuptools" "65.5.1"
 checkCondaPackageVersion "wheel" "0.38.1"
 checkCondaPackageVersion "requests" "2.31.0"
 checkCondaPackageVersion "urllib3" "1.26.17"
+checkCondaPackageVersion "idna" "3.7"
 
 check "conda-update-conda" bash -c "conda update -y conda"
 check "conda-install-tensorflow" bash -c "conda create --name test-env -c conda-forge --yes tensorflow"

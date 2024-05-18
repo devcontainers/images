@@ -1,6 +1,7 @@
 {
-	"version": "1.0.23",
+	"version": "1.1.0",
 	"variants": [
+		"noble",
 		"jammy",
 		"focal"
 	],
@@ -8,6 +9,10 @@
 		"latest": false,
 		"rootDistro": "debian",
 		"architectures": {
+			"noble": [
+				"linux/amd64",
+				"linux/arm64"
+			],
 			"jammy": [
 				"linux/amd64",
 				"linux/arm64"
@@ -20,6 +25,10 @@
 			"base:${VERSION}-${VARIANT}"
 		],
 		"variantTags": {
+			"noble": [
+				"base:${VERSION}-ubuntu-24.04",
+				"base:${VERSION}-ubuntu24.04"
+			],
 			"jammy": [
 				"base:${VERSION}-ubuntu-22.04",
 				"base:${VERSION}-ubuntu22.04",

@@ -10,10 +10,15 @@ USERNAME=${1:-"vscode"}
 
 . /etc/os-release
 
-# Exit early if ARM64 OS does not have cmake version required to build Vcpkg
+# The buster pkg repo install cmake version < 3.15 which is required to run bootstrap-vcpkg.sh on ARM64
+VCPKG_UNSUPPORTED_ARM64_VERSION_CODENAMES="buster"
+
 if [ "$(dpkg --print-architecture)" = "arm64" ]; then
-    echo "OS ${VERSION_CODENAME} ARM64 pkg repo installs cmake version < 3.15, which is required to build Vcpkg."
-    exit 0
+    # Exit early if ARM64 OS does not have cmake version required to build Vcpkg
+    if [[ "${VCPKG_UNSUPPORTED_ARM64_VERSION_CODENAMES}" = *"${VERSION_CODENAME}"* ]]; then
+        echo "OS ${VERSION_CODENAME} ARM64 pkg repo installs cmake version < 3.15, which is required to build Vcpkg."
+        exit 0
+    fi
 fi
 
 # Add to bashrc/zshrc files for all users.
@@ -46,6 +51,7 @@ check_packages() {
 }
 
 export DEBIAN_FRONTEND=noninteractive
+export VCPKG_FORCE_SYSTEM_BINARIES=1
 
 # Install additional packages needed by vcpkg: https://github.com/microsoft/vcpkg/blob/master/README.md#installing-linux-developer-tools
 check_packages build-essential tar curl zip unzip pkg-config bash-completion ninja-build

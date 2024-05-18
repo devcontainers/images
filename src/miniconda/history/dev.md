@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/miniconda)
 
-**Digest:** sha256:8179caac8fab16e73db1cb5bbb98ce033b88e2c5acd3d5884a48fbd3011e6a4f
+**Digest:** sha256:6b762198cc595875fdbd32481cc2b00c9eace90326ade49f445f146d04c60af8
 
 **Tags:**
 ```
@@ -23,13 +23,13 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Python](https://www.python.org/) | 3.11.7 | /opt/conda |
+| [Python](https://www.python.org/) | 3.12.2 | /opt/conda |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | fd01fd66ce27c669e5ffaea94460a37423d1e134 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8c5f64cc2f0e75399a1e906e39713ed25b65ece1 | /home/vscode/.oh-my-zsh |
 
 **Pip / pipx installed tools and packages**
 
@@ -43,21 +43,21 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | pylint | 3.1.0 |
 | flake8 | 7.0.0 |
 | autopep8 | 2.1.0 |
-| black | 24.3.0 |
+| black | 24.4.2 |
 | yapf | 0.40.2 |
-| mypy | 1.9.0 |
+| mypy | 1.10.0 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.11.1 |
 | bandit | 1.7.8 |
-| virtualenv | 20.25.1 |
+| virtualenv | 20.26.1 |
 | pipx | 1.5.0 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.44.0 | 
-| [conda](https://github.com/conda/conda) | 24.1.2 | /opt/conda |
+| [git](https://github.com/git/git) | 2.45.0 | 
+| [conda](https://github.com/conda/conda) | 24.4.0 | /opt/conda |
 
 **Additional linux tools and packages**
 
@@ -73,15 +73,15 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
-| less | 551-2 |
-| libc6 | 2.31-13+deb11u8 |
+| less | 551-2+deb11u2 |
+| libc6 | 2.31-13+deb11u10 |
 | libgssapi-krb5-2 | 1.18.3-6+deb11u4 |
 | libicu67 | 67.1-7 |
 | libkrb5-3 | 1.18.3-6+deb11u4 |
 | liblttng-ust0 | 2.12.1-1 |
 | libssl1.1 | 1.1.1w-0+deb11u1 |
 | libstdc++6 | 10.2.1-6 |
-| locales | 2.31-13+deb11u8 |
+| locales | 2.31-13+deb11u10 |
 | lsb-release | 11.1.0 |
 | lsof | 4.93.2+dfsg-1.1 |
 | man-db | 2.9.4-2 |
