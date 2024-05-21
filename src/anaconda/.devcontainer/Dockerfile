@@ -47,7 +47,9 @@ RUN python3 -m pip install --upgrade \
     # https://github.com/advisories/GHSA-jjg7-2v4v-x38h
     idna==3.7 \ 
     # https://github.com/advisories/GHSA-h75v-3vvj-5mfj
-    jinja2==3.1.4
+    jinja2==3.1.4 \
+    # https://github.com/advisories/GHSA-4qqq-9vqf-3h3f
+    scrapy==2.11.2
 
 # Reset and copy updated files with updated privs to keep image size down
 FROM mcr.microsoft.com/devcontainers/base:1-bullseye
