@@ -6,7 +6,7 @@ RUN conda install \
     # https://github.com/advisories/GHSA-jjg7-2v4v-x38h
     idna==3.7
 
-RUN ENV LD_LIBRARY_PATH=/opt/conda/lib
+ENV LD_LIBRARY_PATH=/opt/conda/lib
     
 RUN python3 -m pip install --upgrade \
     # https://github.com/advisories/GHSA-6vqw-3v5j-54x4
