@@ -54,6 +54,7 @@ checkPythonPackageVersion "jupyter-lsp" "2.2.2"
 checkPythonPackageVersion "idna" "3.7"
 checkPythonPackageVersion "jinja2" "3.1.4"
 checkPythonPackageVersion "scrapy" "2.11.2"
+checkPythonPackageVersion "requests" "2.32.0"
 
 checkCondaPackageVersion "pyopenssl" "23.2.0"
 checkCondaPackageVersion "requests" "2.31.0"
