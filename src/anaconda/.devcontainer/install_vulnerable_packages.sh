@@ -47,7 +47,7 @@ insert_in_2D_array() {
         echo "No package version found in upstream."
         found_version="0"
     fi
-    echo "Latest version of $package_name: $latest_version"
+    echo "Latest version of $package_name on Conda Channel: $latest_version"
     packages_array[$i,2]="$found_version"
     packages_array[$i,3]="$latest_version"
     ((value++))
@@ -76,12 +76,15 @@ compare_and_install_packages() {
         echo -e "\nComparing semver versions between required and present currently for ${packages_array[$i,0]}"
         comparison_result=$(compare_semver "${packages_array[$i,1]}" "${packages_array[$i,2]}")
         if [[ $comparison_result == "greater" ]]; then
-            echo -e "\nComparing semver versions between required and available through conda channel for $1"
+            echo -e "\n${packages_array[$i,0]} : ${packages_array[$i,1]} > ${packages_array[$i,2]}"
+            echo -e "\nComparing semver versions between required and available through conda channel for ${packages_array[$i,0]}"
             comparison_result2=$(compare_semver "${packages_array[$i,1]}" "${packages_array[$i,3]}")
             if [[ $comparison_result2 == "greater" ]]; then
+                echo -e "\n${packages_array[$i,0]} : ${packages_array[$i,1]} > ${packages_array[$i,3]}"
                 echo -e "\nInstalling ${packages_array[$i,0]} using pip"
                 python3 -m pip install --upgrade "${packages_array[$i,0]}==${packages_array[$i,1]}"
             else 
+                echo -e "\n${packages_array[$i,0]} : ${packages_array[$i,1]} < ${packages_array[$i,3]}"
                 echo -e "\nInstalling ${packages_array[$i,0]} using conda channel"
                 conda install "${packages_array[$i,0]}==${packages_array[$i,3]}"
             fi
