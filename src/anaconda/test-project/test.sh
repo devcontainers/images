@@ -63,7 +63,7 @@ checkCondaPackageVersion "urllib3" "1.26.17"
 checkCondaPackageVersion "pyarrow" "14.0.1"
 checkCondaPackageVersion "pydantic" "2.5.3"
 
-check "conda-update-conda" bash -c "conda update --all -y conda"
+check "conda-update-conda" bash -c "conda update -y conda"
 check "conda-install-tensorflow" bash -c "conda create --name test-env -c conda-forge --yes tensorflow"
 check "conda-install-pytorch" bash -c "conda create --name test-env -c conda-forge --yes pytorch"
 
