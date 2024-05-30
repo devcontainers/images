@@ -55,8 +55,11 @@ compare_semver() {
 }
 
 for ((i=0; i<rows; i++)); do
-
     CURRENT_VERSION=$(pip show "${packages_array[$i,0]}" | grep '^Version:' | awk '{print $2}')
+    if [[ -z "$CURRENT_VERSION" ]]; then
+        echo "No version for ${packages_array[$i,0]} found in upstream i.e. base image."
+        CURRENT_VERSION="0"
+    fi
     REQUIRED_VERSION="${packages_array[$i,1]}"
     comparison_result=$(compare_semver "${REQUIRED_VERSION}" "${CURRENT_VERSION}")
     # Check if the current version installed is greater or equal to the required version
@@ -71,6 +74,10 @@ for ((i=0; i<rows; i++)); do
             uniq | \
             tail -n 2 | \
             head -n 1)
+        if [[ -z "$CONDA_VERSION" ]]; then
+            echo "No version for ${packages_array[$i,0]} found in conda channel."
+            CONDA_VERSION="0"
+        fi
         comparison_result2=$(compare_semver "${REQUIRED_VERSION}" "${CONDA_VERSION}")
         if [[ $comparison_result2 == "lesser" ]] || [[ $comparison_result2 == "equal" ]]; then
             echo -e "Greater version between required version: v${REQUIRED_VERSION} and conda version: v${CONDA_VERSION} is conda version: v${CONDA_VERSION}\n";
