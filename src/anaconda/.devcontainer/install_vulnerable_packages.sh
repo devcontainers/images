@@ -80,11 +80,11 @@ for ((i=0; i<rows; i++)); do
         fi
         comparison_result2=$(compare_semver "${REQUIRED_VERSION}" "${CONDA_VERSION}")
         if [[ $comparison_result2 == "lesser" ]] || [[ $comparison_result2 == "equal" ]]; then
-            echo -e "Greater version between required version: v${REQUIRED_VERSION} and conda version: v${CONDA_VERSION} is conda version: v${CONDA_VERSION}\n";
+            echo -e "Conda Version: ${CONDA_VERSION} is greater than or equal to the required version: ${REQUIRED_VERSION}. \n";
             echo "Installing ${packages_array[$i,0]} from source from conda channel for ${REQUIRED_VERSION}..."
             conda install "${packages_array[$i,0]}==${CONDA_VERSION}"
         else 
-            echo -e "Greater version between required version: v${REQUIRED_VERSION} and conda version: v${CONDA_VERSION} is the required version: v${REQUIRED_VERSION}\n";
+            echo -e "Required version: ${REQUIRED_VERSION} is greater than the conda version: ${CONDA_VERSION}. \n";
             echo "Installing ${packages_array[$i,0]} from source from pip package manager for ${REQUIRED_VERSION}..."
             python3 -m pip install --upgrade "${packages_array[$i,0]}==${REQUIRED_VERSION}"
         fi
