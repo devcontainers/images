@@ -1,15 +1,15 @@
 FROM continuumio/miniconda3 as upstream
 
-# Temporary: Upgrade python packages due to mentioned CVEs
-# They are installed by the base image (continuumio/miniconda3) which does not have the patch.
-RUN conda install \ 
-    # https://github.com/advisories/GHSA-jjg7-2v4v-x38h
-    idna==3.7
+# Temporary: Upgrade python packages
 
-# Temporary: Upgrade python packages using pip package manager
-# RUN python3 -m pip install --upgrade \
-    # https://github.com/advisories/
-    # package==version
+# Run vulerable packages script for installation
+COPY ./install_vulnerable_packages.sh /tmp/install_vulnerable_packages.sh
+
+#Make the script execuitable
+RUN chmod +x /tmp/install_vulnerable_packages.sh
+
+#Execute the script file
+RUN /tmp/install_vulnerable_packages.sh
 
 # Reset and copy updated files with updated privs to keep image size down
 FROM mcr.microsoft.com/devcontainers/base:1-bullseye
