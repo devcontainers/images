@@ -21,39 +21,6 @@ for ((i=0; i<rows; i++)); do
     packages_array[$i,1]=${parts[1]}
 done
 
-# Function to compare semver versions
-compare_semver() {
-    # Split versions into arrays
-    IFS='.' read -r -a version1 <<< "$1"
-    IFS='.' read -r -a version2 <<< "$2"
-
-    comparison=""
-    # Compare MAJOR version
-    if (( ${version1[0]} > ${version2[0]} )); then
-        comparison="greater"
-    elif (( ${version1[0]} < ${version2[0]} )); then
-        comparison="lesser"
-    else
-        # Compare MINOR version
-        if (( ${version1[1]} > ${version2[1]} )); then
-            comparison="greater"
-        elif (( ${version1[1]} < ${version2[1]} )); then
-            comparison="lesser"
-        else
-            # Compare PATCH version
-            if (( ${version1[2]} > ${version2[2]} )); then
-                comparison="greater"
-            elif (( ${version1[2]} < ${version2[2]} )); then
-                comparison="lesser"
-            else
-                comparison="equal"
-            fi
-        fi
-    fi
-
-    echo $comparison
-}
-
 for ((i=0; i<rows; i++)); do
     CURRENT_VERSION=$(pip show "${packages_array[$i,0]}" | grep '^Version:' | awk '{print $2}')
     if [[ -z "$CURRENT_VERSION" ]]; then
@@ -61,9 +28,9 @@ for ((i=0; i<rows; i++)); do
         CURRENT_VERSION="0"
     fi
     REQUIRED_VERSION="${packages_array[$i,1]}"
-    comparison_result=$(compare_semver "${REQUIRED_VERSION}" "${CURRENT_VERSION}")
-    # Check if the current version installed is greater or equal to the required version
-    if [[ $comparison_result == "greater" ]]; then
+    GREATER_VERSION_A=$((echo ${REQUIRED_VERSION}; echo ${CURRENT_VERSION}) | sort -V | tail -1)
+    # Check if the required_version is greater than current_version
+    if [[ $CURRENT_VERSION != $GREATER_VERSION_A ]]; then
         echo "${packages_array[$i,0]} version v${CURRENT_VERSION} installed by the base image is not greater or equal to the required: v${REQUIRED_VERSION}"
         # Check whether conda channel has a greater or equal version available, so install from conda, otherwise use pip package manager
         channel_name="anaconda"
@@ -78,12 +45,12 @@ for ((i=0; i<rows; i++)); do
             echo "No version for ${packages_array[$i,0]} found in conda channel."
             CONDA_VERSION="0"
         fi
-        comparison_result2=$(compare_semver "${REQUIRED_VERSION}" "${CONDA_VERSION}")
-        if [[ $comparison_result2 == "lesser" ]] || [[ $comparison_result2 == "equal" ]]; then
+        GREATER_VERSION_B=$((echo ${REQUIRED_VERSION}; echo ${CONDA_VERSION}) | sort -V | tail -1)
+        if [[ $CONDA_VERSION == $GREATER_VERSION_B ]]; then
             echo -e "Conda Version: ${CONDA_VERSION} is greater than or equal to the required version: ${REQUIRED_VERSION}. \n";
             echo "Installing ${packages_array[$i,0]} from source from conda channel for ${REQUIRED_VERSION}..."
             conda install "${packages_array[$i,0]}==${CONDA_VERSION}"
-        else 
+        elif [[ $REQUIRED_VERSION == $GREATER_VERSION_B ]]; then 
             echo -e "Required version: ${REQUIRED_VERSION} is greater than the conda version: ${CONDA_VERSION}. \n";
             echo "Installing ${packages_array[$i,0]} from source from pip package manager for ${REQUIRED_VERSION}..."
             python3 -m pip install --upgrade "${packages_array[$i,0]}==${REQUIRED_VERSION}"
