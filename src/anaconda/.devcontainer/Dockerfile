@@ -3,14 +3,11 @@ FROM continuumio/anaconda3 as upstream
 # Verify OS version is expected one
 RUN . /etc/os-release && if [ "${VERSION_CODENAME}" != "bullseye" ]; then exit 1; fi
 
-# Run vulerable packages script for installation
-COPY ./install_vulnerable_packages.sh /tmp/install_vulnerable_packages.sh
-
-#Make the script execuitable
-RUN chmod +x /tmp/install_vulnerable_packages.sh
-
-#Execute the script file
-RUN /tmp/install_vulnerable_packages.sh
+# Temporary: Upgrade python packages due to mentioned CVEs
+# They are installed by the base image (continuumio/anaconda3) which does not have the patch.
+COPY ./apply_security_patches.sh /tmp/apply_security_patches.sh
+RUN chmod +x /tmp/apply_security_patches.sh
+RUN /tmp/apply_security_patches.sh
 
 # Reset and copy updated files with updated privs to keep image size down
 FROM mcr.microsoft.com/devcontainers/base:1-bullseye
