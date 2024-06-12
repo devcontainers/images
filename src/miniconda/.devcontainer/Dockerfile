@@ -1,15 +1,9 @@
 FROM continuumio/miniconda3 as upstream
 
 # Temporary: Upgrade python packages
-
-# Run vulerable packages script for installation
-COPY ./install_vulnerable_packages.sh /tmp/install_vulnerable_packages.sh
-
-#Make the script execuitable
-RUN chmod +x /tmp/install_vulnerable_packages.sh
-
-#Execute the script file
-RUN /tmp/install_vulnerable_packages.sh
+# COPY ./apply_security_patches.sh /tmp/apply_security_patches.sh
+# RUN chmod +x /tmp/apply_security_patches.sh
+# RUN /tmp/apply_security_patches.sh
 
 # Reset and copy updated files with updated privs to keep image size down
 FROM mcr.microsoft.com/devcontainers/base:1-bullseye
