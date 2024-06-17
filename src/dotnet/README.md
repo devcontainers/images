@@ -39,11 +39,62 @@ See [history](history) for information on the contents of each version and [here
 
 Alternatively, you can use the contents of [.devcontainer](.devcontainer) to fully customize your container's contents or to build it for a container host architecture not supported by the image.
 
-### Enabling HTTPS in ASP.NET using your own dev certificate
+### Enabling HTTPS in ASP.NET Core
 
-To enable HTTPS in ASP.NET, you can mount an exported copy of your local dev certificate.
+You can use `dotnet dev-certs https` inside the Dev Container to create a development HTTPS certificate for ASP.NET Core. However, each time the container is recreated, the development certificate will be lost. To make the development certificate survive container rebuilds, you can use a named volume. 
 
-1. Export it using the following command:
+For example, in `devcontainer.json`, add a named volume for the `x509stores` directory inside the `vscode` user's home folder. Also add a lifecycle script, which adds the development certificate to the Dev Container's trust store.
+
+``` json
+"mounts": [
+    {
+        "type": "volume",
+        "source": "x509stores",
+        "target": "/home/vscode/.dotnet/corefx/cryptography/x509stores"
+    }
+],
+"onCreateCommand": "bash .devcontainer/on-create.sh"
+```
+
+The contents of `.devcontainer/on-create.sh`:
+
+``` bash
+#!/usr/bin/env bash
+
+# Change ownership of the .dotnet directory to the vscode user (to avoid permission errors)
+sudo chown -R vscode:vscode /home/vscode/.dotnet
+
+# Export the ASP.NET Core HTTPS development certificate to a PEM file
+# If there is no development certificate, this command will generate a new one
+DOTNET_NOLOGO=true \
+DOTNET_GENERATE_ASPNET_CERTIFICATE=false \
+dotnet dev-certs https --export-path /home/vscode/https.crt --format pem
+
+# Add the PEM file to the trust store
+sudo mv /home/vscode/https.crt /usr/local/share/ca-certificates/https.crt
+sudo update-ca-certificates
+```
+
+You should see the following output when the Dev Container is created:
+
+``` text
+Running the onCreateCommand from devcontainer.json...
+
+The HTTPS developer certificate was generated successfully.
+Updating certificates in /etc/ssl/certs...
+rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL
+1 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+```
+
+Now this certificate will survive container rebuilds. The certificate will also be trusted by code running inside the container like `System.Net.HttpClient`, or tools like wget and curl. If needed, you can use Docker Desktop to export the development certificate to a local directory, in case you need to add it to any other trust stores.
+
+#### Alternate solution
+
+You can mount an exported copy of your local dev certificate. This solution is only suitable for private projects, as the password will become part of your `devcontainer.json`. Do not apply this solution to team projects or open source projects.
+
+1. Export the local certificate using the following command:
 
     **Windows PowerShell**
 
