@@ -11,7 +11,7 @@
 
 ## Variant: bookworm
 
-**Digest:** sha256:1983b9499ca75e81670bfe07a17710f5bfabd15ed367be80d873ecff8807f6e4
+**Digest:** sha256:c00d46e9fe907553f31a7e81d1e89c0f73b936f9a7d33ed6d1358cad77f6cdc9
 
 **Tags:**
 ```
@@ -38,14 +38,14 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 668ca3a32dae5ff5d164fc3be565f1e2ece248db | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 071b8f8921cb2bbb1fcabbf3d271e77af0b12a7d | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.45.0 | 
+| [git](https://github.com/git/git) | 2.45.1 | 
 
 **Additional linux tools and packages**
 
@@ -86,14 +86,14 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bookworm
 | unzip | 6.0-28 |
 | vim-tiny | 2:9.0.1378-2 |
 | wget | 1.21.3-1+b2 |
-| yarn | 1.22.19-1 |
+| yarn | 1.22.22-1 |
 | zip | 3.0-13 |
 | zlib1g | 1:1.2.13.dfsg-1 |
 | zsh | 5.9-4+b2 |
 
 ## Variant: bullseye
 
-**Digest:** sha256:f8b3cd067f6b1e223dd9998683fcc39ab2f19e86e9d52fbc1193d0e7addb1e62
+**Digest:** sha256:e6b581c4669fe280cbf309103b9f94789eb49b80ffdf73c04c6fe0ef7f6a9354
 
 **Tags:**
 ```
@@ -119,14 +119,14 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 668ca3a32dae5ff5d164fc3be565f1e2ece248db | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 071b8f8921cb2bbb1fcabbf3d271e77af0b12a7d | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.45.0 | 
+| [git](https://github.com/git/git) | 2.45.1 | 
 
 **Additional linux tools and packages**
 
@@ -168,14 +168,14 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bullseye
 | unzip | 6.0-26+deb11u1 |
 | vim-tiny | 2:8.2.2434-3+deb11u1 |
 | wget | 1.21-1+deb11u1 |
-| yarn | 1.22.19-1 |
+| yarn | 1.22.22-1 |
 | zip | 3.0-12 |
 | zlib1g | 1:1.2.11.dfsg-2+deb11u2 |
 | zsh | 5.8-6+deb11u1 |
 
 ## Variant: buster
 
-**Digest:** sha256:334aaf491c3f35979f207139c27359736c0cb9f61726a511ae59831db2b2cb3c
+**Digest:** sha256:e29440b0e0b4ad73af36338e7134349b5871c9f507840cc781ab7330a79f0e5e
 
 **Tags:**
 ```
@@ -201,14 +201,14 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-buster
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 668ca3a32dae5ff5d164fc3be565f1e2ece248db | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 071b8f8921cb2bbb1fcabbf3d271e77af0b12a7d | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.45.0 | 
+| [git](https://github.com/git/git) | 2.45.1 | 
 
 **Additional linux tools and packages**
 
@@ -224,7 +224,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-buster
 | htop | 2.2.0-1+b1 |
 | iproute2 | 4.20.0-2+deb10u1 |
 | jq | 1.5+dfsg-2+b1 |
-| less | 487-0.1+b1 |
+| less | 487-0.1+deb10u1 |
 | libc6 | 2.28-10+deb10u3 |
 | libgcc1 | 1:8.3.0-6 |
 | libgssapi-krb5-2 | 1.17-3+deb10u6 |
@@ -251,7 +251,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-buster
 | unzip | 6.0-23+deb10u3 |
 | vim-tiny | 2:8.1.0875-5+deb10u6 |
 | wget | 1.20.1-1.1 |
-| yarn | 1.22.19-1 |
+| yarn | 1.22.22-1 |
 | zip | 3.0-11+b1 |
 | zlib1g | 1:1.2.11.dfsg-1+deb10u2 |
 | zsh | 5.7.1-1+deb10u1 |

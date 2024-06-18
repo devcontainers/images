@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:496748735ff55ac1729f273c2eeb7e70b36bdb62c1fce51b3cf137d1a00def45
+**Digest:** sha256:a14ad0279cc907036b695987cece896cef42d31ca1415f7693497ecb7a760749
 
 **Tags:**
 ```
@@ -31,34 +31,34 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 130002a79e8567befa409177990bb2724b8edefc | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8c5f64cc2f0e75399a1e906e39713ed25b65ece1 | /home/vscode/.oh-my-zsh |
 
 **Pip / pipx installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
 | joblib | 1.3.1 |
-| cookiecutter | 2.2.3 |
+| cookiecutter | 2.5.0 |
 | cryptography | 42.0.4 |
 | mistune | 3.0.1 |
-| numpy | 1.25.2 |
+| numpy | 1.26.4 |
 | certifi | 2024.2.2 |
 | setuptools | 68.2.2 |
 | future | 0.18.3 |
 | wheel | 0.41.2 |
-| nbconvert | 7.7.3 |
-| Werkzeug | 2.3.6 |
+| nbconvert | 7.10.0 |
+| Werkzeug | 3.0.3 |
 | requests | 2.31.0 |
 | tornado | 6.3.3 |
 | transformers | 4.36.0 |
-| jupyter_server | 2.7.2 |
+| jupyter_server | 2.10.0 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.44.0 | 
-| [conda](https://github.com/conda/conda) | 24.4.0 | /opt/conda |
+| [git](https://github.com/git/git) | 2.45.0 | 
+| [conda](https://github.com/conda/conda) | 24.5.0 | /opt/conda |
 
 **Additional linux tools and packages**
 
@@ -100,7 +100,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | unzip | 6.0-26+deb11u1 |
 | vim-tiny | 2:8.2.2434-3+deb11u1 |
 | wget | 1.21-1+deb11u1 |
-| yarn | 1.22.19-1 |
+| yarn | 1.22.22-1 |
 | zip | 3.0-12 |
 | zlib1g | 1:1.2.11.dfsg-2+deb11u2 |
 | zsh | 5.8-6+deb11u1 |

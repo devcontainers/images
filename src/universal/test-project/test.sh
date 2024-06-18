@@ -9,7 +9,7 @@ checkCommon
 check "git" git --version
 
 git_version=$(git --version)
-check-version-ge "git-requirement" "${git_version}" "git version 2.40.1"
+check-version-ge "git-requirement" "${git_version}" "git version 2.45.1"
 
 check "set-git-config-user-name" sh -c "sudo git config --system user.name devcontainers"
 check "gitconfig-file-location" sh -c "ls /etc/gitconfig"

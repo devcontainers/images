@@ -1,4 +1,7 @@
 #!/bin/bash
+
+set -e
+
 # Function to handle errors
 handle_error() {
     local exit_code=$?
@@ -8,7 +11,6 @@ handle_error() {
     exit $exit_code
 }
 trap 'handle_error $LINENO ${BASH_COMMAND%% *}' ERR
-echo "This is line $LINENO"
 
 convert_gb_to_bytes() {
     local gb="$1"
@@ -52,6 +54,7 @@ check_image_size() {
     if [ -n $image_size  ] && [ $image_size -gt $threshold ]; then
         echo -e "\nImage size exceeds the threshold of $THRESHOLD_IN_GB gb"
         echo -e "\n❌ Image size check failed."
+        exit 1;
     else
         echo -e "\n✅  Passed!"
     fi

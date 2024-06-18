@@ -17,7 +17,7 @@
 
 ## Variant: 8.0-bookworm-slim
 
-**Digest:** sha256:fb7e376626b11bbb25d87b5cdcbad0b4d579c3d707c8f2fcfb8d33a5fd14eed6
+**Digest:** sha256:ac5e07948144a1405292deb96c096e722f4d6fac1a04936a22f8f22e47349d00
 
 **Tags:**
 ```
@@ -38,20 +38,20 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [.NET](https://dotnet.microsoft.com/) | 8.0.204 (8.0.4) | /usr |
+| [.NET](https://dotnet.microsoft.com/) | 8.0.301 (8.0.6) | /usr |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 668ca3a32dae5ff5d164fc3be565f1e2ece248db | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 071b8f8921cb2bbb1fcabbf3d271e77af0b12a7d | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.45.0 | 
+| [git](https://github.com/git/git) | 2.45.1 | 
 
 **Additional linux tools and packages**
 
@@ -92,14 +92,14 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-bookworm
 | unzip | 6.0-28 |
 | vim-tiny | 2:9.0.1378-2 |
 | wget | 1.21.3-1+b2 |
-| yarn | 1.22.19-1 |
+| yarn | 1.22.22-1 |
 | zip | 3.0-13 |
 | zlib1g | 1:1.2.13.dfsg-1 |
 | zsh | 5.9-4+b2 |
 
 ## Variant: 8.0-jammy
 
-**Digest:** sha256:7fe9dbe7c3b60464c04159180c743f91d5621ca59f95e6c6ed56e2d820a24b36
+**Digest:** sha256:8ffa39e01f9696dc660fa4493b690a957637a9cb472a5969eeb9ad21ded33c28
 
 **Tags:**
 ```
@@ -118,20 +118,20 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-jammy
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [.NET](https://dotnet.microsoft.com/) | 8.0.204 (8.0.4) | /usr |
+| [.NET](https://dotnet.microsoft.com/) | 8.0.301 (8.0.6) | /usr |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 668ca3a32dae5ff5d164fc3be565f1e2ece248db | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | a4424dfefd68e4d23badb2f86087184f9e06fab4 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.45.0 | 
+| [git](https://github.com/git/git) | 2.45.1 | 
 
 **Additional linux tools and packages**
 
@@ -142,19 +142,19 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-jammy
 | ca-certificates | 20230311ubuntu0.22.04.1 |
 | curl | 7.81.0-1ubuntu1.16 |
 | dialog | 1.3-20211214-1 |
-| git | 1:2.34.1-1ubuntu1.10 |
+| git | 1:2.34.1-1ubuntu1.11 |
 | gnupg2 | 2.2.27-3ubuntu2.1 |
 | htop | 3.0.5-7build2 |
 | iproute2 | 5.15.0-1ubuntu2 |
 | jq | 1.6-2.1ubuntu3 |
 | less | 590-1ubuntu0.22.04.3 |
-| libc6 | 2.35-0ubuntu3.7 |
+| libc6 | 2.35-0ubuntu3.8 |
 | libgssapi-krb5-2 | 1.19.2-2ubuntu0.3 |
 | libicu70 | 70.1-2 |
 | libkrb5-3 | 1.19.2-2ubuntu0.3 |
 | liblttng-ust1 | 2.13.1-1ubuntu1 |
 | libstdc++6 | 12.3.0-1ubuntu1~22.04 |
-| locales | 2.35-0ubuntu3.7 |
+| locales | 2.35-0ubuntu3.8 |
 | lsb-release | 11.1.0ubuntu4 |
 | lsof | 4.93.2+dfsg-1.1build2 |
 | man-db | 2.10.2-1 |
@@ -172,14 +172,14 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-jammy
 | unzip | 6.0-26ubuntu3.2 |
 | vim-tiny | 2:8.2.3995-1ubuntu2.16 |
 | wget | 1.21.2-2ubuntu1 |
-| yarn | 1.22.19-1 |
+| yarn | 1.22.22-1 |
 | zip | 3.0-12build2 |
 | zlib1g | 1:1.2.11.dfsg-2ubuntu9.2 |
 | zsh | 5.8.1-1 |
 
 ## Variant: 7.0-bookworm-slim
 
-**Digest:** sha256:e09231cc1bb1ddda92cff33a5bfd9a664bf5fa235d5d727d39fc154113523fbe
+**Digest:** sha256:b3cdb0cb5e957c6f60dd47d2f825bb34e4422c1db9b76007472e9b082c2a4a01
 
 **Tags:**
 ```
@@ -200,20 +200,20 @@ mcr.microsoft.com/devcontainers/dotnet:dev-7.0-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [.NET](https://dotnet.microsoft.com/) | 7.0.408 (7.0.1) | /usr |
+| [.NET](https://dotnet.microsoft.com/) | 7.0.410 (7.0.2) | /usr |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 668ca3a32dae5ff5d164fc3be565f1e2ece248db | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 071b8f8921cb2bbb1fcabbf3d271e77af0b12a7d | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.45.0 | 
+| [git](https://github.com/git/git) | 2.45.1 | 
 
 **Additional linux tools and packages**
 
@@ -254,14 +254,14 @@ mcr.microsoft.com/devcontainers/dotnet:dev-7.0-bookworm
 | unzip | 6.0-28 |
 | vim-tiny | 2:9.0.1378-2 |
 | wget | 1.21.3-1+b2 |
-| yarn | 1.22.19-1 |
+| yarn | 1.22.22-1 |
 | zip | 3.0-13 |
 | zlib1g | 1:1.2.13.dfsg-1 |
 | zsh | 5.9-4+b2 |
 
 ## Variant: 7.0-bullseye-slim
 
-**Digest:** sha256:b5b98c96756dde1243efcc4237e6f36389bedc4e5f7abf3f39a5ec23e97457be
+**Digest:** sha256:12fb2c706fec2dddb40ef2ad09b6bb076401f943687e6c5223a95e9379b969fc
 
 **Tags:**
 ```
@@ -281,20 +281,20 @@ mcr.microsoft.com/devcontainers/dotnet:dev-7.0-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [.NET](https://dotnet.microsoft.com/) | 7.0.408 (7.0.1) | /usr |
+| [.NET](https://dotnet.microsoft.com/) | 7.0.410 (7.0.2) | /usr |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 668ca3a32dae5ff5d164fc3be565f1e2ece248db | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 071b8f8921cb2bbb1fcabbf3d271e77af0b12a7d | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.45.0 | 
+| [git](https://github.com/git/git) | 2.45.1 | 
 
 **Additional linux tools and packages**
 
@@ -336,14 +336,14 @@ mcr.microsoft.com/devcontainers/dotnet:dev-7.0-bullseye
 | unzip | 6.0-26+deb11u1 |
 | vim-tiny | 2:8.2.2434-3+deb11u1 |
 | wget | 1.21-1+deb11u1 |
-| yarn | 1.22.19-1 |
+| yarn | 1.22.22-1 |
 | zip | 3.0-12 |
 | zlib1g | 1:1.2.11.dfsg-2+deb11u2 |
 | zsh | 5.8-6+deb11u1 |
 
 ## Variant: 7.0-jammy
 
-**Digest:** sha256:514c08b912d3adebf3e4fcb5a215c0d746bc76ec725b22778561676de683e441
+**Digest:** sha256:790710efa05fe6c920bbb244ba0ec10eb2c623534c19e8cd45ac6ee1f0fa7af2
 
 **Tags:**
 ```
@@ -362,20 +362,20 @@ mcr.microsoft.com/devcontainers/dotnet:dev-7.0-jammy
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [.NET](https://dotnet.microsoft.com/) | 7.0.408 (7.0.1) | /usr |
+| [.NET](https://dotnet.microsoft.com/) | 7.0.410 (7.0.2) | /usr |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 668ca3a32dae5ff5d164fc3be565f1e2ece248db | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 071b8f8921cb2bbb1fcabbf3d271e77af0b12a7d | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.45.0 | 
+| [git](https://github.com/git/git) | 2.45.1 | 
 
 **Additional linux tools and packages**
 
@@ -386,19 +386,19 @@ mcr.microsoft.com/devcontainers/dotnet:dev-7.0-jammy
 | ca-certificates | 20230311ubuntu0.22.04.1 |
 | curl | 7.81.0-1ubuntu1.16 |
 | dialog | 1.3-20211214-1 |
-| git | 1:2.34.1-1ubuntu1.10 |
+| git | 1:2.34.1-1ubuntu1.11 |
 | gnupg2 | 2.2.27-3ubuntu2.1 |
 | htop | 3.0.5-7build2 |
 | iproute2 | 5.15.0-1ubuntu2 |
 | jq | 1.6-2.1ubuntu3 |
 | less | 590-1ubuntu0.22.04.3 |
-| libc6 | 2.35-0ubuntu3.7 |
+| libc6 | 2.35-0ubuntu3.8 |
 | libgssapi-krb5-2 | 1.19.2-2ubuntu0.3 |
 | libicu70 | 70.1-2 |
 | libkrb5-3 | 1.19.2-2ubuntu0.3 |
 | liblttng-ust1 | 2.13.1-1ubuntu1 |
 | libstdc++6 | 12.3.0-1ubuntu1~22.04 |
-| locales | 2.35-0ubuntu3.7 |
+| locales | 2.35-0ubuntu3.8 |
 | lsb-release | 11.1.0ubuntu4 |
 | lsof | 4.93.2+dfsg-1.1build2 |
 | man-db | 2.10.2-1 |
@@ -416,14 +416,14 @@ mcr.microsoft.com/devcontainers/dotnet:dev-7.0-jammy
 | unzip | 6.0-26ubuntu3.2 |
 | vim-tiny | 2:8.2.3995-1ubuntu2.16 |
 | wget | 1.21.2-2ubuntu1 |
-| yarn | 1.22.19-1 |
+| yarn | 1.22.22-1 |
 | zip | 3.0-12build2 |
 | zlib1g | 1:1.2.11.dfsg-2ubuntu9.2 |
 | zsh | 5.8.1-1 |
 
 ## Variant: 6.0-bookworm-slim
 
-**Digest:** sha256:606e4089b0045b57a48021d40c17206a8a3d2b0c7cea003f792b33f2349a3133
+**Digest:** sha256:c99eceff09469114e6341f6c9b2ebd8b848a9e2fe02bb1f3c4f352c6b73b81ba
 
 **Tags:**
 ```
@@ -444,20 +444,20 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [.NET](https://dotnet.microsoft.com/) | 6.0.421 (6.0.2) | /usr |
+| [.NET](https://dotnet.microsoft.com/) | 6.0.422 (6.0.3) | /usr |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 668ca3a32dae5ff5d164fc3be565f1e2ece248db | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 071b8f8921cb2bbb1fcabbf3d271e77af0b12a7d | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.45.0 | 
+| [git](https://github.com/git/git) | 2.45.1 | 
 
 **Additional linux tools and packages**
 
@@ -498,14 +498,14 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-bookworm
 | unzip | 6.0-28 |
 | vim-tiny | 2:9.0.1378-2 |
 | wget | 1.21.3-1+b2 |
-| yarn | 1.22.19-1 |
+| yarn | 1.22.22-1 |
 | zip | 3.0-13 |
 | zlib1g | 1:1.2.13.dfsg-1 |
 | zsh | 5.9-4+b2 |
 
 ## Variant: 6.0-bullseye-slim
 
-**Digest:** sha256:4e851a488b6c25d0720018f083ad46abf1c10200175f3b4e6f0d06b406e2dd87
+**Digest:** sha256:62c7fb6e3846bdf67801df2be79d57351fc0a7b5eb978bdf7c705553454660ba
 
 **Tags:**
 ```
@@ -525,20 +525,20 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [.NET](https://dotnet.microsoft.com/) | 6.0.421 (6.0.2) | /usr |
+| [.NET](https://dotnet.microsoft.com/) | 6.0.422 (6.0.3) | /usr |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 668ca3a32dae5ff5d164fc3be565f1e2ece248db | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 071b8f8921cb2bbb1fcabbf3d271e77af0b12a7d | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.45.0 | 
+| [git](https://github.com/git/git) | 2.45.1 | 
 
 **Additional linux tools and packages**
 
@@ -580,14 +580,14 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-bullseye
 | unzip | 6.0-26+deb11u1 |
 | vim-tiny | 2:8.2.2434-3+deb11u1 |
 | wget | 1.21-1+deb11u1 |
-| yarn | 1.22.19-1 |
+| yarn | 1.22.22-1 |
 | zip | 3.0-12 |
 | zlib1g | 1:1.2.11.dfsg-2+deb11u2 |
 | zsh | 5.8-6+deb11u1 |
 
 ## Variant: 6.0-jammy
 
-**Digest:** sha256:3313488b88fea58b8286d2c65bee7d42a50030a02c053cfa6df1954419b9edc6
+**Digest:** sha256:ac05b13a6b1616646c2fba543b57d1e90c9b34d0cc499cb52a416e594efb283e
 
 **Tags:**
 ```
@@ -606,20 +606,20 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-jammy
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [.NET](https://dotnet.microsoft.com/) | 6.0.421 (6.0.2) | /usr |
+| [.NET](https://dotnet.microsoft.com/) | 6.0.422 (6.0.3) | /usr |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 668ca3a32dae5ff5d164fc3be565f1e2ece248db | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 071b8f8921cb2bbb1fcabbf3d271e77af0b12a7d | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.45.0 | 
+| [git](https://github.com/git/git) | 2.45.1 | 
 
 **Additional linux tools and packages**
 
@@ -630,19 +630,19 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-jammy
 | ca-certificates | 20230311ubuntu0.22.04.1 |
 | curl | 7.81.0-1ubuntu1.16 |
 | dialog | 1.3-20211214-1 |
-| git | 1:2.34.1-1ubuntu1.10 |
+| git | 1:2.34.1-1ubuntu1.11 |
 | gnupg2 | 2.2.27-3ubuntu2.1 |
 | htop | 3.0.5-7build2 |
 | iproute2 | 5.15.0-1ubuntu2 |
 | jq | 1.6-2.1ubuntu3 |
 | less | 590-1ubuntu0.22.04.3 |
-| libc6 | 2.35-0ubuntu3.7 |
+| libc6 | 2.35-0ubuntu3.8 |
 | libgssapi-krb5-2 | 1.19.2-2ubuntu0.3 |
 | libicu70 | 70.1-2 |
 | libkrb5-3 | 1.19.2-2ubuntu0.3 |
 | liblttng-ust1 | 2.13.1-1ubuntu1 |
 | libstdc++6 | 12.3.0-1ubuntu1~22.04 |
-| locales | 2.35-0ubuntu3.7 |
+| locales | 2.35-0ubuntu3.8 |
 | lsb-release | 11.1.0ubuntu4 |
 | lsof | 4.93.2+dfsg-1.1build2 |
 | man-db | 2.10.2-1 |
@@ -660,14 +660,14 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-jammy
 | unzip | 6.0-26ubuntu3.2 |
 | vim-tiny | 2:8.2.3995-1ubuntu2.16 |
 | wget | 1.21.2-2ubuntu1 |
-| yarn | 1.22.19-1 |
+| yarn | 1.22.22-1 |
 | zip | 3.0-12build2 |
 | zlib1g | 1:1.2.11.dfsg-2ubuntu9.2 |
 | zsh | 5.8.1-1 |
 
 ## Variant: 6.0-focal
 
-**Digest:** sha256:66d3c96056cfa1143d811c95c87bb1a38c3b5257d5104fca6ae491db406d0504
+**Digest:** sha256:2d73269528d1f399b2baeda3364e43936318a9e39f57919b07403b497f8f8fca
 
 **Tags:**
 ```
@@ -686,20 +686,20 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-focal
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [.NET](https://dotnet.microsoft.com/) | 6.0.421 (6.0.2) | /usr |
+| [.NET](https://dotnet.microsoft.com/) | 6.0.422 (6.0.3) | /usr |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 668ca3a32dae5ff5d164fc3be565f1e2ece248db | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 071b8f8921cb2bbb1fcabbf3d271e77af0b12a7d | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.45.0 | 
+| [git](https://github.com/git/git) | 2.45.1 | 
 
 **Additional linux tools and packages**
 
@@ -710,13 +710,13 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-focal
 | ca-certificates | 20230311ubuntu0.20.04.1 |
 | curl | 7.68.0-1ubuntu2.22 |
 | dialog | 1.3-20190808-1 |
-| git | 1:2.25.1-1ubuntu3.11 |
+| git | 1:2.25.1-1ubuntu3.12 |
 | gnupg2 | 2.2.19-3ubuntu2.2 |
 | htop | 2.2.0-2build1 |
 | iproute2 | 5.5.0-1ubuntu1 |
 | jq | 1.6-1ubuntu0.20.04.1 |
 | less | 551-1ubuntu0.3 |
-| libc6 | 2.31-0ubuntu9.15 |
+| libc6 | 2.31-0ubuntu9.16 |
 | libgcc1 | 1:10.5.0-1ubuntu1~20.04 |
 | libgssapi-krb5-2 | 1.17-6ubuntu4.4 |
 | libicu66 | 66.1-2ubuntu2.1 |
@@ -724,7 +724,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-focal
 | liblttng-ust0 | 2.11.0-1 |
 | libssl1.1 | 1.1.1f-1ubuntu2.22 |
 | libstdc++6 | 10.5.0-1ubuntu1~20.04 |
-| locales | 2.31-0ubuntu9.15 |
+| locales | 2.31-0ubuntu9.16 |
 | lsb-release | 11.1.0ubuntu2 |
 | lsof | 4.93.2+dfsg-1ubuntu0.20.04.1 |
 | man-db | 2.9.1-1 |
@@ -742,7 +742,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-6.0-focal
 | unzip | 6.0-25ubuntu1.2 |
 | vim-tiny | 2:8.1.2269-1ubuntu5.22 |
 | wget | 1.20.3-1ubuntu2 |
-| yarn | 1.22.19-1 |
+| yarn | 1.22.22-1 |
 | zip | 3.0-11build1 |
 | zlib1g | 1:1.2.11.dfsg-2ubuntu1.5 |
 | zsh | 5.8-3ubuntu1.1 |

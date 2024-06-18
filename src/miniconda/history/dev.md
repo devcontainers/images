@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/miniconda)
 
-**Digest:** sha256:ef06e39aa41e5c5e44277efa537190de21d81a59d33fe4609a742616804197cb
+**Digest:** sha256:19a32b08567f2a182bccf36766401441177495f940481a1cd2cf32a484c26498
 
 **Tags:**
 ```
@@ -23,41 +23,41 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Python](https://www.python.org/) | 3.12.2 | /opt/conda |
+| [Python](https://www.python.org/) | 3.12.3 | /opt/conda |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 130002a79e8567befa409177990bb2724b8edefc | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 8c5f64cc2f0e75399a1e906e39713ed25b65ece1 | /home/vscode/.oh-my-zsh |
 
 **Pip / pipx installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
 | certifi | 2024.2.2 |
-| cryptography | 42.0.4 |
-| setuptools | 68.2.2 |
-| wheel | 0.41.2 |
+| cryptography | 42.0.5 |
+| setuptools | 69.5.1 |
+| wheel | 0.43.0 |
 | requests | 2.31.0 |
-| pylint | 3.1.0 |
+| pylint | 3.2.2 |
 | flake8 | 7.0.0 |
-| autopep8 | 2.1.0 |
+| autopep8 | 2.1.2 |
 | black | 24.4.2 |
 | yapf | 0.40.2 |
 | mypy | 1.10.0 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.11.1 |
 | bandit | 1.7.8 |
-| virtualenv | 20.26.1 |
+| virtualenv | 20.26.2 |
 | pipx | 1.5.0 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.45.0 | 
-| [conda](https://github.com/conda/conda) | 24.4.0 | /opt/conda |
+| [git](https://github.com/git/git) | 2.45.1 | 
+| [conda](https://github.com/conda/conda) | 24.5.0 | /opt/conda |
 
 **Additional linux tools and packages**
 
@@ -99,7 +99,7 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | unzip | 6.0-26+deb11u1 |
 | vim-tiny | 2:8.2.2434-3+deb11u1 |
 | wget | 1.21-1+deb11u1 |
-| yarn | 1.22.19-1 |
+| yarn | 1.22.22-1 |
 | zip | 3.0-12 |
 | zlib1g | 1:1.2.11.dfsg-2+deb11u2 |
 | zsh | 5.8-6+deb11u1 |
