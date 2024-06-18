@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:f3ef500efef4bf6692dc650909fce02e3f48f6fd1921f39393940fd31b281960
+**Digest:** sha256:a14ad0279cc907036b695987cece896cef42d31ca1415f7693497ecb7a760749
 
 **Tags:**
 ```
@@ -38,27 +38,27 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | Tool / package | Version |
 |----------------|---------|
 | joblib | 1.3.1 |
-| cookiecutter | 2.2.3 |
+| cookiecutter | 2.5.0 |
 | cryptography | 42.0.4 |
 | mistune | 3.0.1 |
-| numpy | 1.25.2 |
+| numpy | 1.26.4 |
 | certifi | 2024.2.2 |
 | setuptools | 68.2.2 |
 | future | 0.18.3 |
 | wheel | 0.41.2 |
-| nbconvert | 7.7.3 |
-| Werkzeug | 2.3.6 |
+| nbconvert | 7.10.0 |
+| Werkzeug | 3.0.3 |
 | requests | 2.31.0 |
 | tornado | 6.3.3 |
 | transformers | 4.36.0 |
-| jupyter_server | 2.7.2 |
+| jupyter_server | 2.10.0 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.45.0 | 
-| [conda](https://github.com/conda/conda) | 24.4.0 | /opt/conda |
+| [conda](https://github.com/conda/conda) | 24.5.0 | /opt/conda |
 
 **Additional linux tools and packages**
 
@@ -100,7 +100,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | unzip | 6.0-26+deb11u1 |
 | vim-tiny | 2:8.2.2434-3+deb11u1 |
 | wget | 1.21-1+deb11u1 |
-| yarn | 1.22.19-1 |
+| yarn | 1.22.22-1 |
 | zip | 3.0-12 |
 | zlib1g | 1:1.2.11.dfsg-2+deb11u2 |
 | zsh | 5.8-6+deb11u1 |

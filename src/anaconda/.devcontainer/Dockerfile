@@ -5,37 +5,9 @@ RUN . /etc/os-release && if [ "${VERSION_CODENAME}" != "bullseye" ]; then exit 1
 
 # Temporary: Upgrade python packages due to mentioned CVEs
 # They are installed by the base image (continuumio/anaconda3) which does not have the patch.
-RUN conda install \
-    # https://github.com/advisories/GHSA-mr82-8j83-vxmv
-    pydantic==2.5.3
-
-RUN python3 -m pip install --upgrade \
-    # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21797
-    joblib==1.3.1 \
-    # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-34749
-    mistune==3.0.1 \
-    # https://github.com/advisories/GHSA-2g68-c3qc-8985
-    werkzeug==3.0.3 \
-    # https://github.com/advisories/GHSA-v68g-wm8c-6x7j
-    transformers==4.36.0 \
-    # https://github.com/advisories/GHSA-44wm-f244-xhp3
-    pillow==10.3.0 \
-    # https://github.com/advisories/GHSA-5h86-8mv2-jq9f
-    aiohttp==3.9.4 \
-    # https://github.com/advisories/GHSA-6vqw-3v5j-54x4
-    cryptography==42.0.4 \
-    # https://github.com/advisories/GHSA-2mqj-m65w-jghx
-    gitpython==3.1.41 \
-    # https://github.com/advisories/GHSA-4qhp-652w-c22x
-    jupyter-lsp==2.2.2 \
-    # https://github.com/advisories/GHSA-jjg7-2v4v-x38h
-    idna==3.7 \ 
-    # https://github.com/advisories/GHSA-h75v-3vvj-5mfj
-    jinja2==3.1.4 \
-    # https://github.com/advisories/GHSA-4qqq-9vqf-3h3f
-    scrapy==2.11.2 \
-    # https://github.com/advisories/GHSA-9wx4-h78v-vm56
-    requests==2.32.0
+COPY ./apply_security_patches.sh /tmp/apply_security_patches.sh
+RUN chmod +x /tmp/apply_security_patches.sh
+RUN /tmp/apply_security_patches.sh
 
 # Reset and copy updated files with updated privs to keep image size down
 FROM mcr.microsoft.com/devcontainers/base:1-bullseye
