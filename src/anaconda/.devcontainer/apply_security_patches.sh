@@ -30,7 +30,7 @@ for ((i=0; i<rows; i++)); do
         echo "${packages_array[$i,0]} version v${CURRENT_VERSION} installed by the base image is not greater or equal to the required: v${REQUIRED_VERSION}"
         # Check whether conda channel has a greater or equal version available, so install from conda, otherwise use pip package manager
         channel_name="anaconda"
-        CONDA_VERSION=$(conda search --override-channels "${packages_array[$i,0]}" -c "$channel_name" | \
+        CONDA_VERSION=$(conda search "${packages_array[$i,0]}" -c "$channel_name" | \
             grep -E '^[[:alnum:]]' | \
             awk '{print $2}' | \
             sort -V | \
