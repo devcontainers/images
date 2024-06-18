@@ -1,7 +1,6 @@
 FROM continuumio/miniconda3 as upstream
 
-# Temporary: Upgrade python packages due to mentioned CVEs
-# They are installed by the base image (continuumio/anaconda3) which does not have the patch.
+# Temporary: Upgrade python packages
 COPY ./apply_security_patches.sh /tmp/apply_security_patches.sh
 RUN chmod +x /tmp/apply_security_patches.sh
 RUN /tmp/apply_security_patches.sh
