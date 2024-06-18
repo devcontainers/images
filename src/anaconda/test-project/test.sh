@@ -62,6 +62,7 @@ checkCondaPackageVersion "mpmath" "1.3.0"
 checkCondaPackageVersion "urllib3" "1.26.17"
 checkCondaPackageVersion "pyarrow" "14.0.1"
 checkCondaPackageVersion "pydantic" "2.5.3"
+checkCondaPackageVersion "tqdm" "4.66.4"
 
 check "conda-update-conda" bash -c "conda update -y conda"
 check "conda-install-tensorflow" bash -c "conda create --name test-env -c conda-forge --yes tensorflow"
