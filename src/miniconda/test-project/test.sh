@@ -24,7 +24,6 @@ checkPythonPackageVersion "wheel" "0.38.1"
 checkPythonPackageVersion "tqdm" "4.66.3"
 
 checkCondaPackageVersion "cryptography" "42.0.4"
-checkCondaPackageVersion "pyopenssl" "24.0.0"
 checkCondaPackageVersion "setuptools" "65.5.1"
 checkCondaPackageVersion "wheel" "0.38.1"
 checkCondaPackageVersion "requests" "2.31.0"
