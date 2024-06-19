@@ -66,7 +66,7 @@ sudo chown -R vscode:vscode /home/vscode/.dotnet
 
 # Export the ASP.NET Core HTTPS development certificate to a PEM file
 # If there is no development certificate, this command will generate a new one
-sudo -E dotnet dev-certs https --export-path /usr/local/share/ca-certificates/https.crt --format pem
+sudo -E dotnet dev-certs https --export-path /usr/local/share/ca-certificates/dotnet-dev-cert.crt --format pem
 
 # Add the PEM file to the trust store
 sudo update-ca-certificates
