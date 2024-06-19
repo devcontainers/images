@@ -53,10 +53,10 @@ For example, in `devcontainer.json`, add a named volume for the `x509stores` dir
         "target": "/home/vscode/.dotnet/corefx/cryptography/x509stores"
     }
 ],
-"onCreateCommand": "bash .devcontainer/on-create.sh"
+"onCreateCommand": "bash .devcontainer/setup-dotnet-dev-cert.sh"
 ```
 
-The contents of `.devcontainer/on-create.sh`:
+The contents of `.devcontainer/setup-dotnet-dev-cert.sh`:
 
 ``` bash
 #!/usr/bin/env bash
