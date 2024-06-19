@@ -1,9 +1,9 @@
 FROM continuumio/miniconda3 as upstream
 
 # Temporary: Upgrade python packages
-# COPY ./apply_security_patches.sh /tmp/apply_security_patches.sh
-# RUN chmod +x /tmp/apply_security_patches.sh
-# RUN /tmp/apply_security_patches.sh
+COPY ./apply_security_patches.sh /tmp/apply_security_patches.sh
+RUN chmod +x /tmp/apply_security_patches.sh
+RUN /tmp/apply_security_patches.sh
 
 # Reset and copy updated files with updated privs to keep image size down
 FROM mcr.microsoft.com/devcontainers/base:1-bullseye
