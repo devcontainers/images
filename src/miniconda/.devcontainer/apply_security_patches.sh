@@ -2,7 +2,7 @@
 
 # define array of packages for pinning to the patched versions
 # vulnerable_packages=( "package1=version1" "package2=version2" "package3=version3" )
-vulnerable_packages=( "" )
+vulnerable_packages=( "tqdm=4.66.4" )
 
 # Define the number of rows (based on the length of vulnerable_packages)
 rows=${#vulnerable_packages[@]}
@@ -31,7 +31,7 @@ for ((i=0; i<rows; i++)); do
         echo "${packages_array[$i,0]} version v${CURRENT_VERSION} installed by the base image is not greater or equal to the required: v${REQUIRED_VERSION}"
         # Check whether conda channel has a greater or equal version available, so install from conda, otherwise use pip package manager
         channel_name="anaconda"
-        CONDA_VERSION=$(conda search --override-channels "${packages_array[$i,0]}" -c "$channel_name" | \
+        CONDA_VERSION=$(conda search "${packages_array[$i,0]}" -c "$channel_name" | \
             grep -E '^[[:alnum:]]' | \
             awk '{print $2}' | \
             sort -V | \
