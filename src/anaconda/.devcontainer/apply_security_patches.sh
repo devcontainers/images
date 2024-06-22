@@ -1,7 +1,7 @@
 #!/bin/bash
 
 vulnerable_packages=( "pydantic=2.5.3" "joblib=1.3.1" "mistune=3.0.1" "werkzeug=3.0.3" "transformers=4.36.0" "pillow=10.3.0" "aiohttp=3.9.4" \
-          "cryptography=42.0.4" "gitpython=3.1.41"  "jupyter-lsp=2.2.2" "idna=3.7" "jinja2=3.1.4" "scrapy=2.11.2" "black=24.4.2" "requests=2.32.2" "tornado=6.4.1")
+          "cryptography=42.0.4" "gitpython=3.1.41"  "jupyter-lsp=2.2.2" "idna=3.7" "jinja2=3.1.4" "scrapy=2.11.2" "black=24.4.2" "requests=2.32.2" "jupyter_server=2.14.1" "tornado=6.4.1")
 
 # Define the number of rows (based on the length of vulnerable_packages)
 rows=${#vulnerable_packages[@]}
