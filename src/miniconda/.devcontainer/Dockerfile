@@ -6,7 +6,7 @@ RUN chmod +x /tmp/apply_security_patches.sh
 RUN /tmp/apply_security_patches.sh
 
 # Reset and copy updated files with updated privs to keep image size down
-FROM mcr.microsoft.com/devcontainers/base:1-bullseye
+FROM mcr.microsoft.com/devcontainers/base:1-bookworm
 
 ARG USERNAME=vscode
 
