@@ -38,13 +38,3 @@ update_package() {
     sudo_if "$PYTHON_PATH -m pip install --upgrade --no-cache-dir $PACKAGE==$VERSION"
     sudo_if "$PYTHON_PATH -m pip show --no-python-version-warning $PACKAGE"
 }
-
-# Temporary: Upgrade python packages due to security vulnerabilities
-# They are installed by the base image (python) which does not have the patch.
-
-# https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40897
-update_package /usr/local/python/3.9.*/bin/python setuptools 65.5.1
-update_package /usr/local/python/3.10.*/bin/python setuptools 68.2.2
-
-# https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45803
-update_package /usr/local/python/3.10.*/bin/python urllib3 2.0.7
