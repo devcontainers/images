@@ -11,10 +11,8 @@
         },
         "ghcr.io/devcontainers/features/dotnet:2": {
             "version": "8.0",
-			// Temporarily pinning as the dotnet-install script is flakey (attempts to install bits of 7.0.19 of Runtime, but 7.0.18 of Core & Runtime)
-			// See https://github.com/devcontainers/images/actions/runs/9083566665/job/24962519615?pr=1065#step:3:6146
-            "dotnetRuntimeVersions": "7.0.18", 
-            "aspNetCoreRuntimeVersions": "7.0.18"
+            "dotnetRuntimeVersions": "7.0", 
+            "aspNetCoreRuntimeVersions": "7.0"
         },
         "ghcr.io/devcontainers/features/hugo:1": {
             "version": "latest"
