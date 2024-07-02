@@ -16,6 +16,7 @@ jobs:
     name: Build and push images
     if: ${{ startsWith(github.ref, 'refs/heads/') }}
     runs-on: devcontainer-image-builder-ubuntu
+    environment: documentation
     steps:
     - name: Free more space
       id: free_space 
