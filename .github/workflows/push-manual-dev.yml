@@ -38,7 +38,7 @@ jobs:
 
     - name: Azure CLI login
       id: az_login
-      uses: azure/login@v1
+      uses: azure/login@v2
       with:
         creds: ${{ secrets.AZ_ACR_CREDS }}
       
