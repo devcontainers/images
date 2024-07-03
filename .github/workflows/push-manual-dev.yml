@@ -51,7 +51,7 @@ jobs:
 
         # ACR login
         ACR_REGISTRY_NAME=$(echo "$REGISTRY" | grep -oP '(.+)(?=\.azurecr\.io)')
-        az acr login --name $ACR_REGISTRY_NAME  --username $TOKEN_NAME --password $PASSWORD
+        az acr login --name $ACR_REGISTRY_NAME --username $TOKEN_NAME --password $PASSWORD
 
         # Setup build CLI
         cd "$GITHUB_WORKSPACE/ref"
