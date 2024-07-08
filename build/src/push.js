@@ -67,11 +67,16 @@ async function push(repo, release, updateLatest, registry, registryPath, stubReg
 
             const registryName = registry.replace(/\.azurecr\.io.*/, '');
             const spawnOpts = { stdio: 'inherit', shell: true };
+
             await asyncUtils.spawn('az', [
                 'acr',
                 'login',
                 '--name',
-                registryName
+                registryName,
+                '--username',
+                '$TOKEN_NAME',
+                '--password',
+                '$PASSWORD'
             ], spawnOpts);
 
             console.log(`**** Pushing ${currentJob['id']}: ${currentJob['variant']} ${release} ****`);
