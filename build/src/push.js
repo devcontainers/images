@@ -52,7 +52,11 @@ async function push(repo, release, updateLatest, registry, registryPath, stubReg
                 'acr',
                 'login',
                 '--name',
-                'devcon'
+                'devcon',
+                '--username',
+                '$TOKEN_NAME',
+                '--password',
+                '$PASSWORD'
             ], spawnOpts);
 
             console.log(`**** Pushing ${definitionId}: ${variant} ${release} ****`);
