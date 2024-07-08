@@ -46,6 +46,14 @@ async function push(repo, release, updateLatest, registry, registryPath, stubReg
         await asyncUtils.forEach(variants, async (variant) => {
             stagingFolder = await configUtils.getStagingFolder(release);
             await configUtils.loadConfig(stagingFolder);
+            
+            const spawnOpts = { stdio: 'inherit', shell: true };
+            await asyncUtils.spawn('az', [
+                'acr',
+                'login',
+                '--name',
+                'devcon'
+            ], spawnOpts);
 
             console.log(`**** Pushing ${definitionId}: ${variant} ${release} ****`);
             await pushImage(

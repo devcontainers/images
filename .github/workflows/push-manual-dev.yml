@@ -50,6 +50,11 @@ jobs:
       run: |
         set -e
 
+        sudo apt-get update
+        sudo apt-get install -y gnupg2 pass
+
+        mkdir -p ~/.docker && echo '{ "credsStore": "pass" }' > ~/.docker/config.json
+
         # ACR login
         ACR_REGISTRY_NAME=$(echo "$REGISTRY" | grep -oP '(.+)(?=\.azurecr\.io)')
         az acr login --name $ACR_REGISTRY_NAME --username $TOKEN_NAME --password $PASSWORD
