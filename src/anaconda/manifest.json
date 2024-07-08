@@ -1,5 +1,5 @@
 {
-	"version": "0.205.1",
+	"version": "0.205.2",
 	"build": {
 		"latest": true,
 		"rootDistro": "debian",
