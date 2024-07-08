@@ -16,6 +16,7 @@ jobs:
     name: Build and push images
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
+    environment: publishing
     steps:
     - name: Free more space
       id: free_space 
@@ -39,12 +40,6 @@ jobs:
       with:
         path: 'release'
         ref: ${{ github.event.inputs.release }}
-
-    - name: Azure CLI login
-      id: az_login
-      uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZ_ACR_CREDS }}
       
     - name: Build and push
       id: build_and_push
@@ -54,12 +49,14 @@ jobs:
         STUB_REGISTRY: ${{ secrets.STUB_REGISTRY }}
         STUB_REGISTRY_BASE_PATH: ${{ secrets.STUB_REGISTRY_BASE_PATH }}
         SECONDARY_REGISTRY_BASE_PATH: ${{ secrets.SECONDARY_REGISTRY_BASE_PATH }}
+        TOKEN_NAME: ${{ secrets.TOKEN_NAME }}
+        PASSWORD: ${{ secrets.PASSWORD }}
       run: |
         set -e
 
         # ACR login
         ACR_REGISTRY_NAME=$(echo "$REGISTRY" | grep -oP '(.+)(?=\.azurecr\.io)')
-        az acr login --name $ACR_REGISTRY_NAME
+        az acr login --name $ACR_REGISTRY_NAME --username $TOKEN_NAME --password $PASSWORD
 
         # Setup build CLI
         cd "$GITHUB_WORKSPACE/ref"
