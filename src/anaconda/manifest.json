@@ -31,7 +31,6 @@
 			"numpy",
 			"certifi",
 			"setuptools",
-			"future",
 			"wheel",
 			"nbconvert",
 			"py",
