@@ -63,7 +63,11 @@ async function push(repo, release, updateLatest, registry, registryPath, stubReg
                 'acr',
                 'login',
                 '--name',
-                registryName
+                registryName,
+                '--username',
+                '$TOKEN_NAME',
+                '--password',
+                '$PASSWORD'
             ], spawnOpts);
 
             console.log(`**** Pushing ${currentJob['id']}: ${currentJob['variant']} ${release} ****`);
