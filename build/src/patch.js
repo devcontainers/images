@@ -26,7 +26,7 @@ async function patch(patchPath, registry, registryPath) {
     if (patchConfig.deleteUntaggedImages && patchConfig.imageIds) {
         await deleteUntaggedImages(patchConfig.imageIds, registry);
     }
-    
+
     console.log('\n(*) Done!')
 }
 
@@ -36,17 +36,16 @@ async function patchImage(imageId, patchPath, dockerFilePath, bumpVersion, regis
 
     // Get repository and tag list for imageId
     let repoAndTagList = await getImageRepositoryAndTags(imageId, registry);
-    if(repoAndTagList.length === 0) {
+    if (repoAndTagList.length === 0) {
         console.log('(*) No tags to patch. Skipping.');
         return;
     }
 
-    console.log(`(*) Tags to update: ${
-            JSON.stringify(repoAndTagList.reduce((prev, repoAndTag) => { return prev + repoAndTag.repository + ':' + repoAndTag.tag + ' ' }, ''), undefined, 4)
+    console.log(`(*) Tags to update: ${JSON.stringify(repoAndTagList.reduce((prev, repoAndTag) => { return prev + repoAndTag.repository + ':' + repoAndTag.tag + ' ' }, ''), undefined, 4)
         }`);
 
     // Bump breakfix number of it applies
-    if(bumpVersion) {
+    if (bumpVersion) {
         repoAndTagList = updateVersionTags(repoAndTagList);
     }
 
@@ -59,7 +58,7 @@ async function patchImage(imageId, patchPath, dockerFilePath, bumpVersion, regis
     let retry = false;
     do {
         try {
-            await asyncUtils.spawn('docker', [ 
+            await asyncUtils.spawn('docker', [
                 'build',
                 '--pull',
                 '--build-arg',
@@ -76,7 +75,7 @@ async function patchImage(imageId, patchPath, dockerFilePath, bumpVersion, regis
             } else {
                 throw ex;
             }
-        }    
+        }
     } while (retry);
 
     // Push updates
@@ -145,7 +144,9 @@ async function deleteUntaggedImages(imageIds, registry) {
             'delete',
             '--yes',
             '--name', registryName,
-            '--image', fullImageId
+            '--image', fullImageId,
+            '--username', '$TOKEN_NAME',
+            '--password', '$PASSWORD'
         ], spawnOpts);
     });
 
@@ -159,22 +160,44 @@ async function getImageRepositoryAndTags(imageId, registry) {
 
     // Get list of repositories
     console.log(`(*) Getting repository list for ACR "${registryName}"...`)
-    const repositoryListOutput = await asyncUtils.spawn('az',
-        ['acr', 'repository', 'list', '--name', registryName],
+    const repositoryListOutput = await asyncUtils.spawn('az', [
+        'acr',
+        'repository',
+        'list',
+        '--name',
+        registryName,
+        '--username',
+        '$TOKEN_NAME',
+        '--password',
+        '$PASSWORD'
+    ],
         { shell: true, stdio: 'pipe' });
     const repositoryList = JSON.parse(repositoryListOutput);
 
     let repoAndTagList = [];
     await asyncUtils.forEach(repositoryList, async (repository) => {
         console.log(`(*) Checking in for "${imageId}" in "${repository}"...`);
-        const tagListOutput = await asyncUtils.spawn('az',
-            ['acr', 'repository', 'show-tags', '--detail', '--name', registryName, '--repository', repository, "--query", `"[?digest=='${imageId}'].name"`],
-            { shell: true, stdio: 'pipe' });
+        const tagListOutput = await asyncUtils.spawn('az', [
+            'acr',
+            'repository',
+            'show-tags',
+            '--detail',
+            '--name',
+            registryName,
+            '--repository',
+            repository,
+            "--query",
+            `"[?digest=='${imageId}'].name"`,
+            '--username',
+            '$TOKEN_NAME',
+            '--password',
+            '$PASSWORD'
+        ], { shell: true, stdio: 'inherit' });
         const additionalTags = JSON.parse(tagListOutput);
         repoAndTagList = repoAndTagList.concat(additionalTags.map((tag) => {
-            return { 
-                repository:repository,
-                tag:tag
+            return {
+                repository: repository,
+                tag: tag
             };
         }));
     });
@@ -190,8 +213,8 @@ async function getImageManifests(imageIds, registry) {
     // Get list of repositories
     console.log(`(*) Getting repository list for ACR "${registryName}"...`)
     const repositoryListOutput = await asyncUtils.spawn('az',
-        ['acr', 'repository', 'list', '--name', registryName],
-        { shell: true, stdio: 'pipe' });
+        ['acr', 'repository', 'list', '--name', registryName, '--username', '$TOKEN_NAME', '--password', '$PASSWORD'],
+        { shell: true, stdio: 'inherit' });
     const repositoryList = JSON.parse(repositoryListOutput);
 
     // Query each repository for images, then add any tags found to the list
@@ -201,8 +224,8 @@ async function getImageManifests(imageIds, registry) {
     await asyncUtils.forEach(repositoryList, async (repository) => {
         console.log(`(*) Getting manifests from "${repository}"...`);
         const registryManifestListOutput = await asyncUtils.spawn('az',
-            ['acr', 'repository', 'show-manifests', '--name', registryName, '--repository', repository, "--query", query],
-            { shell: true, stdio: 'pipe' });
+            ['acr', 'repository', 'show-manifests', '--name', registryName, '--repository', repository, "--query", query, '--username', '$TOKEN_NAME', '--password', '$PASSWORD'],
+            { shell: true, stdio: 'inherit' });
         let registryManifestList = JSON.parse(registryManifestListOutput);
         registryManifestList = registryManifestList.map((manifest) => {
             manifest.repository = repository;
