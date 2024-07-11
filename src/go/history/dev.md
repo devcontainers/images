@@ -12,7 +12,7 @@
 
 ## Variant: 1.22-bookworm
 
-**Digest:** sha256:01a0641ca47f1ca702911029fa7ad08ccf221f9b1595ecc8dfb0e3cebeab1234
+**Digest:** sha256:4988c7516d6cf2ea909d697cee77bc96c105ab3f38243b95044ea5be9d192900
 
 **Tags:**
 ```
@@ -35,21 +35,21 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | 1.22.3 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.22.5 | /usr/local/go |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | a4424dfefd68e4d23badb2f86087184f9e06fab4 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5b37e218e5275c11cb5fecc61f943e6cea3e64bf | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Go tools and modules**
 
 | Tool / module | Version |
 |---------------|---------|
-| golang.org/x/tools/gopls | 0.15.3 |
-| honnef.co/go/tools | 0.4.6 |
+| golang.org/x/tools/gopls | 0.16.1 |
+| honnef.co/go/tools | 0.4.7 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
 | github.com/mgechev/revive | 1.3.7 |
 | github.com/uudashr/gopkgs | latest |
@@ -61,7 +61,7 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.45.1 | 
+| [git](https://github.com/git/git) | 2.45.2 | 
 
 **Additional linux tools and packages**
 
@@ -70,7 +70,7 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
 | ca-certificates | 20230311 |
-| curl | 7.88.1-10+deb12u5 |
+| curl | 7.88.1-10+deb12u6 |
 | dialog | 1.3-20230209-1 |
 | g++ | 4:12.2.0-3 |
 | gcc | 4:12.2.0-3 |
@@ -82,9 +82,9 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 | less | 590-2.1~deb12u2 |
 | libc6 | 2.36-9+deb12u7 |
 | libc6-dev | 2.36-9+deb12u7 |
-| libgssapi-krb5-2 | 1.20.1-2+deb12u1 |
+| libgssapi-krb5-2 | 1.20.1-2+deb12u2 |
 | libicu72 | 72.1-3 |
-| libkrb5-3 | 1.20.1-2+deb12u1 |
+| libkrb5-3 | 1.20.1-2+deb12u2 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14 |
 | locales | 2.36-9+deb12u7 |
@@ -94,10 +94,10 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 | man-db | 2.11.2-2 |
 | manpages | 6.03-2 |
 | manpages-dev | 6.03-2 |
-| nano | 7.2-1 |
+| nano | 7.2-1+deb12u1 |
 | ncdu | 1.18-0.2 |
 | net-tools | 2.10-0.1 |
-| openssh-client | 1:9.2p1-2+deb12u2 |
+| openssh-client | 1:9.2p1-2+deb12u3 |
 | pkg-config | 1.8.1-1 |
 | procps | 2:4.0.2-3 |
 | psmisc | 23.6-1 |
@@ -110,11 +110,11 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 | yarn | 1.22.22-1 |
 | zip | 3.0-13 |
 | zlib1g | 1:1.2.13.dfsg-1 |
-| zsh | 5.9-4+b2 |
+| zsh | 5.9-4+b5 |
 
 ## Variant: 1.21-bookworm
 
-**Digest:** sha256:dea1af89fc5e9a01b1de05fbd662e2a073d3155af836a2349f22ce5dedcf44be
+**Digest:** sha256:ba17687e8636accee0baace94d13fe19c38500ad5a43b93c7e4d94b818cccae9
 
 **Tags:**
 ```
@@ -134,21 +134,21 @@ mcr.microsoft.com/devcontainers/go:dev-1.21
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | 1.21.10 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.21.12 | /usr/local/go |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | a4424dfefd68e4d23badb2f86087184f9e06fab4 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5b37e218e5275c11cb5fecc61f943e6cea3e64bf | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Go tools and modules**
 
 | Tool / module | Version |
 |---------------|---------|
-| golang.org/x/tools/gopls | 0.15.3 |
-| honnef.co/go/tools | 0.4.6 |
+| golang.org/x/tools/gopls | 0.16.1 |
+| honnef.co/go/tools | 0.4.7 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
 | github.com/mgechev/revive | 1.3.7 |
 | github.com/uudashr/gopkgs | latest |
@@ -160,7 +160,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.21
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.45.1 | 
+| [git](https://github.com/git/git) | 2.45.2 | 
 
 **Additional linux tools and packages**
 
@@ -169,7 +169,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.21
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
 | ca-certificates | 20230311 |
-| curl | 7.88.1-10+deb12u5 |
+| curl | 7.88.1-10+deb12u6 |
 | dialog | 1.3-20230209-1 |
 | g++ | 4:12.2.0-3 |
 | gcc | 4:12.2.0-3 |
@@ -181,9 +181,9 @@ mcr.microsoft.com/devcontainers/go:dev-1.21
 | less | 590-2.1~deb12u2 |
 | libc6 | 2.36-9+deb12u7 |
 | libc6-dev | 2.36-9+deb12u7 |
-| libgssapi-krb5-2 | 1.20.1-2+deb12u1 |
+| libgssapi-krb5-2 | 1.20.1-2+deb12u2 |
 | libicu72 | 72.1-3 |
-| libkrb5-3 | 1.20.1-2+deb12u1 |
+| libkrb5-3 | 1.20.1-2+deb12u2 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14 |
 | locales | 2.36-9+deb12u7 |
@@ -193,10 +193,10 @@ mcr.microsoft.com/devcontainers/go:dev-1.21
 | man-db | 2.11.2-2 |
 | manpages | 6.03-2 |
 | manpages-dev | 6.03-2 |
-| nano | 7.2-1 |
+| nano | 7.2-1+deb12u1 |
 | ncdu | 1.18-0.2 |
 | net-tools | 2.10-0.1 |
-| openssh-client | 1:9.2p1-2+deb12u2 |
+| openssh-client | 1:9.2p1-2+deb12u3 |
 | pkg-config | 1.8.1-1 |
 | procps | 2:4.0.2-3 |
 | psmisc | 23.6-1 |
@@ -209,11 +209,11 @@ mcr.microsoft.com/devcontainers/go:dev-1.21
 | yarn | 1.22.22-1 |
 | zip | 3.0-13 |
 | zlib1g | 1:1.2.13.dfsg-1 |
-| zsh | 5.9-4+b2 |
+| zsh | 5.9-4+b5 |
 
 ## Variant: 1.22-bullseye
 
-**Digest:** sha256:aed4b5e1b68d1850703cb07a4ef90a30e3d1d74067b2705368f9c40f5d654b14
+**Digest:** sha256:14cff9c0cefb07fb50923e7e6f8fd935f4628dff962a9e08447ee030e6228fbb
 
 **Tags:**
 ```
@@ -234,21 +234,21 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | 1.22.3 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.22.5 | /usr/local/go |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | a4424dfefd68e4d23badb2f86087184f9e06fab4 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5b37e218e5275c11cb5fecc61f943e6cea3e64bf | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Go tools and modules**
 
 | Tool / module | Version |
 |---------------|---------|
-| golang.org/x/tools/gopls | 0.15.3 |
-| honnef.co/go/tools | 0.4.6 |
+| golang.org/x/tools/gopls | 0.16.1 |
+| honnef.co/go/tools | 0.4.7 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
 | github.com/mgechev/revive | 1.3.7 |
 | github.com/uudashr/gopkgs | latest |
@@ -260,7 +260,7 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.45.1 | 
+| [git](https://github.com/git/git) | 2.45.2 | 
 
 **Additional linux tools and packages**
 
@@ -269,7 +269,7 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 | apt-transport-https | 2.2.4 |
 | apt-utils | 2.2.4 |
 | ca-certificates | 20210119 |
-| curl | 7.74.0-1.3+deb11u11 |
+| curl | 7.74.0-1.3+deb11u12 |
 | dialog | 1.3-20201126-1 |
 | g++ | 4:10.2.1-1 |
 | gcc | 4:10.2.1-1 |
@@ -281,9 +281,9 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 | less | 551-2+deb11u2 |
 | libc6 | 2.31-13+deb11u10 |
 | libc6-dev | 2.31-13+deb11u10 |
-| libgssapi-krb5-2 | 1.18.3-6+deb11u4 |
+| libgssapi-krb5-2 | 1.18.3-6+deb11u5 |
 | libicu67 | 67.1-7 |
-| libkrb5-3 | 1.18.3-6+deb11u4 |
+| libkrb5-3 | 1.18.3-6+deb11u5 |
 | liblttng-ust0 | 2.12.1-1 |
 | libssl1.1 | 1.1.1w-0+deb11u1 |
 | libstdc++6 | 10.2.1-6 |
@@ -294,7 +294,7 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 | man-db | 2.9.4-2 |
 | manpages | 5.10-1 |
 | manpages-dev | 5.10-1 |
-| nano | 5.4-2+deb11u2 |
+| nano | 5.4-2+deb11u3 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
 | openssh-client | 1:8.4p1-5+deb11u3 |
@@ -314,7 +314,7 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 
 ## Variant: 1.21-bullseye
 
-**Digest:** sha256:42e596191ad5d6ba53849bb21b37a0a25ebb02ba0206ca9529d089f1da11f5cf
+**Digest:** sha256:9dfe47f6722510b1178795380ded53ff01e7141114f0b3abaae05541711f350f
 
 **Tags:**
 ```
@@ -333,21 +333,21 @@ mcr.microsoft.com/devcontainers/go:dev-1.21-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | 1.21.10 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.21.12 | /usr/local/go |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 071b8f8921cb2bbb1fcabbf3d271e77af0b12a7d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5b37e218e5275c11cb5fecc61f943e6cea3e64bf | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | bab86d5de571015b63fd8fc30b47bbe072a1290e | /usr/local/share/nvm |
 
 **Go tools and modules**
 
 | Tool / module | Version |
 |---------------|---------|
-| golang.org/x/tools/gopls | 0.15.3 |
-| honnef.co/go/tools | 0.4.6 |
+| golang.org/x/tools/gopls | 0.16.1 |
+| honnef.co/go/tools | 0.4.7 |
 | golang.org/x/lint | 0.0.0-20210508222113-6edffad5e616 |
 | github.com/mgechev/revive | 1.3.7 |
 | github.com/uudashr/gopkgs | latest |
@@ -359,7 +359,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.21-bullseye
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.45.1 | 
+| [git](https://github.com/git/git) | 2.45.2 | 
 
 **Additional linux tools and packages**
 
@@ -368,7 +368,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.21-bullseye
 | apt-transport-https | 2.2.4 |
 | apt-utils | 2.2.4 |
 | ca-certificates | 20210119 |
-| curl | 7.74.0-1.3+deb11u11 |
+| curl | 7.74.0-1.3+deb11u12 |
 | dialog | 1.3-20201126-1 |
 | g++ | 4:10.2.1-1 |
 | gcc | 4:10.2.1-1 |
@@ -380,9 +380,9 @@ mcr.microsoft.com/devcontainers/go:dev-1.21-bullseye
 | less | 551-2+deb11u2 |
 | libc6 | 2.31-13+deb11u10 |
 | libc6-dev | 2.31-13+deb11u10 |
-| libgssapi-krb5-2 | 1.18.3-6+deb11u4 |
+| libgssapi-krb5-2 | 1.18.3-6+deb11u5 |
 | libicu67 | 67.1-7 |
-| libkrb5-3 | 1.18.3-6+deb11u4 |
+| libkrb5-3 | 1.18.3-6+deb11u5 |
 | liblttng-ust0 | 2.12.1-1 |
 | libssl1.1 | 1.1.1w-0+deb11u1 |
 | libstdc++6 | 10.2.1-6 |
@@ -393,7 +393,7 @@ mcr.microsoft.com/devcontainers/go:dev-1.21-bullseye
 | man-db | 2.9.4-2 |
 | manpages | 5.10-1 |
 | manpages-dev | 5.10-1 |
-| nano | 5.4-2+deb11u2 |
+| nano | 5.4-2+deb11u3 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1 |
 | openssh-client | 1:8.4p1-5+deb11u3 |

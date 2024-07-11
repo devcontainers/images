@@ -1,5 +1,5 @@
 {
-	"version": "0.205.1",
+	"version": "1.0.0",
 	"build": {
 		"latest": true,
 		"rootDistro": "debian",
@@ -31,7 +31,6 @@
 			"numpy",
 			"certifi",
 			"setuptools",
-			"future",
 			"wheel",
 			"nbconvert",
 			"py",
