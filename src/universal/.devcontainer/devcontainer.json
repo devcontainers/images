@@ -39,7 +39,7 @@
             "version": "latest"
         },
         "ghcr.io/devcontainers/features/ruby:1": {
-            "version": "3.3.3",
+            "version": "3.3.4",
             "additionalVersions": "3.3.2"
         },
         "ghcr.io/devcontainers/features/java:1": {
