@@ -9,7 +9,7 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/rust |
-| *Available image variants* | bookworm, bullseye, buster,  ([full list](https://mcr.microsoft.com/v2/devcontainers/rust/tags/list)) |
+| *Available image variants* | bookworm, bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/rust/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm`, and  `bullseye` variant |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
@@ -21,16 +21,16 @@ See **[history](history)** for information on the contents of published images.
 
 You can directly reference pre-built versions of `.devcontainer/Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` to the following. An example `Dockerfile` is included in this repository.
 
-- `mcr.microsoft.com/devcontainers/rust:latest` (or `bookworm`, `bullseye`, `buster` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/rust:1` (or `1-bookworm`, `1-bullseye`, `1-buster` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/rust:latest` (or `bookworm`, `bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/rust:1` (or `1-bookworm`, `1-bullseye` to pin to an OS version)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/devcontainers/rust:1-1` (or `1-1-bookworm`, `1-1-bullseye`, `1-1-buster` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/rust:1.0-1` (or `1.0-1-bookworm`, `1.0-1-bullseye`, `1.0-1-buster` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/rust:1.0.0-1` (or `1.0.0-1-bookworm`, `1.0.0-1-bullseye`, `1.0.0-1-buster` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/rust:1-1` (or `1-1-bookworm`, `1-1-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/rust:1.0-1` (or `1.0-1-bookworm`, `1.0-1-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/rust:1.0.0-1` (or `1.0.0-1-bookworm`, `1.0.0-1-bullseye` to pin to an OS version)
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `1-1`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 

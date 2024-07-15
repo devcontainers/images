@@ -6,9 +6,7 @@
 		"8.1-apache-bookworm",
 		"8.3-apache-bullseye",
 		"8.2-apache-bullseye",
-		"8.1-apache-bullseye",
-		"8.2-apache-buster",
-		"8.1-apache-buster"
+		"8.1-apache-bullseye"
 	],
 	"build": {
 		"latest": "8.3-apache-bookworm",
@@ -37,12 +35,6 @@
 			"8.1-apache-bullseye": [
 				"linux/amd64",
 				"linux/arm64"
-			],
-			"8.2-apache-buster": [
-				"linux/amd64"
-			],
-			"8.1-apache-buster": [
-				"linux/amd64"
 			]
 		},
 		"tags": [
@@ -74,14 +66,6 @@
 			],
 			"8.1-apache-bullseye": [
 				"php:${VERSION}-8.1-bullseye"
-			],
-			"8.2-apache-buster": [
-				"php:${VERSION}-8-buster",
-				"php:${VERSION}-8.2-buster",
-				"php:${VERSION}-buster"
-			],
-			"8.1-apache-buster": [
-				"php:${VERSION}-8.1-buster"
 			]
 		}
 	},
