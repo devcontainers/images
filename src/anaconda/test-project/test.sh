@@ -54,6 +54,7 @@ checkPythonPackageVersion "jinja2" "3.1.4"
 checkPythonPackageVersion "scrapy" "2.11.2"
 checkPythonPackageVersion "requests" "2.32.2"
 checkPythonPackageVersion "scikit-learn" "1.5.0"
+checkPythonPackageVersion "zipp" "3.19.1"
 
 checkCondaPackageVersion "pyopenssl" "23.2.0"
 checkCondaPackageVersion "requests" "2.32.2"
