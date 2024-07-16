@@ -9,7 +9,7 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published image* | mcr.microsoft.com/devcontainers/javascript-node |
-| *Available image variants* | 22 / 22-bookworm, 20 / 20-bookworm, 18 / 18-bookworm, 20-bullseye, 18-bullseye, 20-buster, 18-buster ([full list](https://mcr.microsoft.com/v2/devcontainers/javascript-node/tags/list)) |
+| *Available image variants* | 22 / 22-bookworm, 20 / 20-bookworm, 18 / 18-bookworm, 20-bullseye, 18-bullseye, ([full list](https://mcr.microsoft.com/v2/devcontainers/javascript-node/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm`, and `bullseye` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
@@ -21,8 +21,8 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 
 - `mcr.microsoft.com/devcontainers/javascript-node` (latest)
 - `mcr.microsoft.com/devcontainers/javascript-node:22` (or `22-bookworm`, `22-bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/javascript-node:20` (or `20-bookworm`, `20-bullseye`, `20-buster` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/javascript-node:18` (or `18-bookworm`, `18-bullseye`, `18-buster` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/javascript-node:20` (or `20-bookworm`, `20-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/javascript-node:18` (or `18-bookworm`, `18-bullseye` to pin to an OS version)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 

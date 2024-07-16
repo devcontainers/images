@@ -6,9 +6,7 @@
 		"18-bookworm",
 		"22-bullseye",
 		"20-bullseye",
-		"18-bullseye",
-		"20-buster",
-		"18-buster"
+		"18-bullseye"
 	],
 	"build": {
 		"latest": "22-bookworm",
@@ -37,12 +35,6 @@
 			"18-bullseye": [
 				"linux/amd64",
 				"linux/arm64"
-			],
-			"20-buster": [
-				"linux/amd64"
-			],
-			"18-buster": [
-				"linux/amd64"
 			]
 		},
 		"tags": [
@@ -61,9 +53,6 @@
 			],
 			"22-bullseye": [
 				"javascript-node:${VERSION}-bullseye"
-			],
-			"20-buster": [
-				"javascript-node:${VERSION}-buster"
 			]
 		}
 	},
