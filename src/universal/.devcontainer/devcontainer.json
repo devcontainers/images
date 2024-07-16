@@ -23,8 +23,8 @@
         },
         "./local-features/nvs": "latest",
         "ghcr.io/devcontainers/features/python:1": {
-            "version": "3.10.13",
-            "additionalVersions": "3.9.18",
+            "version": "3.12.1",
+            "additionalVersions": "3.11.9",
             "installJupyterlab": "true",
             "configureJupyterlabAllowOrigin": "*",
             "useOryxIfAvailable": "false"
@@ -39,8 +39,8 @@
             "version": "latest"
         },
         "ghcr.io/devcontainers/features/ruby:1": {
-            "version": "3.2",
-            "additionalVersions": "3.1"
+            "version": "3.3.4",
+            "additionalVersions": "3.3.2"
         },
         "ghcr.io/devcontainers/features/java:1": {
             "version": "21",

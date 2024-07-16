@@ -190,9 +190,6 @@ checkPythonPackageVersion "python" "setuptools" "65.5.1"
 checkPythonPackageVersion "python" "requests" "2.31.0"
 checkPythonPackageVersion "python" "urllib3" "2.0.7"
 
-## Python 3.9
-checkPythonPackageVersion "/usr/local/python/3.9.*/bin/python" "setuptools" "65.5.1"
-
 ## Conda Python
 checkCondaPackageVersion "requests" "2.31.0"
 checkCondaPackageVersion "cryptography" "41.0.4"
