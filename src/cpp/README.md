@@ -9,7 +9,7 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/cpp |
-| *Available image variants* | debian-12, debian-11, debian-10, ubuntu-24.04, ubuntu-22.04, ubuntu-20.04 ([full list](https://mcr.microsoft.com/v2/devcontainers/cpp/tags/list)) |
+| *Available image variants* | debian-12, debian-11, ubuntu-24.04, ubuntu-22.04, ubuntu-20.04 ([full list](https://mcr.microsoft.com/v2/devcontainers/cpp/tags/list)) |
 | *Published image architecture(s)* | x86-64, aarch64/arm64 for `debian-12`, `debian-11`, `ubuntu-24.04` and `ubuntu-22.04` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian, Ubuntu |
@@ -25,7 +25,6 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 - `mcr.microsoft.com/devcontainers/cpp:debian` (latest Debian GA)
 - `mcr.microsoft.com/devcontainers/cpp:debian-12` (or `bookworm`)
 - `mcr.microsoft.com/devcontainers/cpp:debian-11` (or `bullseye`)
-- `mcr.microsoft.com/devcontainers/cpp:debian-10` (or `buster`)
 - `mcr.microsoft.com/devcontainers/cpp:ubuntu` (latest Ubuntu LTS)
 - `mcr.microsoft.com/devcontainers/cpp:ubuntu-24.04` (or `noble`)
 - `mcr.microsoft.com/devcontainers/cpp:ubuntu-22.04` (or `jammy`)
