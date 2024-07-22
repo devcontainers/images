@@ -53,7 +53,7 @@ Alternatively, you can use the contents of [.devcontainer](.devcontainer) to ful
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
-## Disable Codespaces Automatic Setup
+## Disabling Automatic Setup in Codespaces
 
 Codespaces will automatically perform some default setup when the `universal` image is used and no `postCreateCommand` is provided. This can be disabled with the `customizations.codespaces.disableAutomaticConfiguration` setting:
 
