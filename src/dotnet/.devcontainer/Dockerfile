@@ -8,12 +8,12 @@ ENV NUGET_XMLDOC_MODE=
 
 # Temporary: Upgrade packages due to mentioned CVEs
 # They are installed by the base image (mcr.microsoft.com/dotnet/sdk) which does not have the patch.
-# https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-0057
+# https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-30045
 RUN if [ "$(dpkg --print-architecture)" = "amd64" ]; then \
         apt-get update && \
         apt-get install -y wget && \
-        POWERSHELL_FILE_NAME="powershell_7.4.1-1.deb_amd64.deb" && \
-        wget https://github.com/PowerShell/PowerShell/releases/download/v7.4.1/${POWERSHELL_FILE_NAME} && \
+        POWERSHELL_FILE_NAME="powershell_7.4.3-1.deb_amd64.deb" && \
+        wget https://github.com/PowerShell/PowerShell/releases/download/v7.4.3/${POWERSHELL_FILE_NAME} && \
         dpkg -i ${POWERSHELL_FILE_NAME} && \
         apt-get install -f && \
         rm ${POWERSHELL_FILE_NAME} ; \
@@ -23,7 +23,7 @@ RUN if [ "$(dpkg --print-architecture)" = "arm64" ]; then \
         apt-get update && \
         apt-get install -y curl tar && \
         POWERSHELL_FILE_PATH="/opt/microsoft/powershell/7" && \
-        curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.4.1/powershell-7.4.1-linux-arm64.tar.gz && \
+        curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.4.3/powershell-7.4.3-linux-arm64.tar.gz && \
         mkdir -p ${POWERSHELL_FILE_PATH} && \
         tar zxf /tmp/powershell.tar.gz -C ${POWERSHELL_FILE_PATH} && \
         chmod +x ${POWERSHELL_FILE_PATH}/pwsh && \
