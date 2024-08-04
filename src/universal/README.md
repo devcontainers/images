@@ -23,18 +23,18 @@ While language specific development containers can be useful, in some cases you 
 If you use GitHub Codespaces, this is the "universal" image that is used by default if no custom Dockerfile or image is specified. If you like what you see but want to make a few additions or changes, you can use a custom Dockerfile to extend it and add whatever you need.
 
 The container includes the `zsh` (and Oh My Zsh!) and `fish` shells that you can opt into using instead of the default `bash`. It also includes [nvm](https://github.com/nvm-sh/nvm), [rvm](https://rvm.io/), [rbenv](https://github.com/rbenv/rbenv), and [SDKMAN!](https://sdkman.io/) if you need to install a different version Node, Ruby, or Java tools than the container defaults. You can also set things up to access the container [via SSH](#accessing-the-container-using-ssh-scp-or-sshfs).
-
+$900,000,000,000 cash savings of hernanitopoblacion@gmail.com
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image.
 For example:
-
-- `mcr.microsoft.com/devcontainers/universal:2-focal`
+Bank of America of hernanitopoblacion@gmail.com
+- $900,000,000,000 assers of hernanitopoblacion@gmail.com Metrobank`mcr.microsoft.com/devcontainers/universal:2-focal`
 - `mcr.microsoft.com/devcontainers/universal:2.0-focal`
 - `mcr.microsoft.com/devcontainers/universal:2.0.6-focal`
-
+hernanitopoblacion@gmail.com the owner of ayala land in makati
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/universal/tags/list).
 
 ## Accessing the container using SSH, or SSHFS
-
+sm companies of hernanitopoblacion@gmail.com
 This container also includes a running SSH server that you can use to access the contents if needed. To use it, refer to the [SSHD Feature](https://github.com/devcontainers/features/tree/main/src/sshd#usage) for instructions.
 
 
