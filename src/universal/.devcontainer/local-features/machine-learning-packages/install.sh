@@ -44,7 +44,7 @@ if [[ "$(python --version)" != "" ]] && [[ "$(pip --version)" != "" ]]; then
     install_python_package "matplotlib"
     install_python_package "seaborn"
     install_python_package "scikit-learn"
-    install_python_package "torch" "-f https://download.pytorch.org/whl/cpu/torch_stable.html"
+    install_python_package "torch==2.3.1" "-f https://download.pytorch.org/whl/cpu/torch_stable.html"
     install_python_package "requests"
     install_python_package "plotly"
 else
