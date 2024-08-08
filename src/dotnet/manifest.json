@@ -2,12 +2,15 @@
 	"version": "1.1.9",
 	"variants": [
 		"8.0-bookworm-slim",
+		"8.0-noble",
 		"8.0-jammy",
 		"7.0-bookworm-slim",
 		"7.0-bullseye-slim",
+		"7.0-noble",
 		"7.0-jammy",
 		"6.0-bookworm-slim",
 		"6.0-bullseye-slim",
+		"6.0-noble",
 		"6.0-jammy",
 		"6.0-focal"
 	],
@@ -19,6 +22,10 @@
 		],
 		"architectures": {
 			"8.0-bookworm-slim": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"8.0-noble": [
 				"linux/amd64",
 				"linux/arm64"
 			],
@@ -34,6 +41,10 @@
 				"linux/amd64",
 				"linux/arm64"
 			],
+			"7.0-noble": [
+				"linux/amd64",
+				"linux/arm64"
+			],
 			"7.0-jammy": [
 				"linux/amd64",
 				"linux/arm64"
@@ -43,6 +54,10 @@
 				"linux/arm64"
 			],
 			"6.0-bullseye-slim": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"6.0-noble": [
 				"linux/amd64",
 				"linux/arm64"
 			],
