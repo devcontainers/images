@@ -1,35 +1,35 @@
 #!/bin/bash
 
-install_package() {
-    package_name=$1
-    local search_result=$(apt-cache search $package_name)
-
-    if [[ -z $search_result ]]; then
-        echo "Package $package_name not found."
-    else
-        echo "Found the following packages for $package_name:"
-        echo "$search_result"
-        
-        # Extract the first package name from the search result
-        local first_package=$(echo "$search_result" | head -n 1 | awk '{print $1}')
-        
-        echo "Installing $first_package..."
-        apt-get install -y --no-install-recommends $first_package
-    fi
+install_packages() {
+    for package_name in "$@"; do
+        local search_result=$(apt-cache search $package_name)
+        if [[ -z $search_result ]]; then
+            echo "Package $package_name not found."
+        else
+            echo "Found the following packages for $package_name:"
+            echo "$search_result"
+            local package=$(echo "$search_result" | head -n 1 | awk '{print $1}')
+            echo "Installing $package..."
+            apt-get install -y --no-install-recommends $package
+        fi
+    done
 }
 
 install_libicu_versions() {
     for version in "$@"; do
         package="libicu$version"
         echo "Attempting to install $package..."
-        install_package $package
+        apt-get install -y --no-install-recommends $package
     done
 }
 
 . /etc/os-release
 if [ "${ID}" = "ubuntu" ] && [ "${VERSION_CODENAME}" = "noble" ]; then
+    set -x
     apt-get update
     install_libicu_versions 72 71 70 69 68 67 66 65 63 60 57 55 52
+    install_packages "libcurl4" "libgcc1" "libssl3" "libunwind"
+    set +x
 fi
 
 
