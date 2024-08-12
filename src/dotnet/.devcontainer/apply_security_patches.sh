@@ -25,11 +25,9 @@ install_libicu_versions() {
 
 . /etc/os-release
 if [ "${ID}" = "ubuntu" ] && [ "${VERSION_CODENAME}" = "noble" ]; then
-    set -x
     apt-get update
     install_libicu_versions 72 71 70 69 68 67 66 65 63 60 57 55 52
     install_packages "libcurl4" "libgcc1" "libssl3" "libunwind"
-    set +x
 fi
 
 
