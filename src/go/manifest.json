@@ -1,12 +1,12 @@
 {
   "version": "1.1.15",
   "variants": [
-		"1.23-bookworm",
-		"1.22-bookworm",
-		"1.21-bookworm",
-		"1.23-bullseye",
-		"1.22-bullseye",
-		"1.21-bullseye"
+    "1.23-bookworm",
+    "1.22-bookworm",
+    "1.21-bookworm",
+    "1.23-bullseye",
+    "1.22-bullseye",
+    "1.21-bullseye"
   ],
   "build": {
     "latest": "1.22-bookworm",
@@ -15,7 +15,7 @@
       "go:${VERSION}-${VARIANT}"
     ],
     "architectures": {
-			"1.23-bookworm": [
+      "1.23-bookworm": [
         "linux/amd64",
         "linux/arm64"
       ],
@@ -23,7 +23,7 @@
         "linux/amd64",
         "linux/arm64"
       ],
-			"1.21-bookworm": [
+      "1.21-bookworm": [
         "linux/amd64",
         "linux/arm64"
       ],
@@ -31,7 +31,7 @@
         "linux/amd64",
         "linux/arm64"
       ],
-			"1.22-bullseye": [
+      "1.22-bullseye": [
         "linux/amd64",
         "linux/arm64"
       ],
@@ -47,7 +47,7 @@
         "go:${VERSION}-1-bookworm",
         "go:${VERSION}-bookworm"
       ],
-			"1.22-bookworm": [
+      "1.22-bookworm": [
         "go:${VERSION}-1.22",
         "go:${VERSION}-1",
         "go:${VERSION}-1-bookworm",
@@ -57,11 +57,11 @@
         "go:${VERSION}-1-bullseye",
         "go:${VERSION}-bullseye"
       ],
-			"1.22-bullseye": [
+      "1.22-bullseye": [
         "go:${VERSION}-1-bullseye",
         "go:${VERSION}-bullseye"
       ],
-			"1.21-bookworm": [
+      "1.21-bookworm": [
         "go:${VERSION}-1.21"
       ]
     }
@@ -99,8 +99,8 @@
         "cgIgnore": true
       }
     },
-		"other": {
-			"git": {}
-		}
+    "other": {
+      "git": {}
+    }
   }
 }
