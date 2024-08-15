@@ -48,10 +48,7 @@
         "go:${VERSION}-bookworm"
       ],
       "1.22-bookworm": [
-        "go:${VERSION}-1.22",
-        "go:${VERSION}-1",
-        "go:${VERSION}-1-bookworm",
-        "go:${VERSION}-bookworm"
+        "go:${VERSION}-1.22"
       ],
       "1.23-bullseye": [
         "go:${VERSION}-1-bullseye",
