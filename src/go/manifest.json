@@ -9,7 +9,7 @@
     "1.21-bullseye"
   ],
   "build": {
-    "latest": "1.22-bookworm",
+    "latest": "1.23-bookworm",
     "rootDistro": "debian",
     "tags": [
       "go:${VERSION}-${VARIANT}"
@@ -51,10 +51,6 @@
         "go:${VERSION}-1.22"
       ],
       "1.23-bullseye": [
-        "go:${VERSION}-1-bullseye",
-        "go:${VERSION}-bullseye"
-      ],
-      "1.22-bullseye": [
         "go:${VERSION}-1-bullseye",
         "go:${VERSION}-bullseye"
       ],
