@@ -28,7 +28,6 @@ sudo_if() {
 }
 
 export DEBIAN_FRONTEND=noninteractive
-export TORCH_CUDA_ARCH_LIST="0"
 
 install_python_package() {
     PACKAGE=${1:-""}
@@ -45,7 +44,7 @@ if [[ "$(python --version)" != "" ]] && [[ "$(pip --version)" != "" ]]; then
     install_python_package "matplotlib"
     install_python_package "seaborn"
     install_python_package "scikit-learn"
-    install_python_package "torch"
+    install_python_package "torch torchvision torchaudio" "--index-url https://download.pytorch.org/whl/cpu"
     install_python_package "requests"
     install_python_package "plotly"
 else
