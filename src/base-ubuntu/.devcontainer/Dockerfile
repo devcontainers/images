@@ -15,9 +15,10 @@ RUN if [ "$VARIANT" = "noble" ]; then \
             echo "User ubuntu does not exist"; \
         fi; \
         # Check for any processes using UID 1000 and kill them
-        if ps -u 1000 &>/dev/null; then \
+        PIDS=$(ps -u 1000 -o pid=) && \
+        if [ -n "$PIDS" ]; then \
             echo "Killing processes with UID 1000"; \
-            pkill -u 1000 || echo "Failed to kill processes with UID 1000"; \
+            kill -9 $PIDS || echo "Failed to kill processes with UID 1000"; \
         fi; \
         # Ensure UID 1000 is not in use by another user
         if id -u 1000 &>/dev/null; then \
