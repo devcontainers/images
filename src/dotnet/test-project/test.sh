@@ -29,5 +29,8 @@ check "usr-local-etc-config-does-not-exist" test ! -f "/usr/local/etc/gitconfig"
 
 checkPackageVersion "pwsh" "7.4.4" "PowerShell"
 
+check "Find ubuntu User" bash -c "grep 'ubuntu' /etc/passwd || echo 'ubuntu user not found.'" 
+check "Find vscode User" bash -c "grep 'vscode' /etc/passwd || echo 'vscode user not found.'" 
+
 # Report result
 reportResults

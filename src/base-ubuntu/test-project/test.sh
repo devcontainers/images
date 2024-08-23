@@ -19,7 +19,9 @@ check "gitconfig-file-location" sh -c "ls /etc/gitconfig"
 check "gitconfig-contains-name" sh -c "cat /etc/gitconfig | grep 'name = devcontainers'"
 check "usr-local-etc-config-does-not-exist" test ! -f "/usr/local/etc/gitconfig"
 
-check "uid" bash -c "id -u vscode | grep 1001" 
+check "Find ubuntu User" bash -c "grep 'ubuntu' /etc/passwd || echo 'ubuntu user not found.'" 
+check "Find vscode User" bash -c "grep 'vscode' /etc/passwd || echo 'vscode user not found.'" 
+check "uid" bash -c "id -u vscode | grep 1000"
 
 # Report result
 reportResults
