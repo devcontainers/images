@@ -18,11 +18,13 @@ RUN if [ "$VARIANT" = "noble" ]; then \
         PIDS=$(ps -u 1000 -o pid=) && \
         if [ -n "$PIDS" ]; then \
             echo "Killing processes with UID 1000"; \
-            kill -9 $PIDS || echo "Failed to kill processes with UID 1000"; \
+            for pid in $PIDS; do \
+                kill -9 $pid || echo "Failed to kill process $pid"; \
+            done; \
         fi; \
-        # Ensure UID 1000 is not in use by another user
+        # Double-check if UID 1000 is still in use
         if id -u 1000 &>/dev/null; then \
-            echo "UID 1000 is already taken by another user. Exiting."; \
+            echo "UID 1000 is still in use. Exiting."; \
         else \
             # Check if vscode user exists, if not create it
             if ! id "vscode" &>/dev/null; then \
@@ -33,7 +35,6 @@ RUN if [ "$VARIANT" = "noble" ]; then \
             echo "Modifying group vscode GID" && groupmod -g 1000 vscode || echo "Failed to modify vscode GID"; \
         fi; \
     fi > /tmp/logfile.txt 2>&1
-
 
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
