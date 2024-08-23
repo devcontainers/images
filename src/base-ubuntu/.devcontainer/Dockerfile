@@ -14,14 +14,6 @@ RUN if [ "$VARIANT" = "noble" ]; then \
         else \
             echo "User ubuntu does not exist"; \
         fi; \
-        # Check for any processes using UID 1000 and kill them
-        PIDS=$(ps -u 1000 -o pid=) && \
-        if [ -n "$PIDS" ]; then \
-            echo "Killing processes with UID 1000"; \
-            for pid in $PIDS; do \
-                kill -9 $pid || echo "Failed to kill process $pid"; \
-            done; \
-        fi; \
         # Double-check if UID 1000 is still in use
         if id -u 1000 &>/dev/null; then \
             echo "UID 1000 is still in use. Exiting."; \
@@ -34,6 +26,8 @@ RUN if [ "$VARIANT" = "noble" ]; then \
             echo "Modifying user vscode UID" && usermod -u 1000 vscode || echo "Failed to modify vscode UID"; \
             echo "Modifying group vscode GID" && groupmod -g 1000 vscode || echo "Failed to modify vscode GID"; \
         fi; \
+    else \
+        echo "Variant does not contain noble"; \
     fi > /tmp/logfile.txt 2>&1
 
 # [Optional] Uncomment this section to install additional OS packages.
