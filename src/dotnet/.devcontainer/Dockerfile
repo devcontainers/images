@@ -9,9 +9,14 @@ RUN if [ "${VARIANT#*noble}" != "$VARIANT" ]; then \
         echo "Variant contains noble"; \
         # Check if ubuntu user exists and delete it if it does
         if id "ubuntu" &>/dev/null; then \
-            echo "Deleting user ubuntu" && userdel -r ubuntu || echo "Failed to delete ubuntu user"; \
+            echo "Deleting user ubuntu" && userdel -f -r ubuntu || echo "Failed to delete ubuntu user"; \
         else \
             echo "User ubuntu does not exist"; \
+        fi; \
+        # Check for any processes using UID 1000 and kill them
+        if ps -u 1000 &>/dev/null; then \
+            echo "Killing processes with UID 1000"; \
+            pkill -u 1000 || echo "Failed to kill processes with UID 1000"; \
         fi; \
         # Ensure UID 1000 is not in use by another user
         if id -u 1000 &>/dev/null; then \
@@ -25,8 +30,6 @@ RUN if [ "${VARIANT#*noble}" != "$VARIANT" ]; then \
             echo "Modifying user vscode UID" && usermod -u 1000 vscode || echo "Failed to modify vscode UID"; \
             echo "Modifying group vscode GID" && groupmod -g 1000 vscode || echo "Failed to modify vscode GID"; \
         fi; \
-    else \
-        echo "Variant does not contain noble"; \
     fi > /tmp/logfile.txt 2>&1
 
 # clear this environment variable so xml docs from NuGet packages are unpackaged. The default dotnet/sdk image sets it to 'skip'.

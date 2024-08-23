@@ -31,6 +31,9 @@ checkPackageVersion "pwsh" "7.4.4" "PowerShell"
 
 check "Find ubuntu User" bash -c "grep 'ubuntu' /etc/passwd || echo 'ubuntu user not found.'" 
 check "Find vscode User" bash -c "grep 'vscode' /etc/passwd || echo 'vscode user not found.'" 
+check "log file contents" bash -c "cat /tmp/logfile.txt"
+check "all users" bash -c "cat /etc/passwd"
+check "uid" bash -c "id -u vscode | grep 1000"
 
 # Report result
 reportResults
