@@ -1,5 +1,4 @@
 ARG VARIANT="noble"
-# ARG VARIANT="8.0-bookworm-slim"
 FROM buildpack-deps:${VARIANT}-curl
 
 LABEL dev.containers.features="common"
@@ -21,7 +20,7 @@ RUN if [ "$VARIANT" = "noble" ]; then \
         fi; \
     else \
         echo "Variant does not contain noble"; \
-    fi > /tmp/logfile.txt 2>&1
+    fi
 
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
