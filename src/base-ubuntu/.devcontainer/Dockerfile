@@ -14,8 +14,8 @@ RUN if [ "$VARIANT" = "noble" ]; then \
             echo "Deleting user ubuntu" && userdel -f -r ubuntu || echo "Failed to delete ubuntu user"; \
             echo "Deleting group associated with ubuntu" && groupdel ubuntu || echo "Failed to delete group associated with ubuntu user"; \
             #check if group 1000 and user 1000 is deleted
-            echo "Checking user at 1000 uid" && getent passwd 1000; || echo "Failed to find user at uid 1000" \
-            echo "Checking group at 1000 gid" &&  getent group 1000; || echo "Failed to find group at gid 1000" \
+            echo "Checking user at 1000 uid" && getent passwd 1000 || echo "Failed to find user at uid 1000;" \
+            echo "Checking group at 1000 gid" &&  getent group 1000 || echo "Failed to find group at gid 1000"; \
         else \
             echo "User ubuntu does not exist"; \
         fi; \
