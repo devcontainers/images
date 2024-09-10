@@ -10,7 +10,7 @@
 | *Categories* | Core, Languages |
 | *Definition type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/go |
-| *Available image variants* | 1 / 1-bookworm, 1.23 / 1.23-bookworm, 1.22 / 1.22-bookworm, 1-bullseye, 1.22-bullseye, 1.21-bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/go/tags/list)) |
+| *Available image variants* | 1 / 1-bookworm, 1.23 / 1.23-bookworm, 1.22 / 1.22-bookworm, 1-bullseye, 1.22-bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/go/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm`, and `bullseye` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
