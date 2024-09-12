@@ -1,6 +1,6 @@
 name: Smoke test "base-alpine" build
 
-on: 
+on: //github.com/actions/runner-images/releases/tag/ubuntu22%2F20240708.1
   workflow_dispatch:
   push:
     branches:
