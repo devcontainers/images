@@ -4,13 +4,11 @@ FROM buildpack-deps:${VARIANT}-curl
 LABEL dev.containers.features="common"
 
 ARG VARIANT
-ENV VARIANT=${VARIANT}
-
 RUN if [ "$VARIANT" = "noble" ]; then \
         if id "ubuntu" &>/dev/null; then \
-            echo "Deleting user ubuntu" && userdel -f -r ubuntu || echo "❕Failed to delete ubuntu user"; \
+            echo "Deleting user 'ubuntu'  for $VARIANT" && userdel -f -r ubuntu || echo "Failed to delete ubuntu user for $VARIANT"; \  
         else \
-            echo "✔️ User ubuntu does not exist"; \
+            echo "User 'ubuntu' does not exist for $VARIANT"; \ 
         fi; \
     fi
 
