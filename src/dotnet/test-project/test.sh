@@ -29,17 +29,22 @@ check "usr-local-etc-config-does-not-exist" test ! -f "/usr/local/etc/gitconfig"
 
 checkPackageVersion "pwsh" "7.4.4" "PowerShell"
 
-os_release=$(cat /etc/os-release)
-# Check if the output contains "NAME=Ubuntu" and "VERSION=24.04"
-if echo "$os_release" | grep -q "NAME=\"Ubuntu\"" && echo "$os_release" | grep -q "VERSION=\"24.04"; then
-    check "Find ubuntu User" bash -c "grep 'ubuntu' /etc/passwd || echo 'ubuntu user not found.'" 
-    check "Find ubuntu Group" bash -c "grep 'ubuntu' /etc/group || echo 'ubuntu group not found.'" 
-    check "Find vscode User" bash -c "grep 'vscode' /etc/passwd || echo 'vscode user not found.'" 
-    check "Find vscode Group" bash -c "grep 'vscode' /etc/group || echo 'vscode group not found.'" 
+check_ubuntu_user() {
+    if ! id -u ubuntu > /dev/null 2>&1; then
+        echo -e "✔️   User ubuntu does not exist."
+    else
+        echo -e "❌   User ubuntu exists."
+        exit 1;
+    fi
+    echo -e "\n\nList of all users:";
+    cat /etc/passwd;
+}
 
-    check "log file contents" bash -c "cat /tmp/logfile.txt"
-    check "all users" bash -c "cat /etc/passwd"
-    check "uid" bash -c "id -u vscode | grep 1000"
+if grep -q 'VERSION_CODENAME=noble' /etc/os-release; then
+    echo -e "\nThe base image is ubuntu:noble. Checking user Ubuntu.."
+    check "uid" "check_ubuntu_user"
+else
+    echo -e "\nCannot check user Ubuntu. The base image is not ubuntu:noble."
 fi
 
 # Report result
