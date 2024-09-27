@@ -4,10 +4,11 @@
 # streamlit - [GHSA-rxff-vr5r-8cj5]
 # notebook, jupyterlab - [GHSA-9q39-rmj3-p4r2]
 # cryptography, pyopenssl - [GHSA-h4gh-qq45-vh27]
+# nltk - [GHSA-cgvx-9447-vcch]
 
 vulnerable_packages=( "pydantic=2.5.3" "joblib=1.3.1" "mistune=3.0.1" "werkzeug=3.0.3" "transformers=4.36.0" "pillow=10.3.0" "aiohttp=3.10.2" "pyopenssl=24.2.1" \
           "cryptography=43.0.1" "gitpython=3.1.41"  "jupyter-lsp=2.2.2" "idna=3.7" "jinja2=3.1.4" "scrapy=2.11.2" "black=24.4.2" "requests=2.32.2" \
-          "jupyter_server=2.14.1" "tornado=6.4.1" "tqdm=4.66.4" "urllib3=2.2.2" "scikit-learn=1.5.0" "zipp=3.19.1" "streamlit=1.37.0" "notebook=7.2.2" )
+          "jupyter_server=2.14.1" "tornado=6.4.1" "tqdm=4.66.4" "urllib3=2.2.2" "scikit-learn=1.5.0" "zipp=3.19.1" "streamlit=1.37.0" "notebook=7.2.2" "nltk=3.9" )
 
 # Define the number of rows (based on the length of vulnerable_packages)
 rows=${#vulnerable_packages[@]}
