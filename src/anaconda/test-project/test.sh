@@ -67,6 +67,7 @@ checkCondaPackageVersion "pydantic" "2.5.3"
 checkCondaPackageVersion "tqdm" "4.66.4"
 checkCondaPackageVersion "black" "24.4.2"
 checkCondaPackageVersion "streamlit" "1.37.0"
+checkCondaPackageVersion "nltk" "3.9"
 
 check "conda-update-conda" bash -c "conda update -y conda"
 check "conda-install-tensorflow" bash -c "conda create --name test-env -c conda-forge --yes tensorflow"
