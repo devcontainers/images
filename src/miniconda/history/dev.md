@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/miniconda)
 
-**Digest:** sha256:adef3c598db09b28ab9445b9c280123414f573b5a24fb9a50a9832d352f422df
+**Digest:** sha256:9da3b3a4029c720a641d9bc1ba45bf584e94c297ee009c63677181562194c440
 
 **Tags:**
 ```
@@ -29,35 +29,35 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5b37e218e5275c11cb5fecc61f943e6cea3e64bf | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 367e9381dfae65e020cb5c439818e04ae1dd9423 | /home/vscode/.oh-my-zsh |
 
 **Pip / pipx installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| certifi | 2024.6.2 |
-| cryptography | 42.0.5 |
-| setuptools | 69.5.1 |
+| certifi | 2024.7.4 |
+| cryptography | 43.0.1 |
+| setuptools | 72.1.0 |
 | wheel | 0.43.0 |
-| requests | 2.32.2 |
-| pylint | 3.2.5 |
-| flake8 | 7.1.0 |
+| requests | 2.32.3 |
+| pylint | 3.3.1 |
+| flake8 | 7.1.1 |
 | autopep8 | 2.3.1 |
-| black | 24.4.2 |
+| black | 24.8.0 |
 | yapf | 0.40.2 |
-| mypy | 1.10.1 |
+| mypy | 1.11.2 |
 | pydocstyle | 6.3.0 |
-| pycodestyle | 2.12.0 |
-| bandit | 1.7.9 |
-| virtualenv | 20.26.3 |
-| pipx | 1.6.0 |
+| pycodestyle | 2.12.1 |
+| bandit | 1.7.10 |
+| virtualenv | 20.26.5 |
+| pipx | 1.7.1 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.45.2 | 
-| [conda](https://github.com/conda/conda) | 24.5.0 | /opt/conda |
+| [git](https://github.com/git/git) | 2.46.2 | 
+| [conda](https://github.com/conda/conda) | 24.7.1 | /opt/conda |
 
 **Additional linux tools and packages**
 
@@ -66,21 +66,21 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
 | ca-certificates | 20230311 |
-| curl | 7.88.1-10+deb12u6 |
+| curl | 7.88.1-10+deb12u7 |
 | dialog | 1.3-20230209-1 |
-| git | 1:2.39.2-1.1 |
+| git | 1:2.39.5-0+deb12u1 |
 | gnupg2 | 2.2.40-1.1 |
 | htop | 3.2.2-2 |
 | iproute2 | 6.1.0-3 |
 | jq | 1.6-2.1 |
 | less | 590-2.1~deb12u2 |
-| libc6 | 2.36-9+deb12u7 |
+| libc6 | 2.36-9+deb12u8 |
 | libgssapi-krb5-2 | 1.20.1-2+deb12u2 |
 | libicu72 | 72.1-3 |
 | libkrb5-3 | 1.20.1-2+deb12u2 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14 |
-| locales | 2.36-9+deb12u7 |
+| locales | 2.36-9+deb12u8 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |

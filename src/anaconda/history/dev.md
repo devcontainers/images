@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:f3e1a52585194cdbe63efffa5fa3624f6960524e755cf0f0bd450ee5dad08dfc
+**Digest:** sha256:71eed6cef40d2dc868dbd8e28b722fd0c124203ddd864b131fcbf8a9a22bae0c
 
 **Tags:**
 ```
@@ -24,14 +24,14 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
 | [Python](https://www.python.org/) | 3.12.4 | /opt/conda |
-| [Jupyter Notebooks](https://jupyter.org/) | 7.0.8 | /opt/conda |
-| [Jupyter Lab](https://jupyter.org/) | 4.0.11 | /opt/conda |
+| [Jupyter Notebooks](https://jupyter.org/) | 7.2.2 | /opt/conda |
+| [Jupyter Lab](https://jupyter.org/) | 4.2.5 | /opt/conda |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 189774c5d0d989ab45c0765f646803926e08e013 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 367e9381dfae65e020cb5c439818e04ae1dd9423 | /home/vscode/.oh-my-zsh |
 
 **Pip / pipx installed tools and packages**
 
@@ -39,25 +39,25 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 |----------------|---------|
 | joblib | 1.4.2 |
 | cookiecutter | 2.6.0 |
-| cryptography | 42.0.5 |
+| cryptography | 43.0.1 |
 | mistune | 3.0.1 |
 | numpy | 1.26.4 |
-| certifi | 2024.7.4 |
+| certifi | 2024.8.30 |
 | setuptools | 69.5.1 |
 | wheel | 0.43.0 |
 | nbconvert | 7.10.0 |
 | Werkzeug | 3.0.3 |
 | requests | 2.32.2 |
 | tornado | 6.4.1 |
-| transformers | 4.37.2 |
+| transformers | 4.44.1 |
 | jupyter_server | 2.14.1 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.45.1 | 
-| [conda](https://github.com/conda/conda) | 24.5.0 | /opt/conda |
+| [git](https://github.com/git/git) | 2.46.1 | 
+| [conda](https://github.com/conda/conda) | 24.7.1 | /opt/conda |
 
 **Additional linux tools and packages**
 
@@ -66,21 +66,21 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
 | ca-certificates | 20230311 |
-| curl | 7.88.1-10+deb12u6 |
+| curl | 7.88.1-10+deb12u7 |
 | dialog | 1.3-20230209-1 |
-| git | 1:2.39.2-1.1 |
+| git | 1:2.39.5-0+deb12u1 |
 | gnupg2 | 2.2.40-1.1 |
 | htop | 3.2.2-2 |
 | iproute2 | 6.1.0-3 |
 | jq | 1.6-2.1 |
 | less | 590-2.1~deb12u2 |
-| libc6 | 2.36-9+deb12u7 |
+| libc6 | 2.36-9+deb12u8 |
 | libgssapi-krb5-2 | 1.20.1-2+deb12u2 |
 | libicu72 | 72.1-3 |
 | libkrb5-3 | 1.20.1-2+deb12u2 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14 |
-| locales | 2.36-9+deb12u7 |
+| locales | 2.36-9+deb12u8 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
