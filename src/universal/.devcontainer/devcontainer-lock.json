@@ -11,9 +11,9 @@
       "integrity": "sha256:245b89453a017490401090692650c6bad5c41159be58a7a13d7a95d542af5c7d"
     },
     "ghcr.io/devcontainers/features/docker-in-docker:2": {
-      "version": "2.11.0",
-      "resolved": "ghcr.io/devcontainers/features/docker-in-docker@sha256:503f23cd692325b3cbb8c20a0ecfabb3444b0c786b363e0c82572bd7d71dc099",
-      "integrity": "sha256:503f23cd692325b3cbb8c20a0ecfabb3444b0c786b363e0c82572bd7d71dc099"
+      "version": "2.12.0",
+      "resolved": "ghcr.io/devcontainers/features/docker-in-docker@sha256:5f3e2005aad161ce3ff7700b2603f11935348c039f9166960efd050d69cd3014",
+      "integrity": "sha256:5f3e2005aad161ce3ff7700b2603f11935348c039f9166960efd050d69cd3014"
     },
     "ghcr.io/devcontainers/features/dotnet:2": {
       "version": "2.1.3",
@@ -21,9 +21,9 @@
       "integrity": "sha256:719edd093c82315d41baaf99d09a3b546d69aaf73cf7d85ddc2fb646fd95581d"
     },
     "ghcr.io/devcontainers/features/git-lfs:1": {
-      "version": "1.2.2",
-      "resolved": "ghcr.io/devcontainers/features/git-lfs@sha256:63f984a3c3c794f25f6e188d5fe63d693d4a2e58cb033c4cef38b97650d2cf26",
-      "integrity": "sha256:63f984a3c3c794f25f6e188d5fe63d693d4a2e58cb033c4cef38b97650d2cf26"
+      "version": "1.2.3",
+      "resolved": "ghcr.io/devcontainers/features/git-lfs@sha256:7acbf0a99325949b6a2906ebf5aa421dad72b89ab8045031a60e69cb394a16b1",
+      "integrity": "sha256:7acbf0a99325949b6a2906ebf5aa421dad72b89ab8045031a60e69cb394a16b1"
     },
     "ghcr.io/devcontainers/features/git:1": {
       "version": "1.3.2",
@@ -46,9 +46,9 @@
       "integrity": "sha256:60233d58f5b8b875e38b96222004b9be2f8401887c9df9509b1dc42fe1b2f95f"
     },
     "ghcr.io/devcontainers/features/java:1": {
-      "version": "1.6.0",
-      "resolved": "ghcr.io/devcontainers/features/java@sha256:43d44db01191871fa077ebaa38794f8f5ee41cb6e1b282625db5d0ad4e61bc99",
-      "integrity": "sha256:43d44db01191871fa077ebaa38794f8f5ee41cb6e1b282625db5d0ad4e61bc99"
+      "version": "1.6.1",
+      "resolved": "ghcr.io/devcontainers/features/java@sha256:1c76462f52eea7620ba1e9194e05725e8b54bf987883dda54a5f3e60727aa0f4",
+      "integrity": "sha256:1c76462f52eea7620ba1e9194e05725e8b54bf987883dda54a5f3e60727aa0f4"
     },
     "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
       "version": "1.2.0",
