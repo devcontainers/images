@@ -9,7 +9,7 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/dotnet |
-| *Available image variants* | 9.0 /9.0-bookworm, 8.0 /8.0-bookworm, 9.0-jammy, 8.0-jammy, 8.0-noble, 6.0 /6.0-bookworm, 6.0-bullseye, 6.0-jammy, 6.0-focal ([full list](https://mcr.microsoft.com/v2/devcontainers/dotnet/tags/list)) |
+| *Available image variants* | 9.0 /9.0-bookworm, 8.0 /8.0-bookworm, 9.0-noble, 8.0-noble, 8.0-jammy, 6.0 /6.0-bookworm, 6.0-bullseye, 6.0-jammy, 6.0-focal ([full list](https://mcr.microsoft.com/v2/devcontainers/dotnet/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm`, `bullseye`, `noble`, `jammy` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Ubuntu (`-focal`, `-jammy`, `-noble`), Debian (`-bullseye`, `-bookworm`) |
