@@ -13,11 +13,12 @@ ENV VCPKG_ROOT=/usr/local/vcpkg \
 ENV PATH="${PATH}:${VCPKG_ROOT}"
 
 ARG USERNAME=vscode
+ARG CLONE_COMMITS=1
 
 # Install vcpkg itself: https://github.com/microsoft/vcpkg/blob/master/README.md#quick-start-unix
 COPY base-scripts/install-vcpkg.sh /tmp/
 RUN chmod +x /tmp/install-vcpkg.sh \
-    && ./tmp/install-vcpkg.sh ${USERNAME} \
+    && ./tmp/install-vcpkg.sh ${USERNAME} ${CLONE_COMMITS} \
     && rm -f /tmp/install-vcpkg.sh
 
 # [Optional] Uncomment this section to install additional OS packages.

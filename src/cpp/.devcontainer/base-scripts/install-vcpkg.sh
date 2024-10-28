@@ -7,6 +7,7 @@
 set -e
 
 USERNAME=${1:-"vscode"}
+CLONE_COMMITS=${2:-1}
 
 . /etc/os-release
 
@@ -56,7 +57,7 @@ usermod -a -G "vcpkg" "${USERNAME}"
 # Clone repository with ports and installer
 mkdir -p "${VCPKG_ROOT}"
 mkdir -p "${VCPKG_DOWNLOADS}"
-git clone --depth=1 \
+git clone --depth=${CLONE_COMMITS} \
     -c core.eol=lf \
     -c core.autocrlf=false \
     -c fsck.zeroPaddedFilemode=ignore \
