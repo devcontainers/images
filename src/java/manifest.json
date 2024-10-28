@@ -1,7 +1,9 @@
 {
 	"version": "1.1.15",
 	"variants": [
+		"23-bookworm",
 		"21-bookworm",
+		"23-bullseye",
 		"21-bullseye",
 		"17-bookworm",
 		"17-bullseye",
@@ -9,11 +11,15 @@
 		"11-bullseye"
 	],
 	"build": {
-		"latest": "21-bookworm",
+		"latest": "23-bookworm",
 		"rootDistro": "debian",
 		"parent": "base-debian",
 		"idMismatch": "true",
 		"variantBuildArgs": {
+			"23-bookworm": {
+				"TARGET_JAVA_VERSION": "23",
+				"BASE_IMAGE_VERSION_CODENAME": "bookworm"
+			},
 			"21-bookworm": {
 				"TARGET_JAVA_VERSION": "21",
 				"BASE_IMAGE_VERSION_CODENAME": "bookworm"
@@ -25,6 +31,10 @@
 			"11-bookworm": {
 				"TARGET_JAVA_VERSION": "11",
 				"BASE_IMAGE_VERSION_CODENAME": "bookworm"
+			},
+			"23-bullseye": {
+				"TARGET_JAVA_VERSION": "23",
+				"BASE_IMAGE_VERSION_CODENAME": "bullseye"
 			},
 			"21-bullseye": {
 				"TARGET_JAVA_VERSION": "21",
@@ -40,6 +50,10 @@
 			}
 		},
 		"architectures": {
+			"23-bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
 			"21-bookworm": [
 				"linux/amd64",
 				"linux/arm64"
@@ -49,6 +63,10 @@
 				"linux/arm64"
 			],
 			"11-bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"23-bullseye": [
 				"linux/amd64",
 				"linux/arm64"
 			],
@@ -69,6 +87,11 @@
 			"java:${VERSION}-${VARIANT}"
 		],
 		"variantTags": {
+			"23-bookworm": [
+				"java:${VERSION}-23",
+				"java:${VERSION}-23-jdk-bookworm",
+				"java:${VERSION}-bookworm"
+			],
 			"21-bookworm": [
 				"java:${VERSION}-21",
 				"java:${VERSION}-21-jdk-bookworm",
@@ -81,6 +104,10 @@
 			"11-bookworm": [
 				"java:${VERSION}-11",
 				"java:${VERSION}-11-jdk-bookworm"
+			],
+			"23-bullseye": [
+				"java:${VERSION}-23-jdk-bullseye",
+				"java:${VERSION}-bullseye"
 			],
 			"21-bullseye": [
 				"java:${VERSION}-21-jdk-bullseye",

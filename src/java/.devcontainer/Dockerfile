@@ -1,5 +1,5 @@
 # This Dockerfile uses separate build arguments instead of VARIANT
-ARG TARGET_JAVA_VERSION=21
+ARG TARGET_JAVA_VERSION=23
 ARG BASE_IMAGE_VERSION_CODENAME=bookworm
 FROM mcr.microsoft.com/devcontainers/base:${BASE_IMAGE_VERSION_CODENAME}
 
@@ -14,21 +14,37 @@ ENV LANG en_US.UTF-8
 RUN arch="$(dpkg --print-architecture)" \
 	&& case "$arch" in \
 		"amd64") \
+		if [ "$TARGET_JAVA_VERSION" -gt 21 ]; then \
+			jdkUrl="https://download.oracle.com/java/${TARGET_JAVA_VERSION}/latest/jdk-${TARGET_JAVA_VERSION}_linux-x64_bin.tar.gz"; \
+		else \
 			jdkUrl="https://aka.ms/download-jdk/microsoft-jdk-${TARGET_JAVA_VERSION}-linux-x64.tar.gz"; \
-			;; \
-		"arm64") \
+		fi \
+		;; \
+	"arm64") \
+		if [ "$TARGET_JAVA_VERSION" -gt 21 ]; then \
+			jdkUrl="https://download.oracle.com/java/${TARGET_JAVA_VERSION}/latest/jdk-${TARGET_JAVA_VERSION}_linux-aarch64_bin.tar.gz"; \
+		else \
 			jdkUrl="https://aka.ms/download-jdk/microsoft-jdk-${TARGET_JAVA_VERSION}-linux-aarch64.tar.gz"; \
-			;; \
+		fi \
+		;; \
 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; \
 	esac \
 	\
-	&& wget --progress=dot:giga -O msopenjdk.tar.gz "${jdkUrl}" \
-	&& wget --progress=dot:giga -O sha256sum.txt "${jdkUrl}.sha256sum.txt" \
+    && wget --progress=dot:giga -O msopenjdk.tar.gz "${jdkUrl}" \
+    && if [ "$TARGET_JAVA_VERSION" -gt 21 ]; then \
+        wget --progress=dot:giga -O jdk-${TARGET_JAVA_VERSION}_linux-${arch}_sha256 "${jdkUrl}.sha256"; \
+    else \
+        wget --progress=dot:giga -O jdk-${TARGET_JAVA_VERSION}_linux-${arch}_sha256sum.txt "${jdkUrl}.sha256sum.txt"; \
+    fi \
 	\
-	&& sha256sumText=$(cat sha256sum.txt) \
-	&& sha256=$(expr substr "${sha256sumText}" 1 64) \
+	&& if [ "$TARGET_JAVA_VERSION" -gt 21 ]; then \
+		sha256sumText=$(cat jdk-${TARGET_JAVA_VERSION}_linux-${arch}_sha256); \
+	else \
+		sha256sumText=$(cat jdk-${TARGET_JAVA_VERSION}_linux-${arch}_sha256sum.txt); \
+	fi \
+    && sha256=$(echo "${sha256sumText}" | awk '{print $1}') \
 	&& echo "${sha256} msopenjdk.tar.gz" | sha256sum --strict --check - \
-	&& rm sha256sum.txt* \
+	&& rm jdk-${TARGET_JAVA_VERSION}_linux-${arch}_sha256* \
 	\
 	&& mkdir -p "$JAVA_HOME" \
 	&& tar --extract \
