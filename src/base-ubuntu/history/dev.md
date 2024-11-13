@@ -11,7 +11,7 @@
 
 ## Variant: noble
 
-**Digest:** sha256:cb1aa76530ddf42a3a23a1f4e14c8787c25a5aa05131a234d0b1303b58ca30ba
+**Digest:** sha256:a0ab7b8ba553d570a32c8b297065db964f25126048599023549e9f38e8ffc9b3
 
 **Tags:**
 ```
@@ -32,13 +32,13 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu24.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9114853500ea66cff7c803b0e951754833946f3d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7ed475cb589c9e82211f71b3a5d7083b69cea93c | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.46.2 | 
+| [git](https://github.com/git/git) | 2.47.0 | 
 
 **Additional linux tools and packages**
 
@@ -59,24 +59,24 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu24.04
 | libgssapi-krb5-2 | 1.20.1-6ubuntu2.1 |
 | libicu74 | 74.2-1ubuntu3.1 |
 | libkrb5-3 | 1.20.1-6ubuntu2.1 |
-| libstdc++6 | 14-20240412-0ubuntu1 |
+| libstdc++6 | 14.2.0-4ubuntu2~24.04 |
 | locales | 2.39-0ubuntu8.3 |
 | lsb-release | 12.0-2 |
 | lsof | 4.95.0-1build3 |
 | man-db | 2.12.0-4build2 |
 | manpages | 6.7-2 |
 | manpages-dev | 6.7-2 |
-| nano | 7.2-2build1 |
+| nano | 7.2-2ubuntu0.1 |
 | ncdu | 1.19-0.1 |
 | net-tools | 2.10-0.1ubuntu4 |
 | openssh-client | 1:9.6p1-3ubuntu13.5 |
-| procps | 2:4.0.4-4ubuntu3.1 |
+| procps | 2:4.0.4-4ubuntu3.2 |
 | psmisc | 23.7-1build1 |
 | rsync | 3.2.7-1ubuntu1 |
 | strace | 6.8-0ubuntu2 |
 | sudo | 1.9.15p5-3ubuntu5 |
-| unzip | 6.0-28ubuntu4 |
-| vim-tiny | 2:9.1.0016-1ubuntu7.2 |
+| unzip | 6.0-28ubuntu4.1 |
+| vim-tiny | 2:9.1.0016-1ubuntu7.3 |
 | wget | 1.21.4-1ubuntu4.1 |
 | zip | 3.0-13build1 |
 | zlib1g | 1:1.3.dfsg-3.1ubuntu2.1 |
@@ -84,7 +84,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu24.04
 
 ## Variant: jammy
 
-**Digest:** sha256:4619d2ecda5e237c1fcfff4848b7fdf5b2f45446d2488d1aa103accd6092c112
+**Digest:** sha256:b24d02f3dac94f5116b8a3b134cc3d62a0826e4db0372537adc10bb71c1e47b1
 
 **Tags:**
 ```
@@ -106,13 +106,13 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9114853500ea66cff7c803b0e951754833946f3d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7ed475cb589c9e82211f71b3a5d7083b69cea93c | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.46.2 | 
+| [git](https://github.com/git/git) | 2.47.0 | 
 
 **Additional linux tools and packages**
 
@@ -141,7 +141,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 | man-db | 2.10.2-1 |
 | manpages | 5.10-1ubuntu1 |
 | manpages-dev | 5.10-1ubuntu1 |
-| nano | 6.2-1 |
+| nano | 6.2-1ubuntu0.1 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1ubuntu5 |
 | openssh-client | 1:8.9p1-3ubuntu0.10 |
@@ -151,7 +151,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 | strace | 5.16-0ubuntu3 |
 | sudo | 1.9.9-1ubuntu2.4 |
 | unzip | 6.0-26ubuntu3.2 |
-| vim-tiny | 2:8.2.3995-1ubuntu2.18 |
+| vim-tiny | 2:8.2.3995-1ubuntu2.19 |
 | wget | 1.21.2-2ubuntu1.1 |
 | zip | 3.0-12build2 |
 | zlib1g | 1:1.2.11.dfsg-2ubuntu9.2 |
@@ -159,7 +159,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 ## Variant: focal
 
-**Digest:** sha256:12ac103b111ce24caab81a7cd6e7b66d6ccccba5aee1c59c0b993fbc7c18f53d
+**Digest:** sha256:708deba62d3ef13bb4f5075112d401f9accd1dc068dafe68e0242281da588fc3
 
 **Tags:**
 ```
@@ -180,13 +180,13 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9114853500ea66cff7c803b0e951754833946f3d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 7ed475cb589c9e82211f71b3a5d7083b69cea93c | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.46.2 | 
+| [git](https://github.com/git/git) | 2.47.0 | 
 
 **Additional linux tools and packages**
 
@@ -217,7 +217,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 | man-db | 2.9.1-1 |
 | manpages | 5.05-1 |
 | manpages-dev | 5.05-1 |
-| nano | 4.8-1ubuntu1 |
+| nano | 4.8-1ubuntu1.1 |
 | ncdu | 1.14.1-1 |
 | net-tools | 1.60+git20180626.aebd88e-1ubuntu1 |
 | openssh-client | 1:8.2p1-4ubuntu0.11 |
@@ -227,7 +227,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 | strace | 5.5-3ubuntu1 |
 | sudo | 1.8.31-1ubuntu1.5 |
 | unzip | 6.0-25ubuntu1.2 |
-| vim-tiny | 2:8.1.2269-1ubuntu5.24 |
+| vim-tiny | 2:8.1.2269-1ubuntu5.25 |
 | wget | 1.20.3-1ubuntu2.1 |
 | zip | 3.0-11build1 |
 | zlib1g | 1:1.2.11.dfsg-2ubuntu1.5 |
