@@ -14,7 +14,9 @@ ENV LANG en_US.UTF-8
 RUN arch="$(dpkg --print-architecture)" \
 	&& case "$arch" in \
 		"amd64") \
+		# jdk 23 is not available from aka.ms
 		if [ "$TARGET_JAVA_VERSION" -gt 21 ]; then \
+		# https://github.com/adoptium/temurin23-binaries/releases/download/jdk-23.0.1%2B11/OpenJDK23U-debugimage_x64_linux_hotspot_23.0.1_11.tar.gz
 			jdkUrl="https://download.oracle.com/java/${TARGET_JAVA_VERSION}/latest/jdk-${TARGET_JAVA_VERSION}_linux-x64_bin.tar.gz"; \
 		else \
 			jdkUrl="https://aka.ms/download-jdk/microsoft-jdk-${TARGET_JAVA_VERSION}-linux-x64.tar.gz"; \
@@ -22,6 +24,7 @@ RUN arch="$(dpkg --print-architecture)" \
 		;; \
 	"arm64") \
 		if [ "$TARGET_JAVA_VERSION" -gt 21 ]; then \
+		# https://github.com/adoptium/temurin23-binaries/releases/download/jdk-23.0.1%2B11/OpenJDK23U-debugimage_aarch64_linux_hotspot_23.0.1_11.tar.gz
 			jdkUrl="https://download.oracle.com/java/${TARGET_JAVA_VERSION}/latest/jdk-${TARGET_JAVA_VERSION}_linux-aarch64_bin.tar.gz"; \
 		else \
 			jdkUrl="https://aka.ms/download-jdk/microsoft-jdk-${TARGET_JAVA_VERSION}-linux-aarch64.tar.gz"; \
@@ -32,6 +35,8 @@ RUN arch="$(dpkg --print-architecture)" \
 	\
     && wget --progress=dot:giga -O msopenjdk.tar.gz "${jdkUrl}" \
     && if [ "$TARGET_JAVA_VERSION" -gt 21 ]; then \
+	# https://github.com/adoptium/temurin23-binaries/releases/download/jdk-23.0.1%2B11/OpenJDK23U-debugimage_x64_linux_hotspot_23.0.1_11.tar.gz.sha256.txt
+	# https://github.com/adoptium/temurin23-binaries/releases/download/jdk-23.0.1%2B11/OpenJDK23U-debugimage_aarch64_linux_hotspot_23.0.1_11.tar.gz.sha256.txt
         wget --progress=dot:giga -O jdk-${TARGET_JAVA_VERSION}_linux-${arch}_sha256 "${jdkUrl}.sha256"; \
     else \
         wget --progress=dot:giga -O jdk-${TARGET_JAVA_VERSION}_linux-${arch}_sha256sum.txt "${jdkUrl}.sha256sum.txt"; \
