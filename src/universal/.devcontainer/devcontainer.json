@@ -52,7 +52,7 @@
             "version": "latest"
         },
         "ghcr.io/devcontainers/features/git:1": {
-            "version": "latest",
+            "version": "2.47.0",
             "ppa": "false"
         },
         "ghcr.io/devcontainers/features/git-lfs:1": {
