@@ -10,7 +10,7 @@
 
 ## Variant: 3.3-bookworm
 
-**Digest:** sha256:b84117e72432a4e22a65d4ab5271edb525fc5b068ba628c7b6f4553ebfcf379b
+**Digest:** sha256:c06cffd6042574393cfff3a105b2d2fdb179325cf37ae1140b62220b1eab2cf7
 
 **Tags:**
 ```
@@ -31,23 +31,23 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Ruby](https://www.ruby-lang.org/en/) | 3.3.5 | /usr/local |
+| [Ruby](https://www.ruby-lang.org/en/) | 3.3.6 | /usr/local |
 | [Jekyll](https://jekyllrb.com/) | 4.3.4 | /usr/local/bundle/bin |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9114853500ea66cff7c803b0e951754833946f3d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6c91a5e389a26f532ba2fdbe40216b0d79e33124 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 179d45050be0a71fd57591b0ed8aedf9b177ba10 | /usr/local/share/nvm |
 | [rbenv](https://github.com/rbenv/rbenv.git) | c335ab83de40d48093870d300de52c61bbd68359 | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | a22ff72e326227da2b5141579ffef13114d20695 | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 7ccb143c90f523e891c6780e2f9ba15415c5443f | /usr/local/share/ruby-build |
 
 **Ruby gems and tools**
 
 | Tool / gem | Version |
 |------------|---------|
-| bundler | 2.5.20 |
+| bundler | 2.5.23 |
 | jekyll | 4.3.4 |
 | github-pages | 232 |
 
@@ -55,7 +55,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bookworm
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.46.2 | 
+| [git](https://github.com/git/git) | 2.47.0 | 
 | [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
 
 **Additional linux tools and packages**
@@ -65,7 +65,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bookworm
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
 | ca-certificates | 20230311 |
-| curl | 7.88.1-10+deb12u7 |
+| curl | 7.88.1-10+deb12u8 |
 | dialog | 1.3-20230209-1 |
 | git | 1:2.39.5-0+deb12u1 |
 | gnupg2 | 2.2.40-1.1 |
@@ -73,13 +73,13 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bookworm
 | iproute2 | 6.1.0-3 |
 | jq | 1.6-2.1 |
 | less | 590-2.1~deb12u2 |
-| libc6 | 2.36-9+deb12u8 |
+| libc6 | 2.36-9+deb12u9 |
 | libgssapi-krb5-2 | 1.20.1-2+deb12u2 |
 | libicu72 | 72.1-3 |
 | libkrb5-3 | 1.20.1-2+deb12u2 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14 |
-| locales | 2.36-9+deb12u8 |
+| locales | 2.36-9+deb12u9 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
@@ -104,7 +104,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bookworm
 
 ## Variant: 3.3-bullseye
 
-**Digest:** sha256:a5f425edc5cca56ae58ff7d50e5b30a614e0c21112b1ecb9bea3546e90037998
+**Digest:** sha256:251e2ae0f62a5bad1957e9b8055449998a040090840fd1e023cd5f9945662a85
 
 **Tags:**
 ```
@@ -124,23 +124,23 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Ruby](https://www.ruby-lang.org/en/) | 3.3.5 | /usr/local |
+| [Ruby](https://www.ruby-lang.org/en/) | 3.3.6 | /usr/local |
 | [Jekyll](https://jekyllrb.com/) | 4.3.4 | /usr/local/bundle/bin |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9114853500ea66cff7c803b0e951754833946f3d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6c91a5e389a26f532ba2fdbe40216b0d79e33124 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 179d45050be0a71fd57591b0ed8aedf9b177ba10 | /usr/local/share/nvm |
 | [rbenv](https://github.com/rbenv/rbenv.git) | c335ab83de40d48093870d300de52c61bbd68359 | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | a22ff72e326227da2b5141579ffef13114d20695 | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 7ccb143c90f523e891c6780e2f9ba15415c5443f | /usr/local/share/ruby-build |
 
 **Ruby gems and tools**
 
 | Tool / gem | Version |
 |------------|---------|
-| bundler | 2.5.20 |
+| bundler | 2.5.23 |
 | jekyll | 4.3.4 |
 | github-pages | 232 |
 
@@ -148,7 +148,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.46.2 | 
+| [git](https://github.com/git/git) | 2.47.0 | 
 | [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
 
 **Additional linux tools and packages**
@@ -158,7 +158,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 | apt-transport-https | 2.2.4 |
 | apt-utils | 2.2.4 |
 | ca-certificates | 20210119 |
-| curl | 7.74.0-1.3+deb11u13 |
+| curl | 7.74.0-1.3+deb11u14 |
 | dialog | 1.3-20201126-1 |
 | git | 1:2.30.2-1+deb11u3 |
 | gnupg2 | 2.2.27-2+deb11u2 |
@@ -171,7 +171,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 | libicu67 | 67.1-7 |
 | libkrb5-3 | 1.18.3-6+deb11u5 |
 | liblttng-ust0 | 2.12.1-1 |
-| libssl1.1 | 1.1.1w-0+deb11u1 |
+| libssl1.1 | 1.1.1w-0+deb11u2 |
 | libstdc++6 | 10.2.1-6 |
 | locales | 2.31-13+deb11u11 |
 | lsb-release | 11.1.0 |
