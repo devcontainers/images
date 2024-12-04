@@ -1,10 +1,6 @@
 #!/bin/bash
 
 # vulnerabilities:
-# streamlit - [GHSA-rxff-vr5r-8cj5]
-# notebook, jupyterlab - [GHSA-9q39-rmj3-p4r2]
-# cryptography, pyopenssl - [GHSA-h4gh-qq45-vh27]
-# nltk - [GHSA-cgvx-9447-vcch]
 # werkzeug - [GHSA-f9vj-2wh5-fj8j]
 
 vulnerable_packages=( "mistune=3.0.1" "werkzeug=3.1.3" "transformers=4.36.0" "cryptography=43.0.1" "jupyter-lsp=2.2.2" "scrapy=2.11.2" \
