@@ -6,14 +6,14 @@
       "integrity": "sha256:63c96e8ac33f5630300d8883e2ec3123278de70d318589af596ea1954846014d"
     },
     "ghcr.io/devcontainers/features/java:1": {
-      "version": "1.6.1",
-      "resolved": "ghcr.io/devcontainers/features/java@sha256:1c76462f52eea7620ba1e9194e05725e8b54bf987883dda54a5f3e60727aa0f4",
-      "integrity": "sha256:1c76462f52eea7620ba1e9194e05725e8b54bf987883dda54a5f3e60727aa0f4"
+      "version": "1.6.2",
+      "resolved": "ghcr.io/devcontainers/features/java@sha256:a45f5fbb4b154a1d40b79ac840bbf1dc025e0eb67fb8c0dc73cd6681705b22c2",
+      "integrity": "sha256:a45f5fbb4b154a1d40b79ac840bbf1dc025e0eb67fb8c0dc73cd6681705b22c2"
     },
     "ghcr.io/devcontainers/features/node:1": {
-      "version": "1.6.0",
-      "resolved": "ghcr.io/devcontainers/features/node@sha256:902b97a02d04ffd3404579d793f3e101d1126d4d198929196c5872ed75a6d351",
-      "integrity": "sha256:902b97a02d04ffd3404579d793f3e101d1126d4d198929196c5872ed75a6d351"
+      "version": "1.6.1",
+      "resolved": "ghcr.io/devcontainers/features/node@sha256:71590121aaf7b2040f3e1e2dfc4bb9a1389277fd5a88a7199094542b82ce5340",
+      "integrity": "sha256:71590121aaf7b2040f3e1e2dfc4bb9a1389277fd5a88a7199094542b82ce5340"
     }
   }
 }
