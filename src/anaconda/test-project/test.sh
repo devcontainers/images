@@ -56,7 +56,6 @@ checkPythonPackageVersion "scrapy" "2.11.2"
 checkPythonPackageVersion "requests" "2.32.2"
 checkPythonPackageVersion "scikit-learn" "1.5.0"
 checkPythonPackageVersion "zipp" "3.19.1"
-checkPythonPackageVersion "imagecodecs" "2023.9.18"
 
 checkCondaPackageVersion "pyopenssl" "24.2.1"
 checkCondaPackageVersion "requests" "2.32.2"
