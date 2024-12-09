@@ -4,7 +4,7 @@
 # werkzeug - [GHSA-f9vj-2wh5-fj8j]
 
 vulnerable_packages=( "mistune=3.0.1" "werkzeug=3.0.6" "transformers=4.36.0" "cryptography=43.0.1" "jupyter-lsp=2.2.2" "scrapy=2.11.2" \
-                      "zipp=3.19.1" "imagecodecs=2023.1.23" )
+                      "zipp=3.19.1" )
 
 # Define the number of rows (based on the length of vulnerable_packages)
 rows=${#vulnerable_packages[@]}
