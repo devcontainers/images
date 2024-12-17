@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:47bbd61431eff40368c27183084d24bb1ecfb42767410a02aabfd4525c83aed2
+**Digest:** sha256:3689249724ec1b846d81c6d2703c9fba8b72075795d2b73bc6bdbeba3b68eff5
 
 **Tags:**
 ```
@@ -57,7 +57,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | Tool | Version | Path |
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.47.0 | 
-| [conda](https://github.com/conda/conda) | 24.9.2 | /opt/conda |
+| [conda](https://github.com/conda/conda) | 24.11.1 | /opt/conda |
 
 **Additional linux tools and packages**
 
