@@ -130,7 +130,7 @@ If you would prefer to have multiple Python versions in your container, use `Doc
 
 ```Dockerfile
 FROM ubuntu:jammy
-ARG PYTHON_PACKAGES="python3.8 python3.9 python3 python3-pip python3-venv"
+ARG PYTHON_PACKAGES="python3.13 python3.12 python3 python3-pip python3-venv"
 RUN apt-get update && apt-get install --no-install-recommends -yq software-properties-common \
      && add-apt-repository ppa:deadsnakes/ppa && apt-get update \
      && apt-get install -yq --no-install-recommends ${PYTHON_PACKAGES} \
