@@ -10,7 +10,7 @@
 
 ## Variant: bookworm
 
-**Digest:** sha256:5c959a758ae1ae532da6e31ffb566dc7a2ae18e4b1c834ede5134742f177dfea
+**Digest:** sha256:4d574713c1407586d87e5c7dfe066b8e560652ee31a15ec9273a6eaade3e9209
 
 **Tags:**
 ```
@@ -37,14 +37,14 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6c91a5e389a26f532ba2fdbe40216b0d79e33124 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 69a6359f7cf8978d464573fb7b023ee3cd00181a | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 179d45050be0a71fd57591b0ed8aedf9b177ba10 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.47.0 | 
+| [git](https://github.com/git/git) | 2.47.1 | 
 
 **Additional linux tools and packages**
 
@@ -92,7 +92,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bookworm
 
 ## Variant: bullseye
 
-**Digest:** sha256:90066421c3e71df161b745a24fa8acbe0bddac9613ba0b816c478136dcc32285
+**Digest:** sha256:59ce042daca50457d33c8ab84508ad8463fbbdf7ea4407f36a01d37b0a810954
 
 **Tags:**
 ```
@@ -118,14 +118,14 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6c91a5e389a26f532ba2fdbe40216b0d79e33124 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 69a6359f7cf8978d464573fb7b023ee3cd00181a | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 179d45050be0a71fd57591b0ed8aedf9b177ba10 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.47.0 | 
+| [git](https://github.com/git/git) | 2.47.1 | 
 
 **Additional linux tools and packages**
 

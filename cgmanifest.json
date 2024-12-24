@@ -191,7 +191,17 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "6c91a5e389a26f532ba2fdbe40216b0d79e33124"
+                    "commitHash": "69a6359f7cf8978d464573fb7b023ee3cd00181a"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "git",
+                    "Version": "2.47.1",
+                    "DownloadUrl": "https://github.com/git/git"
                 }
             }
         },
@@ -291,7 +301,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "834977918592e4f5d5ec5fe48ba338c608faf9f9"
+                    "commitHash": "b7601ed37e1e1ce11a4f61b4b94a23e39d465f1d"
                 }
             }
         },
@@ -519,16 +529,6 @@
         },
         {
             "Component": {
-                "Type": "git",
-                "Git": {
-                    "Name": "Oh My Zsh!",
-                    "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "ccbe504f224a0aae688aaa729d4258e3392a9fc8"
-                }
-            }
-        },
-        {
-            "Component": {
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Image: golang",
@@ -602,7 +602,7 @@
                 "Type": "npm",
                 "Npm": {
                     "Name": "eslint",
-                    "Version": "9.15.0"
+                    "Version": "9.16.0"
                 }
             }
         },
@@ -612,17 +612,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "6c91a5e389a26f532ba2fdbe40216b0d79e33124"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "git",
-                "Git": {
-                    "Name": "Oh My Zsh!",
-                    "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "ccbe504f224a0aae688aaa729d4258e3392a9fc8"
+                    "commitHash": "69a6359f7cf8978d464573fb7b023ee3cd00181a"
                 }
             }
         },
@@ -725,7 +715,7 @@
                 "Git": {
                     "Name": "rbenv",
                     "repositoryUrl": "https://github.com/rbenv/rbenv.git",
-                    "commitHash": "c335ab83de40d48093870d300de52c61bbd68359"
+                    "commitHash": "efeab7f8eebece9063ba8d539e82f85831154105"
                 }
             }
         },
@@ -774,7 +764,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "pylint",
-                    "Version": "3.3.1"
+                    "Version": "3.3.2"
                 }
             }
         },
@@ -846,7 +836,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "bandit",
-                    "Version": "1.7.10"
+                    "Version": "1.8.0"
                 }
             }
         },
@@ -855,7 +845,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "virtualenv",
-                    "Version": "20.27.1"
+                    "Version": "20.28.0"
                 }
             }
         },
@@ -883,7 +873,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Xdebug",
-                    "Version": "3.3.2",
+                    "Version": "3.4.0",
                     "DownloadUrl": "https://xdebug.org/"
                 }
             }
@@ -893,7 +883,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Composer",
-                    "Version": "2.8.3",
+                    "Version": "2.8.4",
                     "DownloadUrl": "https://getcomposer.org/"
                 }
             }
@@ -982,6 +972,15 @@
                 "Pip": {
                     "Name": "black",
                     "Version": "24.8.0"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "Pip",
+                "Pip": {
+                    "Name": "bandit",
+                    "Version": "1.7.10"
                 }
             }
         },
@@ -1170,7 +1169,7 @@
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "rustfmt",
-                    "Version": "1.7.1"
+                    "Version": "1.8.0"
                 }
             }
         },
@@ -1179,7 +1178,7 @@
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "rust-analysis",
-                    "Version": "1.82.0"
+                    "Version": "1.83.0"
                 }
             }
         },
@@ -1188,7 +1187,7 @@
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "rust-src",
-                    "Version": "1.82.0"
+                    "Version": "1.83.0"
                 }
             }
         },
@@ -1197,7 +1196,7 @@
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "clippy",
-                    "Version": "1.82.0"
+                    "Version": "1.83.0"
                 }
             }
         },
@@ -1235,7 +1234,7 @@
                 "Type": "npm",
                 "Npm": {
                     "Name": "typescript",
-                    "Version": "5.6.3"
+                    "Version": "5.7.2"
                 }
             }
         },
@@ -1304,7 +1303,7 @@
                 "Type": "linux",
                 "Linux": {
                     "Name": "git-lfs",
-                    "Version": "3.5.1",
+                    "Version": "3.6.0",
                     "Distribution": "ubuntu",
                     "Release": "20.04",
                     "Pool-URL": "https://packagecloud.io/github/git-lfs/ubuntu",
@@ -1317,7 +1316,7 @@
                 "Type": "linux",
                 "Linux": {
                     "Name": "moby-cli",
-                    "Version": "27.0.3-ubuntu20.04u1",
+                    "Version": "27.3.1-ubuntu20.04u1",
                     "Distribution": "ubuntu",
                     "Release": "20.04",
                     "Pool-URL": "https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod",
@@ -1330,7 +1329,7 @@
                 "Type": "linux",
                 "Linux": {
                     "Name": "moby-engine",
-                    "Version": "27.0.3-ubuntu20.04u1",
+                    "Version": "27.3.1-ubuntu20.04u1",
                     "Distribution": "ubuntu",
                     "Release": "20.04",
                     "Pool-URL": "https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod",
@@ -1343,7 +1342,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "numpy",
-                    "Version": "2.1.3"
+                    "Version": "2.2.0"
                 }
             }
         },
@@ -1370,7 +1369,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "matplotlib",
-                    "Version": "3.9.2"
+                    "Version": "3.9.3"
                 }
             }
         },
@@ -1388,7 +1387,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "scikit-learn",
-                    "Version": "1.5.2"
+                    "Version": "1.6.0"
                 }
             }
         },
@@ -1451,7 +1450,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "6c91a5e389a26f532ba2fdbe40216b0d79e33124"
+                    "commitHash": "69a6359f7cf8978d464573fb7b023ee3cd00181a"
                 }
             }
         },
@@ -1470,7 +1469,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Xdebug",
-                    "Version": "3.3.2",
+                    "Version": "3.4.0",
                     "DownloadUrl": "https://xdebug.org/"
                 }
             }
@@ -1480,7 +1479,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "kubectl",
-                    "Version": "v1.31.2",
+                    "Version": "v1.31.4",
                     "DownloadUrl": "https://github.com/kubernetes/kubectl"
                 }
             }
@@ -1500,7 +1499,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Compose",
-                    "Version": "2.30.3",
+                    "Version": "2.31.0",
                     "DownloadUrl": "https://github.com/docker/compose"
                 }
             }
@@ -1510,7 +1509,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "GitHub CLI",
-                    "Version": "2.62.0",
+                    "Version": "2.63.2",
                     "DownloadUrl": "https://github.com/cli/cli"
                 }
             }
@@ -1520,7 +1519,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Go",
-                    "Version": "1.23.3",
+                    "Version": "1.23.4",
                     "DownloadUrl": "https://golang.org/dl"
                 }
             }
