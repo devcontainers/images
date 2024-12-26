@@ -3,7 +3,8 @@
 # vulnerabilities:
 # werkzeug - [GHSA-f9vj-2wh5-fj8j]
 
-vulnerable_packages=( "mistune=3.0.1" "transformers=4.36.0" "cryptography=43.0.1" "jupyter-lsp=2.2.2" "scrapy=2.11.2" "zipp=3.19.1")
+vulnerable_packages=( "mistune=3.0.1" "transformers=4.36.0" "cryptography=43.0.1" "jupyter-lsp=2.2.2" "scrapy=2.11.2" \ 
+                      "zipp=3.19.1" "tornado=6.4.2")
 
 # Define the number of rows (based on the length of vulnerable_packages)
 rows=${#vulnerable_packages[@]}
