@@ -1,12 +1,10 @@
 {
-	"version": "1.2.10",
+	"version": "1.2.12",
 	"variants": [
 		"8.3-apache-bookworm",
 		"8.2-apache-bookworm",
-		"8.1-apache-bookworm",
 		"8.3-apache-bullseye",
-		"8.2-apache-bullseye",
-		"8.1-apache-bullseye"
+		"8.2-apache-bullseye"
 	],
 	"build": {
 		"latest": "8.3-apache-bookworm",
@@ -20,19 +18,11 @@
 				"linux/amd64",
 				"linux/arm64"
 			],
-			"8.1-apache-bookworm": [
-				"linux/amd64",
-				"linux/arm64"
-			],
 			"8.3-apache-bullseye": [
 				"linux/amd64",
 				"linux/arm64"
 			],
 			"8.2-apache-bullseye": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"8.1-apache-bullseye": [
 				"linux/amd64",
 				"linux/arm64"
 			]
@@ -52,10 +42,6 @@
 				"php:${VERSION}-8.2",
 				"php:${VERSION}-8.2-bookworm"
 			],
-			"8.1-apache-bookworm": [
-				"php:${VERSION}-8.1",
-				"php:${VERSION}-8.1-bookworm"
-			],
 			"8.3-apache-bullseye": [
 				"php:${VERSION}-8-bullseye",
 				"php:${VERSION}-8.3-bullseye",
@@ -63,9 +49,6 @@
 			],
 			"8.2-apache-bullseye": [
 				"php:${VERSION}-8.2-bullseye"
-			],
-			"8.1-apache-bullseye": [
-				"php:${VERSION}-8.1-bullseye"
 			]
 		}
 	},
