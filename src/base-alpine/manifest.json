@@ -1,6 +1,7 @@
 {
 	"version": "0.209.7",
 	"variants": [
+		"3.21",		
 		"3.20",
 		"3.19",
 		"3.18"
@@ -17,7 +18,7 @@
 			"base:${VERSION}-alpine${VARIANT}"
 		],
 		"variantTags": {
-			"3.20": [
+			"3.21": [
 				"base:${VERSION}-alpine"
 			]
 		}
