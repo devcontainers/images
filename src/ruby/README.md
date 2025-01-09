@@ -23,7 +23,7 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 
 - `mcr.microsoft.com/devcontainers/ruby`     (latest)
 - `mcr.microsoft.com/devcontainers/ruby:3`   (or `3-bookworm`, `3-bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/ruby:3.3` (or `3.4-bookworm`, `3.4-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/ruby:3.4` (or `3.4-bookworm`, `3.4-bullseye` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/ruby:3.3` (or `3.3-bookworm`, `3.3-bullseye` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/ruby:3.2` (or `3.2-bookworm`, `3.2-bullseye` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/ruby:3.1` (or `3.1-bookworm`, `3.1-bullseye` to pin to an OS version)
