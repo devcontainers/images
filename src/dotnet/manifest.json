@@ -5,11 +5,7 @@
 		"9.0-noble",
 		"8.0-bookworm-slim",
 		"8.0-noble",
-		"8.0-jammy",
-		"6.0-bookworm-slim",
-		"6.0-bullseye-slim",
-		"6.0-jammy",
-		"6.0-focal"
+		"8.0-jammy"
 	],
 	"build": {
 		"latest": "9.0-bookworm-slim",
@@ -37,21 +33,6 @@
 			"8.0-jammy": [
 				"linux/amd64",
 				"linux/arm64"
-			],
-			"6.0-bookworm-slim": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"6.0-bullseye-slim": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"6.0-jammy": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"6.0-focal": [
-				"linux/amd64"
 			]
 		},
 		"variantTags": {
@@ -62,13 +43,6 @@
 			"8.0-bookworm-slim": [
 				"dotnet:${VERSION}-8.0",
 				"dotnet:${VERSION}-8.0-bookworm"
-			],
-			"6.0-bookworm-slim": [
-				"dotnet:${VERSION}-6.0",
-				"dotnet:${VERSION}-6.0-bookworm"
-			],
-			"6.0-bullseye-slim": [
-				"dotnet:${VERSION}-6.0-bullseye"
 			]
 		}
 	},
