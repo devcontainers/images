@@ -9,7 +9,7 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/ruby |
-| *Available image variants* | 3 / 3-bookworm, 3.3 / 3.3-bookworm, 3.2 / 3.2-bookworm, 3.1 / 3.1-bookworm, 3-bullseye, 3.3-bullseye, 3.2-bullseye, 3.1-bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/ruby/tags/list)) |
+| *Available image variants* | 3 / 3-bookworm, 3.4 / 3.4-bookworm, 3.3 / 3.3-bookworm, 3.2 / 3.2-bookworm, 3.1 / 3.1-bookworm, 3-bullseye, 3.4-bullseye, 3.3-bullseye, 3.2-bullseye, 3.1-bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/ruby/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm` , and `bullseye` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
@@ -23,6 +23,7 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 
 - `mcr.microsoft.com/devcontainers/ruby`     (latest)
 - `mcr.microsoft.com/devcontainers/ruby:3`   (or `3-bookworm`, `3-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/ruby:3.4` (or `3.4-bookworm`, `3.4-bullseye` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/ruby:3.3` (or `3.3-bookworm`, `3.3-bullseye` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/ruby:3.2` (or `3.2-bookworm`, `3.2-bullseye` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/ruby:3.1` (or `3.1-bookworm`, `3.1-bullseye` to pin to an OS version)
