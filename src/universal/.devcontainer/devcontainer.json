@@ -7,7 +7,7 @@
         "ghcr.io/devcontainers/features/common-utils:2": {
             "username": "codespace",
             "userUid": "1001"
-            //"userGid": "1000"
+            //"userGid": "1000",
         },
         "ghcr.io/devcontainers/features/dotnet:2": {
             "version": "8.0",
