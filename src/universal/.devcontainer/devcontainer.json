@@ -104,7 +104,7 @@
     "remoteUser": "codespace",
     "containerUser": "codespace",
     "updateRemoteUserUID": false,
-	"postStartCommand": "sudo chown -R 1000:1000 /workspaces/images/",
+    "postStartCommand": "sudo chown -R 1000:1000 /workspaces/images/",
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     // "forwardPorts": [],
 
