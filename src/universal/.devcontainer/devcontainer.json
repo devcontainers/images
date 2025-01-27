@@ -6,8 +6,8 @@
     "features": {
         "ghcr.io/devcontainers/features/common-utils:2": {
             "username": "codespace",
-            "userUid": "1001"
-            //"userGid": "1000",
+            "userUid": "1000",
+            "userGid": "1000"
         },
         "ghcr.io/devcontainers/features/dotnet:2": {
             "version": "8.0",
@@ -103,7 +103,8 @@
     ],
     "remoteUser": "codespace",
     "containerUser": "codespace",
-
+    "updateRemoteUserUID": false,
+	"postStartCommand": "sudo chown -R 1000:1000 /workspaces/images/",
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     // "forwardPorts": [],
 
