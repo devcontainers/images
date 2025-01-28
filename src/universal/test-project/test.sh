@@ -133,6 +133,19 @@ check "zsh" zsh --version
 check "RAILS_DEVELOPMENT_HOSTS is set correctly" echo $RAILS_DEVELOPMENT_HOSTS | grep ".githubpreview.dev,.preview.app.github.dev,.app.github.dev"
 
 # Check that we can run a puppeteer node app.
+# installing google chrome for puppeteer
+cd /
+sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+cd /opt/google/chrome/
+sudo chown root:root chrome-sandbox
+sudo chmod 4755 chrome-sandbox
+sudo cp -p chrome-sandbox /usr/local/sbin/chrome-devel-sandbox
+
+# export CHROME_DEVEL_SANDBOX env variable
+export CHROME_DEVEL_SANDBOX=/usr/local/sbin/chrome-devel-sandbox
+cd /workspaces/images/src/universal/test-project/
 yarn
 check "run-puppeteer" node puppeteer.js
 
