@@ -103,8 +103,18 @@
     ],
     "remoteUser": "codespace",
     "containerUser": "codespace",
+	// This is done to ensure that for universal container, UID & GID's of the remoteUser aren’t replaced
+	// Ref:- https://github.com/devcontainers/internal/issues/247 
     "updateRemoteUserUID": false,
-    "postStartCommand": "sudo chown -R 1000:1000 /workspaces/images/",
+	// This variable is set to ensure puppeteer library gets the sandbox location by default.
+	// Ref:- https://github.com/devcontainers/internal/issues/249
+    "remoteEnv": {
+        "CHROME_DEVEL_SANDBOX": "/usr/local/sbin/chrome-devel-sandbox"
+    },
+	// This is done to ensure that the /workspaces/images/ folder which is directly mounted from local host, 
+	// also owned by the remoteUser.
+	// Ref:- https://github.com/devcontainers/internal/issues/247
+    "postCreateCommand": "sudo chown -R 1000:1000 /workspaces/images/",  
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     // "forwardPorts": [],
 
