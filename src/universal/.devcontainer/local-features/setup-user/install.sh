@@ -122,7 +122,7 @@ tee -a "$SETUP_USER_PRIV_SCRIPT_PATH" > /dev/null \
 << 'EOF'
 
 echo “Setting up the right privilege…”
-
+echo "Need to check the increased size.."
 sudo chown -R "${USERNAME}:${USERNAME}" /usr/share/dotnet
 sudo chmod g+r+w+s /usr/share/dotnet
 sudo chmod -R g+r+w /usr/share/dotnet
