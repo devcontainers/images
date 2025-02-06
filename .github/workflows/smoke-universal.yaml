@@ -19,9 +19,23 @@ jobs:
     - name: Checkout
       id: checkout
       uses: actions/checkout@v3
+
+    - name: Get userUid from host machine
+      id: get-useruid
+      run: |
+       set -e
+       USER_UID=$(id -u)
+       USER_GID=$(id -g)
+       echo "UserUid::$USER_UID"
+       echo "UserGid::$USER_GID"
+       echo "USER_UID=$USER_UID" >> $GITHUB_ENV
+       echo "USER_GID=$USER_GID" >> $GITHUB_ENV 
+            
     - name: Smoke test
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USER_UID: ${{ env.USER_UID }}
+          USER_GID: ${{ env.USER_GID }}          
       id: smoke_test
       uses: ./.github/actions/smoke-test
       with:

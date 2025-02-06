@@ -6,8 +6,11 @@
     "features": {
         "ghcr.io/devcontainers/features/common-utils:2": {
             "username": "codespace",
-            "userUid": "1000",
-            "userGid": "1000"
+						//Getting the UID & GID values of the host machine via GitHub actions
+            //"userUid": "1000",
+            //"userGid": "1000"
+            "userUid": "${localEnv:USER_UID}",
+            "userGid": "${localEnv:USER_GID}"						
         },
         "ghcr.io/devcontainers/features/dotnet:2": {
             "version": "8.0",
@@ -108,7 +111,6 @@
     "remoteEnv": {
         "CHROME_DEVEL_SANDBOX": "/usr/local/sbin/chrome-devel-sandbox"
     },
-	"postCreateCommand": "/usr/local/share/setup-user-priv.sh",
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     // "forwardPorts": [],
 
