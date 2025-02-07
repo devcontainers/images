@@ -32,6 +32,10 @@
 	//        "ASPNETCORE_Kestrel__Certificates__Default__Path": "/home/vscode/.aspnet/https/aspnetapp.pfx",
 	//    },
 	//
+
+	// allow jetbrains IDE read self mount directory.
+	"postCreateCommand": "git config --global --add safe.directory /IdeaProjects/*",
+	
 	// 3. Do one of the following depending on your scenario:
 	//    * When using GitHub Codespaces and/or Remote - Containers:
 	//      1. Start the container
