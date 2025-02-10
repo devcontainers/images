@@ -93,8 +93,6 @@ RUN apt-get clean -y && rm -rf /tmp/scripts
 # Mount for docker-in-docker 
 VOLUME [ "/var/lib/docker" ]
 
-# Fire Docker/Moby script if needed
-ENTRYPOINT [ "/usr/local/share/docker-init.sh", "/usr/local/share/ssh-init.sh"]
 CMD [ "sleep", "infinity" ]
 
 # [Optional] Install debugger for development of Codespaces - Not in resulting image by default
