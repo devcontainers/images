@@ -18,8 +18,8 @@
             "version": "latest"
         },
         "ghcr.io/devcontainers/features/node:1": {
-            "version": "20",
-            "additionalVersions": "18"
+            "version": "22",
+            "additionalVersions": "20"
         },
         "./local-features/nvs": "latest",
         "ghcr.io/devcontainers/features/python:1": {
@@ -39,8 +39,8 @@
             "version": "latest"
         },
         "ghcr.io/devcontainers/features/ruby:1": {
-            "version": "3.3.4",
-            "additionalVersions": "3.3.2"
+            "version": "3.4.1",
+            "additionalVersions": "3.3.6"
         },
         "ghcr.io/devcontainers/features/java:1": {
             "version": "21",
