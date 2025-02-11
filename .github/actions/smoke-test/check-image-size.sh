@@ -49,8 +49,6 @@ check_image_size() {
     # Remove the 'MB' from the size string and convert to an integer
     image_size=${IMAGE_SIZE%bytes}
     image_size=${image_size//.}
-    # Checking the image
-    docker history "$IMAGE_ID"
     # Check if the image size is above the threshold
     echo -e "\n🧪 Checking image size of $IMAGE :"
     if [ -n $image_size  ] && [ $image_size -gt $threshold ]; then

@@ -6,9 +6,7 @@
     "features": {
         "ghcr.io/devcontainers/features/common-utils:2": {
             "username": "codespace",
-						//Getting the UID & GID values of the host machine via GitHub actions
-            //"userUid": "1000",
-            //"userGid": "1000"
+			//Getting the UID & GID values of the host machine via GitHub actions
             "userUid": "${localEnv:USER_UID}",
             "userGid": "${localEnv:USER_GID}"						
         },
