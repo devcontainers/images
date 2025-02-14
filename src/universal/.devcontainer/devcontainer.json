@@ -31,8 +31,8 @@
         },
         "./local-features/machine-learning-packages": "latest",
         "ghcr.io/devcontainers/features/php:1": {
-            "version": "8.3.0",
-            "additionalVersions": "8.2.13",
+            "version": "8.4.2",
+            "additionalVersions": "8.3.14",
             "installComposer": "true"
         },
         "ghcr.io/devcontainers/features/conda:1": {
