@@ -6,7 +6,7 @@
     "features": {
         "ghcr.io/devcontainers/features/common-utils:2": {
             "username": "codespace",
-			//Getting the UID & GID values of the host machine via GitHub actions
+            //Getting the UID & GID values of the host machine via GitHub actions
             "userUid": "${localEnv:USER_UID}",
             "userGid": "${localEnv:USER_GID}"						
         },
@@ -106,7 +106,7 @@
     "containerUser": "codespace",
 	// This variable is set to ensure puppeteer library gets the sandbox location by default.
 	// Ref:- https://github.com/devcontainers/internal/issues/249
-    "remoteEnv": {
+    "containerEnv": {
         "CHROME_DEVEL_SANDBOX": "/usr/local/sbin/chrome-devel-sandbox"
     },
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
