@@ -36,9 +36,14 @@ check_image_size() {
     # call install_bc
     install_bc
 
-    CONTAINER_ID=$(docker ps -q --filter "label=test-container=$IMAGE")
-    # Find the image ID of the container
-    IMAGE_ID=$(docker inspect --format='{{.Image}}' "$CONTAINER_ID")
+    if [ $IMAGE == "universal" ]; then
+        #Read the image id of the original image, not the modified image with uid and gid
+        IMAGE_ID=$(docker images | grep -v "uid" | sed '1d' | awk  '{print $3}')
+    else
+        CONTAINER_ID=$(docker ps -q --filter "label=test-container=$IMAGE")
+        # Find the image ID of the container
+        IMAGE_ID=$(docker inspect --format='{{.Image}}' "$CONTAINER_ID")    
+    fi
     # Find the size of the image
     IMAGE_SIZE=$(docker image inspect --format='{{.Size}}' "$IMAGE_ID")
     # Output the size

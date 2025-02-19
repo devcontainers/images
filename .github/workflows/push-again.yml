@@ -41,17 +41,6 @@ jobs:
         path: 'release'
         ref: ${{ github.event.inputs.release }}
       
-    - name: Get userUid from host machine
-      id: get-useruid
-      run: |
-       set -e
-       USER_UID=$(id -u)
-       USER_GID=$(id -g)
-       echo "UserUid::$USER_UID"
-       echo "UserGid::$USER_GID"
-       echo "USER_UID=$USER_UID" >> $GITHUB_ENV
-       echo "USER_GID=$USER_GID" >> $GITHUB_ENV       
-
     - name: Build and push
       id: build_and_push
       env:
@@ -62,8 +51,6 @@ jobs:
         SECONDARY_REGISTRY_BASE_PATH: ${{ secrets.SECONDARY_REGISTRY_BASE_PATH }}
         TOKEN_NAME: ${{ secrets.TOKEN_NAME }}
         PASSWORD: ${{ secrets.PASSWORD }}
-        USER_UID: ${{ env.USER_UID }}
-        USER_GID: ${{ env.USER_GID }}        
       run: |
         set -e
 
