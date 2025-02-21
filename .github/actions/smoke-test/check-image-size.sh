@@ -32,13 +32,13 @@ install_bc() {
 check_image_size() {
     IMAGE="$1"
     THRESHOLD_IN_GB="$2"
-
+    id_image="$3"
     # call install_bc
     install_bc
 
     if [ $IMAGE == "universal" ]; then
         #Read the image id of the original image, not the modified image with uid and gid
-        IMAGE_ID=$(docker images | grep -v "uid" | sed '1d' | awk  '{print $3}')
+        IMAGE_ID=$(docker images -q  --filter=reference="$id_image")
     else
         CONTAINER_ID=$(docker ps -q --filter "label=test-container=$IMAGE")
         # Find the image ID of the container
