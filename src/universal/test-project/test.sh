@@ -2,6 +2,8 @@
 cd $(dirname "$0")
 
 source test-utils.sh codespace
+#Changing he ownership of dotnet path to ensure oryx-install-dotnet-2.1 test doesn't fail with permission issue 
+sudo chown -R codespace:codespace /usr/share/dotnet
 
 # Run common tests
 checkCommon

@@ -29,6 +29,7 @@ jobs:
     - name: Checkout
       id: checkout
       uses: actions/checkout@v3
+       
 
     - name: Build and push dev tags
       id: build_and_push
@@ -40,7 +41,7 @@ jobs:
         STUB_REGISTRY_BASE_PATH: ${{ secrets.STUB_REGISTRY_BASE_PATH }}
         SECONDARY_REGISTRY_BASE_PATH: ${{ secrets.SECONDARY_REGISTRY_BASE_PATH }}
         TOKEN_NAME: ${{ secrets.TOKEN_NAME }}
-        PASSWORD: ${{ secrets.PASSWORD }}
+        PASSWORD: ${{ secrets.PASSWORD }}  
       run: |
         set -e
 
