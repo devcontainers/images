@@ -7,7 +7,7 @@
         "ghcr.io/devcontainers/features/common-utils:2": {
             "username": "codespace",
             "userUid": "1000",
-            "userGid": "1000"									
+            "userGid": "1000"
         },
         "ghcr.io/devcontainers/features/dotnet:2": {
             "version": "8.0",
@@ -103,11 +103,7 @@
     ],
     "remoteUser": "codespace",
     "containerUser": "codespace",
-	// This variable is set to ensure puppeteer library gets the sandbox location by default.
-	// Ref:- https://github.com/devcontainers/internal/issues/249
-    "containerEnv": {
-        "CHROME_DEVEL_SANDBOX": "/usr/local/sbin/chrome-devel-sandbox"
-    },
+
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     // "forwardPorts": [],
 
