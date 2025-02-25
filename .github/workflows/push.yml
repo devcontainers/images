@@ -28,7 +28,7 @@ jobs:
 
     - name: Checkout
       id: checkout
-      uses: actions/checkout@v3      
+      uses: actions/checkout@v3
 
     - name: Get tag name
       run: echo "TAG=$(echo "${{ github.ref }}" | grep -oP 'refs/tags/\K(.+)')" >> $GITHUB_ENV
