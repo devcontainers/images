@@ -1,3 +1,4 @@
+
 {
     "image": "mcr.microsoft.com/devcontainers/javascript-node:0-18",
     "features": {
@@ -10,7 +11,8 @@
             "extensions": [
                 "mads-hartmann.bash-ide-vscode",
                 "dbaeumer.vscode-eslint",
-                "EditorConfig.EditorConfig"
+                "EditorConfig.EditorConfig",
+                "MS-CEINTL.vscode-language-pack-es"
             ]
         }
     }
