@@ -97,7 +97,7 @@ expectedCount=2
 checkVersionCount "two versions of node are present" $count $expectedCount
 echo $(echo "node versions" && ls -a /usr/local/share/nvm/versions/node)
 checkBundledNpmVersion "default" "9.8.0"
-checkBundledNpmVersion "18" "9.8.1"
+checkBundledNpmVersion "22" "9.8.1"
 
 # PHP
 check "php" php --version
@@ -138,7 +138,7 @@ check "RAILS_DEVELOPMENT_HOSTS is set correctly" echo $RAILS_DEVELOPMENT_HOSTS |
 check "oryx" oryx --version
 
 # Ensures nvm works in a Node Project
-check "default-node-version" bash -c "node --version | grep 20."
+check "default-node-version" bash -c "node --version | grep 22."
 check "default-node-location" bash -c "which node | grep /home/codespace/nvm/current/bin"
 check "oryx-build-node-projectr" bash -c "oryx build ./sample/node"
 check "oryx-configured-current-node-version" bash -c "ls -la /home/codespace/nvm/current | grep /opt/nodejs"
