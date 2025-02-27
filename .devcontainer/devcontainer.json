@@ -1,6 +1,10 @@
 {
-    "image": "mcr.microsoft.com/devcontainers/javascript-node:0-18",
+    "image": "mcr.microsoft.com/devcontainers/base:dev-ubuntu-24.04",
     "features": {
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "20",
+            "additionalVersions": "18"
+        },        
         "ghcr.io/devcontainers/features/docker-in-docker:2": {},
         "ghcr.io/devcontainers/features/azure-cli:1": {}
     },
