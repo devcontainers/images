@@ -92,7 +92,7 @@ find "${OPT_DIR}" -type d | xargs -n 1 chmod g+s
 echo "Defaults secure_path=\"${DOTNET_PATH}:${NODE_PATH}/bin:${PHP_PATH}/bin:${PYTHON_PATH}/bin:${JAVA_PATH}/bin:${RUBY_PATH}/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin:/usr/local/share:/home/${USERNAME}/.local/bin:${PATH}\"" >> /etc/sudoers.d/$USERNAME
 
 # Temporary: Due to GHSA-c2qf-rxjj-qqgw
-bash -c ". /usr/local/share/nvm/nvm.sh && nvm use 18"
+bash -c ". /usr/local/share/nvm/nvm.sh && nvm use 22"
 bash -c "npm -g install -g npm@9.8.1"
 bash -c ". /usr/local/share/nvm/nvm.sh && nvm use stable"
 
