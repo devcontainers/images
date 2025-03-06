@@ -3,7 +3,7 @@
 # vulnerabilities:
 # werkzeug - [GHSA-f9vj-2wh5-fj8j]
 
-vulnerable_packages=( "mistune=3.0.1" "transformers=4.36.0" "cryptography=43.0.1" "jupyter-lsp=2.2.2" "scrapy=2.11.2" \ 
+vulnerable_packages=( "mistune=3.0.1" "transformers=4.36.0" "cryptography=43.0.3" "jupyter-lsp=2.2.2" "scrapy=2.11.2" \ 
                       "zipp=3.19.1" "tornado=6.4.2")
 
 # Define the number of rows (based on the length of vulnerable_packages)
@@ -45,12 +45,12 @@ for ((i=0; i<rows; i++)); do
             CONDA_VERSION="0"
         fi
         GREATER_VERSION_B=$((echo ${REQUIRED_VERSION}; echo ${CONDA_VERSION}) | sort -V | tail -1)
-        if [[ $CONDA_VERSION == $GREATER_VERSION_B ]]; then
+        if [[ $CONDA_VERSION == $GREATER_VERSION_B && ${packages_array[$i,0]} != "cryptography" ]]; then        
             echo -e "Found Version v${CONDA_VERSION} in the Conda channel which is greater than or equal to the required version: v${REQUIRED_VERSION}. \n";
             echo "Installing ${packages_array[$i,0]} from source from conda channel for v${REQUIRED_VERSION}..."
-            conda install "${packages_array[$i,0]}==${CONDA_VERSION}"
-        elif [[ $REQUIRED_VERSION == $GREATER_VERSION_B ]]; then 
-            echo -e "Required version: v${REQUIRED_VERSION} is greater than the version found in the Conda channel v${CONDA_VERSION}. \n";
+            conda install "${packages_array[$i,0]}==${CONDA_VERSION}"        
+        elif [[ $REQUIRED_VERSION == $GREATER_VERSION_B || ${packages_array[$i,0]} == "cryptography" ]]; then 
+            echo -e "Required version: v${REQUIRED_VERSION} is greater than the version found in the Conda channel v${CONDA_VERSION} or its cryptography package. \n";
             echo "Installing ${packages_array[$i,0]} from source from pip package manager for v${REQUIRED_VERSION}..."
             python3 -m pip install --upgrade --no-cache-dir "${packages_array[$i,0]}==${REQUIRED_VERSION}"
         fi
