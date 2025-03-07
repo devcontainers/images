@@ -5,8 +5,7 @@
     "1.23-bookworm",
     "1.22-bookworm",
     "1.24-bullseye",
-    "1.23-bullseye",
-    "1.22-bullseye"
+    "1.23-bullseye"
   ],
   "build": {
     "latest": "1.24-bookworm",
