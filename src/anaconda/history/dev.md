@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:3689249724ec1b846d81c6d2703c9fba8b72075795d2b73bc6bdbeba3b68eff5
+**Digest:** sha256:cfaab2bd8b9e53108b7587b40ff7bd7904d036033f35ee23545cd3fa5399de64
 
 **Tags:**
 ```
@@ -31,7 +31,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 09a94672003b21b8a3d8d15d31098641e7f3a4db | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 69a6359f7cf8978d464573fb7b023ee3cd00181a | /home/vscode/.oh-my-zsh |
 
 **Pip / pipx installed tools and packages**
 
@@ -40,15 +40,15 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | joblib | 1.4.2 |
 | cookiecutter | 2.6.0 |
 | cryptography | 43.0.3 |
-| mistune | 3.0.1 |
+| mistune | 3.1.2 |
 | numpy | 1.26.4 |
-| certifi | 2024.8.30 |
+| certifi | 2025.1.31 |
 | setuptools | 75.1.0 |
 | wheel | 0.44.0 |
 | nbconvert | 7.16.4 |
 | Werkzeug | 3.0.3 |
 | requests | 2.32.3 |
-| tornado | 6.4.1 |
+| tornado | 6.4.2 |
 | transformers | 4.45.2 |
 | jupyter_server | 2.14.1 |
 
@@ -56,8 +56,8 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.47.0 | 
-| [conda](https://github.com/conda/conda) | 24.11.1 | /opt/conda |
+| [git](https://github.com/git/git) | 2.47.1 | 
+| [conda](https://github.com/conda/conda) | 24.11.3 | /opt/conda |
 
 **Additional linux tools and packages**
 
@@ -68,7 +68,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | ca-certificates | 20230311 |
 | curl | 7.88.1-10+deb12u8 |
 | dialog | 1.3-20230209-1 |
-| git | 1:2.39.5-0+deb12u1 |
+| git | 1:2.39.5-0+deb12u2 |
 | gnupg2 | 2.2.40-1.1 |
 | htop | 3.2.2-2 |
 | iproute2 | 6.1.0-3 |
@@ -89,10 +89,10 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | nano | 7.2-1+deb12u1 |
 | ncdu | 1.18-0.2 |
 | net-tools | 2.10-0.1 |
-| openssh-client | 1:9.2p1-2+deb12u3 |
+| openssh-client | 1:9.2p1-2+deb12u5 |
 | procps | 2:4.0.2-3 |
 | psmisc | 23.6-1 |
-| rsync | 3.2.7-1 |
+| rsync | 3.2.7-1+deb12u2 |
 | strace | 6.1-0.1 |
 | sudo | 1.9.13p3-1+deb12u1 |
 | unzip | 6.0-28 |
