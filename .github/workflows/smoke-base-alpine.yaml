@@ -19,7 +19,7 @@ jobs:
 
     - name: Checkout
       id: checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v3  
 
     - name: Smoke test
       id: smoke_test
