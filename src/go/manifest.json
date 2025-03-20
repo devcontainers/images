@@ -3,10 +3,8 @@
   "variants": [
     "1.24-bookworm",
     "1.23-bookworm",
-    "1.22-bookworm",
     "1.24-bullseye",
-    "1.23-bullseye",
-    "1.22-bullseye"
+    "1.23-bullseye"
   ],
   "build": {
     "latest": "1.24-bookworm",
@@ -23,19 +21,11 @@
         "linux/amd64",
         "linux/arm64"
       ],
-      "1.22-bookworm": [
-        "linux/amd64",
-        "linux/arm64"
-      ],
       "1.24-bullseye": [
         "linux/amd64",
         "linux/arm64"
       ],
       "1.23-bullseye": [
-        "linux/amd64",
-        "linux/arm64"
-      ],
-      "1.22-bullseye": [
         "linux/amd64",
         "linux/arm64"
       ]
@@ -52,9 +42,6 @@
         "go:${VERSION}-1",
         "go:${VERSION}-1-bookworm",
         "go:${VERSION}-bookworm"
-      ],
-      "1.22-bookworm": [
-        "go:${VERSION}-1.22"
       ],
       "1.24-bullseye": [
         "go:${VERSION}-1-bullseye",
