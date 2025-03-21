@@ -14,7 +14,7 @@
 
 ## Variant: 21-bookworm
 
-**Digest:** sha256:fdae60a6d9b70cdad2d6e42e1cb01439a21e09cc6a5b610c50c287189859d38c
+**Digest:** sha256:892ee078a8830ff4f75c22cbbda92138e7ed98d62eb8b00c433753fd65fcadd3
 
 **Tags:**
 ```
@@ -36,20 +36,20 @@ mcr.microsoft.com/devcontainers/java:dev-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 21.0.5 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 21.0.6 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 69a6359f7cf8978d464573fb7b023ee3cd00181a | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1c2127727af0ac452292f844ee32306f12906d03 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 179d45050be0a71fd57591b0ed8aedf9b177ba10 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.47.1 | 
+| [git](https://github.com/git/git) | 2.48.1 | 
 
 **Additional linux tools and packages**
 
@@ -60,7 +60,7 @@ mcr.microsoft.com/devcontainers/java:dev-bookworm
 | ca-certificates | 20230311 |
 | curl | 7.88.1-10+deb12u8 |
 | dialog | 1.3-20230209-1 |
-| git | 1:2.39.5-0+deb12u1 |
+| git | 1:2.39.5-0+deb12u2 |
 | gnupg2 | 2.2.40-1.1 |
 | htop | 3.2.2-2 |
 | iproute2 | 6.1.0-3 |
@@ -81,10 +81,10 @@ mcr.microsoft.com/devcontainers/java:dev-bookworm
 | nano | 7.2-1+deb12u1 |
 | ncdu | 1.18-0.2 |
 | net-tools | 2.10-0.1 |
-| openssh-client | 1:9.2p1-2+deb12u3 |
+| openssh-client | 1:9.2p1-2+deb12u5 |
 | procps | 2:4.0.2-3 |
 | psmisc | 23.6-1 |
-| rsync | 3.2.7-1 |
+| rsync | 3.2.7-1+deb12u2 |
 | strace | 6.1-0.1 |
 | sudo | 1.9.13p3-1+deb12u1 |
 | unzip | 6.0-28 |
@@ -97,7 +97,7 @@ mcr.microsoft.com/devcontainers/java:dev-bookworm
 
 ## Variant: 21-bullseye
 
-**Digest:** sha256:90da4d8e77fc974c70b63109ac7f80c352bf42b3bfd1d81676bff7d1dbc24ad0
+**Digest:** sha256:defaa213aa03426c8beb1dae439dd9f8b5417b320a645b608ed6e151e4255c42
 
 **Tags:**
 ```
@@ -118,20 +118,20 @@ mcr.microsoft.com/devcontainers/java:dev-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 21.0.5 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 21.0.6 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 69a6359f7cf8978d464573fb7b023ee3cd00181a | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1c2127727af0ac452292f844ee32306f12906d03 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 179d45050be0a71fd57591b0ed8aedf9b177ba10 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.47.1 | 
+| [git](https://github.com/git/git) | 2.48.1 | 
 
 **Additional linux tools and packages**
 
@@ -142,16 +142,16 @@ mcr.microsoft.com/devcontainers/java:dev-bullseye
 | ca-certificates | 20210119 |
 | curl | 7.74.0-1.3+deb11u14 |
 | dialog | 1.3-20201126-1 |
-| git | 1:2.30.2-1+deb11u3 |
+| git | 1:2.30.2-1+deb11u4 |
 | gnupg2 | 2.2.27-2+deb11u2 |
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
 | less | 551-2+deb11u2 |
 | libc6 | 2.31-13+deb11u11 |
-| libgssapi-krb5-2 | 1.18.3-6+deb11u5 |
+| libgssapi-krb5-2 | 1.18.3-6+deb11u6 |
 | libicu67 | 67.1-7 |
-| libkrb5-3 | 1.18.3-6+deb11u5 |
+| libkrb5-3 | 1.18.3-6+deb11u6 |
 | liblttng-ust0 | 2.12.1-1 |
 | libssl1.1 | 1.1.1w-0+deb11u2 |
 | libstdc++6 | 10.2.1-6 |
@@ -164,10 +164,10 @@ mcr.microsoft.com/devcontainers/java:dev-bullseye
 | nano | 5.4-2+deb11u3 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1+deb11u1 |
-| openssh-client | 1:8.4p1-5+deb11u3 |
+| openssh-client | 1:8.4p1-5+deb11u4 |
 | procps | 2:3.3.17-5 |
 | psmisc | 23.4-2 |
-| rsync | 3.2.3-4+deb11u1 |
+| rsync | 3.2.3-4+deb11u3 |
 | strace | 5.10-1 |
 | sudo | 1.9.5p2-3+deb11u1 |
 | unzip | 6.0-26+deb11u1 |
@@ -180,7 +180,7 @@ mcr.microsoft.com/devcontainers/java:dev-bullseye
 
 ## Variant: 17-bookworm
 
-**Digest:** sha256:a542c4b1d49f1da7799c8b5ab3374f9aa679b719c2c179503b02e7ce89490eb1
+**Digest:** sha256:518c129632e323e37249c6e4095a132361a8f3638029744d6be59a56156393b0
 
 **Tags:**
 ```
@@ -201,20 +201,20 @@ mcr.microsoft.com/devcontainers/java:dev-17-jdk-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 17.0.13 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 17.0.14 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 69a6359f7cf8978d464573fb7b023ee3cd00181a | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1c2127727af0ac452292f844ee32306f12906d03 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 179d45050be0a71fd57591b0ed8aedf9b177ba10 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.47.1 | 
+| [git](https://github.com/git/git) | 2.48.1 | 
 
 **Additional linux tools and packages**
 
@@ -225,7 +225,7 @@ mcr.microsoft.com/devcontainers/java:dev-17-jdk-bookworm
 | ca-certificates | 20230311 |
 | curl | 7.88.1-10+deb12u8 |
 | dialog | 1.3-20230209-1 |
-| git | 1:2.39.5-0+deb12u1 |
+| git | 1:2.39.5-0+deb12u2 |
 | gnupg2 | 2.2.40-1.1 |
 | htop | 3.2.2-2 |
 | iproute2 | 6.1.0-3 |
@@ -246,10 +246,10 @@ mcr.microsoft.com/devcontainers/java:dev-17-jdk-bookworm
 | nano | 7.2-1+deb12u1 |
 | ncdu | 1.18-0.2 |
 | net-tools | 2.10-0.1 |
-| openssh-client | 1:9.2p1-2+deb12u3 |
+| openssh-client | 1:9.2p1-2+deb12u5 |
 | procps | 2:4.0.2-3 |
 | psmisc | 23.6-1 |
-| rsync | 3.2.7-1 |
+| rsync | 3.2.7-1+deb12u2 |
 | strace | 6.1-0.1 |
 | sudo | 1.9.13p3-1+deb12u1 |
 | unzip | 6.0-28 |
@@ -262,7 +262,7 @@ mcr.microsoft.com/devcontainers/java:dev-17-jdk-bookworm
 
 ## Variant: 17-bullseye
 
-**Digest:** sha256:5af02312ca17c8da803829516840c72bdaf39c0c00ea15bae0a71d60636665be
+**Digest:** sha256:06906348297627d62cfa8095020da35128335cbfda3fbfc30e573c88aa201fa6
 
 **Tags:**
 ```
@@ -282,20 +282,20 @@ mcr.microsoft.com/devcontainers/java:dev-17-jdk-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 17.0.13 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 17.0.14 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 69a6359f7cf8978d464573fb7b023ee3cd00181a | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1c2127727af0ac452292f844ee32306f12906d03 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 179d45050be0a71fd57591b0ed8aedf9b177ba10 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.47.1 | 
+| [git](https://github.com/git/git) | 2.48.1 | 
 
 **Additional linux tools and packages**
 
@@ -306,16 +306,16 @@ mcr.microsoft.com/devcontainers/java:dev-17-jdk-bullseye
 | ca-certificates | 20210119 |
 | curl | 7.74.0-1.3+deb11u14 |
 | dialog | 1.3-20201126-1 |
-| git | 1:2.30.2-1+deb11u3 |
+| git | 1:2.30.2-1+deb11u4 |
 | gnupg2 | 2.2.27-2+deb11u2 |
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
 | less | 551-2+deb11u2 |
 | libc6 | 2.31-13+deb11u11 |
-| libgssapi-krb5-2 | 1.18.3-6+deb11u5 |
+| libgssapi-krb5-2 | 1.18.3-6+deb11u6 |
 | libicu67 | 67.1-7 |
-| libkrb5-3 | 1.18.3-6+deb11u5 |
+| libkrb5-3 | 1.18.3-6+deb11u6 |
 | liblttng-ust0 | 2.12.1-1 |
 | libssl1.1 | 1.1.1w-0+deb11u2 |
 | libstdc++6 | 10.2.1-6 |
@@ -328,10 +328,10 @@ mcr.microsoft.com/devcontainers/java:dev-17-jdk-bullseye
 | nano | 5.4-2+deb11u3 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1+deb11u1 |
-| openssh-client | 1:8.4p1-5+deb11u3 |
+| openssh-client | 1:8.4p1-5+deb11u4 |
 | procps | 2:3.3.17-5 |
 | psmisc | 23.4-2 |
-| rsync | 3.2.3-4+deb11u1 |
+| rsync | 3.2.3-4+deb11u3 |
 | strace | 5.10-1 |
 | sudo | 1.9.5p2-3+deb11u1 |
 | unzip | 6.0-26+deb11u1 |
@@ -344,7 +344,7 @@ mcr.microsoft.com/devcontainers/java:dev-17-jdk-bullseye
 
 ## Variant: 11-bookworm
 
-**Digest:** sha256:b1fb02c6955359ba3496528fe8fba7d55d6d088c2a4d348ffead5d7a7fc47083
+**Digest:** sha256:0025010ecb0851a17f12f6f6d5d29f903636cf612233fb8fcf73fa9ef3039146
 
 **Tags:**
 ```
@@ -365,20 +365,20 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 11.0.25 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 11.0.26 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 69a6359f7cf8978d464573fb7b023ee3cd00181a | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1c2127727af0ac452292f844ee32306f12906d03 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 179d45050be0a71fd57591b0ed8aedf9b177ba10 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.47.1 | 
+| [git](https://github.com/git/git) | 2.48.1 | 
 
 **Additional linux tools and packages**
 
@@ -389,7 +389,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bookworm
 | ca-certificates | 20230311 |
 | curl | 7.88.1-10+deb12u8 |
 | dialog | 1.3-20230209-1 |
-| git | 1:2.39.5-0+deb12u1 |
+| git | 1:2.39.5-0+deb12u2 |
 | gnupg2 | 2.2.40-1.1 |
 | htop | 3.2.2-2 |
 | iproute2 | 6.1.0-3 |
@@ -410,10 +410,10 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bookworm
 | nano | 7.2-1+deb12u1 |
 | ncdu | 1.18-0.2 |
 | net-tools | 2.10-0.1 |
-| openssh-client | 1:9.2p1-2+deb12u3 |
+| openssh-client | 1:9.2p1-2+deb12u5 |
 | procps | 2:4.0.2-3 |
 | psmisc | 23.6-1 |
-| rsync | 3.2.7-1 |
+| rsync | 3.2.7-1+deb12u2 |
 | strace | 6.1-0.1 |
 | sudo | 1.9.13p3-1+deb12u1 |
 | unzip | 6.0-28 |
@@ -426,7 +426,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bookworm
 
 ## Variant: 11-bullseye
 
-**Digest:** sha256:0ff7f48e6d0447daed192daa867d8c3ada8cd9565186b10380c80d536f6a5caa
+**Digest:** sha256:438c9fa94ea5791dccad5910fc49cecf80368080bfbbe04d6203fd78befaeedf
 
 **Tags:**
 ```
@@ -446,20 +446,20 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 11.0.25 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 11.0.26 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 69a6359f7cf8978d464573fb7b023ee3cd00181a | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1c2127727af0ac452292f844ee32306f12906d03 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 179d45050be0a71fd57591b0ed8aedf9b177ba10 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.47.1 | 
+| [git](https://github.com/git/git) | 2.48.1 | 
 
 **Additional linux tools and packages**
 
@@ -470,16 +470,16 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bullseye
 | ca-certificates | 20210119 |
 | curl | 7.74.0-1.3+deb11u14 |
 | dialog | 1.3-20201126-1 |
-| git | 1:2.30.2-1+deb11u3 |
+| git | 1:2.30.2-1+deb11u4 |
 | gnupg2 | 2.2.27-2+deb11u2 |
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |
 | jq | 1.6-2.1 |
 | less | 551-2+deb11u2 |
 | libc6 | 2.31-13+deb11u11 |
-| libgssapi-krb5-2 | 1.18.3-6+deb11u5 |
+| libgssapi-krb5-2 | 1.18.3-6+deb11u6 |
 | libicu67 | 67.1-7 |
-| libkrb5-3 | 1.18.3-6+deb11u5 |
+| libkrb5-3 | 1.18.3-6+deb11u6 |
 | liblttng-ust0 | 2.12.1-1 |
 | libssl1.1 | 1.1.1w-0+deb11u2 |
 | libstdc++6 | 10.2.1-6 |
@@ -492,10 +492,10 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bullseye
 | nano | 5.4-2+deb11u3 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1+deb11u1 |
-| openssh-client | 1:8.4p1-5+deb11u3 |
+| openssh-client | 1:8.4p1-5+deb11u4 |
 | procps | 2:3.3.17-5 |
 | psmisc | 23.4-2 |
-| rsync | 3.2.3-4+deb11u1 |
+| rsync | 3.2.3-4+deb11u3 |
 | strace | 5.10-1 |
 | sudo | 1.9.5p2-3+deb11u1 |
 | unzip | 6.0-26+deb11u1 |
