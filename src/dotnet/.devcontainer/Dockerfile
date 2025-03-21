@@ -1,4 +1,4 @@
-ARG VARIANT=10.0-preview-trixie-slim
+ARG VARIANT=10.0-preview-noble
 FROM mcr.microsoft.com/dotnet/sdk:${VARIANT}
 ENV PATH $PATH:/home/vscode/.dotnet:/home/vscode/.dotnet/tools
 
