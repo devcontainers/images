@@ -79,6 +79,7 @@
     "overrideFeatureInstallOrder": [
         "ghcr.io/devcontainers/features/common-utils",
         "ghcr.io/devcontainers/features/git",
+        "ghcr.io/devcontainers/features/oryx",
         "ghcr.io/devcontainers/features/dotnet",
         "ghcr.io/devcontainers/features/hugo",
         "ghcr.io/devcontainers/features/node",
@@ -98,7 +99,6 @@
         "ghcr.io/devcontainers/features/kubectl-helm-minikube",
         "ghcr.io/devcontainers/features/go",
         "./local-features/jekyll",
-        "ghcr.io/devcontainers/features/oryx",
         "./local-features/setup-user"
     ],
     "remoteUser": "codespace",
