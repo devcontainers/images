@@ -26,3 +26,4 @@ jobs:
       uses: ./.github/actions/smoke-test
       with:
         image: universal
+        threshold: 10

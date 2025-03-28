@@ -9,7 +9,7 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/java:8 |
-| *Available image variants* | 8 / 8-bookworm, 8-buster, 8-bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/java/tags/list)) |
+| *Available image variants* | 8 / 8-bookworm, 8-bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/java/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bullseye` and `bookworm` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
@@ -29,9 +29,9 @@ Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/devcontainers/java:2-8` (or `2-8-bookworm`, `2-8-bullseye`, `2-8-buster` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/java:2.0-8` (or `2.0-8-bookworm`, `2.0-8-bullseye`, `2.0-8-buster` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/java:2.0.0-8` (or `2.0.0-8-bookworm`, `2.0.0-8-bullseye`, `2.0.0-8-buster` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/java:2-8` (or `2-8-bookworm`, `2-8-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/java:2.0-8` (or `2.0-8-bookworm`, `2.0-8-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/java:2.0.0-8` (or `2.0.0-8-bookworm`, `2.0.0-8-bullseye` to pin to an OS version)
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `2-8`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 

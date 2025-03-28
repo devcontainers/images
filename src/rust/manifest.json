@@ -1,8 +1,7 @@
 {
-	"version": "1.0.7",
+	"version": "1.0.21",
 	"variants": [
 		"bookworm",
-		"buster",
 		"bullseye"
 	],
 	"build": {
@@ -16,18 +15,12 @@
 			"bullseye": [
 				"linux/amd64",
 				"linux/arm64"
-			],
-			"buster": [
-				"linux/amd64"
 			]
 		},
 		"tags": [
 			"rust:${VERSION}-${VARIANT}"
 		],
 		"variantTags": {
-			"buster": [
-				"rust:${VERSION}-1-buster"
-			],
 			"bullseye": [
 				"rust:${VERSION}-1-bullseye"
 			],

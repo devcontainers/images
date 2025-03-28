@@ -1,44 +1,16 @@
 FROM continuumio/anaconda3 as upstream
 
 # Verify OS version is expected one
-RUN . /etc/os-release && if [ "${VERSION_CODENAME}" != "bullseye" ]; then exit 1; fi
+RUN . /etc/os-release && if [ "${VERSION_CODENAME}" != "bookworm" ]; then exit 1; fi
 
 # Temporary: Upgrade python packages due to mentioned CVEs
 # They are installed by the base image (continuumio/anaconda3) which does not have the patch.
-RUN conda install \ 
-    # https://github.com/advisories/GHSA-q3qx-c6g2-7pw2
-    aiohttp=3.9.0 \
-    # https://github.com/advisories/GHSA-j7hp-h8jx-5ppr
-    pillow=10.0.1 \
-    # https://github.com/advisories/GHSA-v845-jxx5-vc9f
-    urllib3==1.26.18 \
-    # https://github.com/advisories/GHSA-jfhm-5ghh-2f97
-    cryptography==41.0.7
-
-RUN python3 -m pip install --upgrade \
-    # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-21797
-    joblib==1.3.1 \
-    # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-24065
-    cookiecutter==2.2.3 \
-    # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-34749
-    mistune==3.0.1 \
-    # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-34141
-    numpy==1.25.2 \
-    # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-25577
-    werkzeug==2.3.6 \
-    # https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32862
-    nbconvert==7.7.3 \
-    # https://github.com/advisories/GHSA-qppv-j76h-2rpx
-    tornado==6.3.3 \
-    # https://github.com/advisories/GHSA-r726-vmfq-j9j3 
-    jupyter_server==2.7.2 \
-    # https://github.com/advisories/GHSA-5wvp-7f3h-6wmm
-    pyarrow==14.0.1 \
-    # https://github.com/advisories/GHSA-v68g-wm8c-6x7j
-    transformers==4.36.0
+COPY ./apply_security_patches.sh /tmp/apply_security_patches.sh
+RUN chmod +x /tmp/apply_security_patches.sh
+RUN /tmp/apply_security_patches.sh
 
 # Reset and copy updated files with updated privs to keep image size down
-FROM mcr.microsoft.com/devcontainers/base:1-bullseye
+FROM mcr.microsoft.com/devcontainers/base:1-bookworm
 
 ARG USERNAME=vscode
 

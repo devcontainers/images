@@ -31,10 +31,10 @@ export DEBIAN_FRONTEND=noninteractive
 
 install_python_package() {
     PACKAGE=${1:-""}
-
+    OPTIONS=${2:-""}
     sudo_if /usr/local/python/current/bin/python -m pip uninstall --yes $PACKAGE
     echo "Installing $PACKAGE..."
-    sudo_if /usr/local/python/current/bin/python -m pip install --user --upgrade --no-cache-dir $PACKAGE
+    sudo_if /usr/local/python/current/bin/python -m pip install --user --upgrade --no-cache-dir $PACKAGE $OPTIONS
 }
 
 if [[ "$(python --version)" != "" ]] && [[ "$(pip --version)" != "" ]]; then
@@ -44,7 +44,7 @@ if [[ "$(python --version)" != "" ]] && [[ "$(pip --version)" != "" ]]; then
     install_python_package "matplotlib"
     install_python_package "seaborn"
     install_python_package "scikit-learn"
-    install_python_package "torch"
+    install_python_package "torch" "--index-url https://download.pytorch.org/whl/cpu"
     install_python_package "requests"
     install_python_package "plotly"
 else

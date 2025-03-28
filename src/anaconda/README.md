@@ -28,9 +28,9 @@ Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/devcontainers/anaconda:0-3`
-- `mcr.microsoft.com/devcontainers/anaconda:0.202-3`
-- `mcr.microsoft.com/devcontainers/anaconda:0.202.6-3`
+- `mcr.microsoft.com/devcontainers/anaconda:1-3`
+- `mcr.microsoft.com/devcontainers/anaconda:1.0-3`
+- `mcr.microsoft.com/devcontainers/anaconda:1.0.0-3`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/anaconda/tags/list).
 

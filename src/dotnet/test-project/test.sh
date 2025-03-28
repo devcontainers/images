@@ -27,5 +27,7 @@ check "gitconfig-contains-name" sh -c "cat /etc/gitconfig | grep 'name = devcont
 
 check "usr-local-etc-config-does-not-exist" test ! -f "/usr/local/etc/gitconfig"
 
+checkPackageVersion "pwsh" "7.4.4" "PowerShell"
+
 # Report result
 reportResults
