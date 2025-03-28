@@ -59,7 +59,14 @@ To update the available library packages, pull the latest from the git repositor
 cd "${VCPKG_ROOT}"
 git pull --ff-only
 ```
-
+Please install additonal system packages `autoconf automake libtool m4 autoconf-archive` to use vcpkg in manifest
+mode. It can be added in the Dockerfile as following:
+```
+RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get -y install autoconf automake libtool m4 autoconf-archive \
+    && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/*
+```
+If building the image from source directly please uncomment respective `# && apt-get -y install autoconf automake libtool m4 autoconf-archive \` line in Dockerfile.
 > Note: Please review the [Vcpkg license details](https://github.com/microsoft/vcpkg#license) to better understand its own license and additional license information pertaining to library packages and supported ports.
 
 ## License
