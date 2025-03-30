@@ -1,7 +1,0 @@
-{
-    "id": "patch-python",
-    "name": "Patch Python Packages",
-	"installsAfter": [
-		"ghcr.io/devcontainers/features/python"
-	]
-}
