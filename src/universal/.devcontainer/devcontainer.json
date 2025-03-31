@@ -9,38 +9,38 @@
             "userUid": "1000",
             "userGid": "1000"
         },
-        "ghcr.io/devcontainers/features/dotnet:1": {
-            "version": "7.0.306",
-            "installUsingApt": "false",
-            "additionalVersions": "6"
+        "ghcr.io/devcontainers/features/dotnet:2": {
+            "version": "8.0",
+            "dotnetRuntimeVersions": "7.0", 
+            "aspNetCoreRuntimeVersions": "7.0"
         },
         "ghcr.io/devcontainers/features/hugo:1": {
             "version": "latest"
         },
         "ghcr.io/devcontainers/features/node:1": {
-            "version": "20",
-            "additionalVersions": "18"
+            "version": "22",
+            "additionalVersions": "20"
         },
         "./local-features/nvs": "latest",
         "ghcr.io/devcontainers/features/python:1": {
-            "version": "3.10.13",
-            "additionalVersions": "3.9.18",
+            "version": "3.12.1",
+            "additionalVersions": "3.11.9",
             "installJupyterlab": "true",
             "configureJupyterlabAllowOrigin": "*",
             "useOryxIfAvailable": "false"
         },
         "./local-features/machine-learning-packages": "latest",
         "ghcr.io/devcontainers/features/php:1": {
-            "version": "8.3.0",
-            "additionalVersions": "8.2.13",
+            "version": "8.4.2",
+            "additionalVersions": "8.3.14",
             "installComposer": "true"
         },
         "ghcr.io/devcontainers/features/conda:1": {
             "version": "latest"
         },
         "ghcr.io/devcontainers/features/ruby:1": {
-            "version": "3.2",
-            "additionalVersions": "3.1"
+            "version": "3.4.1",
+            "additionalVersions": "3.3.6"
         },
         "ghcr.io/devcontainers/features/java:1": {
             "version": "21",

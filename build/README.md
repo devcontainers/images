@@ -126,7 +126,7 @@ The **`build.latest`** and **`build.tags`** properties affect how tags are appli
 ```text
 debian => mcr.microsoft.com/devcontainers/base:debian
 alpine => mcr.microsoft.com/devcontainers/base:alpine
-ubnutu => mcr.microsoft.com/devcontainers/base:ubuntu
+ubuntu => mcr.microsoft.com/devcontainers/base:ubuntu
 ```
 
 This results in just one "repository" in the registry much like you would see for other images in Docker Hub.

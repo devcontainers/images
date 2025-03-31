@@ -9,8 +9,8 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/cpp |
-| *Available image variants* | debian-12, debian-11, debian-10, ubuntu-22.04, ubuntu-20.04 ([full list](https://mcr.microsoft.com/v2/devcontainers/cpp/tags/list)) |
-| *Published image architecture(s)* | x86-64, aarch64/arm64 for `debian-12`, `debian-11`,and `ubuntu-22.04` variants |
+| *Available image variants* | debian-12, debian-11, ubuntu-24.04, ubuntu-22.04, ubuntu-20.04 ([full list](https://mcr.microsoft.com/v2/devcontainers/cpp/tags/list)) |
+| *Published image architecture(s)* | x86-64, aarch64/arm64 for `debian-12`, `debian-11`, `ubuntu-24.04` and `ubuntu-22.04` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian, Ubuntu |
 | *Languages, platforms* | C++ |
@@ -25,8 +25,8 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 - `mcr.microsoft.com/devcontainers/cpp:debian` (latest Debian GA)
 - `mcr.microsoft.com/devcontainers/cpp:debian-12` (or `bookworm`)
 - `mcr.microsoft.com/devcontainers/cpp:debian-11` (or `bullseye`)
-- `mcr.microsoft.com/devcontainers/cpp:debian-10` (or `buster`)
 - `mcr.microsoft.com/devcontainers/cpp:ubuntu` (latest Ubuntu LTS)
+- `mcr.microsoft.com/devcontainers/cpp:ubuntu-24.04` (or `noble`)
 - `mcr.microsoft.com/devcontainers/cpp:ubuntu-22.04` (or `jammy`)
 - `mcr.microsoft.com/devcontainers/cpp:ubuntu-20.04` (or `focal`)
 
@@ -59,7 +59,14 @@ To update the available library packages, pull the latest from the git repositor
 cd "${VCPKG_ROOT}"
 git pull --ff-only
 ```
-
+Please install additonal system packages `autoconf automake libtool m4 autoconf-archive` to use vcpkg in manifest
+mode. It can be added in the Dockerfile as following:
+```
+RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get -y install autoconf automake libtool m4 autoconf-archive \
+    && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/*
+```
+If building the image from source directly please uncomment respective `# && apt-get -y install autoconf automake libtool m4 autoconf-archive \` line in Dockerfile.
 > Note: Please review the [Vcpkg license details](https://github.com/microsoft/vcpkg#license) to better understand its own license and additional license information pertaining to library packages and supported ports.
 
 ## License

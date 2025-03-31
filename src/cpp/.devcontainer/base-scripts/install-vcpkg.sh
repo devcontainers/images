@@ -10,12 +10,6 @@ USERNAME=${1:-"vscode"}
 
 . /etc/os-release
 
-# Exit early if ARM64 OS does not have cmake version required to build Vcpkg
-if [ "$(dpkg --print-architecture)" = "arm64" ]; then
-    echo "OS ${VERSION_CODENAME} ARM64 pkg repo installs cmake version < 3.15, which is required to build Vcpkg."
-    exit 0
-fi
-
 # Add to bashrc/zshrc files for all users.
 updaterc()  {
     echo "Updating /etc/bash.bashrc and /etc/zsh/zshrc..."
@@ -46,6 +40,7 @@ check_packages() {
 }
 
 export DEBIAN_FRONTEND=noninteractive
+export VCPKG_FORCE_SYSTEM_BINARIES=1
 
 # Install additional packages needed by vcpkg: https://github.com/microsoft/vcpkg/blob/master/README.md#installing-linux-developer-tools
 check_packages build-essential tar curl zip unzip pkg-config bash-completion ninja-build

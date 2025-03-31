@@ -143,6 +143,15 @@ checkCommon()
     check "code" which code
 }
 
+checkPackageVersion()
+{
+    PACKAGE=$1
+    REQUIRED_VERSION=$2
+    PACKAGE_NAME=$3
+    current_version=$("${PACKAGE}" -V | grep -E "^${PACKAGE_NAME}\s" | awk '{print $2}')
+    check-version-ge "${PACKAGE_NAME}-requirement" "${current_version}" "${REQUIRED_VERSION}"
+}
+
 reportResults() {
     if [ ${#FAILED[@]} -ne 0 ]; then
         echoStderr -e "\n💥  Failed tests: ${FAILED[@]}"

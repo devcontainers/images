@@ -1,8 +1,7 @@
 {
-	"version": "1.0.7",
+	"version": "1.0.20",
 	"variants": [
 		"bookworm",
-		"buster",
 		"bullseye"
 	],
 	"build": {
@@ -16,9 +15,6 @@
 			"bullseye": [
 				"linux/amd64",
 				"linux/arm64"
-			],
-			"buster": [
-				"linux/amd64"
 			]
 		},
 		"tags": [
@@ -34,10 +30,6 @@
 			"bullseye": [
 				"base:${VERSION}-debian-11",
 				"base:${VERSION}-debian11"
-			],
-			"buster": [
-				"base:${VERSION}-debian-10",
-				"base:${VERSION}-debian10"
 			]
 		}
 	},

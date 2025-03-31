@@ -3,7 +3,6 @@ name: Tracking support for images
 about: Helps keep track for adding support for new image variants
 title: Support [Image Name] [variant/version] scheduled for [date]
 labels: image-support
-assignees: samruddhikhandale
 
 ---
 

@@ -18,7 +18,7 @@ See **[history](history)** for information on the contents of published images.
 
 ## Description
 
-While language specific development containers can be useful, in some cases you may want to use more than one in a project without having to set them all up. In other cases you may be looking to create a general "sandbox" container you intend to use with multiple projects or repositories. The large container image generated here (`mcr.microsoft.com/devcontainers/universal:linux`) includes a number of runtime versions for popular languages lke Python, Node, PHP, Java, Go, C++, Ruby, and .NET Core/C#.
+While language specific development containers can be useful, in some cases you may want to use more than one in a project without having to set them all up. In other cases you may be looking to create a general "sandbox" container you intend to use with multiple projects or repositories. The large container image generated here (`mcr.microsoft.com/devcontainers/universal:linux`) includes a number of runtime versions for popular languages like Python, Node, PHP, Java, Go, C++, Ruby, and .NET Core/C#.
 
 If you use GitHub Codespaces, this is the "universal" image that is used by default if no custom Dockerfile or image is specified. If you like what you see but want to make a few additions or changes, you can use a custom Dockerfile to extend it and add whatever you need.
 
@@ -52,6 +52,19 @@ While the image itself works unmodified, you can also directly reference pre-bui
 Alternatively, you can use the contents of [.devcontainer](.devcontainer) to fully customize your container's contents or to build it for a container host architecture not supported by the image.
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
+
+## Disabling Automatic Setup in Codespaces
+
+Codespaces will automatically perform some default setup when the `universal` image is used and no `postCreateCommand` is provided. This can be disabled with the `customizations.codespaces.disableAutomaticConfiguration` setting:
+
+```jsonc
+"customizations": {
+	// Configure properties specific to Codespaces.
+	"codespaces": {
+		"disableAutomaticConfiguration": true
+	}
+}
+```
 
 ## License
 

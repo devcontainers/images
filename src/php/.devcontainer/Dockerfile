@@ -1,4 +1,4 @@
-ARG VARIANT=8.3-apache-bookworm
+ARG VARIANT=8.4-apache-bookworm
 FROM php:${VARIANT}
 
 # Install xdebug

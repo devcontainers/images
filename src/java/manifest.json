@@ -1,15 +1,12 @@
 {
-	"version": "1.1.4",
+	"version": "1.1.18",
 	"variants": [
 		"21-bookworm",
 		"21-bullseye",
-		"21-buster",
 		"17-bookworm",
 		"17-bullseye",
-		"17-buster",
 		"11-bookworm",
-		"11-bullseye",
-		"11-buster"
+		"11-bullseye"
 	],
 	"build": {
 		"latest": "21-bookworm",
@@ -40,18 +37,6 @@
 			"11-bullseye": {
 				"TARGET_JAVA_VERSION": "11",
 				"BASE_IMAGE_VERSION_CODENAME": "bullseye"
-			},
-			"21-buster": {
-				"TARGET_JAVA_VERSION": "21",
-				"BASE_IMAGE_VERSION_CODENAME": "buster"
-			},
-			"17-buster": {
-				"TARGET_JAVA_VERSION": "17",
-				"BASE_IMAGE_VERSION_CODENAME": "buster"
-			},
-			"11-buster": {
-				"TARGET_JAVA_VERSION": "11",
-				"BASE_IMAGE_VERSION_CODENAME": "buster"
 			}
 		},
 		"architectures": {
@@ -78,15 +63,6 @@
 			"11-bullseye": [
 				"linux/amd64",
 				"linux/arm64"
-			],
-			"21-buster": [
-				"linux/amd64"
-			],
-			"17-buster": [
-				"linux/amd64"
-			],
-			"11-buster": [
-				"linux/amd64"
 			]
 		},
 		"tags": [
@@ -115,16 +91,6 @@
 			],
 			"11-bullseye": [
 				"java:${VERSION}-11-jdk-bullseye"
-			],
-			"21-jdk-buster": [
-				"java:${VERSION}-21-jdk-buster",
-				"java:${VERSION}-buster"
-			],
-			"17-jdk-buster": [
-				"java:${VERSION}-17-jdk-buster"
-			],
-			"11-buster": [
-				"java:${VERSION}-11-jdk-buster"
 			]
 		}
 	},

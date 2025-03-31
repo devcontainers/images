@@ -3,7 +3,6 @@ name: Tracking EOL for images
 about: Helps keep track for deprecating support for existing image variants
 title: "[Image Name] [variant/version] EOL scheduled for [date]"
 labels: image-support
-assignees: samruddhikhandale
 
 ---
 

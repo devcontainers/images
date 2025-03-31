@@ -55,6 +55,7 @@ RUN apt-get update \
         uuid-dev \
         curl \
         gettext \
+        inotify-tools \
     && rm -rf /var/lib/apt/lists/* \
     # This is the folder containing 'links' to benv and build script generator
     && apt-get update \
@@ -92,8 +93,6 @@ RUN apt-get clean -y && rm -rf /tmp/scripts
 # Mount for docker-in-docker 
 VOLUME [ "/var/lib/docker" ]
 
-# Fire Docker/Moby script if needed
-ENTRYPOINT [ "/usr/local/share/docker-init.sh", "/usr/local/share/ssh-init.sh"]
 CMD [ "sleep", "infinity" ]
 
 # [Optional] Install debugger for development of Codespaces - Not in resulting image by default
