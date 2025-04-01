@@ -17,7 +17,14 @@
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"dbaeumer.vscode-eslint"
-			]
+			],
+			"settings": {
+				"github.copilot.chat.codeGeneration.instructions": [
+					{
+						"text": "This dev container includes the TypeScript compiler (`tsc`) pre-installed and available on the `PATH` for TypeScript development."
+					}
+				]
+			}
 		}
 	},
 
