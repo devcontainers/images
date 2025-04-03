@@ -11,7 +11,7 @@
 
 ## Variant: noble
 
-**Digest:** sha256:14d91cec2ef7d1f53c94c04d79ce129479dae25df07701d21793acecfc3e0aee
+**Digest:** sha256:a236c02fbfb99fd48eb79383535730229d418901f0b742925c630a3ec1fdd4f5
 
 **Tags:**
 ```
@@ -32,13 +32,13 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu24.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1c2127727af0ac452292f844ee32306f12906d03 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f81259fb344685e2dc8b67f8ad8764ccd4e8502e | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.48.1 | 
+| [git](https://github.com/git/git) | 2.49.0 | 
 
 **Additional linux tools and packages**
 
@@ -69,7 +69,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu24.04
 | nano | 7.2-2ubuntu0.1 |
 | ncdu | 1.19-0.1 |
 | net-tools | 2.10-0.1ubuntu4 |
-| openssh-client | 1:9.6p1-3ubuntu13.8 |
+| openssh-client | 1:9.6p1-3ubuntu13.9 |
 | procps | 2:4.0.4-4ubuntu3.2 |
 | psmisc | 23.7-1build1 |
 | rsync | 3.2.7-1ubuntu1.2 |
@@ -84,7 +84,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu24.04
 
 ## Variant: jammy
 
-**Digest:** sha256:8eff0898e4db12d35c9d439946fc6256a6f6e575230aa18f304ad17d0cdc5d0e
+**Digest:** sha256:5dc6f039b48f31c388142930b1e218239a423a06171225ca1bb12d3eb02444b6
 
 **Tags:**
 ```
@@ -106,13 +106,13 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1c2127727af0ac452292f844ee32306f12906d03 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f81259fb344685e2dc8b67f8ad8764ccd4e8502e | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.48.1 | 
+| [git](https://github.com/git/git) | 2.49.0 | 
 
 **Additional linux tools and packages**
 
@@ -159,7 +159,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 ## Variant: focal
 
-**Digest:** sha256:e0803103ed4940948cb7f89abf233a98e3a77a2a2b32e9d9a5b43ec0648b56cf
+**Digest:** sha256:a41f2b1ad60448dd138a394ee9171ab309923e749ae3672c87f20546d1ca36b1
 
 **Tags:**
 ```
@@ -180,13 +180,13 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu20.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1c2127727af0ac452292f844ee32306f12906d03 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f81259fb344685e2dc8b67f8ad8764ccd4e8502e | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.48.1 | 
+| [git](https://github.com/git/git) | 2.49.0 | 
 
 **Additional linux tools and packages**
 
