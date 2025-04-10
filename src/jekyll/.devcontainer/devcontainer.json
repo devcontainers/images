@@ -14,13 +14,16 @@
 	},
 	// Configure tool-specific properties.
 	"customizations": {
-		// Set *default* container specific settings.json values on container create.
-		"settings": {
-			"github.copilot.chat.codeGeneration.instructions": [
-				{
-					"text": "This dev container includes `jekyll` (with `github-pages` and `jekyll-sass-converter`) and bundler (`bundle`) pre-installed and available on the `PATH`."
-				}
-			]
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Set *default* container specific settings.json values on container create.
+			"settings": {
+				"github.copilot.chat.codeGeneration.instructions": [
+					{
+						"text": "This dev container includes `jekyll` (with `github-pages` and `jekyll-sass-converter`) and bundler (`bundle`) pre-installed and available on the `PATH`."
+					}
+				]
+			}
 		}
 	},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

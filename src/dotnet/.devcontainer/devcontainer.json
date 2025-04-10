@@ -21,16 +21,16 @@
     },
 	// Configure tool-specific properties.
 	"customizations": {
-		// Set *default* container specific settings.json values on container create.
-		"settings": {
-			"github.copilot.chat.codeGeneration.instructions": [
-				{
-					"text": "This dev container includes the .NET SDK, which includes the .NET CLI and the shared runtime, pre-installed and available on the `PATH`, along with the C# language extension for .NET development."
-				}
-			]
-		},
 		// Configure properties specific to VS Code.
 		"vscode": {
+			// Set *default* container specific settings.json values on container create.
+			"settings": {
+				"github.copilot.chat.codeGeneration.instructions": [
+					{
+						"text": "This dev container includes the .NET SDK, which includes the .NET CLI and the shared runtime, pre-installed and available on the `PATH`, along with the C# language extension for .NET development."
+					}
+				]
+			},
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"ms-dotnettools.csharp"
