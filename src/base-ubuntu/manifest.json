@@ -32,7 +32,7 @@
 			],
 			"jammy": [
 				"base:${VERSION}-ubuntu-22.04",
-				"base:${VERSION}-ubuntu22.04",
+				"base:${VERSION}-ubuntu22.04"
 			],
 			"focal": [
 				"base:${VERSION}-ubuntu-20.04",
