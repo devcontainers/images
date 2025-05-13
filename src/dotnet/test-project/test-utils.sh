@@ -172,3 +172,18 @@ fixTestProjectFolderPrivs() {
         fi
     fi
 }
+
+checkBuild()
+{
+    echo -e "\n🧪 Testing dotnet build"
+    build_output=$(dotnet build 2>&1)
+    # Check if the specific error message is present in the output
+    if echo "$build_output" | grep -q "dotnet workload update"; then
+        echoStderr "❌ dotnet build check failed."
+        FAILED+=("dotnet build")
+        return 1 
+    else
+       echo "✅  Passed!"
+       return 0
+    fi
+}
