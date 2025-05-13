@@ -8,6 +8,7 @@ checkCommon
 
 # Image specific tests
 check "dotnet" dotnet --info
+checkBuild
 check "nuget" dotnet restore
 check "msbuild" dotnet msbuild
 sudo rm -rf obj bin
