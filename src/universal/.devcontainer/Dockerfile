@@ -4,7 +4,6 @@
 #-------------------------------------------------------------------------------------------------------------
 
 FROM ubuntu:noble
-#FROM buildpack-deps:noble-curl
 
 RUN if id "ubuntu" &>/dev/null; then \
             echo "Deleting user 'ubuntu' for noble" && userdel -f -r ubuntu || echo "Failed to delete ubuntu user for noble"; \  
