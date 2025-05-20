@@ -86,6 +86,20 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     # Remove scripts now that we're done with them
     && apt-get clean -y && rm -rf /tmp/scripts
 
+# Install libssl1.1 for oryx compatibility based on architecture
+RUN ARCH=$(uname -m) && \
+    if [ "$ARCH" = "x86_64" ] || [ "$ARCH" = "amd64" ]; then \
+        curl -fsSL -o libssl1.1_1.1.0g-2ubuntu4_amd64.deb http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4_amd64.deb && \
+        dpkg -i libssl1.1_1.1.0g-2ubuntu4_amd64.deb && \
+        rm libssl1.1_1.1.0g-2ubuntu4_amd64.deb; \
+    elif [ "$ARCH" = "aarch64" ] || [ "$ARCH" = "arm64" ]; then \
+        curl -fsSL -o libssl1.1_1.1.1f-1ubuntu2_arm64.deb http://ports.ubuntu.com/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2_arm64.deb && \
+        dpkg -i libssl1.1_1.1.1f-1ubuntu2_arm64.deb && \
+        rm libssl1.1_1.1.1f-1ubuntu2_arm64.deb; \
+    else \
+        echo "Unsupported architecture: $ARCH" && exit 1; \
+    fi
+
 # Default to bash shell (other shells available at /usr/bin/fish and /usr/bin/zsh)
 ENV SHELL=/bin/bash \
     DOCKER_BUILDKIT=1
