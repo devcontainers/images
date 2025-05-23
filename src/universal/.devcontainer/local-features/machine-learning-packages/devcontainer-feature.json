@@ -1,7 +1,0 @@
-{
-    "id": "machine-learning-packages",
-    "name": "Machine learning packages",
-	"installsAfter": [
-		"ghcr.io/devcontainers/features/python"
-	]
-}
