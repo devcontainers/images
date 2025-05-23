@@ -1,11 +1,10 @@
 {
-	"version": "1.2.10",
+	"version": "1.2.11",
 	"variants": [
 		"bookworm",
 		"bullseye",
 		"noble",
-		"jammy",
-		"focal"
+		"jammy"
 	],
 	"build": {
 		"latest": "bookworm",
@@ -13,8 +12,7 @@
 			"bookworm": "base-debian",
 			"bullseye": "base-debian",
 			"noble": "base-ubuntu",
-			"jammy": "base-ubuntu",
-			"focal": "base-ubuntu"
+			"jammy": "base-ubuntu"
 		},
 		"rootDistro": "debian",
 		"architectures": {
@@ -33,9 +31,6 @@
 			"jammy": [
 				"linux/amd64",
 				"linux/arm64"
-			],
-			"focal": [
-				"linux/amd64"
 			]
 		},
 		"tags": [
@@ -55,16 +50,12 @@
 			],
 			"noble": [
 				"cpp:${VERSION}-ubuntu-24.04",
-				"cpp:${VERSION}-ubuntu24.04"
+				"cpp:${VERSION}-ubuntu24.04",
+				"cpp:${VERSION}-ubuntu"
 			],
 			"jammy": [
 				"cpp:${VERSION}-ubuntu-22.04",
 				"cpp:${VERSION}-ubuntu22.04"
-			],
-			"focal": [
-				"cpp:${VERSION}-ubuntu-20.04",
-				"cpp:${VERSION}-ubuntu20.04",
-				"cpp:${VERSION}-ubuntu"
 			]
 		}
 	},
