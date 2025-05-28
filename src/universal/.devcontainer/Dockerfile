@@ -15,6 +15,7 @@ COPY first-run-notice.txt /tmp/scripts/
 
 ENV LANG="C.UTF-8"
 
+#Merging the mutiple layers to reduce the size of the image slightly
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     # Restore man command
     && yes | unminimize 2>&1 \ 
@@ -71,6 +72,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     # Install tools and shells not in common script
     && apt-get install -yq vim vim-doc xtail software-properties-common libsecret-1-dev \
     # Install additional tools (useful for 'puppeteer' project). Uncomment next couple lines for puppeteer.
+    # As of now puppeteer is out of support since March 2025(0.4.11) images release. 
     #&& apt-get install -y --no-install-recommends libnss3 libnspr4 libatk-bridge2.0-0 libatk1.0-0 libx11-6 libpangocairo-1.0-0 \
                                                   #libx11-xcb1 libcups2 libxcomposite1 libxdamage1 libxfixes3 libpango-1.0-0 libgbm1 libgtk-3-0 \
     # Clean up
