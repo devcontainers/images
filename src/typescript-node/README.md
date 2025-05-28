@@ -9,7 +9,7 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published image* | mcr.microsoft.com/devcontainers/typescript-node |
-| *Available image variants* | 22 / 22-bookworm, 20 / 20-bookworm, 18 / 18-bookworm, 22-bullseye, 20-bullseye, 18-bullseye, 20-buster, 18-buster ([full list](https://mcr.microsoft.com/v2/devcontainers/typescript-node/tags/list)) |
+| *Available image variants* | 22 / 22-bookworm, 20 / 20-bookworm, 22-bullseye, 20-bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/typescript-node/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm`, and `bullseye` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
@@ -21,8 +21,7 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 
 - `mcr.microsoft.com/devcontainers/typescript-node` (latest)
 - `mcr.microsoft.com/devcontainers/typescript-node:22` (or `22-bookworm`, `22-bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/typescript-node:20` (or `20-bookworm`, `20-bullseye`, `20-buster` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/typescript-node:18` (or `18-bookworm`, `18-bullseye`, `18-buster` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/typescript-node:20` (or `20-bookworm`, `20-bullseye` to pin to an OS version)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
@@ -30,7 +29,7 @@ You can decide how often you want updates by referencing a [semantic version](ht
 
 - `mcr.microsoft.com/devcontainers/typescript-node:1-22` (or `1-22-bookworm`, `1-22-bullseye`)
 - `mcr.microsoft.com/devcontainers/typescript-node:1.1-22` (or `1.1-22-bookworm`, `1.1-22-bullseye`)
-- `mcr.microsoft.com/devcontainers/typescript-node:1.1.0-22` (or `1.1.0-20-bookworm`, `1.1.0-20-bullseye`)
+- `mcr.microsoft.com/devcontainers/typescript-node:1.1.0-22` (or `1.1.12-20-bookworm`, `1.1.12-20-bullseye`)
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `1-1.20`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
