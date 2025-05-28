@@ -9,6 +9,7 @@ npm install -g @devcontainers/cli
 
 id_label="test-container=${IMAGE}"
 id_image="${IMAGE}-test-image"
+echo "test it!"
 echo "(*) Building image - ${IMAGE}"
 devcontainer build --image-name ${id_image} --workspace-folder "src/${IMAGE}/"
 echo "(*) Starting container - ${IMAGE}"
