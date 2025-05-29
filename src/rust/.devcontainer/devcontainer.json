@@ -11,7 +11,7 @@
             "userGid": "1000",
             "upgradePackages": "true"
         },
-        "ghcr.io/devcontainers/features/rust:1": "latest",
+        "ghcr.io/devcontainers/features/rust:latest": "latest",
 	"ghcr.io/devcontainers/features/git:1": {
             "version": "latest",
             "ppa": "false"
