@@ -1,4 +1,4 @@
-ARG VARIANT=22-bookworm
+ARG VARIANT=24-bookworm
 FROM mcr.microsoft.com/devcontainers/javascript-node:1-${VARIANT}
 
 # Install tslint, typescript. eslint is installed by javascript image
