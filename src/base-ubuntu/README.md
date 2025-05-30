@@ -29,9 +29,9 @@ Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/devcontainers/base:1-jammy`
-- `mcr.microsoft.com/devcontainers/base:1.0-jammy`
-- `mcr.microsoft.com/devcontainers/base:1.0.0-jammy`
+- `mcr.microsoft.com/devcontainers/base:2-jammy`
+- `mcr.microsoft.com/devcontainers/base:2.0-jammy`
+- `mcr.microsoft.com/devcontainers/base:2.0.0-jammy`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/base/tags/list).
 
