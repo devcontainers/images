@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/miniconda)
 
-**Digest:** sha256:ba65c2c7fabe4130c7092417f34640727a651f0755f34227192440db9651c276
+**Digest:** sha256:24d4c3a334163184952ee681b3145a9cbd3c687a467c4041f3a77779dc3f8145
 
 **Tags:**
 ```
@@ -29,35 +29,35 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 69a6359f7cf8978d464573fb7b023ee3cd00181a | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 750d3ac4b493dca13ef0ced55fa6a2cd02dc7ee8 | /home/vscode/.oh-my-zsh |
 
 **Pip / pipx installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
 | certifi | 2025.1.31 |
-| cryptography | 43.0.3 |
+| cryptography | 44.0.1 |
 | setuptools | 75.8.0 |
 | wheel | 0.45.1 |
 | requests | 2.32.3 |
-| pylint | 3.3.5 |
-| flake8 | 7.1.2 |
+| pylint | 3.3.6 |
+| flake8 | 7.2.0 |
 | autopep8 | 2.3.2 |
 | black | 25.1.0 |
 | yapf | 0.43.0 |
 | mypy | 1.15.0 |
 | pydocstyle | 6.3.0 |
-| pycodestyle | 2.12.1 |
+| pycodestyle | 2.13.0 |
 | bandit | 1.8.3 |
-| virtualenv | 20.29.3 |
+| virtualenv | 20.30.0 |
 | pipx | 1.7.1 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.48.1 | 
-| [conda](https://github.com/conda/conda) | 25.1.1 | /opt/conda |
+| [git](https://github.com/git/git) | 2.49.0 | 
+| [conda](https://github.com/conda/conda) | 25.3.1 | /opt/conda |
 
 **Additional linux tools and packages**
 
@@ -66,7 +66,7 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
 | ca-certificates | 20230311 |
-| curl | 7.88.1-10+deb12u8 |
+| curl | 7.88.1-10+deb12u12 |
 | dialog | 1.3-20230209-1 |
 | git | 1:2.39.5-0+deb12u2 |
 | gnupg2 | 2.2.40-1.1 |
@@ -74,13 +74,13 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | iproute2 | 6.1.0-3 |
 | jq | 1.6-2.1 |
 | less | 590-2.1~deb12u2 |
-| libc6 | 2.36-9+deb12u9 |
+| libc6 | 2.36-9+deb12u10 |
 | libgssapi-krb5-2 | 1.20.1-2+deb12u2 |
 | libicu72 | 72.1-3 |
 | libkrb5-3 | 1.20.1-2+deb12u2 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14 |
-| locales | 2.36-9+deb12u9 |
+| locales | 2.36-9+deb12u10 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
@@ -96,8 +96,8 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | strace | 6.1-0.1 |
 | sudo | 1.9.13p3-1+deb12u1 |
 | unzip | 6.0-28 |
-| vim-tiny | 2:9.0.1378-2 |
-| wget | 1.21.3-1+b2 |
+| vim-tiny | 2:9.0.1378-2+deb12u2 |
+| wget | 1.21.3-1+deb12u1 |
 | yarn | 1.22.22-1 |
 | zip | 3.0-13 |
 | zlib1g | 1:1.2.13.dfsg-1 |
