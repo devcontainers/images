@@ -11,9 +11,9 @@
       "integrity": "sha256:d2d768ecc06f6b71ecd0820408c6272de2cc24427fe07921d93ede5c7775ad1d"
     },
     "ghcr.io/devcontainers/features/rust:1": {
-      "version": "1.3.2",
-      "resolved": "ghcr.io/devcontainers/features/rust@sha256:f1da0f3f9167dacd59078e3c3a0b85a483c7eac7ae77ea0ae149b5bea07fdc49",
-      "integrity": "sha256:f1da0f3f9167dacd59078e3c3a0b85a483c7eac7ae77ea0ae149b5bea07fdc49"
+      "version": "1.3.3",
+      "resolved": "ghcr.io/devcontainers/features/rust@sha256:2521a8eeb4911bfcb22557c8394870ea22eb790d8e52219ddc5182f62d388995",
+      "integrity": "sha256:2521a8eeb4911bfcb22557c8394870ea22eb790d8e52219ddc5182f62d388995"
     }
   }
 }
