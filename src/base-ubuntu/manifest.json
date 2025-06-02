@@ -1,9 +1,8 @@
 {
-	"version": "1.2.5",
+	"version": "2.0.1",
 	"variants": [
 		"noble",
-		"jammy",
-		"focal"
+		"jammy"
 	],
 	"build": {
 		"latest": false,
@@ -16,9 +15,6 @@
 			"jammy": [
 				"linux/amd64",
 				"linux/arm64"
-			],
-			"focal": [
-				"linux/amd64"
 			]
 		},
 		"tags": [
@@ -27,16 +23,12 @@
 		"variantTags": {
 			"noble": [
 				"base:${VERSION}-ubuntu-24.04",
-				"base:${VERSION}-ubuntu24.04"
+				"base:${VERSION}-ubuntu24.04",
+				"base:${VERSION}-ubuntu"
 			],
 			"jammy": [
 				"base:${VERSION}-ubuntu-22.04",
-				"base:${VERSION}-ubuntu22.04",
-				"base:${VERSION}-ubuntu"
-			],
-			"focal": [
-				"base:${VERSION}-ubuntu-20.04",
-				"base:${VERSION}-ubuntu20.04"
+				"base:${VERSION}-ubuntu22.04"
 			]
 		}
 	},
