@@ -610,6 +610,16 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Image: node",
+                    "Version": "24-bookworm",
+                    "DownloadUrl": "https://hub.docker.com/_/node"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: node",
                     "Version": "22-bookworm",
                     "DownloadUrl": "https://hub.docker.com/_/node"
                 }
@@ -631,6 +641,16 @@
                 "Other": {
                     "Name": "Docker Image: node",
                     "Version": "18-bookworm",
+                    "DownloadUrl": "https://hub.docker.com/_/node"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: node",
+                    "Version": "24-bullseye",
                     "DownloadUrl": "https://hub.docker.com/_/node"
                 }
             }
@@ -1233,6 +1253,16 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Image: node",
+                    "Version": "24-bookworm",
+                    "DownloadUrl": "https://hub.docker.com/_/node"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: node",
                     "Version": "22-bookworm",
                     "DownloadUrl": "https://hub.docker.com/_/node"
                 }
@@ -1254,6 +1284,16 @@
                 "Other": {
                     "Name": "Docker Image: node",
                     "Version": "18-bookworm",
+                    "DownloadUrl": "https://hub.docker.com/_/node"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: node",
+                    "Version": "24-bullseye",
                     "DownloadUrl": "https://hub.docker.com/_/node"
                 }
             }
