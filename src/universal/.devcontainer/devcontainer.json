@@ -31,7 +31,7 @@
         },
         "./local-features/machine-learning-packages": "latest",
         "ghcr.io/devcontainers/features/php:1": {
-            "version": "8.4.7",
+            "version": "8.4.2",
             "additionalVersions": "8.3.14",
             "installComposer": "true"
         },
@@ -39,8 +39,8 @@
             "version": "latest"
         },
         "ghcr.io/devcontainers/features/ruby:1": {
-            "version": "3.4.4",
-            "additionalVersions": "3.3.2"
+            "version": "3.4.1",
+            "additionalVersions": "3.3.6"
         },
         "ghcr.io/devcontainers/features/java:1": {
             "version": "21",
