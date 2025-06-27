@@ -184,7 +184,7 @@ check "java-version-on-path-is-12.0.2" java --version | grep 12.0.2
 ls -la /home/codespace
 
 ## Python - current
-checkPythonPackageVersion "python" "setuptools" "65.5.1"
+checkPythonPackageVersion "python" "setuptools" "78.1.1"
 checkPythonPackageVersion "python" "requests" "2.31.0"
 checkPythonPackageVersion "python" "urllib3" "2.0.7"
 
