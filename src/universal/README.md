@@ -8,7 +8,7 @@
 |----------|-------|
 | *Categories* | Services, GitHub |
 | *Image type* | Dockerfile |
-| *Published image* | mcr.microsoft.com/devcontainers/universal:linux<br />mcr.microsoft.com/devcontainers/universal:focal |
+| *Published image* | mcr.microsoft.com/devcontainers/universal:linux<br />mcr.microsoft.com/devcontainers/universal:noble |
 | *Published image architecture(s)* | x86-64 |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Ubuntu |
@@ -27,9 +27,9 @@ The container includes the `zsh` (and Oh My Zsh!) and `fish` shells that you can
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image.
 For example:
 
-- `mcr.microsoft.com/devcontainers/universal:2-focal`
-- `mcr.microsoft.com/devcontainers/universal:2.0-focal`
-- `mcr.microsoft.com/devcontainers/universal:2.0.6-focal`
+- `mcr.microsoft.com/devcontainers/universal:3-noble`
+- `mcr.microsoft.com/devcontainers/universal:3.0-noble`
+- `mcr.microsoft.com/devcontainers/universal:3.0.0-noble`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/universal/tags/list).
 
