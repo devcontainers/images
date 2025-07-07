@@ -47,9 +47,12 @@
 		},
 		"variantTags": {
 			"10.0-preview-trixie-slim": [
-				"dotnet:${VERSION}-10.0-preview",
 				"dotnet:${VERSION}-10.0-preview-trixie"
-			],			
+			],	
+			"10.0-preview-noble": [
+				"dotnet:${VERSION}-10.0-preview",
+				"dotnet:${VERSION}-10.0-preview-noble"
+			],					
 			"9.0-bookworm-slim": [
 				"dotnet:${VERSION}-9.0",
 				"dotnet:${VERSION}-9.0-bookworm"
