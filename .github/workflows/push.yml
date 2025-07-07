@@ -33,6 +33,17 @@ jobs:
     - name: Get tag name
       run: echo "TAG=$(echo "${{ github.ref }}" | grep -oP 'refs/tags/\K(.+)')" >> $GITHUB_ENV
 
+    - name: Log in to Azure using Managed Identity
+      uses: azure/login@v2
+      with:
+        client-id: ${{secrets.ACR_CLIENT_ID}}
+        tenant-id: ${{secrets.ACR_TENANT_ID}}
+        subscription-id: ${{secrets.ACR_SUBSCRIPTION_ID}}
+    
+    - name: Log into ACR
+      run: |
+        az acr login --name ${{secrets.ACR_REGISTRY_NAME}}
+
     - name: Build and push
       id: build_and_push
       env:
@@ -46,11 +57,6 @@ jobs:
         PASSWORD: ${{ secrets.PASSWORD }}
       run: |
         set -e
-
-        # ACR login
-        ACR_REGISTRY_NAME=$(echo "$REGISTRY" | grep -oP '(.+)(?=\.azurecr\.io)')
-        az acr login --name $ACR_REGISTRY_NAME --username $TOKEN_NAME --password $PASSWORD
-
         # Build and push images
         yarn install
         npm install -g @devcontainers/cli
