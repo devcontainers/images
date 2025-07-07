@@ -5,6 +5,10 @@ on:
   schedule:
     - cron: '0 14 * * MON'
 
+permissions:
+  id-token: write
+
+
 jobs:
   build-and-push:
     name: Build and push
@@ -36,7 +40,7 @@ jobs:
         client-id: ${{secrets.ACR_CLIENT_ID}}
         tenant-id: ${{secrets.ACR_TENANT_ID}}
         subscription-id: ${{secrets.ACR_SUBSCRIPTION_ID}}
-        
+
     - name: Log into ACR
       run: |
         az acr login --name ${{secrets.ACR_REGISTRY_NAME}}

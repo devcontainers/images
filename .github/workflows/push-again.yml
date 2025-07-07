@@ -11,6 +11,9 @@ on:
         description: 'Image ID'
         required: true
 
+permissions:
+  id-token: write
+
 jobs:
   build-and-push:
     name: Build and push images
@@ -51,7 +54,7 @@ jobs:
     - name: Log into ACR
       run: |
         az acr login --name ${{secrets.ACR_REGISTRY_NAME}}
-        
+
     - name: Build and push
       id: build_and_push
       env:

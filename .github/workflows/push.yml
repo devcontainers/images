@@ -5,6 +5,9 @@ on:
     tags:
     - 'v*'
 
+permissions:
+  id-token: write
+
 jobs:
   build-and-push:
     name: Build and push images

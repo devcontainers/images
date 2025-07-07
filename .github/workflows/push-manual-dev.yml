@@ -6,6 +6,9 @@ on:
       image:
         description: 'Image ID'
         required: true
+        
+permissions:
+  id-token: write
 
 jobs:
   build-and-push:
