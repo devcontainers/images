@@ -10,7 +10,7 @@
 
 ## Variant: bookworm
 
-**Digest:** sha256:231c970c4950ac743e43174aa23a3142da67ed68d6db28a99e2f06e19b882704
+**Digest:** sha256:ed1857b9fed771a7ae1c0f938ed4a949723fd714157bff4d24a727658f4ad81b
 
 **Tags:**
 ```
@@ -31,28 +31,28 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Rust](https://github.com/rust-lang/rust) | 1.83.0 | /usr/local/cargo<br />/usr/local/rustup |
+| [Rust](https://github.com/rust-lang/rust) | 1.85.0 | /usr/local/cargo<br />/usr/local/rustup |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 69a6359f7cf8978d464573fb7b023ee3cd00181a | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1c2127727af0ac452292f844ee32306f12906d03 | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 
 | Tool / crate | Version |
 |--------------|---------|
 | rustfmt | 1.8.0 |
-| rust-analysis | 1.83.0 |
-| rust-src | 1.83.0 |
-| clippy | 1.83.0 |
+| rust-analysis | 1.85.0 |
+| rust-src | 1.85.0 |
+| clippy | 1.85.0 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.47.1 | 
+| [git](https://github.com/git/git) | 2.48.1 | 
 
 **Additional linux tools and packages**
 
@@ -64,7 +64,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bookworm
 | curl | 7.88.1-10+deb12u8 |
 | dialog | 1.3-20230209-1 |
 | gcc | 4:12.2.0-3 |
-| git | 1:2.39.5-0+deb12u1 |
+| git | 1:2.39.5-0+deb12u2 |
 | gnupg2 | 2.2.40-1.1 |
 | htop | 3.2.2-2 |
 | iproute2 | 6.1.0-3 |
@@ -87,11 +87,11 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bookworm
 | nano | 7.2-1+deb12u1 |
 | ncdu | 1.18-0.2 |
 | net-tools | 2.10-0.1 |
-| openssh-client | 1:9.2p1-2+deb12u3 |
+| openssh-client | 1:9.2p1-2+deb12u5 |
 | procps | 2:4.0.2-3 |
 | psmisc | 23.6-1 |
 | python3-minimal | 3.11.2-1+b1 |
-| rsync | 3.2.7-1 |
+| rsync | 3.2.7-1+deb12u2 |
 | strace | 6.1-0.1 |
 | sudo | 1.9.13p3-1+deb12u1 |
 | unzip | 6.0-28 |
@@ -103,7 +103,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bookworm
 
 ## Variant: bullseye
 
-**Digest:** sha256:83ff3e09b5e52510c34cf24ac49c6069b745c71cac412470a9bdc4cbe5faa799
+**Digest:** sha256:9893879fc4b2803c08bd81d4c5656d9f942884503eaf0c6e4693db42542c7276
 
 **Tags:**
 ```
@@ -123,28 +123,28 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Rust](https://github.com/rust-lang/rust) | 1.83.0 | /usr/local/cargo<br />/usr/local/rustup |
+| [Rust](https://github.com/rust-lang/rust) | 1.85.0 | /usr/local/cargo<br />/usr/local/rustup |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 69a6359f7cf8978d464573fb7b023ee3cd00181a | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | f97e871c33da57d20e1b0411da6b1674126192a9 | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 
 | Tool / crate | Version |
 |--------------|---------|
 | rustfmt | 1.8.0 |
-| rust-analysis | 1.83.0 |
-| rust-src | 1.83.0 |
-| clippy | 1.83.0 |
+| rust-analysis | 1.85.0 |
+| rust-src | 1.85.0 |
+| clippy | 1.85.0 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.47.1 | 
+| [git](https://github.com/git/git) | 2.48.1 | 
 
 **Additional linux tools and packages**
 
@@ -156,7 +156,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 | curl | 7.74.0-1.3+deb11u14 |
 | dialog | 1.3-20201126-1 |
 | gcc | 4:10.2.1-1 |
-| git | 1:2.30.2-1+deb11u3 |
+| git | 1:2.30.2-1+deb11u4 |
 | gnupg2 | 2.2.27-2+deb11u2 |
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |
@@ -164,9 +164,9 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 | less | 551-2+deb11u2 |
 | libc6 | 2.31-13+deb11u11 |
 | libc6-dev | 2.31-13+deb11u11 |
-| libgssapi-krb5-2 | 1.18.3-6+deb11u5 |
+| libgssapi-krb5-2 | 1.18.3-6+deb11u6 |
 | libicu67 | 67.1-7 |
-| libkrb5-3 | 1.18.3-6+deb11u5 |
+| libkrb5-3 | 1.18.3-6+deb11u6 |
 | liblttng-ust0 | 2.12.1-1 |
 | libssl1.1 | 1.1.1w-0+deb11u2 |
 | libstdc++6 | 10.2.1-6 |
@@ -180,11 +180,11 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 | nano | 5.4-2+deb11u3 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1+deb11u1 |
-| openssh-client | 1:8.4p1-5+deb11u3 |
+| openssh-client | 1:8.4p1-5+deb11u4 |
 | procps | 2:3.3.17-5 |
 | psmisc | 23.4-2 |
 | python3-minimal | 3.9.2-3 |
-| rsync | 3.2.3-4+deb11u1 |
+| rsync | 3.2.3-4+deb11u3 |
 | strace | 5.10-1 |
 | sudo | 1.9.5p2-3+deb11u1 |
 | unzip | 6.0-26+deb11u1 |
