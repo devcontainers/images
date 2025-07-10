@@ -28,11 +28,11 @@ Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/devcontainers/typescript-node:2-24` (or `2-24-bookworm`, `2-24-bullseye`)
-- `mcr.microsoft.com/devcontainers/typescript-node:2.0-24` (or `2.0-24-bookworm`, `2.0-24-bullseye`)
-- `mcr.microsoft.com/devcontainers/typescript-node:2.0.0-24` (or `2.0.0-24-bookworm`, `2.0.0-24-bullseye`)
+- `mcr.microsoft.com/devcontainers/typescript-node:3-24` (or `3-24-bookworm`, `3-24-bullseye`)
+- `mcr.microsoft.com/devcontainers/typescript-node:3.0-24` (or `3.0-24-bookworm`, `3.0-24-bullseye`)
+- `mcr.microsoft.com/devcontainers/typescript-node:3.0.0-24` (or `3.0.0-24-bookworm`, `3.0.0-24-bullseye`)
 
-However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `2-24`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
+However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `3-24`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
 Beyond TypeScript, Node.js, and `git`, this image / `Dockerfile` includes `eslint`, `zsh`, [Oh My Zsh!](https://ohmyz.sh/), a non-root `node` user with `sudo` access, and a set of common dependencies for development. Since `tslint` is [now fully deprecated](https://github.com/palantir/tslint/issues/4534), the image includes `tslint-to-eslint-config` globally to help you migrate.
 
