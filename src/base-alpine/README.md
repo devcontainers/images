@@ -9,11 +9,7 @@
 | *Categories* | Core, Other |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/base:alpine |
-<<<<<<< HEAD
 | *Available image variants* | alpine-3.22, alpine-3.21, alpine-3.20, alpine-3.19 ([full list](https://mcr.microsoft.com/v2/devcontainers/base/tags/list)) |
-=======
-| *Available image variants* | alpine-3.21, alpine-3.20, alpine-3.19, alpine-3.18 ([full list](https://mcr.microsoft.com/v2/devcontainers/base/tags/list)) |
->>>>>>> parent of cc4b22bb (EOL changes to alpine(3.18))
 | *Published image architecture(s)* | x86-64, aarch64/arm64 |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Alpine Linux |
@@ -30,7 +26,7 @@ You can also directly reference pre-built versions of `.devcontainer/Dockerfile`
 - `mcr.microsoft.com/devcontainers/base:alpine-3.21`
 - `mcr.microsoft.com/devcontainers/base:alpine-3.20`
 - `mcr.microsoft.com/devcontainers/base:alpine-3.19`
-- `mcr.microsoft.com/devcontainers/base:alpine-3.18`
+
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
