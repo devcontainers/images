@@ -5,8 +5,8 @@
 
 # define array of packages for pinning to the patched versions
 # vulnerable_packages=( "package1=version1" "package2=version2" "package3=version3" )
-vulnerable_packages=( "cryptography=44.0.1" )
-vulnerable_packages=( "requests=2.32.4" )
+vulnerable_packages=( "cryptography=44.0.1" "requests=2.32.4" )
+
 # Define the number of rows (based on the length of vulnerable_packages)
 rows=${#vulnerable_packages[@]}
 
