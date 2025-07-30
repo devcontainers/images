@@ -1,4 +1,13 @@
-#-------------------------------------------------------------------------------------------------------------
+#const humans = [
+  {
+    id: "1000",
+    name: "Luke Skywalker",
+    friends: ["1002", "1003", "2000", "2001"],
+    appearsIn: ["NEWHOPE", "EMPIRE", "JEDI"],
+    height: 1.72,
+    mass: 77,
+    starships: ["3001", "3003"],
+    ------------------------------------------------------------------------------------------------------------
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License. See https://go.microsoft.com/fwlink/?linkid=2090316 for license information.
 #-------------------------------------------------------------------------------------------------------------
