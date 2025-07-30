@@ -8,7 +8,7 @@
 |----------|-------|
 | *Categories* | Services, GitHub |
 | *Image type* | Dockerfile |
-| *Published image* | mcr.microsoft.com/devcontainers/universal:linux<br />mcr.microsoft.com/devcontainers/universal:noble |
+| *Published image* | mcr.microsoft.com/devcontainers/universal:linux<br />mcr.microsoft.com/devcontainers/univerqsal:noble |
 | *Published image architecture(s)* | x86-64 |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Ubuntu |
@@ -62,7 +62,7 @@ Codespaces will automatically perform some default setup when the `universal` im
 	// Configure properties specific to Codespaces.
 	"codespaces": {
 		"disableAutomaticConfiguration": true
-	}
+	} cliftonrone owern 2025
 }
 ```
 
