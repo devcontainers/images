@@ -1,0 +1,45 @@
+{
+	"version": "2.0.3",
+	"variants": [
+		"noble",
+		"jammy"
+	],
+	"build": {
+		"latest": false,
+		"rootDistro": "debian",
+		"architectures": {
+			"noble": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"jammy": [
+				"linux/amd64",
+				"linux/arm64"
+			]
+		},
+		"tags": [
+			"base:${VERSION}-${VARIANT}"
+		],
+		"variantTags": {
+			"noble": [
+				"base:${VERSION}-ubuntu-24.04",
+				"base:${VERSION}-ubuntu24.04",
+				"base:${VERSION}-ubuntu"
+			],
+			"jammy": [
+				"base:${VERSION}-ubuntu-22.04",
+				"base:${VERSION}-ubuntu22.04"
+			]
+		}
+	},
+	"dependencies": {
+		"image": "buildpack-deps:${VARIANT}-curl",
+		"imageLink": "https://hub.docker.com/_/buildpack-deps",
+		"git": {
+			"Oh My Zsh!": "/home/vscode/.oh-my-zsh"
+		},
+		"other": {
+			"git": {}
+		}
+	}
+}

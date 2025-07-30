@@ -1,0 +1,79 @@
+name: Re-push image
+
+on:
+  workflow_dispatch:
+    inputs:
+      release:
+        description: 'Release branch or tag'
+        required: true
+        default: 'main'
+      image:
+        description: 'Image ID'
+        required: true
+
+jobs:
+  build-and-push:
+    name: Build and push images
+    if: ${{ github.ref == 'refs/heads/main' }}
+    runs-on: devcontainer-image-builder-ubuntu
+    environment: publishing
+    steps:
+    - name: Free more space
+      id: free_space 
+      run: |
+        set -e
+        # Ensure enough space is available for build
+        sudo apt-get autoremove -y
+        sudo apt-get clean -y
+        sudo rm -rf /usr/share/dotnet
+
+    - name: Checkout ref
+      id: checkout_ref
+      uses: actions/checkout@v3
+      with:
+        path: 'ref'
+        ref: ${{ github.ref }}
+        
+    - name: Checkout release
+      id: checkout_release
+      uses: actions/checkout@v3
+      with:
+        path: 'release'
+        ref: ${{ github.event.inputs.release }}
+      
+    - name: Build and push
+      id: build_and_push
+      env:
+        REGISTRY: ${{ secrets.REGISTRY }}
+        REGISTRY_BASE_PATH: ${{ secrets.REGISTRY_BASE_PATH }}
+        STUB_REGISTRY: ${{ secrets.STUB_REGISTRY }}
+        STUB_REGISTRY_BASE_PATH: ${{ secrets.STUB_REGISTRY_BASE_PATH }}
+        SECONDARY_REGISTRY_BASE_PATH: ${{ secrets.SECONDARY_REGISTRY_BASE_PATH }}
+        TOKEN_NAME: ${{ secrets.TOKEN_NAME }}
+        PASSWORD: ${{ secrets.PASSWORD }}
+      run: |
+        set -e
+
+        # ACR login
+        ACR_REGISTRY_NAME=$(echo "$REGISTRY" | grep -oP '(.+)(?=\.azurecr\.io)')
+        az acr login --name $ACR_REGISTRY_NAME --username $TOKEN_NAME --password $PASSWORD
+
+        # Setup build CLI
+        cd "$GITHUB_WORKSPACE/ref"
+        yarn install
+        npm install -g @devcontainers/cli
+
+        # Go to the release, symlink the build tool from ref since this is the version for the workflow
+        cd "$GITHUB_WORKSPACE/release"
+        rm -rf build node_modules
+        ln -s "$GITHUB_WORKSPACE/ref/build" build
+        ln -s "$GITHUB_WORKSPACE/ref/node_modules" node_modules
+
+        build/vscdc push  --replace-images \
+                          --release ${{ github.event.inputs.release }} \
+                          --registry "$REGISTRY" \
+                          --registry-path "$REGISTRY_BASE_PATH" \
+                          --stub-registry "$STUB_REGISTRY" \
+                          --stub-registry-path "$STUB_REGISTRY_BASE_PATH" \
+                          --secondary-registry-path "$SECONDARY_REGISTRY_BASE_PATH" \
+                          ${{ github.event.inputs.image }}

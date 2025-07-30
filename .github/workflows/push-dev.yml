@@ -1,0 +1,80 @@
+name: Build and push "dev" images
+
+on: 
+  workflow_dispatch:
+  schedule:
+    - cron: '0 14 * * MON'
+
+jobs:
+  build-and-push:
+    name: Build and push
+    if: "github.ref == 'refs/heads/main'"
+    strategy:
+      matrix:
+        page: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70]
+        page-total: [70]
+      fail-fast: false
+    runs-on: devcontainer-image-builder-ubuntu
+    environment: publishing
+    steps:
+    - name: Free more space
+      id: free_space 
+      run: |
+        set -e
+        # Ensure enough space is available for build
+        sudo apt-get autoremove -y
+        sudo apt-get clean -y
+        sudo rm -rf /usr/share/dotnet
+
+    - name: Checkout
+      id: checkout
+      uses: actions/checkout@v3
+
+    - name: Build and push dev tags
+      id: build_and_push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        REGISTRY: ${{ secrets.REGISTRY }}
+        REGISTRY_BASE_PATH: ${{ secrets.REGISTRY_BASE_PATH }}
+        STUB_REGISTRY: ${{ secrets.STUB_REGISTRY }}
+        STUB_REGISTRY_BASE_PATH: ${{ secrets.STUB_REGISTRY_BASE_PATH }}
+        SECONDARY_REGISTRY_BASE_PATH: ${{ secrets.SECONDARY_REGISTRY_BASE_PATH }}
+        TOKEN_NAME: ${{ secrets.TOKEN_NAME }}
+        PASSWORD: ${{ secrets.PASSWORD }}
+      run: |
+        set -e
+
+        # ACR login
+        ACR_REGISTRY_NAME=$(echo "$REGISTRY" | grep -oP '(.+)(?=\.azurecr\.io)')
+        az acr login --name $ACR_REGISTRY_NAME --username $TOKEN_NAME --password $PASSWORD
+
+        # Build and push dev images
+        yarn install
+        npm install -g @devcontainers/cli
+        GIT_BRANCH=$(echo "${{ github.ref }}" | grep -oP 'refs/(heads|tags)/\K(.+)')
+        if [ "$GIT_BRANCH" == "" ]; then 
+            GIT_BRANCH=main
+        fi
+        build/vscdc push  --page ${{ matrix.page }} \
+                          --pageTotal ${{ matrix.page-total }} \
+                          --release $GIT_BRANCH \
+                          --github-repo ${{ github.repository }} \
+                          --registry "$REGISTRY" \
+                          --registry-path "$REGISTRY_BASE_PATH" \
+                          --stub-registry "$STUB_REGISTRY" \
+                          --stub-registry-path "$STUB_REGISTRY_BASE_PATH" \
+                          --secondary-registry-path "$SECONDARY_REGISTRY_BASE_PATH"
+
+  image-info:
+    name: Trigger info extraction
+    needs: [build-and-push]
+    uses: devcontainers/images/.github/workflows/version-history.yml@main
+    permissions:
+      contents: write
+      pull-requests: write
+    with:
+      release: "${{ github.ref }}"
+      cg: "true"
+      push: "true"
+      overwrite: "true"
+    secrets: inherit

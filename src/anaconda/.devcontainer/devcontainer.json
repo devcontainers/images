@@ -1,0 +1,43 @@
+{
+	"build": {
+		"dockerfile": "./Dockerfile",
+		"context": "."
+	},
+	"features": {
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "none"
+        },
+		"ghcr.io/devcontainers/features/git:1": {
+            "version": "latest",
+            "ppa": "false"
+        }
+    },
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Set *default* container specific settings.json values on container create.
+			"settings": {
+				"github.copilot.chat.codeGeneration.instructions": [
+					{
+						"text": "This dev container includes Anaconda and the `conda` package manager pre-installed and available on the `PATH` for data science and Python development. Additional packages installed using Conda will be downloaded from Anaconda or another repository configured by the user. A user can install different versions of Python than the one in this dev container by running a command like: `conda install python=3.7`. The Python extensions are also pre-installed and configured to use the conda environment in this dev container."
+					}
+				],
+				"python.defaultInterpreterPath": "/opt/conda/bin/python"
+			},
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"ms-python.python",
+				"ms-python.vscode-pylance"
+			]
+		}
+	},
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "python --version",
+
+	// Set `remoteUser` to `root` to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode"
+}

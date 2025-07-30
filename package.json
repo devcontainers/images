@@ -1,0 +1,12 @@
+{
+  "files": [
+		"src"
+	],
+	"devDependencies": {
+		"mkdirp": "0.5.5",
+		"copyfiles": "^2.4.1",
+		"handlebars": "^4.7.7",
+		"jsonc": "^2.0.0",
+		"rimraf": "^3.0.2"
+	}
+}

@@ -1,0 +1,127 @@
+{
+	"version": "1.3.0",
+	"variants": [
+		"3.13-bookworm",
+		"3.12-bookworm",
+		"3.11-bookworm",
+		"3.10-bookworm",
+		"3.9-bookworm",
+		"3.13-bullseye",
+		"3.12-bullseye",
+		"3.11-bullseye",
+		"3.10-bullseye",
+		"3.9-bullseye"
+	],
+	"build": {
+		"latest": "3.13-bookworm",
+		"rootDistro": "debian",
+		"architectures": {
+			"3.13-bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"3.12-bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"3.11-bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"3.10-bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"3.9-bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"3.13-bullseye": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"3.12-bullseye": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"3.11-bullseye": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"3.10-bullseye": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"3.9-bullseye": [
+				"linux/amd64",
+				"linux/arm64"
+			]
+		},
+		"tags": [
+			"python:${VERSION}-${VARIANT}"
+		],
+		"variantTags": {
+			"3.13-bookworm": [
+				"python:${VERSION}-3.13",
+				"python:${VERSION}-3",
+				"python:${VERSION}-3-bookworm",
+				"python:${VERSION}-bookworm"
+			],
+			"3.12-bookworm": [
+				"python:${VERSION}-3.12"
+			],
+			"3.11-bookworm": [
+				"python:${VERSION}-3.11"
+			],
+			"3.10-bookworm": [
+				"python:${VERSION}-3.10"
+			],
+			"3.9-bookworm": [
+				"python:${VERSION}-3.9"
+			],
+			"3.13-bullseye": [
+				"python:${VERSION}-3-bullseye",
+				"python:${VERSION}-bullseye"
+			]
+		}
+	},
+	"dependencies": {
+		"image": "python:${VARIANT}",
+		"imageLink": "https://hub.docker.com/_/python",
+		"apt": [
+			{
+				"cgIgnore": false,
+				"name": "yarn"
+			}
+		],
+		"git": {
+			"Oh My Zsh!": "/home/vscode/.oh-my-zsh",
+			"nvm": "/usr/local/share/nvm"
+		},
+		"pipx": [
+			"pylint",
+			"flake8",
+			"autopep8",
+			"black",
+			"yapf",
+			"mypy",
+			"pydocstyle",
+			"pycodestyle",
+			"bandit",
+			"virtualenv",
+			"pipx"
+		],
+		"pip": [
+			"setuptools"
+		],
+		"languages": {
+			"Python": {
+				"cgIgnore": true,
+				"path": "/usr/local"
+			}
+		},
+		"other": {
+			"git": {}
+		}
+	}
+}

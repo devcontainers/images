@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "vscdc/build push",
+            "program": "${workspaceFolder}/build/vscdc",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "push",
+                "--no-push",
+                "--registry",
+                "mcr.microsoft.com",
+                "--registry-path",
+                "devcontainers",
+                "--release",
+                "v1.1.0",
+                "--page",
+                "1",
+                "--pageTotal",
+                "70"
+            ],
+            "console": "integratedTerminal",
+        }
+    ]
+}

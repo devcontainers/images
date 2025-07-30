@@ -1,0 +1,91 @@
+{
+	"version": "1.5.3",
+	"variants": [
+		"10.0-preview-trixie-slim",
+		"10.0-preview-noble",		
+		"9.0-bookworm-slim",
+		"9.0-noble",
+		"8.0-bookworm-slim",
+		"8.0-noble",
+		"8.0-jammy"
+	],
+	"build": {
+		"latest": "9.0-bookworm-slim",
+		"rootDistro": "debian",
+		"tags": [
+			"dotnet:${VERSION}-${VARIANT}"
+		],
+		"architectures": {
+			"10.0-preview-trixie-slim": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"10.0-preview-noble": [
+				"linux/amd64",
+				"linux/arm64"
+			],			
+			"9.0-bookworm-slim": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"9.0-noble": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"8.0-bookworm-slim": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"8.0-noble": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"8.0-jammy": [
+				"linux/amd64",
+				"linux/arm64"
+			]						
+		},
+		"variantTags": {
+			"10.0-preview-trixie-slim": [
+				"dotnet:${VERSION}-10.0-preview-trixie"
+			],	
+			"10.0-preview-noble": [
+				"dotnet:${VERSION}-10.0-preview",
+				"dotnet:${VERSION}-10.0-preview-noble"
+			],					
+			"9.0-bookworm-slim": [
+				"dotnet:${VERSION}-9.0",
+				"dotnet:${VERSION}-9.0-bookworm"
+			],
+			"8.0-bookworm-slim": [
+				"dotnet:${VERSION}-8.0",
+				"dotnet:${VERSION}-8.0-bookworm"
+			]			
+		}
+	},
+	"dependencies": {
+		"image": "mcr.microsoft.com/dotnet/sdk:${VARIANT}",
+		"imageLink": "https://hub.docker.com/_/microsoft-dotnet-sdk",
+		"apt": [
+			{
+				"cgIgnore": false,
+				"name": "yarn"
+			}
+		],
+		"git": {
+			"Oh My Zsh!": "/home/vscode/.oh-my-zsh",
+			"nvm": "/usr/local/share/nvm"
+		},
+		"languages": {
+			".NET": {
+				"cgIgnore": true,
+				"versionCommand": "dotnet --version | grep -oE '[0-9]+\\.[0-9]+\\.[0-9]+' | tr -d '\\n' && echo \\\" (\\$(dotnet --info | grep -ozP 'Host.*:\\s*Version:\\s*\\K[0-9]\\.[0-9]\\.[0-9]' | tr '\\0' '\\n'))\\\"",
+				"path": "/usr",
+				"downloadUrl": "https://dotnet.microsoft.com/"
+			}
+		},
+		"other": {
+			"git": {}
+		}
+	}
+}

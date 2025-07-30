@@ -1,0 +1,84 @@
+{
+	"version": "2.0.2",
+	"variants": [
+		"22-bookworm",
+		"20-bookworm",
+		"22-bullseye",
+		"20-bullseye"
+	],
+	"build": {
+		"latest": "22-bookworm",
+		"rootDistro": "debian",
+		"parent": "javascript-node",
+		"architectures": {
+			"22-bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"20-bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"22-bullseye": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"20-bullseye": [
+				"linux/amd64",
+				"linux/arm64"
+			]
+		},
+		"tags": [
+			"typescript-node:${VERSION}-${VARIANT}"
+		],
+		"variantTags": {
+			"22-bookworm": [
+				"typescript-node:${VERSION}-22",
+				"typescript-node:${VERSION}-bookworm"
+			],
+			"20-bookworm": [
+				"typescript-node:${VERSION}-20"
+			],
+			"22-bullseye": [
+				"typescript-node:${VERSION}-bullseye"
+			],
+			"20-bullseye": [
+				"typescript-node:${VERSION}-bullseye"
+			]
+		}
+	},
+	"dependencies": {
+		"image": "node:${VARIANT}",
+		"imageLink": "https://hub.docker.com/_/node",
+		"debian": [
+			{
+				"cgIgnore": false,
+				"name": "yarn"
+			}
+		],
+		"git": {
+			"Oh My Zsh!": "/home/node/.oh-my-zsh",
+			"nvm": "/usr/local/share/nvm"
+		},
+		"npm": [
+			"eslint",
+			"tslint-to-eslint-config",
+			"typescript"
+		],
+		"languages": {
+			"Node.js": {
+				"cgIgnore": true,
+				"path": "/usr/local"
+			},
+			"TypeScript": {
+				"cgIgnore": true,
+				"versionCommand": "tsc --version | grep -oE '[0-9]+\\.[0-9]+\\.[0-9]+'",
+				"path": "/usr/local/share/npm-global",
+				"downloadUrl": "https://www.typescriptlang.org/"
+			}
+		},
+		"other": {
+			"git": {}
+		}
+	}
+}

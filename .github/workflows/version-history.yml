@@ -1,0 +1,117 @@
+name: Update version history
+
+on:
+  workflow_call:
+    inputs:
+      release:
+        description: 'Release branch or tag'
+        required: true
+        default: 'main'
+        type: string
+      cg:
+        description: 'Generate cgmanifest.json'
+        required: true
+        default: 'false'
+        type: string
+      push:
+        description: 'Update repository with results'
+        required: true
+        default: 'true'
+        type: string
+      overwrite:
+        description: 'Overwrite existing files'
+        required: true
+        default: 'true'
+        type: string
+
+jobs:
+  image_info:
+    name: Update version history
+    if: ${{ github.ref == 'refs/heads/main' || github.event.base_ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    environment: publishing
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+
+    - name: Free more space
+      id: free_space 
+      run: |
+        set -e
+        # Ensure enough space is available for build
+        sudo apt-get autoremove -y
+        sudo apt-get clean -y
+        sudo rm -rf /usr/share/dotnet
+
+    - name: Checkout
+      id: checkout
+      uses: actions/checkout@v3
+
+    - name: Get image info
+      id: Get_image_info
+      env:
+        REGISTRY: ${{ secrets.REGISTRY }}
+        REGISTRY_BASE_PATH: ${{ secrets.REGISTRY_BASE_PATH }}
+        STUB_REGISTRY: ${{ secrets.STUB_REGISTRY }}
+        STUB_REGISTRY_BASE_PATH: ${{ secrets.STUB_REGISTRY_BASE_PATH }}
+        TOKEN_NAME: ${{ secrets.TOKEN_NAME }}
+        PASSWORD: ${{ secrets.PASSWORD }}
+      run: |
+        set -e
+
+        # ACR login
+        ACR_REGISTRY_NAME=$(echo "$REGISTRY" | grep -oP '(.+)(?=\.azurecr\.io)')
+        az acr login --name $ACR_REGISTRY_NAME --username $TOKEN_NAME --password $PASSWORD
+
+        yarn install
+        RELEASE_STRING=$(echo "${{ inputs.release }}" | grep -oP 'refs/(heads|tags)/\K(.+)')
+        OVERWRITE_STRING=$(if [ "${{ inputs.overwrite }}" = "false" ]; then echo '--no-overwrite'; else echo '--overwrite'; fi)
+        CG_STRING=$(if [ ${{ inputs.cg }} = "false" ]; then echo '--no-cg'; else echo '--cg'; fi)
+
+        # Pull images and update cgmanifest.json
+        build/vscdc info  --no-build \
+                          --markdown \
+                          --prune \
+                          --release "$RELEASE_STRING" \
+                          --registry "$REGISTRY" \
+                          --registry-path "$REGISTRY_BASE_PATH" \
+                          --stub-registry "$STUB_REGISTRY" \
+                          --stub-registry-path "$STUB_REGISTRY_BASE_PATH" \
+                          --output-path "$GITHUB_WORKSPACE" \
+                          "$OVERWRITE_STRING" \
+                          "$CG_STRING"
+
+    - name: Create PR with updated image information
+      id: push_image_info
+      env:
+        GITHUB_TOKEN: ${{ secrets.PAT }}
+      run: |
+        set -e
+
+        # Configure git and Push updates
+
+        git config --global user.email github-actions@github.com
+        git config --global user.name github-actions
+        git config pull.rebase false
+
+        branch=automated-update-for-image-history-$GITHUB_RUN_ID
+        git checkout -b $branch
+        message='Automated update for image history'
+
+        # Add / update and commit
+        git add -A
+        git commit -m "$message" || export NO_UPDATES=true
+
+        # Push (unless disabled for testing)
+        if [ "$NO_UPDATES" != "true" ] && [ "${{ inputs.push }}" = "true" ]; then
+            git push origin "$branch"
+            gh api \
+                --method POST \
+                -H "Accept: application/vnd.github+json" \
+                /repos/${GITHUB_REPOSITORY}/pulls \
+                -f title="$message" \
+              -f body="$message" \
+              -f head="$branch" \
+              -f base='main'
+        fi

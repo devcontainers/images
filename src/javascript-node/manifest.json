@@ -1,0 +1,85 @@
+{
+	"version": "3.0.2",
+	"variants": [
+		"24-bookworm",
+		"22-bookworm",
+		"20-bookworm",
+		"24-bullseye",
+		"22-bullseye",
+		"20-bullseye"
+	],
+	"build": {
+		"latest": "24-bookworm",
+		"rootDistro": "debian",
+		"architectures": {
+			"24-bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"22-bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"20-bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"24-bullseye": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"22-bullseye": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"20-bullseye": [
+				"linux/amd64",
+				"linux/arm64"
+			]
+		},
+		"tags": [
+			"javascript-node:${VERSION}-${VARIANT}"
+		],
+		"variantTags": {
+			"24-bookworm": [
+				"javascript-node:${VERSION}-24",
+				"javascript-node:${VERSION}-bookworm"
+			],
+			"22-bookworm": [
+				"javascript-node:${VERSION}-22"
+			],
+			"20-bookworm": [
+				"javascript-node:${VERSION}-20"
+			],
+			"24-bullseye": [
+				"javascript-node:${VERSION}-bullseye"
+			]
+		}
+	},
+	"dependencies": {
+		"image": "node:${VARIANT}",
+		"imageLink": "https://hub.docker.com/_/node",
+		"apt": [
+			{
+				"cgIgnore": false,
+				"name": "yarn"
+			}
+		],
+		"git": {
+			"Oh My Zsh!": "/home/node/.oh-my-zsh",
+			"nvm": "/usr/local/share/nvm"
+		},
+		"npm": [
+			"eslint"
+		],
+		"languages": {
+			"Node.js": {
+				"cgIgnore": true,
+				"path": "/usr/local"
+			}
+		},
+		"other": {
+			"git": {}
+		}
+	}
+}

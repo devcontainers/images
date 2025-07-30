@@ -1,0 +1,18 @@
+{
+  "id": "jekyll",
+  "name": "Jekyll",
+  "options": {
+    "version": {
+      "type": "string",
+      "proposals": [
+        "latest"
+      ],
+      "default": "latest",
+      "description": "Select or enter a version."
+    }
+  },
+  "install": {
+    "app": "",
+    "file": "install.sh"
+  }
+}

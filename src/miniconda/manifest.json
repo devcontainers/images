@@ -1,0 +1,61 @@
+{
+	"version": "1.1.9",
+	"build": {
+		"latest": true,
+		"rootDistro": "debian",
+		"architectures": [
+			"linux/amd64",
+			"linux/arm64"
+		],
+		"tags": [
+			"miniconda:${VERSION}-3"
+		]
+	},
+	"dependencies": {
+		"image": "continuumio/miniconda3:latest",
+		"imageLink": "https://hub.docker.com/r/continuumio/miniconda3",
+		"debian": [
+			{
+				"cgIgnore": false,
+				"name": "yarn"
+			}
+		],
+		"git": {
+			"Oh My Zsh!": "/home/vscode/.oh-my-zsh"
+		},
+		"pipx": [
+			"pylint",
+			"flake8",
+			"autopep8",
+			"black",
+			"yapf",
+			"mypy",
+			"pydocstyle",
+			"pycodestyle",
+			"bandit",
+			"virtualenv",
+			"pipx"
+		],
+		"pip": [
+			"certifi",
+			"cryptography",
+			"pyOpenssl",
+			"setuptools",
+			"wheel",
+			"requests"
+		],
+		"other": {
+			"git": {},
+			"conda": {
+				"cgIgnore": true,
+				"path": "/opt/conda"
+			}
+		},
+		"languages": {
+			"Python": {
+				"cgIgnore": true,
+				"path": "/opt/conda"
+			}
+		}
+	}
+}

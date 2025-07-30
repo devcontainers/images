@@ -1,0 +1,39 @@
+name: Smoke test "java" and "java-8" build
+
+on: 
+  workflow_dispatch:
+  push:
+    branches:
+    - main
+  pull_request:
+    paths:
+      - src/java/**
+      - src/java-8/**
+      - .github/workflows/smoke-java.yaml
+      - .github/actions/**
+      - build/**
+jobs:
+  smoke-test:
+    name: Smoke test
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Checkout
+      id: checkout
+      uses: actions/checkout@v3
+
+    - name: Smoke test java
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      id: smoke_test_java
+      uses: ./.github/actions/smoke-test
+      with:
+        image: java
+
+    - name: Smoke test java-8
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      id: smoke_test_java_8
+      uses: ./.github/actions/smoke-test
+      with:
+        image: java-8

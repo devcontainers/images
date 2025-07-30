@@ -1,0 +1,2 @@
+ARG VARIANT=3.21
+FROM alpine:${VARIANT}
