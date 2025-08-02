@@ -1,5 +1,5 @@
 {
-    "markdown.validate.enabled": true,
+    "markdown.validate.enabled": false,
     "githubPullRequests.ignoredPullRequestBranches": [
         "main"
     ]
