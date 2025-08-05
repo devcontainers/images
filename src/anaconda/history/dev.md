@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:cfaab2bd8b9e53108b7587b40ff7bd7904d036033f35ee23545cd3fa5399de64
+**Digest:** sha256:82d0c0b77061508a6ec028712d37107a2309a88465e839c09a337636a8c645b2
 
 **Tags:**
 ```
@@ -31,7 +31,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 69a6359f7cf8978d464573fb7b023ee3cd00181a | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3e7ef0182f59c7990a52cf6ec2981adb56d5b368 | /home/vscode/.oh-my-zsh |
 
 **Pip / pipx installed tools and packages**
 
@@ -42,21 +42,21 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | cryptography | 43.0.3 |
 | mistune | 3.1.2 |
 | numpy | 1.26.4 |
-| certifi | 2025.1.31 |
+| certifi | 2025.7.14 |
 | setuptools | 75.1.0 |
 | wheel | 0.44.0 |
 | nbconvert | 7.16.4 |
 | Werkzeug | 3.0.3 |
 | requests | 2.32.3 |
-| tornado | 6.4.2 |
-| transformers | 4.45.2 |
+| tornado | 6.5.1 |
+| transformers | 4.49.0 |
 | jupyter_server | 2.14.1 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.47.1 | 
+| [git](https://github.com/git/git) | 2.50.1 | 
 | [conda](https://github.com/conda/conda) | 24.11.3 | /opt/conda |
 
 **Additional linux tools and packages**
@@ -65,8 +65,8 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 |----------------|---------|
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
-| ca-certificates | 20230311 |
-| curl | 7.88.1-10+deb12u8 |
+| ca-certificates | 20230311+deb12u1 |
+| curl | 7.88.1-10+deb12u12 |
 | dialog | 1.3-20230209-1 |
 | git | 1:2.39.5-0+deb12u2 |
 | gnupg2 | 2.2.40-1.1 |
@@ -74,13 +74,13 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | iproute2 | 6.1.0-3 |
 | jq | 1.6-2.1 |
 | less | 590-2.1~deb12u2 |
-| libc6 | 2.36-9+deb12u9 |
-| libgssapi-krb5-2 | 1.20.1-2+deb12u2 |
-| libicu72 | 72.1-3 |
-| libkrb5-3 | 1.20.1-2+deb12u2 |
+| libc6 | 2.36-9+deb12u10 |
+| libgssapi-krb5-2 | 1.20.1-2+deb12u3 |
+| libicu72 | 72.1-3+deb12u1 |
+| libkrb5-3 | 1.20.1-2+deb12u3 |
 | liblttng-ust1 | 2.13.5-1 |
-| libstdc++6 | 12.2.0-14 |
-| locales | 2.36-9+deb12u9 |
+| libstdc++6 | 12.2.0-14+deb12u1 |
+| locales | 2.36-9+deb12u10 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
@@ -88,18 +88,18 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | manpages-dev | 6.03-2 |
 | nano | 7.2-1+deb12u1 |
 | ncdu | 1.18-0.2 |
-| net-tools | 2.10-0.1 |
-| openssh-client | 1:9.2p1-2+deb12u5 |
+| net-tools | 2.10-0.1+deb12u2 |
+| openssh-client | 1:9.2p1-2+deb12u7 |
 | procps | 2:4.0.2-3 |
 | psmisc | 23.6-1 |
 | rsync | 3.2.7-1+deb12u2 |
 | strace | 6.1-0.1 |
-| sudo | 1.9.13p3-1+deb12u1 |
+| sudo | 1.9.13p3-1+deb12u2 |
 | unzip | 6.0-28 |
-| vim-tiny | 2:9.0.1378-2 |
-| wget | 1.21.3-1+b2 |
+| vim-tiny | 2:9.0.1378-2+deb12u2 |
+| wget | 1.21.3-1+deb12u1 |
 | yarn | 1.22.22-1 |
 | zip | 3.0-13 |
 | zlib1g | 1:1.2.13.dfsg-1 |
-| zsh | 5.9-4+b5 |
+| zsh | 5.9-4+b6 |
 

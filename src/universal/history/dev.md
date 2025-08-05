@@ -5,17 +5,17 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:03b1418bef743a9f96c720929be3fda7e1a7d714c7e09990ef217bb94337097b
+**Digest:** sha256:357b14c5408fbe9bbdb64ed7f8ec8b2aba2a5dcef2154c5df2bb10fb1d6a63fb
 
 **Tags:**
 ```
-mcr.microsoft.com/devcontainers/universal:dev-focal
+mcr.microsoft.com/devcontainers/universal:dev-noble
 mcr.microsoft.com/devcontainers/universal:dev-linux
 mcr.microsoft.com/devcontainers/universal:dev
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
-**Linux distribution:** Ubuntu 20.04.6 LTS (debian-like distro)
+**Linux distribution:** Ubuntu 24.04.2 LTS (debian-like distro)
 
 **Architectures:** linux/amd64
 
@@ -26,178 +26,166 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 18.20.7<br />20.18.3 | /usr/local/share/nvm/versions/node/&lt;version&gt; |
+| [Node.js](https://nodejs.org/en/) | 20.19.4<br />22.18.0 | /usr/local/share/nvm/versions/node/&lt;version&gt; |
 | [Python](https://www.python.org/) | 3.11.9<br />3.12.1 | /usr/local/python/&lt;version&gt; |
-| [Java](https://adoptopenjdk.net/) | 17.0.14<br />21.0.6 | /usr/local/sdkman/candidates/java/&lt;version&gt; |
-| [.NET](https://dotnet.microsoft.com/) | 8.0.406 | /usr/share/dotnet/dotnet |
-| [Ruby](https://www.ruby-lang.org/en/) | 3.3.2<br />3.3.4 | /usr/local/rvm/rubies/&lt;version&gt; |
+| [Java](https://adoptopenjdk.net/) | 17.0.16<br />21.0.8 | /usr/local/sdkman/candidates/java/&lt;version&gt; |
+| [.NET](https://dotnet.microsoft.com/) | 8.0.412 | /usr/share/dotnet/dotnet |
+| [Ruby](https://www.ruby-lang.org/en/) | 3.3.6<br />3.4.1 | /usr/local/rvm/rubies/&lt;version&gt; |
 | [PHP](https://xdebug.org/) | 8.3.14<br />8.4.2 | /usr/local/php/&lt;version&gt; |
-| GCC | 9.4.0-1ubuntu1~20.04.2 | 
-| Clang | 10.0.0-4ubuntu1 | 
-| [Go](https://golang.org/dl) | 1.24.1 | /usr/local/go |
+| GCC | 13.3.0-6ubuntu2~24.04 | 
+| Clang | 18.1.3 (1ubuntu1) | 
+| [Go](https://golang.org/dl) | 1.24.5 | /usr/local/go |
 | [Jekyll](https://jekyllrb.com/) | 4.4.1 | 
-| [Jupyter Lab](https://jupyter.org/) | 4.3.5 | /home/codespace/.local/bin/jupyter-lab |
+| [Jupyter Lab](https://jupyter.org/) | 4.4.5 | /home/codespace/.local/bin/jupyter-lab |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 1c2127727af0ac452292f844ee32306f12906d03 | /home/codespace/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 179d45050be0a71fd57591b0ed8aedf9b177ba10 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | a6beb0f5958e935d33b0edb6d4470c3d7c4e8917 | /home/codespace/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | 876afd0bbaa047b186330e0b066120ec217b0ae9 | /usr/local/nvs |
-| [rbenv](https://github.com/rbenv/rbenv.git) | 10e96bfc473c7459a447fbbda12164745a72fd37 | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | cb9c1decb3b7c3c0fcd8a4368bb6a492e631b570 | /usr/local/share/ruby-build |
+| [rbenv](https://github.com/rbenv/rbenv.git) | 0f65ff72b2e6be9468b0321175f7d658751b746b | /usr/local/share/rbenv |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | a97e10ff104dbc29bcf4382a42be011aa00cdfed | /usr/local/share/ruby-build |
 
 **Pip / pipx installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| numpy | 2.2.3 |
-| pandas | 2.2.3 |
-| scipy | 1.15.2 |
-| matplotlib | 3.10.1 |
+| numpy | 2.3.2 |
+| pandas | 2.3.1 |
+| scipy | 1.16.1 |
+| matplotlib | 3.10.5 |
 | seaborn | 0.13.2 |
-| scikit-learn | 1.6.1 |
-| torch | 2.6.0+cpu |
-| requests | 2.32.3 |
-| plotly | 6.0.0 |
-| jupyterlab_git | 0.51.0 |
-| certifi | 2025.1.31 |
-| setuptools | 76.0.0 |
-| pylint | 3.3.5 |
-| flake8 | 7.1.2 |
+| scikit-learn | 1.7.1 |
+| torch | 2.7.1+cpu |
+| requests | 2.32.4 |
+| plotly | 6.2.0 |
+| jupyterlab_git | 0.51.2 |
+| certifi | 2025.8.3 |
+| setuptools | 80.9.0 |
+| pylint | 3.3.7 |
+| flake8 | 7.3.0 |
 | autopep8 | 2.3.2 |
 | black | 25.1.0 |
 | yapf | 0.43.0 |
-| mypy | 1.15.0 |
+| mypy | 1.17.1 |
 | pydocstyle | 6.3.0 |
-| pycodestyle | 2.12.1 |
-| bandit | 1.8.3 |
-| virtualenv | 20.29.3 |
+| pycodestyle | 2.14.0 |
+| bandit | 1.8.6 |
+| virtualenv | 20.33.0 |
 | pipx | 1.7.1 |
 
 **Go tools and modules**
 
 | Tool / module | Version |
 |---------------|---------|
-| golang.org/x/tools/gopls | 0.18.1 |
-| honnef.co/go/tools | 0.5.1 |
+| golang.org/x/tools/gopls | 0.20.0 |
+| honnef.co/go/tools | 0.7.0-0.dev.0.20250523013057-bbc2f4dd71ea |
 | golang.org/x/lint | 0.0.0-20241112194109-818c5a804067 |
-| github.com/mgechev/revive | 1.7.0 |
+| github.com/mgechev/revive | 1.11.0 |
 | github.com/uudashr/gopkgs | latest |
 | github.com/ramya-rao-a/go-outline | latest |
-| github.com/go-delve/delve | 1.24.1 |
+| github.com/go-delve/delve | 1.25.1 |
 | github.com/golangci/golangci-lint | latest |
 
 **Ruby gems and tools**
 
 | Tool / gem | Version |
 |------------|---------|
-| rake | 13.2.1 |
+| rake | 13.3.0 |
 | jekyll | 4.4.1 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.48.1 | 
-| [Xdebug](https://xdebug.org/) | 3.4.2 | /usr/local/php/current |
-| [Composer](https://getcomposer.org/) | 2.8.6 | /usr/local/php/current/bin |
-| [kubectl](https://github.com/kubernetes/kubectl) | v1.32.2 | /usr/local/bin |
-| [Helm](https://github.com/helm/helm) | 3.17.1 | /usr/local/bin |
-| [Docker Compose](https://github.com/docker/compose) | 2.33.1 | /usr/local/bin |
+| [git](https://github.com/git/git) | 2.50.1 | 
+| [Xdebug](https://xdebug.org/) | 3.4.5 | /usr/local/php/current |
+| [Composer](https://getcomposer.org/) | 2.8.10 | /usr/local/php/current/bin |
+| [kubectl](https://github.com/kubernetes/kubectl) | v1.33.3 | /usr/local/bin |
+| [Helm](https://github.com/helm/helm) | 3.18.4 | /usr/local/bin |
+| [Docker Compose](https://github.com/docker/compose) | 2.39.1 | /usr/local/bin |
 | [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
-| [GitHub CLI](https://github.com/cli/cli) | 2.68.1 | 
+| [GitHub CLI](https://github.com/cli/cli) | 2.76.2 | 
 | [yarn](https://yarnpkg.com/) | 1.22.22 | /usr/bin |
-| [Maven](https://maven.apache.org/) | 3.9.9 | /usr/local/sdkman/candidates/maven/current/bin |
-| [Gradle](https://gradle.org/) | 8.13 | /usr/local/sdkman/candidates/gradle/current/bin |
-| Docker (Moby) CLI &amp; Engine | 27.5.1 | 
-| [conda](https://github.com/conda/conda) | 25.1.1 | /opt/conda/bin |
+| [Maven](https://maven.apache.org/) | 3.9.10 | /usr/local/sdkman/candidates/maven/current/bin |
+| [Gradle](https://gradle.org/) | 9.0.0 | /usr/local/sdkman/candidates/gradle/current/bin |
+| Docker (Moby) CLI &amp; Engine | 28.3.3 | 
+| [conda](https://github.com/conda/conda) | 25.5.1 | /opt/conda/bin |
 
 **Additional linux tools and packages**
 
 | Tool / library | Version |
 |----------------|---------|
-| apt-transport-https | 2.0.10 |
-| apt-utils | 2.0.10 |
-| build-essential | 12.8ubuntu1.1 |
-| ca-certificates | 20240203~20.04.1 |
-| clang | 1:10.0-50~exp1 |
-| cmake | 3.16.3-1ubuntu1.20.04.1 |
-| cppcheck | 1.90-4build1 |
-| curl | 7.68.0-1ubuntu2.25 |
-| dialog | 1.3-20190808-1 |
-| g++ | 4:9.3.0-1ubuntu2 |
-| gcc | 4:9.3.0-1ubuntu2 |
-| gdb | 9.2-0ubuntu1~20.04.2 |
-| git | 1:2.25.1-1ubuntu3.14 |
-| git-lfs (Git Large File Support) | 3.6.1 |
-| gnupg2 | 2.2.19-3ubuntu2.2 |
-| htop | 2.2.0-2build1 |
-| iproute2 | 5.5.0-1ubuntu1 |
-| iptables | 1.8.4-3ubuntu2.1 |
-| jq | 1.6-1ubuntu0.20.04.1 |
-| less | 551-1ubuntu0.3 |
-| libatk-bridge2.0-0 | 2.34.2-0ubuntu2~20.04.1 |
-| libatk1.0-0 | 2.35.1-1ubuntu2 |
-| libc6 | 2.31-0ubuntu9.17 |
-| libc6-dev | 2.31-0ubuntu9.17 |
-| libcups2 | 2.3.1-9ubuntu1.9 |
-| libgbm1 | 21.2.6-0ubuntu0.1~20.04.2 |
-| libgcc1 | 1:10.5.0-1ubuntu1~20.04 |
-| libgssapi-krb5-2 | 1.17-6ubuntu4.9 |
-| libgtk-3-0 | 3.24.20-0ubuntu1.2 |
-| libicu66 | 66.1-2ubuntu2.1 |
-| libkrb5-3 | 1.17-6ubuntu4.9 |
-| liblttng-ust0 | 2.11.0-1 |
-| libnspr4 | 2:4.35-0ubuntu0.20.04.1 |
-| libnss3 | 2:3.98-0ubuntu0.20.04.2 |
-| libpango-1.0-0 | 1.44.7-2ubuntu4 |
-| libpangocairo-1.0-0 | 1.44.7-2ubuntu4 |
-| libsecret-1-dev | 0.20.4-0ubuntu1 |
-| libssl1.1 | 1.1.1f-1ubuntu2.24 |
-| libstdc++6 | 10.5.0-1ubuntu1~20.04 |
-| libx11-6 | 2:1.6.9-2ubuntu1.6 |
-| libx11-xcb1 | 2:1.6.9-2ubuntu1.6 |
-| libxcomposite1 | 1:0.4.5-1 |
-| libxdamage1 | 1:1.1.5-2 |
-| libxfixes3 | 1:5.0.3-2 |
-| lldb | 1:10.0-50~exp1 |
-| llvm | 1:10.0-50~exp1 |
-| locales | 2.31-0ubuntu9.17 |
-| lsb-release | 11.1.0ubuntu2 |
-| lsof | 4.93.2+dfsg-1ubuntu0.20.04.1 |
-| make | 4.2.1-1.2 |
-| man-db | 2.9.1-1 |
-| manpages | 5.05-1 |
-| manpages-dev | 5.05-1 |
-| moby-cli (Docker CLI) | 27.5.1-ubuntu20.04u1 |
-| moby-engine (Docker Engine) | 27.5.1-ubuntu20.04u1 |
-| nano | 4.8-1ubuntu1.1 |
-| ncdu | 1.14.1-1 |
-| net-tools | 1.60+git20180626.aebd88e-1ubuntu1 |
-| openssh-client | 1:8.2p1-4ubuntu0.12 |
-| openssh-server | 1:8.2p1-4ubuntu0.12 |
-| pigz | 2.4-1 |
-| pkg-config | 0.29.1-0ubuntu4 |
-| procps | 2:3.3.16-1ubuntu2.4 |
-| psmisc | 23.3-1 |
-| python3-dev | 3.8.2-0ubuntu2 |
-| python3-minimal | 3.8.2-0ubuntu2 |
-| rsync | 3.1.3-8ubuntu0.9 |
-| sed | 4.7-1 |
-| software-properties-common | 0.99.9.12 |
-| strace | 5.5-3ubuntu1 |
-| sudo | 1.8.31-1ubuntu1.5 |
-| tar | 1.30+dfsg-7ubuntu0.20.04.4 |
-| unzip | 6.0-25ubuntu1.2 |
-| valgrind | 1:3.15.0-1ubuntu9.1 |
-| vim | 2:8.1.2269-1ubuntu5.31 |
-| vim-doc | 2:8.1.2269-1ubuntu5.31 |
-| vim-tiny | 2:8.1.2269-1ubuntu5.31 |
-| wget | 1.20.3-1ubuntu2.1 |
-| xtail | 2.1-6 |
-| zip | 3.0-11build1 |
-| zlib1g | 1:1.2.11.dfsg-2ubuntu1.5 |
-| zsh | 5.8-3ubuntu1.1 |
+| apt-transport-https | 2.8.3 |
+| apt-utils | 2.8.3 |
+| build-essential | 12.10ubuntu1 |
+| ca-certificates | 20240203 |
+| clang | 1:18.0-59~exp2 |
+| cmake | 3.28.3-1build7 |
+| cppcheck | 2.13.0-2ubuntu3 |
+| curl | 8.5.0-2ubuntu10.6 |
+| dialog | 1.3-20240101-1 |
+| g++ | 4:13.2.0-7ubuntu1 |
+| gcc | 4:13.2.0-7ubuntu1 |
+| gdb | 15.0.50.20240403-0ubuntu1 |
+| git | 1:2.43.0-1ubuntu7.3 |
+| gnupg2 | 2.4.4-2ubuntu17.3 |
+| htop | 3.3.0-4build1 |
+| iproute2 | 6.1.0-1ubuntu6.2 |
+| iptables | 1.8.10-3ubuntu2 |
+| jq | 1.7.1-3ubuntu0.24.04.1 |
+| less | 590-2ubuntu2.1 |
+| libc6 | 2.39-0ubuntu8.5 |
+| libc6-dev | 2.39-0ubuntu8.5 |
+| libgssapi-krb5-2 | 1.20.1-6ubuntu2.6 |
+| libicu74 | 74.2-1ubuntu3.1 |
+| libkrb5-3 | 1.20.1-6ubuntu2.6 |
+| libnspr4 | 2:4.35-1.1build1 |
+| libnss3 | 2:3.98-1build1 |
+| libpango-1.0-0 | 1.52.1+ds-1build1 |
+| libpangocairo-1.0-0 | 1.52.1+ds-1build1 |
+| libsecret-1-dev | 0.21.4-1build3 |
+| libssl1.1 | 1.1.0g-2ubuntu4 |
+| libstdc++6 | 14.2.0-4ubuntu2~24.04 |
+| libx11-6 | 2:1.8.7-1build1 |
+| lldb | 1:18.0-59~exp2 |
+| llvm | 1:18.0-59~exp2 |
+| locales | 2.39-0ubuntu8.5 |
+| lsb-release | 12.0-2 |
+| lsof | 4.95.0-1build3 |
+| make | 4.3-4.1build2 |
+| man-db | 2.12.0-4build2 |
+| manpages | 6.7-2 |
+| manpages-dev | 6.7-2 |
+| moby-cli (Docker CLI) | 28.3.3-ubuntu24.04u1 |
+| moby-engine (Docker Engine) | 28.3.3-ubuntu24.04u1 |
+| nano | 7.2-2ubuntu0.1 |
+| ncdu | 1.19-0.1 |
+| net-tools | 2.10-0.1ubuntu4.4 |
+| openssh-client | 1:9.6p1-3ubuntu13.13 |
+| openssh-server | 1:9.6p1-3ubuntu13.13 |
+| pigz | 2.8-1 |
+| pkg-config | 1.8.1-2build1 |
+| procps | 2:4.0.4-4ubuntu3.2 |
+| psmisc | 23.7-1build1 |
+| python3-dev | 3.12.3-0ubuntu2 |
+| python3-minimal | 3.12.3-0ubuntu2 |
+| rsync | 3.2.7-1ubuntu1.2 |
+| sed | 4.9-2build1 |
+| software-properties-common | 0.99.49.2 |
+| strace | 6.8-0ubuntu2 |
+| sudo | 1.9.15p5-3ubuntu5.24.04.1 |
+| tar | 1.35+dfsg-3build1 |
+| unzip | 6.0-28ubuntu4.1 |
+| valgrind | 1:3.22.0-0ubuntu3 |
+| vim | 2:9.1.0016-1ubuntu7.8 |
+| vim-doc | 2:9.1.0016-1ubuntu7.8 |
+| vim-tiny | 2:9.1.0016-1ubuntu7.8 |
+| wget | 1.21.4-1ubuntu4.1 |
+| xtail | 2.1-9 |
+| zip | 3.0-13ubuntu0.2 |
+| zlib1g | 1:1.3.dfsg-3.1ubuntu2.1 |
+| zsh | 5.9-6ubuntu2 |
 
