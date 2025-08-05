@@ -1,9 +1,13 @@
 {
-    "image": "mcr.microsoft.com/devcontainers/javascript-node:3-22",
+    "build": {
+	"dockerfile":"Dockerfile"
+	},
     "features": {
         "ghcr.io/devcontainers/features/docker-in-docker:2": {},
-        "ghcr.io/devcontainers/features/azure-cli:1": {}
+        "ghcr.io/devcontainers/features/azure-cli:1": {},
+		"ghcr.io/devcontainers/features/common-utils:2": {}
     },
+	"remoteUser": "node",
     "postCreateCommand": "npm install -g @devcontainers/cli",
     "customizations": {
         "vscode": {
