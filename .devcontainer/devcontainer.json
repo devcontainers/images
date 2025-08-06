@@ -1,8 +1,17 @@
 {
-    "image": "mcr.microsoft.com/devcontainers/javascript-node:0-18",
+    "build": {
+	"dockerfile":"Dockerfile"
+	},
     "features": {
         "ghcr.io/devcontainers/features/docker-in-docker:2": {},
-        "ghcr.io/devcontainers/features/azure-cli:1": {}
+        "ghcr.io/devcontainers/features/azure-cli:1": {},
+		"ghcr.io/devcontainers/features/common-utils:2": {
+            "username": "node",
+			"userUid": "1000",
+			"userGid": "1000"
+		},
+		"ghcr.io/devcontainers/features/node:1": {},
+		"ghcr.io/devcontainers/features/git-lfs:1": {}
     },
     "postCreateCommand": "npm install -g @devcontainers/cli",
     "customizations": {
@@ -13,5 +22,6 @@
                 "EditorConfig.EditorConfig"
             ]
         }
-    }
+    },
+    "remoteUser":"node"
 }
