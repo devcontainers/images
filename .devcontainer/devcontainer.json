@@ -5,9 +5,13 @@
     "features": {
         "ghcr.io/devcontainers/features/docker-in-docker:2": {},
         "ghcr.io/devcontainers/features/azure-cli:1": {},
-		"ghcr.io/devcontainers/features/common-utils:2": {}
+		"ghcr.io/devcontainers/features/common-utils:2": {
+            "username": "node",
+			"userUid": "1000",
+			"userGid": "1000"
+		},
+		"ghcr.io/devcontainers/features/node:1": {}
     },
-	"remoteUser": "node",
     "postCreateCommand": "npm install -g @devcontainers/cli",
     "customizations": {
         "vscode": {
@@ -17,5 +21,6 @@
                 "EditorConfig.EditorConfig"
             ]
         }
-    }
+    },
+    "remoteUser":"node"
 }
