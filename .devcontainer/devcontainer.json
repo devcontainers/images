@@ -10,7 +10,8 @@
 			"userUid": "1000",
 			"userGid": "1000"
 		},
-		"ghcr.io/devcontainers/features/node:1": {}
+		"ghcr.io/devcontainers/features/node:1": {},
+		"ghcr.io/devcontainers/features/git-lfs:1": {}
     },
     "postCreateCommand": "npm install -g @devcontainers/cli",
     "customizations": {
