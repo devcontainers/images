@@ -1,6 +1,7 @@
 {
-	"version": "2.1.18",
+	"version": "2.2.0",
 	"variants": [
+		"3.4-bookworm",
 		"3.3-bookworm",
 		"3.3-bullseye"
 	],
