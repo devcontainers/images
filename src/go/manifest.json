@@ -1,53 +1,53 @@
 {
   "version": "1.4.5",
   "variants": [
+    "1.25-bookworm",
     "1.24-bookworm",
-    "1.23-bookworm",
-    "1.24-bullseye",
-    "1.23-bullseye"
+    "1.25-bullseye",
+    "1.24-bullseye"
   ],
   "build": {
-    "latest": "1.24-bookworm",
+    "latest": "1.25-bookworm",
     "rootDistro": "debian",
     "tags": [
       "go:${VERSION}-${VARIANT}"
     ],
     "architectures": {
+      "1.25-bookworm": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
       "1.24-bookworm": [
         "linux/amd64",
         "linux/arm64"
       ],
-      "1.23-bookworm": [
+      "1.25-bullseye": [
         "linux/amd64",
         "linux/arm64"
       ],
       "1.24-bullseye": [
         "linux/amd64",
         "linux/arm64"
-      ],
-      "1.23-bullseye": [
-        "linux/amd64",
-        "linux/arm64"
       ]
     },
     "variantTags": {
+      "1.25-bookworm": [
+        "go:${VERSION}-1.25",
+        "go:${VERSION}-1",
+        "go:${VERSION}-1-bookworm",
+        "go:${VERSION}-bookworm"
+      ],
       "1.24-bookworm": [
         "go:${VERSION}-1.24",
         "go:${VERSION}-1",
         "go:${VERSION}-1-bookworm",
         "go:${VERSION}-bookworm"
       ],
-      "1.23-bookworm": [
-        "go:${VERSION}-1.23",
-        "go:${VERSION}-1",
-        "go:${VERSION}-1-bookworm",
-        "go:${VERSION}-bookworm"
-      ],
-      "1.24-bullseye": [
+      "1.25-bullseye": [
         "go:${VERSION}-1-bullseye",
         "go:${VERSION}-bullseye"
       ],
-      "1.23-bullseye": [
+      "1.24-bullseye": [
         "go:${VERSION}-1-bullseye",
         "go:${VERSION}-bullseye"
       ]
