@@ -1,11 +1,12 @@
 {
-	"version": "1.0.27",
+	"version": "2.0.0",
 	"variants": [
+		"trixie",
 		"bookworm",
 		"bullseye"
 	],
 	"build": {
-		"latest": "bookworm",
+		"latest": "trixie",
 		"rootDistro": "debian",
 		"architectures": {
 			"bookworm": [
@@ -21,6 +22,9 @@
 			"rust:${VERSION}-${VARIANT}"
 		],
 		"variantTags": {
+			"trixie": [
+				"rust:${VERSION}-1-trixie"
+			],
 			"bullseye": [
 				"rust:${VERSION}-1-bullseye"
 			],
