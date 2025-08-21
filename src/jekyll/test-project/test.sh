@@ -21,6 +21,10 @@ check "git-location" sh -c "which git | grep /usr/local/bin/git"
 git_version=$(git --version)
 check-version-ge "git-requirement" "${git_version}" "git version 2.40.1"
 
+# Testing vulnerability issue CVE-2024-46901 fix by upgrading svn to 1.14.5.
+svn_version=$(svn --version --quiet)
+check-version-ge "svn-requirement" "${svn_version}" "1.14.5"
+
 check "set-git-config-user-name" sh -c "sudo git config --system user.name devcontainers"
 check "gitconfig-file-location" sh -c "ls /etc/gitconfig"
 check "gitconfig-contains-name" sh -c "cat /etc/gitconfig | grep 'name = devcontainers'"
