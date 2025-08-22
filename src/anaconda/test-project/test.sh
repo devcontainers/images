@@ -62,7 +62,7 @@ checkPythonPackageVersion "scikit-learn" "1.5.0"
 checkPythonPackageVersion "zipp" "3.19.1"
 
 checkCondaPackageVersion "pyopenssl" "24.2.1"
-checkCondaPackageVersion "requests" "2.32.2"
+checkCondaPackageVersion "requests" "2.32.4"
 checkCondaPackageVersion "pygments" "2.15.1"
 checkCondaPackageVersion "mpmath" "1.3.0"
 checkCondaPackageVersion "urllib3" "2.5.0"
