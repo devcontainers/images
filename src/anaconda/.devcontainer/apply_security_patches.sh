@@ -26,8 +26,7 @@ done
 
 # Add an array for packages that should always pin to the provided version, 
 # even if higher version is available in conda channel
-pin_to_required_version=( "aiohttp" "Werkzeug" "cryptography" "h11" "imagecodecs" "jinja2" "jupyter-core" "protobuf" "requests" "setuptools" "transformers" "urllib3") # Add package names as needed
-
+pin_to_required_version=( )
 # Function to check if a package is in the pin_to_required_version array
 function is_pin_to_required_version() {
     local pkg="$1"
