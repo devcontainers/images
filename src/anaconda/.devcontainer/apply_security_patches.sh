@@ -3,7 +3,7 @@
 # vulnerabilities:
 # werkzeug - [GHSA-f9vj-2wh5-fj8j]
 
-vulnerable_packages=( "mistune=3.0.1" "aiohttp=3.10.11" "cryptography=44.0.1" "h11=0.16.0" "imagecodecs=2023.9.18" "jinja2=3.1.6" "jupyter-core=5.8.1" "protobuf=4.25.8" "requests=2.32.5" "setuptools=80.9.0" "transformers=4.52.1" "urllib3=2.5.0" "Werkzeug=3.0.6" "jupyter-lsp=2.2.2" "scrapy=2.11.2" \ 
+vulnerable_packages=( "mistune=3.0.1" "aiohttp=3.10.11" "cryptography=44.0.1" "h11=0.16.0" "imagecodecs=2023.9.18" "jinja2=3.1.6" "jupyter-core=5.8.1" "protobuf=4.25.8" "requests=2.32.4" "setuptools=78.1.1" "transformers=4.52.1" "urllib3=2.5.0" "Werkzeug=3.0.6" "jupyter-lsp=2.2.2" "scrapy=2.11.2" \ 
                       "zipp=3.19.1" "tornado=6.4.2")
 
 # Define the number of rows (based on the length of vulnerable_packages)
