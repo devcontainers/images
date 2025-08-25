@@ -1,9 +1,10 @@
 {
-  "version": "1.4.5",
+  "version": "2.0.0",
   "variants": [
     "1.25-trixie",
-    "1.24-bookworm",
+    "1.24-trixie",
     "1.25-bookworm",
+    "1.24-bookworm",
     "1.24-bullseye"
   ],
   "build": {
@@ -17,11 +18,15 @@
         "linux/amd64",
         "linux/arm64"
       ],
-      "1.24-bookworm": [
+      "1.24-trixie": [
         "linux/amd64",
         "linux/arm64"
       ],
       "1.25-bookworm": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
+      "1.24-bookworm": [
         "linux/amd64",
         "linux/arm64"
       ],
@@ -37,13 +42,17 @@
         "go:${VERSION}-1-trixie",
         "go:${VERSION}-trixie"
       ],
-      "1.24-bookworm": [
+      "1.24-trixie": [
         "go:${VERSION}-1.24",
         "go:${VERSION}-1",
+        "go:${VERSION}-1-trixie",
+        "go:${VERSION}-trixie"
+      ],
+      "1.25-bookworm": [
         "go:${VERSION}-1-bookworm",
         "go:${VERSION}-bookworm"
       ],
-      "1.25-bookworm": [
+      "1.24-bookworm": [
         "go:${VERSION}-1-bookworm",
         "go:${VERSION}-bookworm"
       ],
