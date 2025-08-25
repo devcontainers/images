@@ -39,6 +39,10 @@ check "gitconfig-contains-name" sh -c "cat /etc/gitconfig | grep 'name = devcont
 
 check "usr-local-etc-config-does-not-exist" test ! -f "/usr/local/etc/gitconfig"
 
+# Testing vulnerability issue CVE-2024-46901 fix by upgrading svn to 1.14.5.
+svn_version=$(svn --version --quiet)
+check-version-ge "svn-requirement" "${svn_version}" "1.14.5"
+
 setuptools_version=$(python -c "import setuptools; print(setuptools.__version__)")
 check-version-ge "setuptools-requirement" "${setuptools_version}" "78.1.1"
 
