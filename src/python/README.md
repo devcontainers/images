@@ -34,9 +34,9 @@ Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/devcontainers/python:2-3.9` (or `2-3.9-bullseye`)
-- `mcr.microsoft.com/devcontainers/python:2.0-3.9` (or `2.0-3.9-bullseye`)
-- `mcr.microsoft.com/devcontainers/python:2.0.0-3.9` (or `2.0.0-3.9-bullseye`)
+- `mcr.microsoft.com/devcontainers/python:2-3.13` (or `2-3.13-bullseye`)
+- `mcr.microsoft.com/devcontainers/python:2.0-3.13` (or `2.0-3.13-bullseye`)
+- `mcr.microsoft.com/devcontainers/python:2.0.0-3.13` (or `2.0.0-3.13-bullseye`)
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `2-3`). 
 You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
