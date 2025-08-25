@@ -15,7 +15,8 @@ RUN python3 -m pip install --upgrade \
 # Fixing vulnerability issue by upgrading svn to 1.14.5. Ref https://subversion.apache.org/security/CVE-2024-46901-advisory.txt
 COPY ./scripts/install-subversion.sh /tmp/install-subversion.sh
 RUN chmod +x /tmp/install-subversion.sh
-RUN /tmp/install-subversion.sh
+RUN /tmp/install-subversion.sh \
+  && rm -f /tmp/install-subversion.sh
 
 # [Optional] If your pip requirements rarely change, uncomment this section to add them to the image.
 # COPY requirements.txt /tmp/pip-tmp/

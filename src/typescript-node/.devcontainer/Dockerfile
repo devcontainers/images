@@ -9,7 +9,8 @@ RUN su node -c "umask 0002 && npm install -g ${NODE_MODULES}" \
 # Fixing vulnerability issue CVE-2024-46901 by upgrading svn to 1.14.5.
 COPY ./scripts/install-subversion.sh /tmp/install-subversion.sh
 RUN chmod +x /tmp/install-subversion.sh
-RUN /tmp/install-subversion.sh
+RUN /tmp/install-subversion.sh \
+  && rm -f /tmp/install-subversion.sh
 
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
