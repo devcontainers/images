@@ -7,10 +7,9 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get purge -y imagemagick imagemagick-6-common 
 
 # Fixing vulnerability issue by upgrading svn to 1.14.5. Ref https://subversion.apache.org/security/CVE-2024-46901-advisory.txt
-COPY .devcontainer/scripts/install-subversion.sh /tmp/install-subversion.sh
-RUN chmod +x /tmp/install-subversion.sh \
-  && /bin/bash /tmp/install-subversion.sh \
-  && rm -f /tmp/install-subversion.sh
+COPY ./scripts/install-subversion.sh /tmp/install-subversion.sh
+RUN chmod +x /tmp/install-subversion.sh
+RUN /tmp/install-subversion.sh
 
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \

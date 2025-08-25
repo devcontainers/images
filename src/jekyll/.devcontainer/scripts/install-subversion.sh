@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 set -eux
 
 URL="https://archive.apache.org/dist/subversion/subversion-1.14.5.tar.gz"
