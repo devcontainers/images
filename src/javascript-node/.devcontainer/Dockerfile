@@ -1,4 +1,4 @@
-ARG VARIANT=24-bookworm
+ARG VARIANT=24-trixie
 FROM node:${VARIANT}
 
 ARG USERNAME=node
