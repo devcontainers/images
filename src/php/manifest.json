@@ -77,11 +77,9 @@
 				"php:${VERSION}-bookworm"
 			],
 			"8.3-apache-bookworm": [
-				"php:${VERSION}-8.3",
 				"php:${VERSION}-8.3-bookworm"
 			],			
 			"8.2-apache-bookworm": [
-				"php:${VERSION}-8.2",
 				"php:${VERSION}-8.2-bookworm"
 			],
 			"8.4-apache-bullseye": [
