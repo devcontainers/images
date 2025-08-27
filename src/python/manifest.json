@@ -108,18 +108,6 @@
 				"python:${VERSION}-3-bookworm",
 				"python:${VERSION}-bookworm"
 			],		
-			"3.12-bookworm": [
-				"python:${VERSION}-3.12"
-			],
-			"3.11-bookworm": [
-				"python:${VERSION}-3.11"
-			],
-			"3.10-bookworm": [
-				"python:${VERSION}-3.10"
-			],
-			"3.9-bookworm": [
-				"python:${VERSION}-3.9"
-			],
 			"3.13-bullseye": [
 				"python:${VERSION}-3-bullseye",
 				"python:${VERSION}-bullseye"
