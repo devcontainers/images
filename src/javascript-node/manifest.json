@@ -67,13 +67,7 @@
 				"javascript-node:${VERSION}-20"
 			],			
 			"24-bookworm": [
-				"javascript-node:${VERSION}-24"
-			],
-			"22-bookworm": [
-				"javascript-node:${VERSION}-22"
-			],
-			"20-bookworm": [
-				"javascript-node:${VERSION}-20"
+				"javascript-node:${VERSION}-bookworm"
 			],
 			"24-bullseye": [
 				"javascript-node:${VERSION}-bullseye"
