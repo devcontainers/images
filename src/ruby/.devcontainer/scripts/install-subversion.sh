@@ -13,7 +13,7 @@ if wget -q -O "${TMP}/${TARBALL}" "${URL}"; then
   tar -xzf "${TARBALL}"
   cd "${SRCDIR}"
   apt-get update -y
-  apt-get install -y --no-install-recommends build-essential autoconf libtool pkg-config libapr1-dev libaprutil1-dev liblz4-dev libutf8proc-dev
+  apt-get install -y --no-install-recommends build-essential autoconf libtool libsqlite3-dev pkg-config libapr1-dev libaprutil1-dev liblz4-dev libutf8proc-dev zlib1g-dev
   ./configure --with-lz4=internal --prefix=/usr
   make -j"$(nproc 2>/dev/null || getconf _NPROCESSORS_ONLN 2>/dev/null || echo 1)"
   make install
@@ -25,3 +25,4 @@ if wget -q -O "${TMP}/${TARBALL}" "${URL}"; then
 else
   echo "Downloading svn source failed, skipping Subversion build"
 fi
+
