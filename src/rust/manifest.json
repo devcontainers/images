@@ -9,6 +9,10 @@
 		"latest": "trixie",
 		"rootDistro": "debian",
 		"architectures": {
+			"trixie": [
+				"linux/amd64",
+				"linux/arm64"
+			],
 			"bookworm": [
 				"linux/amd64",
 				"linux/arm64"
@@ -23,6 +27,7 @@
 		],
 		"variantTags": {
 			"trixie": [
+				"rust:${VERSION}-1",
 				"rust:${VERSION}-1-trixie"
 			],
 			"bullseye": [
