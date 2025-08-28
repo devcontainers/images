@@ -1,6 +1,9 @@
 {
-	"version": "1.3.5",
+	"version": "2.0.0",
 	"variants": [
+        "8.4-apache-trixie",
+        "8.3-apache-trixie",
+        "8.2-apache-trixie",
 		"8.4-apache-bookworm",
 		"8.3-apache-bookworm",
 		"8.2-apache-bookworm",
@@ -9,9 +12,21 @@
 		"8.2-apache-bullseye"
 	],
 	"build": {
-		"latest": "8.4-apache-bookworm",
+		"latest": "8.4-apache-trixie",
 		"rootDistro": "debian",
 		"architectures": {
+			"8.4-apache-trixie": [
+				"linux/amd64",
+				"linux/arm64"
+			],			
+			"8.3-apache-trixie": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"8.2-apache-trixie": [
+				"linux/amd64",
+				"linux/arm64"
+			],			
 			"8.4-apache-bookworm": [
 				"linux/amd64",
 				"linux/arm64"
@@ -41,19 +56,30 @@
 			"php:${VERSION}-${VARIANT}"
 		],
 		"variantTags": {
-			"8.4-apache-bookworm": [
+			"8.4-apache-trixie": [
 				"php:${VERSION}-8",
 				"php:${VERSION}-8.4",
+				"php:${VERSION}-8-trixie",
+				"php:${VERSION}-8.4-trixie",
+				"php:${VERSION}-trixie"
+			],
+			"8.3-apache-trixie": [
+				"php:${VERSION}-8.3",
+				"php:${VERSION}-8.3-trixie"
+			],			
+			"8.2-apache-trixie": [
+				"php:${VERSION}-8.2",
+				"php:${VERSION}-8.2-trixie"
+			],			
+			"8.4-apache-bookworm": [
 				"php:${VERSION}-8-bookworm",
 				"php:${VERSION}-8.4-bookworm",
 				"php:${VERSION}-bookworm"
 			],
 			"8.3-apache-bookworm": [
-				"php:${VERSION}-8.3",
 				"php:${VERSION}-8.3-bookworm"
 			],			
 			"8.2-apache-bookworm": [
-				"php:${VERSION}-8.2",
 				"php:${VERSION}-8.2-bookworm"
 			],
 			"8.4-apache-bullseye": [
