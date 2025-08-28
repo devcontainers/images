@@ -34,7 +34,6 @@
 				"rust:${VERSION}-1-bullseye"
 			],
 			"bookworm": [
-				"rust:${VERSION}-1",
 				"rust:${VERSION}-1-bookworm"
 			]
 		}
