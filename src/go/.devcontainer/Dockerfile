@@ -1,6 +1,12 @@
 ARG VARIANT=1.25-trixie
 FROM golang:${VARIANT}
 
+# Fixing vulnerability issue by upgrading svn to 1.14.5. Ref https://subversion.apache.org/security/CVE-2024-46901-advisory.txt
+COPY ./scripts/install-subversion.sh /tmp/install-subversion.sh
+RUN chmod +x /tmp/install-subversion.sh
+RUN /tmp/install-subversion.sh \
+  && rm -f /tmp/install-subversion.sh
+
 # [Optional] Uncomment the next line to use go get to install anything else you need
 # RUN go get -x <your-dependency-or-tool>
 
