@@ -32,10 +32,10 @@ Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
 - `mcr.microsoft.com/devcontainers/ruby:1-3`     (or `1-3-bookworm`, `1-3-bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/ruby:1.3-3`   (or `1.3-3-bookworm`, `1.3-3-bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/ruby:1.3.0-3` (or `1.3.0-3-bookworm`, `1.3.0-3-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/ruby:1.4-3`   (or `1.4-3-bookworm`, `1.4-3-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/ruby:1.4.5-3` (or `1.4.5-3-bookworm`, `1.4.5-3-bullseye` to pin to an OS version)
 
-However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `1-3.2`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
+However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `1-3.4`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/ruby/tags/list).
 

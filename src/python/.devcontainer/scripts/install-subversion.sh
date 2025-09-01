@@ -1,6 +1,20 @@
 #!/bin/bash
 set -eux
 
+REQUIRED="1.14.5"
+
+# Determine current svn version if present
+current=""
+if command -v svn >/dev/null 2>&1; then
+  current="$(svn --version --quiet 2>/dev/null || true)"
+fi
+
+# If current version is >= REQUIRED, skip building
+if [ -n "${current}" ] && dpkg --compare-versions "${current}" ge "${REQUIRED}"; then
+  echo "Subversion ${current} is >= ${REQUIRED}; skipping build."
+  exit 0
+fi
+
 URL="https://archive.apache.org/dist/subversion/subversion-1.14.5.tar.gz"
 TMP="/tmp"
 TARBALL="subversion-1.14.5.tar.gz"
