@@ -35,7 +35,7 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 - `mcr.microsoft.com/devcontainers/jekyll:buster`
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
-
+- `mcr.microsoft.com/devcontainers/jekyll:3` (or `3-bookworm`, `3-bullseye` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/jekyll:2` (or `2-bookworm`, `2-bullseye`, `2-buster` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/jekyll:2.0` (or `2.0-bookworm`, `2.0-bullseye`, `2.0-buster` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/jekyll:2.0.0` (or `2.0.0-bookworm`, `2.0.0-bullseye`, `2.0.0-buster` to pin to an OS version)
