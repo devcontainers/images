@@ -35,6 +35,8 @@ jobs:
           git add -A
           git commit -m "Release manifest update"
           git push origin $target_branch
+          git config --global user.email github-actions@github.com
+          git config --global user.name github-actions
       - name: Create pull request
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
