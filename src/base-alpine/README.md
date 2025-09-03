@@ -27,6 +27,7 @@ You can also directly reference pre-built versions of `.devcontainer/Dockerfile`
 - `mcr.microsoft.com/devcontainers/base:alpine-3.20`
 - `mcr.microsoft.com/devcontainers/base:alpine-3.19`
 
+
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
