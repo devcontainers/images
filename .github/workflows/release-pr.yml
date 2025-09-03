@@ -24,16 +24,15 @@ jobs:
           node-version: 20
       - name: Install devcontainers CLI
         run: npm i -g @devcontainers/cli
-      - name: Checkout $target_branch
-        run: git checkout -b $target_branch
       - name: Update manifest files 
         run: ./build/prepare-release.sh
       - name: Push manifest updates
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
         run: |
-          git config --global user.email securitybots+devcontainers-bot@github.com
-          git config --global user.name devcontainers-bot
+          git config --global user.email github-actions@github.com
+          git config --global user.name github-actions
+          git checkout -b $target_branch
           git add -A
           git commit -m "Release manifest update"
           git push origin $target_branch
