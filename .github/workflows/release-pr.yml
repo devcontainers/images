@@ -10,7 +10,7 @@ on:
 
 
 jobs:
-  Update Images Manifest Files:
+  update_manifest_files:
     runs-on: ubuntu-latest
     env:
       target_branch: rel/${{github.event.inputs.version}}
