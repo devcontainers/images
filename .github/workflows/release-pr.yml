@@ -25,13 +25,13 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
         run: |
-        git add -A
-        git commit -m "Release manifest update"
-        git push origin $target_branch
+          git add -A
+          git commit -m "Release manifest update"
+          git push origin $target_branch
       - name: Create pull request
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
-        run:
+        run: |
           gh api \
                 --method POST \
                 -H "Accept: application/vnd.github+json" \
