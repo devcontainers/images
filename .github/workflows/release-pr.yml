@@ -1,0 +1,44 @@
+name: Create release pull request
+
+on:
+  workflow_dispatch:
+      version:
+        type: string
+        description: New version, in the form v0.4.x
+        required: true
+  
+
+
+jobs:
+  Update Images Manifest Files:
+    runs-on: ubuntu-latest
+    env:
+      target_branch: rel/${{github.event.inputs.version}}
+      version: ${{github.event.inputs.version}}
+    steps:
+      - uses: actions/checkout@v5
+      - name: Checkout $target_branch
+        run: git checkout -b $target_branch
+      - name: Update manifest files 
+        run: ./build/prepare-release.sh
+      - name: Push manifest updates
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
+        run: |
+        git add -A
+        git commit -m "Release manifest update"
+        git push origin $target_branch
+      - name: Create pull request
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
+        run:
+          gh api \
+                --method POST \
+                -H "Accept: application/vnd.github+json" \
+                /repos/${GITHUB_REPOSITORY}/pulls \
+                -f title="[Monthly Release] $version" \
+              -f body="" \
+              -f head="$target_branch" \
+              -f base='main'
+
+ 
