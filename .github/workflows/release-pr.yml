@@ -32,8 +32,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
         run: |
-          git config --global user.email github-actions@github.com
-          git config --global user.name github-actions
+          git config --global user.email securitybots+devcontainers-bot@github.com
+          git config --global user.name devcontainers-bot
           git add -A
           git commit -m "Release manifest update"
           git push origin $target_branch
