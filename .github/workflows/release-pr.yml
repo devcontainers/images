@@ -2,6 +2,7 @@ name: Create release pull request
 
 on:
   workflow_dispatch:
+    inputs:
       version:
         type: string
         description: New version, in the form v0.4.x
