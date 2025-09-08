@@ -54,8 +54,8 @@ sudo_if /opt/conda/bin/python3 -m pip install --upgrade pip
 # https://github.com/advisories/GHSA-h4gh-qq45-vh27
 update_python_package /opt/conda/bin/python3 cryptography "43.0.1"
 
-# https://github.com/advisories/GHSA-34jh-p97f-mpxf
-update_conda_package urllib3 "1.26.19"
+# https://github.com/advisories/GHSA-pq67-6m6q-mj2v
+update_conda_package urllib3 "2.5.0"
 
 # https://github.com/advisories/GHSA-9hjg-9r4m-mvj7
 update_conda_package requests "2.32.4"
