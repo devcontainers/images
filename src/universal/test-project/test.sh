@@ -186,13 +186,13 @@ ls -la /home/codespace
 ## Python - current
 checkPythonPackageVersion "python" "setuptools" "65.5.1"
 checkPythonPackageVersion "python" "requests" "2.31.0"
-checkPythonPackageVersion "python" "urllib3" "2.0.7"
+checkPythonPackageVersion "python" "urllib3" "2.5.0"
 
 ## Conda Python
 checkCondaPackageVersion "requests" "2.31.0"
 checkCondaPackageVersion "cryptography" "41.0.4"
 checkCondaPackageVersion "pyopenssl" "23.2.0"
-checkCondaPackageVersion "urllib3" "1.26.17"
+checkCondaPackageVersion "urllib3" "2.5.0"
 
 ## Test Conda
 check "conda-update-conda" bash -c "conda update -y conda"
