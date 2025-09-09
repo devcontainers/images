@@ -191,7 +191,7 @@ checkPythonPackageVersion "python" "urllib3" "2.5.0"
 ## Conda Python
 checkCondaPackageVersion "requests" "2.31.0"
 checkCondaPackageVersion "cryptography" "41.0.4"
-checkCondaPackageVersion "pyopenssl" "23.2.0"
+checkCondaPackageVersion "pyopenssl" "25.0.0"
 checkCondaPackageVersion "urllib3" "2.5.0"
 
 ## Test Conda
