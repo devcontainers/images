@@ -54,6 +54,7 @@ sudo_if /opt/conda/bin/python3 -m pip install --upgrade pip
 # https://github.com/advisories/GHSA-h4gh-qq45-vh27
 update_python_package /opt/conda/bin/python3 cryptography "43.0.1"
 
+#updating conda package to the latest version available
 update_conda_package pyopenssl "25.0.0"
 
 # https://github.com/advisories/GHSA-pq67-6m6q-mj2v
