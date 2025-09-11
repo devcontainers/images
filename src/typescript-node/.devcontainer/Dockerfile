@@ -1,3 +1,4 @@
+
 ARG VARIANT=24-trixie
 FROM mcr.microsoft.com/devcontainers/javascript-node:3-${VARIANT}
 
