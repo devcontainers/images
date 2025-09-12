@@ -1,14 +1,16 @@
 {
-	"version": "1.2.14",
+	"version": "2.0.0",
 	"variants": [
+		"trixie",
 		"bookworm",
 		"bullseye",
 		"noble",
 		"jammy"
 	],
 	"build": {
-		"latest": "bookworm",
+		"latest": "trixie",
 		"parent": {
+			"trixie": "base-debian",
 			"bookworm": "base-debian",
 			"bullseye": "base-debian",
 			"noble": "base-ubuntu",
@@ -16,6 +18,10 @@
 		},
 		"rootDistro": "debian",
 		"architectures": {
+			"trixie": [
+				"linux/amd64",
+				"linux/arm64"
+			],
 			"bookworm": [
 				"linux/amd64",
 				"linux/arm64"
@@ -37,6 +43,12 @@
 			"cpp:${VERSION}-${VARIANT}"
 		],
 		"variantTags": {
+			"trixie": [
+				"cpp:${VERSION}-debian-13",
+				"cpp:${VERSION}-debian13",
+				"cpp:${VERSION}-debian",
+				"cpp:${VERSION}"
+			],
 			"bookworm": [
 				"cpp:${VERSION}-debian-12",
 				"cpp:${VERSION}-debian12",
