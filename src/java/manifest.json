@@ -108,16 +108,13 @@
 				"java:${VERSION}-11-jdk-trixie"
 			],
 			"21-bookworm": [
-				"java:${VERSION}-21",
 				"java:${VERSION}-21-jdk-bookworm",
 				"java:${VERSION}-bookworm"
 			],
 			"17-bookworm": [
-				"java:${VERSION}-17",
 				"java:${VERSION}-17-jdk-bookworm"
 			],
 			"11-bookworm": [
-				"java:${VERSION}-11",
 				"java:${VERSION}-11-jdk-bookworm"
 			],
 			"21-bullseye": [
