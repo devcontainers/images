@@ -9,7 +9,7 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published image* | mcr.microsoft.com/devcontainers/typescript-node |
-| *Available image variants* | 24 / 24-bookworm, 22 / 22-bookworm, 20 / 20-bookworm, 24-bullseye, 22-bullseye, 20-bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/typescript-node/tags/list)) |
+| *Available image variants* | 24 /24-trixie, 22 / 22-trixie, 20 / 20-trixie, 24-bookworm, 22-bookworm, 20-bookworm, 24-bullseye, 22-bullseye, 20-bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/typescript-node/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm`, and `bullseye` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
@@ -20,17 +20,17 @@
 You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
 - `mcr.microsoft.com/devcontainers/typescript-node` (latest)
-- `mcr.microsoft.com/devcontainers/typescript-node:24` (or `24-bookworm`, `24-bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/typescript-node:22` (or `22-bookworm`, `22-bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/typescript-node:20` (or `20-bookworm`, `20-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/typescript-node:24` (or `24-trixie`, `24-bookworm`, `24-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/typescript-node:22` (or `22-trixie`, `22-bookworm`, `22-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/typescript-node:20` (or `20-trixie`, `20-bookworm`, `20-bullseye` to pin to an OS version)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/devcontainers/typescript-node:3-24` (or `3-24-bookworm`, `3-24-bullseye`)
-- `mcr.microsoft.com/devcontainers/typescript-node:3.0-24` (or `3.0-24-bookworm`, `3.0-24-bullseye`)
-- `mcr.microsoft.com/devcontainers/typescript-node:3.0.2-24` (or `3.0.2-24-bookworm`, `3.0.2-24-bullseye`)
+- `mcr.microsoft.com/devcontainers/typescript-node:4-24` (or `4-24-trixie`, `4-24-bookworm`, `4-24-bullseye`)
+- `mcr.microsoft.com/devcontainers/typescript-node:4.0-24` (or `4.0-24-trixie`,  `4.0-24-bookworm`, `4.0-24-bullseye`)
+- `mcr.microsoft.com/devcontainers/typescript-node:4.0.0-24` (or `4.0.0-24-trixie`, `4.0.0-24-bookworm`, `4.0.0-24-bullseye`)
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `3-24`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
