@@ -68,7 +68,6 @@
 				"typescript-node:${VERSION}-20"
 			],
 			"24-bookworm": [
-				"typescript-node:${VERSION}-24",
 				"typescript-node:${VERSION}-bookworm"
 			],
 			"24-bullseye": [
