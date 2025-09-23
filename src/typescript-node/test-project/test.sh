@@ -15,9 +15,6 @@ sudo rm -f yarn.lock
 sudo rm -rf .yarn/*
 sudo touch yarn.lock
 sudo chmod a+rw yarn.lock
-sudo mkdir -p .yarn/cache
-sudo chown -R $(id -u):$(id -g) .yarn
-sudo chmod -R a+rwX .yarn
 check "yarn" yarn install
 sudo rm -f package-lock.json
 check "eslint" eslint --no-warn-ignored src/server.ts
