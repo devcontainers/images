@@ -15,6 +15,8 @@ npm_version=$(npm --version)
 check-version-ge "npm-requirement" "${npm_version}" "9.8.1"
 sudo rm -f yarn.lock
 sudo touch yarn.lock
+sudo rm -rf .yarn/*
+sudo mkdir -p .yarn/cache
 check "yarn" yarn install
 sudo rm -f package-lock.json
 check "npm" npm install
