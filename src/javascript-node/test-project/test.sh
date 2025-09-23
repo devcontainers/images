@@ -17,9 +17,9 @@ sudo rm -f yarn.lock
 sudo touch yarn.lock
 sudo rm -rf .yarn/*
 sudo chmod a+rw yarn.lock
-sudo mkdir -p .yarn/cache
-sudo chown -R $(id -u):$(id -g) .yarn
-sudo chmod -R a+rwX .yar
+#sudo mkdir -p .yarn/cache
+#sudo chown -R $(id -u):$(id -g) .yarn
+#sudo chmod -R a+rwX .yar
 check "yarn" yarn install
 sudo rm -f package-lock.json
 check "npm" npm install
