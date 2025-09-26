@@ -51,6 +51,9 @@ jobs:
         ACR_REGISTRY_NAME=$(echo "$REGISTRY" | grep -oP '(.+)(?=\.azurecr\.io)')
         az acr login --name $ACR_REGISTRY_NAME --username $TOKEN_NAME --password $PASSWORD
 
+        # This is required to set yarn 4.9.4 as the global yarn version in the runner is 1.22.22
+        sudo corepack enable
+        sudo corepack prepare yarn@4.9.4 --activate     
         # Build and push images
         yarn install
         npm install -g @devcontainers/cli
