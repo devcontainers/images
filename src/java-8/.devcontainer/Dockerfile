@@ -1,5 +1,5 @@
 # [Choice] Debian OS version (use bullseye on local arm64/Apple Silicon): bookworm, buster, bullseye
-ARG VARIANT="bookworm"
+ARG VARIANT="trixie"
 FROM mcr.microsoft.com/devcontainers/base:${VARIANT}
 
 # [Optional] Uncomment this section to install additional OS packages.
