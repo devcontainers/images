@@ -2,12 +2,11 @@
 	"version": "2.0.0",
 	"variants": [
 		"21-trixie",
+		"17-trixie",
+		"11-trixie",
 		"21-bookworm",
-		"21-bullseye",
 		"17-bookworm",
-		"17-bullseye",
-		"11-bookworm",
-		"11-bullseye"
+		"11-bookworm"
 	],
 	"build": {
 		"latest": "21-trixie",
