@@ -3,7 +3,6 @@
 	"variants": [
 		"trixie",
 		"bookworm",
-		"bullseye",
 		"noble",
 		"jammy"
 	],
@@ -12,7 +11,6 @@
 		"parent": {
 			"trixie": "base-debian",
 			"bookworm": "base-debian",
-			"bullseye": "base-debian",
 			"noble": "base-ubuntu",
 			"jammy": "base-ubuntu"
 		},
@@ -23,10 +21,6 @@
 				"linux/arm64"
 			],
 			"bookworm": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"bullseye": [
 				"linux/amd64",
 				"linux/arm64"
 			],
@@ -52,10 +46,6 @@
 			"bookworm": [
 				"cpp:${VERSION}-debian-12",
 				"cpp:${VERSION}-debian12"
-			],
-			"bullseye": [
-				"cpp:${VERSION}-debian-11",
-				"cpp:${VERSION}-debian11"
 			],
 			"noble": [
 				"cpp:${VERSION}-ubuntu-24.04",
