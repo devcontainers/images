@@ -36,7 +36,7 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 - `mcr.microsoft.com/devcontainers/jekyll:2` (or `2-bookworm`, `2-bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/jekyll:2.0` (or `2.0-bookworm`, `2.0-bullseye`  to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/jekyll:2.2` (or `2.2-bookworm`, `2.2-bullseye`  to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/jekyll:2.2.0` (or `2.2.0-bookworm`, `2.2.0-bullseye` to pin to an OS version)
 
 
