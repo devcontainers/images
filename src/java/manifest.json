@@ -92,16 +92,6 @@
 			],
 			"11-bookworm": [
 				"java:${VERSION}-11-jdk-bookworm"
-			],
-			"21-bullseye": [
-				"java:${VERSION}-21-jdk-bullseye",
-				"java:${VERSION}-bullseye"
-			],
-			"17-bullseye": [
-				"java:${VERSION}-17-jdk-bullseye"
-			],
-			"11-bullseye": [
-				"java:${VERSION}-11-jdk-bullseye"
 			]
 		}
 	},
