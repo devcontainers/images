@@ -32,7 +32,6 @@
 				"jekyll:${VERSION}-bookworm"
 			],
 			"3.3-bookworm": [
-				"jekyll:${VERSION}",
 				"jekyll:${VERSION}-bookworm"
 			],
 			"3.3-bullseye": [
