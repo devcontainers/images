@@ -23,8 +23,8 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 
 - `mcr.microsoft.com/devcontainers/java` (latest)
 - `mcr.microsoft.com/devcontainers/java:21` (or `21-trixie`, `21-bookworm` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/java:11` (or `11-trixie`, `11-bookworm`, `11-bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/java:17` (or `17-trixie`, `17-bookworm`, `17-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/java:11` (or `11-trixie`, `11-bookworm` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/java:17` (or `17-trixie`, `17-bookworm` to pin to an OS version)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
