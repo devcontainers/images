@@ -1,4 +1,4 @@
-ARG VARIANT=3.3-bookworm
+ARG VARIANT=3.4-bookworm
 FROM mcr.microsoft.com/devcontainers/ruby:${VARIANT}
 
 USER root
