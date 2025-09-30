@@ -9,8 +9,8 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/java |
-| *Available image variants* | 11 / 11-trixie, 17 /17-trixie, , 21 / 21-trixie, 21-bookworm, 17-bookworm, 11-bookworm ([full list](https://mcr.microsoft.com/v2/devcontainers/java/tags/list)) |
-| *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm`, and `bullseye` variants |
+| *Available image variants* | 11 / 11-trixie, 17 /17-trixie, , 21 / 21-trixie, 25 / 25-trixie, 25-bookworm, 21-bookworm, 17-bookworm, 11-bookworm ([full list](https://mcr.microsoft.com/v2/devcontainers/java/tags/list)) |
+| *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm`, and `trixie` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
 | *Languages, platforms* | Java |
@@ -22,6 +22,7 @@ See **[history](history)** for information on the contents of published images.
 You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
 - `mcr.microsoft.com/devcontainers/java` (latest)
+- `mcr.microsoft.com/devcontainers/java:25` (or `25-trixie`, `25-bookworm` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/java:21` (or `21-trixie`, `21-bookworm` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/java:11` (or `11-trixie`, `11-bookworm` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/java:17` (or `17-trixie`, `17-bookworm` to pin to an OS version)
