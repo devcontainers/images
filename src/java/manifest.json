@@ -1,19 +1,31 @@
 {
-	"version": "1.1.24",
+	"version": "2.0.0",
 	"variants": [
+		"21-trixie",
+		"17-trixie",
+		"11-trixie",
 		"21-bookworm",
-		"21-bullseye",
 		"17-bookworm",
-		"17-bullseye",
-		"11-bookworm",
-		"11-bullseye"
+		"11-bookworm"
 	],
 	"build": {
-		"latest": "21-bookworm",
+		"latest": "21-trixie",
 		"rootDistro": "debian",
 		"parent": "base-debian",
 		"idMismatch": "true",
 		"variantBuildArgs": {
+			"21-trixie": {
+				"TARGET_JAVA_VERSION": "21",
+				"BASE_IMAGE_VERSION_CODENAME": "trixie"
+			},
+			"17-trixie": {
+				"TARGET_JAVA_VERSION": "17",
+				"BASE_IMAGE_VERSION_CODENAME": "trixie"
+			},
+			"11-trixie": {
+				"TARGET_JAVA_VERSION": "11",
+				"BASE_IMAGE_VERSION_CODENAME": "trixie"
+			},
 			"21-bookworm": {
 				"TARGET_JAVA_VERSION": "21",
 				"BASE_IMAGE_VERSION_CODENAME": "bookworm"
@@ -25,21 +37,21 @@
 			"11-bookworm": {
 				"TARGET_JAVA_VERSION": "11",
 				"BASE_IMAGE_VERSION_CODENAME": "bookworm"
-			},
-			"21-bullseye": {
-				"TARGET_JAVA_VERSION": "21",
-				"BASE_IMAGE_VERSION_CODENAME": "bullseye"
-			},
-			"17-bullseye": {
-				"TARGET_JAVA_VERSION": "17",
-				"BASE_IMAGE_VERSION_CODENAME": "bullseye"
-			},
-			"11-bullseye": {
-				"TARGET_JAVA_VERSION": "11",
-				"BASE_IMAGE_VERSION_CODENAME": "bullseye"
 			}
 		},
 		"architectures": {
+			"21-trixie": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"17-trixie": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"11-trixie": [
+				"linux/amd64",
+				"linux/arm64"
+			],
 			"21-bookworm": [
 				"linux/amd64",
 				"linux/arm64"
@@ -49,18 +61,6 @@
 				"linux/arm64"
 			],
 			"11-bookworm": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"21-bullseye": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"17-bullseye": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"11-bullseye": [
 				"linux/amd64",
 				"linux/arm64"
 			]
@@ -69,28 +69,28 @@
 			"java:${VERSION}-${VARIANT}"
 		],
 		"variantTags": {
-			"21-bookworm": [
+			"21-trixie": [
 				"java:${VERSION}-21",
+				"java:${VERSION}-21-jdk-trixie",
+				"java:${VERSION}-trixie"
+			],
+			"17-trixie": [
+				"java:${VERSION}-17",
+				"java:${VERSION}-17-jdk-trixie"
+			],
+			"11-trixie": [
+				"java:${VERSION}-11",
+				"java:${VERSION}-11-jdk-trixie"
+			],
+			"21-bookworm": [
 				"java:${VERSION}-21-jdk-bookworm",
 				"java:${VERSION}-bookworm"
 			],
 			"17-bookworm": [
-				"java:${VERSION}-17",
 				"java:${VERSION}-17-jdk-bookworm"
 			],
 			"11-bookworm": [
-				"java:${VERSION}-11",
 				"java:${VERSION}-11-jdk-bookworm"
-			],
-			"21-bullseye": [
-				"java:${VERSION}-21-jdk-bullseye",
-				"java:${VERSION}-bullseye"
-			],
-			"17-bullseye": [
-				"java:${VERSION}-17-jdk-bullseye"
-			],
-			"11-bullseye": [
-				"java:${VERSION}-11-jdk-bullseye"
 			]
 		}
 	},
