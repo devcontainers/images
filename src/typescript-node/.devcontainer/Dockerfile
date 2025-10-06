@@ -1,5 +1,6 @@
-ARG VARIANT=24-bookworm
-FROM mcr.microsoft.com/devcontainers/javascript-node:3-${VARIANT}
+
+ARG VARIANT=24-trixie
+FROM mcr.microsoft.com/devcontainers/javascript-node:4-${VARIANT}
 
 # Install tslint, typescript. eslint is installed by javascript image
 ARG NODE_MODULES="tslint-to-eslint-config typescript"
