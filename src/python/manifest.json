@@ -1,5 +1,5 @@
 {
-	"version": "2.0.2",
+	"version": "2.1.0",
 	"variants": [
 		"3.13-trixie",
 		"3.12-trixie",
@@ -14,8 +14,7 @@
 		"3.13-bullseye",
 		"3.12-bullseye",
 		"3.11-bullseye",
-		"3.10-bullseye",
-		"3.9-bullseye"
+		"3.10-bullseye"
 	],
 	"build": {
 		"latest": "3.13-trixie",
@@ -36,11 +35,7 @@
 			"3.10-trixie": [
 				"linux/amd64",
 				"linux/arm64"
-			],
-			"3.9-trixie": [
-				"linux/amd64",
-				"linux/arm64"
-			],			
+			],		
 			"3.13-bookworm": [
 				"linux/amd64",
 				"linux/arm64"
@@ -57,10 +52,6 @@
 				"linux/amd64",
 				"linux/arm64"
 			],
-			"3.9-bookworm": [
-				"linux/amd64",
-				"linux/arm64"
-			],
 			"3.13-bullseye": [
 				"linux/amd64",
 				"linux/arm64"
@@ -74,10 +65,6 @@
 				"linux/arm64"
 			],
 			"3.10-bullseye": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"3.9-bullseye": [
 				"linux/amd64",
 				"linux/arm64"
 			]
@@ -100,10 +87,7 @@
 			],		
 			"3.10-trixie": [
 				"python:${VERSION}-3.10"
-			],		
-			"3.9-trixie": [
-				"python:${VERSION}-3.9"
-			],								
+			],										
 			"3.13-bookworm": [
 				"python:${VERSION}-3-bookworm",
 				"python:${VERSION}-bookworm"

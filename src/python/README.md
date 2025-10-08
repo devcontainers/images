@@ -9,7 +9,7 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published image* | mcr.microsoft.com/devcontainers/python |
-| *Available image variants* | 3 / 3-trixie, 3.9 / 3.9-trixie, 3.10 / 3.10-trixie, 3.11-trixie / 3.11, 3.12-trixie / 3.12, 3.13-trixie / 3.13, 3-bookworm, 3.9-bookworm, 3.10-bookworm, 3.11-bookworm, 3.12-bookworm, 3.13-bookworm, 3-bullseye, 3.9-bullseye, 3.10-bullseye, 3.11-bullseye, 3.12-bullseye, 3.13-bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/python/tags/list)) |
+| *Available image variants* | 3 / 3-trixie, 3.10 / 3.10-trixie, 3.11-trixie / 3.11, 3.12-trixie / 3.12, 3.13-trixie / 3.13, 3-bookworm,3.10-bookworm, 3.11-bookworm, 3.12-bookworm, 3.13-bookworm, 3-bullseye, 3.10-bullseye, 3.11-bullseye, 3.12-bullseye, 3.13-bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/python/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm`, and `bullseye` variants |
 | *Container Host OS Support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
@@ -24,7 +24,6 @@ See **[history](history)** for information on the contents of published images.
 You can directly reference [pre-built](https://containers.dev/implementors/reference/#prebuilding) versions of this image by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` with one of the following:
 
 - `mcr.microsoft.com/devcontainers/python:3`    (latest)
-- `mcr.microsoft.com/devcontainers/python:3.9`  (or `3.9-trixie`, `3.9-bookworm`, `3.9-bullseye` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/python:3.10` (or `3.10-trixie`, `3.10-bookworm`, `3.10-bullseye` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/python:3.11` (or `3.11-trixie`, `3.11-bookworm`, `3.11-bullseye` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/python:3.12` (or `3.12-trixie`, `3.12-bookworm`, `3.12-bullseye` to pin to an OS version)
