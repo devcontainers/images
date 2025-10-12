@@ -1,8 +1,0 @@
-{
-    "id": "machine-learning-packages",
-    "name": "Machine learning packages",
-    "install": {
-        "app": "",
-        "file": "install.sh"
-    }
-}
