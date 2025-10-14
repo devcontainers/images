@@ -10,6 +10,8 @@ on:
         
 permissions:
   contents: write
+  pull-requests: write
+
 
 env:
   target_branch: rel/${{github.event.inputs.version}}
