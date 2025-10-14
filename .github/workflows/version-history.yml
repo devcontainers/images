@@ -23,6 +23,10 @@ on:
         required: true
         default: 'true'
         type: string
+      target_branch:
+        description: 'Branch to push changes to'
+        required: false
+        type: string
 
 jobs:
   image_info:
@@ -98,7 +102,7 @@ jobs:
         git config --global user.name github-actions
         git config pull.rebase false
 
-        branch=automated-update-for-image-history-$GITHUB_RUN_ID
+        branch="${{ inputs.target_branch || format('automated-update-for-image-history-{0}', github.run_id) }}"  
         git checkout -b $branch
         message='Automated update for image history'
 

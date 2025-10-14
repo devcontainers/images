@@ -11,13 +11,13 @@ on:
 permissions:
   contents: write
 
+env:
+  target_branch: rel/${{github.event.inputs.version}}
+  version: ${{github.event.inputs.version}}
 
 jobs:
   update_manifest_files:
     runs-on: ubuntu-latest
-    env:
-      target_branch: rel/${{github.event.inputs.version}}
-      version: ${{github.event.inputs.version}}
     steps:
       - uses: actions/checkout@v5
       - name: Set up Node.js
@@ -34,10 +34,10 @@ jobs:
         run: |
           git config --global user.email github-actions@github.com
           git config --global user.name github-actions
-          git checkout -b $target_branch
+          git checkout -b ${{ env.target_branch }}
           git add -A
           git commit -m "Release manifest update"
-          git push origin $target_branch
+          git push origin ${{ env.target_branch }}
       - name: Create pull request
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
@@ -46,9 +46,22 @@ jobs:
                 --method POST \
                 -H "Accept: application/vnd.github+json" \
                 /repos/${GITHUB_REPOSITORY}/pulls \
-                -f title="[Monthly Release] $version" \
+                -f title="[Monthly Release] ${{ env.version }}" \
               -f body="" \
-              -f head="$target_branch" \
+              -f head="${{ env.target_branch }}" \
               -f base='main'
+  image-info:
+      name: Trigger info extraction
+      needs: [build-and-push]
+      uses: devcontainers/images/.github/workflows/version-history.yml@main
+      permissions:
+        contents: write
+        pull-requests: write
+      with:
+        release: "${{ github.ref }}"
+        cg: "false"
+        push: "true"
+        overwrite: "false"
+        target_branch: ${{ env.target_branch }}
+      secrets: inherit
 
- 
