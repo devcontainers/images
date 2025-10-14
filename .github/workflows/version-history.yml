@@ -50,6 +50,8 @@ jobs:
     - name: Checkout
       id: checkout
       uses: actions/checkout@v3
+      with:
+        ref: ${{ inputs.target_branch || 'main' }}
 
     - name: Get image info
       id: Get_image_info
