@@ -104,7 +104,11 @@ jobs:
         git config pull.rebase false
 
         branch="${{ inputs.target_branch || format('automated-update-for-image-history-{0}', github.run_id) }}"  
-        git checkout -b $branch
+        if [ -n "${{ inputs.target_branch }}" ]; then
+          git checkout $branch
+        else
+          git checkout -b $branch
+        fi
         message='Automated update for image history'
 
         # Add / update and commit
@@ -114,12 +118,15 @@ jobs:
         # Push (unless disabled for testing)
         if [ "$NO_UPDATES" != "true" ] && [ "${{ inputs.push }}" = "true" ]; then
             git push origin "$branch"
-            gh api \
-                --method POST \
-                -H "Accept: application/vnd.github+json" \
-                /repos/${GITHUB_REPOSITORY}/pulls \
-                -f title="$message" \
-              -f body="$message" \
-              -f head="$branch" \
-              -f base='main'
+        fi
+
+        if [ -z "${{ inputs.target_branch }}" ]; then
+          gh api \
+              --method POST \
+              -H "Accept: application/vnd.github+json" \
+              /repos/${GITHUB_REPOSITORY}/pulls \
+              -f title="$message" \
+            -f body="$message" \
+            -f head="$branch" \
+            -f base='main'
         fi
