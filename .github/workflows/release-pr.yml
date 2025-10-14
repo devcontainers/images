@@ -11,12 +11,12 @@ on:
 permissions:
   contents: write
 
-env:
-  target_branch: rel/${{github.event.inputs.version}}
-  version: ${{github.event.inputs.version}}
 
 jobs:
   update_manifest_files:
+    env:
+      target_branch: rel/${{github.event.inputs.version}}
+      version: ${{github.event.inputs.version}}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
