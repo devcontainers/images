@@ -43,7 +43,7 @@ update_conda_package() {
     PACKAGE=$1
     VERSION=$2
 
-    sudo_if "conda install $PACKAGE=$VERSION"
+    sudo_if "conda install -y -c defaults $PACKAGE=$VERSION"
 }
 
 sudo_if /opt/conda/bin/python3 -m pip install --upgrade pip
