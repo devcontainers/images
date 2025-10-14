@@ -116,7 +116,6 @@ async function getVersionFromManifest(definitionId) {
 // Loads manifest.json and adds it to config
 async function loadDefinitionManifest(manifestPath, definitionId) {
     const buildJson = await jsonc.read(manifestPath);
-    console.log(`loading manifest for ${definitionId}`)
     if (buildJson.variants) {
         config.definitionVariants[definitionId] = buildJson.variants;
     }
@@ -127,8 +126,6 @@ async function loadDefinitionManifest(manifestPath, definitionId) {
         config.definitionDependencies[definitionId] = buildJson.dependencies;
     }
     if (buildJson.version) {
-        console.log(`version is ${buildJson.version}`)
-
         config.definitionVersions[definitionId] = buildJson.version;
     }
 }
