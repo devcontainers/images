@@ -41,8 +41,6 @@ jobs:
           git commit -m "Release manifest update"
           git push origin ${{ env.target_branch }}
       - name: Create pull request
-        env:
-          GITHUB_TOKEN: ${{ secrets.PAT }}
         run: |
           gh api \
                 --method POST \
