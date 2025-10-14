@@ -18,16 +18,16 @@ check "gitconfig-contains-name" sh -c "cat /etc/gitconfig | grep 'name = devcont
 
 check "usr-local-etc-config-does-not-exist" test ! -f "/usr/local/etc/gitconfig"
 
-checkPythonPackageVersion "cryptography" "43.0.1"
+checkPythonPackageVersion "cryptography" "44.0.1"
 checkPythonPackageVersion "setuptools" "65.5.1"
 checkPythonPackageVersion "wheel" "0.38.1"
-checkPythonPackageVersion "urllib3" "2.2.2"
+checkPythonPackageVersion "urllib3" "2.5.0"
 
-checkCondaPackageVersion "cryptography" "43.0.1"
+checkCondaPackageVersion "cryptography" "44.0.1"
 checkCondaPackageVersion "setuptools" "65.5.1"
 checkCondaPackageVersion "wheel" "0.38.1"
-checkCondaPackageVersion "requests" "2.32.0"
-checkCondaPackageVersion "urllib3" "1.26.17"
+checkCondaPackageVersion "requests" "2.32.4"
+checkCondaPackageVersion "urllib3" "2.5.0"
 checkCondaPackageVersion "idna" "3.7"
 checkCondaPackageVersion "tqdm" "4.66.4"
 checkCondaPackageVersion "certifi" "2024.7.4"

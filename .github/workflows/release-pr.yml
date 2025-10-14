@@ -1,0 +1,54 @@
+name: Create release pull request
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        type: string
+        description: New version, in the form v0.4.x
+        required: true
+        
+permissions:
+  contents: write
+
+
+jobs:
+  update_manifest_files:
+    runs-on: ubuntu-latest
+    env:
+      target_branch: rel/${{github.event.inputs.version}}
+      version: ${{github.event.inputs.version}}
+    steps:
+      - uses: actions/checkout@v5
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install devcontainers CLI
+        run: npm i -g @devcontainers/cli
+      - name: Update manifest files 
+        run: ./build/prepare-release.sh
+      - name: Push manifest updates
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
+        run: |
+          git config --global user.email github-actions@github.com
+          git config --global user.name github-actions
+          git checkout -b $target_branch
+          git add -A
+          git commit -m "Release manifest update"
+          git push origin $target_branch
+      - name: Create pull request
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
+        run: |
+          gh api \
+                --method POST \
+                -H "Accept: application/vnd.github+json" \
+                /repos/${GITHUB_REPOSITORY}/pulls \
+                -f title="[Monthly Release] $version" \
+              -f body="" \
+              -f head="$target_branch" \
+              -f base='main'
+
+ 

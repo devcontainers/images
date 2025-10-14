@@ -17,6 +17,14 @@
 	"customizations": {
 		// Configure properties specific to VS Code.
 		"vscode": {
+			// Set *default* container specific settings.json values on container create.
+			"settings": {
+				"github.copilot.chat.codeGeneration.instructions": [
+					{
+						"text": "This dev container includes `gcc`, `g++`, `make`, `cmake`, `cppcheck`, `valgrind`, `clang`, `lldb`, `llvm`, `gdb` and `vcpkg` pre-installed and available on the `PATH`, along with the C/C++ language and CMake tools extensions for C/C++ development."
+					}
+				]
+			},
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"ms-vscode.cpptools",

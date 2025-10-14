@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # vulnerabilities:
-# werkzeug - [GHSA-f9vj-2wh5-fj8j]
+# werkzeug - [GHSA-f9vj-2wh5-fj8j] 
 
-vulnerable_packages=( "mistune=3.0.1" "transformers=4.36.0" "cryptography=43.0.3" "jupyter-lsp=2.2.2" "scrapy=2.11.2" \ 
+vulnerable_packages=( "mistune=3.0.1" "aiohttp=3.10.11" "cryptography=44.0.1" "h11=0.16.0" "jinja2=3.1.6" "jupyter_core=5.8.1" "protobuf=5.29.5" "requests=2.32.4" "setuptools=78.1.1" "transformers=4.53.0" "urllib3=2.5.0" "Werkzeug=3.0.6" "jupyter-lsp=2.2.2" "scrapy=2.11.2" \ 
                       "zipp=3.19.1" "tornado=6.4.2")
 
 # Define the number of rows (based on the length of vulnerable_packages)
@@ -23,6 +23,20 @@ for ((i=0; i<rows; i++)); do
     packages_array[$i,0]=${parts[0]}
     packages_array[$i,1]=${parts[1]}
 done
+
+# Add an array for packages that should always pin to the provided version, 
+# even if higher version is available in conda channel
+pin_to_required_version=("jupyter_core" "cryptography")
+# Function to check if a package is in the pin_to_required_version array
+function is_pin_to_required_version() {
+    local pkg="$1"
+    for item in "${pin_to_required_version[@]}"; do
+        if [[ "$item" == "$pkg" ]]; then
+            return 0
+        fi
+    done
+    return 1
+}
 
 for ((i=0; i<rows; i++)); do
     CURRENT_VERSION=$(pip show "${packages_array[$i,0]}" --disable-pip-version-check | grep '^Version:' | awk '{print $2}')
@@ -45,12 +59,16 @@ for ((i=0; i<rows; i++)); do
             CONDA_VERSION="0"
         fi
         GREATER_VERSION_B=$((echo ${REQUIRED_VERSION}; echo ${CONDA_VERSION}) | sort -V | tail -1)
-        if [[ $CONDA_VERSION == $GREATER_VERSION_B && ${packages_array[$i,0]} != "cryptography" ]]; then        
+        if is_pin_to_required_version "${packages_array[$i,0]}"; then
+            echo -e "Package ${packages_array[$i,0]} is set to always use the required version: v${REQUIRED_VERSION}.\n";
+            echo "Installing ${packages_array[$i,0]} from pip for v${REQUIRED_VERSION}..."
+            python3 -m pip install --upgrade --no-cache-dir "${packages_array[$i,0]}==${REQUIRED_VERSION}"
+        elif [[ $CONDA_VERSION == $GREATER_VERSION_B ]]; then        
             echo -e "Found Version v${CONDA_VERSION} in the Conda channel which is greater than or equal to the required version: v${REQUIRED_VERSION}. \n";
             echo "Installing ${packages_array[$i,0]} from source from conda channel for v${REQUIRED_VERSION}..."
             conda install "${packages_array[$i,0]}==${CONDA_VERSION}"        
-        elif [[ $REQUIRED_VERSION == $GREATER_VERSION_B || ${packages_array[$i,0]} == "cryptography" ]]; then 
-            echo -e "Required version: v${REQUIRED_VERSION} is greater than the version found in the Conda channel v${CONDA_VERSION} or its cryptography package. \n";
+        elif [[ $REQUIRED_VERSION == $GREATER_VERSION_B ]]; then 
+            echo -e "Required version: v${REQUIRED_VERSION} is greater than the version found in the Conda channel v${CONDA_VERSION}. \n";
             echo "Installing ${packages_array[$i,0]} from source from pip package manager for v${REQUIRED_VERSION}..."
             python3 -m pip install --upgrade --no-cache-dir "${packages_array[$i,0]}==${REQUIRED_VERSION}"
         fi

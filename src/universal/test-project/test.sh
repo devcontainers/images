@@ -97,7 +97,7 @@ expectedCount=2
 checkVersionCount "two versions of node are present" $count $expectedCount
 echo $(echo "node versions" && ls -a /usr/local/share/nvm/versions/node)
 checkBundledNpmVersion "default" "9.8.0"
-checkBundledNpmVersion "18" "9.8.1"
+checkBundledNpmVersion "22" "9.8.1"
 
 # PHP
 check "php" php --version
@@ -138,7 +138,7 @@ check "RAILS_DEVELOPMENT_HOSTS is set correctly" echo $RAILS_DEVELOPMENT_HOSTS |
 check "oryx" oryx --version
 
 # Ensures nvm works in a Node Project
-check "default-node-version" bash -c "node --version | grep 20."
+check "default-node-version" bash -c "node --version | grep 22."
 check "default-node-location" bash -c "which node | grep /home/codespace/nvm/current/bin"
 check "oryx-build-node-projectr" bash -c "oryx build ./sample/node"
 check "oryx-configured-current-node-version" bash -c "ls -la /home/codespace/nvm/current | grep /opt/nodejs"
@@ -186,13 +186,13 @@ ls -la /home/codespace
 ## Python - current
 checkPythonPackageVersion "python" "setuptools" "65.5.1"
 checkPythonPackageVersion "python" "requests" "2.31.0"
-checkPythonPackageVersion "python" "urllib3" "2.0.7"
+checkPythonPackageVersion "python" "urllib3" "2.5.0"
 
 ## Conda Python
 checkCondaPackageVersion "requests" "2.31.0"
 checkCondaPackageVersion "cryptography" "41.0.4"
-checkCondaPackageVersion "pyopenssl" "23.2.0"
-checkCondaPackageVersion "urllib3" "1.26.17"
+checkCondaPackageVersion "pyopenssl" "25.0.0"
+checkCondaPackageVersion "urllib3" "2.5.0"
 
 ## Test Conda
 check "conda-update-conda" bash -c "conda update -y conda"
