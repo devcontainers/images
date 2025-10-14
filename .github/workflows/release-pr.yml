@@ -52,7 +52,7 @@ jobs:
               -f base='main'
   image-info:
       name: Trigger info extraction
-      needs: [build-and-push]
+      needs: [update_manifest_files]
       uses: devcontainers/images/.github/workflows/version-history.yml@main
       permissions:
         contents: write
