@@ -78,8 +78,8 @@ jobs:
         CG_STRING=$(if [ ${{ inputs.cg }} = "false" ]; then echo '--no-cg'; else echo '--cg'; fi)
 
         # Pull images and update cgmanifest.json
-        build/vscdc info  --no-build \
-                          --markdown \
+        build/vscdc info  --markdown \
+                          --version-from-manifest \
                           --prune \
                           --release "$RELEASE_STRING" \
                           --registry "$REGISTRY" \

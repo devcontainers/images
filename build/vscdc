@@ -190,6 +190,11 @@ require('yargs')
                     type: 'boolean',
                     default: true
                 },
+                'version-from-manifest': {
+                    describe: 'whether to get the latest version via the manifest files instead of registry',
+                    type: 'boolean',
+                    default: false
+                },
                 'cg': {
                     describe: 'whether to generate cgmanifest.json',
                     type: 'boolean',
@@ -247,7 +252,7 @@ function pushCommand(argv) {
         argv.stubRegistryPath, argv.push, argv.prepOnly, argv.skip, argv.page, argv.pageTotal, argv.replaceImages, argv.devcontainer, argv.secondaryRegistryPath)
         .catch((reason) => {
             console.error(`(!) Push failed - ${reason}`);
-            if(reason.stack) {
+            if (reason.stack) {
                 console.error(`    ${reason.stack}`);
             }
             process.exit(1);
@@ -255,11 +260,11 @@ function pushCommand(argv) {
 }
 
 function imageInfoCommand(argv) {
-    generateImageInformationFiles(argv.githubRepo, argv.release, argv.registry, argv.registryPath, argv.stubRegistry, argv.stubRegistryPath, 
-        argv.build, argv.prune, argv.cg, argv.markdown, argv.overwrite, argv.outputPath, argv.devcontainer)
+    generateImageInformationFiles(argv.githubRepo, argv.release, argv.registry, argv.registryPath, argv.stubRegistry, argv.stubRegistryPath,
+        argv.build, argv.prune, argv.cg, argv.markdown, argv.overwrite, argv.outputPath, argv.devcontainer, argv.versionFromManifest)
         .catch((reason) => {
             console.error(`(!) Image information file generation failed - ${reason}`);
-            if(reason.stack) {
+            if (reason.stack) {
                 console.error(`    ${reason.stack}`);
             }
             process.exit(1);
@@ -271,18 +276,18 @@ function patchCommand(argv) {
         patch.patchAll(argv.registry, argv.registryPath)
             .catch((reason) => {
                 console.error(`(!) Patching failed - ${reason}`);
-                if(reason.stack) {
+                if (reason.stack) {
                     console.error(`    ${reason.stack}`);
-                }    
+                }
                 process.exit(1);
             });
     } else {
         patch.patch(argv.patchPath, argv.registry, argv.registryPath)
             .catch((reason) => {
                 console.error(`(!) Patching failed - ${reason}`);
-                if(reason.stack) {
+                if (reason.stack) {
                     console.error(`    ${reason.stack}`);
-                }    
+                }
                 process.exit(1);
             });
     }

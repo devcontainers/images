@@ -11,8 +11,8 @@ let releaseNotesHeaderTemplate, releaseNotesVariantPartTemplate;
 // Register helper for anchors - Adapted from https://github.com/gjtorikian/html-pipeline/blob/main/lib/html/pipeline/toc_filter.rb
 handlebars.registerHelper('anchor', (value) => value.toLowerCase().replace(/[^\w\- ]/g, '').replace(/ /g, '-'));
 
-async function generateImageInformationFiles(repo, release, registry, registryPath, 
-    stubRegistry, stubRegistryPath, buildFirst, pruneBetweenDefinitions, generateManifest, generateMarkdown, overwrite, outputPath, definitionId) {
+async function generateImageInformationFiles(repo, release, registry, registryPath,
+    stubRegistry, stubRegistryPath, buildFirst, pruneBetweenDefinitions, generateManifest, generateMarkdown, overwrite, outputPath, definitionId, versionFromManifest) {
     // Load config files
     await configUtils.loadConfig();
 
@@ -32,31 +32,31 @@ async function generateImageInformationFiles(repo, release, registry, registryPa
         // Target file paths and whether they exist
         const definitionRelativePath = configUtils.getDefinitionPath(currentDefinitionId, true);
         const historyFolder = path.join(outputPath, definitionRelativePath, configUtils.getConfig('historyFolderName', 'history'));
-        const version = configUtils.getVersionFromRelease(release, currentDefinitionId);
+        const version = versionFromManifest ? await configUtils.getVersionFromManifest(definitionId) : configUtils.getVersionFromRelease(release, currentDefinitionId);
         const markdownPath = path.join(historyFolder, `${version}.md`);
         const markdownExists = await asyncUtils.exists(markdownPath);
 
         // Skip if not overwriting and all files exist
-        if(! overwrite && 
-            (! generateMarkdown || markdownExists) && 
-            (! generateManifest || manifestExists)) {
+        if (!overwrite &&
+            (!generateMarkdown || markdownExists) &&
+            (!generateManifest || manifestExists)) {
             console.log(`(*) Skipping ${currentDefinitionId}. Not in overwrite mode and content already exists.`);
             return;
         }
 
         // Extract information
-        const definitionInfo = await getDefinitionImageContent(repo, release, registry, registryPath,  stubRegistry, stubRegistryPath, currentDefinitionId, alreadyRegistered, buildFirst);
+        const definitionInfo = await getDefinitionImageContent(repo, release, registry, registryPath, stubRegistry, stubRegistryPath, currentDefinitionId, alreadyRegistered, buildFirst);
 
         // Write markdown file as appropriate
-        if (generateMarkdown && (overwrite || ! markdownExists)) {
+        if (generateMarkdown && (overwrite || !markdownExists)) {
             console.log('(*) Writing image history markdown...');
             await asyncUtils.mkdirp(historyFolder);
-            await asyncUtils.writeFile(markdownPath, definitionInfo.markdown);    
+            await asyncUtils.writeFile(markdownPath, definitionInfo.markdown);
         }
 
         // Add component registrations if we're using them
         if (generateManifest) {
-            manifest.Registrations = manifest.Registrations.concat(definitionInfo.registrations);     
+            manifest.Registrations = manifest.Registrations.concat(definitionInfo.registrations);
         }
         // Prune images if setting enabled
         if (pruneBetweenDefinitions) {
@@ -65,13 +65,13 @@ async function generateImageInformationFiles(repo, release, registry, registryPa
     });
 
     // Write final cgmanifest.json file if needed
-    if(generateManifest && (overwrite || ! manifestExists)) {
+    if (generateManifest && (overwrite || !manifestExists)) {
         console.log('(*) Writing cgmanifest.json...');
         await asyncUtils.writeFile(
             path.join(outputPath, 'cgmanifest.json'),
-            JSON.stringify(manifest, undefined, 4));    
+            JSON.stringify(manifest, undefined, 4));
     }
-    console.log('(*) Done!');    
+    console.log('(*) Done!');
 }
 
 async function getDefinitionImageContent(repo, release, registry, registryPath, stubRegistry, stubRegistryPath, definitionId, alreadyRegistered, buildFirst) {
@@ -90,7 +90,7 @@ async function getDefinitionImageContent(repo, release, registry, registryPath, 
     let markdown = await generateReleaseNotesHeader(repo, release, definitionId, variants, dependencies);
 
     await asyncUtils.forEach(variants, async (variant) => {
-        if(variant) {
+        if (variant) {
             console.log(`\n(*) Processing variant ${variant}...`);
         }
 
@@ -106,7 +106,7 @@ async function getDefinitionImageContent(repo, release, registry, registryPath, 
 
         // Extract content information
         const contents = await imageContentUtils.getAllContentInfo(imageTag, dependencies, definitionId);
-        
+
         // Update markdown content
         markdown = markdown + await generateReleaseNotesPart(contents, release, stubRegistry, stubRegistryPath, definitionId, variant);
 
@@ -148,15 +148,15 @@ function getUniqueComponents(alreadyRegistered, contents) {
         const formatterFn = contentFormatter[contentType];
         let content = contents[contentType];
         if (formatterFn && content) {
-            if(!Array.isArray(content)) {
+            if (!Array.isArray(content)) {
                 content = [content];
             }
             componentList = componentList.concat(content.reduce((prev, next) => {
                 const uniqueId = JSON.stringify(next);
-                if(!alreadyRegistered[uniqueId]) {
+                if (!alreadyRegistered[uniqueId]) {
                     alreadyRegistered[uniqueId] = true;
                     const component = formatterFn(next);
-                    if(component) {
+                    if (component) {
                         prev.push(component);
                     }
                 }
@@ -164,7 +164,7 @@ function getUniqueComponents(alreadyRegistered, contents) {
             }, []));
         }
     }
-    
+
     return componentList;
 }
 
@@ -189,7 +189,7 @@ async function generateReleaseNotesPart(contents, release, stubRegistry, stubReg
     const markdownFormatter = markdownFormatterFactory.getFormatter();
     const formattedContents = getFormattedContents(contents, markdownFormatter);
     formattedContents.hasPip = formattedContents.pip.length > 0 || formattedContents.pipx.length > 0;
-    formattedContents.tags = configUtils.getTagList(definitionId, release, 'full-only', stubRegistry,  stubRegistryPath, variant);
+    formattedContents.tags = configUtils.getTagList(definitionId, release, 'full-only', stubRegistry, stubRegistryPath, variant);
     formattedContents.variant = variant;
 
     // architecture property could be a single string, an array, or an object of arrays by variant
@@ -206,7 +206,7 @@ function getFormattedContents(contents, contentFormatter) {
     let formattedContents = {};
     for (let contentType in contents) {
         formattedContents[contentType] = getFormattedContent(contents[contentType], contentFormatter[contentType]);
-    }    
+    }
     return formattedContents;
 }
 
@@ -214,16 +214,16 @@ function getFormattedContent(content, formatterFn) {
     if (!formatterFn || !content) {
         return null;
     }
-    if(!Array.isArray(content)) {
+    if (!Array.isArray(content)) {
         return formatterFn(content);
     }
     return content.reduce((prev, next) => {
         const formattedContent = formatterFn(next);
-        if(formattedContent) {
+        if (formattedContent) {
             prev.push(formattedContent);
         }
         return prev;
-    }, []);    
+    }, []);
 }
 
 module.exports = {

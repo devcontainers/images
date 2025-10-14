@@ -38,7 +38,7 @@ async function loadConfig(repoPath) {
         const definitionPath = path.resolve(path.join(containersPath, definitionId));
 
         // If a .deprecated file is found, remove the directory from staging and return
-        if(await asyncUtils.exists(path.join(definitionPath, '.deprecated'))) {
+        if (await asyncUtils.exists(path.join(definitionPath, '.deprecated'))) {
             await asyncUtils.rimraf(definitionPath);
             return;
         }
@@ -72,7 +72,7 @@ async function loadConfig(repoPath) {
             // Variants can be used as a VARAINT arg in tags, so support that too. However, these can
             // get overwritten in certain tag configs resulting in bad lookups, so **process them first**.
             const variants = definitionVariants ? ['${VARIANT}', '$VARIANT'].concat(definitionVariants) : [undefined];
-            
+
             variants.forEach((variant) => {
                 const blankTagList = getTagsForVersion(definitionId, '', 'ANY', 'ANY', variant);
                 blankTagList.forEach((blankTag) => {
@@ -109,9 +109,14 @@ function getConfig(property, defaultVal) {
     return process.env[envVar] || config[property] || defaultVal;
 }
 
+async function getVersionFromManifest(definitionId) {
+    return config.definitionVersions[definitionId]
+}
+
 // Loads manifest.json and adds it to config
 async function loadDefinitionManifest(manifestPath, definitionId) {
     const buildJson = await jsonc.read(manifestPath);
+    console.log(`loading manifest for ${definitionId}`)
     if (buildJson.variants) {
         config.definitionVariants[definitionId] = buildJson.variants;
     }
@@ -122,6 +127,8 @@ async function loadDefinitionManifest(manifestPath, definitionId) {
         config.definitionDependencies[definitionId] = buildJson.dependencies;
     }
     if (buildJson.version) {
+        console.log(`version is ${buildJson.version}`)
+
         config.definitionVersions[definitionId] = buildJson.version;
     }
 }
@@ -184,7 +191,7 @@ function getTagsForVersion(definitionId, version, registry, registryPath, varian
     // If the image states that only versioned tags are returned and the version is 'dev', 
     // add the image name to ensure that we do not incorrectly hijack a tag from another image.
     if (version === 'dev') {
-        version = config.definitionBuildSettings[definitionId].versionedTagsOnly ? `dev-${definitionId.replace(/-/mg,'')}` : 'dev';
+        version = config.definitionBuildSettings[definitionId].versionedTagsOnly ? `dev-${definitionId.replace(/-/mg, '')}` : 'dev';
     }
 
 
@@ -252,18 +259,18 @@ function getTagList(definitionId, release, versionPartHandling, registry, regist
     }
 
     let versionList, updateUnversionedTags, updateLatest;
-    switch(versionPartHandling) {
+    switch (versionPartHandling) {
         case true:
         case 'all-latest':
-            updateLatest = true; 
+            updateLatest = true;
             updateUnversionedTags = true;
-            versionList = [version,`${versionParts[0]}.${versionParts[1]}`, `${versionParts[0]}` ];
+            versionList = [version, `${versionParts[0]}.${versionParts[1]}`, `${versionParts[0]}`];
             break;
         case false:
         case 'all':
             updateLatest = false;
             updateUnversionedTags = true;
-            versionList = [version,`${versionParts[0]}.${versionParts[1]}`, `${versionParts[0]}` ];
+            versionList = [version, `${versionParts[0]}.${versionParts[1]}`, `${versionParts[0]}`];
             break;
         case 'full-only':
             updateLatest = false;
@@ -278,16 +285,16 @@ function getTagList(definitionId, release, versionPartHandling, registry, regist
         case 'major':
             updateLatest = false;
             updateUnversionedTags = false;
-            versionList = [ `${versionParts[0]}`];
+            versionList = [`${versionParts[0]}`];
             break;
     }
 
     // Normally, we also want to return a tag without a version number, but for
     // some definitions that exist in the same repository as others, we may
     // only want to return a list of tags with part of the version number in it
-    if(updateUnversionedTags && !config.definitionBuildSettings[definitionId].versionedTagsOnly) {
+    if (updateUnversionedTags && !config.definitionBuildSettings[definitionId].versionedTagsOnly) {
         // This is the equivalent of latest for qualified tags- e.g. python:3 instead of python:0.35.0-3
-        versionList.push(''); 
+        versionList.push('');
     }
 
     const allVariants = getVariants(definitionId);
@@ -301,10 +308,10 @@ function getTagList(definitionId, release, versionPartHandling, registry, regist
     // If this variant should also be used for the the latest tag, add it. The "latest" value could be
     // true, false, or a specific variant. "true" assumes the first variant is the latest.
     const definitionLatestProperty = config.definitionBuildSettings[definitionId].latest;
-    return tagList.concat((updateLatest 
+    return tagList.concat((updateLatest
         && definitionLatestProperty
         && (!allVariants
-            || variant === definitionLatestProperty 
+            || variant === definitionLatestProperty
             || (definitionLatestProperty === true && variant === firstVariant)))
         ? getLatestTag(definitionId, registry, registryPath)
         : []);
@@ -513,7 +520,7 @@ function getDefinitionList() {
 function createMultiParentBucket(variantParentMap, parentBuckets, dupeBuckets) {
     // Get parent of first variant
     const parentId = variantParentMap[Object.keys(variantParentMap)[0]];
-    const firstParentBucket =  parentBuckets[parentId] || [parentId];
+    const firstParentBucket = parentBuckets[parentId] || [parentId];
     // Merge other parent buckets into the first parent
     for (let currentVariant in variantParentMap) {
         const currentParentId = variantParentMap[currentVariant];
@@ -522,11 +529,11 @@ function createMultiParentBucket(variantParentMap, parentBuckets, dupeBuckets) {
             // Merge buckets if not already merged
             if (currentParentBucket && dupeBuckets.indexOf(currentParentId) < 0) {
                 currentParentBucket.forEach((current) => firstParentBucket.push(current));
-            } else if (firstParentBucket.indexOf(currentParentId)<0) {
+            } else if (firstParentBucket.indexOf(currentParentId) < 0) {
                 firstParentBucket.push(currentParentId);
             }
             dupeBuckets.push(currentParentId);
-            parentBuckets[currentParentId]=firstParentBucket;
+            parentBuckets[currentParentId] = firstParentBucket;
         }
     }
     parentBuckets[parentId] = firstParentBucket;
@@ -557,27 +564,27 @@ function bucketDefinition(definitionId, parentId, parentBuckets) {
 function getParentTagForVersion(definitionId, version, registry, registryPath, variant) {
     let parentId = config.definitionBuildSettings[definitionId].parent;
     if (parentId) {
-        if(typeof parentId !== 'string') {
+        if (typeof parentId !== 'string') {
             // Use variant to figure out correct parent, or return first parent if child has no variant
             parentId = variant ? parentId[variant] : parentId[Object.keys(parentId)[0]];
         }
-    
+
         // Determine right parent variant to use (assuming there are variants)
         const parentVariantList = getVariants(parentId);
         let parentVariantId;
-        if(parentVariantList) {
+        if (parentVariantList) {
             // If a variant is specified in the parentVariant property in build, use it - otherwise default to the child image's variant
             let parentVariant = config.definitionBuildSettings[definitionId].parentVariant || variant;
-            if(typeof parentVariant !== 'string') {
+            if (typeof parentVariant !== 'string') {
                 // Use variant to figure out correct variant it not the same across all parents, or return first variant if child has no variant
                 parentVariant = variant ? parentVariant[variant] : parentVariant[Object.keys(parentId)[0]];
             }
             parentVariantId = config.definitionBuildSettings[definitionId].idMismatch === "true" && variant.includes('-') ? variant.split('-')[1] : variant;
-            if(!parentVariantList.includes(parentVariantId)) {
+            if (!parentVariantList.includes(parentVariantId)) {
                 throw `Unable to determine variant for parent. Variant ${parentVariantId} is not in ${parentId} list: ${parentVariantList}`;
             }
         }
-        
+
         // Parent image version may be different than child's
         const parentVersion = getVersionFromRelease(version, parentId);
         return getTagsForVersion(parentId, parentVersion, registry, registryPath, parentVariantId)[0];
@@ -628,7 +635,7 @@ function getDefinitionFromTag(tag, registry, registryPath) {
     }
 
     // If lookup fails, try removing a numeric first part - dev- is already handled
-    return definitionTagLookup[`ANY/ANY/${repo}:${tagPart.replace(/^\d+-/,'')}`];
+    return definitionTagLookup[`ANY/ANY/${repo}:${tagPart.replace(/^\d+-/, '')}`];
 }
 
 // Return just the major version of a release number
@@ -665,7 +672,7 @@ function getPoolKeyForPoolUrl(poolUrl) {
 
 function getFallbackPoolUrl(package) {
     const poolUrl = config.poolUrlFallback[package];
-    console.log (`(*) Fallback pool URL for ${package} is ${poolUrl}`);
+    console.log(`(*) Fallback pool URL for ${package} is ${poolUrl}`);
     return poolUrl;
 }
 
@@ -679,7 +686,7 @@ async function getStagingFolder(release) {
         path.resolve(__dirname, '..', '..', '..'),
         getConfig('filesToStage'),
         stagingFolder);
-    
+
     stagingFolders[release] = stagingFolder;
     return stagingFolders[release];
 }
@@ -691,7 +698,7 @@ function shouldFlattenDefinitionBaseImage(definitionId) {
 function getDefaultDependencies(dependencyType) {
     const packageManagerConfig = getConfig('commonDependencies');
     return packageManagerConfig ? packageManagerConfig[dependencyType] : null;
-} 
+}
 
 function getBuildSettings(definitionId) {
     return config.definitionBuildSettings[definitionId];
@@ -721,5 +728,6 @@ module.exports = {
     getPoolKeyForPoolUrl: getPoolKeyForPoolUrl,
     getConfig: getConfig,
     shouldFlattenDefinitionBaseImage: shouldFlattenDefinitionBaseImage,
-    getDefinitionList: getDefinitionList
+    getDefinitionList: getDefinitionList,
+    getVersionFromManifest
 };
