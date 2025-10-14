@@ -21,7 +21,7 @@
 		"3.9-bullseye"
 	],
 	"build": {
-		"latest": "3.13-trixie",
+		"latest": "3.14-trixie",
 		"rootDistro": "debian",
 		"architectures": {
 			"3.14-trixie": [
