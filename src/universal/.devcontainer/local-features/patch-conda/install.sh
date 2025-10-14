@@ -56,14 +56,13 @@ update_python_package /opt/conda/bin/python3 cryptography "43.0.1"
 
 update_conda_package pyopenssl "25.0.0"
 
-# https://github.com/advisories/GHSA-pq67-6m6q-mj2v
-update_conda_package urllib3 "2.5.0"
-
-# https://github.com/advisories/GHSA-9hjg-9r4m-mvj7
-update_conda_package requests "2.32.4"
-
-# https://github.com/advisories/GHSA-5rjg-fvgr-3xxf
-update_conda_package setuptools "78.1.1"
-
 # https://github.com/advisories/GHSA-g7vv-2v7x-gj9p
 update_python_package /opt/conda/bin/python3 tqdm "4.66.3"
+
+# Updating the packages through Python as the Conda channel is deprecating these packages.
+# The packages are not found because the Conda version is transitioning from version 24.5.0 to 25.9.0.
+update_python_package /opt/conda/bin/python3 urllib3 "2.5.0"
+# https://github.com/advisories/GHSA-9hjg-9r4m-mvj7
+update_python_package /opt/conda/bin/python3 requests "2.32.4"
+# https://github.com/advisories/GHSA-5rjg-fvgr-3xxf
+update_python_package /opt/conda/bin/python3 setuptools "78.1.1"
