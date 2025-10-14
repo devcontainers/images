@@ -53,7 +53,7 @@ jobs:
   image-info:
       name: Trigger info extraction
       needs: [update_manifest_files]
-      uses: devcontainers/images/.github/workflows/version-history.yml@main
+      uses: devcontainers/images/.github/workflows/version-history.yml
       permissions:
         contents: write
         pull-requests: write
