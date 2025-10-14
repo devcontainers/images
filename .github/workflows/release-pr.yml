@@ -62,6 +62,6 @@ jobs:
         cg: "false"
         push: "true"
         overwrite: "false"
-        target_branch: ${{ env.target_branch }}
+        target_branch: rel/${{ github.event.inputs.version }}
       secrets: inherit
 
