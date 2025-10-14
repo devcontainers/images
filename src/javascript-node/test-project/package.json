@@ -10,5 +10,6 @@
 	},
 	"dependencies": {
 		"express": "^4.16.1"
-	}
+	},
+	"packageManager": "yarn@4.9.4"
 }

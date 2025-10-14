@@ -64,6 +64,9 @@ jobs:
         ACR_REGISTRY_NAME=$(echo "$REGISTRY" | grep -oP '(.+)(?=\.azurecr\.io)')
         az acr login --name $ACR_REGISTRY_NAME --username $TOKEN_NAME --password $PASSWORD
 
+        # This is required to set yarn 4.9.4 as the global yarn version in the runner is 1.22.22
+        sudo corepack enable
+        sudo corepack prepare yarn@4.9.4 --activate
         yarn install
         RELEASE_STRING=$(echo "${{ inputs.release }}" | grep -oP 'refs/(heads|tags)/\K(.+)')
         OVERWRITE_STRING=$(if [ "${{ inputs.overwrite }}" = "false" ]; then echo '--no-overwrite'; else echo '--overwrite'; fi)

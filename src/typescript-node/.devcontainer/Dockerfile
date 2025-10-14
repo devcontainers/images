@@ -1,10 +1,16 @@
-ARG VARIANT=22-bookworm
-FROM mcr.microsoft.com/devcontainers/javascript-node:1-${VARIANT}
+ARG VARIANT=24-bookworm
+FROM mcr.microsoft.com/devcontainers/javascript-node:3-${VARIANT}
 
 # Install tslint, typescript. eslint is installed by javascript image
 ARG NODE_MODULES="tslint-to-eslint-config typescript"
 RUN su node -c "umask 0002 && npm install -g ${NODE_MODULES}" \
     && npm cache clean --force > /dev/null 2>&1
+
+# Fixing vulnerability issue CVE-2024-46901 by upgrading svn to 1.14.5.
+COPY ./scripts/install-subversion.sh /tmp/install-subversion.sh
+RUN chmod +x /tmp/install-subversion.sh
+RUN /tmp/install-subversion.sh \
+  && rm -f /tmp/install-subversion.sh
 
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \

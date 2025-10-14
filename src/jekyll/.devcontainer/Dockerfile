@@ -1,4 +1,4 @@
-ARG VARIANT=3.3-bookworm
+ARG VARIANT=3.4-bookworm
 FROM mcr.microsoft.com/devcontainers/ruby:${VARIANT}
 
 USER root
@@ -24,6 +24,12 @@ RUN chown -R "vscode:rvm" "/usr/local/rvm/" \
     && find "/usr/local/rvm/" -type d | xargs -n 1 chmod g+s
 
 COPY post-create.sh /usr/local/post-create.sh
+
+# Fixing vulnerability issue by upgrading svn to 1.14.5. Ref https://subversion.apache.org/security/CVE-2024-46901-advisory.txt
+COPY ./scripts/install-subversion.sh /tmp/install-subversion.sh
+RUN chmod +x /tmp/install-subversion.sh
+RUN /tmp/install-subversion.sh \
+  && rm -f /tmp/install-subversion.sh
 
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \

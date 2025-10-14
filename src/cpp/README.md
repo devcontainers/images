@@ -9,8 +9,8 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/cpp |
-| *Available image variants* | debian-12, debian-11, ubuntu-24.04, ubuntu-22.04 ([full list](https://mcr.microsoft.com/v2/devcontainers/cpp/tags/list)) |
-| *Published image architecture(s)* | x86-64, aarch64/arm64 for `debian-12`, `debian-11`, `ubuntu-24.04` and `ubuntu-22.04` variants |
+| *Available image variants* | debian-13, debian-12, ubuntu-24.04, ubuntu-22.04 ([full list](https://mcr.microsoft.com/v2/devcontainers/cpp/tags/list)) |
+| *Published image architecture(s)* | x86-64, aarch64/arm64 for `debian-12`, `ubuntu-24.04` and `ubuntu-22.04` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian, Ubuntu |
 | *Languages, platforms* | C++ |
@@ -23,8 +23,8 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 
 - `mcr.microsoft.com/devcontainers/cpp` (latest Debian GA)
 - `mcr.microsoft.com/devcontainers/cpp:debian` (latest Debian GA)
+- `mcr.microsoft.com/devcontainers/cpp:debian-13` (or `trixie`)
 - `mcr.microsoft.com/devcontainers/cpp:debian-12` (or `bookworm`)
-- `mcr.microsoft.com/devcontainers/cpp:debian-11` (or `bullseye`)
 - `mcr.microsoft.com/devcontainers/cpp:ubuntu` (latest Ubuntu LTS)
 - `mcr.microsoft.com/devcontainers/cpp:ubuntu-24.04` (or `noble`)
 - `mcr.microsoft.com/devcontainers/cpp:ubuntu-22.04` (or `jammy`)
@@ -32,12 +32,14 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
+- `mcr.microsoft.com/devcontainers/cpp:2-trixie`
+- `mcr.microsoft.com/devcontainers/cpp:2.0-trixie`
+- `mcr.microsoft.com/devcontainers/cpp:2.0.0-trixie`
+- `mcr.microsoft.com/devcontainers/cpp:2-bookworm`
+- `mcr.microsoft.com/devcontainers/cpp:2.0-bookworm`
+- `mcr.microsoft.com/devcontainers/cpp:2.0.0-bookworm`
 
-- `mcr.microsoft.com/devcontainers/cpp:1-bookworm`
-- `mcr.microsoft.com/devcontainers/cpp:1.0-bookworm`
-- `mcr.microsoft.com/devcontainers/cpp:1.0.0-bookworm`
-
-However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `0-debian-11`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
+However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `0-debian-12`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/cpp/tags/list).
 
