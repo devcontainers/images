@@ -5,15 +5,14 @@
 		"3.13-trixie",
 		"3.12-trixie",
 		"3.11-trixie",
-		"3.10-trixie",	
-		"3.9-trixie",	
-		"3.14-bookworm",		
+		"3.10-trixie",
+		"3.9-trixie",
+		"3.14-bookworm",
 		"3.13-bookworm",
 		"3.12-bookworm",
 		"3.11-bookworm",
 		"3.10-bookworm",
 		"3.9-bookworm",
-		"3.14-bullseye",
 		"3.13-bullseye",
 		"3.12-bullseye",
 		"3.11-bullseye",
@@ -72,10 +71,6 @@
 				"linux/amd64",
 				"linux/arm64"
 			],
-			"3.14-bullseye": [
-				"linux/amd64",
-				"linux/arm64"
-			],
 			"3.13-bullseye": [
 				"linux/amd64",
 				"linux/arm64"
@@ -112,21 +107,21 @@
 			],
 			"3.12-trixie": [
 				"python:${VERSION}-3.12"
-			],	
+			],
 			"3.11-trixie": [
 				"python:${VERSION}-3.11"
-			],		
+			],
 			"3.10-trixie": [
 				"python:${VERSION}-3.10"
-			],		
+			],
 			"3.9-trixie": [
 				"python:${VERSION}-3.9"
-			],								
+			],
 			"3.14-bookworm": [
 				"python:${VERSION}-3-bookworm",
 				"python:${VERSION}-bookworm"
-			],		
-			"3.14-bullseye": [
+			],
+			"3.13-bullseye": [
 				"python:${VERSION}-3-bullseye",
 				"python:${VERSION}-bullseye"
 			]
