@@ -56,8 +56,8 @@ if [[ -n "$VARIANTS" ]]; then
         
         # Check if there are variantBuildArgs for this variant
         VARIANT_BUILD_ARGS=$(jq -r ".build.variantBuildArgs.\"$variant\" // empty" "$MANIFEST_FILE" 2>/dev/null)
-        
-        if [[ "$VARIANT_BUILD_ARGS" != "empty" && "$VARIANT_BUILD_ARGS" != "null" ]]; then
+
+        if [[ -n "$VARIANT_BUILD_ARGS" && "$VARIANT_BUILD_ARGS" != "empty" && "$VARIANT_BUILD_ARGS" != "null"  ]]; then
             echo "  Found build args for variant: $variant"
             # Extract build args and replace placeholders
             while IFS= read -r build_arg; do
