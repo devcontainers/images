@@ -1,11 +1,13 @@
 {
-	"version": "2.0.2",
+	"version": "2.1.2",
 	"variants": [
+		"3.14-trixie",
 		"3.13-trixie",
 		"3.12-trixie",
 		"3.11-trixie",
-		"3.10-trixie",	
-		"3.9-trixie",			
+		"3.10-trixie",
+		"3.9-trixie",
+		"3.14-bookworm",
 		"3.13-bookworm",
 		"3.12-bookworm",
 		"3.11-bookworm",
@@ -18,9 +20,13 @@
 		"3.9-bullseye"
 	],
 	"build": {
-		"latest": "3.13-trixie",
+		"latest": "3.14-trixie",
 		"rootDistro": "debian",
 		"architectures": {
+			"3.14-trixie": [
+				"linux/amd64",
+				"linux/arm64"
+			],
 			"3.13-trixie": [
 				"linux/amd64",
 				"linux/arm64"
@@ -40,7 +46,11 @@
 			"3.9-trixie": [
 				"linux/amd64",
 				"linux/arm64"
-			],			
+			],
+			"3.14-bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
 			"3.13-bookworm": [
 				"linux/amd64",
 				"linux/arm64"
@@ -86,28 +96,31 @@
 			"python:${VERSION}-${VARIANT}"
 		],
 		"variantTags": {
-			"3.13-trixie": [
-				"python:${VERSION}-3.13",
+			"3.14-trixie": [
+				"python:${VERSION}-3.14",
 				"python:${VERSION}-3",
 				"python:${VERSION}-3-trixie",
 				"python:${VERSION}-trixie"
-			],			
+			],
+			"3.13-trixie": [
+				"python:${VERSION}-3.13"
+			],
 			"3.12-trixie": [
 				"python:${VERSION}-3.12"
-			],	
+			],
 			"3.11-trixie": [
 				"python:${VERSION}-3.11"
-			],		
+			],
 			"3.10-trixie": [
 				"python:${VERSION}-3.10"
-			],		
+			],
 			"3.9-trixie": [
 				"python:${VERSION}-3.9"
-			],								
-			"3.13-bookworm": [
+			],
+			"3.14-bookworm": [
 				"python:${VERSION}-3-bookworm",
 				"python:${VERSION}-bookworm"
-			],		
+			],
 			"3.13-bullseye": [
 				"python:${VERSION}-3-bullseye",
 				"python:${VERSION}-bullseye"
