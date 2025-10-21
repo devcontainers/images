@@ -33,10 +33,8 @@ VALID_TAGS=()
 # Function to check if a Docker image tag exists
 check_image_exists() {
     local image_tag="$1"
-    local variant_name="$2"
     echo "  Checking: $image_tag"
     
-    # Try to pull manifest without downloading the image
     if docker manifest inspect "$image_tag" > /dev/null 2>&1; then
         echo "    ✓ Valid"
         return 0
@@ -51,10 +49,30 @@ if [[ -n "$VARIANTS" ]]; then
     echo "Found variants, validating each one..."
     # Check each variant
     for variant in $VARIANTS; do
-        # Replace ${VARIANT} placeholder with actual variant
-        image_tag=$(echo "$BASE_IMAGE" | sed "s/\${VARIANT}/$variant/g")
+        image_tag="$BASE_IMAGE"
         
-        if check_image_exists "$image_tag" "$variant"; then
+        # Replace ${VARIANT} placeholder with actual variant
+        image_tag=$(echo "$image_tag" | sed "s/\${VARIANT}/$variant/g")
+        
+        # Check if there are variantBuildArgs for this variant
+        VARIANT_BUILD_ARGS=$(jq -r ".build.variantBuildArgs.\"$variant\" // empty" "$MANIFEST_FILE" 2>/dev/null)
+        
+        if [[ "$VARIANT_BUILD_ARGS" != "empty" && "$VARIANT_BUILD_ARGS" != "null" ]]; then
+            echo "  Found build args for variant: $variant"
+            # Extract build args and replace placeholders
+            while IFS= read -r build_arg; do
+                if [[ -n "$build_arg" ]]; then
+                    arg_name=$(echo "$build_arg" | cut -d':' -f1 | tr -d '"')
+                    arg_value=$(echo "$build_arg" | cut -d':' -f2- | tr -d '"' | sed 's/^[[:space:]]*//' | sed 's/[[:space:]]*$//')
+                    image_tag=$(echo "$image_tag" | sed "s/\${$arg_name}/$arg_value/g")
+                fi
+            done < <(echo "$VARIANT_BUILD_ARGS" | jq -r 'to_entries[] | "\(.key):\(.value)"' 2>/dev/null)
+        elif [[ "$image_tag" == *'${BASE_IMAGE_VERSION_CODENAME}'* ]]; then
+            echo "  Using variant name '$variant' as BASE_IMAGE_VERSION_CODENAME"
+            image_tag=$(echo "$image_tag" | sed "s/\${BASE_IMAGE_VERSION_CODENAME}/$variant/g")
+        fi
+        
+        if check_image_exists "$image_tag"; then
             VALID_TAGS+=("$variant")
         else
             INVALID_TAGS+=("$variant")
@@ -62,8 +80,7 @@ if [[ -n "$VARIANTS" ]]; then
     done
 else
     echo "No variants found, validating single base image..."
-    # No variants, just check the base image directly
-    if check_image_exists "$BASE_IMAGE" "base"; then
+    if check_image_exists "$BASE_IMAGE"; then
         VALID_TAGS+=("base")
     else
         INVALID_TAGS+=("base")
@@ -73,11 +90,7 @@ fi
 # Report results
 echo ""
 echo "=== Validation Results ==="
-if [[ -n "$VARIANTS" ]]; then
-    echo "Valid variants (${#VALID_TAGS[@]}):"
-else
-    echo "Valid base images (${#VALID_TAGS[@]}):"
-fi
+echo "Valid $(if [[ -n "$VARIANTS" ]]; then echo "variants"; else echo "base images"; fi) (${#VALID_TAGS[@]}):"
 
 for tag in "${VALID_TAGS[@]}"; do
     if [[ "$tag" == "base" ]]; then
@@ -89,11 +102,7 @@ done
 
 if [[ ${#INVALID_TAGS[@]} -gt 0 ]]; then
     echo ""
-    if [[ -n "$VARIANTS" ]]; then
-        echo "Invalid variants (${#INVALID_TAGS[@]}):"
-    else
-        echo "Invalid base images (${#INVALID_TAGS[@]}):"
-    fi
+    echo "Invalid $(if [[ -n "$VARIANTS" ]]; then echo "variants"; else echo "base images"; fi) (${#INVALID_TAGS[@]}):"
     
     for tag in "${INVALID_TAGS[@]}"; do
         if [[ "$tag" == "base" ]]; then
