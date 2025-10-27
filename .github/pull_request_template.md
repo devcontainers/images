@@ -16,4 +16,4 @@ Ref: **Insert issue URL**
 - [ ] *New feature* <!-- (`change:feature`) -->
 - [ ] *Breaking change (i.e. Change to default OS, incompatible tooling change etc)* <!-- (`change:breaking`) -->
 - [ ] *Other* <!-- (`change:other`) -->
-- [ ] *NA* <!-- (`change:na`) -->
+- [ ] *N/A* <!-- (`change:na`) -->
