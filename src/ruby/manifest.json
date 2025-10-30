@@ -1,5 +1,5 @@
 {
-	"version": "2.0.1",
+	"version": "2.0.2",
 	"variants": [
 		"3.4-trixie",		
 		"3.3-trixie",
@@ -12,7 +12,7 @@
 		"3.2-bullseye"
 	],
 	"build": {
-		"latest": "3.4-bookworm",
+		"latest": "3.4-trixie",
 		"rootDistro": "debian",
 		"architectures": {
 			"3.4-trixie": [

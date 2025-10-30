@@ -1,5 +1,5 @@
 # This Dockerfile uses separate build arguments instead of VARIANT
-ARG TARGET_JAVA_VERSION=21
+ARG TARGET_JAVA_VERSION=25
 ARG BASE_IMAGE_VERSION_CODENAME=trixie
 FROM mcr.microsoft.com/devcontainers/base:${BASE_IMAGE_VERSION_CODENAME}
 
