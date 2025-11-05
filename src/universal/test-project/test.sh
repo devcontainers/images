@@ -46,13 +46,6 @@ echo $(echo "python versions" && ls -a /usr/local/python)
 echo $(echo "pip list" pip list)
 
 # Check Python packages
-check "numpy" python -c "import numpy; print(numpy.__version__)"
-check "pandas" python -c "import pandas; print(pandas.__version__)"
-check "scipy" python -c "import scipy; print(scipy.__version__)"
-check "matplotlib" python -c "import matplotlib; print(matplotlib.__version__)"
-check "seaborn" python -c "import seaborn; print(seaborn.__version__)"
-check "scikit-learn" python -c "import sklearn; print(sklearn.__version__)"
-check "torch" python -c "import torch; print(torch.__version__)"
 check "requests" python -c "import requests; print(requests.__version__)"
 check "jupyterlab-git" python -c "import jupyterlab_git; print(jupyterlab_git.__version__)"
 

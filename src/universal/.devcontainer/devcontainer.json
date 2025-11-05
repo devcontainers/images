@@ -29,7 +29,6 @@
             "configureJupyterlabAllowOrigin": "*",
             "useOryxIfAvailable": "false"
         },
-        "./local-features/machine-learning-packages": "latest",
         "ghcr.io/devcontainers/features/php:1": {
             "version": "8.4.8",
             "additionalVersions": "8.3.14",
@@ -73,7 +72,6 @@
         "./local-features/jekyll": "latest",
         "ghcr.io/devcontainers/features/oryx:1": "latest",
         "./local-features/setup-user": "latest",
-        "./local-features/patch-python": {},
         "./local-features/patch-conda": {}
     },
     "overrideFeatureInstallOrder": [
@@ -86,8 +84,6 @@
         "ghcr.io/devcontainers/features/conda",
         "./local-features/patch-conda",
         "ghcr.io/devcontainers/features/python",
-        "./local-features/patch-python",
-        "./local-features/machine-learning-packages",
         "ghcr.io/devcontainers/features/php",
         "ghcr.io/devcontainers/features/ruby",
         "ghcr.io/devcontainers/features/java",
