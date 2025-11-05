@@ -10,7 +10,7 @@
 		]
 	},
 	"dependencies": {
-		"annotation": "This document describes the base contents of the Universal image. Note that this image also includes detection logic to dynamically install additional language / runtime versions based on your repository's contents. Dynamically installed content can be found in sub-folders under `/opt` .",
+		"annotation": "This document describes the base contents of the Universal image. Note that this image also includes detection logic to dynamically install additional language / runtime versions based on your repository's contents. Dynamically installed content can be found in sub-folders under `/opt`.",
 		"image": "ubuntu:noble",
 		"imageLink": "https://hub.docker.com/_/ubuntu",
 		"apt": [
