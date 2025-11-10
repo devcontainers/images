@@ -80,14 +80,17 @@ mkdir -p /home/${USERNAME}/.hugo
 ln -snf /usr/local/hugo $HUGO_ROOT
 
 HOME_DIR="/home/${USERNAME}/"
-chown -R ${USERNAME}:${USERNAME} ${HOME_DIR}
-chmod -R g+r+w "${HOME_DIR}"
-find "${HOME_DIR}" -type d | xargs -n 1 chmod g+s
+chown -R ${USERNAME}:${USERNAME} "${HOME_DIR}.php/"
+chmod -R g+r+w "${HOME_DIR}.php/"
+find "${HOME_DIR}.php/current/" -type d | xargs -n 1 chmod g+s
+#chown -R ${USERNAME}:${USERNAME} ${HOME_DIR}
+#chmod -R g+r+w "${HOME_DIR}"
+#find "${HOME_DIR}" -type d | xargs -n 1 chmod g+s
 
-OPT_DIR="/opt/"
-chown -R ${USERNAME}:oryx ${OPT_DIR}
-chmod -R g+r+w "${OPT_DIR}"
-find "${OPT_DIR}" -type d | xargs -n 1 chmod g+s
+OPT_DOTNET_DIR="/opt/dotnet/"
+chown -R ${USERNAME}:oryx ${OPT_DOTNET_DIR}
+chmod -R g+r+w "${OPT_DOTNET_DIR}"
+find "${OPT_DOTNET_DIR}" -type d | xargs -n 1 chmod g+s
 
 echo "Defaults secure_path=\"${DOTNET_PATH}:${NODE_PATH}/bin:${PHP_PATH}/bin:${PYTHON_PATH}/bin:${JAVA_PATH}/bin:${RUBY_PATH}/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin:/usr/local/share:/home/${USERNAME}/.local/bin:${PATH}\"" >> /etc/sudoers.d/$USERNAME
 
