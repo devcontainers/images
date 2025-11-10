@@ -1,5 +1,5 @@
 {
-	"version": "2.1.2",
+	"version": "3.0.0",
 
 	"variants": [
 		"3.14-trixie",
@@ -7,7 +7,6 @@
 		"3.12-trixie",
 		"3.11-trixie",
 		"3.10-trixie",
-		"3.9-trixie",
 		"3.14-bookworm",
 		"3.13-bookworm",
 		"3.12-bookworm",
@@ -42,10 +41,6 @@
 				"linux/amd64",
 				"linux/arm64"
 			],		
-			"3.9-trixie": [
-				"linux/amd64",
-				"linux/arm64"
-			],
 			"3.14-bookworm": [
 				"linux/amd64",
 				"linux/arm64"
@@ -105,9 +100,6 @@
 			"3.10-trixie": [
 				"python:${VERSION}-3.10"
       ],
-			"3.9-trixie": [
-				"python:${VERSION}-3.9"
-			],
 			"3.14-bookworm": [
 				"python:${VERSION}-3-bookworm",
 				"python:${VERSION}-bookworm"
