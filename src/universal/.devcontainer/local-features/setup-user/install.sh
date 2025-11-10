@@ -83,9 +83,6 @@ HOME_DIR="/home/${USERNAME}/"
 chown -R ${USERNAME}:${USERNAME} "${HOME_DIR}.php/"
 chmod -R g+r+w "${HOME_DIR}.php/"
 find "${HOME_DIR}.php/current/" -type d | xargs -n 1 chmod g+s
-#chown -R ${USERNAME}:${USERNAME} ${HOME_DIR}
-#chmod -R g+r+w "${HOME_DIR}"
-#find "${HOME_DIR}" -type d | xargs -n 1 chmod g+s
 
 OPT_DOTNET_DIR="/opt/dotnet/"
 chown -R ${USERNAME}:oryx ${OPT_DOTNET_DIR}
