@@ -21,6 +21,10 @@
 		"latest": "3.14-trixie",
 		"rootDistro": "debian",
 		"architectures": {
+			"3.14-trixie": [
+				"linux/amd64",
+				"linux/arm64"
+			],
 			"3.13-trixie": [
 				"linux/amd64",
 				"linux/arm64"
