@@ -1,4 +1,4 @@
-ARG VARIANT=debian-13
+ARG VARIANT=debian13
 FROM mcr.microsoft.com/devcontainers/base:${VARIANT}
 USER root
 

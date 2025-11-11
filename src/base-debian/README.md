@@ -22,17 +22,17 @@ See **[history](history)** for information on the contents of published images.
 You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
 - `mcr.microsoft.com/devcontainers/base:debian` (latest)
-- `mcr.microsoft.com/devcontainers/base:trixie` (or `debian-13`)
-- `mcr.microsoft.com/devcontainers/base:bookworm` (or `debian-12`)
-- `mcr.microsoft.com/devcontainers/base:bullseye` (or `debian-11`)
+- `mcr.microsoft.com/devcontainers/base:trixie` (or `debian13`)
+- `mcr.microsoft.com/devcontainers/base:bookworm` (or `debian12`)
+- `mcr.microsoft.com/devcontainers/base:bullseye` (or `debian11`)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/devcontainers/base:1-trixie`
-- `mcr.microsoft.com/devcontainers/base:1.0-trixie`
-- `mcr.microsoft.com/devcontainers/base:1.0.0-trixie`
+- `mcr.microsoft.com/devcontainers/base:2-trixie`
+- `mcr.microsoft.com/devcontainers/base:2.1-trixie`
+- `mcr.microsoft.com/devcontainers/base:2.1.0-trixie`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/base/tags/list).
 
