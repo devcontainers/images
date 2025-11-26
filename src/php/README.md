@@ -10,7 +10,7 @@
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/php |
 | *Available image variants* | 8 / 8-trixie, 8.5 / 8.5-trixie, 8.4 / 8.4-trixie, 8.3 / 8.3-trixie, 8.2 / 8.2-trixie, 8-bookworm, 8.5-bookworm, 8.4-bookworm, 8.3-bookworm, 8.2-bookworm ([full list](https://mcr.microsoft.com/v2/devcontainers/php/tags/list)) |
-| *Published image architecture(s)* | x86-64, arm64/aarch64 for `trixie`, and `bookworm` variants |
+| *Published image architecture(s)* | x86-64, arm64/aarch64 for `trixie`, and `bookworm`, and `trixie` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
 | *Languages, platforms* | PHP |
