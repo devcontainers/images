@@ -3,6 +3,7 @@ name: Build and push images
 on:   
   release:
     types: [published]
+workflow_dispatch:
 
 jobs:
   build-and-push:
