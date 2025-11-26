@@ -8,11 +8,7 @@
 		"8.5-apache-bookworm",
 		"8.4-apache-bookworm",
 		"8.3-apache-bookworm",
-		"8.2-apache-bookworm",
-		"8.5-apache-bullseye",
-		"8.4-apache-bullseye",
-		"8.3-apache-bullseye",
-		"8.2-apache-bullseye"
+		"8.2-apache-bookworm"
 	],
 	"build": {
 		"latest": "8.5-apache-trixie",
@@ -47,22 +43,6 @@
 				"linux/arm64"
 			],
 			"8.2-apache-bookworm": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"8.5-apache-bullseye": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"8.4-apache-bullseye": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"8.3-apache-bullseye": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"8.2-apache-bullseye": [
 				"linux/amd64",
 				"linux/arm64"
 			]
@@ -103,20 +83,6 @@
 			],			
 			"8.2-apache-bookworm": [
 				"php:${VERSION}-8.2-bookworm"
-			],
-			"8.5-apache-bullseye": [
-				"php:${VERSION}-8-bullseye",
-				"php:${VERSION}-8.5-bullseye",
-				"php:${VERSION}-bullseye"
-			],		
-			"8.4-apache-bullseye": [
-				"php:${VERSION}-8.4-bullseye"
-			],
-			"8.3-apache-bullseye": [
-				"php:${VERSION}-8.3-bullseye"
-			],			
-			"8.2-apache-bullseye": [
-				"php:${VERSION}-8.2-bullseye"
 			]
 		}
 	},
