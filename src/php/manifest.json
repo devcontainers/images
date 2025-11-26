@@ -1,4 +1,5 @@
 {
+
 	"version": "3.0.0",
 	"variants": [
 		"8.5-apache-trixie",
