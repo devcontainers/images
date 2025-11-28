@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:82d0c0b77061508a6ec028712d37107a2309a88465e839c09a337636a8c645b2
+**Digest:** sha256:48f52006d3566a778a32314ca41c88b018cf245942daaee5405750973a9d02ad
 
 **Tags:**
 ```
@@ -25,7 +25,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 |--------------------|---------|------|
 | [Python](https://www.python.org/) | 3.12.7 | /opt/conda |
 | [Jupyter Notebooks](https://jupyter.org/) | 7.2.2 | /opt/conda |
-| [Jupyter Lab](https://jupyter.org/) | 4.2.5 | /opt/conda |
+| [Jupyter Lab](https://jupyter.org/) | 4.4.8 | /opt/conda |
 
 **Tools installed using git**
 
@@ -38,18 +38,18 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | Tool / package | Version |
 |----------------|---------|
 | joblib | 1.4.2 |
-| cookiecutter | 2.6.0 |
-| cryptography | 43.0.3 |
+| cookiecutter | 1.7.3 |
+| cryptography | 44.0.1 |
 | mistune | 3.1.2 |
 | numpy | 1.26.4 |
-| certifi | 2025.7.14 |
-| setuptools | 75.1.0 |
+| certifi | 2025.11.12 |
+| setuptools | 80.9.0 |
 | wheel | 0.44.0 |
 | nbconvert | 7.16.4 |
-| Werkzeug | 3.0.3 |
-| requests | 2.32.3 |
+| Werkzeug | 3.1.3 |
+| requests | 2.32.5 |
 | tornado | 6.5.1 |
-| transformers | 4.49.0 |
+| transformers | 4.57.1 |
 | jupyter_server | 2.14.1 |
 
 **Other tools and utilities**
@@ -66,21 +66,21 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
 | ca-certificates | 20230311+deb12u1 |
-| curl | 7.88.1-10+deb12u12 |
+| curl | 7.88.1-10+deb12u14 |
 | dialog | 1.3-20230209-1 |
 | git | 1:2.39.5-0+deb12u2 |
-| gnupg2 | 2.2.40-1.1 |
+| gnupg2 | 2.2.40-1.1+deb12u1 |
 | htop | 3.2.2-2 |
 | iproute2 | 6.1.0-3 |
-| jq | 1.6-2.1 |
+| jq | 1.6-2.1+deb12u1 |
 | less | 590-2.1~deb12u2 |
-| libc6 | 2.36-9+deb12u10 |
-| libgssapi-krb5-2 | 1.20.1-2+deb12u3 |
+| libc6 | 2.36-9+deb12u13 |
+| libgssapi-krb5-2 | 1.20.1-2+deb12u4 |
 | libicu72 | 72.1-3+deb12u1 |
-| libkrb5-3 | 1.20.1-2+deb12u3 |
+| libkrb5-3 | 1.20.1-2+deb12u4 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14+deb12u1 |
-| locales | 2.36-9+deb12u10 |
+| locales | 2.36-9+deb12u13 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
@@ -101,5 +101,5 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | yarn | 1.22.22-1 |
 | zip | 3.0-13 |
 | zlib1g | 1:1.2.13.dfsg-1 |
-| zsh | 5.9-4+b6 |
+| zsh | 5.9-4+b7 |
 
