@@ -31,7 +31,7 @@
         },
         "ghcr.io/devcontainers/features/php:1": {
             "version": "8.5.0",
-            "additionalVersions": "8.4.2",
+            "additionalVersions": "8.4.15",
             "installComposer": "true"
         },
         "ghcr.io/devcontainers/features/conda:1": {
