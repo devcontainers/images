@@ -23,7 +23,7 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 
 - `mcr.microsoft.com/devcontainers/php` (latest)
 - `mcr.microsoft.com/devcontainers/php:8` (or `8-trixie`, `8-bookworm` to pin to an OS version)
--  - `mcr.microsoft.com/devcontainers/php:8.5` (or `8.5-trixie`, `8.5-bookworm` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/php:8.5` (or `8.5-trixie`, `8.5-bookworm` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/php:8.4` (or `8.4-trixie`, `8.4-bookworm` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/php:8.3` (or `8.3-trixie`, `8.3-bookworm` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/php:8.2` (or `8.2-trixie`, `8.2-bookworm` to pin to an OS version)
