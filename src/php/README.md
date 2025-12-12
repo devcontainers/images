@@ -22,7 +22,7 @@ See **[history](history)** for information on the contents of published images.
 You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` with one of the following:
 
 - `mcr.microsoft.com/devcontainers/php` (latest)
-- `mcr.microsoft.com/devcontainers/php:8` (or `8-trixie`, `8-bookworm` , `8-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/php:8` (or `8-trixie`, `8-bookworm` to pin to an OS version)
 -  - `mcr.microsoft.com/devcontainers/php:8.5` (or `8.5-trixie`, `8.5-bookworm` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/php:8.4` (or `8.4-trixie`, `8.4-bookworm` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/php:8.3` (or `8.3-trixie`, `8.3-bookworm` to pin to an OS version)
