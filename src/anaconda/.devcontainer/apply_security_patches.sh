@@ -27,6 +27,7 @@ done
 # Add an array for packages that should always pin to the provided version, 
 # even if higher version is available in conda channel
 pin_to_required_version=( "protobuf" "imagecodecs")
+
 # Function to check if a package is in the pin_to_required_version array
 function is_pin_to_required_version() {
     local pkg="$1"

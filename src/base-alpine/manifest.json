@@ -1,10 +1,9 @@
 {
-	"version": "1.0.2",
+	"version": "2.0.2",
 	"variants": [
 		"3.22",
 		"3.21",		
-		"3.20",
-		"3.19"	
+		"3.20"	
 	],
 	"build": {
 		"latest": false,
@@ -14,7 +13,6 @@
 			"linux/arm64"
 		],
 		"tags": [
-			"base:${VERSION}-alpine-${VARIANT}",
 			"base:${VERSION}-alpine${VARIANT}"
 		],
 		"variantTags": {

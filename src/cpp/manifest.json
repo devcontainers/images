@@ -1,5 +1,5 @@
 {
-	"version": "2.0.1",
+	"version": "2.1.2",
 	"variants": [
 		"trixie",
 		"bookworm",
@@ -38,22 +38,18 @@
 		],
 		"variantTags": {
 			"trixie": [
-				"cpp:${VERSION}-debian-13",
 				"cpp:${VERSION}-debian13",
 				"cpp:${VERSION}-debian",
 				"cpp:${VERSION}"
 			],
 			"bookworm": [
-				"cpp:${VERSION}-debian-12",
 				"cpp:${VERSION}-debian12"
 			],
 			"noble": [
-				"cpp:${VERSION}-ubuntu-24.04",
 				"cpp:${VERSION}-ubuntu24.04",
 				"cpp:${VERSION}-ubuntu"
 			],
 			"jammy": [
-				"cpp:${VERSION}-ubuntu-22.04",
 				"cpp:${VERSION}-ubuntu22.04"
 			]
 		}
