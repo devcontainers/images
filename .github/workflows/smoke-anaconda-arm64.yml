@@ -1,0 +1,44 @@
+name: Smoke test "anaconda" ARM64 build
+
+on: 
+  workflow_dispatch:
+  push:
+    branches:
+    - main
+  pull_request:
+    paths:
+      - src/anaconda/**
+      - .github/workflows/smoke-anaconda-arm64.yaml
+      - .github/actions/**
+      - build/**
+
+jobs:
+  smoke-test-arm64:
+    name: Smoke test ARM64
+    runs-on: devcontainer-image-builder-ubuntu
+    steps:
+
+    - name: Checkout
+      id: checkout
+      uses: actions/checkout@v3
+
+    - name: Setup QEMU via binfmt
+      id: setup_qemu
+      run: |
+        set -e
+        # Register QEMU static binaries for multi-arch support
+        sudo docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
+        
+        # Verify binfmt_misc is configured for aarch64
+        sudo ls -la /proc/sys/fs/binfmt_misc/ | grep -E '(aarch64|arm64)' || echo "ARM64 binfmt registered"
+
+    - name: Smoke test ARM64
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DOCKER_BUILDKIT: 1
+      id: smoke_test_arm64
+      uses: ./.github/actions/smoke-test
+      with:
+        image: anaconda
+        platform: linux/arm64
+
