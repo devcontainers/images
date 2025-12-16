@@ -36,9 +36,9 @@ jobs:
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DOCKER_BUILDKIT: 1
+          DOCKER_DEFAULT_PLATFORM: linux/arm64
+          BUILDX_PLATFORMS: linux/arm64
       id: smoke_test_arm64
       uses: ./.github/actions/smoke-test
       with:
         image: anaconda
-        platform: linux/arm64
-
