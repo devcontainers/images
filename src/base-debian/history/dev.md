@@ -5,20 +5,92 @@
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/base-debian)
 
 **Image variations:**
+- [trixie](#variant-trixie)
 - [bookworm](#variant-bookworm)
 - [bullseye](#variant-bullseye)
 
+## Variant: trixie
+
+**Digest:** sha256:ab0205539746389185bb0ef04f288a280cfd861516d3cd8adbf1980b21e7b56b
+
+**Tags:**
+```
+mcr.microsoft.com/devcontainers/base:dev-trixie
+mcr.microsoft.com/devcontainers/base:dev-debian13
+mcr.microsoft.com/devcontainers/base:dev-debian
+mcr.microsoft.com/devcontainers/base:dev
+```
+> *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
+
+**Linux distribution:** Debian GNU/Linux 13 (trixie)
+
+**Architectures:** linux/amd64, linux/arm64
+
+**Available (non-root) user:** vscode
+
+### Contents
+**Tools installed using git**
+
+| Tool | Commit | Path |
+|------|--------|------|
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | beadd56dd75e8a40fe0a7d4a5d63ed5bf9efcd48 | /home/vscode/.oh-my-zsh |
+
+**Other tools and utilities**
+
+| Tool | Version | Path |
+|------|---------|------|
+| [git](https://github.com/git/git) | 2.52.0 | 
+
+**Additional linux tools and packages**
+
+| Tool / library | Version |
+|----------------|---------|
+| apt-transport-https | 3.0.3 |
+| apt-utils | 3.0.3 |
+| ca-certificates | 20250419 |
+| curl | 8.14.1-2+deb13u2 |
+| dialog | 1.3-20250116-1 |
+| git | 1:2.47.3-0+deb13u1 |
+| gnupg2 | 2.4.7-21 |
+| htop | 3.4.1-5 |
+| iproute2 | 6.15.0-1 |
+| jq | 1.7.1-6+deb13u1 |
+| less | 668-1 |
+| libc6 | 2.41-12 |
+| libgssapi-krb5-2 | 1.21.3-5 |
+| libicu76 | 76.1-4 |
+| libkrb5-3 | 1.21.3-5 |
+| libstdc++6 | 14.2.0-19 |
+| locales | 2.41-12 |
+| lsb-release | 12.1-1 |
+| lsof | 4.99.4+dfsg-2 |
+| man-db | 2.13.1-1 |
+| manpages | 6.9.1-1 |
+| manpages-dev | 6.9.1-1 |
+| nano | 8.4-1 |
+| ncdu | 1.22-1 |
+| net-tools | 2.10-1.3 |
+| openssh-client | 1:10.0p1-7 |
+| procps | 2:4.0.4-9 |
+| psmisc | 23.7-2 |
+| rsync | 3.4.1+ds1-5 |
+| strace | 6.13+ds-1 |
+| sudo | 1.9.16p2-3 |
+| unzip | 6.0-29 |
+| vim-tiny | 2:9.1.1230-2 |
+| wget | 1.25.0-2 |
+| zip | 3.0-15 |
+| zlib1g | 1:1.3.dfsg+really1.3.1-1+b1 |
+| zsh | 5.9-8+b14 |
+
 ## Variant: bookworm
 
-**Digest:** sha256:d44d31f37e8d40b0993fdde20d828db76cc2ecbb5d36dca9c454eb6191000c29
+**Digest:** sha256:c548350c9b3e0dbf2e2f0f57ee4ef13a009a9a24bf9d2a2b333b930416afd7cf
 
 **Tags:**
 ```
 mcr.microsoft.com/devcontainers/base:dev-bookworm
-mcr.microsoft.com/devcontainers/base:dev-debian-12
 mcr.microsoft.com/devcontainers/base:dev-debian12
-mcr.microsoft.com/devcontainers/base:dev-debian
-mcr.microsoft.com/devcontainers/base:dev
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
@@ -33,13 +105,13 @@ mcr.microsoft.com/devcontainers/base:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | a6beb0f5958e935d33b0edb6d4470c3d7c4e8917 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | beadd56dd75e8a40fe0a7d4a5d63ed5bf9efcd48 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.50.1 | 
+| [git](https://github.com/git/git) | 2.52.0 | 
 
 **Additional linux tools and packages**
 
@@ -48,21 +120,21 @@ mcr.microsoft.com/devcontainers/base:dev
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
 | ca-certificates | 20230311+deb12u1 |
-| curl | 7.88.1-10+deb12u12 |
+| curl | 7.88.1-10+deb12u14 |
 | dialog | 1.3-20230209-1 |
 | git | 1:2.39.5-0+deb12u2 |
-| gnupg2 | 2.2.40-1.1 |
+| gnupg2 | 2.2.40-1.1+deb12u1 |
 | htop | 3.2.2-2 |
 | iproute2 | 6.1.0-3 |
-| jq | 1.6-2.1 |
+| jq | 1.6-2.1+deb12u1 |
 | less | 590-2.1~deb12u2 |
-| libc6 | 2.36-9+deb12u10 |
-| libgssapi-krb5-2 | 1.20.1-2+deb12u3 |
+| libc6 | 2.36-9+deb12u13 |
+| libgssapi-krb5-2 | 1.20.1-2+deb12u4 |
 | libicu72 | 72.1-3+deb12u1 |
-| libkrb5-3 | 1.20.1-2+deb12u3 |
+| libkrb5-3 | 1.20.1-2+deb12u4 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14+deb12u1 |
-| locales | 2.36-9+deb12u10 |
+| locales | 2.36-9+deb12u13 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
@@ -82,16 +154,15 @@ mcr.microsoft.com/devcontainers/base:dev
 | wget | 1.21.3-1+deb12u1 |
 | zip | 3.0-13 |
 | zlib1g | 1:1.2.13.dfsg-1 |
-| zsh | 5.9-4+b6 |
+| zsh | 5.9-4+b7 |
 
 ## Variant: bullseye
 
-**Digest:** sha256:6956d9ea2658fbc02391536e0f5803cc3758473425a4c80f0f599c14562b239e
+**Digest:** sha256:4721dbd48032478f5e7815896e65e5501729367369ec5c507a36793faf07faa9
 
 **Tags:**
 ```
 mcr.microsoft.com/devcontainers/base:dev-bullseye
-mcr.microsoft.com/devcontainers/base:dev-debian-11
 mcr.microsoft.com/devcontainers/base:dev-debian11
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
@@ -107,13 +178,13 @@ mcr.microsoft.com/devcontainers/base:dev-debian11
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | a6beb0f5958e935d33b0edb6d4470c3d7c4e8917 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | beadd56dd75e8a40fe0a7d4a5d63ed5bf9efcd48 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.50.1 | 
+| [git](https://github.com/git/git) | 2.52.0 | 
 
 **Additional linux tools and packages**
 
@@ -124,18 +195,18 @@ mcr.microsoft.com/devcontainers/base:dev-debian11
 | ca-certificates | 20210119 |
 | curl | 7.74.0-1.3+deb11u15 |
 | dialog | 1.3-20201126-1 |
-| git | 1:2.30.2-1+deb11u4 |
+| git | 1:2.30.2-1+deb11u5 |
 | gnupg2 | 2.2.27-2+deb11u2 |
 | htop | 3.0.5-7 |
 | iproute2 | 5.10.0-4 |
-| jq | 1.6-2.1 |
+| jq | 1.6-2.1+deb11u1 |
 | less | 551-2+deb11u2 |
 | libc6 | 2.31-13+deb11u13 |
 | libgssapi-krb5-2 | 1.18.3-6+deb11u7 |
 | libicu67 | 67.1-7+deb11u1 |
 | libkrb5-3 | 1.18.3-6+deb11u7 |
 | liblttng-ust0 | 2.12.1-1 |
-| libssl1.1 | 1.1.1w-0+deb11u3 |
+| libssl1.1 | 1.1.1w-0+deb11u4 |
 | libstdc++6 | 10.2.1-6 |
 | locales | 2.31-13+deb11u13 |
 | lsb-release | 11.1.0 |
