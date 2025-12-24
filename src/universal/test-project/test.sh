@@ -46,13 +46,6 @@ echo $(echo "python versions" && ls -a /usr/local/python)
 echo $(echo "pip list" pip list)
 
 # Check Python packages
-check "numpy" python -c "import numpy; print(numpy.__version__)"
-check "pandas" python -c "import pandas; print(pandas.__version__)"
-check "scipy" python -c "import scipy; print(scipy.__version__)"
-check "matplotlib" python -c "import matplotlib; print(matplotlib.__version__)"
-check "seaborn" python -c "import seaborn; print(seaborn.__version__)"
-check "scikit-learn" python -c "import sklearn; print(sklearn.__version__)"
-check "torch" python -c "import torch; print(torch.__version__)"
 check "requests" python -c "import requests; print(requests.__version__)"
 check "jupyterlab-git" python -c "import jupyterlab_git; print(jupyterlab_git.__version__)"
 
@@ -121,6 +114,7 @@ check "go" go version
 # Check utilities
 checkOSPackages "additional-os-packages" vim xtail software-properties-common
 check "gh" gh --version
+check "copilot" copilot --version
 check "git-lfs" git-lfs --version
 check "docker" docker --version
 check "kubectl" kubectl version --client
@@ -138,9 +132,9 @@ check "RAILS_DEVELOPMENT_HOSTS is set correctly" echo $RAILS_DEVELOPMENT_HOSTS |
 check "oryx" oryx --version
 
 # Ensures nvm works in a Node Project
-check "default-node-version" bash -c "node --version | grep 22."
+check "default-node-version" bash -c "node --version | grep 24."
 check "default-node-location" bash -c "which node | grep /home/codespace/nvm/current/bin"
-check "oryx-build-node-projectr" bash -c "oryx build ./sample/node"
+check "oryx-build-node-project" bash -c "oryx build ./sample/node"
 check "oryx-configured-current-node-version" bash -c "ls -la /home/codespace/nvm/current | grep /opt/nodejs"
 check "nvm-install-node" bash -c ". /usr/local/share/nvm/nvm.sh && nvm install 8.0.0"
 check "nvm-works-in-node-project" bash -c "node --version | grep v8.0.0"

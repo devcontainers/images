@@ -1,5 +1,5 @@
 {
-	"version": "2.0.2",
+	"version": "2.1.3",
 	"variants": [
 		"trixie",
 		"bookworm",
@@ -27,17 +27,14 @@
 		],
 		"variantTags": {
 			"trixie": [
-				"base:${VERSION}-debian-13",
 				"base:${VERSION}-debian13",
 				"base:${VERSION}-debian",
 				"base:${VERSION}"
 			],
 			"bookworm": [
-				"base:${VERSION}-debian-12",
 				"base:${VERSION}-debian12"
 			],
 			"bullseye": [
-				"base:${VERSION}-debian-11",
 				"base:${VERSION}-debian11"
 			]
 		}

@@ -9,7 +9,7 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/dotnet |
-| *Available image variants* | 10.0, 9.0 /9.0-bookworm, 8.0 /8.0-bookworm, 10.0-noble, 9.0-noble, 8.0-noble, 8.0-jammy ([full list](https://mcr.microsoft.com/v2/devcontainers/dotnet/tags/list)) |
+| *Available image variants* | 10.0 /10.0-noble, 9.0 /9.0-bookworm, 8.0 /8.0-bookworm, 9.0-noble, 8.0-noble, 8.0-jammy ([full list](https://mcr.microsoft.com/v2/devcontainers/dotnet/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm`, `bullseye`, `noble`, `jammy` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Ubuntu (`-focal`, `-jammy`, `-noble`), Debian (`-bullseye`, `-bookworm`) |
@@ -31,12 +31,12 @@ Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/devcontainers/dotnet:1-10.0-preview`
-- `mcr.microsoft.com/devcontainers/dotnet:1.4-10.0-preview`
-- `mcr.microsoft.com/devcontainers/dotnet:1.4.0-10.0-preview`
-- `mcr.microsoft.com/devcontainers/dotnet:1-9.0`
-- `mcr.microsoft.com/devcontainers/dotnet:1.4-9.0`
-- `mcr.microsoft.com/devcontainers/dotnet:1.4.0-9.0`
+- `mcr.microsoft.com/devcontainers/dotnet:2-10.0-noble`
+- `mcr.microsoft.com/devcontainers/dotnet:2.0-10.0-noble`
+- `mcr.microsoft.com/devcontainers/dotnet:2.0.0-10.0-noble`
+- `mcr.microsoft.com/devcontainers/dotnet:2-9.0`
+- `mcr.microsoft.com/devcontainers/dotnet:2.0-9.0`
+- `mcr.microsoft.com/devcontainers/dotnet:2.0.0-9.0`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/dotnet/tags/list).
 
