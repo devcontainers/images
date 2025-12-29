@@ -8,6 +8,7 @@ checkCommon
 
 # Image specific tests
 check "dotnet" dotnet --info
+checkBuild
 check "nuget" dotnet restore
 check "msbuild" dotnet msbuild
 sudo rm -rf obj bin
@@ -27,7 +28,7 @@ check "gitconfig-contains-name" sh -c "cat /etc/gitconfig | grep 'name = devcont
 
 check "usr-local-etc-config-does-not-exist" test ! -f "/usr/local/etc/gitconfig"
 
-checkPackageVersion "pwsh" "7.4.1" "PowerShell"
+checkPackageVersion "pwsh" "7.4.4" "PowerShell"
 
 # Report result
 reportResults

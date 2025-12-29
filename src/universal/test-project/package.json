@@ -1,5 +1,6 @@
 {
   "dependencies": {
     "puppeteer": "^5.5.0"
-  }
+  },
+  "packageManager": "yarn@4.9.4"
 }

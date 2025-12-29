@@ -8,6 +8,10 @@ inputs:
     description: 'Threshold (in GB) to validate that the image size does not excced this limit'
     required: false
     default: 14
+  validate-tags:
+    description: 'Validate that base image tags exist upstream before building'
+    required: false
+    default: 'true'
 
 runs:
   using: composite
@@ -23,6 +27,8 @@ runs:
     - name: Build image
       id: build_image
       shell: bash
+      env:
+        INPUT_VALIDATE_TAGS: ${{ inputs.validate-tags }}
       run: ${{ github.action_path }}/build.sh ${{ inputs.image }}
 
     - name: Test image

@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/miniconda)
 
-**Digest:** sha256:adef3c598db09b28ab9445b9c280123414f573b5a24fb9a50a9832d352f422df
+**Digest:** sha256:511da478f8e1e101b9a155a0efd8deb863f7e34ad553d3f8d69aa3938d8d005a
 
 **Tags:**
 ```
@@ -23,41 +23,41 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Python](https://www.python.org/) | 3.12.4 | /opt/conda |
+| [Python](https://www.python.org/) | 3.13.2 | /opt/conda |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5b37e218e5275c11cb5fecc61f943e6cea3e64bf | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 3e7ef0182f59c7990a52cf6ec2981adb56d5b368 | /home/vscode/.oh-my-zsh |
 
 **Pip / pipx installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| certifi | 2024.6.2 |
-| cryptography | 42.0.5 |
-| setuptools | 69.5.1 |
-| wheel | 0.43.0 |
-| requests | 2.32.2 |
-| pylint | 3.2.5 |
-| flake8 | 7.1.0 |
-| autopep8 | 2.3.1 |
-| black | 24.4.2 |
-| yapf | 0.40.2 |
-| mypy | 1.10.1 |
+| certifi | 2025.7.14 |
+| cryptography | 44.0.1 |
+| setuptools | 78.1.1 |
+| wheel | 0.45.1 |
+| requests | 2.32.4 |
+| pylint | 3.3.7 |
+| flake8 | 7.3.0 |
+| autopep8 | 2.3.2 |
+| black | 25.1.0 |
+| yapf | 0.43.0 |
+| mypy | 1.17.1 |
 | pydocstyle | 6.3.0 |
-| pycodestyle | 2.12.0 |
-| bandit | 1.7.9 |
-| virtualenv | 20.26.3 |
-| pipx | 1.6.0 |
+| pycodestyle | 2.14.0 |
+| bandit | 1.8.6 |
+| virtualenv | 20.33.0 |
+| pipx | 1.7.1 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.45.2 | 
-| [conda](https://github.com/conda/conda) | 24.5.0 | /opt/conda |
+| [git](https://github.com/git/git) | 2.50.1 | 
+| [conda](https://github.com/conda/conda) | 25.3.1 | /opt/conda |
 
 **Additional linux tools and packages**
 
@@ -65,22 +65,22 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 |----------------|---------|
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
-| ca-certificates | 20230311 |
-| curl | 7.88.1-10+deb12u6 |
+| ca-certificates | 20230311+deb12u1 |
+| curl | 7.88.1-10+deb12u12 |
 | dialog | 1.3-20230209-1 |
-| git | 1:2.39.2-1.1 |
+| git | 1:2.39.5-0+deb12u2 |
 | gnupg2 | 2.2.40-1.1 |
 | htop | 3.2.2-2 |
 | iproute2 | 6.1.0-3 |
 | jq | 1.6-2.1 |
 | less | 590-2.1~deb12u2 |
-| libc6 | 2.36-9+deb12u7 |
-| libgssapi-krb5-2 | 1.20.1-2+deb12u2 |
-| libicu72 | 72.1-3 |
-| libkrb5-3 | 1.20.1-2+deb12u2 |
+| libc6 | 2.36-9+deb12u10 |
+| libgssapi-krb5-2 | 1.20.1-2+deb12u3 |
+| libicu72 | 72.1-3+deb12u1 |
+| libkrb5-3 | 1.20.1-2+deb12u3 |
 | liblttng-ust1 | 2.13.5-1 |
-| libstdc++6 | 12.2.0-14 |
-| locales | 2.36-9+deb12u7 |
+| libstdc++6 | 12.2.0-14+deb12u1 |
+| locales | 2.36-9+deb12u10 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
@@ -88,18 +88,18 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | manpages-dev | 6.03-2 |
 | nano | 7.2-1+deb12u1 |
 | ncdu | 1.18-0.2 |
-| net-tools | 2.10-0.1 |
-| openssh-client | 1:9.2p1-2+deb12u3 |
+| net-tools | 2.10-0.1+deb12u2 |
+| openssh-client | 1:9.2p1-2+deb12u7 |
 | procps | 2:4.0.2-3 |
 | psmisc | 23.6-1 |
-| rsync | 3.2.7-1 |
+| rsync | 3.2.7-1+deb12u2 |
 | strace | 6.1-0.1 |
-| sudo | 1.9.13p3-1+deb12u1 |
+| sudo | 1.9.13p3-1+deb12u2 |
 | unzip | 6.0-28 |
-| vim-tiny | 2:9.0.1378-2 |
-| wget | 1.21.3-1+b2 |
+| vim-tiny | 2:9.0.1378-2+deb12u2 |
+| wget | 1.21.3-1+deb12u1 |
 | yarn | 1.22.22-1 |
 | zip | 3.0-13 |
 | zlib1g | 1:1.2.13.dfsg-1 |
-| zsh | 5.9-4+b5 |
+| zsh | 5.9-4+b6 |
 

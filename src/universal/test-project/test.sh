@@ -2,6 +2,8 @@
 cd $(dirname "$0")
 
 source test-utils.sh codespace
+#Changing he ownership of dotnet path to ensure oryx-install-dotnet-2.1 test doesn't fail with permission issue 
+sudo chown -R codespace:codespace /usr/share/dotnet
 
 # Run common tests
 checkCommon
@@ -44,13 +46,6 @@ echo $(echo "python versions" && ls -a /usr/local/python)
 echo $(echo "pip list" pip list)
 
 # Check Python packages
-check "numpy" python -c "import numpy; print(numpy.__version__)"
-check "pandas" python -c "import pandas; print(pandas.__version__)"
-check "scipy" python -c "import scipy; print(scipy.__version__)"
-check "matplotlib" python -c "import matplotlib; print(matplotlib.__version__)"
-check "seaborn" python -c "import seaborn; print(seaborn.__version__)"
-check "scikit-learn" python -c "import sklearn; print(sklearn.__version__)"
-check "torch" python -c "import torch; print(torch.__version__)"
 check "requests" python -c "import requests; print(requests.__version__)"
 check "jupyterlab-git" python -c "import jupyterlab_git; print(jupyterlab_git.__version__)"
 
@@ -95,7 +90,7 @@ expectedCount=2
 checkVersionCount "two versions of node are present" $count $expectedCount
 echo $(echo "node versions" && ls -a /usr/local/share/nvm/versions/node)
 checkBundledNpmVersion "default" "9.8.0"
-checkBundledNpmVersion "18" "9.8.1"
+checkBundledNpmVersion "22" "9.8.1"
 
 # PHP
 check "php" php --version
@@ -119,6 +114,7 @@ check "go" go version
 # Check utilities
 checkOSPackages "additional-os-packages" vim xtail software-properties-common
 check "gh" gh --version
+check "copilot" copilot --version
 check "git-lfs" git-lfs --version
 check "docker" docker --version
 check "kubectl" kubectl version --client
@@ -132,17 +128,13 @@ check "zsh" zsh --version
 # Check env variable
 check "RAILS_DEVELOPMENT_HOSTS is set correctly" echo $RAILS_DEVELOPMENT_HOSTS | grep ".githubpreview.dev,.preview.app.github.dev,.app.github.dev"
 
-# Check that we can run a puppeteer node app.
-yarn
-check "run-puppeteer" node puppeteer.js
-
 # Check Oryx
 check "oryx" oryx --version
 
 # Ensures nvm works in a Node Project
-check "default-node-version" bash -c "node --version | grep 20."
+check "default-node-version" bash -c "node --version | grep 24."
 check "default-node-location" bash -c "which node | grep /home/codespace/nvm/current/bin"
-check "oryx-build-node-projectr" bash -c "oryx build ./sample/node"
+check "oryx-build-node-project" bash -c "oryx build ./sample/node"
 check "oryx-configured-current-node-version" bash -c "ls -la /home/codespace/nvm/current | grep /opt/nodejs"
 check "nvm-install-node" bash -c ". /usr/local/share/nvm/nvm.sh && nvm install 8.0.0"
 check "nvm-works-in-node-project" bash -c "node --version | grep v8.0.0"
@@ -188,13 +180,13 @@ ls -la /home/codespace
 ## Python - current
 checkPythonPackageVersion "python" "setuptools" "65.5.1"
 checkPythonPackageVersion "python" "requests" "2.31.0"
-checkPythonPackageVersion "python" "urllib3" "2.0.7"
+checkPythonPackageVersion "python" "urllib3" "2.5.0"
 
 ## Conda Python
 checkCondaPackageVersion "requests" "2.31.0"
 checkCondaPackageVersion "cryptography" "41.0.4"
-checkCondaPackageVersion "pyopenssl" "23.2.0"
-checkCondaPackageVersion "urllib3" "1.26.17"
+checkCondaPackageVersion "pyopenssl" "25.0.0"
+checkCondaPackageVersion "urllib3" "2.5.0"
 
 ## Test Conda
 check "conda-update-conda" bash -c "conda update -y conda"

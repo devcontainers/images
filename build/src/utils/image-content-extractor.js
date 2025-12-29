@@ -284,7 +284,7 @@ function getUserName(imageId) {
 }
 
 async function getPipVersionLookup(imageTagOrContainerName, imageId) {
-    const packageVersionListOutput = await getCommandOutputFromContainer(imageTagOrContainerName, 'pip list --disable-pip-version-check --no-python-version-warning --format json', false, getUserName(imageId));
+    const packageVersionListOutput = await getCommandOutputFromContainer(imageTagOrContainerName, 'pip list --disable-pip-version-check --format json', false, getUserName(imageId));
 
     const packageVersionList = JSON.parse(packageVersionListOutput);
 

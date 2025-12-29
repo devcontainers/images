@@ -10,16 +10,16 @@
             "userGid": "1000"
         },
         "ghcr.io/devcontainers/features/dotnet:2": {
-            "version": "8.0",
-            "dotnetRuntimeVersions": "7.0", 
-            "aspNetCoreRuntimeVersions": "7.0"
+            "version": "10.0",
+            "dotnetRuntimeVersions": "9.0", 
+            "aspNetCoreRuntimeVersions": "9.0"
         },
         "ghcr.io/devcontainers/features/hugo:1": {
             "version": "latest"
         },
         "ghcr.io/devcontainers/features/node:1": {
-            "version": "20",
-            "additionalVersions": "18"
+            "version": "24",
+            "additionalVersions": "22"
         },
         "./local-features/nvs": "latest",
         "ghcr.io/devcontainers/features/python:1": {
@@ -29,22 +29,21 @@
             "configureJupyterlabAllowOrigin": "*",
             "useOryxIfAvailable": "false"
         },
-        "./local-features/machine-learning-packages": "latest",
         "ghcr.io/devcontainers/features/php:1": {
-            "version": "8.3.0",
-            "additionalVersions": "8.2.13",
+            "version": "8.5.0",
+            "additionalVersions": "8.4.15",
             "installComposer": "true"
         },
         "ghcr.io/devcontainers/features/conda:1": {
             "version": "latest"
         },
         "ghcr.io/devcontainers/features/ruby:1": {
-            "version": "3.3.4",
-            "additionalVersions": "3.3.2"
+            "version": "3.4.7",
+            "additionalVersions": "3.3.10"
         },
         "ghcr.io/devcontainers/features/java:1": {
-            "version": "21",
-            "additionalVersions": "17",
+            "version": "25",
+            "additionalVersions": "21",
             "installGradle": "true",
             "installMaven": "true"
         },
@@ -61,6 +60,9 @@
         "ghcr.io/devcontainers/features/github-cli:1": {
             "version": "latest"
         },
+        "ghcr.io/devcontainers/features/copilot-cli:1": {
+            "version": "latest"
+        },
         "ghcr.io/devcontainers/features/docker-in-docker:2": {
             "version": "latest"
         },
@@ -73,7 +75,6 @@
         "./local-features/jekyll": "latest",
         "ghcr.io/devcontainers/features/oryx:1": "latest",
         "./local-features/setup-user": "latest",
-        "./local-features/patch-python": {},
         "./local-features/patch-conda": {}
     },
     "overrideFeatureInstallOrder": [
@@ -86,8 +87,6 @@
         "ghcr.io/devcontainers/features/conda",
         "./local-features/patch-conda",
         "ghcr.io/devcontainers/features/python",
-        "./local-features/patch-python",
-        "./local-features/machine-learning-packages",
         "ghcr.io/devcontainers/features/php",
         "ghcr.io/devcontainers/features/ruby",
         "ghcr.io/devcontainers/features/java",

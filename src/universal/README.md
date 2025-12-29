@@ -8,7 +8,7 @@
 |----------|-------|
 | *Categories* | Services, GitHub |
 | *Image type* | Dockerfile |
-| *Published image* | mcr.microsoft.com/devcontainers/universal:linux<br />mcr.microsoft.com/devcontainers/universal:focal |
+| *Published image* | mcr.microsoft.com/devcontainers/universal:linux<br />mcr.microsoft.com/devcontainers/universal:noble |
 | *Published image architecture(s)* | x86-64 |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Ubuntu |
@@ -27,9 +27,9 @@ The container includes the `zsh` (and Oh My Zsh!) and `fish` shells that you can
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image.
 For example:
 
-- `mcr.microsoft.com/devcontainers/universal:2-focal`
-- `mcr.microsoft.com/devcontainers/universal:2.0-focal`
-- `mcr.microsoft.com/devcontainers/universal:2.0.6-focal`
+- `mcr.microsoft.com/devcontainers/universal:5-noble`
+- `mcr.microsoft.com/devcontainers/universal:5.1-noble`
+- `mcr.microsoft.com/devcontainers/universal:5.1.0-noble`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/universal/tags/list).
 
@@ -47,11 +47,24 @@ Access to the Anaconda repository is covered by the [Anaconda Terms of Service](
 
 While the image itself works unmodified, you can also directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` to:
 
-`mcr.microsoft.com/devcontainers/universal:2-linux`
+`mcr.microsoft.com/devcontainers/universal:5.1-linux`
 
 Alternatively, you can use the contents of [.devcontainer](.devcontainer) to fully customize your container's contents or to build it for a container host architecture not supported by the image.
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
+
+## Disabling Automatic Setup in Codespaces
+
+Codespaces will automatically perform some default setup when the `universal` image is used and no `postCreateCommand` is provided. This can be disabled with the `customizations.codespaces.disableAutomaticConfiguration` setting:
+
+```jsonc
+"customizations": {
+	// Configure properties specific to Codespaces.
+	"codespaces": {
+		"disableAutomaticConfiguration": true
+	}
+}
+```
 
 ## License
 

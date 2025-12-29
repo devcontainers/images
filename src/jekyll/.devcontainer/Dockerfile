@@ -1,4 +1,4 @@
-ARG VARIANT=3.3-bookworm
+ARG VARIANT=3.4-bookworm
 FROM mcr.microsoft.com/devcontainers/ruby:${VARIANT}
 
 USER root
@@ -16,6 +16,7 @@ RUN gem update --system
 
 # https://github.com/ntkme/sass-embedded-host-ruby/issues/130
 RUN gem install sass-embedded -v 1.62.1
+RUN gem install jekyll-sass-converter -v 3.0.0
 RUN gem install bundler jekyll github-pages
 
 RUN chown -R "vscode:rvm" "/usr/local/rvm/" \
@@ -23,6 +24,12 @@ RUN chown -R "vscode:rvm" "/usr/local/rvm/" \
     && find "/usr/local/rvm/" -type d | xargs -n 1 chmod g+s
 
 COPY post-create.sh /usr/local/post-create.sh
+
+# Fixing vulnerability issue by upgrading svn to 1.14.5. Ref https://subversion.apache.org/security/CVE-2024-46901-advisory.txt
+COPY ./scripts/install-subversion.sh /tmp/install-subversion.sh
+RUN chmod +x /tmp/install-subversion.sh
+RUN /tmp/install-subversion.sh \
+  && rm -f /tmp/install-subversion.sh
 
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \

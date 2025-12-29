@@ -19,7 +19,21 @@ check "gitconfig-file-location" sh -c "ls /etc/gitconfig"
 check "gitconfig-contains-name" sh -c "cat /etc/gitconfig | grep 'name = devcontainers'"
 check "usr-local-etc-config-does-not-exist" test ! -f "/usr/local/etc/gitconfig"
 
-check "uid" bash -c "id -u vscode | grep 1001" 
+check_ubuntu_user() {
+    if ! id -u ubuntu > /dev/null 2>&1; then
+        echo -e "✔️   User ubuntu does not exist."
+    else
+        echo -e "❌   User ubuntu exists."
+        exit 1;
+    fi
+}
+
+if grep -q 'VERSION_CODENAME=noble' /etc/os-release; then
+    echo -e "\nThe base image is ubuntu:noble. Checking user Ubuntu.."
+    check "uid" "check_ubuntu_user"
+else
+    echo -e "\nCannot check user Ubuntu. The base image is not ubuntu:noble."
+fi
 
 # Report result
 reportResults
