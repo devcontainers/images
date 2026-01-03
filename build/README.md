@@ -20,7 +20,6 @@ This CLI is used in the GitHub Actions workflows in this repository.
 - `version-history.yml`: Listens for workflow dispatch events to trigger cgmanifest.json and history markdown generation.
 
 ## Setting up a container to be built
-
 > **Note:** Only @devcontainers/maintainers can currently onboard an image to this process since it requires access the Microsoft Container Registry. [See here for details](https://github.com/microsoft/vscode-internalbacklog/wiki/Remote-Container-Images-MCR-Setup).
 >
 > However, if you have your own pre-built image or build process, you can simply reference it directly in you contributed container.
