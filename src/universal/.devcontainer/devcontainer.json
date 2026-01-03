@@ -30,8 +30,8 @@
             "useOryxIfAvailable": "false"
         },
         "ghcr.io/devcontainers/features/php:1": {
-            "version": "8.4.8",
-            "additionalVersions": "8.3.14",
+            "version": "8.5.0",
+            "additionalVersions": "8.4.15",
             "installComposer": "true"
         },
         "ghcr.io/devcontainers/features/conda:1": {
@@ -58,6 +58,9 @@
             "version": "latest"
         },
         "ghcr.io/devcontainers/features/github-cli:1": {
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/copilot-cli:1": {
             "version": "latest"
         },
         "ghcr.io/devcontainers/features/docker-in-docker:2": {

@@ -114,6 +114,7 @@ check "go" go version
 # Check utilities
 checkOSPackages "additional-os-packages" vim xtail software-properties-common
 check "gh" gh --version
+check "copilot" copilot --version
 check "git-lfs" git-lfs --version
 check "docker" docker --version
 check "kubectl" kubectl version --client
