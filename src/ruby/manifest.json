@@ -107,6 +107,12 @@
 			],
 			"3.4-bullseye": [
 				"ruby:${VERSION}-3-bullseye"
+			],
+			"3.3-bullseye": [
+				"ruby:${VERSION}-3.3-bullseye"
+			],			
+			"3.2-bullseye": [
+				"ruby:${VERSION}-3.2-bullseye"
 			]
 	},
 	"dependencies": {
@@ -141,4 +147,5 @@
 			}
 		}
 	}
+}
 }
