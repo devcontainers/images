@@ -1,5 +1,5 @@
 # [Choice] Ruby version (use -bullseye variants on local arm64/Apple Silicon): 3, 3.4, 3.3, 3.2, 3-bookworm, 3.4-bookworm, 3.3-bookworm, 3.2-bookworm, 3-bullseye, 3.4-bullseye, 3.3-bullseye, 3.2-bullseye, 3-buster, 3.2-buster
-ARG VARIANT=3-trixie
+ARG VARIANT=4-trixie
 FROM ruby:${VARIANT}
 
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \

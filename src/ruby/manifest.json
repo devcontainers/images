@@ -1,53 +1,53 @@
 {
-	"version": "2.0.5",
+	"version": "3.0.0",
 	"variants": [
-		"3.4-trixie",		
-		"3.3-trixie",
-		"3.2-trixie",		
-		"3.4-bookworm",		
-		"3.3-bookworm",
-		"3.2-bookworm",
-		"3.4-bullseye",		
-		"3.3-bullseye",
-		"3.2-bullseye"
+		"4.4-trixie",		
+		"4.3-trixie",
+		"4.2-trixie",		
+		"4.4-bookworm",		
+		"4.3-bookworm",
+		"4.2-bookworm",
+		"4.4-bullseye",		
+		"4.3-bullseye",
+		"4.2-bullseye"
 	],
 	"build": {
-		"latest": "3.4-trixie",
+		"latest": "4.4-trixie",
 		"rootDistro": "debian",
 		"architectures": {
-			"3.4-trixie": [
+			"4.4-trixie": [
 				"linux/amd64",
 				"linux/arm64"
 			],			
-			"3.3-trixie": [
+			"4.3-trixie": [
 				"linux/amd64",
 				"linux/arm64"
 			],
-			"3.2-trixie": [
+			"4.2-trixie": [
 				"linux/amd64",
 				"linux/arm64"
 			],			
-			"3.4-bookworm": [
+			"4.4-bookworm": [
 				"linux/amd64",
 				"linux/arm64"
 			],			
-			"3.3-bookworm": [
+			"4.3-bookworm": [
 				"linux/amd64",
 				"linux/arm64"
 			],
-			"3.2-bookworm": [
+			"4.2-bookworm": [
 				"linux/amd64",
 				"linux/arm64"
 			],
-			"3.4-bullseye": [
+			"4.4-bullseye": [
 				"linux/amd64",
 				"linux/arm64"
 			],			
-			"3.3-bullseye": [
+			"4.3-bullseye": [
 				"linux/amd64",
 				"linux/arm64"
 			],
-			"3.2-bullseye": [
+			"4.2-bullseye": [
 				"linux/amd64",
 				"linux/arm64"
 			]
@@ -56,37 +56,37 @@
 			"ruby:${VERSION}-${VARIANT}"
 		],
 		"variantTags": {
-			"3.4-trixie": [
-				"ruby:${VERSION}-3",
-				"ruby:${VERSION}-3.4",
-				"ruby:${VERSION}-3-trixie",
+			"4.4-trixie": [
+				"ruby:${VERSION}-4",
+				"ruby:${VERSION}-4.4",
+				"ruby:${VERSION}-4-trixie",
 				"ruby:${VERSION}-trixie"
 			],
-			"3.3-trixie": [
-				"ruby:${VERSION}-3.3"
+			"4.3-trixie": [
+				"ruby:${VERSION}-4.3"
 			],			
-			"3.2-trixie": [
-				"ruby:${VERSION}-3.2"
+			"4.2-trixie": [
+				"ruby:${VERSION}-4.2"
 			],			
-			"3.4-bookworm": [
-				"ruby:${VERSION}-3-bookworm",
+			"4.4-bookworm": [
+				"ruby:${VERSION}-4-bookworm",
 				"ruby:${VERSION}-bookworm"
 			],
-			"3.3-bookworm": [
-				"ruby:${VERSION}-3.3-bookworm"
+			"4.3-bookworm": [
+				"ruby:${VERSION}-4.3-bookworm"
 			],			
-			"3.2-bookworm": [
-				"ruby:${VERSION}-3.2-bookworm"
+			"4.2-bookworm": [
+				"ruby:${VERSION}-4.2-bookworm"
 			],
-			"3.4-bullseye": [
-				"ruby:${VERSION}-3-bullseye",
+			"4.4-bullseye": [
+				"ruby:${VERSION}-4-bullseye",
 				"ruby:${VERSION}-bullseye"
 			],
-			"3.3-bullseye": [
-				"ruby:${VERSION}-3.3-bullseye"
+			"4.3-bullseye": [
+				"ruby:${VERSION}-4.3-bullseye"
 			],			
-			"3.2-bullseye": [
-				"ruby:${VERSION}-3.2-bullseye"
+			"4.2-bullseye": [
+				"ruby:${VERSION}-4.2-bullseye"
 			]
 		}
 	},
