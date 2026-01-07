@@ -18,6 +18,7 @@ check "set-git-config-user-name" sh -c "sudo git config --system user.name devco
 check "gitconfig-file-location" sh -c "ls /etc/gitconfig"
 check "gitconfig-contains-name" sh -c "cat /etc/gitconfig | grep 'name = devcontainers'"
 check "usr-local-etc-config-does-not-exist" test ! -f "/usr/local/etc/gitconfig"
+check "verify-timezone-data" sh -c "cat /etc/timezone | grep 'Etc/UTC'"
 
 check_ubuntu_user() {
     if ! id -u ubuntu > /dev/null 2>&1; then
