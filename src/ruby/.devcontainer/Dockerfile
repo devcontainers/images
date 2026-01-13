@@ -1,4 +1,4 @@
-# [Choice] Ruby version (use -bullseye variants on local arm64/Apple Silicon): 3, 3.4, 3.3, 3.2, 3-bookworm, 3.4-bookworm, 3.3-bookworm, 3.2-bookworm, 3-bullseye, 3.4-bullseye, 3.3-bullseye, 3.2-bullseye, 3-buster, 3.2-buster
+# [Choice] Ruby version (use -bullseye variants on local arm64/Apple Silicon): 4, 3.4, 3.3, 3.2, 4-trixie, 4-bookworm, 3.4-bookworm, 3.3-bookworm, 3.2-bookworm, 4-bullseye, 3.4-bullseye, 3.3-bullseye, 3.2-bullseye
 ARG VARIANT=4-trixie
 FROM ruby:${VARIANT}
 
