@@ -73,7 +73,6 @@
             "version": "latest"
         },
         "./local-features/jekyll": "latest",
-        "ghcr.io/devcontainers/features/oryx:1": "latest",
         "./local-features/setup-user": "latest",
         "./local-features/patch-conda": {}
     },
@@ -97,7 +96,6 @@
         "ghcr.io/devcontainers/features/kubectl-helm-minikube",
         "ghcr.io/devcontainers/features/go",
         "./local-features/jekyll",
-        "ghcr.io/devcontainers/features/oryx",
         "./local-features/setup-user"
     ],
     "remoteUser": "codespace",
