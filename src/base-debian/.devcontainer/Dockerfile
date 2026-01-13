@@ -8,5 +8,6 @@ FROM buildpack-deps:${VARIANT}-curl
 
 # Mainly done to upgrade packages to avoid security issues
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get upgrade -y
+    && apt-get upgrade -y \
+    && rm -rf /var/lib/apt/lists/*
 
