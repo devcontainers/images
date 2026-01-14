@@ -1,0 +1,31 @@
+{
+    "id": "oryx",
+    "version": "1.4.1-pinned",
+    "name": "Oryx (Pinned)",
+    "description": "Installs the oryx CLI with a pinned commit to avoid build failures",
+    "documentationURL": "https://github.com/devcontainers/features/tree/main/src/oryx",
+    "containerEnv": {
+        "ORYX_SDK_STORAGE_BASE_URL": "https://oryx-cdn.microsoft.io",
+        "ENABLE_DYNAMIC_INSTALL": "true",
+        "DYNAMIC_INSTALL_ROOT_DIR": "/opt",
+        "ORYX_PREFER_USER_INSTALLED_SDKS": "true",
+        "ORYX_DIR": "/usr/local/oryx",
+        "DEBIAN_FLAVOR": "focal-scm",
+        "PATH": "/usr/local/oryx:${PATH}"
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "github.copilot.chat.codeGeneration.instructions": [
+                    {
+                        "text": "This dev container includes the oryx CLI pre-installed and available on the `PATH`."
+                    }
+                ]
+            }
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils",
+        "ghcr.io/devcontainers/features/dotnet"
+    ]
+}
