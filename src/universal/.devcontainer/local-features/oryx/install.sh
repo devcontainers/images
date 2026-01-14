@@ -223,6 +223,11 @@ find "${PIP_CACHE_DIR}" -type d -print0 | xargs -n 1 -0 chmod g+s
 cp -rf $GIT_ORYX/build /opt/tmp
 cp -rf $GIT_ORYX/images /opt/tmp
 
+# Clean up global.json if it was created
+if [[ "${PINNED_SDK_VERSION}" != "" ]]; then
+    rm -f ${GIT_ORYX}/global.json
+fi
+
 # Clean up
 rm -rf $GIT_ORYX
 
@@ -236,7 +241,6 @@ if [[ "${DOTNET_INSTALLATION_PACKAGE}" != "" ]]; then
 fi
 
 if [[ "${PINNED_SDK_VERSION}" != "" ]]; then
-    rm -f ${GIT_ORYX}/global.json
     rm -rf /usr/share/dotnet/sdk/$PINNED_SDK_VERSION
     NEW_RUNTIME_VERSIONS=$(dotnet --list-runtimes | awk '{print $2}' | sort | uniq)
     if [ -n "${RUNTIME_VERSIONS:-}" ]; then
