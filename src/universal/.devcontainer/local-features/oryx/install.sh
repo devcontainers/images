@@ -8,6 +8,10 @@
 USERNAME="${USERNAME:-"${_REMOTE_USER:-"automatic"}"}"
 UPDATE_RC="${UPDATE_RC:-"true"}"
 
+# Pin Oryx to a specific commit to avoid build failures from upstream breaking changes
+# This should be updated when the upstream issue is fixed
+ORYX_PINNED_COMMIT="${ORYX_PINNED_COMMIT:-"0243a804b"}"
+
 MICROSOFT_GPG_KEYS_URI="https://packages.microsoft.com/keys/microsoft.asc"
 
 set -eu
@@ -177,10 +181,11 @@ GIT_ORYX=/opt/tmp/oryx-repo
 mkdir -p ${BUILD_SCRIPT_GENERATOR}
 mkdir -p ${ORYX}
 
-# Pin to commit 0243a804b (before the breaking GetFileSize change in 5db51a535)
+# Pin to commit before the breaking GetFileSize change in 5db51a535
+# See: https://github.com/microsoft/Oryx/commit/5db51a535
 git clone https://github.com/microsoft/Oryx $GIT_ORYX
 cd $GIT_ORYX
-git checkout 0243a804b
+git checkout $ORYX_PINNED_COMMIT
 cd -
 
 if [[ "${PINNED_SDK_VERSION}" != "" ]]; then
