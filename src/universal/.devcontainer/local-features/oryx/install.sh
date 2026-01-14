@@ -198,6 +198,9 @@ if [ -f "$MEMORY_SOURCE_REPO" ]; then
             return pathsToFiles[path].Length;\
         }\
 ' "$MEMORY_SOURCE_REPO"
+else
+    echo "Warning: MemorySourceRepo.cs not found. Oryx repository structure may have changed."
+    echo "Build may fail if GetFileSize is not implemented."
 fi
 
 if [[ "${PINNED_SDK_VERSION}" != "" ]]; then
