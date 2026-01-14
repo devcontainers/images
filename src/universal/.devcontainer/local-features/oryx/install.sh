@@ -8,10 +8,6 @@
 USERNAME="${USERNAME:-"${_REMOTE_USER:-"automatic"}"}"
 UPDATE_RC="${UPDATE_RC:-"true"}"
 
-# Pin Oryx to a specific commit to avoid build failures from upstream breaking changes
-# This should be updated when the upstream issue is fixed
-ORYX_PINNED_COMMIT="${ORYX_PINNED_COMMIT:-"0243a804b"}"
-
 MICROSOFT_GPG_KEYS_URI="https://packages.microsoft.com/keys/microsoft.asc"
 
 set -eu
@@ -181,12 +177,28 @@ GIT_ORYX=/opt/tmp/oryx-repo
 mkdir -p ${BUILD_SCRIPT_GENERATOR}
 mkdir -p ${ORYX}
 
-# Pin to commit before the breaking GetFileSize change in 5db51a535
-# See: https://github.com/microsoft/Oryx/commit/5db51a535
-git clone https://github.com/microsoft/Oryx $GIT_ORYX
-cd $GIT_ORYX
-git checkout $ORYX_PINNED_COMMIT
-cd -
+# Clone the latest Oryx repository
+git clone --depth=1 https://github.com/microsoft/Oryx $GIT_ORYX
+
+# Patch MemorySourceRepo.cs to implement GetFileSize method
+# Fixes compilation error CS0535 from recent upstream changes
+MEMORY_SOURCE_REPO="$GIT_ORYX/tests/Detector.Tests/MemorySourceRepo.cs"
+if [ -f "$MEMORY_SOURCE_REPO" ]; then
+    echo "Patching MemorySourceRepo.cs to add GetFileSize implementation..."
+    # Insert GetFileSize method before the GetGitCommitId method
+    sed -i '/public string GetGitCommitId/i\
+\
+        public long? GetFileSize(params string[] paths)\
+        {\
+            var path = Path.Combine(paths);\
+            if (!pathsToFiles.ContainsKey(path))\
+            {\
+                return null;\
+            }\
+            return pathsToFiles[path].Length;\
+        }\
+' "$MEMORY_SOURCE_REPO"
+fi
 
 if [[ "${PINNED_SDK_VERSION}" != "" ]]; then
     cd $GIT_ORYX

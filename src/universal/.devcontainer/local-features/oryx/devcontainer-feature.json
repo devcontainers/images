@@ -1,8 +1,8 @@
 {
     "id": "oryx",
-    "version": "1.4.1-pinned-0243a804b",
-    "name": "Oryx (Pinned)",
-    "description": "Installs the oryx CLI with commit pinned to 0243a804b to avoid build failures from upstream breaking changes",
+    "version": "1.4.1-patched",
+    "name": "Oryx (Patched)",
+    "description": "Installs the oryx CLI with patched test files to fix upstream compilation errors",
     "documentationURL": "https://github.com/devcontainers/features/tree/main/src/oryx",
     "containerEnv": {
         "ORYX_SDK_STORAGE_BASE_URL": "https://oryx-cdn.microsoft.io",
