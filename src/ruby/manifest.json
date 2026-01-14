@@ -90,9 +90,11 @@
 				"ruby:${VERSION}-3.4-trixie"
 			],
 			"3.3-trixie": [
+				"ruby:${VERSION}-3.3",
 				"ruby:${VERSION}-3.3-trixie"
 			],			
 			"3.2-trixie": [
+				"ruby:${VERSION}-3.2",
 				"ruby:${VERSION}-3.2-trixie"
 			],			
 			"3.4-bookworm": [
