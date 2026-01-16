@@ -1,20 +1,35 @@
 {
-	"version": "2.0.5",
+	"version": "3.0.0",
 	"variants": [
+		"4.0-trixie",
 		"3.4-trixie",		
 		"3.3-trixie",
-		"3.2-trixie",		
+		"3.2-trixie",
+		"4.0-bookworm",		
 		"3.4-bookworm",		
 		"3.3-bookworm",
 		"3.2-bookworm",
+		"4.0-bullseye",
 		"3.4-bullseye",		
 		"3.3-bullseye",
 		"3.2-bullseye"
 	],
 	"build": {
-		"latest": "3.4-trixie",
+		"latest": "4.0-trixie",
 		"rootDistro": "debian",
 		"architectures": {
+			"4.0-trixie": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"4.0-bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"4.0-bullseye": [
+				"linux/amd64",
+				"linux/arm64"
+			],
 			"3.4-trixie": [
 				"linux/amd64",
 				"linux/arm64"
@@ -56,21 +71,34 @@
 			"ruby:${VERSION}-${VARIANT}"
 		],
 		"variantTags": {
-			"3.4-trixie": [
-				"ruby:${VERSION}-3",
-				"ruby:${VERSION}-3.4",
-				"ruby:${VERSION}-3-trixie",
+			"4.0-trixie": [
+				"ruby:${VERSION}-4",
+				"ruby:${VERSION}-4.0",
+				"ruby:${VERSION}-4-trixie",
 				"ruby:${VERSION}-trixie"
 			],
+			"4.0-bookworm": [
+				"ruby:${VERSION}-4-bookworm",
+				"ruby:${VERSION}-bookworm"
+			],
+			"4.0-bullseye": [
+				"ruby:${VERSION}-4-bullseye",
+				"ruby:${VERSION}-bullseye"
+			],
+			"3.4-trixie": [
+				"ruby:${VERSION}-3.4",
+				"ruby:${VERSION}-3.4-trixie"
+			],
 			"3.3-trixie": [
-				"ruby:${VERSION}-3.3"
+				"ruby:${VERSION}-3.3",
+				"ruby:${VERSION}-3.3-trixie"
 			],			
 			"3.2-trixie": [
-				"ruby:${VERSION}-3.2"
+				"ruby:${VERSION}-3.2",
+				"ruby:${VERSION}-3.2-trixie"
 			],			
 			"3.4-bookworm": [
-				"ruby:${VERSION}-3-bookworm",
-				"ruby:${VERSION}-bookworm"
+				"ruby:${VERSION}-3.4-bookworm"
 			],
 			"3.3-bookworm": [
 				"ruby:${VERSION}-3.3-bookworm"
@@ -79,8 +107,7 @@
 				"ruby:${VERSION}-3.2-bookworm"
 			],
 			"3.4-bullseye": [
-				"ruby:${VERSION}-3-bullseye",
-				"ruby:${VERSION}-bullseye"
+				"ruby:${VERSION}-3.4-bullseye"
 			],
 			"3.3-bullseye": [
 				"ruby:${VERSION}-3.3-bullseye"
@@ -88,7 +115,6 @@
 			"3.2-bullseye": [
 				"ruby:${VERSION}-3.2-bullseye"
 			]
-		}
 	},
 	"dependencies": {
 		"image": "ruby:${VARIANT}",
@@ -122,4 +148,5 @@
 			}
 		}
 	}
+}
 }
