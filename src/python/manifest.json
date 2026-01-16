@@ -1,21 +1,45 @@
 {
-	"version": "1.2.6",
+	"version": "3.0.3",
 	"variants": [
+		"3.14-trixie",
+		"3.13-trixie",
+		"3.12-trixie",
+		"3.11-trixie",
+		"3.10-trixie",
+		"3.14-bookworm",
 		"3.13-bookworm",
 		"3.12-bookworm",
 		"3.11-bookworm",
-		"3.10-bookworm",
-		"3.9-bookworm",
-		"3.13-bullseye",
-		"3.12-bullseye",
-		"3.11-bullseye",
-		"3.10-bullseye",
-		"3.9-bullseye"
+		"3.10-bookworm"
 	],
 	"build": {
-		"latest": "3.13-bookworm",
+		"latest": "3.14-trixie",
 		"rootDistro": "debian",
 		"architectures": {
+			"3.14-trixie": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"3.13-trixie": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"3.12-trixie": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"3.11-trixie": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"3.10-trixie": [
+				"linux/amd64",
+				"linux/arm64"
+			],		
+			"3.14-bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
 			"3.13-bookworm": [
 				"linux/amd64",
 				"linux/arm64"
@@ -29,30 +53,6 @@
 				"linux/arm64"
 			],
 			"3.10-bookworm": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"3.9-bookworm": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"3.13-bullseye": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"3.12-bullseye": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"3.11-bullseye": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"3.10-bullseye": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"3.9-bullseye": [
 				"linux/amd64",
 				"linux/arm64"
 			]
@@ -61,27 +61,27 @@
 			"python:${VERSION}-${VARIANT}"
 		],
 		"variantTags": {
-			"3.13-bookworm": [
-				"python:${VERSION}-3.13",
+			"3.14-trixie": [
+				"python:${VERSION}-3.14",
 				"python:${VERSION}-3",
-				"python:${VERSION}-3-bookworm",
-				"python:${VERSION}-bookworm"
+				"python:${VERSION}-3-trixie",
+				"python:${VERSION}-trixie"
 			],
-			"3.12-bookworm": [
+			"3.13-trixie": [
+				"python:${VERSION}-3.13"
+			],
+			"3.12-trixie": [
 				"python:${VERSION}-3.12"
 			],
-			"3.11-bookworm": [
+			"3.11-trixie": [
 				"python:${VERSION}-3.11"
 			],
-			"3.10-bookworm": [
+			"3.10-trixie": [
 				"python:${VERSION}-3.10"
-			],
-			"3.9-bookworm": [
-				"python:${VERSION}-3.9"
-			],
-			"3.13-bullseye": [
-				"python:${VERSION}-3-bullseye",
-				"python:${VERSION}-bullseye"
+      ],
+			"3.14-bookworm": [
+				"python:${VERSION}-3-bookworm",
+				"python:${VERSION}-bookworm"
 			]
 		}
 	},

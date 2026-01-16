@@ -9,8 +9,8 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/ruby |
-| *Available image variants* | 3 / 3-bookworm, 3.4 / 3.4-bookworm, 3.3 / 3.3-bookworm, 3.2 / 3.2-bookworm, 3-bullseye, 3.4-bullseye, 3.3-bullseye, 3.2-bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/ruby/tags/list)) |
-| *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm` , and `bullseye` variants |
+| *Available image variants* | 4 / 4-trixie, 4-bookworm, 4-bullseye, 3.4 / 3.4-trixie, 3.3 / 3.3-trixie, 3.2 / 3.2-trixie, 3-bookworm, 3.4-bookworm, 3.3-bookworm, 3.2-bookworm, 3-bullseye, 3.4-bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/ruby/tags/list)) |
+| *Published image architecture(s)* | x86-64, arm64/aarch64 for `trixie`, `bookworm` , and `bullseye` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
 | *Languages, platforms* | Ruby |
@@ -22,20 +22,20 @@ See **[history](history)** for information on the contents of published images.
 You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
 - `mcr.microsoft.com/devcontainers/ruby`     (latest)
-- `mcr.microsoft.com/devcontainers/ruby:3`   (or `3-bookworm`, `3-bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/ruby:3.4` (or `3.4-bookworm`, `3.4-bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/ruby:3.3` (or `3.3-bookworm`, `3.3-bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/ruby:3.2` (or `3.2-bookworm`, `3.2-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/ruby:4`   (or `4-trixie`, `4-bookworm`, `4-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/ruby:3.4` (or `3.4-trixie`, `3.4-bookworm`, `3.4-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/ruby:3.3` (or `3.3-trixie`, `3.3-bookworm`, `3.3-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/ruby:3.2` (or `3.2-trixie`, `3.2-bookworm`, `3.2-bullseye` to pin to an OS version)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/devcontainers/ruby:1-3`     (or `1-3-bookworm`, `1-3-bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/ruby:1.3-3`   (or `1.3-3-bookworm`, `1.3-3-bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/ruby:1.3.0-3` (or `1.3.0-3-bookworm`, `1.3.0-3-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/ruby:3-4`     (or `3-4-trixie`, `3-4-bookworm`, `3-4-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/ruby:3.0-4`   (or `3.0-4-trixie`, `3.0-4-bookworm`, `3.0-4-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/ruby:3.0.0-4` (or `3.0.0-4-trixie`, `3.0.0-4-bookworm`, `3.0.0-4-bullseye` to pin to an OS version)
 
-However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `1-3.2`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
+However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `2-4.0`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/ruby/tags/list).
 

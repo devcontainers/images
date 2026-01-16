@@ -1,5 +1,5 @@
 {
-	"version": "2.0.1",
+	"version": "2.1.4",
 	"variants": [
 		"noble",
 		"jammy"
@@ -22,12 +22,10 @@
 		],
 		"variantTags": {
 			"noble": [
-				"base:${VERSION}-ubuntu-24.04",
 				"base:${VERSION}-ubuntu24.04",
 				"base:${VERSION}-ubuntu"
 			],
 			"jammy": [
-				"base:${VERSION}-ubuntu-22.04",
 				"base:${VERSION}-ubuntu22.04"
 			]
 		}

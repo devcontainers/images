@@ -1,7 +1,7 @@
-ARG VARIANT=8.4-apache-bookworm
+ARG VARIANT=8.5-apache-trixie
 FROM php:${VARIANT}
 
-# Install xdebug
+# Install xdebug(3.5.0)
 RUN yes | pecl install xdebug \
     && echo "zend_extension=$(find /usr/local/lib/php/extensions/ -name xdebug.so)" > /usr/local/etc/php/conf.d/xdebug.ini \
     && echo "xdebug.mode = debug" >> /usr/local/etc/php/conf.d/xdebug.ini \
@@ -13,7 +13,6 @@ RUN yes | pecl install xdebug \
 RUN curl -sSL https://getcomposer.org/installer | php \
     && chmod +x composer.phar \
     && mv composer.phar /usr/local/bin/composer
-
 # [Optional] Uncomment this section to install additional packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 #     && apt-get -y install --no-install-recommends <your-package-list-here>

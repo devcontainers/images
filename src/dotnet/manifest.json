@@ -1,8 +1,7 @@
 {
-	"version": "1.5.1",
+	"version": "2.0.3",
 	"variants": [
-		"10.0-preview-trixie-slim",
-		"10.0-preview-noble",		
+		"10.0-noble",		
 		"9.0-bookworm-slim",
 		"9.0-noble",
 		"8.0-bookworm-slim",
@@ -10,17 +9,13 @@
 		"8.0-jammy"
 	],
 	"build": {
-		"latest": "9.0-bookworm-slim",
+		"latest": "10.0-noble",
 		"rootDistro": "debian",
 		"tags": [
 			"dotnet:${VERSION}-${VARIANT}"
 		],
 		"architectures": {
-			"10.0-preview-trixie-slim": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"10.0-preview-noble": [
+			"10.0-noble": [
 				"linux/amd64",
 				"linux/arm64"
 			],			
@@ -46,10 +41,10 @@
 			]						
 		},
 		"variantTags": {
-			"10.0-preview-trixie-slim": [
-				"dotnet:${VERSION}-10.0-preview",
-				"dotnet:${VERSION}-10.0-preview-trixie"
-			],			
+			"10.0-noble": [
+				"dotnet:${VERSION}-10.0",
+				"dotnet:${VERSION}-10.0-noble"
+			],					
 			"9.0-bookworm-slim": [
 				"dotnet:${VERSION}-9.0",
 				"dotnet:${VERSION}-9.0-bookworm"

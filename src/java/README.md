@@ -9,7 +9,7 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/java |
-| *Available image variants* | 11 / 11-bookworm, 17 / 17-bookworm, 21 / 21-bookworm, 11-bullseye, 17-bullseye, 21-bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/java/tags/list)) |
+| *Available image variants* | 11 / 11-trixie, 17 /17-trixie, 21 / 21-trixie, 21-bookworm, 25 / 25-trixie, 25-bookworm, 17-bookworm, 11-bookworm ([full list](https://mcr.microsoft.com/v2/devcontainers/java/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm`, and `bullseye` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
@@ -22,19 +22,20 @@ See **[history](history)** for information on the contents of published images.
 You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
 - `mcr.microsoft.com/devcontainers/java` (latest)
-- `mcr.microsoft.com/devcontainers/java:21` (or `21-bookworm`, `21-bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/java:11` (or `17-bookworm`, `11-bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/java:17` (or `17-bookworm`, `17-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/java:25` (or `25-trixie`, `25-bookworm` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/java:21` (or `21-trixie`, `21-bookworm` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/java:11` (or `11-trixie`, `11-bookworm` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/java:17` (or `17-trixie`, `17-bookworm` to pin to an OS version)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/devcontainers/java:1-11` (or `1-11-bookworm`, `1-11-bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/java:1.0-11` (or `1.0-11-bookworm`, `1.0-11-bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/java:1.0.0-11` (or `1.0.0-11-bookworm`, `1.0.0-11-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/java:2-11` (or `2-11-trixie`, `2-11-bookworm` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/java:2.0-11` (or `2.0-11-trixie`, `2.0-11-bookworm` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/java:2.0.0-11` (or `2.0.0-11-trixie`, `2.0.0-11-bookworm` to pin to an OS version)
 
-However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `1-11`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
+However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `2-11`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/java/tags/list).
 

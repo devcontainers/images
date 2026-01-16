@@ -1,4 +1,4 @@
-ARG VARIANT=9.0-bookworm-slim
+ARG VARIANT=10.0-noble
 FROM mcr.microsoft.com/dotnet/sdk:${VARIANT}
 ENV PATH $PATH:/home/vscode/.dotnet:/home/vscode/.dotnet/tools
 

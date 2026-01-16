@@ -27,9 +27,9 @@ The container includes the `zsh` (and Oh My Zsh!) and `fish` shells that you can
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image.
 For example:
 
-- `mcr.microsoft.com/devcontainers/universal:3-noble`
-- `mcr.microsoft.com/devcontainers/universal:3.0-noble`
-- `mcr.microsoft.com/devcontainers/universal:3.0.0-noble`
+- `mcr.microsoft.com/devcontainers/universal:5-noble`
+- `mcr.microsoft.com/devcontainers/universal:5.1-noble`
+- `mcr.microsoft.com/devcontainers/universal:5.1.0-noble`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/universal/tags/list).
 
@@ -47,7 +47,7 @@ Access to the Anaconda repository is covered by the [Anaconda Terms of Service](
 
 While the image itself works unmodified, you can also directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` to:
 
-`mcr.microsoft.com/devcontainers/universal:2-linux`
+`mcr.microsoft.com/devcontainers/universal:5.1-linux`
 
 Alternatively, you can use the contents of [.devcontainer](.devcontainer) to fully customize your container's contents or to build it for a container host architecture not supported by the image.
 
