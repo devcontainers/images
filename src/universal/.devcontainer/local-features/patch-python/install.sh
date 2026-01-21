@@ -38,3 +38,8 @@ update_package() {
     sudo_if "$PYTHON_PATH -m pip install --upgrade --no-cache-dir $PACKAGE==$VERSION"
     sudo_if "$PYTHON_PATH -m pip show --no-python-version-warning $PACKAGE"
 }
+
+sudo_if /usr/local/python/3.11.*/bin/python -m pip install --upgrade pip
+
+# https://github.com/advisories/GHSA-5rjg-fvgr-3xxf
+update_package /usr/local/python/3.11.*/bin/python setuptools "78.1.1"

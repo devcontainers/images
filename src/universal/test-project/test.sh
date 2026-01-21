@@ -178,15 +178,15 @@ check "java-version-on-path-is-12.0.2" java --version | grep 12.0.2
 ls -la /home/codespace
 
 ## Python - current
-checkPythonPackageVersion "python" "setuptools" "65.5.1"
+checkPythonPackageVersion "/usr/local/python/3.11.*/bin/python" "setuptools" "78.1.1"
 checkPythonPackageVersion "python" "requests" "2.31.0"
-checkPythonPackageVersion "python" "urllib3" "2.5.0"
 
 ## Conda Python
 checkCondaPackageVersion "requests" "2.31.0"
-checkCondaPackageVersion "cryptography" "41.0.4"
+checkCondaPackageVersion "cryptography" "44.0.1"
 checkCondaPackageVersion "pyopenssl" "25.0.0"
-checkCondaPackageVersion "urllib3" "2.5.0"
+checkCondaPackageVersion "urllib3" "2.6.3"
+checkCondaPackageVersion "brotli" "1.2.0"
 
 ## Test Conda
 check "conda-update-conda" bash -c "conda update -y conda"

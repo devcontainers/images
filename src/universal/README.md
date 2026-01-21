@@ -29,7 +29,7 @@ For example:
 
 - `mcr.microsoft.com/devcontainers/universal:5-noble`
 - `mcr.microsoft.com/devcontainers/universal:5.1-noble`
-- `mcr.microsoft.com/devcontainers/universal:5.1.0-noble`
+- `mcr.microsoft.com/devcontainers/universal:5.1.2-noble`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/universal/tags/list).
 
