@@ -51,7 +51,7 @@ sudo_if /opt/conda/bin/python3 -m pip install --upgrade pip
 # Temporary: Upgrade python packages due to security vulnerabilities
 # They are installed by the conda feature and Conda distribution does not have the patches.
 
-# https://github.com/advisories/GHSA-h4gh-qq45-vh27
+# https://github.com/advisories/GHSA-79v4-65xg-pq4g
 update_python_package /opt/conda/bin/python3 cryptography "44.0.1"
 
 update_conda_package pyopenssl "25.0.0"
