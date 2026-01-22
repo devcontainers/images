@@ -10,7 +10,6 @@
 | *Image type* | Dockerfile |
 | *Published image* | mcr.microsoft.com/devcontainers/python |
 | *Available image variants* | 3 / 3-trixie, 3.9 / 3.9-trixie, 3.10 / 3.10-trixie, 3.11-trixie / 3.11, 3.12-trixie / 3.12, 3.13-trixie / 3.13,  3.14-trixie / 3.14, 3-bookworm, 3.10-bookworm, 3.11-bookworm, 3.12-bookworm, 3.13-bookworm, 3.14-bookworm ([full list](https://mcr.microsoft.com/v2/devcontainers/python/tags/list)) |
-
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm`, and `bullseye` variants |
 | *Container Host OS Support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
