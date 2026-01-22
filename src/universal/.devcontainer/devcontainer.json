@@ -75,7 +75,8 @@
         "./local-features/jekyll": "latest",
         "ghcr.io/devcontainers/features/oryx:1": "latest",
         "./local-features/setup-user": "latest",
-        "./local-features/patch-conda": {}
+        "./local-features/patch-conda": {},
+        "./local-features/patch-python": {}
     },
     "overrideFeatureInstallOrder": [
         "ghcr.io/devcontainers/features/common-utils",
@@ -87,6 +88,7 @@
         "ghcr.io/devcontainers/features/conda",
         "./local-features/patch-conda",
         "ghcr.io/devcontainers/features/python",
+        "./local-features/patch-python",
         "ghcr.io/devcontainers/features/php",
         "ghcr.io/devcontainers/features/ruby",
         "ghcr.io/devcontainers/features/java",
