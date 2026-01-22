@@ -49,7 +49,7 @@ update_conda_package() {
 sudo_if /opt/conda/bin/python3 -m pip install --upgrade pip
 
 # Temporary: Upgrade python packages due to security vulnerabilities
-# They are installed by the conda feature and Conda distribution does not have the patches.
+# They are installed by the conda feature and Conda distribution does not have the patches
 
 # https://github.com/advisories/GHSA-79v4-65xg-pq4g
 update_python_package /opt/conda/bin/python3 cryptography "44.0.1"
