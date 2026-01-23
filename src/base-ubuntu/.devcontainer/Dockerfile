@@ -3,6 +3,10 @@ FROM buildpack-deps:${VARIANT}-curl
 
 LABEL dev.containers.features="common"
 
+# Fix timezone configuration
+ENV TZ=UTC
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
 ARG VARIANT
 RUN if [ "$VARIANT" = "noble" ]; then \
         if id "ubuntu" &>/dev/null; then \
