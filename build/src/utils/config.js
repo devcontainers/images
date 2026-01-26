@@ -156,8 +156,8 @@ function getVersionFromRelease(release, definitionId) {
 // Look up distro and fallback to debian if not specified
 function getLinuxDistroForDefinition(definitionId) {
     if (!config.definitionBuildSettings[definitionId]) {
-        const availableIds = Object.keys(allDefinitionPaths).sort().join(', ');
-        throw new Error(`Invalid definition ID '${definitionId}'. Available definition IDs are: ${availableIds}`);
+        const availableIds = Object.keys(config.definitionBuildSettings).sort().join(', ');
+        throw new Error(`Invalid definition ID '${definitionId}'. Available definition IDs with build settings are: ${availableIds}`);
     }
     return config.definitionBuildSettings[definitionId].rootDistro || 'debian';
 }
