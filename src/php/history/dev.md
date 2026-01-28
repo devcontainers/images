@@ -16,7 +16,7 @@
 
 ## Variant: 8.5-apache-trixie
 
-**Digest:** sha256:c6a27cec8ed019e2eef73d4bf6606010319303829b54c3e4c2844ed5f65bc0c0
+**Digest:** sha256:fa7243bea9b59be20bb710cf8405c782b689dbb936ea8c6686c84a40a9ab4963
 
 **Tags:**
 ```
@@ -46,7 +46,7 @@ mcr.microsoft.com/devcontainers/php:dev-trixie
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e0766905519fbc7982a590a195ee7c3e8bb594e8 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -55,7 +55,7 @@ mcr.microsoft.com/devcontainers/php:dev-trixie
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.52.0 | 
 | [Xdebug](https://xdebug.org/) | 3.5.0 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.9.3 | /usr/local |
+| [Composer](https://getcomposer.org/) | 2.9.4 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -102,7 +102,7 @@ mcr.microsoft.com/devcontainers/php:dev-trixie
 
 ## Variant: 8.4-apache-trixie
 
-**Digest:** sha256:6d1c2a89bd0f4e9019a1f2ad42fd46e494fc1a61a90855beaaefbd3f38757acf
+**Digest:** sha256:8943853ab495d65df728f0416da8baf91680cd397add466c4915f4985f3bf67c
 
 **Tags:**
 ```
@@ -129,7 +129,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.4-trixie
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e0766905519fbc7982a590a195ee7c3e8bb594e8 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -138,7 +138,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.4-trixie
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.52.0 | 
 | [Xdebug](https://xdebug.org/) | 3.5.0 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.9.3 | /usr/local |
+| [Composer](https://getcomposer.org/) | 2.9.4 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -185,7 +185,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.4-trixie
 
 ## Variant: 8.3-apache-trixie
 
-**Digest:** sha256:54045b938e2687b84134a6bf6b8c0ae6d13f29c5590e76f7e17d82673817b285
+**Digest:** sha256:189a493c164def2bcbfd45fb734e0c675d4cf5d0e425bb56963de71c850d6f1c
 
 **Tags:**
 ```
@@ -212,7 +212,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.3-trixie
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e0766905519fbc7982a590a195ee7c3e8bb594e8 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -221,7 +221,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.3-trixie
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.52.0 | 
 | [Xdebug](https://xdebug.org/) | 3.5.0 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.9.3 | /usr/local |
+| [Composer](https://getcomposer.org/) | 2.9.4 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -268,7 +268,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.3-trixie
 
 ## Variant: 8.2-apache-trixie
 
-**Digest:** sha256:0d4d4c7d63c5b8b00384d92d844e1e8769eb5bc01d45cc2cba60c25941e4a51f
+**Digest:** sha256:28bf8a8ec1503b3fea88c44405d2e2007a0b67fb2ea1c379de08b8b39620602f
 
 **Tags:**
 ```
@@ -295,7 +295,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.2-trixie
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e0766905519fbc7982a590a195ee7c3e8bb594e8 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -304,7 +304,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.2-trixie
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.52.0 | 
 | [Xdebug](https://xdebug.org/) | 3.5.0 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.9.3 | /usr/local |
+| [Composer](https://getcomposer.org/) | 2.9.4 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -351,7 +351,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.2-trixie
 
 ## Variant: 8.5-apache-bookworm
 
-**Digest:** sha256:6b124bff5a5a3a88d62dd0184e781499af6e764fca6e924bd53a290851f5fec0
+**Digest:** sha256:88091f703c04e490f48d20e55b23c02c5ad312b6f9923d2e80a15b511451e2bc
 
 **Tags:**
 ```
@@ -379,7 +379,7 @@ mcr.microsoft.com/devcontainers/php:dev-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e0766905519fbc7982a590a195ee7c3e8bb594e8 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -388,7 +388,7 @@ mcr.microsoft.com/devcontainers/php:dev-bookworm
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.52.0 | 
 | [Xdebug](https://xdebug.org/) | 3.5.0 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.9.3 | /usr/local |
+| [Composer](https://getcomposer.org/) | 2.9.4 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -436,7 +436,7 @@ mcr.microsoft.com/devcontainers/php:dev-bookworm
 
 ## Variant: 8.4-apache-bookworm
 
-**Digest:** sha256:f834012924ec2f8fe3d5556afc3c9174dc70f018bca3689a538b278c21a6a7ea
+**Digest:** sha256:480e77e00a31a537a7f71d5e2d3fd9a2b4ac382626279640c08f09d6681ebcd3
 
 **Tags:**
 ```
@@ -462,7 +462,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.4-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e0766905519fbc7982a590a195ee7c3e8bb594e8 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -471,7 +471,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.4-bookworm
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.52.0 | 
 | [Xdebug](https://xdebug.org/) | 3.5.0 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.9.3 | /usr/local |
+| [Composer](https://getcomposer.org/) | 2.9.4 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -519,7 +519,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.4-bookworm
 
 ## Variant: 8.3-apache-bookworm
 
-**Digest:** sha256:170ea868102dbe9addb741f2eff0a56c17187b7691044a5e8147943235d05432
+**Digest:** sha256:bfd17ae8893e8e769c4ed40d5f51940b61fb17e5fc6c88e46d42e217416ea741
 
 **Tags:**
 ```
@@ -545,7 +545,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.3-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e0766905519fbc7982a590a195ee7c3e8bb594e8 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -554,7 +554,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.3-bookworm
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.52.0 | 
 | [Xdebug](https://xdebug.org/) | 3.5.0 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.9.3 | /usr/local |
+| [Composer](https://getcomposer.org/) | 2.9.4 | /usr/local |
 
 **Additional linux tools and packages**
 
@@ -602,7 +602,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.3-bookworm
 
 ## Variant: 8.2-apache-bookworm
 
-**Digest:** sha256:9e47566cecc904fa33e0185e3897f89c1851dba2d546734942db00a2ee8a9d71
+**Digest:** sha256:10e04aa5a0ac382acc855ba8f610a66c7bd75e4a709fae1a901e6e093e2ed07f
 
 **Tags:**
 ```
@@ -628,7 +628,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.2-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e0766905519fbc7982a590a195ee7c3e8bb594e8 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -637,7 +637,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.2-bookworm
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.52.0 | 
 | [Xdebug](https://xdebug.org/) | 3.5.0 | /usr/local/lib/php/extensions |
-| [Composer](https://getcomposer.org/) | 2.9.3 | /usr/local |
+| [Composer](https://getcomposer.org/) | 2.9.4 | /usr/local |
 
 **Additional linux tools and packages**
 

@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:839d67ad15091db5455b0ff14d7199cba1f82f9ed86651e16329c26f19b9a476
+**Digest:** sha256:4a6907f57e06bcae505ea82439b0f3961396206774b60fd4c73b7081ab056f44
 
 **Tags:**
 ```
@@ -36,17 +36,17 @@ mcr.microsoft.com/devcontainers/universal:dev
 | Clang | 18.1.3 (1ubuntu1) | 
 | [Go](https://golang.org/dl) | 1.25.6 | /usr/local/go |
 | [Jekyll](https://jekyllrb.com/) | 4.4.1 | 
-| [Jupyter Lab](https://jupyter.org/) | 4.5.2 | /home/codespace/.local/bin/jupyter-lab |
+| [Jupyter Lab](https://jupyter.org/) | 4.5.3 | /home/codespace/.local/bin/jupyter-lab |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e0766905519fbc7982a590a195ee7c3e8bb594e8 | /home/codespace/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/codespace/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | 6b20e9f750ea371bd347e5dbac8406d677292b60 | /usr/local/nvs |
 | [rbenv](https://github.com/rbenv/rbenv.git) | ba96d7e3583e6e47ebb2f416ff2cf164e8a94f3f | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 10ea7672be0f7396137f81d0880b087c6f6f332a | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 2c978c3c169aa5d113b1f3addb1a2e36e6218167 | /usr/local/share/ruby-build |
 
 **Pip / pipx installed tools and packages**
 
@@ -55,7 +55,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | requests | 2.32.5 |
 | jupyterlab_git | 0.51.4 |
 | certifi | 2026.1.4 |
-| setuptools | 80.10.1 |
+| setuptools | 80.10.2 |
 | pylint | 4.0.4 |
 | flake8 | 7.3.0 |
 | autopep8 | 2.3.2 |
@@ -94,12 +94,12 @@ mcr.microsoft.com/devcontainers/universal:dev
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.52.0 | 
 | [Xdebug](https://xdebug.org/) | 3.5.0 | /usr/local/php/current |
-| [Composer](https://getcomposer.org/) | 2.9.3 | /usr/local/php/current/bin |
+| [Composer](https://getcomposer.org/) | 2.9.4 | /usr/local/php/current/bin |
 | [kubectl](https://github.com/kubernetes/kubectl) | v1.35.0 | /usr/local/bin |
-| [Helm](https://github.com/helm/helm) | 4.0.5 | /usr/local/bin |
+| [Helm](https://github.com/helm/helm) | 4.1.0 | /usr/local/bin |
 | [Docker Compose](https://github.com/docker/compose) | 2.40.3 | /usr/local/bin |
 | [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
-| [GitHub CLI](https://github.com/cli/cli) | 2.85.0 | 
+| [GitHub CLI](https://github.com/cli/cli) | 2.86.0 | 
 | [yarn](https://yarnpkg.com/) | 1.22.22 | /usr/bin |
 | [Maven](https://maven.apache.org/) | 3.9.12 | /usr/local/sdkman/candidates/maven/current/bin |
 | [Gradle](https://gradle.org/) | 9.3.0 | /usr/local/sdkman/candidates/gradle/current/bin |

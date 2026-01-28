@@ -10,7 +10,7 @@
 
 ## Variant: noble
 
-**Digest:** sha256:9bced514839d1e6690bd9fac626b9d1c0b4d700dfd6d88a12e3ca966457b2867
+**Digest:** sha256:d50fcb878bddf822fe05bb4576824fff045dbf37c81006ed9ca949581a703004
 
 **Tags:**
 ```
@@ -31,7 +31,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e0766905519fbc7982a590a195ee7c3e8bb594e8 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -83,7 +83,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 ## Variant: jammy
 
-**Digest:** sha256:4965c1ab5ffee61f7317186c53c130bf2e315b6dca321108b408d356b117db56
+**Digest:** sha256:ca78e802eabe6d14b601d43ea27ca56996198234dfded62d55f4b9f7b2a34c5c
 
 **Tags:**
 ```
@@ -103,7 +103,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu22.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e0766905519fbc7982a590a195ee7c3e8bb594e8 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 

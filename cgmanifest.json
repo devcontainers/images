@@ -72,7 +72,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "setuptools",
-                    "Version": "80.9.0"
+                    "Version": "80.10.1"
                 }
             }
         },
@@ -191,7 +191,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "e0766905519fbc7982a590a195ee7c3e8bb594e8"
+                    "commitHash": "67cd8c4673512d08238461f7ce00715da01665d4"
                 }
             }
         },
@@ -311,7 +311,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "01e159b519b7e791cc5bb3548663a26d9c0922a3"
+                    "commitHash": "4b737e6345a7683a239f61f0fc728c312471a13b"
                 }
             }
         },
@@ -321,7 +321,17 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "3c4706f7aba0155cb34c366b5ef3397e75e0d14e"
+                    "commitHash": "3e5d317f4783991056da95ab4cb1f27e76d1cf88"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "git",
+                "Git": {
+                    "Name": "vcpkg",
+                    "repositoryUrl": "https://github.com/microsoft/vcpkg",
+                    "commitHash": "a2a478a93d582a4b395a4dc4b7052bfcb42c1f8e"
                 }
             }
         },
@@ -611,7 +621,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "e0766905519fbc7982a590a195ee7c3e8bb594e8"
+                    "commitHash": "67cd8c4673512d08238461f7ce00715da01665d4"
                 }
             }
         },
@@ -754,7 +764,7 @@
                 "Git": {
                     "Name": "ruby-build",
                     "repositoryUrl": "https://github.com/rbenv/ruby-build.git",
-                    "commitHash": "10ea7672be0f7396137f81d0880b087c6f6f332a"
+                    "commitHash": "2c978c3c169aa5d113b1f3addb1a2e36e6218167"
                 }
             }
         },
@@ -802,8 +812,8 @@
             "Component": {
                 "Type": "Pip",
                 "Pip": {
-                    "Name": "cryptography",
-                    "Version": "44.0.1"
+                    "Name": "certifi",
+                    "Version": "2025.11.12"
                 }
             }
         },
@@ -812,7 +822,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "setuptools",
-                    "Version": "78.1.1"
+                    "Version": "80.9.0"
                 }
             }
         },
@@ -926,6 +936,16 @@
         },
         {
             "Component": {
+                "Type": "git",
+                "Git": {
+                    "Name": "Oh My Zsh!",
+                    "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
+                    "commitHash": "945d89f7ae86c740f0e09e94b7baf9b12a384535"
+                }
+            }
+        },
+        {
+            "Component": {
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Image: continuumio/miniconda3",
@@ -949,7 +969,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Composer",
-                    "Version": "2.9.3",
+                    "Version": "2.9.4",
                     "DownloadUrl": "https://getcomposer.org/"
                 }
             }
@@ -1031,6 +1051,15 @@
                     "Name": "Docker Image: php",
                     "Version": "8.2-apache-bookworm",
                     "DownloadUrl": "https://hub.docker.com/_/php"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "Pip",
+                "Pip": {
+                    "Name": "setuptools",
+                    "Version": "78.1.1"
                 }
             }
         },
@@ -1258,7 +1287,7 @@
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "rust-analysis",
-                    "Version": "1.92.0"
+                    "Version": "1.93.0"
                 }
             }
         },
@@ -1267,7 +1296,7 @@
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "rust-src",
-                    "Version": "1.92.0"
+                    "Version": "1.93.0"
                 }
             }
         },
@@ -1276,7 +1305,7 @@
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "clippy",
-                    "Version": "1.92.0"
+                    "Version": "1.93.0"
                 }
             }
         },
@@ -1520,7 +1549,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "setuptools",
-                    "Version": "80.10.1"
+                    "Version": "80.10.2"
                 }
             }
         },
@@ -1547,7 +1576,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "e0766905519fbc7982a590a195ee7c3e8bb594e8"
+                    "commitHash": "67cd8c4673512d08238461f7ce00715da01665d4"
                 }
             }
         },
@@ -1586,7 +1615,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Helm",
-                    "Version": "4.0.5",
+                    "Version": "4.1.0",
                     "DownloadUrl": "https://github.com/helm/helm"
                 }
             }
@@ -1606,7 +1635,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "GitHub CLI",
-                    "Version": "2.85.0",
+                    "Version": "2.86.0",
                     "DownloadUrl": "https://github.com/cli/cli"
                 }
             }
