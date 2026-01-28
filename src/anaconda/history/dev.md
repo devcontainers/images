@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:5f9a9d450d1b88b8dea0c7b86085466bb250644d58c85bd1ec53335fa6c443ab
+**Digest:** sha256:9dd2dda9ab2b7ae61193e4d27cbc4b7f9c2e98b51fe15ce75326d3463b60002d
 
 **Tags:**
 ```
@@ -43,7 +43,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | mistune | 3.1.2 |
 | numpy | 1.26.4 |
 | certifi | 2026.1.4 |
-| setuptools | 80.9.0 |
+| setuptools | 80.10.1 |
 | wheel | 0.44.0 |
 | nbconvert | 7.16.4 |
 | Werkzeug | 3.1.3 |
