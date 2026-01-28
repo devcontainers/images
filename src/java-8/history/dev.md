@@ -10,7 +10,7 @@
 
 ## Variant: trixie
 
-**Digest:** sha256:d1ae43acd112a7c457415358515e5896e98fa1099cafac1228d22d63dab74eaa
+**Digest:** sha256:1960136cd9bfdadd609eeccd277c9b578d16b8d9c73a83eccc03d90443b6a4e4
 
 **Tags:**
 ```
@@ -37,7 +37,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-trixie
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e0766905519fbc7982a590a195ee7c3e8bb594e8 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -91,7 +91,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-trixie
 
 ## Variant: bookworm
 
-**Digest:** sha256:a996e45d57026a63d850b07da0674ae70174d4a4952b967cfb5d4563eb94976c
+**Digest:** sha256:f9f626abc25903e4cf2b48c9361caa69a42ec441c872cf3a2d47098d84deab26
 
 **Tags:**
 ```
@@ -117,7 +117,7 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e0766905519fbc7982a590a195ee7c3e8bb594e8 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
 
 **Other tools and utilities**

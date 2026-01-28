@@ -14,7 +14,7 @@
 
 ## Variant: 10.0-noble
 
-**Digest:** sha256:664194351acaa8a9b403fdc162d2ea44bdab52d8aaf0868069a29cbc7fbd1ed2
+**Digest:** sha256:ad755abc4e3fdadf47787d677c592a3ff81223bfdba4da8590702d7c97bcccbf
 
 **Tags:**
 ```
@@ -41,7 +41,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-10.0-noble
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e0766905519fbc7982a590a195ee7c3e8bb594e8 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -95,7 +95,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-10.0-noble
 
 ## Variant: 9.0-bookworm-slim
 
-**Digest:** sha256:c3e9fef9a08dc8fcea938cc6c95c2e54a50f30a535d1b2e33ee23330bca5fbe9
+**Digest:** sha256:19f56ce4db27d73be3426f067931566d51704cd4171c76b5c309f21522c0d0f7
 
 **Tags:**
 ```
@@ -122,7 +122,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-9.0-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e0766905519fbc7982a590a195ee7c3e8bb594e8 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -177,7 +177,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-9.0-bookworm
 
 ## Variant: 9.0-noble
 
-**Digest:** sha256:83674e3b790282c03d1d7c5ba6a96b98ce028bcec51da5f36f0d201b8059c5b1
+**Digest:** sha256:fa2da9f2031c20737562663ba35b70aa7028767a0c4327650d3336ab5395bdc0
 
 **Tags:**
 ```
@@ -202,7 +202,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-9.0-noble
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e0766905519fbc7982a590a195ee7c3e8bb594e8 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -256,7 +256,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-9.0-noble
 
 ## Variant: 8.0-bookworm-slim
 
-**Digest:** sha256:a13b0f4d3ae11b68f9cd43e481664acf8c12e00506b90194fe2a6313a0536c80
+**Digest:** sha256:1f1a38e2a3ce37f67da86ea3a8029f667663ef2c4be8c8267594e1d9e6a42b15
 
 **Tags:**
 ```
@@ -283,7 +283,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e0766905519fbc7982a590a195ee7c3e8bb594e8 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -338,7 +338,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-bookworm
 
 ## Variant: 8.0-noble
 
-**Digest:** sha256:2508241fbb902d6fdfedb13fd59552ae0674f75210f67416373cc2305981a688
+**Digest:** sha256:28bbba3426d5d84d5ed131c6f49fa96bbf47f0a703e3f8c29ea6928c8fad3410
 
 **Tags:**
 ```
@@ -363,7 +363,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-noble
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e0766905519fbc7982a590a195ee7c3e8bb594e8 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -417,7 +417,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-noble
 
 ## Variant: 8.0-jammy
 
-**Digest:** sha256:8046056d4e4271e6dd62362dc5076021a52486d541fc7b26f229eb55145c1b00
+**Digest:** sha256:acaa88663827ab5a773d5094dda8861b003d5bc7cfbf4166de318bd750f355f2
 
 **Tags:**
 ```
@@ -442,7 +442,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-jammy
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e0766905519fbc7982a590a195ee7c3e8bb594e8 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
 
 **Other tools and utilities**
