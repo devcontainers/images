@@ -11,7 +11,7 @@
 
 ## Variant: trixie
 
-**Digest:** sha256:3ae0f16d1d93c62d8ee1960289d470d1e64d816c1679dbf3599c82c0166053d9
+**Digest:** sha256:c6ce5b02e47bed732d8fb797f99fc0fbe6be176896f2032eed44dc6eb7545ad4
 
 **Tags:**
 ```
@@ -32,22 +32,22 @@ mcr.microsoft.com/devcontainers/rust:dev-1-trixie
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Rust](https://github.com/rust-lang/rust) | 1.92.0 | /usr/local/cargo<br />/usr/local/rustup |
+| [Rust](https://github.com/rust-lang/rust) | 1.93.0 | /usr/local/cargo<br />/usr/local/rustup |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e0766905519fbc7982a590a195ee7c3e8bb594e8 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 
 | Tool / crate | Version |
 |--------------|---------|
 | rustfmt | 1.8.0 |
-| rust-analysis | 1.92.0 |
-| rust-src | 1.92.0 |
-| clippy | 1.92.0 |
+| rust-analysis | 1.93.0 |
+| rust-src | 1.93.0 |
+| clippy | 1.93.0 |
 
 **Other tools and utilities**
 
@@ -103,7 +103,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-trixie
 
 ## Variant: bookworm
 
-**Digest:** sha256:e592bb7977f9a07a9aaf9dc3024ff3f9ebeb3e251e7be2003e9e1e3901be69ec
+**Digest:** sha256:bad36474ab849c4e5758d8cbe97f3bdeb73915e4c4880e12c0ea4b5110fd0054
 
 **Tags:**
 ```
@@ -123,22 +123,22 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Rust](https://github.com/rust-lang/rust) | 1.92.0 | /usr/local/cargo<br />/usr/local/rustup |
+| [Rust](https://github.com/rust-lang/rust) | 1.93.0 | /usr/local/cargo<br />/usr/local/rustup |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e0766905519fbc7982a590a195ee7c3e8bb594e8 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 
 | Tool / crate | Version |
 |--------------|---------|
 | rustfmt | 1.8.0 |
-| rust-analysis | 1.92.0 |
-| rust-src | 1.92.0 |
-| clippy | 1.92.0 |
+| rust-analysis | 1.93.0 |
+| rust-src | 1.93.0 |
+| clippy | 1.93.0 |
 
 **Other tools and utilities**
 
@@ -195,7 +195,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bookworm
 
 ## Variant: bullseye
 
-**Digest:** sha256:7501d3b4c6b852d18de5c62bdb2a3128704136b948eb1a9fad3d52b799089abf
+**Digest:** sha256:a0fb17148f5bdad64bae86d50e86777e1b76329f3e77a8761d60c1c8dd73ff38
 
 **Tags:**
 ```
@@ -215,22 +215,22 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Rust](https://github.com/rust-lang/rust) | 1.92.0 | /usr/local/cargo<br />/usr/local/rustup |
+| [Rust](https://github.com/rust-lang/rust) | 1.93.0 | /usr/local/cargo<br />/usr/local/rustup |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | e0766905519fbc7982a590a195ee7c3e8bb594e8 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 
 | Tool / crate | Version |
 |--------------|---------|
 | rustfmt | 1.8.0 |
-| rust-analysis | 1.92.0 |
-| rust-src | 1.92.0 |
-| clippy | 1.92.0 |
+| rust-analysis | 1.93.0 |
+| rust-src | 1.93.0 |
+| clippy | 1.93.0 |
 
 **Other tools and utilities**
 

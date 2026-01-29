@@ -33,7 +33,7 @@ You can decide how often you want updates by referencing a [semantic version](ht
 
 - `mcr.microsoft.com/devcontainers/ruby:3-4`     (or `3-4-trixie`, `3-4-bookworm`, `3-4-bullseye` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/ruby:3.0-4`   (or `3.0-4-trixie`, `3.0-4-bookworm`, `3.0-4-bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/ruby:3.0.0-4` (or `3.0.0-4-trixie`, `3.0.0-4-bookworm`, `3.0.0-4-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/ruby:3.0.1-4` (or `3.0.1-4-trixie`, `3.0.1-4-bookworm`, `3.0.1-4-bullseye` to pin to an OS version)
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `2-4.0`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
