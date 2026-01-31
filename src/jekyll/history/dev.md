@@ -11,7 +11,7 @@
 
 ## Variant: 3.4-bookworm
 
-**Digest:** sha256:3018f49a290e60573c2542a5a925192c6f3d756d719598b76791e7efecbba617
+**Digest:** sha256:2d19b85b4d21a2b84ef908b77186991cb77849e846e3558c6bd4dff5790dde93
 
 **Tags:**
 ```
@@ -40,7 +40,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bookworm
 | Tool | Commit | Path |
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 | [rbenv](https://github.com/rbenv/rbenv.git) | ba96d7e3583e6e47ebb2f416ff2cf164e8a94f3f | /usr/local/share/rbenv |
 | [ruby-build](https://github.com/rbenv/ruby-build.git) | 2c978c3c169aa5d113b1f3addb1a2e36e6218167 | /usr/local/share/ruby-build |
 
@@ -48,7 +48,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bookworm
 
 | Tool / gem | Version |
 |------------|---------|
-| bundler | 4.0.4 |
+| bundler | 4.0.5 |
 | jekyll | 4.4.1 |
 | github-pages | 232 |
 
@@ -98,14 +98,13 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bookworm
 | unzip | 6.0-28 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
-| yarn | 1.22.22-1 |
 | zip | 3.0-13 |
 | zlib1g | 1:1.2.13.dfsg-1 |
 | zsh | 5.9-4+b8 |
 
 ## Variant: 3.3-bookworm
 
-**Digest:** sha256:4e32b058d7d863a41282d82009cca06bb64fb15697c7dc4adf33bd05325fb260
+**Digest:** sha256:c7585695119843d478e1b777ab04fcd457482b82e1cf3b5ad5c00e16ad1ade01
 
 **Tags:**
 ```
@@ -133,7 +132,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bookworm
 | Tool | Commit | Path |
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 | [rbenv](https://github.com/rbenv/rbenv.git) | ba96d7e3583e6e47ebb2f416ff2cf164e8a94f3f | /usr/local/share/rbenv |
 | [ruby-build](https://github.com/rbenv/ruby-build.git) | 2c978c3c169aa5d113b1f3addb1a2e36e6218167 | /usr/local/share/ruby-build |
 
@@ -141,7 +140,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bookworm
 
 | Tool / gem | Version |
 |------------|---------|
-| bundler | 4.0.4 |
+| bundler | 4.0.5 |
 | jekyll | 4.4.1 |
 | github-pages | 232 |
 
@@ -191,14 +190,13 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bookworm
 | unzip | 6.0-28 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
-| yarn | 1.22.22-1 |
 | zip | 3.0-13 |
 | zlib1g | 1:1.2.13.dfsg-1 |
 | zsh | 5.9-4+b8 |
 
 ## Variant: 3.3-bullseye
 
-**Digest:** sha256:f03b4c851858850afe8a7543d3e69fd42fc1723c6f66aa3f50aaf159afc0eeb6
+**Digest:** sha256:1e958e21f1f42894344eb5ad1c5e7501b18ffa1a647baa197f809928f0bdcc6c
 
 **Tags:**
 ```
@@ -226,7 +224,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 | Tool | Commit | Path |
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 | [rbenv](https://github.com/rbenv/rbenv.git) | ba96d7e3583e6e47ebb2f416ff2cf164e8a94f3f | /usr/local/share/rbenv |
 | [ruby-build](https://github.com/rbenv/ruby-build.git) | 2c978c3c169aa5d113b1f3addb1a2e36e6218167 | /usr/local/share/ruby-build |
 
@@ -234,7 +232,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 
 | Tool / gem | Version |
 |------------|---------|
-| bundler | 4.0.4 |
+| bundler | 4.0.5 |
 | jekyll | 4.4.1 |
 | github-pages | 232 |
 
@@ -285,7 +283,6 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 | unzip | 6.0-26+deb11u1 |
 | vim-tiny | 2:8.2.2434-3+deb11u3 |
 | wget | 1.21-1+deb11u2 |
-| yarn | 1.22.22-1 |
 | zip | 3.0-12 |
 | zlib1g | 1:1.2.11.dfsg-2+deb11u2 |
 | zsh | 5.8-6+deb11u1 |

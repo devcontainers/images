@@ -14,7 +14,7 @@
 
 ## Variant: 10.0-noble
 
-**Digest:** sha256:ad755abc4e3fdadf47787d677c592a3ff81223bfdba4da8590702d7c97bcccbf
+**Digest:** sha256:75a8c7018e3eafba164428c70468c17a355812499571691d17f7fd94f3e5d945
 
 **Tags:**
 ```
@@ -42,7 +42,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-10.0-noble
 | Tool | Commit | Path |
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -88,14 +88,13 @@ mcr.microsoft.com/devcontainers/dotnet:dev-10.0-noble
 | unzip | 6.0-28ubuntu4.1 |
 | vim-tiny | 2:9.1.0016-1ubuntu7.9 |
 | wget | 1.21.4-1ubuntu4.1 |
-| yarn | 1.22.22-1 |
 | zip | 3.0-13ubuntu0.2 |
 | zlib1g | 1:1.3.dfsg-3.1ubuntu2.1 |
 | zsh | 5.9-6ubuntu2 |
 
 ## Variant: 9.0-bookworm-slim
 
-**Digest:** sha256:19f56ce4db27d73be3426f067931566d51704cd4171c76b5c309f21522c0d0f7
+**Digest:** sha256:41ced0232a3e2ac54e751e8e97e500da8314aa098c9fa071989472f0a133c43e
 
 **Tags:**
 ```
@@ -123,7 +122,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-9.0-bookworm
 | Tool | Commit | Path |
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -170,14 +169,13 @@ mcr.microsoft.com/devcontainers/dotnet:dev-9.0-bookworm
 | unzip | 6.0-28 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
-| yarn | 1.22.22-1 |
 | zip | 3.0-13 |
 | zlib1g | 1:1.2.13.dfsg-1 |
 | zsh | 5.9-4+b8 |
 
 ## Variant: 9.0-noble
 
-**Digest:** sha256:fa2da9f2031c20737562663ba35b70aa7028767a0c4327650d3336ab5395bdc0
+**Digest:** sha256:bf6f154bc3e45e9bacb1005eb5e9c8b501bd282b3e91b72a25181fc053da77f6
 
 **Tags:**
 ```
@@ -203,7 +201,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-9.0-noble
 | Tool | Commit | Path |
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -249,14 +247,13 @@ mcr.microsoft.com/devcontainers/dotnet:dev-9.0-noble
 | unzip | 6.0-28ubuntu4.1 |
 | vim-tiny | 2:9.1.0016-1ubuntu7.9 |
 | wget | 1.21.4-1ubuntu4.1 |
-| yarn | 1.22.22-1 |
 | zip | 3.0-13ubuntu0.2 |
 | zlib1g | 1:1.3.dfsg-3.1ubuntu2.1 |
 | zsh | 5.9-6ubuntu2 |
 
 ## Variant: 8.0-bookworm-slim
 
-**Digest:** sha256:1f1a38e2a3ce37f67da86ea3a8029f667663ef2c4be8c8267594e1d9e6a42b15
+**Digest:** sha256:853bc7b0664c32ccc94d05d4dd6fff897428e2a5b9e3f7f7aba6702c5a2b6be4
 
 **Tags:**
 ```
@@ -284,7 +281,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-bookworm
 | Tool | Commit | Path |
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -331,14 +328,13 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-bookworm
 | unzip | 6.0-28 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
-| yarn | 1.22.22-1 |
 | zip | 3.0-13 |
 | zlib1g | 1:1.2.13.dfsg-1 |
 | zsh | 5.9-4+b8 |
 
 ## Variant: 8.0-noble
 
-**Digest:** sha256:28bbba3426d5d84d5ed131c6f49fa96bbf47f0a703e3f8c29ea6928c8fad3410
+**Digest:** sha256:be434e390826a0c108a25dce33eb556278ffc8b900ffce16d7aaadbc1f0632d5
 
 **Tags:**
 ```
@@ -364,7 +360,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-noble
 | Tool | Commit | Path |
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -410,14 +406,13 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-noble
 | unzip | 6.0-28ubuntu4.1 |
 | vim-tiny | 2:9.1.0016-1ubuntu7.9 |
 | wget | 1.21.4-1ubuntu4.1 |
-| yarn | 1.22.22-1 |
 | zip | 3.0-13ubuntu0.2 |
 | zlib1g | 1:1.3.dfsg-3.1ubuntu2.1 |
 | zsh | 5.9-6ubuntu2 |
 
 ## Variant: 8.0-jammy
 
-**Digest:** sha256:acaa88663827ab5a773d5094dda8861b003d5bc7cfbf4166de318bd750f355f2
+**Digest:** sha256:b2523e8f5ef49348e487b022f218fa8d2cf6d4d518729aa3855aadde180e6139
 
 **Tags:**
 ```
@@ -443,7 +438,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-jammy
 | Tool | Commit | Path |
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -490,7 +485,6 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-jammy
 | unzip | 6.0-26ubuntu3.2 |
 | vim-tiny | 2:8.2.3995-1ubuntu2.24 |
 | wget | 1.21.2-2ubuntu1.1 |
-| yarn | 1.22.22-1 |
 | zip | 3.0-12build2 |
 | zlib1g | 1:1.2.11.dfsg-2ubuntu9.2 |
 | zsh | 5.8.1-1 |
