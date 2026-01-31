@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:9dd2dda9ab2b7ae61193e4d27cbc4b7f9c2e98b51fe15ce75326d3463b60002d
+**Digest:** sha256:c5f0233833fe6acc3d9bc14b0ce4c3b26f624815e0b809fecdc63ba9e67c94ce
 
 **Tags:**
 ```
@@ -98,7 +98,6 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | unzip | 6.0-28 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
-| yarn | 1.22.22-1 |
 | zip | 3.0-13 |
 | zlib1g | 1:1.2.13.dfsg-1 |
 | zsh | 5.9-4+b8 |

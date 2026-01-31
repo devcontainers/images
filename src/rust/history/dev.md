@@ -11,7 +11,7 @@
 
 ## Variant: trixie
 
-**Digest:** sha256:c6ce5b02e47bed732d8fb797f99fc0fbe6be176896f2032eed44dc6eb7545ad4
+**Digest:** sha256:522eff9f2e77985b2acdd386cb0b23f9b73c3efee4af535324da1e99a9020d55
 
 **Tags:**
 ```
@@ -103,7 +103,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-trixie
 
 ## Variant: bookworm
 
-**Digest:** sha256:bad36474ab849c4e5758d8cbe97f3bdeb73915e4c4880e12c0ea4b5110fd0054
+**Digest:** sha256:706941fcccf73c3ab1200f1cba4464d2286ab30c8baec2bddfc8f43e227d2e1f
 
 **Tags:**
 ```
@@ -195,7 +195,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bookworm
 
 ## Variant: bullseye
 
-**Digest:** sha256:a0fb17148f5bdad64bae86d50e86777e1b76329f3e77a8761d60c1c8dd73ff38
+**Digest:** sha256:8e1ba13bd4cb2ea6967e2a8aa9a9ab2484ce4a31d8be42f0f474814ef2ac8f80
 
 **Tags:**
 ```

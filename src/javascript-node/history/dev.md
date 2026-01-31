@@ -17,7 +17,7 @@
 
 ## Variant: 24-trixie
 
-**Digest:** sha256:f68e36e2a95bf0b6e0fb950b0844dae79c9acce4e5714cb3d361a37cf715660e
+**Digest:** sha256:0290b41683c96f0ad66c5e8be3631f684cbbc9b1868d335954be5bf6fa02acd1
 
 **Tags:**
 ```
@@ -45,7 +45,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-trixie
 | Tool | Commit | Path |
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/node/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
@@ -103,7 +103,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-trixie
 
 ## Variant: 22-trixie
 
-**Digest:** sha256:6553cbd31238eda652c94492a2cb2f315e7be49bef03b88b517e749f375155ce
+**Digest:** sha256:1ace48aa34d99997c12e0feada252c3504e07d3162fa37ce8ceb792ef20b2392
 
 **Tags:**
 ```
@@ -130,7 +130,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-22
 | Tool | Commit | Path |
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/node/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
@@ -188,7 +188,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-22
 
 ## Variant: 20-trixie
 
-**Digest:** sha256:1719cce39d1c7039c2235a52067175dd03719ff0fd875b9716f645ef28be0761
+**Digest:** sha256:16b7904f7eb2d7c7f482ccaed652c3fd3746e797c6dec501705278383b2ecb8d
 
 **Tags:**
 ```
@@ -215,7 +215,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-20
 | Tool | Commit | Path |
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/node/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
@@ -273,7 +273,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-20
 
 ## Variant: 24-bookworm
 
-**Digest:** sha256:39b9a6a9bcac6e9a58a56f23f130268a6a376b077523b2fb141f554b263b8be9
+**Digest:** sha256:c089099023109d66e07577ad7da70d93e53782bb3aff7bd4cc53aff8a9ad01ff
 
 **Tags:**
 ```
@@ -300,7 +300,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bookworm
 | Tool | Commit | Path |
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/node/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
@@ -359,7 +359,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bookworm
 
 ## Variant: 22-bookworm
 
-**Digest:** sha256:f7e68d262c814ccdb2bb82e0ce4e5abf761824cd86c6982494cbad1f5bdaaf4e
+**Digest:** sha256:19439ddf343f66ebd6a1e25d7d2cb0bf8109ef765b7072127ee904fe8a93d465
 
 **Tags:**
 ```
@@ -385,7 +385,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-22-bookworm
 | Tool | Commit | Path |
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/node/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
@@ -444,7 +444,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-22-bookworm
 
 ## Variant: 20-bookworm
 
-**Digest:** sha256:18dac88fa93c7afda6df14268ec7067bb20e4dcf6e13f37a7bf0678f6f054edd
+**Digest:** sha256:42281f357ec10c1c21d00a48c82ef1a822de175c8f03ca609e705d001c929703
 
 **Tags:**
 ```
@@ -470,7 +470,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-20-bookworm
 | Tool | Commit | Path |
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/node/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
@@ -529,7 +529,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-20-bookworm
 
 ## Variant: 24-bullseye
 
-**Digest:** sha256:d91cf4260714df700764821c0db84731c9219366b752efc3f07def33ad27bbfc
+**Digest:** sha256:8806bcf6a47dd15832ae15e06c684a1d94b07233226ae4b7c26c4733d80a6af0
 
 **Tags:**
 ```
@@ -556,7 +556,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 | Tool | Commit | Path |
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/node/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
@@ -616,7 +616,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 
 ## Variant: 22-bullseye
 
-**Digest:** sha256:2b8925f8fd9f88035cb81c5bcb0b5b8f3217d52ce84e039720c069d14e4f8c9c
+**Digest:** sha256:c51630953ee31191e268ebd9ad6ca8d6aafd23d7ff1ec492705108a051680742
 
 **Tags:**
 ```
@@ -642,7 +642,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-22-bullseye
 | Tool | Commit | Path |
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/node/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
@@ -702,7 +702,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-22-bullseye
 
 ## Variant: 20-bullseye
 
-**Digest:** sha256:eb516241ccd22526efd886e7048b295a564487eb5cf18a0a5a019a09f9f6706a
+**Digest:** sha256:5dfd77a28ef282d5913562e9806a0a0f7e4dd651bedad94d4e3c4d33adc172e2
 
 **Tags:**
 ```
@@ -728,7 +728,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-20-bullseye
 | Tool | Commit | Path |
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/node/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 

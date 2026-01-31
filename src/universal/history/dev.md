@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:4a6907f57e06bcae505ea82439b0f3961396206774b60fd4c73b7081ab056f44
+**Digest:** sha256:6306d6ad93af382e51d65d982eb39f682cde5c39bf080ea4488669ef1d5215bd
 
 **Tags:**
 ```
@@ -28,7 +28,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 |--------------------|---------|------|
 | [Node.js](https://nodejs.org/en/) | 22.22.0<br />24.13.0 | /usr/local/share/nvm/versions/node/&lt;version&gt; |
 | [Python](https://www.python.org/) | 3.11.9<br />3.12.1 | /usr/local/python/&lt;version&gt; |
-| [Java](https://adoptopenjdk.net/) | 21.0.9<br />25.0.1 | /usr/local/sdkman/candidates/java/&lt;version&gt; |
+| [Java](https://adoptopenjdk.net/) | 21.0.9<br />25.0.2 | /usr/local/sdkman/candidates/java/&lt;version&gt; |
 | [.NET](https://dotnet.microsoft.com/) | 10.0.102 | /usr/share/dotnet/dotnet |
 | [Ruby](https://www.ruby-lang.org/en/) | 3.3.10<br />3.4.7 | /usr/local/rvm/rubies/&lt;version&gt; |
 | [PHP](https://xdebug.org/) | 8.4.15<br />8.5.0 | /usr/local/php/&lt;version&gt; |
@@ -43,7 +43,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | Tool | Commit | Path |
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/codespace/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | 6b20e9f750ea371bd347e5dbac8406d677292b60 | /usr/local/nvs |
 | [rbenv](https://github.com/rbenv/rbenv.git) | ba96d7e3583e6e47ebb2f416ff2cf164e8a94f3f | /usr/local/share/rbenv |
 | [ruby-build](https://github.com/rbenv/ruby-build.git) | 2c978c3c169aa5d113b1f3addb1a2e36e6218167 | /usr/local/share/ruby-build |
@@ -94,13 +94,13 @@ mcr.microsoft.com/devcontainers/universal:dev
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.52.0 | 
 | [Xdebug](https://xdebug.org/) | 3.5.0 | /usr/local/php/current |
-| [Composer](https://getcomposer.org/) | 2.9.4 | /usr/local/php/current/bin |
+| [Composer](https://getcomposer.org/) | 2.9.5 | /usr/local/php/current/bin |
 | [kubectl](https://github.com/kubernetes/kubectl) | v1.35.0 | /usr/local/bin |
 | [Helm](https://github.com/helm/helm) | 4.1.0 | /usr/local/bin |
 | [Docker Compose](https://github.com/docker/compose) | 2.40.3 | /usr/local/bin |
 | [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
 | [GitHub CLI](https://github.com/cli/cli) | 2.86.0 | 
-| [yarn](https://yarnpkg.com/) | 1.22.22 | /usr/bin |
+| [yarn](https://yarnpkg.com/) | ! Corepack is about to download https://registry.yarnpkg.com/yarn/-/yarn-1.22.22.tgz<br />1.22.22 | /usr/bin |
 | [Maven](https://maven.apache.org/) | 3.9.12 | /usr/local/sdkman/candidates/maven/current/bin |
 | [Gradle](https://gradle.org/) | 9.3.0 | /usr/local/sdkman/candidates/gradle/current/bin |
 | Docker (Moby) CLI &amp; Engine | 29.1.4 | 

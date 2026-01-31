@@ -13,7 +13,7 @@
 
 ## Variant: 1.25-trixie
 
-**Digest:** sha256:ed6c119c001b54727d7c29ac620e09c51269ad3a4751bb8fce326768b4a5471c
+**Digest:** sha256:759b5b8488232012b21fc5ec668d65e6bb6e5a8967db772ae78758331da4cf40
 
 **Tags:**
 ```
@@ -43,7 +43,7 @@ mcr.microsoft.com/devcontainers/go:dev-trixie
 | Tool | Commit | Path |
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Go tools and modules**
 
@@ -107,14 +107,13 @@ mcr.microsoft.com/devcontainers/go:dev-trixie
 | unzip | 6.0-29 |
 | vim-tiny | 2:9.1.1230-2 |
 | wget | 1.25.0-2 |
-| yarn | 1.22.22-1 |
 | zip | 3.0-15 |
 | zlib1g | 1:1.3.dfsg+really1.3.1-1+b1 |
 | zsh | 5.9-8+b18 |
 
 ## Variant: 1.24-trixie
 
-**Digest:** sha256:b30302e51d6881d44c1bbf6d4e3195e70a9662f94de8eff212b07425ce8cdf39
+**Digest:** sha256:6b3c1e79f2c814d7c1b0197e75c76f3aa118927e0c19e834155bda20eb926d76
 
 **Tags:**
 ```
@@ -144,7 +143,7 @@ mcr.microsoft.com/devcontainers/go:dev-trixie
 | Tool | Commit | Path |
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Go tools and modules**
 
@@ -208,14 +207,13 @@ mcr.microsoft.com/devcontainers/go:dev-trixie
 | unzip | 6.0-29 |
 | vim-tiny | 2:9.1.1230-2 |
 | wget | 1.25.0-2 |
-| yarn | 1.22.22-1 |
 | zip | 3.0-15 |
 | zlib1g | 1:1.3.dfsg+really1.3.1-1+b1 |
 | zsh | 5.9-8+b18 |
 
 ## Variant: 1.25-bookworm
 
-**Digest:** sha256:025adb55ad9d557b92d592b132a46485726223c05034ec5b53819318701442c5
+**Digest:** sha256:c23bd15c46ea66e92b24d17db6c843a4400dc4cb8190d3b482dc447e447313d8
 
 **Tags:**
 ```
@@ -243,7 +241,7 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 | Tool | Commit | Path |
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Go tools and modules**
 
@@ -308,14 +306,13 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 | unzip | 6.0-28 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
-| yarn | 1.22.22-1 |
 | zip | 3.0-13 |
 | zlib1g | 1:1.2.13.dfsg-1 |
 | zsh | 5.9-4+b8 |
 
 ## Variant: 1.24-bookworm
 
-**Digest:** sha256:217166190ac05e26b9ab34474e49bff0e624b746d554c18b830f622d4daa5bb8
+**Digest:** sha256:ea541afceb3cd109b2d29be94ddc016d8c293ab4bef080ac213039c2a5832ccb
 
 **Tags:**
 ```
@@ -343,7 +340,7 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 | Tool | Commit | Path |
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Go tools and modules**
 
@@ -408,14 +405,13 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 | unzip | 6.0-28 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
-| yarn | 1.22.22-1 |
 | zip | 3.0-13 |
 | zlib1g | 1:1.2.13.dfsg-1 |
 | zsh | 5.9-4+b8 |
 
 ## Variant: 1.24-bullseye
 
-**Digest:** sha256:3045f1002ab233dbdb798d1df8690771adaf979637695758d1391d27d7c4c82b
+**Digest:** sha256:b56504b6ec1315e17c6e763b13d62fc51489d8e96c3f156dfa54f64cd7d952c4
 
 **Tags:**
 ```
@@ -443,7 +439,7 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 | Tool | Commit | Path |
 |------|--------|------|
 | [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Go tools and modules**
 
@@ -509,7 +505,6 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 | unzip | 6.0-26+deb11u1 |
 | vim-tiny | 2:8.2.2434-3+deb11u3 |
 | wget | 1.21-1+deb11u2 |
-| yarn | 1.22.22-1 |
 | zip | 3.0-12 |
 | zlib1g | 1:1.2.11.dfsg-2+deb11u2 |
 | zsh | 5.8-6+deb11u1 |

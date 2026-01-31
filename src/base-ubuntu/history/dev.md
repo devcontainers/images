@@ -10,7 +10,7 @@
 
 ## Variant: noble
 
-**Digest:** sha256:d50fcb878bddf822fe05bb4576824fff045dbf37c81006ed9ca949581a703004
+**Digest:** sha256:10fc1f0ab20ff643ae316ed532a04ce0310087eac3a4d257913523f9c81985b4
 
 **Tags:**
 ```
@@ -83,7 +83,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 ## Variant: jammy
 
-**Digest:** sha256:ca78e802eabe6d14b601d43ea27ca56996198234dfded62d55f4b9f7b2a34c5c
+**Digest:** sha256:adf507f5b09148c30b718a509d1085eb79eade44da402c16a32304336490a711
 
 **Tags:**
 ```
