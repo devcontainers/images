@@ -30,7 +30,7 @@ You can decide how often you want updates by referencing a [semantic version](ht
 
 - `mcr.microsoft.com/devcontainers/miniconda:1-3`
 - `mcr.microsoft.com/devcontainers/miniconda:1.2-3`
-- `mcr.microsoft.com/devcontainers/miniconda:1.2.2-3`
+- `mcr.microsoft.com/devcontainers/miniconda:1.2.1-3`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/miniconda/tags/list).
 
