@@ -10,7 +10,6 @@
 | *Image type* | Dockerfile |
 | *Published image* | mcr.microsoft.com/devcontainers/python |
 | *Available image variants* | 3 / 3-trixie, 3.9 / 3.9-trixie, 3.10 / 3.10-trixie, 3.11-trixie / 3.11, 3.12-trixie / 3.12, 3.13-trixie / 3.13,  3.14-trixie / 3.14, 3-bookworm, 3.10-bookworm, 3.11-bookworm, 3.12-bookworm, 3.13-bookworm, 3.14-bookworm ([full list](https://mcr.microsoft.com/v2/devcontainers/python/tags/list)) |
-
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm`, and `bullseye` variants |
 | *Container Host OS Support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
@@ -37,7 +36,7 @@ You can decide how often you want updates by referencing a [semantic version](ht
 
 - `mcr.microsoft.com/devcontainers/python:3-3.13` (or `3-3.14-trixie`)
 - `mcr.microsoft.com/devcontainers/python:3.0-3.13` (or `3.0-3.13-trixie`)
-- `mcr.microsoft.com/devcontainers/python:3.0.0-3.13` (or `3.0.0-3.13-trixie`)
+- `mcr.microsoft.com/devcontainers/python:3.0.5-3.13` (or `3.0.5-3.13-trixie`)
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `2-3`). 
 You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.

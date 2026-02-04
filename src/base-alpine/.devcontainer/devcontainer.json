@@ -12,7 +12,10 @@
 			"userGid": "1000",
 			"upgradePackages": "true"
 		},
-		"./local-features/git": {}
+		"ghcr.io/devcontainers/features/git:1": {
+			"version": "latest",
+			"ppa": "false"
+		}
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

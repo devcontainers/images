@@ -17,7 +17,8 @@ rm -rf mv maven-wrapper-maven-wrapper-0.5.5
 check "java" java -version
 check "build-and-test-jar" ./mvnw -q package
 check "test-project" java -jar target/my-app-1.0-SNAPSHOT.jar
-check "nvm" bash -c ". /usr/local/share/nvm/nvm.sh && nvm install 10"
+check "nvm" bash -c ". /usr/local/share/nvm/nvm.sh && nvm install 24"
+check "corepack" bash -c ". /usr/local/share/nvm/nvm.sh && corepack enable"
 check "nvm-node" bash -c ". /usr/local/share/nvm/nvm.sh && node --version"
 check "yarn" bash -c ". /usr/local/share/nvm/nvm.sh && yarn --version"
 
