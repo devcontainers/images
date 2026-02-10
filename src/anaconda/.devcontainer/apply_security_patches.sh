@@ -26,7 +26,7 @@ done
 
 # Add an array for packages that should always pin to the provided version, 
 # even if higher version is available in conda channel
-pin_to_required_version=("protobuf" "transformers" "imagecodecs")
+pin_to_required_version=( "transformers" "imagecodecs" "brotli")
 
 # Function to check if a package is in the pin_to_required_version array
 function is_pin_to_required_version() {
