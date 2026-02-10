@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-	"version": "1.3.10",
-=======
-	"version": "1.3.9",
->>>>>>> 088ac9a3 (Update vulnerable packages and version in manifest)
+	"version": "1.3.11",
 	"build": {
 		"latest": true,
 		"rootDistro": "debian",
