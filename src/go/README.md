@@ -10,8 +10,8 @@
 | *Categories* | Core, Languages |
 | *Definition type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/go |
-| *Available image variants* | 1 / 1-bookworm, 1.26 / 1.26-trixie, 1.25 / 1.25-bookworm, 1-bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/go/tags/list)) |
-| *Published image architecture(s)* | x86-64, arm64/aarch64 for `trixie`, `bookworm`, and `bullseye` variants |
+| *Available image variants* | 1 / 1-trixie, 1.26 / 1.26-trixie, 1.25 / 1.25-bookworm, 1-bookworm ([full list](https://mcr.microsoft.com/v2/devcontainers/go/tags/list)) |
+| *Published image architecture(s)* | x86-64, arm64/aarch64 for `trixie`, `bookworm` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
 | *Languages, platforms* | Go |
@@ -23,7 +23,7 @@ See **[history](history)** for information on the contents of published images.
 You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
 - `mcr.microsoft.com/devcontainers/go` (latest)
-- `mcr.microsoft.com/devcontainers/go:1` (or `1-trixie`, `1-bookworm`, `1-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/go:1` (or `1-trixie`, `1-bookworm` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/go:1.26` (or `1.26-trixie`, `1.26-bookworm` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/go:1.25` (or `1.25-trixie`, `1.25-bookworm` to pin to an OS version)
 
