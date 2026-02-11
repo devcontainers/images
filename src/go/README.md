@@ -25,7 +25,7 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 - `mcr.microsoft.com/devcontainers/go` (latest)
 - `mcr.microsoft.com/devcontainers/go:1` (or `1-trixie`, `1-bookworm`, `1-bullseye` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/go:1.26` (or `1.26-trixie`, `1.26-bookworm` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/go:1.25` (or `1.25-bookworm`, `1.25-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/go:1.25` (or `1.25-trixie`, `1.25-bookworm` to pin to an OS version)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
