@@ -74,7 +74,7 @@ checkCondaPackageVersion "pyarrow" "17.0.0"
 checkCondaPackageVersion "pydantic" "2.5.3"
 checkCondaPackageVersion "tqdm" "4.66.4"
 checkCondaPackageVersion "black" "24.4.2"
-checkCondaPackageVersion "streamlit" "1.54.0"
+checkCondaPackageVersion "streamlit" "1.37.1"
 checkCondaPackageVersion "nltk" "3.9"
 
 check "conda-update-conda" bash -c "conda update -y conda"
