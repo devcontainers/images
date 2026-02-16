@@ -11,7 +11,7 @@
 
 ## Variant: trixie
 
-**Digest:** sha256:8cdf7ba5665149ab029634959f5b5bd52d267ef14c66e267c8c1291817f4f46d
+**Digest:** sha256:cf5469feebde78e4880dca6cf3c7b87a9744404df9259745a3b016df931f4b5c
 
 **Tags:**
 ```
@@ -33,13 +33,13 @@ mcr.microsoft.com/devcontainers/base:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cdd31a7ab321dfb0f151df37a0712d93c131bbe4 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.52.0 | 
+| [git](https://github.com/git/git) | 2.53.0 | 
 
 **Additional linux tools and packages**
 
@@ -85,7 +85,7 @@ mcr.microsoft.com/devcontainers/base:dev
 
 ## Variant: bookworm
 
-**Digest:** sha256:c18126f27096329c038bbb10f23ad4a109519dce4fcdd106626cb1558e34d4b6
+**Digest:** sha256:81507dede209d855061cc9a8b71145e6561b797b7282a3bd0c1fc77f59932c4b
 
 **Tags:**
 ```
@@ -105,13 +105,13 @@ mcr.microsoft.com/devcontainers/base:dev-debian12
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cdd31a7ab321dfb0f151df37a0712d93c131bbe4 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.52.0 | 
+| [git](https://github.com/git/git) | 2.53.0 | 
 
 **Additional linux tools and packages**
 
@@ -158,7 +158,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian12
 
 ## Variant: bullseye
 
-**Digest:** sha256:1acbed8676a0b64e0523d3479e30f6e1feb39007db5f31f238e385a84dc4a42c
+**Digest:** sha256:2db19a4a688e225094df9d11dbaaea71942b83749424fc71d59a56c60a2e2407
 
 **Tags:**
 ```
@@ -178,13 +178,13 @@ mcr.microsoft.com/devcontainers/base:dev-debian11
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 41c5b9677afaf239268197546cfc8e003a073c97 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.52.0 | 
+| [git](https://github.com/git/git) | 2.53.0 | 
 
 **Additional linux tools and packages**
 
@@ -222,7 +222,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian11
 | psmisc | 23.4-2 |
 | rsync | 3.2.3-4+deb11u3 |
 | strace | 5.10-1 |
-| sudo | 1.9.5p2-3+deb11u2 |
+| sudo | 1.9.5p2-3+deb11u3 |
 | unzip | 6.0-26+deb11u1 |
 | vim-tiny | 2:8.2.2434-3+deb11u3 |
 | wget | 1.21-1+deb11u2 |

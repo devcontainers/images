@@ -13,7 +13,7 @@
 
 ## Variant: latest
 
-**Digest:** sha256:d0b3c0a125cd5e3b35847b3b41a13d02a73be403cc721a9b903fc9cdcd521ab8
+**Digest:** sha256:1cfeeb752545b7a80d435827bce00d934353ca6d1afcb3ee5f8a0f95e6880798
 
 **Tags:**
 ```
@@ -32,18 +32,19 @@ mcr.microsoft.com/devcontainers/base:dev-alpinelatest
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 41c5b9677afaf239268197546cfc8e003a073c97 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.52.0 | 
+| [git](https://github.com/git/git) | 2.53.0 | 
 
 **Additional linux tools and packages**
 
 | Tool / library | Version |
 |----------------|---------|
+| git | 2.52.0-r0 |
 | openssh-client-default | 10.2_p1-r0 |
 | gnupg | 2.4.9-r0 |
 | procps-ng | 4.0.5-r0 |
@@ -81,7 +82,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpinelatest
 
 ## Variant: 3.23
 
-**Digest:** sha256:ef12575e9adde926d83db0b1fb51913f8ce04a9d9878d91312f8fe64d1d1c5c6
+**Digest:** sha256:e00dc109f73e1fa8683c87ce6d90cbd7fc1a58af18a09a3fea35759936f3068b
 
 **Tags:**
 ```
@@ -101,18 +102,19 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 41c5b9677afaf239268197546cfc8e003a073c97 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.52.0 | 
+| [git](https://github.com/git/git) | 2.53.0 | 
 
 **Additional linux tools and packages**
 
 | Tool / library | Version |
 |----------------|---------|
+| git | 2.52.0-r0 |
 | openssh-client-default | 10.2_p1-r0 |
 | gnupg | 2.4.9-r0 |
 | procps-ng | 4.0.5-r0 |
@@ -150,7 +152,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 ## Variant: 3.22
 
-**Digest:** sha256:c07b6f683547499a359608d5db30de04659492a6889e9f42bedd5752a0aa396b
+**Digest:** sha256:a21d221379292ba6f8534a12e3acf819085f29090704692915521ae937ed6460
 
 **Tags:**
 ```
@@ -169,18 +171,19 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.22
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 41c5b9677afaf239268197546cfc8e003a073c97 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.52.0 | 
+| [git](https://github.com/git/git) | 2.53.0 | 
 
 **Additional linux tools and packages**
 
 | Tool / library | Version |
 |----------------|---------|
+| git | 2.49.1-r0 |
 | openssh-client-default | 10.0_p1-r10 |
 | gnupg | 2.4.9-r0 |
 | procps-ng | 4.0.4-r3 |
@@ -218,7 +221,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.22
 
 ## Variant: 3.21
 
-**Digest:** sha256:bd5c451cfac59dfe0207dff00ee08ae096cf84b422de51129895af982e926548
+**Digest:** sha256:e24b248f4da51c46f732376a03ce8cb8c17c002e887a71311de3f76ffeb447ab
 
 **Tags:**
 ```
@@ -237,18 +240,19 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.21
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 41c5b9677afaf239268197546cfc8e003a073c97 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.52.0 | 
+| [git](https://github.com/git/git) | 2.53.0 | 
 
 **Additional linux tools and packages**
 
 | Tool / library | Version |
 |----------------|---------|
+| git | 2.47.3-r0 |
 | openssh-client-default | 9.9_p2-r0 |
 | gnupg | 2.4.9-r0 |
 | procps-ng | 4.0.4-r2 |
@@ -286,7 +290,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.21
 
 ## Variant: 3.20
 
-**Digest:** sha256:8d3063b0a7b1528cf46a8c7f9ba8817fad4cd79eb86db34591b6ca6410cd0e78
+**Digest:** sha256:ccde608b563cdaea7dd23fa90db893169a7bf2d1a8f6fc7b013abdf97f1c429e
 
 **Tags:**
 ```
@@ -305,18 +309,19 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.20
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 41c5b9677afaf239268197546cfc8e003a073c97 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.52.0 | 
+| [git](https://github.com/git/git) | 2.53.0 | 
 
 **Additional linux tools and packages**
 
 | Tool / library | Version |
 |----------------|---------|
+| git | 2.45.4-r0 |
 | openssh-client-default | 9.7_p1-r5 |
 | gnupg | 2.4.9-r0 |
 | procps-ng | 4.0.4-r0 |

@@ -11,7 +11,7 @@
 
 ## Variant: trixie
 
-**Digest:** sha256:c6ce5b02e47bed732d8fb797f99fc0fbe6be176896f2032eed44dc6eb7545ad4
+**Digest:** sha256:cd76e9f9e9f0665477c56d8b90d1e52062064095a8c71fa9c8d5abe6510cfee5
 
 **Tags:**
 ```
@@ -38,7 +38,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-trixie
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 41c5b9677afaf239268197546cfc8e003a073c97 | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 
@@ -53,7 +53,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-trixie
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.52.0 | 
+| [git](https://github.com/git/git) | 2.53.0 | 
 
 **Additional linux tools and packages**
 
@@ -103,7 +103,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-trixie
 
 ## Variant: bookworm
 
-**Digest:** sha256:bad36474ab849c4e5758d8cbe97f3bdeb73915e4c4880e12c0ea4b5110fd0054
+**Digest:** sha256:0a72daae7c6c18daaf02ff2e39fe782f23212a3dd4937b4a8414426e6ac4575f
 
 **Tags:**
 ```
@@ -129,7 +129,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 41c5b9677afaf239268197546cfc8e003a073c97 | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 
@@ -144,7 +144,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bookworm
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.52.0 | 
+| [git](https://github.com/git/git) | 2.53.0 | 
 
 **Additional linux tools and packages**
 
@@ -195,7 +195,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bookworm
 
 ## Variant: bullseye
 
-**Digest:** sha256:a0fb17148f5bdad64bae86d50e86777e1b76329f3e77a8761d60c1c8dd73ff38
+**Digest:** sha256:edefe50554e9c78fee764e07264e0cae8605dd4dc66bc19d949cc6a7becd0c20
 
 **Tags:**
 ```
@@ -221,7 +221,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 41c5b9677afaf239268197546cfc8e003a073c97 | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 
@@ -236,7 +236,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.52.0 | 
+| [git](https://github.com/git/git) | 2.53.0 | 
 
 **Additional linux tools and packages**
 
@@ -278,7 +278,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 | python3-minimal | 3.9.2-3 |
 | rsync | 3.2.3-4+deb11u3 |
 | strace | 5.10-1 |
-| sudo | 1.9.5p2-3+deb11u2 |
+| sudo | 1.9.5p2-3+deb11u3 |
 | unzip | 6.0-26+deb11u1 |
 | vim-tiny | 2:8.2.2434-3+deb11u3 |
 | wget | 1.21-1+deb11u2 |

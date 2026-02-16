@@ -13,7 +13,7 @@
 
 ## Variant: 1.25-trixie
 
-**Digest:** sha256:ed6c119c001b54727d7c29ac620e09c51269ad3a4751bb8fce326768b4a5471c
+**Digest:** sha256:03aa198ccbfcb3abd1b69b7d1919f91de9183a8021e42d0cb0b81ce1993504c1
 
 **Tags:**
 ```
@@ -36,14 +36,14 @@ mcr.microsoft.com/devcontainers/go:dev-trixie
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | 1.25.6 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.25.7 | /usr/local/go |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 41c5b9677afaf239268197546cfc8e003a073c97 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Go tools and modules**
 
@@ -62,7 +62,7 @@ mcr.microsoft.com/devcontainers/go:dev-trixie
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.52.0 | 
+| [git](https://github.com/git/git) | 2.53.0 | 
 
 **Additional linux tools and packages**
 
@@ -107,14 +107,13 @@ mcr.microsoft.com/devcontainers/go:dev-trixie
 | unzip | 6.0-29 |
 | vim-tiny | 2:9.1.1230-2 |
 | wget | 1.25.0-2 |
-| yarn | 1.22.22-1 |
 | zip | 3.0-15 |
 | zlib1g | 1:1.3.dfsg+really1.3.1-1+b1 |
 | zsh | 5.9-8+b18 |
 
 ## Variant: 1.24-trixie
 
-**Digest:** sha256:b30302e51d6881d44c1bbf6d4e3195e70a9662f94de8eff212b07425ce8cdf39
+**Digest:** sha256:abff9e84bdd77ae492540c43e7aa893d524e7fb1cfd64ea7456fbcd631b7967e
 
 **Tags:**
 ```
@@ -137,14 +136,14 @@ mcr.microsoft.com/devcontainers/go:dev-trixie
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | 1.24.12 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.24.13 | /usr/local/go |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 41c5b9677afaf239268197546cfc8e003a073c97 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Go tools and modules**
 
@@ -163,7 +162,7 @@ mcr.microsoft.com/devcontainers/go:dev-trixie
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.52.0 | 
+| [git](https://github.com/git/git) | 2.53.0 | 
 
 **Additional linux tools and packages**
 
@@ -208,14 +207,13 @@ mcr.microsoft.com/devcontainers/go:dev-trixie
 | unzip | 6.0-29 |
 | vim-tiny | 2:9.1.1230-2 |
 | wget | 1.25.0-2 |
-| yarn | 1.22.22-1 |
 | zip | 3.0-15 |
 | zlib1g | 1:1.3.dfsg+really1.3.1-1+b1 |
 | zsh | 5.9-8+b18 |
 
 ## Variant: 1.25-bookworm
 
-**Digest:** sha256:025adb55ad9d557b92d592b132a46485726223c05034ec5b53819318701442c5
+**Digest:** sha256:f4e0fe511a4139ee5c621cdabfe0cf014dda8efe2333c7c55bc366dab490b776
 
 **Tags:**
 ```
@@ -236,14 +234,14 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | 1.25.6 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.25.7 | /usr/local/go |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 41c5b9677afaf239268197546cfc8e003a073c97 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Go tools and modules**
 
@@ -262,7 +260,7 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.52.0 | 
+| [git](https://github.com/git/git) | 2.53.0 | 
 
 **Additional linux tools and packages**
 
@@ -308,14 +306,13 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 | unzip | 6.0-28 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
-| yarn | 1.22.22-1 |
 | zip | 3.0-13 |
 | zlib1g | 1:1.2.13.dfsg-1 |
 | zsh | 5.9-4+b8 |
 
 ## Variant: 1.24-bookworm
 
-**Digest:** sha256:217166190ac05e26b9ab34474e49bff0e624b746d554c18b830f622d4daa5bb8
+**Digest:** sha256:efde6f14a374c2309f78a4ff2921139eb844904ee39494f216fd79b555e6320a
 
 **Tags:**
 ```
@@ -336,23 +333,23 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | 1.24.12 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.24.13 | /usr/local/go |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cdd31a7ab321dfb0f151df37a0712d93c131bbe4 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Go tools and modules**
 
 | Tool / module | Version |
 |---------------|---------|
-| golang.org/x/tools/gopls | 0.21.0 |
-| honnef.co/go/tools | 0.6.1 |
+| golang.org/x/tools/gopls | 0.21.1 |
+| honnef.co/go/tools | 0.7.0 |
 | golang.org/x/lint | 0.0.0-20241112194109-818c5a804067 |
-| github.com/mgechev/revive | 1.13.0 |
+| github.com/mgechev/revive | 1.14.0 |
 | github.com/uudashr/gopkgs | latest |
 | github.com/ramya-rao-a/go-outline | latest |
 | github.com/go-delve/delve | 1.26.0 |
@@ -362,7 +359,7 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.52.0 | 
+| [git](https://github.com/git/git) | 2.53.0 | 
 
 **Additional linux tools and packages**
 
@@ -408,14 +405,13 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 | unzip | 6.0-28 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
-| yarn | 1.22.22-1 |
 | zip | 3.0-13 |
 | zlib1g | 1:1.2.13.dfsg-1 |
 | zsh | 5.9-4+b8 |
 
 ## Variant: 1.24-bullseye
 
-**Digest:** sha256:3045f1002ab233dbdb798d1df8690771adaf979637695758d1391d27d7c4c82b
+**Digest:** sha256:049b99e4dbcdfe0d1699c777746d8cc6c85bf329770e11ad06422d4a1f274584
 
 **Tags:**
 ```
@@ -442,8 +438,8 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 41c5b9677afaf239268197546cfc8e003a073c97 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Go tools and modules**
 
@@ -462,7 +458,7 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.52.0 | 
+| [git](https://github.com/git/git) | 2.53.0 | 
 
 **Additional linux tools and packages**
 
@@ -505,11 +501,10 @@ mcr.microsoft.com/devcontainers/go:dev-bullseye
 | psmisc | 23.4-2 |
 | rsync | 3.2.3-4+deb11u3 |
 | strace | 5.10-1 |
-| sudo | 1.9.5p2-3+deb11u2 |
+| sudo | 1.9.5p2-3+deb11u3 |
 | unzip | 6.0-26+deb11u1 |
 | vim-tiny | 2:8.2.2434-3+deb11u3 |
 | wget | 1.21-1+deb11u2 |
-| yarn | 1.22.22-1 |
 | zip | 3.0-12 |
 | zlib1g | 1:1.2.11.dfsg-2+deb11u2 |
 | zsh | 5.8-6+deb11u1 |

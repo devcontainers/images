@@ -10,7 +10,7 @@
 
 ## Variant: noble
 
-**Digest:** sha256:d50fcb878bddf822fe05bb4576824fff045dbf37c81006ed9ca949581a703004
+**Digest:** sha256:ff2dcde09aa24fd6c8afa457863bc53bce4cebc32739c097e35f4744eeab0c7e
 
 **Tags:**
 ```
@@ -20,7 +20,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
-**Linux distribution:** Ubuntu 24.04.3 LTS (debian-like distro)
+**Linux distribution:** Ubuntu 24.04.4 LTS (debian-like distro)
 
 **Architectures:** linux/amd64, linux/arm64
 
@@ -31,13 +31,13 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 41c5b9677afaf239268197546cfc8e003a073c97 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.52.0 | 
+| [git](https://github.com/git/git) | 2.53.0 | 
 
 **Additional linux tools and packages**
 
@@ -54,12 +54,12 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 | iproute2 | 6.1.0-1ubuntu6.2 |
 | jq | 1.7.1-3ubuntu0.24.04.1 |
 | less | 590-2ubuntu2.1 |
-| libc6 | 2.39-0ubuntu8.6 |
+| libc6 | 2.39-0ubuntu8.7 |
 | libgssapi-krb5-2 | 1.20.1-6ubuntu2.6 |
 | libicu74 | 74.2-1ubuntu3.1 |
 | libkrb5-3 | 1.20.1-6ubuntu2.6 |
 | libstdc++6 | 14.2.0-4ubuntu2~24.04 |
-| locales | 2.39-0ubuntu8.6 |
+| locales | 2.39-0ubuntu8.7 |
 | lsb-release | 12.0-2 |
 | lsof | 4.95.0-1build3 |
 | man-db | 2.12.0-4build2 |
@@ -83,7 +83,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 ## Variant: jammy
 
-**Digest:** sha256:ca78e802eabe6d14b601d43ea27ca56996198234dfded62d55f4b9f7b2a34c5c
+**Digest:** sha256:243f2cec350ec5f5b25e70a006ac5f007be3fe4bb1944508daf59c82f13a3d73
 
 **Tags:**
 ```
@@ -103,13 +103,13 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu22.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 41c5b9677afaf239268197546cfc8e003a073c97 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.52.0 | 
+| [git](https://github.com/git/git) | 2.53.0 | 
 
 **Additional linux tools and packages**
 
@@ -126,13 +126,13 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu22.04
 | iproute2 | 5.15.0-1ubuntu2 |
 | jq | 1.6-2.1ubuntu3.1 |
 | less | 590-1ubuntu0.22.04.3 |
-| libc6 | 2.35-0ubuntu3.12 |
+| libc6 | 2.35-0ubuntu3.13 |
 | libgssapi-krb5-2 | 1.19.2-2ubuntu0.7 |
 | libicu70 | 70.1-2 |
 | libkrb5-3 | 1.19.2-2ubuntu0.7 |
 | liblttng-ust1 | 2.13.1-1ubuntu1 |
 | libstdc++6 | 12.3.0-1ubuntu1~22.04.2 |
-| locales | 2.35-0ubuntu3.12 |
+| locales | 2.35-0ubuntu3.13 |
 | lsb-release | 11.1.0ubuntu4 |
 | lsof | 4.93.2+dfsg-1.1build2 |
 | man-db | 2.10.2-1 |
