@@ -14,6 +14,7 @@ cols=2
 
 # Define the 2D array
 declare -A packages_array
+declare -A required_versions
 
 # Fill the 2D array
 for ((i=0; i<rows; i++)); do
@@ -22,6 +23,7 @@ for ((i=0; i<rows; i++)); do
     # Assign the parts to the 2D array
     packages_array[$i,0]=${parts[0]}
     packages_array[$i,1]=${parts[1]}
+    required_versions[${parts[0]}]=${parts[1]}
 done
 
 # Add an array for packages that should always pin to the provided version, 
@@ -77,12 +79,9 @@ for ((i=0; i<rows; i++)); do
 done
 
 for pkg in "${pin_to_required_version[@]}"; do
-    for ((i=0; i<rows; i++)); do
-        if [[ "${packages_array[$i,0]}" == "$pkg" ]]; then
-            REQUIRED_VERSION="${packages_array[$i,1]}"
-            echo "Installing ${pkg} from pip for v${REQUIRED_VERSION}..."
-            python3 -m pip install --upgrade --no-cache-dir "${pkg}==${REQUIRED_VERSION}"
-            break
-        fi
-    done
+    REQUIRED_VERSION="${required_versions[$pkg]}"
+    if [[ -n "${REQUIRED_VERSION}" ]]; then
+        echo "Installing ${pkg} from pip for v${REQUIRED_VERSION}..."
+        python3 -m pip install --upgrade --no-cache-dir "${pkg}==${REQUIRED_VERSION}"
+    fi
 done
