@@ -75,3 +75,14 @@ for ((i=0; i<rows; i++)); do
         fi
     fi
 done
+
+for pkg in "${pin_to_required_version[@]}"; do
+    for ((i=0; i<rows; i++)); do
+        if [[ "${packages_array[$i,0]}" == "$pkg" ]]; then
+            REQUIRED_VERSION="${packages_array[$i,1]}"
+            echo "Installing ${pkg} from pip for v${REQUIRED_VERSION}..."
+            python3 -m pip install --upgrade --no-cache-dir "${pkg}==${REQUIRED_VERSION}"
+            break
+        fi
+    done
+done
