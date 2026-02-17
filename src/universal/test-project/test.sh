@@ -183,7 +183,7 @@ checkPythonPackageVersion "python" "requests" "2.31.0"
 
 ## Python -alternative version 3.11. Must be removed when pinned version 3.11 is updated to a different python version.
 checkPythonPackageVersion "/usr/local/python/3.11.*/bin/python" "setuptools" "78.1.1"
-check "pip-version-for-3.11" bash -c "/usr/local/python/3.11.*/bin/python -m pip --version | grep -E '26\.[0-9]'"
+check "pip-version-for-3.11" bash -c "/usr/local/python/3.11.*/bin/python -m pip --version | grep -E '26\.[0-9]+'"
 
 ## Conda Python
 checkCondaPackageVersion "requests" "2.31.0"
