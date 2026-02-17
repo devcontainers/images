@@ -77,7 +77,7 @@ for ((i=0; i<rows; i++)); do
     fi
 done
 
-# Ensure pinned packages remain at the required version after conda installs.
+# Reinstall pinned packages at their required version after conda installs.
 for pkg in "${pin_to_required_version[@]}"; do
     REQUIRED_VERSION="${required_versions[$pkg]}"
     if [[ -z "${REQUIRED_VERSION}" ]]; then
