@@ -44,6 +44,9 @@ function is_pin_to_required_version() {
 for ((i=0; i<rows; i++)); do
     CURRENT_VERSION=$(pip show "${packages_array[$i,0]}" --disable-pip-version-check | grep '^Version:' | awk '{print $2}')
     REQUIRED_VERSION="${packages_array[$i,1]}"
+    if is_pin_to_required_version "${packages_array[$i,0]}"; then
+        continue
+    fi
     GREATER_VERSION_A=$((echo ${REQUIRED_VERSION}; echo ${CURRENT_VERSION}) | sort -V | tail -1)
     # Check if the required_version is greater than current_version
     if [[ $CURRENT_VERSION != $GREATER_VERSION_A ]]; then
@@ -80,7 +83,12 @@ done
 
 for pkg in "${pin_to_required_version[@]}"; do
     REQUIRED_VERSION="${required_versions[$pkg]}"
-    if [[ -n "${REQUIRED_VERSION}" ]]; then
+    if [[ -z "${REQUIRED_VERSION}" ]]; then
+        echo "WARNING: Missing required version for ${pkg}. Skipping installation."
+        continue
+    fi
+    CURRENT_VERSION=$(pip show "${pkg}" --disable-pip-version-check | grep '^Version:' | awk '{print $2}')
+    if [[ "${CURRENT_VERSION}" != "${REQUIRED_VERSION}" ]]; then
         echo "Installing ${pkg} from pip for v${REQUIRED_VERSION}..."
         python3 -m pip install --upgrade --no-cache-dir "${pkg}==${REQUIRED_VERSION}"
     fi
