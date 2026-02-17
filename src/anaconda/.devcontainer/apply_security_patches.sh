@@ -77,7 +77,7 @@ for ((i=0; i<rows; i++)); do
     fi
 done
 
-# Reinstall pinned packages at their required versions. This keeps pin_to_required_version packages at exact versions even if conda upgrades them as dependencies.
+# Reinstall pin_to_required_version packages at their required versions. This keeps them at exact versions even if conda upgrades them as dependencies.
 for pkg in "${pin_to_required_version[@]}"; do
     REQUIRED_VERSION="${required_versions[$pkg]}"
     if [[ -z "${REQUIRED_VERSION}" ]]; then
