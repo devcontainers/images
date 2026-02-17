@@ -47,7 +47,7 @@ for ((i=0; i<rows; i++)); do
     if is_pin_to_required_version "${packages_array[$i,0]}"; then
         continue
     fi
-    GREATER_VERSION_A=$((echo ${REQUIRED_VERSION}; echo ${CURRENT_VERSION}) | sort -V | tail -1)
+    GREATER_VERSION_A=$( (echo ${REQUIRED_VERSION}; echo ${CURRENT_VERSION}) | sort -V | tail -1)
     # Check if the required_version is greater than current_version
     if [[ $CURRENT_VERSION != $GREATER_VERSION_A ]]; then
         echo "${packages_array[$i,0]} version v${CURRENT_VERSION} installed by the base image is not greater or equal to the required: v${REQUIRED_VERSION}"
@@ -64,12 +64,8 @@ for ((i=0; i<rows; i++)); do
             echo "No version for ${packages_array[$i,0]} found in conda channel."
             CONDA_VERSION="0"
         fi
-        GREATER_VERSION_B=$((echo ${REQUIRED_VERSION}; echo ${CONDA_VERSION}) | sort -V | tail -1)
-        if is_pin_to_required_version "${packages_array[$i,0]}"; then
-            echo -e "Package ${packages_array[$i,0]} is set to always use the required version: v${REQUIRED_VERSION}.\n";
-            echo "Installing ${packages_array[$i,0]} from pip for v${REQUIRED_VERSION}..."
-            python3 -m pip install --upgrade --no-cache-dir "${packages_array[$i,0]}==${REQUIRED_VERSION}"
-        elif [[ $CONDA_VERSION == $GREATER_VERSION_B ]]; then        
+        GREATER_VERSION_B=$( (echo ${REQUIRED_VERSION}; echo ${CONDA_VERSION}) | sort -V | tail -1)
+        if [[ $CONDA_VERSION == $GREATER_VERSION_B ]]; then        
             echo -e "Found Version v${CONDA_VERSION} in the Conda channel which is greater than or equal to the required version: v${REQUIRED_VERSION}. \n";
             echo "Installing ${packages_array[$i,0]} from source from conda channel for v${REQUIRED_VERSION}..."
             conda install "${packages_array[$i,0]}==${CONDA_VERSION}"        
@@ -81,6 +77,7 @@ for ((i=0; i<rows; i++)); do
     fi
 done
 
+# Ensure pinned packages remain at the required version after conda installs.
 for pkg in "${pin_to_required_version[@]}"; do
     REQUIRED_VERSION="${required_versions[$pkg]}"
     if [[ -z "${REQUIRED_VERSION}" ]]; then
