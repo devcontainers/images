@@ -1,0 +1,31 @@
+name: JSON and Dockerfile linter
+
+on:
+  push:
+    branches: 
+      - main
+  pull_request:
+
+jobs:
+  code-linter-steps:
+    name: Json and Dockerfile linter
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0    
+    
+    - uses: super-linter/super-linter/slim@v8
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BASH_SEVERITY: error
+        VALIDATE_ALL_CODEBASE: true
+        DEFAULT_BRANCH: main
+        FILTER_REGEX_INCLUDE: '(^|.*/)(src/.*|build/.*\.js|Dockerfile)$'
+        FILTER_REGEX_EXCLUDE: '(^|.*/)src/.*/test-project(/.*)?$'
+        VALIDATE_DOCKERFILE_HADOLINT: true
+        VALIDATE_JAVASCRIPT_ES: true
+        VALIDATE_JSON: true
+        VALIDATE_BASH: true
+        
