@@ -1,4 +1,4 @@
-name: JSON and Dockerfile linter
+name: JSON, shell, javascript and Dockerfile linter
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   code-linter-steps:
-    name: JSON and Dockerfile linter
+    name: JSON, shell, javascript and Dockerfile linter
     runs-on: ubuntu-latest
     
     steps:
