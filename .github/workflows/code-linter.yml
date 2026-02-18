@@ -19,6 +19,7 @@ jobs:
     - uses: super-linter/super-linter/slim@v8
       env:
         GITHUB_TOKEN: ${{ secrets.PAT }}
+        ENABLE_GITHUB_PULL_REQUEST_SUMMARY_COMMENT: false
         BASH_SEVERITY: error
         VALIDATE_ALL_CODEBASE: true
         DEFAULT_BRANCH: main
