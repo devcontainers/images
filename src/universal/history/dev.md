@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:4a6907f57e06bcae505ea82439b0f3961396206774b60fd4c73b7081ab056f44
+**Digest:** sha256:0fc9454e5d0ac63aba7fa59cf93bbbeb7ffda2e2f558dd706d3651be3fd3678c
 
 **Tags:**
 ```
@@ -15,7 +15,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
-**Linux distribution:** Ubuntu 24.04.3 LTS (debian-like distro)
+**Linux distribution:** Ubuntu 24.04.4 LTS (debian-like distro)
 
 **Architectures:** linux/amd64
 
@@ -26,27 +26,27 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 22.22.0<br />24.13.0 | /usr/local/share/nvm/versions/node/&lt;version&gt; |
+| [Node.js](https://nodejs.org/en/) | 22.22.0<br />24.13.1 | /usr/local/share/nvm/versions/node/&lt;version&gt; |
 | [Python](https://www.python.org/) | 3.11.9<br />3.12.1 | /usr/local/python/&lt;version&gt; |
-| [Java](https://adoptopenjdk.net/) | 21.0.9<br />25.0.1 | /usr/local/sdkman/candidates/java/&lt;version&gt; |
-| [.NET](https://dotnet.microsoft.com/) | 10.0.102 | /usr/share/dotnet/dotnet |
+| [Java](https://adoptopenjdk.net/) | 21.0.10<br />25.0.2 | /usr/local/sdkman/candidates/java/&lt;version&gt; |
+| [.NET](https://dotnet.microsoft.com/) | 10.0.103 | /usr/share/dotnet/dotnet |
 | [Ruby](https://www.ruby-lang.org/en/) | 3.3.10<br />3.4.7 | /usr/local/rvm/rubies/&lt;version&gt; |
 | [PHP](https://xdebug.org/) | 8.4.15<br />8.5.0 | /usr/local/php/&lt;version&gt; |
 | GCC | 13.3.0-6ubuntu2~24.04 | 
 | Clang | 18.1.3 (1ubuntu1) | 
-| [Go](https://golang.org/dl) | 1.25.6 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.26.0 | /usr/local/go |
 | [Jekyll](https://jekyllrb.com/) | 4.4.1 | 
-| [Jupyter Lab](https://jupyter.org/) | 4.5.3 | /home/codespace/.local/bin/jupyter-lab |
+| [Jupyter Lab](https://jupyter.org/) | 4.5.4 | /home/codespace/.local/bin/jupyter-lab |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/codespace/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 45dd7d006ab2650273d9859f7e3224cf757a9db3 | /home/codespace/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 | [nvs](https://github.com/jasongin/nvs) | 6b20e9f750ea371bd347e5dbac8406d677292b60 | /usr/local/nvs |
 | [rbenv](https://github.com/rbenv/rbenv.git) | ba96d7e3583e6e47ebb2f416ff2cf164e8a94f3f | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 2c978c3c169aa5d113b1f3addb1a2e36e6218167 | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | d395d1ae53c9834f239ca42913d42dd2e0beaeb3 | /usr/local/share/ruby-build |
 
 **Pip / pipx installed tools and packages**
 
@@ -55,7 +55,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | requests | 2.32.5 |
 | jupyterlab_git | 0.51.4 |
 | certifi | 2026.1.4 |
-| setuptools | 80.10.2 |
+| setuptools | 82.0.0 |
 | pylint | 4.0.4 |
 | flake8 | 7.3.0 |
 | autopep8 | 2.3.2 |
@@ -72,10 +72,10 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool / module | Version |
 |---------------|---------|
-| golang.org/x/tools/gopls | 0.21.0 |
+| golang.org/x/tools/gopls | 0.21.1 |
 | honnef.co/go/tools | 0.7.0-0.dev.0.20251022135355-8273271481d0 |
 | golang.org/x/lint | 0.0.0-20241112194109-818c5a804067 |
-| github.com/mgechev/revive | 1.13.0 |
+| github.com/mgechev/revive | 1.14.0 |
 | github.com/uudashr/gopkgs | latest |
 | github.com/ramya-rao-a/go-outline | latest |
 | github.com/go-delve/delve | 1.26.0 |
@@ -92,19 +92,19 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.52.0 | 
+| [git](https://github.com/git/git) | 2.53.0 | 
 | [Xdebug](https://xdebug.org/) | 3.5.0 | /usr/local/php/current |
-| [Composer](https://getcomposer.org/) | 2.9.4 | /usr/local/php/current/bin |
-| [kubectl](https://github.com/kubernetes/kubectl) | v1.35.0 | /usr/local/bin |
-| [Helm](https://github.com/helm/helm) | 4.1.0 | /usr/local/bin |
+| [Composer](https://getcomposer.org/) | 2.9.5 | /usr/local/php/current/bin |
+| [kubectl](https://github.com/kubernetes/kubectl) | v1.35.1 | /usr/local/bin |
+| [Helm](https://github.com/helm/helm) | 4.1.1 | /usr/local/bin |
 | [Docker Compose](https://github.com/docker/compose) | 2.40.3 | /usr/local/bin |
 | [rvm](https://github.com/rvm/rvm) | 1.29.12 | /usr/local/rvm |
 | [GitHub CLI](https://github.com/cli/cli) | 2.86.0 | 
-| [yarn](https://yarnpkg.com/) | 1.22.22 | /usr/bin |
+| [yarn](https://yarnpkg.com/) | ! Corepack is about to download https://registry.yarnpkg.com/yarn/-/yarn-1.22.22.tgz<br />1.22.22 | /usr/bin |
 | [Maven](https://maven.apache.org/) | 3.9.12 | /usr/local/sdkman/candidates/maven/current/bin |
-| [Gradle](https://gradle.org/) | 9.3.0 | /usr/local/sdkman/candidates/gradle/current/bin |
-| Docker (Moby) CLI &amp; Engine | 29.1.4 | 
-| [conda](https://github.com/conda/conda) | 25.11.1 | /opt/conda/bin |
+| [Gradle](https://gradle.org/) | 9.3.1 | /usr/local/sdkman/candidates/gradle/current/bin |
+| Docker (Moby) CLI &amp; Engine | 29.2.1 | 
+| [conda](https://github.com/conda/conda) | 26.1.0 | /opt/conda/bin |
 
 **Additional linux tools and packages**
 
@@ -129,8 +129,8 @@ mcr.microsoft.com/devcontainers/universal:dev
 | iptables | 1.8.10-3ubuntu2 |
 | jq | 1.7.1-3ubuntu0.24.04.1 |
 | less | 590-2ubuntu2.1 |
-| libc6 | 2.39-0ubuntu8.6 |
-| libc6-dev | 2.39-0ubuntu8.6 |
+| libc6 | 2.39-0ubuntu8.7 |
+| libc6-dev | 2.39-0ubuntu8.7 |
 | libgssapi-krb5-2 | 1.20.1-6ubuntu2.6 |
 | libicu74 | 74.2-1ubuntu3.1 |
 | libkrb5-3 | 1.20.1-6ubuntu2.6 |
@@ -144,15 +144,15 @@ mcr.microsoft.com/devcontainers/universal:dev
 | libx11-6 | 2:1.8.7-1build1 |
 | lldb | 1:18.0-59~exp2 |
 | llvm | 1:18.0-59~exp2 |
-| locales | 2.39-0ubuntu8.6 |
+| locales | 2.39-0ubuntu8.7 |
 | lsb-release | 12.0-2 |
 | lsof | 4.95.0-1build3 |
 | make | 4.3-4.1build2 |
 | man-db | 2.12.0-4build2 |
 | manpages | 6.7-2 |
 | manpages-dev | 6.7-2 |
-| moby-cli (Docker CLI) | 29.1.4-ubuntu24.04u1 |
-| moby-engine (Docker Engine) | 29.1.4-ubuntu24.04u2 |
+| moby-cli (Docker CLI) | 29.2.1-ubuntu24.04u1 |
+| moby-engine (Docker Engine) | 29.2.1-ubuntu24.04u1 |
 | nano | 7.2-2ubuntu0.1 |
 | ncdu | 1.19-0.1 |
 | net-tools | 2.10-0.1ubuntu4.4 |

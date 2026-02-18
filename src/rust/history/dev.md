@@ -11,7 +11,7 @@
 
 ## Variant: trixie
 
-**Digest:** sha256:c6ce5b02e47bed732d8fb797f99fc0fbe6be176896f2032eed44dc6eb7545ad4
+**Digest:** sha256:e6b1732a190bb835b8af07a614f3674e89a00e7c824b398afec04895037cd8b8
 
 **Tags:**
 ```
@@ -32,28 +32,28 @@ mcr.microsoft.com/devcontainers/rust:dev-1-trixie
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Rust](https://github.com/rust-lang/rust) | 1.93.0 | /usr/local/cargo<br />/usr/local/rustup |
+| [Rust](https://github.com/rust-lang/rust) | 1.93.1 | /usr/local/cargo<br />/usr/local/rustup |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 45dd7d006ab2650273d9859f7e3224cf757a9db3 | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 
 | Tool / crate | Version |
 |--------------|---------|
 | rustfmt | 1.8.0 |
-| rust-analysis | 1.93.0 |
-| rust-src | 1.93.0 |
-| clippy | 1.93.0 |
+| rust-analysis | 1.93.1 |
+| rust-src | 1.93.1 |
+| clippy | 1.93.1 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.52.0 | 
+| [git](https://github.com/git/git) | 2.53.0 | 
 
 **Additional linux tools and packages**
 
@@ -103,7 +103,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-trixie
 
 ## Variant: bookworm
 
-**Digest:** sha256:bad36474ab849c4e5758d8cbe97f3bdeb73915e4c4880e12c0ea4b5110fd0054
+**Digest:** sha256:e588be1fc22f0a151b3781d565197abd1c68ec8190a15b5eef5745ffccb73cc6
 
 **Tags:**
 ```
@@ -123,28 +123,28 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Rust](https://github.com/rust-lang/rust) | 1.93.0 | /usr/local/cargo<br />/usr/local/rustup |
+| [Rust](https://github.com/rust-lang/rust) | 1.93.1 | /usr/local/cargo<br />/usr/local/rustup |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 45dd7d006ab2650273d9859f7e3224cf757a9db3 | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 
 | Tool / crate | Version |
 |--------------|---------|
 | rustfmt | 1.8.0 |
-| rust-analysis | 1.93.0 |
-| rust-src | 1.93.0 |
-| clippy | 1.93.0 |
+| rust-analysis | 1.93.1 |
+| rust-src | 1.93.1 |
+| clippy | 1.93.1 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.52.0 | 
+| [git](https://github.com/git/git) | 2.53.0 | 
 
 **Additional linux tools and packages**
 
@@ -195,7 +195,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bookworm
 
 ## Variant: bullseye
 
-**Digest:** sha256:a0fb17148f5bdad64bae86d50e86777e1b76329f3e77a8761d60c1c8dd73ff38
+**Digest:** sha256:d3b477cfce2dfb16f8a3e393f9063cb0dfeea1ffe0caae038285517de560f037
 
 **Tags:**
 ```
@@ -215,28 +215,28 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Rust](https://github.com/rust-lang/rust) | 1.93.0 | /usr/local/cargo<br />/usr/local/rustup |
+| [Rust](https://github.com/rust-lang/rust) | 1.93.1 | /usr/local/cargo<br />/usr/local/rustup |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 45dd7d006ab2650273d9859f7e3224cf757a9db3 | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 
 | Tool / crate | Version |
 |--------------|---------|
 | rustfmt | 1.8.0 |
-| rust-analysis | 1.93.0 |
-| rust-src | 1.93.0 |
-| clippy | 1.93.0 |
+| rust-analysis | 1.93.1 |
+| rust-src | 1.93.1 |
+| clippy | 1.93.1 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.52.0 | 
+| [git](https://github.com/git/git) | 2.53.0 | 
 
 **Additional linux tools and packages**
 
@@ -278,7 +278,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bullseye
 | python3-minimal | 3.9.2-3 |
 | rsync | 3.2.3-4+deb11u3 |
 | strace | 5.10-1 |
-| sudo | 1.9.5p2-3+deb11u2 |
+| sudo | 1.9.5p2-3+deb11u3 |
 | unzip | 6.0-26+deb11u1 |
 | vim-tiny | 2:8.2.2434-3+deb11u3 |
 | wget | 1.21-1+deb11u2 |

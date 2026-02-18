@@ -2,19 +2,6 @@
     "Registrations": [
         {
             "Component": {
-                "Type": "linux",
-                "Linux": {
-                    "Name": "yarn",
-                    "Version": "1.22.22-1",
-                    "Distribution": "debian",
-                    "Release": "12",
-                    "Pool-URL": "https://dl.yarnpkg.com/debian",
-                    "Key-URL": "https://dl.yarnpkg.com/debian/pubkey.gpg"
-                }
-            }
-        },
-        {
-            "Component": {
                 "Type": "Pip",
                 "Pip": {
                     "Name": "joblib",
@@ -36,7 +23,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "cryptography",
-                    "Version": "46.0.3"
+                    "Version": "46.0.4"
                 }
             }
         },
@@ -72,7 +59,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "setuptools",
-                    "Version": "80.10.1"
+                    "Version": "80.10.2"
                 }
             }
         },
@@ -191,7 +178,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "67cd8c4673512d08238461f7ce00715da01665d4"
+                    "commitHash": "45dd7d006ab2650273d9859f7e3224cf757a9db3"
                 }
             }
         },
@@ -200,7 +187,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "git",
-                    "Version": "2.52.0",
+                    "Version": "2.53.0",
                     "DownloadUrl": "https://github.com/git/git"
                 }
             }
@@ -311,27 +298,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "4b737e6345a7683a239f61f0fc728c312471a13b"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "git",
-                "Git": {
-                    "Name": "vcpkg",
-                    "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "3e5d317f4783991056da95ab4cb1f27e76d1cf88"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "git",
-                "Git": {
-                    "Name": "vcpkg",
-                    "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "a2a478a93d582a4b395a4dc4b7052bfcb42c1f8e"
+                    "commitHash": "e5a1490e1409d175932ef6014519e9ae149ddb7c"
                 }
             }
         },
@@ -381,7 +348,17 @@
                 "Git": {
                     "Name": "nvm",
                     "repositoryUrl": "https://github.com/nvm-sh/nvm.git",
-                    "commitHash": "977563e97ddc66facf3a8e31c6cff01d236f09bd"
+                    "commitHash": "62387b8f92aa012d48202747fd75c40850e5e261"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "git",
+                "Git": {
+                    "Name": "Oh My Zsh!",
+                    "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
+                    "commitHash": "44f2a128aaee9f52391fe357d103e54f7f40fabb"
                 }
             }
         },
@@ -450,7 +427,7 @@
                 "Type": "go",
                 "Go": {
                     "Name": "golang.org/x/tools/gopls",
-                    "Version": "0.21.0"
+                    "Version": "0.21.1"
                 }
             }
         },
@@ -477,7 +454,7 @@
                 "Type": "go",
                 "Go": {
                     "Name": "github.com/mgechev/revive",
-                    "Version": "1.13.0"
+                    "Version": "1.14.0"
                 }
             }
         },
@@ -519,10 +496,11 @@
         },
         {
             "Component": {
-                "Type": "go",
-                "Go": {
-                    "Name": "honnef.co/go/tools",
-                    "Version": "0.6.1"
+                "Type": "other",
+                "Other": {
+                    "Name": "Docker Image: golang",
+                    "Version": "1.26-trixie",
+                    "DownloadUrl": "https://hub.docker.com/_/golang"
                 }
             }
         },
@@ -541,7 +519,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Image: golang",
-                    "Version": "1.24-trixie",
+                    "Version": "1.26-bookworm",
                     "DownloadUrl": "https://hub.docker.com/_/golang"
                 }
             }
@@ -552,26 +530,6 @@
                 "Other": {
                     "Name": "Docker Image: golang",
                     "Version": "1.25-bookworm",
-                    "DownloadUrl": "https://hub.docker.com/_/golang"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "other",
-                "Other": {
-                    "Name": "Docker Image: golang",
-                    "Version": "1.24-bookworm",
-                    "DownloadUrl": "https://hub.docker.com/_/golang"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "other",
-                "Other": {
-                    "Name": "Docker Image: golang",
-                    "Version": "1.24-bullseye",
                     "DownloadUrl": "https://hub.docker.com/_/golang"
                 }
             }
@@ -601,7 +559,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Eclipse Temurin",
-                    "Version": "1.8.0_472",
+                    "Version": "1.8.0_482",
                     "DownloadUrl": "https://adoptium.net/"
                 }
             }
@@ -611,7 +569,7 @@
                 "Type": "npm",
                 "Npm": {
                     "Name": "eslint",
-                    "Version": "9.39.2"
+                    "Version": "10.0.0"
                 }
             }
         },
@@ -621,7 +579,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "67cd8c4673512d08238461f7ce00715da01665d4"
+                    "commitHash": "45dd7d006ab2650273d9859f7e3224cf757a9db3"
                 }
             }
         },
@@ -726,7 +684,7 @@
                 "Type": "RubyGems",
                 "RubyGems": {
                     "Name": "bundler",
-                    "Version": "4.0.4"
+                    "Version": "4.0.6"
                 }
             }
         },
@@ -764,7 +722,7 @@
                 "Git": {
                     "Name": "ruby-build",
                     "repositoryUrl": "https://github.com/rbenv/ruby-build.git",
-                    "commitHash": "2c978c3c169aa5d113b1f3addb1a2e36e6218167"
+                    "commitHash": "d395d1ae53c9834f239ca42913d42dd2e0beaeb3"
                 }
             }
         },
@@ -814,6 +772,15 @@
                 "Pip": {
                     "Name": "certifi",
                     "Version": "2025.11.12"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "Pip",
+                "Pip": {
+                    "Name": "cryptography",
+                    "Version": "46.0.3"
                 }
             }
         },
@@ -940,7 +907,17 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "945d89f7ae86c740f0e09e94b7baf9b12a384535"
+                    "commitHash": "67cd8c4673512d08238461f7ce00715da01665d4"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
+                    "Name": "git",
+                    "Version": "2.52.0",
+                    "DownloadUrl": "https://github.com/git/git"
                 }
             }
         },
@@ -969,7 +946,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Composer",
-                    "Version": "2.9.4",
+                    "Version": "2.9.5",
                     "DownloadUrl": "https://getcomposer.org/"
                 }
             }
@@ -1287,7 +1264,7 @@
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "rust-analysis",
-                    "Version": "1.93.0"
+                    "Version": "1.93.1"
                 }
             }
         },
@@ -1296,7 +1273,7 @@
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "rust-src",
-                    "Version": "1.93.0"
+                    "Version": "1.93.1"
                 }
             }
         },
@@ -1305,7 +1282,7 @@
                 "Type": "cargo",
                 "Cargo": {
                     "Name": "clippy",
-                    "Version": "1.93.0"
+                    "Version": "1.93.1"
                 }
             }
         },
@@ -1452,7 +1429,7 @@
                 "Type": "linux",
                 "Linux": {
                     "Name": "moby-cli",
-                    "Version": "29.1.4-ubuntu24.04u1",
+                    "Version": "29.2.1-ubuntu24.04u1",
                     "Distribution": "ubuntu",
                     "Release": "24.04",
                     "Pool-URL": "https://packages.microsoft.com/repos/microsoft-ubuntu-noble-prod"
@@ -1464,7 +1441,7 @@
                 "Type": "linux",
                 "Linux": {
                     "Name": "moby-engine",
-                    "Version": "29.1.4-ubuntu24.04u2",
+                    "Version": "29.2.1-ubuntu24.04u1",
                     "Distribution": "ubuntu",
                     "Release": "24.04",
                     "Pool-URL": "https://packages.microsoft.com/repos/microsoft-ubuntu-noble-prod"
@@ -1549,7 +1526,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "setuptools",
-                    "Version": "80.10.2"
+                    "Version": "82.0.0"
                 }
             }
         },
@@ -1576,7 +1553,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "67cd8c4673512d08238461f7ce00715da01665d4"
+                    "commitHash": "45dd7d006ab2650273d9859f7e3224cf757a9db3"
                 }
             }
         },
@@ -1605,7 +1582,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "kubectl",
-                    "Version": "v1.35.0",
+                    "Version": "v1.35.1",
                     "DownloadUrl": "https://github.com/kubernetes/kubectl"
                 }
             }
@@ -1615,7 +1592,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Helm",
-                    "Version": "4.1.0",
+                    "Version": "4.1.1",
                     "DownloadUrl": "https://github.com/helm/helm"
                 }
             }
@@ -1645,7 +1622,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Go",
-                    "Version": "1.25.6",
+                    "Version": "1.26.0",
                     "DownloadUrl": "https://golang.org/dl"
                 }
             }
