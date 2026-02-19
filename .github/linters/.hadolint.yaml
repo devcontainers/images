@@ -1,0 +1,16 @@
+---
+##########################
+## Hadolint config file ##
+##########################
+failure-threshold: "error"
+ignored:
+  - DL4001 # Ignore wget and curl in same file
+  - DL4006 # ignore pipefail as we don't want to add layers
+  - DL3018 # Allow unpinned OS package versions (see DL3008 note for APT)
+  - DL3013 # Allow unpinned pip package versions; versions are managed outside the Dockerfile
+  - DL3003 # Ignore workdir so we don't add layers
+  - SC2016 # ignore as its interpreted later
+  - DL3044 # Ignore using env in env
+  - DL3008 # Ignore pinned versions check for APT
+  - SC3020 # Ignore POSIX check of the shorthand redirection(&>)
+  - SC2283 # Remove spaces around = to assign and this is not needed

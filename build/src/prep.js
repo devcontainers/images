@@ -7,7 +7,6 @@ const path = require('path');
 const asyncUtils = require('./utils/async');
 const configUtils = require('./utils/config');
 const handlebars = require('handlebars');
-const mkdirp = require('mkdirp');
 const scriptSHA = {};
 
 const assetsPath = path.join(__dirname, '..', 'assets');
