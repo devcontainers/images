@@ -60,7 +60,7 @@ Weekly automated builds occur every Monday via `push-dev.yml` workflow, ensuring
 FROM mcr.microsoft.com/devcontainers/python:dev-3.13
 
 # Stable/production
-FROM mcr.microsoft.com/devcontainers/python:1-3.13
+FROM mcr.microsoft.com/devcontainers/python:3-3.13
 ```
 
 The versioned tag provides stability while dev tags continuously incorporate changes.
