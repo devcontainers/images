@@ -6,9 +6,9 @@
       "integrity": "sha256:9ddad2e4f71f172cc0bf28461e70948218f70f8ad6cd936b5c8dbe0a8acf6b45"
     },
     "ghcr.io/devcontainers/features/conda:1": {
-      "version": "1.0.10",
-      "resolved": "ghcr.io/devcontainers/features/conda@sha256:84207a9933d7739cb99731ab671eda3f07200ce1fb3dfdc261dc565dd68d168c",
-      "integrity": "sha256:84207a9933d7739cb99731ab671eda3f07200ce1fb3dfdc261dc565dd68d168c"
+      "version": "1.2.5",
+      "resolved": "ghcr.io/devcontainers/features/conda@sha256:d189cf17997854b28c7ffbab5db70f9b7d70332d97dfbf44447e48e958a03c8b",
+      "integrity": "sha256:d189cf17997854b28c7ffbab5db70f9b7d70332d97dfbf44447e48e958a03c8b"
     },
     "ghcr.io/devcontainers/features/copilot-cli:1": {
       "version": "1.0.0",
