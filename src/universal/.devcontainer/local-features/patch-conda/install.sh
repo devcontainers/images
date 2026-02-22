@@ -49,15 +49,12 @@ update_conda_package() {
 sudo_if /opt/conda/bin/python3 -m pip install --upgrade pip
 
 # Temporary: Upgrade python packages due to security vulnerabilities
-# They are installed by the conda feature and Conda distribution does not have the patches.
+# They are installed by the conda feature and Conda distribution does not have the patches
 
-# https://github.com/advisories/GHSA-h4gh-qq45-vh27
-update_python_package /opt/conda/bin/python3 cryptography "43.0.1"
+# https://github.com/advisories/GHSA-79v4-65xg-pq4g
+update_python_package /opt/conda/bin/python3 cryptography "44.0.1"
 
 update_conda_package pyopenssl "25.0.0"
-
-# https://github.com/advisories/GHSA-pq67-6m6q-mj2v
-update_conda_package urllib3 "2.5.0"
 
 # https://github.com/advisories/GHSA-9hjg-9r4m-mvj7
 update_conda_package requests "2.32.4"
@@ -67,3 +64,9 @@ update_conda_package setuptools "78.1.1"
 
 # https://github.com/advisories/GHSA-g7vv-2v7x-gj9p
 update_python_package /opt/conda/bin/python3 tqdm "4.66.3"
+
+# https://github.com/advisories/GHSA-38jv-5279-wg99
+update_conda_package urllib3 "2.6.3"
+
+# https://nvd.nist.gov/vuln/detail/CVE-2025-6176
+update_conda_package brotli "1.2.0"

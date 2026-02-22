@@ -128,6 +128,10 @@ async function loadDefinitionManifest(manifestPath, definitionId) {
 
 // Returns location of the definition based on name
 function getDefinitionPath(definitionId, relative) {
+    if (!allDefinitionPaths[definitionId]) {
+        const availableIds = Object.keys(allDefinitionPaths).sort().join(', ');
+        throw new Error(`Invalid definition ID '${definitionId}'. Available definition IDs are: ${availableIds}`);
+    }
     return relative ? allDefinitionPaths[definitionId].relativeToRootPath : allDefinitionPaths[definitionId].path
 }
 
