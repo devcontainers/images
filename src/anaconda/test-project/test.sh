@@ -63,6 +63,8 @@ checkPythonPackageVersion "imagecodecs" "2023.9.18"
 checkPythonPackageVersion "brotli" "1.2.0"
 checkPythonPackageVersion "fonttools" "4.60.2"
 checkPythonPackageVersion "distributed" "2026.1.0"
+checkPythonPackageVersion "filelock" "3.20.1"
+checkPythonPackageVersion "bokeh" "3.8.2"
 
 checkCondaPackageVersion "pyopenssl" "24.2.1"
 checkCondaPackageVersion "requests" "2.32.4"
