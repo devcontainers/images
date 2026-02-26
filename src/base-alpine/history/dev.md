@@ -13,7 +13,7 @@
 
 ## Variant: latest
 
-**Digest:** sha256:d0b3c0a125cd5e3b35847b3b41a13d02a73be403cc721a9b903fc9cdcd521ab8
+**Digest:** sha256:05182261a3bf7a1a168e9d3ec8ea047b6a45626e315c49098dd79f2d39012526
 
 **Tags:**
 ```
@@ -32,18 +32,19 @@ mcr.microsoft.com/devcontainers/base:dev-alpinelatest
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5c4f27b7166360bd23709f24642b247eac30a147 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.52.0 | 
+| [git](https://github.com/git/git) | 2.53.0 | 
 
 **Additional linux tools and packages**
 
 | Tool / library | Version |
 |----------------|---------|
+| git | 2.52.0-r0 |
 | openssh-client-default | 10.2_p1-r0 |
 | gnupg | 2.4.9-r0 |
 | procps-ng | 4.0.5-r0 |
@@ -58,7 +59,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpinelatest
 | unzip | 6.0-r16 |
 | zip | 3.0-r13 |
 | nano | 8.7-r0 |
-| vim | 9.1.1942-r0 |
+| vim | 9.1.2132-r0 |
 | less | 685-r0 |
 | jq | 1.8.1-r0 |
 | libgcc | 15.2.0-r2 |
@@ -81,7 +82,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpinelatest
 
 ## Variant: 3.23
 
-**Digest:** sha256:ef12575e9adde926d83db0b1fb51913f8ce04a9d9878d91312f8fe64d1d1c5c6
+**Digest:** sha256:ab69c7275e41b04e2b3f3576b488ec5aef2c630ccebb98dfa9b2f3f0aee71926
 
 **Tags:**
 ```
@@ -101,18 +102,19 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5c4f27b7166360bd23709f24642b247eac30a147 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.52.0 | 
+| [git](https://github.com/git/git) | 2.53.0 | 
 
 **Additional linux tools and packages**
 
 | Tool / library | Version |
 |----------------|---------|
+| git | 2.52.0-r0 |
 | openssh-client-default | 10.2_p1-r0 |
 | gnupg | 2.4.9-r0 |
 | procps-ng | 4.0.5-r0 |
@@ -127,7 +129,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 | unzip | 6.0-r16 |
 | zip | 3.0-r13 |
 | nano | 8.7-r0 |
-| vim | 9.1.1942-r0 |
+| vim | 9.1.2132-r0 |
 | less | 685-r0 |
 | jq | 1.8.1-r0 |
 | libgcc | 15.2.0-r2 |
@@ -150,7 +152,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine
 
 ## Variant: 3.22
 
-**Digest:** sha256:c07b6f683547499a359608d5db30de04659492a6889e9f42bedd5752a0aa396b
+**Digest:** sha256:798224d4cb115f39c3f74e043f66a8469d7dad0d3534b34d77752598a5644cd6
 
 **Tags:**
 ```
@@ -169,18 +171,19 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.22
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5c4f27b7166360bd23709f24642b247eac30a147 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.52.0 | 
+| [git](https://github.com/git/git) | 2.53.0 | 
 
 **Additional linux tools and packages**
 
 | Tool / library | Version |
 |----------------|---------|
+| git | 2.49.1-r0 |
 | openssh-client-default | 10.0_p1-r10 |
 | gnupg | 2.4.9-r0 |
 | procps-ng | 4.0.4-r3 |
@@ -218,7 +221,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.22
 
 ## Variant: 3.21
 
-**Digest:** sha256:bd5c451cfac59dfe0207dff00ee08ae096cf84b422de51129895af982e926548
+**Digest:** sha256:317925416f6cd8ad5ec3bee0b3c082e3bd091209c05dde0bc1756908c56f58ac
 
 **Tags:**
 ```
@@ -237,18 +240,19 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.21
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5c4f27b7166360bd23709f24642b247eac30a147 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.52.0 | 
+| [git](https://github.com/git/git) | 2.53.0 | 
 
 **Additional linux tools and packages**
 
 | Tool / library | Version |
 |----------------|---------|
+| git | 2.47.3-r0 |
 | openssh-client-default | 9.9_p2-r0 |
 | gnupg | 2.4.9-r0 |
 | procps-ng | 4.0.4-r2 |
@@ -286,7 +290,7 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.21
 
 ## Variant: 3.20
 
-**Digest:** sha256:8d3063b0a7b1528cf46a8c7f9ba8817fad4cd79eb86db34591b6ca6410cd0e78
+**Digest:** sha256:3f231d15a0597b4ea4d558c3018b10fd3f7adaf6788fb318bdd36e8cd25f5239
 
 **Tags:**
 ```
@@ -305,18 +309,19 @@ mcr.microsoft.com/devcontainers/base:dev-alpine3.20
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 5c4f27b7166360bd23709f24642b247eac30a147 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.52.0 | 
+| [git](https://github.com/git/git) | 2.53.0 | 
 
 **Additional linux tools and packages**
 
 | Tool / library | Version |
 |----------------|---------|
+| git | 2.45.4-r0 |
 | openssh-client-default | 9.7_p1-r5 |
 | gnupg | 2.4.9-r0 |
 | procps-ng | 4.0.4-r0 |
