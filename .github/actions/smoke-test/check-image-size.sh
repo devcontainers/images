@@ -53,6 +53,7 @@ check_image_size() {
     docker version
     echo -e "\n🧪 Checking the docker storage driver :"
     docker info -f '{{ .DriverStatus }}'
+    docker info
     echo -e "\n🧪 Checking image size of $IMAGE :"
     if [ -n $image_size  ] && [ $image_size -gt $threshold ]; then
         echo -e "\nImage size exceeds the threshold of $THRESHOLD_IN_GB gb"
