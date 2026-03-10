@@ -31,7 +31,7 @@ Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/devcontainers/go:2-1.26` (or `2-1.26-trixie`, `2-1.26-bookworm`)
+- `mcr.microsoft.com/devcontainers/go:2.1.1` (or `2.1.1-trixie`, `2.1.1-bookworm`)
 - `mcr.microsoft.com/devcontainers/go:2.0-1.26` (or `2.0-1.26-trixie`, `2.0-1.26-bookworm`)
 - `mcr.microsoft.com/devcontainers/go:2.0.8-1.26` (or `2.0.8-1.26-trixie`, `2.0.8-1.26-bookworm`)
 
