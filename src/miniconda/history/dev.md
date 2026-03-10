@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/miniconda)
 
-**Digest:** sha256:5a33c075311116fa4a08801c396d41a15803df08ab490781ff37fe53039eaa8a
+**Digest:** sha256:f951e6ba18b4367e34d8a52199eb63ddb8183829a95cb4e6640b7a9002c5e48c
 
 **Tags:**
 ```
@@ -23,33 +23,33 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Python](https://www.python.org/) | 3.13.11 | /opt/conda |
+| [Python](https://www.python.org/) | 3.13.12 | /opt/conda |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 945d89f7ae86c740f0e09e94b7baf9b12a384535 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
 
 **Pip / pipx installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| certifi | 2025.11.12 |
-| cryptography | 46.0.3 |
-| setuptools | 80.9.0 |
-| wheel | 0.45.1 |
+| certifi | 2026.1.4 |
+| cryptography | 46.0.5 |
+| setuptools | 80.10.2 |
+| wheel | 0.46.3 |
 | requests | 2.32.5 |
-| pylint | 4.0.4 |
+| pylint | 4.0.5 |
 | flake8 | 7.3.0 |
 | autopep8 | 2.3.2 |
-| black | 26.1.0 |
+| black | 26.3.0 |
 | yapf | 0.43.0 |
 | mypy | 1.19.1 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.14.0 |
-| bandit | 1.9.3 |
-| virtualenv | 20.36.1 |
+| bandit | 1.9.4 |
+| virtualenv | 21.1.0 |
 | pipx | 1.8.0 |
 
 **Other tools and utilities**
@@ -57,7 +57,7 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | Tool | Version | Path |
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.52.0 | 
-| [conda](https://github.com/conda/conda) | 25.11.1 | /opt/conda |
+| [conda](https://github.com/conda/conda) | 26.1.1 | /opt/conda |
 
 **Additional linux tools and packages**
 
@@ -97,7 +97,6 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | unzip | 6.0-29 |
 | vim-tiny | 2:9.1.1230-2 |
 | wget | 1.25.0-2 |
-| yarn | 1.22.22-1 |
 | zip | 3.0-15 |
 | zlib1g | 1:1.3.dfsg+really1.3.1-1+b1 |
 | zsh | 5.9-8+b18 |
