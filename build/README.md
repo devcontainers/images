@@ -19,6 +19,52 @@ This CLI is used in the GitHub Actions workflows in this repository.
 - `smoke-*.yaml` (using the `smoke-test` action in this repository) - Runs a build without pushing and executes `test-project/test.sh` (if present) inside the container to verify that there are no breaking changes to the image when the repository contents are updated.
 - `version-history.yml`: Listens for workflow dispatch events to trigger cgmanifest.json and history markdown generation.
 
+## "dev" tagged images
+
+In addition to versioned releases, this repository publishes special "dev" tagged image variants. Understanding their purpose and characteristics helps you choose the right image for your needs.
+
+### Purpose
+
+"dev" images are preview builds generated from the main branch. They provide early access to:
+- Upstream OS package updates
+- New language runtime versions
+- Repository improvements before official releases
+
+### Tagging pattern
+
+Images receive both generic and specific dev tags:
+- Generic: `mcr.microsoft.com/devcontainers/<image>:dev`
+- With version: `mcr.microsoft.com/devcontainers/<image>:dev-<version>`
+- With distro: `mcr.microsoft.com/devcontainers/<image>:dev-<distro>`
+- Combined: `mcr.microsoft.com/devcontainers/<image>:dev-<version>-<distro>`
+
+### Update frequency
+
+Weekly automated builds occur every Monday via `push-dev.yml` workflow, ensuring dev images stay current with main branch changes.
+
+### Usage recommendations
+
+**Use dev images for:**
+- Testing unreleased features
+- Validating upcoming changes
+- Development environments where latest updates are desired
+
+**Avoid dev images for:**
+- Production workloads
+- Reproducible CI/CD pipelines
+- Stable development environments
+
+**Migration example:**
+```dockerfile
+# Preview/testing
+FROM mcr.microsoft.com/devcontainers/python:dev-3.13
+
+# Stable/production
+FROM mcr.microsoft.com/devcontainers/python:3-3.13
+```
+
+The versioned tag provides stability while dev tags continuously incorporate changes.
+
 ## Setting up a container to be built
 
 > **Note:** Only @devcontainers/maintainers can currently onboard an image to this process since it requires access the Microsoft Container Registry. [See here for details](https://github.com/microsoft/vscode-internalbacklog/wiki/Remote-Container-Images-MCR-Setup).
@@ -148,7 +194,7 @@ In this case, Debian is also the one that is used for `latest` for the `base` re
 
 > **NOTE:** The version number used for this repository should be kept in sync with the VS Code Remote - Containers extension to make it easy for developers to find.
 
-There's a special "dev" version that can be used to build main on CI - I ended up needing this to test and others would if they base an image off of one of the MCR images.  e.g. `dev-debian-11`.
+In addition to versioned tags, "dev" tags are also generated for testing purposes. See the ["dev" tagged images](#dev-tagged-images) section for details on their purpose and usage.
 
 ### The `version` property
 
