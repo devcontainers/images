@@ -8,7 +8,8 @@ checkCommon
 
 # Image specific tests
 check "go" go version
-check "nvm" bash -c ". /usr/local/share/nvm/nvm.sh && nvm install 10"
+check "nvm" bash -c ". /usr/local/share/nvm/nvm.sh && nvm install 24"
+check "corepack" bash -c ". /usr/local/share/nvm/nvm.sh && corepack enable"
 check "nvm-node" bash -c ". /usr/local/share/nvm/nvm.sh && node --version"
 check "yarn" bash -c ". /usr/local/share/nvm/nvm.sh && yarn --version"
 
