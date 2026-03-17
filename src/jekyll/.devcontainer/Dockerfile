@@ -11,6 +11,12 @@ ENV LANG=en_US.UTF-8 \
     LANG=en_US.UTF-8 \
     LANGUAGE=en_US
 
+# Fix Yarn GPG key issue - remove the problematic Yarn repository
+# that has an expired/rotated signing key causing apt-get update to fail
+# See: https://github.com/devcontainers/images/issues/1752
+# Inspired by this PR: https://github.com/dotnet/aspire-devcontainer/pull/7
+RUN rm -f /etc/apt/sources.list.d/yarn.list 2>/dev/null || true
+
 # Install bundler, latest jekyll, and github-pages for older jekyll
 RUN gem update --system
 
