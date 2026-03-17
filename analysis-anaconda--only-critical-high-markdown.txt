@@ -1,0 +1,430 @@
+<h2>:mag: Vulnerabilities of <code>mcr.microsoft.com/devcontainers/anaconda:3</code></h2>
+
+<details open="true"><summary>:package: Image Reference</strong> <code>mcr.microsoft.com/devcontainers/anaconda:3</code></summary>
+<table>
+<tr><td>digest</td><td><code>sha256:0fb491f12c3a53acd748a071ffd3b441a50dcad430e803ece682c5bd8ea76888</code></td><tr><tr><td>vulnerabilities</td><td><img alt="critical: 1" src="https://img.shields.io/badge/critical-1-8b1924"/> <img alt="high: 8" src="https://img.shields.io/badge/high-8-e25d68"/> <img alt="medium: 0" src="https://img.shields.io/badge/medium-0-lightgrey"/> <img alt="low: 0" src="https://img.shields.io/badge/low-0-lightgrey"/> <!-- unspecified: 0 --></td></tr>
+<tr><td>platform</td><td>linux/amd64</td></tr>
+<tr><td>size</td><td>3.1 GB</td></tr>
+<tr><td>packages</td><td>823</td></tr>
+</table>
+</details></table>
+</details>
+
+<table>
+<tr><td valign="top">
+<details><summary><img alt="critical: 1" src="https://img.shields.io/badge/C-1-8b1924"/> <img alt="high: 0" src="https://img.shields.io/badge/H-0-lightgrey"/> <img alt="medium: 0" src="https://img.shields.io/badge/M-0-lightgrey"/> <img alt="low: 0" src="https://img.shields.io/badge/L-0-lightgrey"/> <!-- unspecified: 0 --><strong>nltk</strong> <code>3.9.1</code> (pypi)</summary>
+
+<small><code>pkg:pypi/nltk@3.9.1</code></small><br/>
+<a href="https://scout.docker.com/v/CVE-2025-14009?s=github&n=nltk&t=pypi&vr=%3C%3D3.9.2"><img alt="critical 10.0: CVE--2025--14009" src="https://img.shields.io/badge/CVE--2025--14009-lightgrey?label=critical%2010.0&labelColor=8b1924"/></a> <i>Improper Control of Generation of Code ('Code Injection')</i>
+
+<table>
+<tr><td>Affected range</td><td><code><=3.9.2</code></td></tr>
+<tr><td>Fixed version</td><td><code>3.9.3</code></td></tr>
+<tr><td>CVSS Score</td><td><code>10</code></td></tr>
+<tr><td>CVSS Vector</td><td><code>CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H</code></td></tr>
+<tr><td>EPSS Score</td><td><code>0.569%</code></td></tr>
+<tr><td>EPSS Percentile</td><td><code>68th percentile</code></td></tr>
+</table>
+
+<details><summary>Description</summary>
+<blockquote>
+
+A critical vulnerability exists in the NLTK downloader component of nltk/nltk, affecting all versions. The _unzip_iter function in nltk/downloader.py uses zipfile.extractall() without performing path validation or security checks. This allows attackers to craft malicious zip packages that, when downloaded and extracted by NLTK, can execute arbitrary code. The vulnerability arises because NLTK assumes all downloaded packages are trusted and extracts them without validation. If a malicious package contains Python files, such as __init__.py, these files are executed automatically upon import, leading to remote code execution. This issue can result in full system compromise, including file system access, network access, and potential persistence mechanisms.
+
+</blockquote>
+</details>
+</details></td></tr>
+
+<tr><td valign="top">
+<details><summary><img alt="critical: 0" src="https://img.shields.io/badge/C-0-lightgrey"/> <img alt="high: 1" src="https://img.shields.io/badge/H-1-e25d68"/> <img alt="medium: 0" src="https://img.shields.io/badge/M-0-lightgrey"/> <img alt="low: 0" src="https://img.shields.io/badge/L-0-lightgrey"/> <!-- unspecified: 0 --><strong>pyjwt</strong> <code>2.8.0</code> (pypi)</summary>
+
+<small><code>pkg:pypi/pyjwt@2.8.0</code></small><br/>
+<a href="https://scout.docker.com/v/CVE-2026-32597?s=github&n=pyjwt&t=pypi&vr=%3C%3D2.11.0"><img alt="high 7.5: CVE--2026--32597" src="https://img.shields.io/badge/CVE--2026--32597-lightgrey?label=high%207.5&labelColor=e25d68"/></a> <i>Insufficient Verification of Data Authenticity</i>
+
+<table>
+<tr><td>Affected range</td><td><code><=2.11.0</code></td></tr>
+<tr><td>Fixed version</td><td><code>2.12.0</code></td></tr>
+<tr><td>CVSS Score</td><td><code>7.5</code></td></tr>
+<tr><td>CVSS Vector</td><td><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N</code></td></tr>
+<tr><td>EPSS Score</td><td><code>0.014%</code></td></tr>
+<tr><td>EPSS Percentile</td><td><code>3rd percentile</code></td></tr>
+</table>
+
+<details><summary>Description</summary>
+<blockquote>
+
+## Summary
+
+PyJWT does not validate the `crit` (Critical) Header Parameter defined in
+RFC 7515 §4.1.11. When a JWS token contains a `crit` array listing
+extensions that PyJWT does not understand, the library accepts the token
+instead of rejecting it. This violates the **MUST** requirement in the RFC.
+
+This is the same class of vulnerability as CVE-2025-59420 (Authlib),
+which received CVSS 7.5 (HIGH).
+
+---
+
+## RFC Requirement
+
+RFC 7515 §4.1.11:
+
+> The "crit" (Critical) Header Parameter indicates that extensions to this
+> specification and/or [JWA] are being used that **MUST** be understood and
+> processed. [...] If any of the listed extension Header Parameters are
+> **not understood and supported** by the recipient, then the **JWS is invalid**.
+
+---
+
+## Proof of Concept
+
+```python
+import jwt  # PyJWT 2.8.0
+import hmac, hashlib, base64, json
+
+# Construct token with unknown critical extension
+header = {"alg": "HS256", "crit": ["x-custom-policy"], "x-custom-policy": "require-mfa"}
+payload = {"sub": "attacker", "role": "admin"}
+
+def b64url(data):
+    return base64.urlsafe_b64encode(data).rstrip(b"=").decode()
+
+h = b64url(json.dumps(header, separators=(",", ":")).encode())
+p = b64url(json.dumps(payload, separators=(",", ":")).encode())
+sig = b64url(hmac.new(b"secret", f"{h}.{p}".encode(), hashlib.sha256).digest())
+token = f"{h}.{p}.{sig}"
+
+# Should REJECT — x-custom-policy is not understood by PyJWT
+try:
+    result = jwt.decode(token, "secret", algorithms=["HS256"])
+    print(f"ACCEPTED: {result}")
+    # Output: ACCEPTED: {'sub': 'attacker', 'role': 'admin'}
+except Exception as e:
+    print(f"REJECTED: {e}")
+```
+
+**Expected:** `jwt.exceptions.InvalidTokenError: Unsupported critical extension: x-custom-policy`
+**Actual:** Token accepted, payload returned.
+
+### Comparison with RFC-compliant library
+
+```python
+# jwcrypto — correctly rejects
+from jwcrypto import jwt as jw_jwt, jwk
+key = jwk.JWK(kty="oct", k=b64url(b"secret"))
+jw_jwt.JWT(jwt=token, key=key, algs=["HS256"])
+# raises: InvalidJWSObject('Unknown critical header: "x-custom-policy"')
+```
+
+---
+
+## Impact
+
+- **Split-brain verification** in mixed-library deployments (e.g., API
+  gateway using jwcrypto rejects, backend using PyJWT accepts)
+- **Security policy bypass** when `crit` carries enforcement semantics
+  (MFA, token binding, scope restrictions)
+- **Token binding bypass** — RFC 7800 `cnf` (Proof-of-Possession) can be
+  silently ignored
+- See CVE-2025-59420 for full impact analysis
+
+---
+
+## Suggested Fix
+
+In `jwt/api_jwt.py`, add validation in `_validate_headers()` or
+`decode()`:
+
+```python
+_SUPPORTED_CRIT = {"b64"}  # Add extensions PyJWT actually supports
+
+def _validate_crit(self, headers: dict) -> None:
+    crit = headers.get("crit")
+    if crit is None:
+        return
+    if not isinstance(crit, list) or len(crit) == 0:
+        raise InvalidTokenError("crit must be a non-empty array")
+    for ext in crit:
+        if ext not in self._SUPPORTED_CRIT:
+            raise InvalidTokenError(f"Unsupported critical extension: {ext}")
+        if ext not in headers:
+            raise InvalidTokenError(f"Critical extension {ext} not in header")
+```
+
+---
+
+## CWE
+
+- CWE-345: Insufficient Verification of Data Authenticity
+- CWE-863: Incorrect Authorization
+
+## References
+
+- [RFC 7515 §4.1.11](https://www.rfc-editor.org/rfc/rfc7515.html#section-4.1.11)
+- [CVE-2025-59420 — Authlib crit bypass (CVSS 7.5)](https://osv.dev/vulnerability/GHSA-9ggr-2464-2j32)
+- [RFC 7800 — Proof-of-Possession Key Semantics](https://www.rfc-editor.org/rfc/rfc7800)
+
+</blockquote>
+</details>
+</details></td></tr>
+
+<tr><td valign="top">
+<details><summary><img alt="critical: 0" src="https://img.shields.io/badge/C-0-lightgrey"/> <img alt="high: 1" src="https://img.shields.io/badge/H-1-e25d68"/> <img alt="medium: 0" src="https://img.shields.io/badge/M-0-lightgrey"/> <img alt="low: 0" src="https://img.shields.io/badge/L-0-lightgrey"/> <!-- unspecified: 0 --><strong>pillow</strong> <code>12.0.0</code> (pypi)</summary>
+
+<small><code>pkg:pypi/pillow@12.0.0</code></small><br/>
+<a href="https://scout.docker.com/v/CVE-2026-25990?s=github&n=pillow&t=pypi&vr=%3E%3D10.3.0%2C%3C12.1.1"><img alt="high 8.9: CVE--2026--25990" src="https://img.shields.io/badge/CVE--2026--25990-lightgrey?label=high%208.9&labelColor=e25d68"/></a> <i>Out-of-bounds Write</i>
+
+<table>
+<tr><td>Affected range</td><td><code>>=10.3.0<br/><12.1.1</code></td></tr>
+<tr><td>Fixed version</td><td><code>12.1.1</code></td></tr>
+<tr><td>CVSS Score</td><td><code>8.9</code></td></tr>
+<tr><td>CVSS Vector</td><td><code>CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P</code></td></tr>
+<tr><td>EPSS Score</td><td><code>0.018%</code></td></tr>
+<tr><td>EPSS Percentile</td><td><code>4th percentile</code></td></tr>
+</table>
+
+<details><summary>Description</summary>
+<blockquote>
+
+### Impact
+An out-of-bounds write may be triggered when loading a specially crafted PSD image. Pillow >= 10.3.0 users are affected.
+
+### Patches
+Pillow 12.1.1 will be released shortly with a fix for this.
+
+### Workarounds
+`Image.open()` has a `formats` parameter that can be used to prevent PSD images from being opened.
+
+### References
+Pillow 12.1.1 will add release notes at https://pillow.readthedocs.io/en/stable/releasenotes/index.html
+
+</blockquote>
+</details>
+</details></td></tr>
+
+<tr><td valign="top">
+<details><summary><img alt="critical: 0" src="https://img.shields.io/badge/C-0-lightgrey"/> <img alt="high: 1" src="https://img.shields.io/badge/H-1-e25d68"/> <img alt="medium: 0" src="https://img.shields.io/badge/M-0-lightgrey"/> <img alt="low: 0" src="https://img.shields.io/badge/L-0-lightgrey"/> <!-- unspecified: 0 --><strong>scrapy</strong> <code>2.14.1</code> (pypi)</summary>
+
+<small><code>pkg:pypi/scrapy@2.14.1</code></small><br/>
+<a href="https://scout.docker.com/v/GHSA-cwxj-rr6w-m6w7?s=github&n=scrapy&t=pypi&vr=%3E%3D1.4.0%2C%3C%3D2.14.1"><img alt="high 7.5: GHSA--cwxj--rr6w--m6w7" src="https://img.shields.io/badge/GHSA--cwxj--rr6w--m6w7-lightgrey?label=high%207.5&labelColor=e25d68"/></a> <i>Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection')</i>
+
+<table>
+<tr><td>Affected range</td><td><code>>=1.4.0<br/><=2.14.1</code></td></tr>
+<tr><td>Fixed version</td><td><code>2.14.2</code></td></tr>
+<tr><td>CVSS Score</td><td><code>7.5</code></td></tr>
+<tr><td>CVSS Vector</td><td><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H</code></td></tr>
+</table>
+
+<details><summary>Description</summary>
+<blockquote>
+
+### Impact
+
+Since version 1.4.0, Scrapy respects the `Referrer-Policy` response header to decide whether and how to set a `Referer` header on follow-up requests.
+
+If the header value looked like a valid Python import path, Scrapy would import the referenced object and call it, assuming it referred to a referrer policy class (for example, `scrapy.spidermiddlewares.referer.DefaultReferrerPolicy`) and attempting to instantiate it to handle the `Referer` header.
+
+A malicious site could exploit this by setting `Referrer-Policy` to a path such as `sys.exit`, causing Scrapy to import and execute it and potentially terminate the process.
+
+### Patches
+
+Upgrade to Scrapy 2.14.2 (or later).
+
+### Workarounds
+
+If you cannot upgrade to Scrapy 2.14.2, consider the following mitigations.
+
+- **Disable the middleware:** If you don't need the `Referer` header on follow-up requests, set [`REFERER_ENABLED`](https://docs.scrapy.org/en/latest/topics/spider-middleware.html#referer-enabled) to `False`.
+- **Set headers manually:** If you do need a `Referer`, disable the middleware and set the header explicitly on the requests that require it.
+- **Set `referrer_policy` in request metadata:** If disabling the middleware is not viable, set the [`referrer_policy`](https://docs.scrapy.org/en/latest/topics/spider-middleware.html#referrer-policy) request meta key on all requests to prevent evaluating preceding responses' `Referrer-Policy`. For example:
+
+```python
+Request(
+    url,
+    meta={
+        "referrer_policy": "scrapy.spidermiddlewares.referer.DefaultReferrerPolicy",
+    },
+)
+```
+
+Instead of editing requests individually, you can:
+
+- implement a custom [spider middleware](https://docs.scrapy.org/en/latest/topics/spider-middleware.html) that runs before the built-in referrer policy middleware and sets the `referrer_policy` meta key; or
+- set the meta key in start requests and use the [scrapy-sticky-meta-params](https://github.com/heylouiz/scrapy-sticky-meta-params) plugin to propagate it to follow-up requests.
+
+If you want to continue respecting legitimate `Referrer-Policy` headers while protecting against malicious ones, disable the built-in referrer policy middleware by setting it to `None` in [`SPIDER_MIDDLEWARES`](https://docs.scrapy.org/en/latest/topics/settings.html#std-setting-SPIDER_MIDDLEWARES) and replace it with the fixed implementation from Scrapy 2.14.2.
+
+If the Scrapy 2.14.2 implementation is incompatible with your project (for example, because your Scrapy version is older), copy the corresponding middleware from your Scrapy version, apply the same patch, and use that as a replacement.
+
+</blockquote>
+</details>
+</details></td></tr>
+
+<tr><td valign="top">
+<details><summary><img alt="critical: 0" src="https://img.shields.io/badge/C-0-lightgrey"/> <img alt="high: 1" src="https://img.shields.io/badge/H-1-e25d68"/> <img alt="medium: 0" src="https://img.shields.io/badge/M-0-lightgrey"/> <img alt="low: 0" src="https://img.shields.io/badge/L-0-lightgrey"/> <!-- unspecified: 0 --><strong>pyopenssl</strong> <code>25.3.0</code> (pypi)</summary>
+
+<small><code>pkg:pypi/pyopenssl@25.3.0</code></small><br/>
+<a href="https://scout.docker.com/v/CVE-2026-27459?s=github&n=pyopenssl&t=pypi&vr=%3E%3D22.0.0%2C%3C26.0.0"><img alt="high 7.2: CVE--2026--27459" src="https://img.shields.io/badge/CVE--2026--27459-lightgrey?label=high%207.2&labelColor=e25d68"/></a> <i>Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')</i>
+
+<table>
+<tr><td>Affected range</td><td><code>>=22.0.0<br/><26.0.0</code></td></tr>
+<tr><td>Fixed version</td><td><code>26.0.0</code></td></tr>
+<tr><td>CVSS Score</td><td><code>7.2</code></td></tr>
+<tr><td>CVSS Vector</td><td><code>CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:U</code></td></tr>
+</table>
+
+<details><summary>Description</summary>
+<blockquote>
+
+If a user provided callback to `set_cookie_generate_callback` returned a cookie value greater than 256 bytes, pyOpenSSL would overflow an OpenSSL provided buffer.
+
+Cookie values that are too long are now rejected.
+
+</blockquote>
+</details>
+</details></td></tr>
+
+<tr><td valign="top">
+<details><summary><img alt="critical: 0" src="https://img.shields.io/badge/C-0-lightgrey"/> <img alt="high: 1" src="https://img.shields.io/badge/H-1-e25d68"/> <img alt="medium: 0" src="https://img.shields.io/badge/M-0-lightgrey"/> <img alt="low: 0" src="https://img.shields.io/badge/L-0-lightgrey"/> <!-- unspecified: 0 --><strong>black</strong> <code>24.8.0</code> (pypi)</summary>
+
+<small><code>pkg:pypi/black@24.8.0</code></small><br/>
+<a href="https://scout.docker.com/v/CVE-2026-32274?s=github&n=black&t=pypi&vr=%3C26.3.1"><img alt="high 8.7: CVE--2026--32274" src="https://img.shields.io/badge/CVE--2026--32274-lightgrey?label=high%208.7&labelColor=e25d68"/></a> <i>Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')</i>
+
+<table>
+<tr><td>Affected range</td><td><code><26.3.1</code></td></tr>
+<tr><td>Fixed version</td><td><code>26.3.1</code></td></tr>
+<tr><td>CVSS Score</td><td><code>8.7</code></td></tr>
+<tr><td>CVSS Vector</td><td><code>CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N</code></td></tr>
+<tr><td>EPSS Score</td><td><code>0.018%</code></td></tr>
+<tr><td>EPSS Percentile</td><td><code>4th percentile</code></td></tr>
+</table>
+
+<details><summary>Description</summary>
+<blockquote>
+
+### Impact
+
+Black writes a cache file, the name of which is computed from various formatting options. The value of the `--python-cell-magics` option was placed in the filename without sanitization, which allowed an attacker who controls the value of this argument to write cache files to arbitrary file system locations. 
+
+### Patches
+
+Fixed in Black 26.3.1.
+
+### Workarounds
+
+Do not allow untrusted user input into the value of the `--python-cell-magics` option.
+
+</blockquote>
+</details>
+</details></td></tr>
+
+<tr><td valign="top">
+<details><summary><img alt="critical: 0" src="https://img.shields.io/badge/C-0-lightgrey"/> <img alt="high: 1" src="https://img.shields.io/badge/H-1-e25d68"/> <img alt="medium: 0" src="https://img.shields.io/badge/M-0-lightgrey"/> <img alt="low: 0" src="https://img.shields.io/badge/L-0-lightgrey"/> <!-- unspecified: 0 --><strong>protobuf</strong> <code>5.29.5</code> (pypi)</summary>
+
+<small><code>pkg:pypi/protobuf@5.29.5</code></small><br/>
+<a href="https://scout.docker.com/v/CVE-2026-0994?s=github&n=protobuf&t=pypi&vr=%3C5.29.6"><img alt="high 8.2: CVE--2026--0994" src="https://img.shields.io/badge/CVE--2026--0994-lightgrey?label=high%208.2&labelColor=e25d68"/></a> <i>Uncontrolled Recursion</i>
+
+<table>
+<tr><td>Affected range</td><td><code><5.29.6</code></td></tr>
+<tr><td>Fixed version</td><td><code>6.33.5</code></td></tr>
+<tr><td>CVSS Score</td><td><code>8.2</code></td></tr>
+<tr><td>CVSS Vector</td><td><code>CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:L</code></td></tr>
+<tr><td>EPSS Score</td><td><code>0.025%</code></td></tr>
+<tr><td>EPSS Percentile</td><td><code>6th percentile</code></td></tr>
+</table>
+
+<details><summary>Description</summary>
+<blockquote>
+
+A denial-of-service (DoS) vulnerability exists in google.protobuf.json_format.ParseDict() in Python, where the max_recursion_depth limit can be bypassed when parsing nested google.protobuf.Any messages.
+
+Due to missing recursion depth accounting inside the internal Any-handling logic, an attacker can supply deeply nested Any structures that bypass the intended recursion limit, eventually exhausting Python’s recursion stack and causing a RecursionError.
+
+</blockquote>
+</details>
+</details></td></tr>
+
+<tr><td valign="top">
+<details><summary><img alt="critical: 0" src="https://img.shields.io/badge/C-0-lightgrey"/> <img alt="high: 1" src="https://img.shields.io/badge/H-1-e25d68"/> <img alt="medium: 0" src="https://img.shields.io/badge/M-0-lightgrey"/> <img alt="low: 0" src="https://img.shields.io/badge/L-0-lightgrey"/> <!-- unspecified: 0 --><strong>nbconvert</strong> <code>7.16.4</code> (pypi)</summary>
+
+<small><code>pkg:pypi/nbconvert@7.16.4</code></small><br/>
+<a href="https://scout.docker.com/v/CVE-2025-53000?s=github&n=nbconvert&t=pypi&vr=%3C7.17.0"><img alt="high 8.5: CVE--2025--53000" src="https://img.shields.io/badge/CVE--2025--53000-lightgrey?label=high%208.5&labelColor=e25d68"/></a> <i>Uncontrolled Search Path Element</i>
+
+<table>
+<tr><td>Affected range</td><td><code><7.17.0</code></td></tr>
+<tr><td>Fixed version</td><td><code>7.17.0</code></td></tr>
+<tr><td>CVSS Score</td><td><code>8.5</code></td></tr>
+<tr><td>CVSS Vector</td><td><code>CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N</code></td></tr>
+<tr><td>EPSS Score</td><td><code>0.012%</code></td></tr>
+<tr><td>EPSS Percentile</td><td><code>2nd percentile</code></td></tr>
+</table>
+
+<details><summary>Description</summary>
+<blockquote>
+
+### Summary
+
+On Windows, converting a notebook containing SVG output to a PDF results in unauthorized code execution. Specifically, a third party can create a `inkscape.bat` file that defines a [Windows batch script](https://en.wikipedia.org/wiki/Batch_file), capable of arbitrary code execution.
+
+When a user runs `jupyter nbconvert --to pdf` on a notebook containing SVG output to a PDF on a Windows platform from this directory, the `inkscape.bat` file is run unexpectedly.
+
+### Details
+_Give all details on the vulnerability. Pointing to the incriminated source code is very helpful for the maintainer._
+
+`nbconvert` searches for an `inkscape` executable when converting notebooks to PDFs here: https://github.com/jupyter/nbconvert/blob/4f61702f5c7524d8a3c4ac0d5fc33a6ac2fa36a7/nbconvert/preprocessors/svg2pdf.py#L104
+
+The MITRE page on [CWE-427 (Uncontrolled Search Path Element)](https://cwe.mitre.org/data/definitions/427.html) summarizes the root cause succinctly:
+
+> In Windows-based systems, when the `LoadLibrary` or `LoadLibraryEx` function is called with a DLL name that does not contain a fully qualified path, the function follows a search order that includes two path elements that might be uncontrolled:
+> - the directory from which the program has been loaded
+> - the current working directory
+
+### PoC
+
+_Complete instructions, including specific configuration details, to reproduce the vulnerability._
+
+1. Create a directory containing: 
+
+    - A hidden bat file called `inkscape.bat` containing `msg * "You've been hacked!"`
+
+    - A dummy ipynb file called `Machine_Learning.ipynb`
+
+2. Run the command `jupyter nbconvert --to pdf Machine_Learning.ipynb`.
+
+3. Wait a few seconds, and you should see a popup showing the message "You've been hacked!" 
+
+### Impact
+
+All Windows users.
+
+</blockquote>
+</details>
+</details></td></tr>
+
+<tr><td valign="top">
+<details><summary><img alt="critical: 0" src="https://img.shields.io/badge/C-0-lightgrey"/> <img alt="high: 1" src="https://img.shields.io/badge/H-1-e25d68"/> <img alt="medium: 0" src="https://img.shields.io/badge/M-0-lightgrey"/> <img alt="low: 0" src="https://img.shields.io/badge/L-0-lightgrey"/> <!-- unspecified: 0 --><strong>tornado</strong> <code>6.5.4</code> (pypi)</summary>
+
+<small><code>pkg:pypi/tornado@6.5.4</code></small><br/>
+<a href="https://scout.docker.com/v/CVE-2026-31958?s=github&n=tornado&t=pypi&vr=%3C%3D6.5.4"><img alt="high 8.7: CVE--2026--31958" src="https://img.shields.io/badge/CVE--2026--31958-lightgrey?label=high%208.7&labelColor=e25d68"/></a> <i>Uncontrolled Resource Consumption</i>
+
+<table>
+<tr><td>Affected range</td><td><code><=6.5.4</code></td></tr>
+<tr><td>Fixed version</td><td><code>6.5.5</code></td></tr>
+<tr><td>CVSS Score</td><td><code>8.7</code></td></tr>
+<tr><td>CVSS Vector</td><td><code>CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N</code></td></tr>
+<tr><td>EPSS Score</td><td><code>0.048%</code></td></tr>
+<tr><td>EPSS Percentile</td><td><code>15th percentile</code></td></tr>
+</table>
+
+<details><summary>Description</summary>
+<blockquote>
+
+In versions of Tornado prior to 6.5.5, the only limit on the number of parts in `multipart/form-data` is the `max_body_size` setting (default 100MB). Since parsing occurs synchronously on the main thread, this creates the possibility of denial-of-service due to the cost of parsing very large multipart bodies with many parts. 
+
+Tornado 6.5.5 introduces new limits on the size and complexity of multipart bodies, including a default limit of 100 parts per request. These limits are configurable if needed; see `tornado.httputil.ParseMultipartConfig`. It is also now possible to disable `multipart/form-data` parsing entirely if it is not required for the application.
+
+</blockquote>
+</details>
+</details></td></tr>
+</table>
+
