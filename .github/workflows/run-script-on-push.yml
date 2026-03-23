@@ -1,0 +1,197 @@
+name: Run image pull script
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - main
+    - check-universal-image-squash
+  pull_request:
+    paths:
+      - .github/actions/**
+      - build/**
+
+jobs:
+  run-pull-script:
+    runs-on: devcontainer-image-builder-ubuntu
+    timeout-minutes: 120
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Ensure prerequisites (bc)
+        run: |
+          set -euxo pipefail
+          if ! command -v bc >/dev/null 2>&1; then
+            sudo apt-get update
+            sudo apt-get install -y bc
+          fi
+          docker --version
+
+      - name: Set up Python 3.13
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install Docker v29.1.3
+        run: |
+          sudo apt-get remove -y docker-ce docker-ce-cli containerd.io || true
+          curl -fsSL https://get.docker.com -o get-docker.sh
+          sudo VERSION=29.1.3 sh get-docker.sh
+          sudo systemctl restart docker
+          # Verify
+          docker version
+          DOCKER_VERSION=$(docker version --format '{{.Server.Version}}')
+          if [[ ! "$DOCKER_VERSION" =~ ^29\. ]]; then
+            echo "ERROR: Expected Docker v29.x but got $DOCKER_VERSION"
+            exit 1
+          fi 
+          sudo mkdir -p /etc/docker
+          echo '{"features":{"containerd-snapshotter":true}}' | sudo tee /etc/docker/daemon.json
+          sudo systemctl restart docker          
+          docker info -f '{{ .DriverStatus }}'
+          python --version
+      - name: Install docker-squash
+        run: |
+          pip install docker-squash==1.2.2
+          docker-squash --version
+      - name: Execute provided shell script
+        run: |
+          #!/bin/bash
+          echo "Setting script to fail if any command in script returns non zero return code"
+          set -euo pipefail
+
+          DEVCON_PREFIX="devcon.azurecr.io/public"
+          MCR_PREFIX="mcr.microsoft.com"
+          IMAGE_PATH="devcontainers"
+          OLD_IMAGE_PATH="vscode/devcontainers"
+
+          # For flexibility, allow a simple flag to toggle the docker registry between MCR and DEVCON.
+          # MCR is a public mirror of DEVCON with a small propagation delay.
+          FLAG=${1:-"--mcr"}
+          if [ $FLAG == "--mcr" ]; then
+              echo "Pulling images from MCR"
+              PREFIX=$MCR_PREFIX
+          elif [ $FLAG == "--devcon" ]; then
+              echo "Pulling images from DEVCON"
+              PREFIX=$DEVCON_PREFIX
+          else
+              echo "ERR: Invalid FLAG = $FLAG"
+              exit -1
+          fi
+          echo "Chosen docker registry prefix: $PREFIX"
+
+          # Loop over and pull each variation of the supplied image.
+          # If source registry is devcon, tag the image as its MCR equal and then untag it as a devcon image.
+          function pull_helper() {
+              # The "class" of image ->  ie: javascript-node
+              CLASS=$1
+              shift
+              # An array of space-separated tags variations ->  ie: (14 14-buster 0-14 0-14-buster)
+              TAGS="$@"
+
+              echo "==== Processing image class: $CLASS ==== "
+              echo ""
+              echo "Tags:  $TAGS"
+
+              for tag in $TAGS
+              do
+                  variation="$CLASS:$tag"
+                  img="$PREFIX/$IMAGE_PATH/$variation"
+                  echo "***  Executing docker pull for:  $img  ***"
+                  docker pull $img
+
+                  # Pull images with vscode/devcontainers path
+                  old_img="$PREFIX/$OLD_IMAGE_PATH/$variation"
+                  echo "***  Executing docker pull for:  $old_img  ***"
+                  docker pull $old_img
+
+                  if [ $FLAG == "--devcon" ]; then
+                      echo "Retagging as MCR and untagging devcon"
+                      docker image tag $img  $MCR_PREFIX/$IMAGE_PATH/$variation
+                      docker image tag $img  $MCR_PREFIX/$OLD_IMAGE_PATH/$variation
+
+                      docker rmi $img
+                      docker rmi $old_img
+                  fi
+              done
+          }
+
+
+          # Given the DockerHub terms and conditions change, we should pull our MCR/devcon
+          # images which include layers from base images and therefore are generally a good proxy.
+          # We should pull all tag variations since this should consume no space and make
+          # the cache more effective. We can stick with the "0-" versioned ones since these
+          # are most likely to be used given they are in vscode-dev-containers Dockerfiles.
+
+          # All the classes of cached image.
+          UNIVERSAL="universal"
+          BASE="base"
+          JS_NODE="javascript-node"
+          # TS_NODE="typescript-node"
+          # PYTHON="python"
+          # GO="go"
+          # JAVA="java"
+          # RUBY="ruby"
+          # DOTNET="dotnet"
+
+          # Universal Images
+          universal_variations=( latest 5 )
+          pull_helper $UNIVERSAL "${universal_variations[@]}"
+
+          # Base Images
+          base_variations=( latest debian bookworm trixie debian13 debian-13 debian12 debian-12 ubuntu ubuntu22.04 ubuntu-22.04 ubuntu24.04 ubuntu-24.04 )
+          #pull_helper $BASE "${base_variations[@]}"
+
+          # Node Images
+          node_variations=( 1-18-bookworm 18 18-bookworm 1-18 1-18-bookworm )
+          # pull_helper $JS_NODE "${node_variations[@]}"
+          # pull_helper $TS_NODE "${node_variations[@]}"
+
+          # Python Images
+          # python_variations=( 3 1-3 3.11 1-3.11 )
+          # pull_helper $PYTHON "${python_variations[@]}"
+
+          # Go Images
+          # go_variations=( 1 0-1 1.17 0-1.17 )
+          # pull_helper $GO "${go_variations[@]}"
+
+          # Java Images
+          # java_variations=(17 0-17 )
+          # pull_helper $JAVA "${java_variations[@]}"
+
+          # # Ruby Images
+          # ruby_variations=( 2 2.7 0-2 0-2.7 )
+          # pull_helper $RUBY "${ruby_variations[@]}"
+
+          # .NET Images
+          # dotnet_variations=( 6.0 0-6.0 )
+          # pull_helper $DOTNET "${dotnet_variations[@]}"
+
+          # CS50 Image
+          CS50_IMG="ghcr.io/cs50/codespace:latest"
+          echo "***  Executing docker pull for:  $CS50_IMG  ***"
+          docker pull $CS50_IMG
+          docker-squash -t ghcr.io/cs50/codespace:squashed ghcr.io/cs50/codespace:latest
+
+          # Print useful info for manual validation
+          docker images
+          df -h
+          docker system df -v
+
+          # Calculate and display total unique image size on disk
+          echo ""
+          echo "==== Total Images Size on Disk ===="
+          TOTAL_IMAGE_SIZE=$(docker system df | grep "^Images" | awk '{print $4}')
+          echo "Total images size: $TOTAL_IMAGE_SIZE"
+
+          # Check if total size exceeds 22GB
+          SIZE_VALUE=$(echo "$TOTAL_IMAGE_SIZE" | sed 's/[^0-9.]//g')
+          SIZE_UNIT=$(echo "$TOTAL_IMAGE_SIZE" | sed 's/[0-9.]//g')
+
+          if [[ "$SIZE_UNIT" == "GB" ]] && (( $(echo "$SIZE_VALUE > 22" | bc -l) )); then
+              echo "##[error]Total image size ($TOTAL_IMAGE_SIZE) exceeds the 22GB limit!"
+              echo "##[error]Please have a look at the TSG: https://github.com/github/codespaces/blob/main/docs/dev/pipelines/generate-kitchensink-image.md"
+              exit 1
+          fi
+
