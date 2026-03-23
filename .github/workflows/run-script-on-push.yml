@@ -139,6 +139,7 @@ jobs:
           # Universal Images
           universal_variations=( latest 5 )
           pull_helper $UNIVERSAL "${universal_variations[@]}"
+          docker-squash -t mcr.microsoft.com/devcontainers/universal:squashed mcr.microsoft.com/devcontainers/universal:latest
 
           # Base Images
           base_variations=( latest debian bookworm trixie debian13 debian-13 debian12 debian-12 ubuntu ubuntu22.04 ubuntu-22.04 ubuntu24.04 ubuntu-24.04 )
