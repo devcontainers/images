@@ -9,6 +9,7 @@ on:
   pull_request:
     paths:
       - .github/actions/**
+      - .github/workflows/**
       - build/**
 
 jobs:
