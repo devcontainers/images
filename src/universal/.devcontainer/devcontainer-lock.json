@@ -21,9 +21,9 @@
       "integrity": "sha256:ce078b7bf7d9ef3bcb9813b32103795d8d72172446890b64772cbe1dec6baafd"
     },
     "ghcr.io/devcontainers/features/dotnet:2": {
-      "version": "2.4.2",
-      "resolved": "ghcr.io/devcontainers/features/dotnet@sha256:e56b2abde945918508f1bca94d5545e23b30f5f1d4f3b363ad4819c6b81396f1",
-      "integrity": "sha256:e56b2abde945918508f1bca94d5545e23b30f5f1d4f3b363ad4819c6b81396f1"
+      "version": "2.5.0",
+      "resolved": "ghcr.io/devcontainers/features/dotnet@sha256:0fc16547ed4db6d7ff2a9f5981d2b93eb314e568affb9958029ad794f1f9a093",
+      "integrity": "sha256:0fc16547ed4db6d7ff2a9f5981d2b93eb314e568affb9958029ad794f1f9a093"
     },
     "ghcr.io/devcontainers/features/git-lfs:1": {
       "version": "1.2.5",
@@ -65,10 +65,10 @@
       "resolved": "ghcr.io/devcontainers/features/node@sha256:8c0de46939b61958041700ee89e3493f3b2e4131a06dc46b4d9423427d06e5f6",
       "integrity": "sha256:8c0de46939b61958041700ee89e3493f3b2e4131a06dc46b4d9423427d06e5f6"
     },
-    "ghcr.io/devcontainers/features/oryx:1": {
-      "version": "1.4.1",
-      "resolved": "ghcr.io/devcontainers/features/oryx@sha256:afffd5b839bb25e29f8abbe5c7be913ae8793a2af684af7ed89a75c22a70a471",
-      "integrity": "sha256:afffd5b839bb25e29f8abbe5c7be913ae8793a2af684af7ed89a75c22a70a471"
+    "ghcr.io/devcontainers/features/oryx:2": {
+      "version": "2.0.0",
+      "resolved": "ghcr.io/devcontainers/features/oryx@sha256:5295f2aa261376a83c29f3cfd6f6d967bb352d1ff7b54436f2029fd48c692b67",
+      "integrity": "sha256:5295f2aa261376a83c29f3cfd6f6d967bb352d1ff7b54436f2029fd48c692b67"
     },
     "ghcr.io/devcontainers/features/php:1": {
       "version": "1.1.4",
