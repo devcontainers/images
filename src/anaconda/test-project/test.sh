@@ -31,7 +31,7 @@ check "usr-local-etc-config-does-not-exist" test ! -f "/usr/local/etc/gitconfig"
 
 checkPythonPackageVersion "joblib" "1.2.0"
 checkPythonPackageVersion "cookiecutter" "2.1.1"
-checkPythonPackageVersion "mistune" "2.0.3"
+checkPythonPackageVersion "mistune" "3.0.1"
 checkPythonPackageVersion "numpy" "1.22"
 checkPythonPackageVersion "setuptools" "78.1.1"
 checkPythonPackageVersion "wheel" "0.46.2"
