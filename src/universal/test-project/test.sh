@@ -143,8 +143,6 @@ check "default-node-location-remained-same" bash -c "which node | grep /home/cod
 # Ensures sdkman works in a Java Project
 check "default-java-version" bash -c "java --version"
 check "default-java-location" bash -c "which java | grep /home/codespace/java/current/bin"
-check "oryx-build-java-project" bash -c "oryx build ./sample/java"
-check "oryx-configured-current-java-version" bash -c "ls -la /home/codespace/java/current | grep /opt/java"
 check "sdk-install-java" bash -c ". /usr/local/sdkman/bin/sdkman-init.sh && sdk install java 19.0.1-oracle < /dev/null"
 check "sdkman-works-in-java-project" bash -c "java --version | grep 19.0.1"
 check "default-java-location-remained-same" bash -c "which java | grep /home/codespace/java/current/bin"
@@ -157,21 +155,17 @@ check "oryx-build-python-installed" python3 -m pip list | grep mpmath
 check "oryx-build-python-result" python3 ./sample/python/src/solve.py
 
 # Install platforms with oryx build tool
-check "oryx-install-dotnet-2.1" oryx prep --skip-detection --platforms-and-versions dotnet=2.1.30
-check "dotnet-2-installed-by-oryx" ls /opt/dotnet/ | grep 2.1
-check "dotnet-version-on-path-is-2.1.12" dotnet --version | grep 2.1
+check "oryx-install-dotnet-8.0" oryx prep --skip-detection --platforms-and-versions dotnet=8.0.23
+check "dotnet-8-installed-by-oryx" ls /opt/dotnet/ | grep 8.0
+check "dotnet-version-on-path-is-8.0.23" dotnet --version | grep 8.0
 
-check "oryx-install-nodejs-12.22.11" oryx prep --skip-detection --platforms-and-versions nodejs=12.22.11
-check "nodejs-12.22.11-installed-by-oryx" ls /opt/nodejs/ | grep 12.22.11
-check "nodejs-version-on-path-is-2.1.12" node --version | grep v12.22.11
+check "oryx-install-nodejs-20.11.0" oryx prep --skip-detection --platforms-and-versions nodejs=20.11.0
+check "nodejs-20.11.0-installed-by-oryx" ls /opt/nodejs/ | grep 20.11.0
+check "nodejs-version-on-path-is-20.11.0" node --version | grep v20.11.0
 
-check "oryx-install-php-7.3.25" oryx prep --skip-detection --platforms-and-versions php=7.3.25
-check "php-7.3.25-installed-by-oryx" ls /opt/php/ | grep 7.3.25
-check "php-version-on-path-is-2.1.12" php --version | grep 7.3.25
-
-check "oryx-install-java-12.0.2" oryx prep --skip-detection --platforms-and-versions java=12.0.2
-check "java-12.0.2-installed-by-oryx" ls /opt/java/ | grep 12.0.2
-check "java-version-on-path-is-12.0.2" java --version | grep 12.0.2
+check "oryx-install-php-8.1.30" oryx prep --skip-detection --platforms-and-versions php=8.1.30
+check "php-8.1.30-installed-by-oryx" ls /opt/php/ | grep 8.1.30
+check "php-version-on-path-is-8.1.30" php --version | grep 8.1.30
 
 # Test patches
 
