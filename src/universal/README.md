@@ -27,9 +27,9 @@ The container includes the `zsh` (and Oh My Zsh!) and `fish` shells that you can
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image.
 For example:
 
-- `mcr.microsoft.com/devcontainers/universal:5-noble`
-- `mcr.microsoft.com/devcontainers/universal:5.1-noble`
-- `mcr.microsoft.com/devcontainers/universal:5.1.5-noble`
+- `mcr.microsoft.com/devcontainers/universal:6-noble`
+- `mcr.microsoft.com/devcontainers/universal:6.0-noble`
+- `mcr.microsoft.com/devcontainers/universal:6.0.0-noble`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/universal/tags/list).
 

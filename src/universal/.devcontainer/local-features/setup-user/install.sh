@@ -30,8 +30,8 @@ sudo_if() {
 }
 
 # Enables the oryx tool to generate manifest-dir which is needed for running the postcreate tool
-DEBIAN_FLAVOR="focal-scm"
-mkdir -p /opt/oryx && echo "vso-focal" > /opt/oryx/.imagetype
+DEBIAN_FLAVOR="bookworm"
+mkdir -p /opt/oryx && echo "vso-bookworm" > /opt/oryx/.imagetype
 echo "DEBIAN|${DEBIAN_FLAVOR}" | tr '[a-z]' '[A-Z]' > /opt/oryx/.ostype
 
 # Oryx expects the tool to be installed at `/opt/oryx` and looks for relevant files in there.
@@ -88,6 +88,15 @@ OPT_DOTNET_DIR="/opt/dotnet/"
 chown -R ${USERNAME}:oryx ${OPT_DOTNET_DIR}
 chmod -R g+r+w "${OPT_DOTNET_DIR}"
 find "${OPT_DOTNET_DIR}" -type d | xargs -n 1 chmod g+s
+
+# Patch createSymlinksForDotnet.sh to handle the case where the symlink destination
+# already exists as a real directory (e.g. /home/codespace/.dotnet -> /usr/share/dotnet
+# which already has packs/NETStandard.Library.Ref/2.1.0 from a pre-installed .NET SDK).
+# Without this, `ln -sTf` fails because it cannot overwrite a real directory.
+if [ -f "/opt/tmp/build/createSymlinksForDotnet.sh" ]; then
+    sed -i '/echo "\$linkTo is missing, creating \.\.\."/a\            if [ -d "$linkFrom" ] \&\& [ ! -L "$linkFrom" ]; then rm -rf "$linkFrom"; fi' \
+        /opt/tmp/build/createSymlinksForDotnet.sh
+fi
 
 echo "Defaults secure_path=\"${DOTNET_PATH}:${NODE_PATH}/bin:${PHP_PATH}/bin:${PYTHON_PATH}/bin:${JAVA_PATH}/bin:${RUBY_PATH}/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin:/usr/local/share:/home/${USERNAME}/.local/bin:${PATH}\"" >> /etc/sudoers.d/$USERNAME
 

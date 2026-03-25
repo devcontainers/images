@@ -73,7 +73,7 @@
             "version": "latest"
         },
         "./local-features/jekyll": "latest",
-        "ghcr.io/devcontainers/features/oryx:1": "latest",
+        "ghcr.io/devcontainers/features/oryx:2": "latest",
         "./local-features/setup-user": "latest",
         "./local-features/patch-conda": {},
         "./local-features/patch-python": {}
