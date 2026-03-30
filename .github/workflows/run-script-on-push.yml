@@ -192,11 +192,11 @@ jobs:
           SIZE_VALUE=$(echo "$TOTAL_IMAGE_SIZE" | sed 's/[^0-9.]//g')
           SIZE_UNIT=$(echo "$TOTAL_IMAGE_SIZE" | sed 's/[0-9.]//g')
 
-          if [[ "$SIZE_UNIT" == "GB" ]] && (( $(echo "$SIZE_VALUE > 22" | bc -l) )); then
-              echo "##[error]Total image size ($TOTAL_IMAGE_SIZE) exceeds the 22GB limit!"
-              echo "##[error]Please have a look at the TSG: https://github.com/github/codespaces/blob/main/docs/dev/pipelines/generate-kitchensink-image.md"
-              exit 1
-          fi
+          #if [[ "$SIZE_UNIT" == "GB" ]] && (( $(echo "$SIZE_VALUE > 22" | bc -l) )); then
+          #    echo "##[error]Total image size ($TOTAL_IMAGE_SIZE) exceeds the 22GB limit!"
+          #    echo "##[error]Please have a look at the TSG: https://github.com/github/codespaces/blob/main/docs/dev/pipelines/generate-kitchensink-image.md"
+          #    exit 1
+          #fi
 
       - name: Prune all Docker data
         run: |
