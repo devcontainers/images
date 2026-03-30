@@ -10,7 +10,7 @@
 
 ## Variant: trixie
 
-**Digest:** sha256:1960136cd9bfdadd609eeccd277c9b578d16b8d9c73a83eccc03d90443b6a4e4
+**Digest:** sha256:7b31169e1962f4c475a0798357d6889ecb6c7d1fe532cc15670a8ed573f78407
 
 **Tags:**
 ```
@@ -31,20 +31,20 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-trixie
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 1.8.0_472<br />bash: line 1: /usr/local/openjdk-*/bin/java: No such file or directory | /usr/local/sdkman/candidates/java/current<br />/usr/local |
+| [Java](https://adoptopenjdk.net/) | 1.8.0_482<br />bash: line 1: /usr/local/openjdk-*/bin/java: No such file or directory | /usr/local/sdkman/candidates/java/current<br />/usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9e2c1548c3dfeefd055e1c6606f66657093ae928 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.52.0 | 
+| [git](https://github.com/git/git) | 2.53.0 | 
 
 **Additional linux tools and packages**
 
@@ -61,12 +61,12 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-trixie
 | iproute2 | 6.15.0-1 |
 | jq | 1.7.1-6+deb13u1 |
 | less | 668-1 |
-| libc6 | 2.41-12+deb13u1 |
+| libc6 | 2.41-12+deb13u2 |
 | libgssapi-krb5-2 | 1.21.3-5 |
 | libicu76 | 76.1-4 |
 | libkrb5-3 | 1.21.3-5 |
 | libstdc++6 | 14.2.0-19 |
-| locales | 2.41-12+deb13u1 |
+| locales | 2.41-12+deb13u2 |
 | lsb-release | 12.1-1 |
 | lsof | 4.99.4+dfsg-2 |
 | man-db | 2.13.1-1 |
@@ -75,23 +75,22 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-trixie
 | nano | 8.4-1 |
 | ncdu | 1.22-1 |
 | net-tools | 2.10-1.3 |
-| openssh-client | 1:10.0p1-7 |
+| openssh-client | 1:10.0p1-7+deb13u1 |
 | procps | 2:4.0.4-9 |
 | psmisc | 23.7-2 |
 | rsync | 3.4.1+ds1-5+deb13u1 |
 | strace | 6.13+ds-1 |
-| sudo | 1.9.16p2-3 |
+| sudo | 1.9.16p2-3+deb13u1 |
 | unzip | 6.0-29 |
 | vim-tiny | 2:9.1.1230-2 |
 | wget | 1.25.0-2 |
-| yarn | 1.22.22-1 |
 | zip | 3.0-15 |
 | zlib1g | 1:1.3.dfsg+really1.3.1-1+b1 |
-| zsh | 5.9-8+b18 |
+| zsh | 5.9-8+b21 |
 
 ## Variant: bookworm
 
-**Digest:** sha256:f9f626abc25903e4cf2b48c9361caa69a42ec441c872cf3a2d47098d84deab26
+**Digest:** sha256:1ead6087c82f78571ac1cbfbdb7507cc8b6026446e3de5852d967bbbcf4e2098
 
 **Tags:**
 ```
@@ -111,20 +110,20 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 1.8.0_472<br />bash: line 1: /usr/local/openjdk-*/bin/java: No such file or directory | /usr/local/sdkman/candidates/java/current<br />/usr/local |
+| [Java](https://adoptopenjdk.net/) | 1.8.0_482<br />bash: line 1: /usr/local/openjdk-*/bin/java: No such file or directory | /usr/local/sdkman/candidates/java/current<br />/usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 67cd8c4673512d08238461f7ce00715da01665d4 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 977563e97ddc66facf3a8e31c6cff01d236f09bd | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9e2c1548c3dfeefd055e1c6606f66657093ae928 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.52.0 | 
+| [git](https://github.com/git/git) | 2.53.0 | 
 
 **Additional linux tools and packages**
 
@@ -165,7 +164,6 @@ mcr.microsoft.com/devcontainers/java:dev-8-jdk-bookworm
 | unzip | 6.0-28 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
-| yarn | 1.22.22-1 |
 | zip | 3.0-13 |
 | zlib1g | 1:1.2.13.dfsg-1 |
 | zsh | 5.9-4+b8 |
