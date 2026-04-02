@@ -2,7 +2,7 @@ import { defineConfig } from "eslint/config";
 import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
 import globals from "globals";
-import jsoncParser from "jsonc-eslint-parser";
+import * as jsoncParser from "jsonc-eslint-parser";
 
 const compat = new FlatCompat();
 
