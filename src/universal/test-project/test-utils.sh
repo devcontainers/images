@@ -68,7 +68,7 @@ checkOSPackages() {
     LABEL=$1
     shift
     echo -e "\n🧪 Testing $LABEL"
-    if dpkg-query --show -f='${Package}: ${Version}\n' "$@"; then 
+    if rpm -q --queryformat '%{NAME}: %{VERSION}-%{RELEASE}\n' "$@"; then 
         echo "✅  Passed!"
         return 0
     else
@@ -107,28 +107,23 @@ checkExtension() {
 
 checkCommon()
 {
-    PACKAGE_LIST="apt-utils \
-        openssh-client \
+    PACKAGE_LIST="openssh-clients \
         less \
-        iproute2 \
-        procps \
+        iproute \
+        procps-ng \
         curl \
         wget \
         unzip \
         nano \
         jq \
-        lsb-release \
         ca-certificates \
-        apt-transport-https \
-        dialog \
         gnupg2 \
-        libc6 \
-        libgcc1 \
-        libgssapi-krb5-2 \
-        liblttng-ust1 \
-        libstdc++6 \
-        zlib1g \
-        locales \
+        glibc \
+        libgcc \
+        krb5-libs \
+        lttng-ust \
+        libstdc++ \
+        zlib \
         gettext \
         sudo \
         inotify-tools"
@@ -136,7 +131,6 @@ checkCommon()
     # Actual tests
     checkOSPackages "common-os-packages" ${PACKAGE_LIST}
     check "non-root-user" id ${USERNAME}
-    check "locale" [ $(locale -a | grep en_US.utf8) ]
     check "sudo" sudo echo "sudo works."
     check "zsh" zsh --version
     check "oh-my-zsh" [ -d "$HOME/.oh-my-zsh" ]

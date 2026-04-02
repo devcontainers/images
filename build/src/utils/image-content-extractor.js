@@ -33,9 +33,19 @@ const linuxPackageInfoExtractionConfig = {
         poolUriMatchRegEx: '${PACKAGE} policy:\\n.*${VERSION}:\\n.*lib/apk/db/installed\\n\\s*(.+)\\n',
     }
 }
+linuxPackageInfoExtractionConfig.rpm = {
+    namePrefix: 'RPM Package:',
+    listCommand: "rpm -qa --queryformat '%{NAME} ~~v~~ %{VERSION}-%{RELEASE}\n' | grep -F",
+    lineRegEx: /(.+) ~~v~~ (.+)/,
+    getUriCommand: 'echo',
+    downloadUriMatchRegEx: '${PACKAGE}',
+    poolUriMatchRegEx: '${PACKAGE}',
+};
 linuxPackageInfoExtractionConfig.alpine = linuxPackageInfoExtractionConfig.apk;
 linuxPackageInfoExtractionConfig.debian = linuxPackageInfoExtractionConfig.apt;
 linuxPackageInfoExtractionConfig.ubuntu = linuxPackageInfoExtractionConfig.apt;
+linuxPackageInfoExtractionConfig.fedora = linuxPackageInfoExtractionConfig.rpm;
+linuxPackageInfoExtractionConfig.rhel = linuxPackageInfoExtractionConfig.rpm;
 
 /* This function converts the contents of /etc/os-release from this:
 
@@ -606,6 +616,10 @@ function getLinuxPackageManagerForDistro(distroId)
         case 'ubuntu': return 'apt';
         case 'apk':
         case 'alpine': return 'apk';
+        case 'dnf':
+        case 'rpm':
+        case 'fedora':
+        case 'rhel': return 'dnf';
     }
     return null;
 }

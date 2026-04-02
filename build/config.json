@@ -20,9 +20,7 @@
 	],
 
 	"needsDedicatedPage": [ 
-		"universal",
-		"php",
-		"python"
+		"universal"
 	],
 
 	"flattenBaseImage": [],
@@ -136,6 +134,40 @@
 			"man",
 			"man-doc",
 			"man-pages"
+		],
+		"dnf": [
+			"git",
+			"openssh-clients",
+			"gnupg2",
+			"iproute",
+			"procps-ng",
+			"lsof",
+			"htop",
+			"net-tools",
+			"psmisc",
+			"curl",
+			"wget",
+			"rsync",
+			"ca-certificates",
+			"unzip",
+			"zip",
+			"nano",
+			"vim-minimal",
+			"less",
+			"jq",
+			"glibc",
+			"libgcc",
+			"krb5-libs",
+			"libstdc++",
+			"openssl-libs",
+			"lttng-ust",
+			"zlib",
+			"sudo",
+			"ncdu",
+			"man-db",
+			"man-pages",
+			"strace",
+			"zsh"
 		]
 	},
 

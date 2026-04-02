@@ -19,22 +19,29 @@ rm -f /etc/profile.d/00-restore-env.sh
 echo "export PATH=${PATH//$(sh -lc 'echo $PATH')/\$PATH}" > /etc/profile.d/00-restore-env.sh
 chmod +x /etc/profile.d/00-restore-env.sh
 
-# Function to run apt-get if needed
-apt_get_update_if_needed()
+# Function to install packages if needed
+install_packages_if_needed()
 {
-    if [ ! -d "/var/lib/apt/lists" ] || [ "$(ls /var/lib/apt/lists/ | wc -l)" = "0" ]; then
-        echo "Running apt-get update..."
-        apt-get update
-    else
-        echo "Skipping apt-get update."
+    if command -v dnf > /dev/null 2>&1; then
+        dnf -y install "$@"
+    elif command -v apt-get > /dev/null 2>&1; then
+        if [ ! -d "/var/lib/apt/lists" ] || [ "$(ls /var/lib/apt/lists/ | wc -l)" = "0" ]; then
+            apt-get update
+        fi
+        apt-get -y install --no-install-recommends "$@"
     fi
 }
 
 # Checks if packages are installed and installs them if not
 check_packages() {
-    if ! dpkg -s "$@" > /dev/null 2>&1; then
-        apt_get_update_if_needed
-        apt-get -y install --no-install-recommends "$@"
+    if command -v rpm > /dev/null 2>&1; then
+        for pkg in "$@"; do
+            if ! rpm -q "$pkg" > /dev/null 2>&1; then
+                install_packages_if_needed "$pkg"
+            fi
+        done
+    elif ! dpkg -s "$@" > /dev/null 2>&1; then
+        install_packages_if_needed "$@"
     fi
 }
 
@@ -47,8 +54,6 @@ updaterc() {
         echo -e "$1" >> /etc/zsh/zshrc
     fi
 }
-
-export DEBIAN_FRONTEND=noninteractive
 
 if ! cat /etc/group | grep -e "^nvs:" > /dev/null 2>&1; then
     groupadd -r nvs

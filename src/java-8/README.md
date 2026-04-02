@@ -9,10 +9,10 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published images* | ghcr.io/sebst/devcontainers/java:8 |
-| *Available image variants* | 8 / 8-trixie, 8-bookworm ([full list](https://ghcr.io/v2/sebst/devcontainers/java/tags/list)) |
-| *Published image architecture(s)* | x86-64, arm64/aarch64 for `trixie` and `bookworm` variants |
+| *Available image variants* | 8 / 8-fedora43, 8-fedora42 ([full list](https://ghcr.io/v2/sebst/devcontainers/java/tags/list)) |
+| *Published image architecture(s)* | x86-64, arm64/aarch64 for `fedora43` and `fedora42` variants |
 | *Container host OS support* | Linux, macOS, Windows |
-| *Container OS* | Debian |
+| *Container OS* | Fedora |
 | *Languages, platforms* | Java |
 
 See **[history](history)** for information on the contents of published images.
@@ -23,17 +23,17 @@ See **[history](history)** for information on the contents of published images.
 
 You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
-- `ghcr.io/sebst/devcontainers/java:8` (or `8-trixie`, `8-bookworm` to pin to an OS version)
+- `ghcr.io/sebst/devcontainers/java:8` (or `8-fedora43`, `8-fedora42` to pin to an OS version)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `ghcr.io/sebst/devcontainers/java:3-8` (or `3-8-trixie`, `3-8-bookworm` to pin to an OS version)
-- `ghcr.io/sebst/devcontainers/java:3.0-8` (or `3.0-8-trixie`, `3.0-8-bookworm` to pin to an OS version)
-- `ghcr.io/sebst/devcontainers/java:3.0.7-8` (or `3.0.7-8-trixie`, `3.0.7-8-bookworm` to pin to an OS version)
+- `ghcr.io/sebst/devcontainers/java:4-8` (or `4-8-fedora43`, `4-8-fedora42` to pin to an OS version)
+- `ghcr.io/sebst/devcontainers/java:4.0-8` (or `4.0-8-fedora43`, `4.0-8-fedora42` to pin to an OS version)
+- `ghcr.io/sebst/devcontainers/java:4.0.0-8` (or `4.0.0-8-fedora43`, `4.0.0-8-fedora42` to pin to an OS version)
 
-However, we only do security patching on the latest [non-breaking, in support](https://github.com/sebst/devcontainer-images-fork/issues/90) versions of images (e.g. `3-8`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
+However, we only do security patching on the latest [non-breaking, in support](https://github.com/sebst/devcontainer-images-fork/issues/90) versions of images (e.g. `4-8`). You may want to run `dnf -y update` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://ghcr.io/v2/sebst/devcontainers/java/tags/list).
 

@@ -2,17 +2,17 @@
 
 ## Summary
 
-*Develop C++ applications on Linux. Includes Debian C++ build tools.*
+*Develop C++ applications on Linux. Includes Fedora C++ build tools.*
 
 | Metadata | Value |  
 |----------|-------|
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published images* | ghcr.io/sebst/devcontainers/cpp |
-| *Available image variants* | debian13, debian12, ubuntu24.04, ubuntu22.04 ([full list](https://ghcr.io/v2/sebst/devcontainers/cpp/tags/list)) |
-| *Published image architecture(s)* | x86-64, aarch64/arm64 for `debian13`, `debian12`, `ubuntu24.04` and `ubuntu22.04` variants |
+| *Available image variants* | fedora43, fedora42 ([full list](https://ghcr.io/v2/sebst/devcontainers/cpp/tags/list)) |
+| *Published image architecture(s)* | x86-64, aarch64/arm64 for `fedora43` and `fedora42` variants |
 | *Container host OS support* | Linux, macOS, Windows |
-| *Container OS* | Debian, Ubuntu |
+| *Container OS* | Fedora |
 | *Languages, platforms* | C++ |
 
 See **[history](history)** for information on the contents of published images.
@@ -21,25 +21,22 @@ See **[history](history)** for information on the contents of published images.
 
 You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
-- `ghcr.io/sebst/devcontainers/cpp` (latest Debian GA)
-- `ghcr.io/sebst/devcontainers/cpp:debian` (latest Debian GA)
-- `ghcr.io/sebst/devcontainers/cpp:debian13` (or `trixie`)
-- `ghcr.io/sebst/devcontainers/cpp:debian12` (or `bookworm`)
-- `ghcr.io/sebst/devcontainers/cpp:ubuntu` (latest Ubuntu LTS)
-- `ghcr.io/sebst/devcontainers/cpp:ubuntu24.04` (or `noble`)
-- `ghcr.io/sebst/devcontainers/cpp:ubuntu22.04` (or `jammy`)
+- `ghcr.io/sebst/devcontainers/cpp` (latest Fedora)
+- `ghcr.io/sebst/devcontainers/cpp:fedora` (latest Fedora)
+- `ghcr.io/sebst/devcontainers/cpp:fedora43` (or `43`)
+- `ghcr.io/sebst/devcontainers/cpp:fedora42` (or `42`)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
-- `ghcr.io/sebst/devcontainers/cpp:2-trixie`
-- `ghcr.io/sebst/devcontainers/cpp:2.1-trixie`
-- `ghcr.io/sebst/devcontainers/cpp:2.1.6-trixie`
-- `ghcr.io/sebst/devcontainers/cpp:2-bookworm`
-- `ghcr.io/sebst/devcontainers/cpp:2.1-bookworm`
-- `ghcr.io/sebst/devcontainers/cpp:2.1.6-bookworm`
+- `ghcr.io/sebst/devcontainers/cpp:3-43`
+- `ghcr.io/sebst/devcontainers/cpp:3.0-43`
+- `ghcr.io/sebst/devcontainers/cpp:3.0.0-43`
+- `ghcr.io/sebst/devcontainers/cpp:3-42`
+- `ghcr.io/sebst/devcontainers/cpp:3.0-42`
+- `ghcr.io/sebst/devcontainers/cpp:3.0.0-42`
 
-However, we only do security patching on the latest [non-breaking, in support](https://github.com/sebst/devcontainer-images-fork/issues/90) versions of images (e.g. `0-debian-12`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
+However, we only do security patching on the latest [non-breaking, in support](https://github.com/sebst/devcontainer-images-fork/issues/90) versions of images (e.g. `3-43`). You may want to run `dnf -y update` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://ghcr.io/v2/sebst/devcontainers/cpp/tags/list).
 

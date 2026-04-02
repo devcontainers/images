@@ -1,14 +1,13 @@
-ARG VARIANT=debian13
-FROM mcr.microsoft.com/devcontainers/base:${VARIANT}
+ARG VARIANT=43
+FROM ghcr.io/sebst/devcontainers/base-fedora:${VARIANT}
 USER root
 
 # Install needed packages. Use a separate RUN statement to add your own dependencies.
-RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install build-essential cmake cppcheck valgrind clang lldb llvm gdb \
+RUN dnf -y install gcc gcc-c++ make cmake cppcheck valgrind clang lldb llvm gdb \
     # [Optional] Additional packages required for using vcpkg package manager in manifest mode.
     # [Optional] Please uncommment if the below line in needed.
-    # && apt-get -y install autoconf automake libtool m4 autoconf-archive \
-    && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/*
+    # && dnf -y install autoconf automake libtool m4 autoconf-archive \
+    && dnf clean all
 
 # Setup ENV vars for vcpkg
 ENV VCPKG_ROOT=/usr/local/vcpkg \
@@ -24,5 +23,5 @@ RUN chmod +x /tmp/install-vcpkg.sh \
     && rm -f /tmp/install-vcpkg.sh
 
 # [Optional] Uncomment this section to install additional OS packages.
-# RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-#     && apt-get -y install --no-install-recommends <your-package-list-here>
+# RUN dnf -y install <your-package-list-here> \
+#     && dnf clean all

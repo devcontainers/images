@@ -1,84 +1,84 @@
 {
-	"version": "3.0.6",
+	"version": "4.0.0",
 	"variants": [
-		"25-trixie",
-		"21-trixie",
-		"17-trixie",
-		"11-trixie",
-		"25-bookworm",
-		"21-bookworm",
-		"17-bookworm",
-		"11-bookworm"
+		"25-43",
+		"21-43",
+		"17-43",
+		"11-43",
+		"25-42",
+		"21-42",
+		"17-42",
+		"11-42"
 	],
 	"build": {
-		"latest": "25-trixie",
-		"rootDistro": "debian",
-		"parent": "base-debian",
+		"latest": "25-43",
+		"rootDistro": "redhat",
+		"parent": "base-fedora",
 		"idMismatch": "true",
 		"variantBuildArgs": {
-			"25-trixie": {
+			"25-43": {
 				"TARGET_JAVA_VERSION": "25",
-				"BASE_IMAGE_VERSION_CODENAME": "trixie"
+				"BASE_IMAGE_VERSION_CODENAME": "43"
 			},
-			"21-trixie": {
+			"21-43": {
 				"TARGET_JAVA_VERSION": "21",
-				"BASE_IMAGE_VERSION_CODENAME": "trixie"
+				"BASE_IMAGE_VERSION_CODENAME": "43"
 			},
-			"17-trixie": {
+			"17-43": {
 				"TARGET_JAVA_VERSION": "17",
-				"BASE_IMAGE_VERSION_CODENAME": "trixie"
+				"BASE_IMAGE_VERSION_CODENAME": "43"
 			},
-			"11-trixie": {
+			"11-43": {
 				"TARGET_JAVA_VERSION": "11",
-				"BASE_IMAGE_VERSION_CODENAME": "trixie"
+				"BASE_IMAGE_VERSION_CODENAME": "43"
 			},
-			"25-bookworm": {
+			"25-42": {
 				"TARGET_JAVA_VERSION": "25",
-				"BASE_IMAGE_VERSION_CODENAME": "bookworm"
+				"BASE_IMAGE_VERSION_CODENAME": "42"
 			},
-			"21-bookworm": {
+			"21-42": {
 				"TARGET_JAVA_VERSION": "21",
-				"BASE_IMAGE_VERSION_CODENAME": "bookworm"
+				"BASE_IMAGE_VERSION_CODENAME": "42"
 			},
-			"17-bookworm": {
+			"17-42": {
 				"TARGET_JAVA_VERSION": "17",
-				"BASE_IMAGE_VERSION_CODENAME": "bookworm"
+				"BASE_IMAGE_VERSION_CODENAME": "42"
 			},
-			"11-bookworm": {
+			"11-42": {
 				"TARGET_JAVA_VERSION": "11",
-				"BASE_IMAGE_VERSION_CODENAME": "bookworm"
+				"BASE_IMAGE_VERSION_CODENAME": "42"
 			}
 		},
 		"architectures": {
-			"25-trixie": [
+			"25-43": [
 				"linux/amd64",
 				"linux/arm64"
 			],
-			"21-trixie": [
+			"21-43": [
 				"linux/amd64",
 				"linux/arm64"
 			],
-			"17-trixie": [
+			"17-43": [
 				"linux/amd64",
 				"linux/arm64"
 			],
-			"11-trixie": [
+			"11-43": [
 				"linux/amd64",
 				"linux/arm64"
 			],
-			"25-bookworm": [
+			"25-42": [
 				"linux/amd64",
 				"linux/arm64"
 			],
-			"21-bookworm": [
+			"21-42": [
 				"linux/amd64",
 				"linux/arm64"
 			],
-			"17-bookworm": [
+			"17-42": [
 				"linux/amd64",
 				"linux/arm64"
 			],
-			"11-bookworm": [
+			"11-42": [
 				"linux/amd64",
 				"linux/arm64"
 			]
@@ -87,47 +87,41 @@
 			"java:${VERSION}-${VARIANT}"
 		],
 		"variantTags": {
-			"25-trixie": [
+			"25-43": [
 				"java:${VERSION}-25",
-				"java:${VERSION}-25-jdk-trixie",
-				"java:${VERSION}-trixie"
+				"java:${VERSION}-25-jdk-fedora43",
+				"java:${VERSION}-fedora43"
 			],
-			"21-trixie": [
+			"21-43": [
 				"java:${VERSION}-21",
-				"java:${VERSION}-21-jdk-trixie"
+				"java:${VERSION}-21-jdk-fedora43"
 			],
-			"17-trixie": [
+			"17-43": [
 				"java:${VERSION}-17",
-				"java:${VERSION}-17-jdk-trixie"
+				"java:${VERSION}-17-jdk-fedora43"
 			],
-			"11-trixie": [
+			"11-43": [
 				"java:${VERSION}-11",
-				"java:${VERSION}-11-jdk-trixie"
+				"java:${VERSION}-11-jdk-fedora43"
 			],
-			"25-bookworm": [
-				"java:${VERSION}-25-jdk-bookworm",
-				"java:${VERSION}-bookworm"
+			"25-42": [
+				"java:${VERSION}-25-jdk-fedora42",
+				"java:${VERSION}-fedora42"
 			],
-			"21-bookworm": [
-				"java:${VERSION}-21-jdk-bookworm"
+			"21-42": [
+				"java:${VERSION}-21-jdk-fedora42"
 			],
-			"17-bookworm": [
-				"java:${VERSION}-17-jdk-bookworm"
+			"17-42": [
+				"java:${VERSION}-17-jdk-fedora42"
 			],
-			"11-bookworm": [
-				"java:${VERSION}-11-jdk-bookworm"
+			"11-42": [
+				"java:${VERSION}-11-jdk-fedora42"
 			]
 		}
 	},
 	"dependencies": {
-		"image": "buildpack-deps:${BASE_IMAGE_VERSION_CODENAME}-curl",
-		"imageLink": "https://hub.docker.com/_/buildpack-deps",
-		"apt": [
-			{
-				"cgIgnore": false,
-				"name": "yarn"
-			}
-		],
+		"image": "fedora:${BASE_IMAGE_VERSION_CODENAME}",
+		"imageLink": "https://hub.docker.com/_/fedora",
 		"git": {
 			"Oh My Zsh!": "/home/vscode/.oh-my-zsh",
 			"nvm": "/usr/local/share/nvm"

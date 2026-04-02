@@ -1,5 +1,6 @@
 ARG VARIANT=""
 FROM REPLACE-ME
 
-# ** [Optional] Uncomment this line to install additional packages. **
-# RUN yum -y install <your-package-list-here>
+# ** [Optional] Uncomment this section to install additional packages. **
+# RUN dnf -y install <your-package-list-here> \
+#     && dnf clean all

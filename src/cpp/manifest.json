@@ -1,34 +1,19 @@
 {
-	"version": "2.1.6",
+	"version": "3.0.0",
 	"variants": [
-		"trixie",
-		"bookworm",
-		"noble",
-		"jammy"
+		"43",
+		"42"
 	],
 	"build": {
-		"latest": "trixie",
-		"parent": {
-			"trixie": "base-debian",
-			"bookworm": "base-debian",
-			"noble": "base-ubuntu",
-			"jammy": "base-ubuntu"
-		},
-		"rootDistro": "debian",
+		"latest": "43",
+		"parent": "base-fedora",
+		"rootDistro": "redhat",
 		"architectures": {
-			"trixie": [
+			"43": [
 				"linux/amd64",
 				"linux/arm64"
 			],
-			"bookworm": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"noble": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"jammy": [
+			"42": [
 				"linux/amd64",
 				"linux/arm64"
 			]
@@ -37,28 +22,23 @@
 			"cpp:${VERSION}-${VARIANT}"
 		],
 		"variantTags": {
-			"trixie": [
-				"cpp:${VERSION}-debian13",
-				"cpp:${VERSION}-debian",
+			"43": [
+				"cpp:${VERSION}-fedora43",
+				"cpp:${VERSION}-fedora",
 				"cpp:${VERSION}"
 			],
-			"bookworm": [
-				"cpp:${VERSION}-debian12"
-			],
-			"noble": [
-				"cpp:${VERSION}-ubuntu24.04",
-				"cpp:${VERSION}-ubuntu"
-			],
-			"jammy": [
-				"cpp:${VERSION}-ubuntu22.04"
+			"42": [
+				"cpp:${VERSION}-fedora42"
 			]
 		}
 	},
 	"dependencies": {
-		"image": "buildpack-deps:${VARIANT}-curl",
-		"imageLink": "https://hub.docker.com/_/buildpack-deps",
-		"apt": [
-			"build-essential",
+		"image": "fedora:${VARIANT}",
+		"imageLink": "https://hub.docker.com/_/fedora",
+		"dnf": [
+			"gcc",
+			"gcc-c++",
+			"make",
 			"cmake",
 			"cppcheck",
 			"valgrind",
@@ -70,7 +50,7 @@
 			"curl",
 			"zip",
 			"unzip",
-			"pkg-config",
+			"pkgconfig",
 			"bash-completion",
 			"ninja-build"
 		],

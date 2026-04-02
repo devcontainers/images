@@ -1,19 +1,19 @@
 {
-	"version": "3.0.7",
+	"version": "4.0.0",
 	"variants": [
-		"trixie",
-		"bookworm"
+		"43",
+		"42"
 	],
 	"build": {
 		"latest": false,
-		"rootDistro": "debian",
-		"parent": "base-debian",
+		"rootDistro": "redhat",
+		"parent": "base-fedora",
 		"architectures": {
-			"trixie": [
+			"43": [
 				"linux/amd64",
 				"linux/arm64"
 			],
-			"bookworm": [
+			"42": [
 				"linux/amd64",
 				"linux/arm64"
 			]
@@ -22,24 +22,18 @@
 			"java:${VERSION}-8-${VARIANT}"
 		],
 		"variantTags": {
-			"trixie": [
+			"43": [
 				"java:${VERSION}-8",
-				"java:${VERSION}-8-jdk-trixie"
+				"java:${VERSION}-8-jdk-fedora43"
 			],
-			"bookworm": [
-				"java:${VERSION}-8-jdk-bookworm"
-			]	
+			"42": [
+				"java:${VERSION}-8-jdk-fedora42"
+			]
 		}
 	},
 	"dependencies": {
-		"image": "buildpack-deps:${BASE_IMAGE_VERSION_CODENAME}-curl",
-		"imageLink": "https://hub.docker.com/_/buildpack-deps",
-		"apt": [
-			{
-				"cgIgnore": false,
-				"name": "yarn"
-			}
-		],
+		"image": "fedora:${BASE_IMAGE_VERSION_CODENAME}",
+		"imageLink": "https://hub.docker.com/_/fedora",
 		"git": {
 			"Oh My Zsh!": "/home/vscode/.oh-my-zsh",
 			"nvm": "/usr/local/share/nvm"

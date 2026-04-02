@@ -2,16 +2,16 @@
 
 ## Summary
 
-*Use or extend the new Ubuntu-based default, large, and multi-language universal image which contains many popular languages/frameworks/SDKS/runtimes*
+*Use or extend the new Fedora-based default, large, and multi-language universal image which contains many popular languages/frameworks/SDKS/runtimes*
 
 | Metadata | Value |  
 |----------|-------|
 | *Categories* | Services, GitHub |
 | *Image type* | Dockerfile |
-| *Published image* | ghcr.io/sebst/devcontainers/universal:linux<br />ghcr.io/sebst/devcontainers/universal:noble |
+| *Published image* | ghcr.io/sebst/devcontainers/universal:linux<br />ghcr.io/sebst/devcontainers/universal:fedora43 |
 | *Published image architecture(s)* | x86-64 |
 | *Container host OS support* | Linux, macOS, Windows |
-| *Container OS* | Ubuntu |
+| *Container OS* | Fedora |
 | *Languages, platforms* | Python, Node.js, JavaScript, TypeScript, C++, Java, C#, F#, .NET Core, PHP, Go, Ruby, Conda |
 
 See **[history](history)** for information on the contents of published images.
@@ -27,9 +27,9 @@ The container includes the `zsh` (and Oh My Zsh!) and `fish` shells that you can
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image.
 For example:
 
-- `ghcr.io/sebst/devcontainers/universal:6-noble`
-- `ghcr.io/sebst/devcontainers/universal:6.0-noble`
-- `ghcr.io/sebst/devcontainers/universal:6.0.0-noble`
+- `ghcr.io/sebst/devcontainers/universal:7-fedora43`
+- `ghcr.io/sebst/devcontainers/universal:7.0-fedora43`
+- `ghcr.io/sebst/devcontainers/universal:7.0.0-fedora43`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://ghcr.io/v2/sebst/devcontainers/universal/tags/list).
 

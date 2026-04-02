@@ -1,0 +1,44 @@
+{
+	"version": "1.0.0",
+	"variants": [
+		"43",
+		"42"
+	],
+	"build": {
+		"latest": "43",
+		"rootDistro": "redhat",
+		"architectures": {
+			"43": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"42": [
+				"linux/amd64",
+				"linux/arm64"
+			]
+		},
+		"tags": [
+			"base-fedora:${VERSION}-${VARIANT}"
+		],
+		"variantTags": {
+			"43": [
+				"base-fedora:${VERSION}-fedora43",
+				"base-fedora:${VERSION}-fedora",
+				"base-fedora:${VERSION}"
+			],
+			"42": [
+				"base-fedora:${VERSION}-fedora42"
+			]
+		}
+	},
+	"dependencies": {
+		"image": "fedora:${VARIANT}",
+		"imageLink": "https://hub.docker.com/_/fedora",
+		"git": {
+			"Oh My Zsh!": "/home/vscode/.oh-my-zsh"
+		},
+		"other": {
+			"git": {}
+		}
+	}
+}

@@ -1,7 +1,7 @@
 # This Dockerfile uses separate build arguments instead of VARIANT
 ARG TARGET_JAVA_VERSION=25
-ARG BASE_IMAGE_VERSION_CODENAME=trixie
-FROM mcr.microsoft.com/devcontainers/base:${BASE_IMAGE_VERSION_CODENAME}
+ARG BASE_IMAGE_VERSION_CODENAME=43
+FROM ghcr.io/sebst/devcontainers/base-fedora:${BASE_IMAGE_VERSION_CODENAME}
 
 USER root
 ARG TARGET_JAVA_VERSION
@@ -11,12 +11,12 @@ ENV PATH "${JAVA_HOME}/bin:${PATH}"
 ENV LANG en_US.UTF-8
 
 # Install Microsoft OpenJDK
-RUN arch="$(dpkg --print-architecture)" \
+RUN arch="$(uname -m)" \
 	&& case "$arch" in \
-		"amd64") \
+		"x86_64") \
 			jdkUrl="https://aka.ms/download-jdk/microsoft-jdk-${TARGET_JAVA_VERSION}-linux-x64.tar.gz"; \
 			;; \
-		"arm64") \
+		"aarch64") \
 			jdkUrl="https://aka.ms/download-jdk/microsoft-jdk-${TARGET_JAVA_VERSION}-linux-aarch64.tar.gz"; \
 			;; \
 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; \
@@ -42,5 +42,5 @@ RUN arch="$(dpkg --print-architecture)" \
 	&& ln -s ${JAVA_HOME} /usr/local/openjdk-${TARGET_JAVA_VERSION}
 
 # [Optional] Uncomment this section to install additional OS packages.
-# RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-#     && apt-get -y install --no-install-recommends <your-package-list-here>
+# RUN dnf -y install <your-package-list-here> \
+#     && dnf clean all
