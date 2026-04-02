@@ -8,7 +8,7 @@
 |----------|-------|
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
-| *Published image* | mcr.microsoft.com/devcontainers/miniconda:3 |
+| *Published image* | ghcr.io/sebst/devcontainers/miniconda:3 |
 | *Published image architecture(s)* | x86-64 |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
@@ -22,17 +22,17 @@ See **[history](history)** for information on the contents of published images.
 
 You can directly reference pre-built versions of `.devcontainer/Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` to the following. An example `Dockerfile` is included in this repository.
 
-- `mcr.microsoft.com/devcontainers/miniconda` (or `miniconda:3`)
+- `ghcr.io/sebst/devcontainers/miniconda` (or `miniconda:3`)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/devcontainers/miniconda:1-3`
-- `mcr.microsoft.com/devcontainers/miniconda:1.2-3`
-- `mcr.microsoft.com/devcontainers/miniconda:1.2.3-3`
+- `ghcr.io/sebst/devcontainers/miniconda:1-3`
+- `ghcr.io/sebst/devcontainers/miniconda:1.2-3`
+- `ghcr.io/sebst/devcontainers/miniconda:1.2.3-3`
 
-See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/miniconda/tags/list).
+See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://ghcr.io/v2/sebst/devcontainers/miniconda/tags/list).
 
 Alternatively, you can use the contents of [.devcontainer](.devcontainer) to fully customize your container's contents or to build it for a container host architecture not supported by the image.
 
@@ -116,4 +116,4 @@ RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then /opt/conda/bin/conda env up
 
 Copyright (c) Microsoft Corporation. All rights reserved.
 
-Licensed under the MIT License. See [LICENSE](https://github.com/devcontainers/images/blob/main/LICENSE)
+Licensed under the MIT License. See [LICENSE](https://github.com/sebst/devcontainer-images-fork/blob/main/LICENSE)

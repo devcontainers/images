@@ -95,8 +95,8 @@ async function prepDockerFile(devContainerDockerfilePath, definitionId, repo, re
     } else {
         // Otherwise update any Dockerfiles that refer to an un-versioned tag of another dev container
         // to the MAJOR version from this release.
-        const expectedRegistry = configUtils.getConfig('stubRegistry', 'mcr.microsoft.com');
-        const expectedRegistryPath = configUtils.getConfig('stubRegistryPath', 'devcontainers');
+        const expectedRegistry = configUtils.getConfig('stubRegistry', 'ghcr.io');
+        const expectedRegistryPath = configUtils.getConfig('stubRegistryPath', 'sebst/devcontainers');
         const fromCaptureGroups = new RegExp(`FROM\\s+(${expectedRegistry}/${expectedRegistryPath}/.+:.+)`).exec(devContainerDockerfileRaw);
         if (fromCaptureGroups && fromCaptureGroups.length > 0) {
             const fromDefinitionTag = configUtils.getUpdatedTag(

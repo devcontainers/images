@@ -1,6 +1,6 @@
 # Build and image generation for devcontainers
 
-This folder contains scripts to build and push images into the Microsoft Container Registry (MCR) from this repository, generate or modify any associated content to use the built image, and track dependencies.
+This folder contains scripts to build and push images into the GitHub Container Registry (GHCR) from this repository, generate or modify any associated content to use the built image, and track dependencies.
 
 ## Build CLI
 
@@ -33,10 +33,10 @@ In addition to versioned releases, this repository publishes special "dev" tagge
 ### Tagging pattern
 
 Images receive both generic and specific dev tags:
-- Generic: `mcr.microsoft.com/devcontainers/<image>:dev`
-- With version: `mcr.microsoft.com/devcontainers/<image>:dev-<version>`
-- With distro: `mcr.microsoft.com/devcontainers/<image>:dev-<distro>`
-- Combined: `mcr.microsoft.com/devcontainers/<image>:dev-<version>-<distro>`
+- Generic: `ghcr.io/sebst/devcontainers/<image>:dev`
+- With version: `ghcr.io/sebst/devcontainers/<image>:dev-<version>`
+- With distro: `ghcr.io/sebst/devcontainers/<image>:dev-<distro>`
+- Combined: `ghcr.io/sebst/devcontainers/<image>:dev-<version>-<distro>`
 
 ### Update frequency
 
@@ -57,21 +57,21 @@ Weekly automated builds occur every Monday via `push-dev.yml` workflow, ensuring
 **Migration example:**
 ```dockerfile
 # Preview/testing
-FROM mcr.microsoft.com/devcontainers/python:dev-3.13
+FROM ghcr.io/sebst/devcontainers/python:dev-3.13
 
 # Stable/production
-FROM mcr.microsoft.com/devcontainers/python:3-3.13
+FROM ghcr.io/sebst/devcontainers/python:3-3.13
 ```
 
 The versioned tag provides stability while dev tags continuously incorporate changes.
 
 ## Setting up a container to be built
 
-> **Note:** Only @devcontainers/maintainers can currently onboard an image to this process since it requires access the Microsoft Container Registry. [See here for details](https://github.com/microsoft/vscode-internalbacklog/wiki/Remote-Container-Images-MCR-Setup).
+> **Note:** Only repository maintainers can currently onboard an image to this process since it requires access to push to GHCR.
 >
 > However, if you have your own pre-built image or build process, you can simply reference it directly in you contributed container.
 
-Image build/push to MCR is managed using config in `manifest.json` files that are located in the images' folder. So, the steps to onboard an image are:
+Image build/push to GHCR is managed using config in `manifest.json` files that are located in the images' folder. So, the steps to onboard an image are:
 
 1. **Important:** Update any `ARG` values in your `Dockerfile` to reflect what you want in the image. Use boolean `ARGS` with `if` statements to skip installing certain things in the image.
 
@@ -83,8 +83,6 @@ Image build/push to MCR is managed using config in `manifest.json` files that ar
 
 4. Set up [meta.env file](#Adding-a-meta.env-file)
 
-5. Update the `vscode` [config files for MCR](https://github.com/microsoft/vscode-internalbacklog/wiki/Remote-Container-Images-MCR-Setup) as appropriate (MS internal only).
-
 ## Testing the build
 
 Once you have your build configuration setup, you can use the `vscdc` CLI to test that everything is configured as you would expect.
@@ -92,25 +90,25 @@ Once you have your build configuration setup, you can use the `vscdc` CLI to tes
 1. First, build the image(s) using the CLI as follows:
 
    ```bash
-   build/vscdc push --no-push --registry mcr.microsoft.com --registry-path devcontainers --release main <your-image-name-here>
+   build/vscdc push --no-push --registry ghcr.io --registry-path sebst/devcontainers --release main <your-image-name-here>
    ```
 
 2. Use the Docker CLI to verify all of the expected images and tags and have the right contents:
 
     ```bash
-    docker run -it --init --privileged --rm mcr.microsoft.com/devcontainers/<expected-repository>:dev-<expected tag> bash
+    docker run -it --init --privileged --rm ghcr.io/sebst/devcontainers/<expected-repository>:dev-<expected tag> bash
     ```
 
 3. Test manifest generation by running:
 
    ```bash
-   build/vscdc cg --registry mcr.microsoft.com --registry-path devcontainers --release main <your-image-name-here>
+   build/vscdc cg --registry ghcr.io --registry-path sebst/devcontainers --release main <your-image-name-here>
    ```
 
 4. Test markdown image history by running:
 
     ```bash
-        build/vscdc info --build --markdown --overwrite --registry mcr.microsoft.com --registry-path devcontainers --release main <your-image-name-here>
+        build/vscdc info --build --markdown --overwrite --registry ghcr.io --registry-path sebst/devcontainers --release main <your-image-name-here>
     ```
 
 ## Creating a `Dockerfile`
@@ -127,7 +125,7 @@ In your `Dockerfile`:
 
 ```Dockerfile
 ARG VARIANT=3
-FROM mcr.microsoft.com/devcontainers/python:${VARIANT}
+FROM ghcr.io/sebst/devcontainers/python:${VARIANT}
 ```
 
 In `devcontainer.json`:
@@ -170,14 +168,14 @@ The **`build.rootDistro`** property can be `debian`, `alpine`, or `redhat` curre
 The **`build.latest`** and **`build.tags`** properties affect how tags are applied. For example, here is how several dev container folders map:
 
 ```text
-debian => mcr.microsoft.com/devcontainers/base:debian
-alpine => mcr.microsoft.com/devcontainers/base:alpine
-ubuntu => mcr.microsoft.com/devcontainers/base:ubuntu
+debian => ghcr.io/sebst/devcontainers/base:debian
+alpine => ghcr.io/sebst/devcontainers/base:alpine
+ubuntu => ghcr.io/sebst/devcontainers/base:ubuntu
 ```
 
 This results in just one "repository" in the registry much like you would see for other images in Docker Hub.
 
-- mcr.microsoft.com/devcontainers/base
+- ghcr.io/sebst/devcontainers/base
 
 The package version is then automatically added to these various tags in the `${VERSION}` location for an item in the `tags` property array as a part of the release. For example, release 0.40.0 would result in:
 
@@ -234,12 +232,12 @@ FROM python:${VARIANT}
 
 This configuration would cause separate image variants, each with a different `VARIANT` build argument value passed in, that are then tagged as follows:
 
-- mcr.microsoft.com/devcontainers/python:3
-- mcr.microsoft.com/devcontainers/python:3.6
-- mcr.microsoft.com/devcontainers/python:3.7
-- mcr.microsoft.com/devcontainers/python:3.8
+- ghcr.io/sebst/devcontainers/python:3
+- ghcr.io/sebst/devcontainers/python:3.6
+- ghcr.io/sebst/devcontainers/python:3.7
+- ghcr.io/sebst/devcontainers/python:3.8
 
-In addition `mcr.microsoft.com/devcontainers/python` would point to `mcr.microsoft.com/devcontainers/python:3` since it is the first in the list.
+In addition `ghcr.io/sebst/devcontainers/python` would point to `ghcr.io/sebst/devcontainers/python:3` since it is the first in the list.
 
 #### The `build.variantTags` property
 
@@ -271,11 +269,11 @@ For example:
 
 In this case, the image built for the `bullseye` variant will be tagged as follows:
 
-- mcr.microsoft.com/devcontaienrs/base:latest
-- mcr.microsoft.com/devcontaienrs/base:bullseye
-- mcr.microsoft.com/devcontaienrs/base:debian
-- mcr.microsoft.com/devcontaienrs/base:debian-11
-- mcr.microsoft.com/devcontaienrs/base:debian11
+- ghcr.io/sebst/devcontainers/base:latest
+- ghcr.io/sebst/devcontainers/base:bullseye
+- ghcr.io/sebst/devcontainers/base:debian
+- ghcr.io/sebst/devcontainers/base:debian-11
+- ghcr.io/sebst/devcontainers/base:debian11
 
 #### The `build.variantBuildArgs` property
 In some cases, you may need to vary build arguments in the images' `Dockerfile` by variant (beyond the `VARIANT` build arg itself). This can be done using the `build.variantBuildArgs` property. For example, consider the following:
@@ -548,7 +546,7 @@ When necessary, a specific version can also be specified for an individual image
 When a release is cut, there are a few things that need to happen. One is obviously releasing the appropriate image. However, to continue to help customers understand how to customize their images, we would want to reference a user modifiable "stub" Dockerfile instead of an image directly. This also is important to help deal with shortcomings and workarounds that require something like specifying a build argument. For example:
 
 ```Dockerfile
-FROM mcr.microsoft.com/devcontainer/javascript-node:0-10
+FROM ghcr.io/sebst/devcontainers/javascript-node:0-10
 
 # ** [Optional] Uncomment this section to install additional packages. **
 #
@@ -580,7 +578,7 @@ Testing, then, is as simple as it is now - open the folder in `devcontainers` in
 In the devcontainers repo itself, the `FROM` statement in `Dockerfile` would always point to `latest` or `dev` since it what is in main may not have even been released yet. This would get dynamically updated as a part of the release process - which we will cover next.
 
 ```Dockerfile
-FROM mcr.microsoft.com/vs/devcontainer/javascript-node:dev-10
+FROM ghcr.io/sebst/devcontainers/javascript-node:dev-10
 ```
 
 ##### Automated updates of other Dockerfiles
@@ -600,14 +598,14 @@ When a release is cut, the contents of devcontainers repo are staged. The build 
     ```Dockerfile
     # For information on the contents of the image referenced below, see the Dockerfile at
     # https://github.com/microsoft/devcontainers/tree/v0.35.0/containers/javascript-node-10/.devcontainer/Dockerfile
-    FROM mcr.microsoft.com/devcontainer/javascript-node:0-10
+    FROM ghcr.io/sebst/devcontainers/javascript-node:0-10
     ```
 
     This also works when the `VARIANT` ARG is used. The MAJOR part of the release version is placed in front of the argument in the FROM statement:
 
     ```Dockerfile
     ARG VARIANT="3"
-    FROM mcr.microsoft.com/devcontainer/python:0-${VARIANT}
+    FROM ghcr.io/sebst/devcontainers/python:0-${VARIANT}
     ```
 
 4. `devcontainer.json` is updated to point to `Dockerfile` and a comment is added that points to the image in this repository (along with its associated README for this specific version).

@@ -12,5 +12,5 @@ Depends on [add a reference link here]
 - [ ] Open a PR 
 - [ ] Create a release
 - [ ] Update [templates](https://github.com/devcontainers/templates) (if necessary)
-- [ ] Update https://github.com/devcontainers/images/issues/90
-- [ ] Update [Microsoft Artifact Registry](https://mcr.microsoft.com/en-us/catalog?search=dev%20container) docs
+- [ ] Update https://github.com/sebst/devcontainer-images-fork/issues/90
+- [ ] Update [GHCR](https://github.com/sebst?tab=packages) docs

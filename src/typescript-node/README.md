@@ -8,8 +8,8 @@
 |----------|-------|
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
-| *Published image* | mcr.microsoft.com/devcontainers/typescript-node |
-| *Available image variants* | 24 /24-trixie, 22 / 22-trixie, 20 / 20-trixie, 24-bookworm, 22-bookworm, 20-bookworm, 24-bullseye, 22-bullseye, 20-bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/typescript-node/tags/list)) |
+| *Published image* | ghcr.io/sebst/devcontainers/typescript-node |
+| *Available image variants* | 24 /24-trixie, 22 / 22-trixie, 20 / 20-trixie, 24-bookworm, 22-bookworm, 20-bookworm, 24-bullseye, 22-bullseye, 20-bullseye ([full list](https://ghcr.io/v2/sebst/devcontainers/typescript-node/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm`, and `bullseye` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
@@ -19,20 +19,20 @@
 
 You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
-- `mcr.microsoft.com/devcontainers/typescript-node` (latest)
-- `mcr.microsoft.com/devcontainers/typescript-node:24` (or `24-trixie`, `24-bookworm`, `24-bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/typescript-node:22` (or `22-trixie`, `22-bookworm`, `22-bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/typescript-node:20` (or `20-trixie`, `20-bookworm`, `20-bullseye` to pin to an OS version)
+- `ghcr.io/sebst/devcontainers/typescript-node` (latest)
+- `ghcr.io/sebst/devcontainers/typescript-node:24` (or `24-trixie`, `24-bookworm`, `24-bullseye` to pin to an OS version)
+- `ghcr.io/sebst/devcontainers/typescript-node:22` (or `22-trixie`, `22-bookworm`, `22-bullseye` to pin to an OS version)
+- `ghcr.io/sebst/devcontainers/typescript-node:20` (or `20-trixie`, `20-bookworm`, `20-bullseye` to pin to an OS version)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/devcontainers/typescript-node:4-24` (or `4-24-trixie`, `4-24-bookworm`, `4-24-bullseye`)
-- `mcr.microsoft.com/devcontainers/typescript-node:4.0-24` (or `4.0-24-trixie`,  `4.0-24-bookworm`, `4.0-24-bullseye`)
-- `mcr.microsoft.com/devcontainers/typescript-node:4.0.7-24` (or `4.0.7-24-trixie`, `4.0.7-24-bookworm`, `4.0.7-24-bullseye`)
+- `ghcr.io/sebst/devcontainers/typescript-node:4-24` (or `4-24-trixie`, `4-24-bookworm`, `4-24-bullseye`)
+- `ghcr.io/sebst/devcontainers/typescript-node:4.0-24` (or `4.0-24-trixie`,  `4.0-24-bookworm`, `4.0-24-bullseye`)
+- `ghcr.io/sebst/devcontainers/typescript-node:4.0.7-24` (or `4.0.7-24-trixie`, `4.0.7-24-bookworm`, `4.0.7-24-bullseye`)
 
-However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `3-24`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
+However, we only do security patching on the latest [non-breaking, in support](https://github.com/sebst/devcontainer-images-fork/issues/90) versions of images (e.g. `3-24`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
 Beyond TypeScript, Node.js, and `git`, this image / `Dockerfile` includes `eslint`, `zsh`, [Oh My Zsh!](https://ohmyz.sh/), a non-root `node` user with `sudo` access, and a set of common dependencies for development. Since `tslint` is [now fully deprecated](https://github.com/palantir/tslint/issues/4534), the image includes `tslint-to-eslint-config` globally to help you migrate.
 
@@ -42,4 +42,4 @@ Note that, while `eslint`and `typescript` are installed globally for convenience
 
 Copyright (c) Microsoft Corporation. All rights reserved.
 
-Licensed under the MIT License. See [LICENSE](https://github.com/devcontainers/images/blob/main/LICENSE)
+Licensed under the MIT License. See [LICENSE](https://github.com/sebst/devcontainer-images-fork/blob/main/LICENSE)

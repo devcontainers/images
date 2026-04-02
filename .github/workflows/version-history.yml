@@ -29,10 +29,10 @@ jobs:
     name: Update version history
     if: ${{ github.ref == 'refs/heads/main' || github.event.base_ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
-    environment: publishing
     permissions:
       contents: write
       pull-requests: write
+      packages: read
     steps:
 
     - name: Free more space
@@ -51,18 +51,15 @@ jobs:
     - name: Get image info
       id: Get_image_info
       env:
-        REGISTRY: ${{ secrets.REGISTRY }}
-        REGISTRY_BASE_PATH: ${{ secrets.REGISTRY_BASE_PATH }}
-        STUB_REGISTRY: ${{ secrets.STUB_REGISTRY }}
-        STUB_REGISTRY_BASE_PATH: ${{ secrets.STUB_REGISTRY_BASE_PATH }}
-        TOKEN_NAME: ${{ secrets.TOKEN_NAME }}
-        PASSWORD: ${{ secrets.PASSWORD }}
+        REGISTRY: ghcr.io
+        REGISTRY_BASE_PATH: sebst/devcontainers
+        STUB_REGISTRY: ghcr.io
+        STUB_REGISTRY_BASE_PATH: sebst/devcontainers
       run: |
         set -e
 
-        # ACR login
-        ACR_REGISTRY_NAME=$(echo "$REGISTRY" | grep -oP '(.+)(?=\.azurecr\.io)')
-        az acr login --name $ACR_REGISTRY_NAME --username $TOKEN_NAME --password $PASSWORD
+        # Log in to GHCR
+        echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
         # This is required to set yarn 4.9.4 as the global yarn version in the runner is 1.22.22
         sudo corepack enable

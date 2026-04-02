@@ -39,7 +39,7 @@ This repository contains a select set of images, and we encourage the community 
 
 ## Feedback
 
-Issues related to these images can be reported in [an issue](https://github.com/devcontainers/images/issues) in this repository.
+Issues related to these images can be reported in [an issue](https://github.com/sebst/devcontainer-images-fork/issues) in this repository.
 
 # License
 Copyright (c) Microsoft Corporation. All rights reserved. <br />

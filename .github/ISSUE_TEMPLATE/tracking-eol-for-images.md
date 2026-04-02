@@ -12,5 +12,5 @@ Depends on [add a reference link here]
 - [ ] Create a release (if necessary - which ensures images are up to date before deprecating )
 - [ ] Open a PR 
 - [ ] Update [templates](https://github.com/devcontainers/templates) (if necessary)
-- [ ] Update https://github.com/devcontainers/images/issues/90
-- [ ] Update [Microsoft Artifact Registry](https://mcr.microsoft.com/en-us/catalog?search=dev%20container) docs
+- [ ] Update https://github.com/sebst/devcontainer-images-fork/issues/90
+- [ ] Update [GHCR](https://github.com/sebst?tab=packages) docs

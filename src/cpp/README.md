@@ -8,8 +8,8 @@
 |----------|-------|
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
-| *Published images* | mcr.microsoft.com/devcontainers/cpp |
-| *Available image variants* | debian13, debian12, ubuntu24.04, ubuntu22.04 ([full list](https://mcr.microsoft.com/v2/devcontainers/cpp/tags/list)) |
+| *Published images* | ghcr.io/sebst/devcontainers/cpp |
+| *Available image variants* | debian13, debian12, ubuntu24.04, ubuntu22.04 ([full list](https://ghcr.io/v2/sebst/devcontainers/cpp/tags/list)) |
 | *Published image architecture(s)* | x86-64, aarch64/arm64 for `debian13`, `debian12`, `ubuntu24.04` and `ubuntu22.04` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian, Ubuntu |
@@ -21,27 +21,27 @@ See **[history](history)** for information on the contents of published images.
 
 You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
-- `mcr.microsoft.com/devcontainers/cpp` (latest Debian GA)
-- `mcr.microsoft.com/devcontainers/cpp:debian` (latest Debian GA)
-- `mcr.microsoft.com/devcontainers/cpp:debian13` (or `trixie`)
-- `mcr.microsoft.com/devcontainers/cpp:debian12` (or `bookworm`)
-- `mcr.microsoft.com/devcontainers/cpp:ubuntu` (latest Ubuntu LTS)
-- `mcr.microsoft.com/devcontainers/cpp:ubuntu24.04` (or `noble`)
-- `mcr.microsoft.com/devcontainers/cpp:ubuntu22.04` (or `jammy`)
+- `ghcr.io/sebst/devcontainers/cpp` (latest Debian GA)
+- `ghcr.io/sebst/devcontainers/cpp:debian` (latest Debian GA)
+- `ghcr.io/sebst/devcontainers/cpp:debian13` (or `trixie`)
+- `ghcr.io/sebst/devcontainers/cpp:debian12` (or `bookworm`)
+- `ghcr.io/sebst/devcontainers/cpp:ubuntu` (latest Ubuntu LTS)
+- `ghcr.io/sebst/devcontainers/cpp:ubuntu24.04` (or `noble`)
+- `ghcr.io/sebst/devcontainers/cpp:ubuntu22.04` (or `jammy`)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
-- `mcr.microsoft.com/devcontainers/cpp:2-trixie`
-- `mcr.microsoft.com/devcontainers/cpp:2.1-trixie`
-- `mcr.microsoft.com/devcontainers/cpp:2.1.6-trixie`
-- `mcr.microsoft.com/devcontainers/cpp:2-bookworm`
-- `mcr.microsoft.com/devcontainers/cpp:2.1-bookworm`
-- `mcr.microsoft.com/devcontainers/cpp:2.1.6-bookworm`
+- `ghcr.io/sebst/devcontainers/cpp:2-trixie`
+- `ghcr.io/sebst/devcontainers/cpp:2.1-trixie`
+- `ghcr.io/sebst/devcontainers/cpp:2.1.6-trixie`
+- `ghcr.io/sebst/devcontainers/cpp:2-bookworm`
+- `ghcr.io/sebst/devcontainers/cpp:2.1-bookworm`
+- `ghcr.io/sebst/devcontainers/cpp:2.1.6-bookworm`
 
-However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `0-debian-12`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
+However, we only do security patching on the latest [non-breaking, in support](https://github.com/sebst/devcontainer-images-fork/issues/90) versions of images (e.g. `0-debian-12`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
-See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/cpp/tags/list).
+See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://ghcr.io/v2/sebst/devcontainers/cpp/tags/list).
 
 Alternatively, you can use the contents of [.devcontainer](.devcontainer) to fully customize your container's contents or to build it for a container host architecture not supported by the image.
 
@@ -74,4 +74,4 @@ If building the image from source directly please uncomment respective `# && apt
 
 Copyright (c) Microsoft Corporation. All rights reserved.
 
-Licensed under the MIT License. See [LICENSE](https://github.com/devcontainers/images/blob/main/LICENSE).
+Licensed under the MIT License. See [LICENSE](https://github.com/sebst/devcontainer-images-fork/blob/main/LICENSE).

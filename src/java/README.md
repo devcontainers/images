@@ -8,8 +8,8 @@
 |----------|-------|
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
-| *Published images* | mcr.microsoft.com/devcontainers/java |
-| *Available image variants* | 11 / 11-trixie, 17 /17-trixie, 21 / 21-trixie, 21-bookworm, 25 / 25-trixie, 25-bookworm, 17-bookworm, 11-bookworm ([full list](https://mcr.microsoft.com/v2/devcontainers/java/tags/list)) |
+| *Published images* | ghcr.io/sebst/devcontainers/java |
+| *Available image variants* | 11 / 11-trixie, 17 /17-trixie, 21 / 21-trixie, 21-bookworm, 25 / 25-trixie, 25-bookworm, 17-bookworm, 11-bookworm ([full list](https://ghcr.io/v2/sebst/devcontainers/java/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm`, and `bullseye` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
@@ -21,23 +21,23 @@ See **[history](history)** for information on the contents of published images.
 
 You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
-- `mcr.microsoft.com/devcontainers/java` (latest)
-- `mcr.microsoft.com/devcontainers/java:25` (or `25-trixie`, `25-bookworm` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/java:21` (or `21-trixie`, `21-bookworm` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/java:11` (or `11-trixie`, `11-bookworm` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/java:17` (or `17-trixie`, `17-bookworm` to pin to an OS version)
+- `ghcr.io/sebst/devcontainers/java` (latest)
+- `ghcr.io/sebst/devcontainers/java:25` (or `25-trixie`, `25-bookworm` to pin to an OS version)
+- `ghcr.io/sebst/devcontainers/java:21` (or `21-trixie`, `21-bookworm` to pin to an OS version)
+- `ghcr.io/sebst/devcontainers/java:11` (or `11-trixie`, `11-bookworm` to pin to an OS version)
+- `ghcr.io/sebst/devcontainers/java:17` (or `17-trixie`, `17-bookworm` to pin to an OS version)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/devcontainers/java:3-11` (or `3-11-trixie`, `3-11-bookworm` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/java:3.0-11` (or `3.0-11-trixie`, `3.0-11-bookworm` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/java:3.0.6-11` (or `3.0.6-11-trixie`, `3.0.6-11-bookworm` to pin to an OS version)
+- `ghcr.io/sebst/devcontainers/java:3-11` (or `3-11-trixie`, `3-11-bookworm` to pin to an OS version)
+- `ghcr.io/sebst/devcontainers/java:3.0-11` (or `3.0-11-trixie`, `3.0-11-bookworm` to pin to an OS version)
+- `ghcr.io/sebst/devcontainers/java:3.0.6-11` (or `3.0.6-11-trixie`, `3.0.6-11-bookworm` to pin to an OS version)
 
-However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `3-11`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
+However, we only do security patching on the latest [non-breaking, in support](https://github.com/sebst/devcontainer-images-fork/issues/90) versions of images (e.g. `3-11`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
-See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/java/tags/list).
+See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://ghcr.io/v2/sebst/devcontainers/java/tags/list).
 
 Alternatively, you can use the contents of [.devcontainer](.devcontainer) to fully customize your container's contents or to build it for a container host architecture not supported by the image.
 
@@ -77,4 +77,4 @@ Also, you can use a [Node feature](https://github.com/devcontainers/features/tre
 
 Copyright (c) Microsoft Corporation. All rights reserved.
 
-Licensed under the MIT License. See [LICENSE](https://github.com/devcontainers/images/blob/main/LICENSE).
+Licensed under the MIT License. See [LICENSE](https://github.com/sebst/devcontainer-images-fork/blob/main/LICENSE).

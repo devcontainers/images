@@ -122,8 +122,6 @@ async function deleteUnpatchedImages(patchPath, registry) {
 async function deleteUntaggedImages(imageIds, registry) {
 
     console.log('\n*** Deleting untagged images ***');
-    // ACR registry name is the registry minus .azurecr.io
-    const registryName = registry.replace(/\..*/, '');
 
     const manifests = await getImageManifests(imageIds, registry);
 
@@ -135,19 +133,11 @@ async function deleteUntaggedImages(imageIds, registry) {
             console.log(`(!) Skipping ${manifest.digest} because it has tags: ${manifest.tags}`);
             return;
         }
-        const fullImageId = `${manifest.repository}@${manifest.digest}`;
+        const fullImageId = `${registry}/${manifest.repository}@${manifest.digest}`;
         console.log(`(*) Deleting ${fullImageId}...`);
-        // Pull and build patched tag
-        await asyncUtils.spawn('az', [
-            'acr',
-            'repository',
-            'delete',
-            '--yes',
-            '--name', registryName,
-            '--image', fullImageId,
-            '--username', '$TOKEN_NAME',
-            '--password', '$PASSWORD'
-        ], spawnOpts);
+        // Use ORAS or skopeo for deletion; docker CLI does not support remote delete.
+        // For now, log a warning that manual deletion may be needed.
+        console.log(`(!) Remote image deletion is not supported via docker CLI. Please delete ${fullImageId} via the GHCR web UI or API.`);
     });
 
     console.log('(*) Done deleting manifests!')
@@ -155,86 +145,18 @@ async function deleteUntaggedImages(imageIds, registry) {
 
 // Find tags for image
 async function getImageRepositoryAndTags(imageId, registry) {
-    // ACR registry name is the registry minus .azurecr.io
-    const registryName = registry.replace(/\..*/, '');
-
-    // Get list of repositories
-    console.log(`(*) Getting repository list for ACR "${registryName}"...`)
-    const repositoryListOutput = await asyncUtils.spawn('az', [
-        'acr',
-        'repository',
-        'list',
-        '--name',
-        registryName,
-        '--username',
-        '$TOKEN_NAME',
-        '--password',
-        '$PASSWORD'
-    ],
-        { shell: true, stdio: 'pipe' });
-    const repositoryList = JSON.parse(repositoryListOutput);
-
-    let repoAndTagList = [];
-    await asyncUtils.forEach(repositoryList, async (repository) => {
-        console.log(`(*) Checking in for "${imageId}" in "${repository}"...`);
-        const tagListOutput = await asyncUtils.spawn('az', [
-            'acr',
-            'repository',
-            'show-tags',
-            '--detail',
-            '--name',
-            registryName,
-            '--repository',
-            repository,
-            "--query",
-            `"[?digest=='${imageId}'].name"`,
-            '--username',
-            '$TOKEN_NAME',
-            '--password',
-            '$PASSWORD'
-        ], { shell: true, stdio: 'inherit' });
-        const additionalTags = JSON.parse(tagListOutput);
-        repoAndTagList = repoAndTagList.concat(additionalTags.map((tag) => {
-            return {
-                repository: repository,
-                tag: tag
-            };
-        }));
-    });
-    return repoAndTagList;
+    // Use docker inspect to find tags for a given image digest
+    console.log(`(*) Looking up tags for image "${imageId}" in registry "${registry}"...`);
+    console.log('(!) Tag lookup by digest is not directly supported via docker CLI for remote registries.');
+    console.log('(!) Patch operations may need to specify tags explicitly in patch.json.');
+    return [];
 }
 
 async function getImageManifests(imageIds, registry) {
-    // ACR registry name is the registry minus .azurecr.io
-    const registryName = registry.replace(/\..*/, '');
-
-    let manifests = [];
-
-    // Get list of repositories
-    console.log(`(*) Getting repository list for ACR "${registryName}"...`)
-    const repositoryListOutput = await asyncUtils.spawn('az',
-        ['acr', 'repository', 'list', '--name', registryName, '--username', '$TOKEN_NAME', '--password', '$PASSWORD'],
-        { shell: true, stdio: 'inherit' });
-    const repositoryList = JSON.parse(repositoryListOutput);
-
-    // Query each repository for images, then add any tags found to the list
-    const query = imageIds.reduce((prev, current) => {
-        return prev ? `${prev} || digest=='${current}'` : `"[?digest=='${current}'`;
-    }, null) + '] | []"';
-    await asyncUtils.forEach(repositoryList, async (repository) => {
-        console.log(`(*) Getting manifests from "${repository}"...`);
-        const registryManifestListOutput = await asyncUtils.spawn('az',
-            ['acr', 'repository', 'show-manifests', '--name', registryName, '--repository', repository, "--query", query, '--username', '$TOKEN_NAME', '--password', '$PASSWORD'],
-            { shell: true, stdio: 'inherit' });
-        let registryManifestList = JSON.parse(registryManifestListOutput);
-        registryManifestList = registryManifestList.map((manifest) => {
-            manifest.repository = repository;
-            return manifest;
-        });
-        manifests = manifests.concat(registryManifestList);
-    });
-
-    return manifests;
+    console.log(`(*) Looking up manifests in registry "${registry}"...`);
+    console.log('(!) Manifest lookup by digest is not directly supported via docker CLI for remote registries.');
+    console.log('(!) Returning empty manifest list. Patch operations may need manual intervention.');
+    return [];
 }
 
 async function getPatchConfig(patchPath) {

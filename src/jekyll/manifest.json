@@ -40,8 +40,8 @@
 		}
 	},
 	"dependencies": {
-		"image": "mcr.microsoft.com/devcontainers/ruby:${VARIANT}",
-		"imageLink": "https://github.com/devcontainers/images",
+		"image": "ghcr.io/sebst/devcontainers/ruby:${VARIANT}",
+		"imageLink": "https://github.com/sebst/devcontainer-images-fork",
 		"debian": [
 			{
 				"cgIgnore": false,

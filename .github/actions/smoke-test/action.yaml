@@ -20,7 +20,7 @@ runs:
       id: checkout_release
       uses: actions/checkout@v3
       with:
-        repository: 'devcontainers/images'
+        repository: 'sebst/devcontainer-images-fork'
         path: '__build'
         ref: 'main'
 

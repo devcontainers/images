@@ -16,11 +16,11 @@
 				"--page", "1",
 				"--page-total", "1",
 				"--release", "v0.0.1",
-				"--github-repo", "devcontainers/images",
-				"--registry", "clantz.azurecr.io",
-				"--registryPath", "devcontainers",
-				"--stubRegistry", "clantz.azurecr.io",
-				"--stubRegistryPath", "devcontainers"
+				"--github-repo", "sebst/devcontainer-images-fork",
+				"--registry", "ghcr.io",
+				"--registryPath", "sebst/devcontainers",
+				"--stubRegistry", "ghcr.io",
+				"--stubRegistryPath", "sebst/devcontainers"
 			]
 		},
 		{
@@ -37,9 +37,9 @@
 				"--overwrite",
 				"--prune",
 				"--release", "main",
-				"--github-repo", "devcontainers/images",
-				"--registry", "mcr.microsoft.com",
-				"--registryPath", "devcontainers"
+				"--github-repo", "sebst/devcontainer-images-fork",
+				"--registry", "ghcr.io",
+				"--registryPath", "sebst/devcontainers"
 			]
 		},
 		{
@@ -51,7 +51,7 @@
 			"args": [
 				"update-script-sources",
 				"v0.100.0",
-				"--github-repo", "devcontainers/images"
+				"--github-repo", "sebst/devcontainer-images-fork"
 			]
 		},
 		{
@@ -73,8 +73,8 @@
 			"args": [
 				"patch",
 				"--patch-path", "patch/sample",
-				"--registry", "clantz.azurecr.io",
-				"--registryPath", "devcontainers"
+				"--registry", "ghcr.io",
+				"--registryPath", "sebst/devcontainers"
 			]
 		},
 		{
@@ -86,8 +86,8 @@
 			"args": [
 				"patch",
 				"--all",
-				"--registry", "clantz.azurecr.io",
-				"--registryPath", "devcontainers"
+				"--registry", "ghcr.io",
+				"--registryPath", "sebst/devcontainers"
 			]
 		}
 	]

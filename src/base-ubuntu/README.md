@@ -8,8 +8,8 @@
 |----------|-------|
 | *Categories* | Core, Other |
 | *Image type* | Dockerfile |
-| *Published images* | mcr.microsoft.com/devcontainers/base:ubuntu |
-| *Available image variants* | ubuntu24.04 / noble, ubuntu22.04 / jammy ([full list](https://mcr.microsoft.com/v2/devcontainers/base/tags/list)) |
+| *Published images* | ghcr.io/sebst/devcontainers/base:ubuntu |
+| *Available image variants* | ubuntu24.04 / noble, ubuntu22.04 / jammy ([full list](https://ghcr.io/v2/sebst/devcontainers/base/tags/list)) |
 | *Published image architecture(s)* | x86-64, aarch64/arm64 for `ubuntu22.04` (`jammy`) and `ubuntu24.04` (`noble`) variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Ubuntu |
@@ -21,19 +21,19 @@ See **[history](history)** for information on the contents of published images.
 
 You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
-- `mcr.microsoft.com/devcontainers/base:ubuntu` (latest LTS release)
-- `mcr.microsoft.com/devcontainers/base:ubuntu24.04` (or `noble`)
-- `mcr.microsoft.com/devcontainers/base:ubuntu22.04` (or `jammy`)
+- `ghcr.io/sebst/devcontainers/base:ubuntu` (latest LTS release)
+- `ghcr.io/sebst/devcontainers/base:ubuntu24.04` (or `noble`)
+- `ghcr.io/sebst/devcontainers/base:ubuntu22.04` (or `jammy`)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/devcontainers/base:2-jammy`
-- `mcr.microsoft.com/devcontainers/base:2.1-jammy`
-- `mcr.microsoft.com/devcontainers/base:2.1.7-jammy`
+- `ghcr.io/sebst/devcontainers/base:2-jammy`
+- `ghcr.io/sebst/devcontainers/base:2.1-jammy`
+- `ghcr.io/sebst/devcontainers/base:2.1.7-jammy`
 
-See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/base/tags/list).
+See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://ghcr.io/v2/sebst/devcontainers/base/tags/list).
 
 Alternatively, you can use the contents of [.devcontainer](.devcontainer) to fully customize your container's contents or to build it for a container host architecture not supported by the image.
 
@@ -43,4 +43,4 @@ Beyond `git`, this image / `Dockerfile` includes `zsh`, [Oh My Zsh!](https://ohm
 
 Copyright (c) Microsoft Corporation. All rights reserved.
 
-Licensed under the MIT License. See [LICENSE](https://github.com/devcontainers/images/blob/main/LICENSE)
+Licensed under the MIT License. See [LICENSE](https://github.com/sebst/devcontainer-images-fork/blob/main/LICENSE)
