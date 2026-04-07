@@ -32,10 +32,6 @@
 			"3.3-trixie": [
 				"linux/amd64",
 				"linux/arm64"
-			],
-			"3.2-trixie": [
-				"linux/amd64",
-				"linux/arm64"
 			],			
 			"3.4-bookworm": [
 				"linux/amd64",
@@ -45,19 +41,11 @@
 				"linux/amd64",
 				"linux/arm64"
 			],
-			"3.2-bookworm": [
-				"linux/amd64",
-				"linux/arm64"
-			],
 			"3.4-bullseye": [
 				"linux/amd64",
 				"linux/arm64"
 			],			
 			"3.3-bullseye": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"3.2-bullseye": [
 				"linux/amd64",
 				"linux/arm64"
 			]
@@ -84,27 +72,17 @@
 				"ruby:${VERSION}-3.3",
 				"ruby:${VERSION}-3.3-trixie"
 			],			
-			"3.2-trixie": [
-				"ruby:${VERSION}-3.2",
-				"ruby:${VERSION}-3.2-trixie"
-			],			
 			"3.4-bookworm": [
 				"ruby:${VERSION}-3.4-bookworm"
 			],
 			"3.3-bookworm": [
 				"ruby:${VERSION}-3.3-bookworm"
 			],			
-			"3.2-bookworm": [
-				"ruby:${VERSION}-3.2-bookworm"
-			],
 			"3.4-bullseye": [
 				"ruby:${VERSION}-3.4-bullseye"
 			],
 			"3.3-bullseye": [
 				"ruby:${VERSION}-3.3-bullseye"
-			],			
-			"3.2-bullseye": [
-				"ruby:${VERSION}-3.2-bullseye"
 			]
 		}
 	},
