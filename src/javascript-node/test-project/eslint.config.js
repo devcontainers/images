@@ -1,9 +1,9 @@
 module.exports = {
     "rules": {
-        "no-console": off,
+        "no-console": 0,
         "eqeqeq":"warn",
-        "no-cond-assign": off,
-        "no-unused-vars": warn,
+        "no-cond-assign": 0,
+        "no-unused-vars": 1,
         "no-extra-semi": "warn",
         "semi": "warn"
     }
