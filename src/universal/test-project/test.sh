@@ -175,15 +175,10 @@ ls -la /home/codespace
 checkPythonPackageVersion "python" "setuptools" "78.1.1"
 checkPythonPackageVersion "python" "requests" "2.31.0"
 
-## Python -alternative version 3.11. Must be removed when pinned version 3.11 is updated to a different python version.
-checkPythonPackageVersion "/usr/local/python/3.11.*/bin/python" "setuptools" "78.1.1"
-pip_version_3_11=$(/usr/local/python/3.11.*/bin/python -m pip --version)
-check-version-ge "pip-version-for-3.11" "${pip_version_3_11}" "pip 25.3"
-
 ## Conda Python
 checkCondaPackageVersion "requests" "2.31.0"
-checkCondaPackageVersion "cryptography" "44.0.1"
-checkCondaPackageVersion "pyopenssl" "25.0.0"
+checkCondaPackageVersion "cryptography" "46.0.5"
+checkCondaPackageVersion "pyopenssl" "26.0.0"
 checkCondaPackageVersion "urllib3" "2.6.3"
 checkCondaPackageVersion "brotli" "1.2.0"
 
