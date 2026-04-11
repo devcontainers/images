@@ -14,6 +14,9 @@
         "ghcr.io/devcontainers/features/git:1": {
             "version": "latest",
             "ppa": "false"
+        },
+		"ghcr.io/devcontainers/features/git-lfs:1": {
+            "version": "latest"
         }
     },
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
