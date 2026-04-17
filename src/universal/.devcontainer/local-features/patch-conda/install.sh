@@ -20,6 +20,8 @@ chmod +x /etc/profile.d/00-restore-env.sh
 
 export DEBIAN_FRONTEND=noninteractive
 
+CONDA_DIR="/opt/conda"
+
 sudo_if() {
     COMMAND="$*"
     if [ "$(id -u)" -eq 0 ] && [ "$USERNAME" != "root" ]; then
@@ -51,22 +53,14 @@ sudo_if /opt/conda/bin/python3 -m pip install --upgrade pip
 # Temporary: Upgrade python packages due to security vulnerabilities
 # They are installed by the conda feature and Conda distribution does not have the patches
 
+if ! "${CONDA_DIR}/bin/conda" tos --help > /dev/null 2>&1; then
+    echo "not fullfilled"
+fi
+
 # https://github.com/advisories/GHSA-r6ph-v2qm-q3c2
 update_conda_package pyopenssl "26.0.0"
 
 update_conda_package cryptography "46.0.5"
-
-# https://github.com/advisories/GHSA-9hjg-9r4m-mvj7
-update_conda_package requests "2.32.4"
-
-# https://github.com/advisories/GHSA-5rjg-fvgr-3xxf
-update_conda_package setuptools "78.1.1"
-
-# https://github.com/advisories/GHSA-g7vv-2v7x-gj9p
-update_python_package /opt/conda/bin/python3 tqdm "4.66.3"
-
-# https://github.com/advisories/GHSA-38jv-5279-wg99
-update_conda_package urllib3 "2.6.3"
 
 # https://nvd.nist.gov/vuln/detail/CVE-2025-6176
 update_conda_package brotli "1.2.0"
