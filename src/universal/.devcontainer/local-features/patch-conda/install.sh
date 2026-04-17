@@ -20,8 +20,6 @@ chmod +x /etc/profile.d/00-restore-env.sh
 
 export DEBIAN_FRONTEND=noninteractive
 
-CONDA_DIR="/opt/conda"
-
 sudo_if() {
     COMMAND="$*"
     if [ "$(id -u)" -eq 0 ] && [ "$USERNAME" != "root" ]; then
@@ -52,10 +50,6 @@ sudo_if /opt/conda/bin/python3 -m pip install --upgrade pip
 
 # Temporary: Upgrade python packages due to security vulnerabilities
 # They are installed by the conda feature and Conda distribution does not have the patches
-
-if ! "${CONDA_DIR}/bin/conda" tos --help > /dev/null 2>&1; then
-    echo "not fullfilled"
-fi
 
 # https://github.com/advisories/GHSA-r6ph-v2qm-q3c2
 update_conda_package pyopenssl "26.0.0"
