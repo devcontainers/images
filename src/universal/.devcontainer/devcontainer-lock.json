@@ -5,10 +5,10 @@
       "resolved": "ghcr.io/devcontainers/features/common-utils@sha256:dbf431d6b42d55cde50fa1df75c7f7c3999a90cde6d73f7a7071174b3c3d0cc4",
       "integrity": "sha256:dbf431d6b42d55cde50fa1df75c7f7c3999a90cde6d73f7a7071174b3c3d0cc4"
     },
-    "ghcr.io/devcontainers/features/conda:1": {
-      "version": "1.2.5",
-      "resolved": "ghcr.io/devcontainers/features/conda@sha256:d189cf17997854b28c7ffbab5db70f9b7d70332d97dfbf44447e48e958a03c8b",
-      "integrity": "sha256:d189cf17997854b28c7ffbab5db70f9b7d70332d97dfbf44447e48e958a03c8b"
+    "ghcr.io/devcontainers/features/conda:2": {
+      "version": "2.0.1",
+      "resolved": "ghcr.io/devcontainers/features/conda@sha256:f5f3e5b96a33a90377eba3be0fdba7aef6a128b5702571e1f586b2c9e0083840",
+      "integrity": "sha256:f5f3e5b96a33a90377eba3be0fdba7aef6a128b5702571e1f586b2c9e0083840"
     },
     "ghcr.io/devcontainers/features/copilot-cli:1": {
       "version": "1.0.0",
@@ -51,9 +51,9 @@
       "integrity": "sha256:15465c956810aa164c9644b6df5ca36f6cac3e7a86b7dcc474a1fb830b21c509"
     },
     "ghcr.io/devcontainers/features/java:1": {
-      "version": "1.7.2",
-      "resolved": "ghcr.io/devcontainers/features/java@sha256:e75d274ac969b29a59ba6f34c2d098f6a52144d0ec027ef326b724ea4b8b7b4e",
-      "integrity": "sha256:e75d274ac969b29a59ba6f34c2d098f6a52144d0ec027ef326b724ea4b8b7b4e"
+      "version": "1.8.0",
+      "resolved": "ghcr.io/devcontainers/features/java@sha256:9663ce0219ff85786e87901ce5f0a59f488edd5f99b46015192cda48468b233a",
+      "integrity": "sha256:9663ce0219ff85786e87901ce5f0a59f488edd5f99b46015192cda48468b233a"
     },
     "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
       "version": "1.3.1",
