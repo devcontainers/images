@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:9dd2dda9ab2b7ae61193e4d27cbc4b7f9c2e98b51fe15ce75326d3463b60002d
+**Digest:** sha256:d46e8b55a07024ec2660ec2ed9cb728258d6ccb360e33e9142237be6dce214a0
 
 **Tags:**
 ```
@@ -23,9 +23,9 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Python](https://www.python.org/) | 3.12.7 | /opt/conda |
-| [Jupyter Notebooks](https://jupyter.org/) | 7.5.0 | /opt/conda |
-| [Jupyter Lab](https://jupyter.org/) | 4.5.0 | /opt/conda |
+| [Python](https://www.python.org/) | 3.12.13 | /opt/conda |
+| [Jupyter Notebooks](https://jupyter.org/) | 7.5.3 | /opt/conda |
+| [Jupyter Lab](https://jupyter.org/) | 4.5.3 | /opt/conda |
 
 **Tools installed using git**
 
@@ -39,14 +39,14 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 |----------------|---------|
 | joblib | 1.4.2 |
 | cookiecutter | 2.6.0 |
-| cryptography | 46.0.3 |
+| cryptography | 46.0.5 |
 | mistune | 3.1.2 |
 | numpy | 1.26.4 |
 | certifi | 2026.1.4 |
-| setuptools | 80.10.1 |
-| wheel | 0.44.0 |
+| setuptools | 80.10.2 |
+| wheel | 0.46.3 |
 | nbconvert | 7.16.4 |
-| Werkzeug | 3.1.3 |
+| Werkzeug | 3.1.6 |
 | requests | 2.32.5 |
 | tornado | 6.5.4 |
 | transformers | 4.53.0 |
@@ -98,7 +98,6 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | unzip | 6.0-28 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
-| yarn | 1.22.22-1 |
 | zip | 3.0-13 |
 | zlib1g | 1:1.2.13.dfsg-1 |
 | zsh | 5.9-4+b8 |
