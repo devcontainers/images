@@ -1,0 +1,103 @@
+name: PR Template Validation
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - edited
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  validate-and-label:
+    if: github.event.action == 'opened' || (github.event.action == 'edited' && github.event.changes.body != null)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate PR template selections
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const {owner, repo} = context.repo;
+            const issue_number = context.payload.pull_request.number;
+            const body = (context.payload.pull_request.body || '').trim();
+            const optionPattern = /- \[[ xX]\] .*?<!--\s*\(`([^`]+)`\)\s*-->/g;
+            const groups = {
+              'What are you changing?': ['target:images', 'target:docs-only', 'target:other'],
+              'If changing images, what kind of change is it?': ['change:bugfix', 'change:feature', 'change:breaking', 'change:other', 'change:na']
+            };
+            const marker = '<!-- pr-template-validation-comment -->';
+
+            const selections = new Map();
+            let match;
+            while ((match = optionPattern.exec(body)) !== null) {
+              const line = match[0];
+              const tag = match[1];
+              const isChecked = /\[[xX]\]/.test(line);
+              selections.set(tag, isChecked);
+            }
+
+            const errors = [];
+            for (const [section, tags] of Object.entries(groups)) {
+              const checkedCount = tags.reduce((count, tag) => count + (selections.get(tag) ? 1 : 0), 0);
+              if (checkedCount !== 1) {
+                errors.push(`${section} must have exactly one option selected (found ${checkedCount}).`);
+              }
+            }
+
+            const {data: comments} = await github.rest.issues.listComments({
+              owner,
+              repo,
+              issue_number,
+              per_page: 100
+            });
+            const existing = comments.find(comment => comment.body && comment.body.includes(marker));
+
+            if (errors.length) {
+              const message = [
+                marker,
+                '⚠️ **PR Template Validation Failed**',
+                '',
+                   'Please update the PR description so each section has exactly one option selected:',
+                ...errors.map(error => `- ${error}`),
+                '',
+                'Once you update the description, this workflow will re-run automatically.'
+              ].join('\n');
+
+              if (existing) {
+                await github.rest.issues.updateComment({
+                  owner,
+                  repo,
+                  comment_id: existing.id,
+                  body: message
+                });
+              } else {
+                await github.rest.issues.createComment({
+                  owner,
+                  repo,
+                  issue_number,
+                  body: message
+                });
+              }
+
+              core.setFailed(errors.join(' '));
+            } else {
+              if (existing) {
+                await github.rest.issues.deleteComment({
+                  owner,
+                  repo,
+                  comment_id: existing.id
+                });
+              }
+              core.info('PR template selections validated.');
+            }
+      - name: Apply labels from PR template markers
+        uses: github/issue-labeler@v3.3
+        with:
+          repo-token: ${{ github.token }}
+          configuration-path: .github/pr-labeler.yml
+          include-title: 0
+          include-body: 1
+          sync-labels: 1
