@@ -8,7 +8,7 @@ RUN if [ "$VARIANT" = "noble" ] || [ "$VARIANT" = "resolute" ]; then \
     if id "ubuntu" &>/dev/null; then \
         echo "Deleting user 'ubuntu'  for $VARIANT" && userdel -f -r ubuntu || echo "Failed to delete ubuntu user for $VARIANT"; \
     else \
-        echo "User 'ubuntu' does not exist for $VARIANT"; \
+
     fi; \
     fi
 
@@ -20,4 +20,5 @@ RUN if [ "$VARIANT" = "noble" ] || [ "$VARIANT" = "resolute" ]; then \
 RUN apt-get update \
     && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y reinstall --no-install-recommends tzdata \
+    && echo "Etc/UTC" > /etc/timezone \
     && rm -rf /var/lib/apt/lists/*
