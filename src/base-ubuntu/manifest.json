@@ -23,7 +23,7 @@
 			]
 		},
 		"tags": [
-			"base:${VERSION}-${VARIANT}"	
+			"base:${VERSION}-${VARIANT}"
 		],
 		"variantTags": {
 			"resolute": [
