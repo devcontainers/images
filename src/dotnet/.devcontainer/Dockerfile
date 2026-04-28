@@ -5,9 +5,9 @@ ENV PATH $PATH:/home/vscode/.dotnet:/home/vscode/.dotnet/tools
 RUN chmod -R a+w /usr/share/dotnet
 
 ARG VARIANT
-RUN if [ "${VARIANT#*noble}" != "$VARIANT"  ]; then \
+RUN if [ "${VARIANT#*noble}" != "$VARIANT" ] || [ "${VARIANT#*resolute}" != "$VARIANT" ]; then \
     if id "ubuntu" &>/dev/null; then \
-    echo "Deleting user 'ubuntu'  for $VARIANT" && userdel -f -r ubuntu || echo "Failed to delete ubuntu user for $VARIANT"; \
+    echo "Deleting user 'ubuntu' for $VARIANT" && userdel -f -r ubuntu || echo "Failed to delete ubuntu user for $VARIANT"; \
     else \
     echo "User 'ubuntu' does not exist for $VARIANT"; \ 
     fi; \
