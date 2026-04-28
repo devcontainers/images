@@ -8,7 +8,7 @@ RUN if [ "$VARIANT" = "noble" ] || [ "$VARIANT" = "resolute" ]; then \
     if id "ubuntu" &>/dev/null; then \
         echo "Deleting user 'ubuntu'  for $VARIANT" && userdel -f -r ubuntu || echo "Failed to delete ubuntu user for $VARIANT"; \
     else \
-         echo "User 'ubuntu' does not exist for $VARIANT"; \ 
+         echo "User 'ubuntu' does not exist for $VARIANT"; \
     fi; \
     fi
 
