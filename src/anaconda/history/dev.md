@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:9dd2dda9ab2b7ae61193e4d27cbc4b7f9c2e98b51fe15ce75326d3463b60002d
+**Digest:** sha256:ccce89500d0d4ed942a2d2fb7f1a116f8f4eb7e561c17edbc072baa5ce16a0c9
 
 **Tags:**
 ```
@@ -23,9 +23,9 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Python](https://www.python.org/) | 3.12.7 | /opt/conda |
-| [Jupyter Notebooks](https://jupyter.org/) | 7.5.0 | /opt/conda |
-| [Jupyter Lab](https://jupyter.org/) | 4.5.0 | /opt/conda |
+| [Python](https://www.python.org/) | 3.12.13 | /opt/conda |
+| [Jupyter Notebooks](https://jupyter.org/) | 7.5.5 | /opt/conda |
+| [Jupyter Lab](https://jupyter.org/) | 4.5.6 | /opt/conda |
 
 **Tools installed using git**
 
@@ -39,16 +39,16 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 |----------------|---------|
 | joblib | 1.4.2 |
 | cookiecutter | 2.6.0 |
-| cryptography | 46.0.3 |
+| cryptography | 46.0.7 |
 | mistune | 3.1.2 |
 | numpy | 1.26.4 |
-| certifi | 2026.1.4 |
-| setuptools | 80.10.1 |
-| wheel | 0.44.0 |
-| nbconvert | 7.16.4 |
-| Werkzeug | 3.1.3 |
-| requests | 2.32.5 |
-| tornado | 6.5.4 |
+| certifi | 2026.4.22 |
+| setuptools | 82.0.1 |
+| wheel | 0.46.3 |
+| nbconvert | 7.17.0 |
+| Werkzeug | 3.1.6 |
+| requests | 2.33.1 |
+| tornado | 6.5.5 |
 | transformers | 4.53.0 |
 | jupyter_server | 2.14.1 |
 
@@ -89,7 +89,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | nano | 7.2-1+deb12u1 |
 | ncdu | 1.18-0.2 |
 | net-tools | 2.10-0.1+deb12u2 |
-| openssh-client | 1:9.2p1-2+deb12u7 |
+| openssh-client | 1:9.2p1-2+deb12u9 |
 | procps | 2:4.0.2-3 |
 | psmisc | 23.6-1 |
 | rsync | 3.2.7-1+deb12u4 |
@@ -98,7 +98,6 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | unzip | 6.0-28 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
-| yarn | 1.22.22-1 |
 | zip | 3.0-13 |
 | zlib1g | 1:1.2.13.dfsg-1 |
 | zsh | 5.9-4+b8 |
