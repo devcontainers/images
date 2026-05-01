@@ -10,9 +10,13 @@ check "Oh My Zsh! theme" test -e $HOME/.oh-my-zsh/custom/themes/devcontainers.zs
 check "zsh theme symlink" test -e $HOME/.oh-my-zsh/custom/themes/codespaces.zsh-theme
 
 check "git" git --version
+check "git lfs" git lfs version
 
 git_version=$(git --version)
 check-version-ge "git-requirement" "${git_version}" "git version 2.40.1"
+
+git_lfs_version=$(git lfs version)
+check-version-ge "git-lfs-requirement" "${git_lfs_version}" "git-lfs/3.7.0"
 
 check "set-git-config-user-name" sh -c "sudo git config --system user.name devcontainers"
 check "gitconfig-file-location" sh -c "ls /etc/gitconfig"
