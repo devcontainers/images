@@ -1,6 +1,7 @@
 {
-	"version": "2.1.7",
+	"version": "3.0.0",
 	"variants": [
+		"resolute",
 		"noble",
 		"jammy"
 	],
@@ -8,6 +9,10 @@
 		"latest": false,
 		"rootDistro": "debian",
 		"architectures": {
+			"resolute": [
+				"linux/amd64",
+				"linux/arm64"
+			],
 			"noble": [
 				"linux/amd64",
 				"linux/arm64"
@@ -21,9 +26,12 @@
 			"base:${VERSION}-${VARIANT}"
 		],
 		"variantTags": {
-			"noble": [
-				"base:${VERSION}-ubuntu24.04",
+			"resolute": [
+				"base:${VERSION}-ubuntu26.04",
 				"base:${VERSION}-ubuntu"
+			],
+			"noble": [
+				"base:${VERSION}-ubuntu24.04"
 			],
 			"jammy": [
 				"base:${VERSION}-ubuntu22.04"

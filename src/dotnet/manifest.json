@@ -1,7 +1,8 @@
 {
-	"version": "2.0.6",
+	"version": "2.1.0",
 	"variants": [
-		"10.0-noble",		
+		"11.0-preview-resolute",
+		"10.0-noble",
 		"9.0-bookworm-slim",
 		"9.0-noble",
 		"8.0-bookworm-slim",
@@ -15,10 +16,14 @@
 			"dotnet:${VERSION}-${VARIANT}"
 		],
 		"architectures": {
+			"11.0-preview-resolute": [
+				"linux/amd64",
+				"linux/arm64"
+			],
 			"10.0-noble": [
 				"linux/amd64",
 				"linux/arm64"
-			],			
+			],
 			"9.0-bookworm-slim": [
 				"linux/amd64",
 				"linux/arm64"
@@ -38,13 +43,17 @@
 			"8.0-jammy": [
 				"linux/amd64",
 				"linux/arm64"
-			]						
+			]
 		},
 		"variantTags": {
+			"11.0-preview-resolute": [
+				"dotnet:${VERSION}-11.0-preview",
+				"dotnet:${VERSION}-11.0-preview-resolute"
+			],
 			"10.0-noble": [
 				"dotnet:${VERSION}-10.0",
 				"dotnet:${VERSION}-10.0-noble"
-			],					
+			],
 			"9.0-bookworm-slim": [
 				"dotnet:${VERSION}-9.0",
 				"dotnet:${VERSION}-9.0-bookworm"
@@ -52,7 +61,7 @@
 			"8.0-bookworm-slim": [
 				"dotnet:${VERSION}-8.0",
 				"dotnet:${VERSION}-8.0-bookworm"
-			]			
+			]
 		}
 	},
 	"dependencies": {
