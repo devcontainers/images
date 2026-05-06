@@ -11,9 +11,9 @@
       "integrity": "sha256:f5f3e5b96a33a90377eba3be0fdba7aef6a128b5702571e1f586b2c9e0083840"
     },
     "ghcr.io/devcontainers/features/copilot-cli:1": {
-      "version": "1.0.0",
-      "resolved": "ghcr.io/devcontainers/features/copilot-cli@sha256:905c3bd16f12b57e4e68319838799f51d5540982a8911a68f1605f3562838c8b",
-      "integrity": "sha256:905c3bd16f12b57e4e68319838799f51d5540982a8911a68f1605f3562838c8b"
+      "version": "1.1.2",
+      "resolved": "ghcr.io/devcontainers/features/copilot-cli@sha256:757c6c2899dc902c44a9f6164c1f7392832ced13c6bb632d8d60a880f2e92456",
+      "integrity": "sha256:757c6c2899dc902c44a9f6164c1f7392832ced13c6bb632d8d60a880f2e92456"
     },
     "ghcr.io/devcontainers/features/docker-in-docker:2": {
       "version": "2.16.1",
@@ -41,9 +41,9 @@
       "integrity": "sha256:d22f50b70ed75339b4eed1ba9ecde3a1791f90e88d37936517e3bace0bbad671"
     },
     "ghcr.io/devcontainers/features/go:1": {
-      "version": "1.3.3",
-      "resolved": "ghcr.io/devcontainers/features/go@sha256:f5ef402a387201cf1ace38ea16c176612d61107c0fcd58da1bb84493cd93f6a1",
-      "integrity": "sha256:f5ef402a387201cf1ace38ea16c176612d61107c0fcd58da1bb84493cd93f6a1"
+      "version": "1.3.4",
+      "resolved": "ghcr.io/devcontainers/features/go@sha256:d85e921f91b41340055bb12b325d9d551170ed04b3b832e33530bf42f167c032",
+      "integrity": "sha256:d85e921f91b41340055bb12b325d9d551170ed04b3b832e33530bf42f167c032"
     },
     "ghcr.io/devcontainers/features/hugo:1": {
       "version": "1.1.3",
