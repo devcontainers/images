@@ -131,7 +131,9 @@ checkCommon()
         locales \
         gettext \
         sudo \
-        inotify-tools"
+        inotify-tools \
+        bubblewrap \
+        socat"
 
     # Actual tests
     checkOSPackages "common-os-packages" ${PACKAGE_LIST}
