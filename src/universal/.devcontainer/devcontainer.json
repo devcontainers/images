@@ -9,6 +9,9 @@
             "userUid": "1000",
             "userGid": "1000"
         },
+        "ghcr.io/devcontainers-extra/features/apt-packages:1": {
+            "packages": "bubblewrap, socat"
+        },
         "ghcr.io/devcontainers/features/dotnet:2": {
             "version": "10.0",
             "dotnetRuntimeVersions": "9.0", 
@@ -80,6 +83,7 @@
     },
     "overrideFeatureInstallOrder": [
         "ghcr.io/devcontainers/features/common-utils",
+        "ghcr.io/devcontainers-extra/features/apt-packages",
         "ghcr.io/devcontainers/features/git",
         "ghcr.io/devcontainers/features/dotnet",
         "ghcr.io/devcontainers/features/hugo",
