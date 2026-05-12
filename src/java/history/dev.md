@@ -16,7 +16,7 @@
 
 ## Variant: 25-trixie
 
-**Digest:** sha256:aee0c3dc6426bf77c61f78a9686127a7fa3385f3eec84ccfbbea9d1be4b7cb0b
+**Digest:** sha256:36d1066e417adf1c980edb26922f07ed873ce38741443161cd54051d6ad0ee2c
 
 **Tags:**
 ```
@@ -38,13 +38,13 @@ mcr.microsoft.com/devcontainers/java:dev-trixie
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 25.0.2 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 25.0.3 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | a07126330b9f56f12f1e00ddd29786d35d6e64d9 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -97,7 +97,7 @@ mcr.microsoft.com/devcontainers/java:dev-trixie
 
 ## Variant: 21-trixie
 
-**Digest:** sha256:7356e22fff61de9ecc969430f52c5357891a16cdd0235328e36d0e2585ba8c9f
+**Digest:** sha256:f919bd0beb1f0ef953a6d43227c7e42ee67e4abb96be86295bc85bda50e99b54
 
 **Tags:**
 ```
@@ -118,13 +118,13 @@ mcr.microsoft.com/devcontainers/java:dev-21-jdk-trixie
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 21.0.10 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 21.0.11 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | a07126330b9f56f12f1e00ddd29786d35d6e64d9 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -177,7 +177,7 @@ mcr.microsoft.com/devcontainers/java:dev-21-jdk-trixie
 
 ## Variant: 17-trixie
 
-**Digest:** sha256:0bb3fb7835025728c107b208ba2c85c3ef1656736a66752d514f755328dabc4d
+**Digest:** sha256:48c97f59a314590904efc0dbe164f884894b0b21acfe238ce615685e6c13eedd
 
 **Tags:**
 ```
@@ -198,13 +198,13 @@ mcr.microsoft.com/devcontainers/java:dev-17-jdk-trixie
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 17.0.18 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 17.0.19 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | a07126330b9f56f12f1e00ddd29786d35d6e64d9 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -257,7 +257,7 @@ mcr.microsoft.com/devcontainers/java:dev-17-jdk-trixie
 
 ## Variant: 11-trixie
 
-**Digest:** sha256:890ac10d51b01cada7c5945cb68be8965b4b05e2a0f9307adb4ba02792f2761a
+**Digest:** sha256:2a3dfe7a886ce711daf3b8bd109fc41021adb86adca09a5380ad6f893209665c
 
 **Tags:**
 ```
@@ -278,13 +278,13 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-trixie
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 11.0.30 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 11.0.31 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | a07126330b9f56f12f1e00ddd29786d35d6e64d9 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -337,7 +337,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-trixie
 
 ## Variant: 25-bookworm
 
-**Digest:** sha256:41a11f18da1ae3df0bb49ac4f516275ce97c6d2d4a0f591976a6ae8b3d545a48
+**Digest:** sha256:b796c755d07ee3741c4ef4296ae753b9ed6727ef0295b0825010e87e207db5ed
 
 **Tags:**
 ```
@@ -358,13 +358,13 @@ mcr.microsoft.com/devcontainers/java:dev-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 25.0.2 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 25.0.3 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | a07126330b9f56f12f1e00ddd29786d35d6e64d9 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -418,7 +418,7 @@ mcr.microsoft.com/devcontainers/java:dev-bookworm
 
 ## Variant: 21-bookworm
 
-**Digest:** sha256:2cfebfdf5e648ac6dfbc395be9cfa4cc89c2ff49676fca563a6ddf26df1e9a0b
+**Digest:** sha256:6790f11bab66438af356d8fea62bc62ac67cf27848887bc1d6a23ad6afb4d801
 
 **Tags:**
 ```
@@ -438,13 +438,13 @@ mcr.microsoft.com/devcontainers/java:dev-21-jdk-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 21.0.10 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 21.0.11 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | a07126330b9f56f12f1e00ddd29786d35d6e64d9 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -498,7 +498,7 @@ mcr.microsoft.com/devcontainers/java:dev-21-jdk-bookworm
 
 ## Variant: 17-bookworm
 
-**Digest:** sha256:7643c0733317b53185da2ef637915f5b47c31bfcf7a51c29dde65761be128176
+**Digest:** sha256:bcb3e81e0622db0a45d638ddb16971c4167c4cd8adf1875445be2a65f862f711
 
 **Tags:**
 ```
@@ -518,13 +518,13 @@ mcr.microsoft.com/devcontainers/java:dev-17-jdk-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 17.0.18 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 17.0.19 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | a07126330b9f56f12f1e00ddd29786d35d6e64d9 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -578,7 +578,7 @@ mcr.microsoft.com/devcontainers/java:dev-17-jdk-bookworm
 
 ## Variant: 11-bookworm
 
-**Digest:** sha256:3df36e06317cbaa210dd25bc20d8badd82b89584a5c5244cbfa1a90bf0556e89
+**Digest:** sha256:54e3dfe738d47d2c5d0ef61dee405f87d88c6b637d15f189e3ac96a33b19166d
 
 **Tags:**
 ```
@@ -598,13 +598,13 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 11.0.30 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 11.0.31 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | a07126330b9f56f12f1e00ddd29786d35d6e64d9 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Other tools and utilities**
