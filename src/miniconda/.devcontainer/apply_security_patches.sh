@@ -5,10 +5,10 @@
 
 # define array of packages for pinning to the patched versions
 # vulnerable_packages=( "package1=version1" "package2=version2" "package3=version3" )
-vulnerable_packages=( "cryptography=44.0.1" "requests=2.32.4" "urllib3=2.5.0" )
+patched_package_versions=( "cryptography=46.0.6" "requests=2.32.4" "urllib3=2.5.0")
 
-# Define the number of rows (based on the length of vulnerable_packages)
-rows=${#vulnerable_packages[@]}
+# Define the number of rows (based on the length of patched_package_versions)
+rows=${#patched_package_versions[@]}
 
 if [ $rows -gt 0 ]; then
     # Define the number of columns
@@ -17,8 +17,8 @@ if [ $rows -gt 0 ]; then
     declare -A packages_array
     # Fill the 2D array
     for ((i=0; i<rows; i++)); do
-        # Split each element of vulnerable_packages by the '=' sign
-        IFS='=' read -ra parts <<< "${vulnerable_packages[$i]}"
+        # Split each element of patched_package_versions by the '=' sign
+        IFS='=' read -ra parts <<< "${patched_package_versions[$i]}"
         # Assign the parts to the 2D array
         packages_array[$i,0]=${parts[0]}
         packages_array[$i,1]=${parts[1]}
