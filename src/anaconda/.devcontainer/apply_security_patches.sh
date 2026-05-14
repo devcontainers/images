@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# vulnerabilities:
-# werkzeug - [GHSA-f9vj-2wh5-fj8j] 
+ # Vulnerability-related package updates tracked in this list include:
+ # - pyasn1 - [GHSA-jr27-m4p2-rc6r]
+ # - ujson - [GHSA-wgvc-ghv9-3pmm)]
 
 patched_package_versions=( "mistune=3.0.1" "aiohttp=3.10.11" "cryptography=44.0.1" "h11=0.16.0" "jinja2=3.1.6" "jupyter_core=5.8.1" "protobuf=6.33.5" "requests=2.32.4" "setuptools=78.1.1" "transformers=4.53.0" "urllib3=2.5.0" "werkzeug=3.1.5" "jupyter-lsp=2.2.2" "scrapy=2.14.2"
                       "zipp=3.19.1" "tornado=6.5.5" "jupyterlab=4.4.8" "imagecodecs=2024.9.22" "fonttools=4.60.2" "pyarrow=17.0.0" "brotli=1.2.0" "filelock=3.20.1" "bokeh=3.8.2" "distributed=2026.1.0" "wheel=0.46.2" "nltk=3.9.3" "black=26.3.1" "pyjwt=2.12.0" "pillow=12.1.1" "pyopenssl=26.0.0" "nbconvert=7.17.0" "markdown=3.8.1" "pyasn1=0.6.3" "ujson=5.12.0")
