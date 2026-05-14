@@ -79,6 +79,8 @@ checkCondaPackageVersion "black" "26.3.1"
 checkCondaPackageVersion "streamlit" "1.37.0"
 checkCondaPackageVersion "nltk" "3.9.3"
 checkCondaPackageVersion "markdown" "3.8.1"
+checkCondaPackageVersion "pyasn1" "0.6.3"
+checkCondaPackageVersion "ujson" "5.12.0"
 
 check "conda-update-conda" bash -c "conda update -y conda"
 check "conda-install-tensorflow" bash -c "conda create --name test-env -c conda-forge --yes tensorflow"
