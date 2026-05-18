@@ -34,10 +34,10 @@ You can decide how often you want updates by referencing a [semantic version](ht
 
 - `mcr.microsoft.com/devcontainers/dotnet:2-10.0-noble`
 - `mcr.microsoft.com/devcontainers/dotnet:2.1-10.0-noble`
-- `mcr.microsoft.com/devcontainers/dotnet:2.1.0-10.0-noble`
+- `mcr.microsoft.com/devcontainers/dotnet:2.1.1-10.0-noble`
 - `mcr.microsoft.com/devcontainers/dotnet:2-9.0`
 - `mcr.microsoft.com/devcontainers/dotnet:2.1-9.0`
-- `mcr.microsoft.com/devcontainers/dotnet:2.1.0-9.0`
+- `mcr.microsoft.com/devcontainers/dotnet:2.1.1-9.0`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/dotnet/tags/list).
 
