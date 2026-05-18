@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # vulnerablities 
-# cryptography - [GHSA-h4gh-qq45-vh27]
+# cryptography - [GHSA-h4gh-qq45-vh27, GHSA-m959-cc7f-wv43]
 
 # define array of packages for pinning to the patched versions
 # vulnerable_packages=( "package1=version1" "package2=version2" "package3=version3" )
