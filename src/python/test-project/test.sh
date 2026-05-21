@@ -52,8 +52,8 @@ gitpython_version=$(python -c "import git; print(git.__version__)")
 check-version-ge "gitpython-requirement" "${gitpython_version}" "3.1.41"
 
 # GHSA-58pv-8j8x-9vj2: jaraco.context
-jaraco_version=$(python -c "import jaraco.context; print(jaraco.context.__version__)")
-check-version-ge "jaraco-context-requirement" "${jaraco.context_version}" "6.1.0"
+jaraco_context_version=$(python -c "import jaraco.context; print(jaraco.context.__version__)")
+check-version-ge "jaraco-context-requirement" "${jaraco_context_version}" "6.1.0"
 
 # GHSA-8rrh-rw8j-w5fx: wheel
 wheel_version=$(python -c "import wheel; print(wheel.__version__)")
