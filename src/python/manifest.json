@@ -112,7 +112,10 @@
 			"pipx"
 		],
 		"pip": [
-			"setuptools"
+			"setuptools",
+			"gitpython",
+			"jaraco.context",
+			"wheel"
 		],
 		"languages": {
 			"Python": {
