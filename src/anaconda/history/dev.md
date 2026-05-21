@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:3c0b12e75f076939133e43de8b983951b38c165a7046f9408f517e619b9fa72c
+**Digest:** sha256:85f8e4332e2772acaea9c467d30222a228021909115256f6d73b95ef64ba9c26
 
 **Tags:**
 ```
@@ -25,7 +25,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 |--------------------|---------|------|
 | [Python](https://www.python.org/) | 3.12.13 | /opt/conda |
 | [Jupyter Notebooks](https://jupyter.org/) | 7.5.5 | /opt/conda |
-| [Jupyter Lab](https://jupyter.org/) | 4.5.6 | /opt/conda |
+| [Jupyter Lab](https://jupyter.org/) | 4.5.7 | /opt/conda |
 
 **Tools installed using git**
 
@@ -42,7 +42,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | cryptography | 46.0.7 |
 | mistune | 3.1.2 |
 | numpy | 1.26.4 |
-| certifi | 2026.1.4 |
+| certifi | 2026.4.22 |
 | setuptools | 82.0.1 |
 | wheel | 0.46.3 |
 | nbconvert | 7.17.0 |

@@ -18,7 +18,7 @@
 
 ## Variant: 3.14-trixie
 
-**Digest:** sha256:0d0f168e066f77429111014036629daa403011a3873a3b08a373b5445a82180a
+**Digest:** sha256:d213b6a930c61e7b0d37b151ef7c967c910a8b2a07f79708961a6ee20d7cb45e
 
 **Tags:**
 ```
@@ -47,7 +47,7 @@ mcr.microsoft.com/devcontainers/python:dev-trixie
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | a07126330b9f56f12f1e00ddd29786d35d6e64d9 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -60,18 +60,18 @@ mcr.microsoft.com/devcontainers/python:dev-trixie
 | autopep8 | 2.3.2 |
 | black | 26.3.1 |
 | yapf | 0.43.0 |
-| mypy | 1.20.1 |
+| mypy | 2.0.0 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.14.0 |
 | bandit | 1.9.4 |
-| virtualenv | 21.2.4 |
-| pipx | 1.11.1 |
+| virtualenv | 21.3.1 |
+| pipx | 1.12.0 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.53.0 | 
+| [git](https://github.com/git/git) | 2.54.0 | 
 
 **Additional linux tools and packages**
 
@@ -117,7 +117,7 @@ mcr.microsoft.com/devcontainers/python:dev-trixie
 
 ## Variant: 3.13-trixie
 
-**Digest:** sha256:efa02904e9df8e18871c759728c0f6ab4e963f6f263f57c52b8c2e481725619a
+**Digest:** sha256:c8c9294aac66d595d753b99845e3feda0f96d13b472e1d2d8a4a1ac1e66951e5
 
 **Tags:**
 ```
@@ -143,7 +143,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.13
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | a07126330b9f56f12f1e00ddd29786d35d6e64d9 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -156,18 +156,18 @@ mcr.microsoft.com/devcontainers/python:dev-3.13
 | autopep8 | 2.3.2 |
 | black | 26.3.1 |
 | yapf | 0.43.0 |
-| mypy | 1.20.1 |
+| mypy | 2.0.0 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.14.0 |
 | bandit | 1.9.4 |
-| virtualenv | 21.2.4 |
-| pipx | 1.11.1 |
+| virtualenv | 21.3.1 |
+| pipx | 1.12.0 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.53.0 | 
+| [git](https://github.com/git/git) | 2.54.0 | 
 
 **Additional linux tools and packages**
 
@@ -213,7 +213,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.13
 
 ## Variant: 3.12-trixie
 
-**Digest:** sha256:c1529d30c4682aa3907deb6d467528c707a90d33fc5d584e99386883b4747735
+**Digest:** sha256:ff1788e824860d32151179f0e4ca4aeae9bb6d5cf619b17ccc18749bfcb798c1
 
 **Tags:**
 ```
@@ -239,7 +239,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.12
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | a07126330b9f56f12f1e00ddd29786d35d6e64d9 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -252,18 +252,18 @@ mcr.microsoft.com/devcontainers/python:dev-3.12
 | autopep8 | 2.3.2 |
 | black | 26.3.1 |
 | yapf | 0.43.0 |
-| mypy | 1.20.1 |
+| mypy | 2.0.0 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.14.0 |
 | bandit | 1.9.4 |
-| virtualenv | 21.2.4 |
-| pipx | 1.11.1 |
+| virtualenv | 21.3.1 |
+| pipx | 1.12.0 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.53.0 | 
+| [git](https://github.com/git/git) | 2.54.0 | 
 
 **Additional linux tools and packages**
 
@@ -309,7 +309,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.12
 
 ## Variant: 3.11-trixie
 
-**Digest:** sha256:6ddae2af334f9217c3ca8a9454dbf905802ad430c9a7ed3439db90e2bf5f427d
+**Digest:** sha256:9f8834abc29463ba07d09fb0ca340c703897560e4f08aab48335e02c5d263974
 
 **Tags:**
 ```
@@ -335,7 +335,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.11
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | a07126330b9f56f12f1e00ddd29786d35d6e64d9 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -348,18 +348,18 @@ mcr.microsoft.com/devcontainers/python:dev-3.11
 | autopep8 | 2.3.2 |
 | black | 26.3.1 |
 | yapf | 0.43.0 |
-| mypy | 1.20.1 |
+| mypy | 2.0.0 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.14.0 |
 | bandit | 1.9.4 |
-| virtualenv | 21.2.4 |
-| pipx | 1.11.1 |
+| virtualenv | 21.3.1 |
+| pipx | 1.12.0 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.53.0 | 
+| [git](https://github.com/git/git) | 2.54.0 | 
 
 **Additional linux tools and packages**
 
@@ -405,7 +405,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.11
 
 ## Variant: 3.10-trixie
 
-**Digest:** sha256:cd61cbffc9b335c0d7252ca480f6ecaf24fbcea903ea9a6730963913bc770b31
+**Digest:** sha256:f71199eba6cc60973ed0f8fc82a2fff605d0a01489e54dd6a2e3acf3b02fa0c3
 
 **Tags:**
 ```
@@ -431,7 +431,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.10
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | a07126330b9f56f12f1e00ddd29786d35d6e64d9 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -444,18 +444,18 @@ mcr.microsoft.com/devcontainers/python:dev-3.10
 | autopep8 | 2.3.2 |
 | black | 26.3.1 |
 | yapf | 0.43.0 |
-| mypy | 1.20.1 |
+| mypy | 2.0.0 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.14.0 |
 | bandit | 1.9.4 |
-| virtualenv | 21.2.4 |
-| pipx | 1.11.1 |
+| virtualenv | 21.3.1 |
+| pipx | 1.12.0 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.53.0 | 
+| [git](https://github.com/git/git) | 2.54.0 | 
 
 **Additional linux tools and packages**
 
@@ -501,7 +501,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.10
 
 ## Variant: 3.14-bookworm
 
-**Digest:** sha256:4e72a79f5cf704f35a794b0a9aa9f92ef7609cffa25d4a8893633efa369476dd
+**Digest:** sha256:9c99b5967be1123b57b1bf1480fd4f482bc03f78ab1fdb01e1cb975b560149c5
 
 **Tags:**
 ```
@@ -528,7 +528,7 @@ mcr.microsoft.com/devcontainers/python:dev-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | a07126330b9f56f12f1e00ddd29786d35d6e64d9 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -541,18 +541,18 @@ mcr.microsoft.com/devcontainers/python:dev-bookworm
 | autopep8 | 2.3.2 |
 | black | 26.3.1 |
 | yapf | 0.43.0 |
-| mypy | 1.20.1 |
+| mypy | 2.0.0 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.14.0 |
 | bandit | 1.9.4 |
-| virtualenv | 21.2.4 |
-| pipx | 1.11.1 |
+| virtualenv | 21.3.1 |
+| pipx | 1.12.0 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.53.0 | 
+| [git](https://github.com/git/git) | 2.54.0 | 
 
 **Additional linux tools and packages**
 
@@ -599,7 +599,7 @@ mcr.microsoft.com/devcontainers/python:dev-bookworm
 
 ## Variant: 3.13-bookworm
 
-**Digest:** sha256:1056b74e7744ee781a5ec52a9b61dd69692fa311d36ab3b4ce5b88abee2525ba
+**Digest:** sha256:0a03c1cf51a7f0915c95b5cf98749b1737adadf322501968f367926a03d0795b
 
 **Tags:**
 ```
@@ -624,7 +624,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.13-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | a07126330b9f56f12f1e00ddd29786d35d6e64d9 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -637,18 +637,18 @@ mcr.microsoft.com/devcontainers/python:dev-3.13-bookworm
 | autopep8 | 2.3.2 |
 | black | 26.3.1 |
 | yapf | 0.43.0 |
-| mypy | 1.20.1 |
+| mypy | 2.0.0 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.14.0 |
 | bandit | 1.9.4 |
-| virtualenv | 21.2.4 |
-| pipx | 1.11.1 |
+| virtualenv | 21.3.1 |
+| pipx | 1.12.0 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.53.0 | 
+| [git](https://github.com/git/git) | 2.54.0 | 
 
 **Additional linux tools and packages**
 
@@ -695,7 +695,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.13-bookworm
 
 ## Variant: 3.12-bookworm
 
-**Digest:** sha256:cd7276be7873f2782ec951f653499dfadd7d878b2e07cdfb54210718c5d3e590
+**Digest:** sha256:0d63543c84a44ae1bb31a24cfc4fc899ad0bc27b8b1bfacd64f9be8a86297766
 
 **Tags:**
 ```
@@ -720,7 +720,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.12-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | a07126330b9f56f12f1e00ddd29786d35d6e64d9 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -733,12 +733,12 @@ mcr.microsoft.com/devcontainers/python:dev-3.12-bookworm
 | autopep8 | 2.3.2 |
 | black | 26.3.1 |
 | yapf | 0.43.0 |
-| mypy | 1.20.1 |
+| mypy | 2.0.0 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.14.0 |
 | bandit | 1.9.4 |
-| virtualenv | 21.2.4 |
-| pipx | 1.11.1 |
+| virtualenv | 21.3.1 |
+| pipx | 1.12.0 |
 
 **Other tools and utilities**
 
@@ -791,7 +791,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.12-bookworm
 
 ## Variant: 3.11-bookworm
 
-**Digest:** sha256:a8fb41faebb43a6151631370fcd65b771f41209a120cb3a532ef3487dac40f53
+**Digest:** sha256:a3bf79c55fd79d7218ec6516daea1a7a3ef364686247151a20b8da129a73db73
 
 **Tags:**
 ```
@@ -816,7 +816,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.11-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | a07126330b9f56f12f1e00ddd29786d35d6e64d9 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -829,18 +829,18 @@ mcr.microsoft.com/devcontainers/python:dev-3.11-bookworm
 | autopep8 | 2.3.2 |
 | black | 26.3.1 |
 | yapf | 0.43.0 |
-| mypy | 1.20.1 |
+| mypy | 2.0.0 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.14.0 |
 | bandit | 1.9.4 |
-| virtualenv | 21.2.4 |
-| pipx | 1.11.1 |
+| virtualenv | 21.3.1 |
+| pipx | 1.12.0 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.53.0 | 
+| [git](https://github.com/git/git) | 2.54.0 | 
 
 **Additional linux tools and packages**
 
@@ -887,7 +887,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.11-bookworm
 
 ## Variant: 3.10-bookworm
 
-**Digest:** sha256:2b58dc81f51aea6f131561529565895a96062ef42ffe6f97062d1da80d89d07f
+**Digest:** sha256:987f0bbd100d5f6199af65bc83c5847a44500be0152c3639e139da6ea602673a
 
 **Tags:**
 ```
@@ -912,7 +912,7 @@ mcr.microsoft.com/devcontainers/python:dev-3.10-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | a07126330b9f56f12f1e00ddd29786d35d6e64d9 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Pip / pipx installed tools and packages**
@@ -925,18 +925,18 @@ mcr.microsoft.com/devcontainers/python:dev-3.10-bookworm
 | autopep8 | 2.3.2 |
 | black | 26.3.1 |
 | yapf | 0.43.0 |
-| mypy | 1.20.1 |
+| mypy | 2.0.0 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.14.0 |
 | bandit | 1.9.4 |
-| virtualenv | 21.2.4 |
-| pipx | 1.11.1 |
+| virtualenv | 21.3.1 |
+| pipx | 1.12.0 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.53.0 | 
+| [git](https://github.com/git/git) | 2.54.0 | 
 
 **Additional linux tools and packages**
 

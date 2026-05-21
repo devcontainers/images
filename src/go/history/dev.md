@@ -12,7 +12,7 @@
 
 ## Variant: 1.26-trixie
 
-**Digest:** sha256:c7a77d2539d6d35d12f9f56dee974ccb8173a86a102e1b523643945daef5ff5b
+**Digest:** sha256:1d86edbb6e3297d8d141c5bf8a73903f527b0491c47dcc36f9cc2f2fca86a2d5
 
 **Tags:**
 ```
@@ -35,13 +35,13 @@ mcr.microsoft.com/devcontainers/go:dev-trixie
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | 1.26.2 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.26.3 | /usr/local/go |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | a07126330b9f56f12f1e00ddd29786d35d6e64d9 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Go tools and modules**
@@ -54,14 +54,14 @@ mcr.microsoft.com/devcontainers/go:dev-trixie
 | github.com/mgechev/revive | 1.15.0 |
 | github.com/uudashr/gopkgs | latest |
 | github.com/ramya-rao-a/go-outline | latest |
-| github.com/go-delve/delve | 1.26.2 |
+| github.com/go-delve/delve | 1.26.3 |
 | github.com/golangci/golangci-lint | latest |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.53.0 | 
+| [git](https://github.com/git/git) | 2.54.0 | 
 
 **Additional linux tools and packages**
 
@@ -112,7 +112,7 @@ mcr.microsoft.com/devcontainers/go:dev-trixie
 
 ## Variant: 1.25-trixie
 
-**Digest:** sha256:1f11d8ebe336778bc6031a4ab586f7d1fb6c0c33ec15f8c02074bb4f8e32fb6b
+**Digest:** sha256:ae6467bcc9b5c2c6af4690b294d615177814d035cdbaa810b222789f71cf72a5
 
 **Tags:**
 ```
@@ -135,13 +135,13 @@ mcr.microsoft.com/devcontainers/go:dev-trixie
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | 1.25.9 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.25.10 | /usr/local/go |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | a07126330b9f56f12f1e00ddd29786d35d6e64d9 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Go tools and modules**
@@ -154,14 +154,14 @@ mcr.microsoft.com/devcontainers/go:dev-trixie
 | github.com/mgechev/revive | 1.15.0 |
 | github.com/uudashr/gopkgs | latest |
 | github.com/ramya-rao-a/go-outline | latest |
-| github.com/go-delve/delve | 1.26.2 |
+| github.com/go-delve/delve | 1.26.3 |
 | github.com/golangci/golangci-lint | latest |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.53.0 | 
+| [git](https://github.com/git/git) | 2.54.0 | 
 
 **Additional linux tools and packages**
 
@@ -212,7 +212,7 @@ mcr.microsoft.com/devcontainers/go:dev-trixie
 
 ## Variant: 1.26-bookworm
 
-**Digest:** sha256:8d92363c68b8b454b510dd64cbecafc87ffc0acda0d9f12c0b925c94dee5bca9
+**Digest:** sha256:3a60843a53e1b1c158ed0b6c8a2249645d1fa482834dca9e972648efd3345a39
 
 **Tags:**
 ```
@@ -233,13 +233,13 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | 1.26.2 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.26.3 | /usr/local/go |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | a07126330b9f56f12f1e00ddd29786d35d6e64d9 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Go tools and modules**
@@ -252,14 +252,14 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 | github.com/mgechev/revive | 1.15.0 |
 | github.com/uudashr/gopkgs | latest |
 | github.com/ramya-rao-a/go-outline | latest |
-| github.com/go-delve/delve | 1.26.2 |
+| github.com/go-delve/delve | 1.26.3 |
 | github.com/golangci/golangci-lint | latest |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.53.0 | 
+| [git](https://github.com/git/git) | 2.54.0 | 
 
 **Additional linux tools and packages**
 
@@ -311,7 +311,7 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 
 ## Variant: 1.25-bookworm
 
-**Digest:** sha256:e0c91ff963c7665a44833107cf9089a5e74e33f8045a6a64ab4af7e103fc7f94
+**Digest:** sha256:a560a20d14c98b81920956f9d5fcf7b7a598ba87faa1f38ee408966f35f618ca
 
 **Tags:**
 ```
@@ -332,13 +332,13 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Go](https://golang.org/dl) | 1.25.9 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.25.10 | /usr/local/go |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | a07126330b9f56f12f1e00ddd29786d35d6e64d9 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 
 **Go tools and modules**
@@ -351,14 +351,14 @@ mcr.microsoft.com/devcontainers/go:dev-bookworm
 | github.com/mgechev/revive | 1.15.0 |
 | github.com/uudashr/gopkgs | latest |
 | github.com/ramya-rao-a/go-outline | latest |
-| github.com/go-delve/delve | 1.26.2 |
+| github.com/go-delve/delve | 1.26.3 |
 | github.com/golangci/golangci-lint | latest |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.53.0 | 
+| [git](https://github.com/git/git) | 2.54.0 | 
 
 **Additional linux tools and packages**
 
