@@ -51,5 +51,13 @@ check-version-ge "setuptools-requirement" "${setuptools_version}" "78.1.1"
 gitpython_version=$(python -c "import git; print(git.__version__)")
 check-version-ge "gitpython-requirement" "${gitpython_version}" "3.1.41"
 
+# GHSA-58pv-8j8x-9vj2: jaraco.context
+jaraco_context_version=$(python -c "from importlib.metadata import version; print(version('jaraco.context'))")
+check-version-ge "jaraco-context-requirement" "${jaraco_context_version}" "6.1.0"
+
+# GHSA-8rrh-rw8j-w5fx: wheel
+wheel_version=$(python -c "from importlib.metadata import version; print(version('wheel'))")
+check-version-ge "wheel-requirement" "${wheel_version}" "0.46.2"
+
 # Report result
 reportResults
