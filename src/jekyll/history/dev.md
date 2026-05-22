@@ -11,7 +11,7 @@
 
 ## Variant: 3.4-bookworm
 
-**Digest:** sha256:6ee7f2275b57cccfb7a5d030ec3db5978051d7a94df7b9bdf8dab667f128eeae
+**Digest:** sha256:83a495f1952b770e2702393e3c859b3533a684d6836ad1575516d727859484b9
 
 **Tags:**
 ```
@@ -39,16 +39,16 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cb64103161b69d59e1efefeb761ac85564c44698 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 | [rbenv](https://github.com/rbenv/rbenv.git) | 23c3041695feb811c18dbb270096c7956f7c377d | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 90b52b26b784d3fdc587cfabae55f3feedd5028b | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 302b11d4742de708f26175b391b3c47f78c21f96 | /usr/local/share/ruby-build |
 
 **Ruby gems and tools**
 
 | Tool / gem | Version |
 |------------|---------|
-| bundler | 4.0.10 |
+| bundler | 4.0.12 |
 | jekyll | 4.4.1 |
 | github-pages | 232 |
 
@@ -74,13 +74,13 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bookworm
 | iproute2 | 6.1.0-3 |
 | jq | 1.6-2.1+deb12u1 |
 | less | 590-2.1~deb12u2 |
-| libc6 | 2.36-9+deb12u13 |
+| libc6 | 2.36-9+deb12u14 |
 | libgssapi-krb5-2 | 1.20.1-2+deb12u4 |
 | libicu72 | 72.1-3+deb12u1 |
 | libkrb5-3 | 1.20.1-2+deb12u4 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14+deb12u1 |
-| locales | 2.36-9+deb12u13 |
+| locales | 2.36-9+deb12u14 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
@@ -89,22 +89,22 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bookworm
 | nano | 7.2-1+deb12u1 |
 | ncdu | 1.18-0.2 |
 | net-tools | 2.10-0.1+deb12u2 |
-| openssh-client | 1:9.2p1-2+deb12u9 |
+| openssh-client | 1:9.2p1-2+deb12u10 |
 | procps | 2:4.0.2-3 |
 | psmisc | 23.6-1 |
-| rsync | 3.2.7-1+deb12u4 |
+| rsync | 3.2.7-1+deb12u5 |
 | strace | 6.1-0.1 |
-| sudo | 1.9.13p3-1+deb12u3 |
+| sudo | 1.9.13p3-1+deb12u4 |
 | unzip | 6.0-28 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
 | zip | 3.0-13 |
 | zlib1g | 1:1.2.13.dfsg-1 |
-| zsh | 5.9-4+b8 |
+| zsh | 5.9-4+b15 |
 
 ## Variant: 3.3-bookworm
 
-**Digest:** sha256:8e3e2d8b3f66927188268940b2dbbaf19c9fa208fadaaec56e63cfa56caefdf7
+**Digest:** sha256:eae9bb435ca1ca34078ad0cbf9cf31819c1b0391cd086d2a41851f02190af5e3
 
 **Tags:**
 ```
@@ -131,16 +131,16 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cb64103161b69d59e1efefeb761ac85564c44698 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 | [rbenv](https://github.com/rbenv/rbenv.git) | 23c3041695feb811c18dbb270096c7956f7c377d | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 90b52b26b784d3fdc587cfabae55f3feedd5028b | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 302b11d4742de708f26175b391b3c47f78c21f96 | /usr/local/share/ruby-build |
 
 **Ruby gems and tools**
 
 | Tool / gem | Version |
 |------------|---------|
-| bundler | 4.0.10 |
+| bundler | 4.0.12 |
 | jekyll | 4.4.1 |
 | github-pages | 232 |
 
@@ -166,13 +166,13 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bookworm
 | iproute2 | 6.1.0-3 |
 | jq | 1.6-2.1+deb12u1 |
 | less | 590-2.1~deb12u2 |
-| libc6 | 2.36-9+deb12u13 |
+| libc6 | 2.36-9+deb12u14 |
 | libgssapi-krb5-2 | 1.20.1-2+deb12u4 |
 | libicu72 | 72.1-3+deb12u1 |
 | libkrb5-3 | 1.20.1-2+deb12u4 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14+deb12u1 |
-| locales | 2.36-9+deb12u13 |
+| locales | 2.36-9+deb12u14 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
@@ -181,22 +181,22 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bookworm
 | nano | 7.2-1+deb12u1 |
 | ncdu | 1.18-0.2 |
 | net-tools | 2.10-0.1+deb12u2 |
-| openssh-client | 1:9.2p1-2+deb12u9 |
+| openssh-client | 1:9.2p1-2+deb12u10 |
 | procps | 2:4.0.2-3 |
 | psmisc | 23.6-1 |
-| rsync | 3.2.7-1+deb12u4 |
+| rsync | 3.2.7-1+deb12u5 |
 | strace | 6.1-0.1 |
-| sudo | 1.9.13p3-1+deb12u3 |
+| sudo | 1.9.13p3-1+deb12u4 |
 | unzip | 6.0-28 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
 | zip | 3.0-13 |
 | zlib1g | 1:1.2.13.dfsg-1 |
-| zsh | 5.9-4+b8 |
+| zsh | 5.9-4+b15 |
 
 ## Variant: 3.3-bullseye
 
-**Digest:** sha256:dd244dd17b9bd2baab302208c81cb8df863591ad3721b2c793f67d922e127bee
+**Digest:** sha256:e5000773c11afecd7b1cd1870543feffa585ef4f0caeea08910022e3ab532d57
 
 **Tags:**
 ```
@@ -223,16 +223,16 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | cb64103161b69d59e1efefeb761ac85564c44698 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
 | [rbenv](https://github.com/rbenv/rbenv.git) | 23c3041695feb811c18dbb270096c7956f7c377d | /usr/local/share/rbenv |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 90b52b26b784d3fdc587cfabae55f3feedd5028b | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 302b11d4742de708f26175b391b3c47f78c21f96 | /usr/local/share/ruby-build |
 
 **Ruby gems and tools**
 
 | Tool / gem | Version |
 |------------|---------|
-| bundler | 4.0.10 |
+| bundler | 4.0.12 |
 | jekyll | 4.4.1 |
 | github-pages | 232 |
 
@@ -274,10 +274,10 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bullseye
 | nano | 5.4-2+deb11u3 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1+deb11u2 |
-| openssh-client | 1:8.4p1-5+deb11u6 |
+| openssh-client | 1:8.4p1-5+deb11u7 |
 | procps | 2:3.3.17-5 |
 | psmisc | 23.4-2 |
-| rsync | 3.2.3-4+deb11u3 |
+| rsync | 3.2.3-4+deb11u4 |
 | strace | 5.10-1 |
 | sudo | 1.9.5p2-3+deb11u3 |
 | unzip | 6.0-26+deb11u1 |
