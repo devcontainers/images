@@ -1,5 +1,5 @@
 {
-	"version": "3.0.7",
+	"version": "3.1.0",
 	"variants": [
 		"3.14-trixie",
 		"3.13-trixie",
@@ -112,7 +112,10 @@
 			"pipx"
 		],
 		"pip": [
-			"setuptools"
+			"setuptools",
+			"gitpython",
+			"jaraco.context",
+			"wheel"
 		],
 		"languages": {
 			"Python": {
