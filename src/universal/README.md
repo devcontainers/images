@@ -1,4 +1,4 @@
-devcontainer-info content-url# Linux Universal Image
+# Linux Universal Image
 
 ## Summary
 
