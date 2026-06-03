@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:3c0b12e75f076939133e43de8b983951b38c165a7046f9408f517e619b9fa72c
+**Digest:** sha256:048fc5e8ccd457efb78b711d4752798bc3f2fedc8d1f3d113b6208044522e8ba
 
 **Tags:**
 ```
@@ -25,7 +25,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 |--------------------|---------|------|
 | [Python](https://www.python.org/) | 3.12.13 | /opt/conda |
 | [Jupyter Notebooks](https://jupyter.org/) | 7.5.5 | /opt/conda |
-| [Jupyter Lab](https://jupyter.org/) | 4.5.6 | /opt/conda |
+| [Jupyter Lab](https://jupyter.org/) | 4.5.7 | /opt/conda |
 
 **Tools installed using git**
 
@@ -42,7 +42,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | cryptography | 46.0.7 |
 | mistune | 3.1.2 |
 | numpy | 1.26.4 |
-| certifi | 2026.1.4 |
+| certifi | 2026.5.20 |
 | setuptools | 82.0.1 |
 | wheel | 0.46.3 |
 | nbconvert | 7.17.0 |
@@ -74,13 +74,13 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | iproute2 | 6.1.0-3 |
 | jq | 1.6-2.1+deb12u1 |
 | less | 590-2.1~deb12u2 |
-| libc6 | 2.36-9+deb12u13 |
-| libgssapi-krb5-2 | 1.20.1-2+deb12u4 |
+| libc6 | 2.36-9+deb12u14 |
+| libgssapi-krb5-2 | 1.20.1-2+deb12u5 |
 | libicu72 | 72.1-3+deb12u1 |
-| libkrb5-3 | 1.20.1-2+deb12u4 |
+| libkrb5-3 | 1.20.1-2+deb12u5 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14+deb12u1 |
-| locales | 2.36-9+deb12u13 |
+| locales | 2.36-9+deb12u14 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
@@ -89,16 +89,16 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | nano | 7.2-1+deb12u1 |
 | ncdu | 1.18-0.2 |
 | net-tools | 2.10-0.1+deb12u2 |
-| openssh-client | 1:9.2p1-2+deb12u9 |
+| openssh-client | 1:9.2p1-2+deb12u10 |
 | procps | 2:4.0.2-3 |
 | psmisc | 23.6-1 |
-| rsync | 3.2.7-1+deb12u4 |
+| rsync | 3.2.7-1+deb12u5 |
 | strace | 6.1-0.1 |
-| sudo | 1.9.13p3-1+deb12u3 |
+| sudo | 1.9.13p3-1+deb12u4 |
 | unzip | 6.0-28 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
 | zip | 3.0-13 |
 | zlib1g | 1:1.2.13.dfsg-1 |
-| zsh | 5.9-4+b8 |
+| zsh | 5.9-4+b15 |
 
