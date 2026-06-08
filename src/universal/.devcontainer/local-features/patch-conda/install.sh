@@ -59,5 +59,6 @@ update_conda_package cryptography "46.0.5"
 # https://nvd.nist.gov/vuln/detail/CVE-2025-6176
 update_conda_package brotli "1.2.0"
 
+# https://github.com/advisories/GHSA-mf9w-mj56-hr94
 update_python_package /opt/conda/bin/python3 python-dotenv "1.2.2"
 
