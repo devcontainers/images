@@ -181,6 +181,7 @@ checkCondaPackageVersion "cryptography" "46.0.5"
 checkCondaPackageVersion "pyopenssl" "26.0.0"
 checkCondaPackageVersion "urllib3" "2.6.3"
 checkCondaPackageVersion "brotli" "1.2.0"
+checkCondaPackageVersion "python-dotenv" "1.2.2"
 
 ## Test Conda
 check "conda-update-conda" bash -c "conda update -c defaults -y conda"
