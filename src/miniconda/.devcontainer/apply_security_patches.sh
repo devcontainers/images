@@ -5,7 +5,7 @@
 
 # define array of packages for pinning to the patched versions
 # patched_package_versions=( "package1=version1" "package2=version2" "package3=version3" )
-patched_package_versions=( "cryptography=46.0.6" "requests=2.32.4" "urllib3=2.5.0")
+patched_package_versions=( "cryptography=46.0.6" "requests=2.32.4" "urllib3=2.5.0" "python-dotenv=1.2.2")
 
 # Define the number of rows (based on the length of patched_package_versions)
 rows=${#patched_package_versions[@]}
