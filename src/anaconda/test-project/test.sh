@@ -67,6 +67,7 @@ checkPythonPackageVersion "filelock" "3.20.1"
 checkPythonPackageVersion "bokeh" "3.8.2"
 checkPythonPackageVersion "pyjwt" "2.12.0"
 checkPythonPackageVersion "python-dotenv" "1.2.2"
+checkPythonPackageVersion "lxml" "6.1.0"
 
 checkCondaPackageVersion "pyopenssl" "26.0.0"
 checkCondaPackageVersion "requests" "2.32.4"
