@@ -32,8 +32,11 @@ check_ubuntu_user() {
 if grep -q 'VERSION_CODENAME=noble' /etc/os-release; then
     echo -e "\nThe base image is ubuntu:noble. Checking user Ubuntu.."
     check "uid" "check_ubuntu_user"
+elif grep -q 'VERSION_CODENAME=resolute' /etc/os-release; then
+    echo -e "\nThe base image is ubuntu:resolute. Checking user Ubuntu.."
+    check "uid" "check_ubuntu_user"
 else
-    echo -e "\nCannot check user Ubuntu. The base image is not ubuntu:noble."
+    echo -e "\nCannot check user Ubuntu. The base image is not ubuntu:noble or ubuntu:resolute."
 fi
 
 # Report result

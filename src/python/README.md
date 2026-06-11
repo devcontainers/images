@@ -35,8 +35,8 @@ Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
 - `mcr.microsoft.com/devcontainers/python:3-3.13` (or `3-3.14-trixie`)
-- `mcr.microsoft.com/devcontainers/python:3.0-3.13` (or `3.0-3.13-trixie`)
-- `mcr.microsoft.com/devcontainers/python:3.0.6-3.13` (or `3.0.6-3.13-trixie`)
+- `mcr.microsoft.com/devcontainers/python:3.1-3.13` (or `3.1-3.13-trixie`)
+- `mcr.microsoft.com/devcontainers/python:3.1.0-3.13` (or `3.1.0-3.13-trixie`)
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `2-3`). 
 You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
@@ -142,4 +142,3 @@ RUN apt-get update && apt-get install --no-install-recommends -yq software-prope
 Copyright (c) Microsoft Corporation. All rights reserved.
 
 Licensed under the MIT License. See [LICENSE](https://github.com/devcontainers/images/blob/main/LICENSE)
-

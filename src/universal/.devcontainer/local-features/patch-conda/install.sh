@@ -56,17 +56,5 @@ update_conda_package pyopenssl "26.0.0"
 
 update_conda_package cryptography "46.0.5"
 
-# https://github.com/advisories/GHSA-9hjg-9r4m-mvj7
-update_conda_package requests "2.32.4"
-
-# https://github.com/advisories/GHSA-5rjg-fvgr-3xxf
-update_conda_package setuptools "78.1.1"
-
-# https://github.com/advisories/GHSA-g7vv-2v7x-gj9p
-update_python_package /opt/conda/bin/python3 tqdm "4.66.3"
-
-# https://github.com/advisories/GHSA-38jv-5279-wg99
-update_conda_package urllib3 "2.6.3"
-
 # https://nvd.nist.gov/vuln/detail/CVE-2025-6176
 update_conda_package brotli "1.2.0"
