@@ -1,9 +1,9 @@
 {
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {
-      "version": "2.5.8",
-      "resolved": "ghcr.io/devcontainers/features/common-utils@sha256:c42fdefe6d737a3a6f61cc52b23c7c9a565d08cc4d9c303669a7cf2ee5fd81fc",
-      "integrity": "sha256:c42fdefe6d737a3a6f61cc52b23c7c9a565d08cc4d9c303669a7cf2ee5fd81fc"
+      "version": "2.5.9",
+      "resolved": "ghcr.io/devcontainers/features/common-utils@sha256:cb0c4d3c276f157eed17935747e364178d75fee17f55c4e129966f64633deb3a",
+      "integrity": "sha256:cb0c4d3c276f157eed17935747e364178d75fee17f55c4e129966f64633deb3a"
     },
     "ghcr.io/devcontainers/features/conda:2": {
       "version": "2.0.1",
@@ -11,9 +11,9 @@
       "integrity": "sha256:f5f3e5b96a33a90377eba3be0fdba7aef6a128b5702571e1f586b2c9e0083840"
     },
     "ghcr.io/devcontainers/features/copilot-cli:1": {
-      "version": "1.1.2",
-      "resolved": "ghcr.io/devcontainers/features/copilot-cli@sha256:757c6c2899dc902c44a9f6164c1f7392832ced13c6bb632d8d60a880f2e92456",
-      "integrity": "sha256:757c6c2899dc902c44a9f6164c1f7392832ced13c6bb632d8d60a880f2e92456"
+      "version": "1.1.3",
+      "resolved": "ghcr.io/devcontainers/features/copilot-cli@sha256:e10d091ae7ef9b8d2ed5f601d75f5a090bc04acbac1a26d4cd3c0d5edde4ea10",
+      "integrity": "sha256:e10d091ae7ef9b8d2ed5f601d75f5a090bc04acbac1a26d4cd3c0d5edde4ea10"
     },
     "ghcr.io/devcontainers/features/docker-in-docker:2": {
       "version": "2.17.0",
@@ -71,9 +71,9 @@
       "integrity": "sha256:5295f2aa261376a83c29f3cfd6f6d967bb352d1ff7b54436f2029fd48c692b67"
     },
     "ghcr.io/devcontainers/features/php:1": {
-      "version": "1.1.4",
-      "resolved": "ghcr.io/devcontainers/features/php@sha256:33409d4db3373dcd159dd7e9c1a8bcf2a508263fa53abf9c209873d8681f7f1c",
-      "integrity": "sha256:33409d4db3373dcd159dd7e9c1a8bcf2a508263fa53abf9c209873d8681f7f1c"
+      "version": "1.1.5",
+      "resolved": "ghcr.io/devcontainers/features/php@sha256:28f032b4b6867f09d09a15dffcf82f225057c35a4e819680a9f836f0684b041b",
+      "integrity": "sha256:28f032b4b6867f09d09a15dffcf82f225057c35a4e819680a9f836f0684b041b"
     },
     "ghcr.io/devcontainers/features/python:1": {
       "version": "1.8.0",
