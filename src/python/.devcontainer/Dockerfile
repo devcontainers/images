@@ -10,7 +10,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 # They are installed by the base image (python) which does not have the patch.
 RUN python3 -m pip install --upgrade \
     setuptools==78.1.1 \
-    gitpython==3.1.41 \
+    gitpython==3.1.47 \
     jaraco.context==6.1.0 \
     wheel==0.46.2
 

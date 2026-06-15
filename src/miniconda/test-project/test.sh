@@ -22,6 +22,7 @@ checkPythonPackageVersion "cryptography" "46.0.6"
 checkPythonPackageVersion "setuptools" "65.5.1"
 checkPythonPackageVersion "wheel" "0.38.1"
 checkPythonPackageVersion "urllib3" "2.5.0"
+checkPythonPackageVersion "python-dotenv" "1.2.2"
 
 checkCondaPackageVersion "cryptography" "46.0.6"
 checkCondaPackageVersion "setuptools" "65.5.1"
@@ -31,10 +32,13 @@ checkCondaPackageVersion "urllib3" "2.5.0"
 checkCondaPackageVersion "idna" "3.7"
 checkCondaPackageVersion "tqdm" "4.66.4"
 checkCondaPackageVersion "certifi" "2024.7.4"
+checkCondaPackageVersion "python-dotenv" "1.2.2"
 
 check "conda-update-conda" bash -c "conda update -y conda"
-check "conda-install-tensorflow" bash -c "conda create --name test-env -c conda-forge --yes tensorflow"
-check "conda-install-pytorch" bash -c "conda create --name test-env -c conda-forge --yes pytorch"
+check "conda-install-tensorflow" bash -c "conda create --name test-tensorflow -c conda-forge --yes tensorflow"
+# Clear repodata cache between heavy conda-forge solves to avoid "sqlite3 database is locked".
+check "conda-clean-index-cache" bash -c "conda clean --index-cache --yes"
+check "conda-install-pytorch" bash -c "conda create --name test-pytorch -c conda-forge --yes pytorch"
 
 checkPipWorkingCorrectly
 
