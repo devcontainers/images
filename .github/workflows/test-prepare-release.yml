@@ -1,0 +1,22 @@
+name: Test prepare-release script
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'build/prepare-release.sh'
+      - 'build/test-prepare-release.sh'
+  pull_request:
+    paths:
+      - 'build/prepare-release.sh'
+      - 'build/test-prepare-release.sh'
+
+jobs:
+  test-prepare-release:
+    name: Test prepare-release script
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Run prepare-release tests
+        run: bash build/test-prepare-release.sh
