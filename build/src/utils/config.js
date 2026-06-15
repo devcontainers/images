@@ -214,6 +214,7 @@ function getTagsForVersion(definitionId, version, registry, registryPath, varian
         }
     }
 
+    const seen = new Set();
     return tags.reduce((list, tag) => {
         // One of the tags that needs to be supported is one where there is no version, but there
         // are other attributes. For example, python:3 in addition to python:0.35.0-3. So, a version
@@ -224,7 +225,11 @@ function getTagsForVersion(definitionId, version, registry, registryPath, varian
             .replace(/\$\{?VARIANT\}?/, variant || 'NOVARIANT')
             .replace('-NOVARIANT', '');
         if (baseTag.charAt(baseTag.length - 1) !== ':') {
-            list.push(`${registry}/${registryPath}/${baseTag}`);
+            const fullTag = `${registry}/${registryPath}/${baseTag}`;
+            if (!seen.has(fullTag)) {
+                seen.add(fullTag);
+                list.push(fullTag);
+            }
         }
         return list;
     }, []);
@@ -305,13 +310,23 @@ function getTagList(definitionId, release, versionPartHandling, registry, regist
     // If this variant should also be used for the the latest tag, add it. The "latest" value could be
     // true, false, or a specific variant. "true" assumes the first variant is the latest.
     const definitionLatestProperty = config.definitionBuildSettings[definitionId].latest;
-    return tagList.concat((updateLatest 
+        const allTags = tagList.concat((updateLatest 
         && definitionLatestProperty
         && (!allVariants
             || variant === definitionLatestProperty 
             || (definitionLatestProperty === true && variant === firstVariant)))
         ? getLatestTag(definitionId, registry, registryPath)
         : []);
+    
+    // Deduplicate tags while preserving order
+    const seen = new Set();
+        return allTags.filter((tag) => {
+        if (seen.has(tag)) {
+            return false;
+        }
+        seen.add(tag);
+        return true;
+    });
 }
 
 const getDefinitionObject = (id, variant) => {

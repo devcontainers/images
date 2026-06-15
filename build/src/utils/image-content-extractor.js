@@ -271,12 +271,21 @@ async function getPipPackageInfo(imageTagOrContainerName, packageList, usePipx, 
     console.log('(*) Gathering information about pip packages...');
     const versionLookup = usePipx ? await getPipxVersionLookup(imageTagOrContainerName) : await getPipVersionLookup(imageTagOrContainerName, imageId);
 
-    return packageList.map((package) => {
-        return {
-            name: package,
-            version: versionLookup[package]
-        };
-    });
+    return packageList.reduce((list, package) => {
+        const version = versionLookup[package];
+        // Skip packages that aren't actually installed in the inspected environment.
+        // Emitting an entry without a version produces blank markdown rows and
+        // conflicting/duplicate cgmanifest.json (SBOM) registrations.
+        if (version) {
+            list.push({
+                name: package,
+                version: version
+            });
+        } else {
+            console.log(`(!) Warning: Could not determine version for pip package "${package}" - skipping.`);
+        }
+        return list;
+    }, []);
 }
 
 function getUserName(imageId) {
