@@ -12,6 +12,9 @@ on:
       - 'build/prepare-release.sh'
       - 'build/test-prepare-release.sh'
 
+permissions:
+  contents: read
+
 jobs:
   test-prepare-release:
     name: Test prepare-release script
