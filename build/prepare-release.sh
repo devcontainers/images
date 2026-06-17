@@ -69,9 +69,9 @@ update_readme_version() {
 	# Update full version references (e.g., 1.3.x-variant -> 1.3.3-variant, or 1.3.x` -> 1.3.3`)
 	# The pattern matches major.minor.any_patch followed by - (variant) or ` (backtick)
 	# We match after : (full image reference) or after ` (shortened tag examples)
-	sed -i "s/:${majorMinorEscaped}\.[0-9]*-/:${newVersion}-/g" $readmePath
-	sed -i "s/:${majorMinorEscaped}\.[0-9]*\`/:${newVersion}\`/g" $readmePath
-	sed -i "s/\`${majorMinorEscaped}\.[0-9]*-/\`${newVersion}-/g" $readmePath
+	sed -i "s/:${majorMinorEscaped}\.[0-9]*-/:${newVersion}-/g" "$readmePath"
+	sed -i "s/:${majorMinorEscaped}\.[0-9]*\`/:${newVersion}\`/g" "$readmePath"
+	sed -i "s/\`${majorMinorEscaped}\.[0-9]*-/\`${newVersion}-/g" "$readmePath"
 	
 	echo "Updated README.md version references from ${majorMinor}.x to $newVersion"
 }
