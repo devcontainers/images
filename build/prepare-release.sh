@@ -60,7 +60,7 @@ update_readme_version() {
 	majorMinorEscaped=$(echo "$majorMinor" | sed 's/\./\\./g')
 	
 	# Check if major.minor version pattern exists in README
-	# Match :major.minor.patch followed by either - or ` (backtick) or end of word
+	# Match :major.minor.patch followed by either - (variant) or ` (backtick)
 	if ! grep -qE ":${majorMinorEscaped}\.[0-9]+[-\`]" "$readmePath"; then
 		echo "ERROR: Version pattern ${majorMinor}.x not found in $readmePath"
 		exit 1
