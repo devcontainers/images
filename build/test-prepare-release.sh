@@ -6,8 +6,8 @@
 set -euo pipefail
 
 SCRIPT_SOURCE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-TMPDIR_ROOT=$(mktemp -d)
-trap "rm -rf $TMPDIR_ROOT" EXIT
+TMPDIR_ROOT="$(mktemp -d)"
+trap 'rm -rf "$TMPDIR_ROOT"' EXIT
 
 PASS=0
 FAIL=0
@@ -21,14 +21,14 @@ run_test() {
 
 	local test_dir="$TMPDIR_ROOT/$name"
 	mkdir -p "$test_dir"
-	echo "$readme_content" > "$test_dir/README.md"
+	printf '%s\n' "$readme_content" > "$test_dir/README.md"
 
 	# Source update_readme_version by extracting it from the script
 	(
 		# Define only update_readme_version and its dependencies
 		source <(sed -n '/^update_readme_version()/,/^}/p' "$SCRIPT_SOURCE_DIR/prepare-release.sh")
 		update_readme_version "$test_dir" "$old_version" "$new_version"
-	)
+	) || { echo "FAIL: $name (update_readme_version failed)"; FAIL=$((FAIL + 1)); return; }
 
 	local actual_readme
 	actual_readme=$(cat "$test_dir/README.md")

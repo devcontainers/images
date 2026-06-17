@@ -7,11 +7,12 @@ on:
     paths:
       - 'build/prepare-release.sh'
       - 'build/test-prepare-release.sh'
+      - '.github/workflows/test-prepare-release.yml'
   pull_request:
     paths:
       - 'build/prepare-release.sh'
       - 'build/test-prepare-release.sh'
-
+      - '.github/workflows/test-prepare-release.yml'
 permissions:
   contents: read
 
