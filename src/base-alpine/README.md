@@ -10,7 +10,6 @@
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/base:alpine |
 | *Available image variants* | alpine-3.23, alpine-3.22, alpine-3.21 ([full list](https://mcr.microsoft.com/v2/devcontainers/base/tags/list)) |
-
 | *Published image architecture(s)* | x86-64, aarch64/arm64 |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Alpine Linux |
