@@ -69,6 +69,7 @@ checkPythonPackageVersion "lxml" "6.1.0"
 checkPythonPackageVersion "pyasn1" "0.6.3"
 checkPythonPackageVersion "ujson" "5.12.0"
 checkPythonPackageVersion "pip" "26.1.2"
+checkPythonPackageVersion "twisted" "26.4.0"
 
 checkCondaPackageVersion "pyopenssl" "26.0.0"
 checkCondaPackageVersion "requests" "2.32.4"
