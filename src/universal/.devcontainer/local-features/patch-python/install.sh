@@ -38,3 +38,8 @@ update_package() {
     sudo_if "$PYTHON_PATH -m pip install --upgrade --no-cache-dir $PACKAGE==$VERSION"
     sudo_if "$PYTHON_PATH -m pip show --no-python-version-warning $PACKAGE"
 }
+
+# Python 3.12+ no longer bundles setuptools, so install/pin it for the default interpreter.
+# Use the version-agnostic "current" symlink so this survives future Python version bumps. (https://github.com/advisories/GHSA-5rjg-fvgr-3xxf)
+sudo_if /usr/local/python/current/bin/python -m pip install --upgrade pip
+update_package /usr/local/python/current/bin/python setuptools "78.1.1"
