@@ -320,7 +320,7 @@ function getTagList(definitionId, release, versionPartHandling, registry, regist
     
     // Deduplicate tags while preserving order
     const seen = new Set();
-        return allTags.filter((tag) => {
+    return allTags.filter((tag) => {
         if (seen.has(tag)) {
             return false;
         }
