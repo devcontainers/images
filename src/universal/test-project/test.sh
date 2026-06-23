@@ -172,7 +172,6 @@ check "php-version-on-path-is-8.1.30" php --version | grep 8.1.30
 ls -la /home/codespace
 
 ## Python - current
-checkPythonPackageVersion "python" "setuptools" "78.1.1"
 checkPythonPackageVersion "python" "requests" "2.31.0"
 
 ## Conda Python

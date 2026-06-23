@@ -9,8 +9,7 @@
 | *Categories* | Core, Other |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/base:alpine |
-| *Available image variants* | alpine-3.23, alpine-3.22, alpine-3.21, alpine-3.20 ([full list](https://mcr.microsoft.com/v2/devcontainers/base/tags/list)) |
-
+| *Available image variants* | alpine-3.23, alpine-3.22, alpine-3.21 ([full list](https://mcr.microsoft.com/v2/devcontainers/base/tags/list)) |
 | *Published image architecture(s)* | x86-64, aarch64/arm64 |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Alpine Linux |
@@ -26,16 +25,15 @@ You can also directly reference pre-built versions of `.devcontainer/Dockerfile`
 - `mcr.microsoft.com/devcontainers/base:alpine-3.23`
 - `mcr.microsoft.com/devcontainers/base:alpine-3.22`
 - `mcr.microsoft.com/devcontainers/base:alpine-3.21`
-- `mcr.microsoft.com/devcontainers/base:alpine-3.20`
 
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/devcontainers/base:3-alpine`
-- `mcr.microsoft.com/devcontainers/base:3.0-alpine`
-- `mcr.microsoft.com/devcontainers/base:3.0.7-alpine`
+- `mcr.microsoft.com/devcontainers/base:4-alpine`
+- `mcr.microsoft.com/devcontainers/base:4.0-alpine`
+- `mcr.microsoft.com/devcontainers/base:4.0.0-alpine`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/base/tags/list).
 
