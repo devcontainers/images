@@ -29,19 +29,41 @@ VARIANTS=$(jq -r '.variants[]?' "$MANIFEST_FILE" 2>/dev/null || true)
 # Track validation results
 INVALID_TAGS=()
 VALID_TAGS=()
+UNVERIFIED_TAGS=()
 
-# Function to check if a Docker image tag exists
+# Function to check if a Docker image tag exists upstream.
+# Returns: 0 = exists, 1 = genuinely missing, 2 = could not verify (transient/rate-limit)
 check_image_exists() {
     local image_tag="$1"
+    local max_attempts=3
+    local attempt=1
+    local output
+
     echo "  Checking: $image_tag"
-    
-    if docker manifest inspect "$image_tag" > /dev/null 2>&1; then
-        echo "    ✓ Valid"
-        return 0
-    else
-        echo "    ✗ Invalid - tag does not exist"
-        return 1
-    fi
+
+    while (( attempt <= max_attempts )); do
+        if output=$(docker manifest inspect "$image_tag" 2>&1); then
+            echo "    ✓ Valid"
+            return 0
+        fi
+
+        # Only a genuinely missing tag reports "manifest unknown"/"not found".
+        # Anything else (HTTP 429 rate limiting, DNS, TLS, 5xx) is transient and
+        # must not be misreported as "tag does not exist".
+        if echo "$output" | grep -qiE 'manifest unknown|manifest for .* not found|no such manifest'; then
+            echo "    ✗ Invalid - tag does not exist"
+            return 1
+        fi
+
+        echo "    ! Transient error (attempt ${attempt}/${max_attempts}): $(printf '%s' "$output" | tr '\n' ' ' | cut -c1-200)"
+        attempt=$(( attempt + 1 ))
+        if (( attempt <= max_attempts )); then
+            sleep $(( (attempt - 1) * 5 ))
+        fi
+    done
+
+    echo "    ! Could not verify tag after ${max_attempts} attempts (likely Docker Hub rate limiting); not treating as missing"
+    return 2
 }
 
 # Check if this image has variants
@@ -75,7 +97,11 @@ if [[ -n "$VARIANTS" ]]; then
         if check_image_exists "$image_tag"; then
             VALID_TAGS+=("$variant")
         else
-            INVALID_TAGS+=("$variant")
+            if [[ $? -eq 1 ]]; then
+                INVALID_TAGS+=("$variant")
+            else
+                UNVERIFIED_TAGS+=("$variant")
+            fi
         fi
     done
 else
@@ -83,7 +109,11 @@ else
     if check_image_exists "$BASE_IMAGE"; then
         VALID_TAGS+=("base")
     else
-        INVALID_TAGS+=("base")
+        if [[ $? -eq 1 ]]; then
+            INVALID_TAGS+=("base")
+        else
+            UNVERIFIED_TAGS+=("base")
+        fi
     fi
 fi
 
@@ -115,6 +145,22 @@ if [[ ${#INVALID_TAGS[@]} -gt 0 ]]; then
     echo "ERROR: Found ${#INVALID_TAGS[@]} invalid base image tags!"
     echo "Please verify these tags exist upstream before proceeding."
     exit 1
+fi
+
+if [[ ${#UNVERIFIED_TAGS[@]} -gt 0 ]]; then
+    echo ""
+    echo "WARNING: Could not verify $(if [[ -n "$VARIANTS" ]]; then echo "variants"; else echo "base images"; fi) (${#UNVERIFIED_TAGS[@]}) due to transient errors (e.g. Docker Hub rate limiting):"
+    for tag in "${UNVERIFIED_TAGS[@]}"; do
+        if [[ "$tag" == "base" ]]; then
+            echo "  ! $BASE_IMAGE"
+        else
+            echo "  ! $tag"
+        fi
+    done
+    echo "These were not treated as missing; the build will continue."
+    echo ""
+    echo "✓ No invalid tags found (${#UNVERIFIED_TAGS[@]} could not be verified and were skipped)."
+    exit 0
 fi
 
 echo ""
