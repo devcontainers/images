@@ -1,8 +1,9 @@
 {
-	"version": "2.1.9",
+	"version": "3.0.0",
 	"variants": [
 		"trixie",
 		"bookworm",
+		"resolute",
 		"noble",
 		"jammy"
 	],
@@ -11,6 +12,7 @@
 		"parent": {
 			"trixie": "base-debian",
 			"bookworm": "base-debian",
+			"resolute": "base-ubuntu",
 			"noble": "base-ubuntu",
 			"jammy": "base-ubuntu"
 		},
@@ -21,6 +23,10 @@
 				"linux/arm64"
 			],
 			"bookworm": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"resolute": [
 				"linux/amd64",
 				"linux/arm64"
 			],
@@ -45,9 +51,12 @@
 			"bookworm": [
 				"cpp:${VERSION}-debian12"
 			],
-			"noble": [
-				"cpp:${VERSION}-ubuntu24.04",
+			"resolute": [
+				"cpp:${VERSION}-ubuntu26.04",
 				"cpp:${VERSION}-ubuntu"
+			],
+			"noble": [
+				"cpp:${VERSION}-ubuntu24.04"
 			],
 			"jammy": [
 				"cpp:${VERSION}-ubuntu22.04"
