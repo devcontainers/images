@@ -310,14 +310,14 @@ function getTagList(definitionId, release, versionPartHandling, registry, regist
     // If this variant should also be used for the the latest tag, add it. The "latest" value could be
     // true, false, or a specific variant. "true" assumes the first variant is the latest.
     const definitionLatestProperty = config.definitionBuildSettings[definitionId].latest;
-        const allTags = tagList.concat((updateLatest 
+    const allTags = tagList.concat((updateLatest
         && definitionLatestProperty
         && (!allVariants
-            || variant === definitionLatestProperty 
+            || variant === definitionLatestProperty
             || (definitionLatestProperty === true && variant === firstVariant)))
         ? getLatestTag(definitionId, registry, registryPath)
         : []);
-    
+
     // Deduplicate tags while preserving order
     const seen = new Set();
     return allTags.filter((tag) => {
