@@ -58,7 +58,7 @@ check_image_exists() {
         echo "    ! Transient error (attempt ${attempt}/${max_attempts}): $(printf '%s' "$output" | tr '\n' ' ' | cut -c1-200)"
         attempt=$(( attempt + 1 ))
         if (( attempt <= max_attempts )); then
-            sleep $(( (attempt - 1) * 5 ))
+            sleep $(( (attempt - 1) * 10 ))
         fi
     done
 
