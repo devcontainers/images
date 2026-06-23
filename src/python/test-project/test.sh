@@ -47,9 +47,9 @@ check-version-ge "svn-requirement" "${svn_version}" "1.14.5"
 setuptools_version=$(python -c "import setuptools; print(setuptools.__version__)")
 check-version-ge "setuptools-requirement" "${setuptools_version}" "78.1.1"
 
-# https://github.com/advisories/GHSA-rpm5-65cw-6hj4
+https://github.com/advisories/GHSA-v87r-6q3f-2j67
 gitpython_version=$(python -c "import git; print(git.__version__)")
-check-version-ge "gitpython-requirement" "${gitpython_version}" "3.1.47"
+check-version-ge "gitpython-requirement" "${gitpython_version}" "3.1.50"
 
 # GHSA-58pv-8j8x-9vj2: jaraco.context
 jaraco_context_version=$(python -c "from importlib.metadata import version; print(version('jaraco.context'))")
