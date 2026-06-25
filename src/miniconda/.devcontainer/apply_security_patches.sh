@@ -1,6 +1,9 @@
 #!/bin/bash
 
-# vulnerablities 
+# Upgrading pip to fix the vulnerability (GHSA-jp4c-xjxw-mgf9)
+python3 -m pip install --upgrade --no-cache-dir "pip==26.1.2" || exit $?
+
+# vulnerabilities
 # cryptography - [GHSA-m959-cc7f-wv43]
 
 # define array of packages for pinning to the patched versions
