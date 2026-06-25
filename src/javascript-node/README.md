@@ -10,7 +10,7 @@
 | *Image type* | Dockerfile |
 | *Published image* | mcr.microsoft.com/devcontainers/javascript-node |
 | *Available image variants* | 26 / 26-trixie, 24 / 24-trixie, 22 / 22-trixie, 26-bookworm, 24-bookworm, 22-bookworm, 24-bullseye, 22-bullseye, ([full list](https://mcr.microsoft.com/v2/devcontainers/javascript-node/tags/list)) |
-| *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm`, and `bullseye` variants |
+| *Published image architecture(s)* | x86-64, arm64/aarch64 for `trixie`, `bookworm`, and `bullseye` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
 | *Languages, platforms* | Node.js, JavaScript |
