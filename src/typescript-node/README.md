@@ -31,7 +31,7 @@ You can decide how often you want updates by referencing a [semantic version](ht
 - `mcr.microsoft.com/devcontainers/typescript-node:5.0-24` (or `5.0-24-trixie`,  `5.0-24-bookworm`, `5.0-24-bullseye`)
 - `mcr.microsoft.com/devcontainers/typescript-node:5.0.0-24` (or `5.0.0-24-trixie`, `5.0.0-24-bookworm`, `5.0.0-24-bullseye`)
 
-However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `3-24`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
+However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `5-24`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
 Beyond TypeScript, Node.js, and `git`, this image / `Dockerfile` includes `eslint`, `zsh`, [Oh My Zsh!](https://ohmyz.sh/), a non-root `node` user with `sudo` access, and a set of common dependencies for development. Since `tslint` is [now fully deprecated](https://github.com/palantir/tslint/issues/4534), the image includes `tslint-to-eslint-config` globally to help you migrate.
 
