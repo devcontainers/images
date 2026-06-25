@@ -1,8 +1,10 @@
 {
 	"version": "5.0.0",
 	"variants": [
+		"26-trixie",
 		"24-trixie",
 		"22-trixie",
+		"26-bookworm",
 		"24-bookworm",
 		"22-bookworm",
 		"24-bullseye",
@@ -12,11 +14,19 @@
 		"latest": "24-trixie",
 		"rootDistro": "debian",
 		"architectures": {
+			"26-trixie": [
+				"linux/amd64",
+				"linux/arm64"
+			],
 			"24-trixie": [
 				"linux/amd64",
 				"linux/arm64"
 			],
 			"22-trixie": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"26-bookworm": [
 				"linux/amd64",
 				"linux/arm64"
 			],
@@ -41,6 +51,9 @@
 			"javascript-node:${VERSION}-${VARIANT}"
 		],
 		"variantTags": {
+			"26-trixie": [
+				"javascript-node:${VERSION}-26"
+			],
 			"24-trixie": [
 				"javascript-node:${VERSION}-24",
 				"javascript-node:${VERSION}-trixie"

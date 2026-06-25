@@ -9,7 +9,7 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published image* | mcr.microsoft.com/devcontainers/javascript-node |
-| *Available image variants* | 24 / 24-trixie, 22 / 22-trixie, 24-bookworm, 22-bookworm, 24-bullseye, 22-bullseye, ([full list](https://mcr.microsoft.com/v2/devcontainers/javascript-node/tags/list)) |
+| *Available image variants* | 26 / 26-trixie, 24 / 24-trixie, 22 / 22-trixie, 26-bookworm, 24-bookworm, 22-bookworm, 24-bullseye, 22-bullseye, ([full list](https://mcr.microsoft.com/v2/devcontainers/javascript-node/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm`, and `bullseye` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
@@ -20,6 +20,7 @@
 You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
 - `mcr.microsoft.com/devcontainers/javascript-node` (latest)
+- `mcr.microsoft.com/devcontainers/javascript-node:26` (or `26-trixie`, `26-bookworm` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/javascript-node:24` (or `24-trixie`, `24-bookworm`, `24-bullseye` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/javascript-node:22` (or `22-trixie`, `22-bookworm`, `22-bullseye` to pin to an OS version)
 
