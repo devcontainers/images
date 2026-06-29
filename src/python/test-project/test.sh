@@ -58,7 +58,7 @@ check-version-ge "wheel-requirement" "${wheel_version}" "0.46.2"
 # Ensure no vulnerable copies are bundled anywhere on the filesystem. These can be
 # vendored inside setuptools/_vendor or other virtual envs (e.g. pipenv), which the
 # importlib.metadata top-level lookup above does not catch.
-checkNoVulnerablePackage "no-vulnerable-jaraco-context" "jaraco_context" "6.1.0"
+checkNoVulnerablePackage "no-vulnerable-jaraco-context" "jaraco[._]context" "6.1.0"
 checkNoVulnerablePackage "no-vulnerable-wheel" "wheel" "0.46.2"
 
 # Report result
