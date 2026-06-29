@@ -56,7 +56,7 @@ checkNoVulnerablePackage() {
     while IFS= read -r dist_info; do
         local name version greater
         name="$(basename "${dist_info}")"
-        version="${name#${PACKAGE_PREFIX}-}"
+        version="${name##*-}"
         version="${version%.dist-info}"
         greater="$( (echo "${version}"; echo "${REQUIRED_VERSION}") | sort -V | tail -1 )"
         if [ "${version}" != "${greater}" ]; then
