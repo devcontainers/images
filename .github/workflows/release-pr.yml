@@ -15,6 +15,7 @@ permissions:
 jobs:
   update_manifest_files:
     runs-on: ubuntu-latest
+    environment: publishing
     env:
       target_branch: rel/${{github.event.inputs.version}}
       version: ${{github.event.inputs.version}}
@@ -30,7 +31,7 @@ jobs:
         run: ./build/prepare-release.sh
       - name: Push manifest updates
         env:
-          GITHUB_TOKEN: ${{ secrets.PAT }}
+          GITHUB_TOKEN: ${{ secrets.RELEASE_AUTOMATION_PAT }}
         run: |
           git config --global user.email github-actions@github.com
           git config --global user.name github-actions
@@ -40,7 +41,7 @@ jobs:
           git push origin $target_branch
       - name: Create pull request
         env:
-          GITHUB_TOKEN: ${{ secrets.PAT }}
+          GITHUB_TOKEN: ${{ secrets.RELEASE_AUTOMATION_PAT }}
         run: |
           gh api \
                 --method POST \

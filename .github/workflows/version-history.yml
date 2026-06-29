@@ -88,7 +88,7 @@ jobs:
     - name: Create PR with updated image information
       id: push_image_info
       env:
-        GITHUB_TOKEN: ${{ secrets.PAT }}
+        GITHUB_TOKEN: ${{ secrets.RELEASE_AUTOMATION_PAT }}
       run: |
         set -e
 

@@ -23,16 +23,12 @@ jobs:
       uses: actions/checkout@v6
 
     - name: Smoke test java
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       id: smoke_test_java
       uses: ./.github/actions/smoke-test
       with:
         image: java
 
     - name: Smoke test java-8
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       id: smoke_test_java_8
       uses: ./.github/actions/smoke-test
       with:
