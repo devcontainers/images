@@ -63,7 +63,8 @@ checkNoVulnerablePackage() {
             echoStderr "Found vulnerable ${PACKAGE_PREFIX} ${version} at: ${dist_info}"
             found_vulnerable=1
         fi
-    done < <(find / -type d -name "${PACKAGE_PREFIX}-*.dist-info" 2>/dev/null)
+    done < <(find / -xdev \( -path /proc -o -path /sys -o -path /dev -o -path /run \) -prune -o \
+    -type d -name "${PACKAGE_PREFIX}-*.dist-info" -print 2>/dev/null)
     if [ ${found_vulnerable} -eq 0 ]; then
         echo "✅  Passed!"
         return 0
