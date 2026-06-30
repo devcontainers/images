@@ -36,8 +36,7 @@
             },
             // Add the IDs of extensions you want installed when the container is created.
             "extensions": [
-                "xdebug.php-debug",
-                "bmewburn.vscode-intelephense-client",
+                "devsense.phptools-vscode",
                 "mrmlnc.vscode-apache"
             ]
         }
