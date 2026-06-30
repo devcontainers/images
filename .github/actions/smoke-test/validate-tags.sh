@@ -51,7 +51,7 @@ check_image_exists() {
         echo "    ! Attempt ${attempt}/${max_attempts} could not verify tag"
         attempt=$(( attempt + 1 ))
         if (( attempt <= max_attempts )); then
-            sleep 10
+            sleep $(( (attempt - 1) * 10 ))
         fi
     done
 
