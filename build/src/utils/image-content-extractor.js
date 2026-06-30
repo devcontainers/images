@@ -271,12 +271,34 @@ async function getPipPackageInfo(imageTagOrContainerName, packageList, usePipx, 
     console.log('(*) Gathering information about pip packages...');
     const versionLookup = usePipx ? await getPipxVersionLookup(imageTagOrContainerName) : await getPipVersionLookup(imageTagOrContainerName, imageId);
 
-    return packageList.map((package) => {
-        return {
-            name: package,
-            version: versionLookup[package]
-        };
-    });
+    // Build a fallback lookup keyed by PEP 503 normalized names so packages that
+    // differ only by casing/normalization (e.g. "pyOpenssl" vs "pyOpenSSL") still resolve.
+    const normalizedVersionLookup = Object.keys(versionLookup).reduce((prev, name) => {
+        prev[normalizePipPackageName(name)] = versionLookup[name];
+        return prev;
+    }, {});
+
+    return packageList.reduce((list, package) => {
+        const version = versionLookup[package] || normalizedVersionLookup[normalizePipPackageName(package)];
+        // Skip packages that aren't actually installed in the inspected environment.
+        // Emitting an entry without a version produces blank markdown rows and
+        // conflicting/duplicate cgmanifest.json (SBOM) registrations.
+        if (version) {
+            list.push({
+                name: package,
+                version: version
+            });
+        } else {
+            console.log(`(!) Warning: Could not determine version for pip package "${package}" - skipping.`);
+        }
+        return list;
+    }, []);
+}
+
+// Normalize a Python package name per PEP 503 (lowercase, runs of "-_." collapsed to "-")
+// so lookups are tolerant of casing/separator differences between manifests and pip output.
+function normalizePipPackageName(name) {
+    return name.replace(/[-_.]+/g, '-').toLowerCase();
 }
 
 function getUserName(imageId) {
