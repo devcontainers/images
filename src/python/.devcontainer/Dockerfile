@@ -9,10 +9,9 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 # Temporary: Upgrade python packages due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40897 and https://github.com/advisories/GHSA-2mqj-m65w-jghx
 # They are installed by the base image (python) which does not have the patch.
 RUN python3 -m pip install --upgrade \
-    setuptools==78.1.1 \
     gitpython==3.1.50 \
-    jaraco.context==6.1.0 \
-    wheel==0.46.2
+    setuptools==82.0.1 \
+    wheel==0.46.3
 
 # Fixing vulnerability issue by upgrading svn to 1.14.5. Ref https://subversion.apache.org/security/CVE-2024-46901-advisory.txt
 COPY ./scripts/install-subversion.sh /tmp/install-subversion.sh

@@ -1,11 +1,17 @@
 #!/bin/bash
 
-# vulnerablities 
+# Upgrading pip to fix the vulnerability (GHSA-jp4c-xjxw-mgf9)
+python3 -m pip install --upgrade --no-cache-dir "pip==26.1.2" || exit $?
+
+# vulnerabilities
 # cryptography - [GHSA-m959-cc7f-wv43]
+# urllib3 - [GHSA-mf9v-mfxr-j63j]
+# click - [GHSA-47fr-3ffg-hgmw]
+# idna - [GHSA-65pc-fj4g-8rjx]
 
 # define array of packages for pinning to the patched versions
 # patched_package_versions=( "package1=version1" "package2=version2" "package3=version3" )
-patched_package_versions=( "cryptography=46.0.6" "requests=2.32.4" "urllib3=2.5.0" "python-dotenv=1.2.2")
+patched_package_versions=( "cryptography=46.0.6" "requests=2.32.4" "urllib3=2.7.0" "python-dotenv=1.2.2" "click=8.4.1" "idna=3.15")
 
 # Define the number of rows (based on the length of patched_package_versions)
 rows=${#patched_package_versions[@]}
