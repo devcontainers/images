@@ -31,17 +31,44 @@ INVALID_TAGS=()
 VALID_TAGS=()
 
 # Function to check if a Docker image tag exists
+# The registry query is retried several times so a transient Docker Hub problem
+# (e.g. rate limiting) is not mistaken for a missing tag. It is only reported as
+# invalid after every attempt has failed.
 check_image_exists() {
     local image_tag="$1"
+    local max_attempts=3
+    local attempt=1
+    local output=""
+
     echo "  Checking: $image_tag"
-    
-    if docker manifest inspect "$image_tag" > /dev/null 2>&1; then
-        echo "    ✓ Valid"
-        return 0
+
+    while (( attempt <= max_attempts )); do
+        if output=$(docker manifest inspect "$image_tag" 2>&1); then
+            echo "    ✓ Valid"
+            return 0
+        fi
+
+        echo "    ! Attempt ${attempt}/${max_attempts} could not verify tag"
+        attempt=$(( attempt + 1 ))
+        if (( attempt <= max_attempts )); then
+            sleep $(( (attempt - 1) * 10 ))
+        fi
+    done
+
+    # All retries failed. Docker Hub rate limiting is the only failure with an
+    # unambiguous signature (HTTP 429), so we flag that case specifically. For
+    # anything we cannot be certain about, we keep the original default message.
+    if echo "$output" | grep -qiE 'toomanyrequests|rate limit|429'; then
+        echo "    ✗ Invalid - Docker Hub rate limiting (HTTP 429)"
     else
         echo "    ✗ Invalid - tag does not exist"
-        return 1
     fi
+
+    if [[ -n "$output" ]]; then
+        echo "    Registry response: ${output}"
+    fi
+
+    return 1
 }
 
 # Check if this image has variants
