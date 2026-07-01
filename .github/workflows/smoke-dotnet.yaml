@@ -23,8 +23,6 @@ jobs:
 
     - name: Smoke test
       id: smoke_test
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       uses: ./.github/actions/smoke-test
       with:
         image: dotnet
