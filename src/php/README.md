@@ -33,7 +33,7 @@ You can decide how often you want updates by referencing a [semantic version](ht
 
 - `mcr.microsoft.com/devcontainers/php:4-8` (or `4-8-trixie`, `4-8-bookworm` )
 - `mcr.microsoft.com/devcontainers/php:4.0-8` (or `4.0-8-trixie`, `4.0-8-bookworm` )
-- `mcr.microsoft.com/devcontainers/php:4.0.0-8` (or `4.0.0-8-trixie`, `4.0.0-8-bookworm` )
+- `mcr.microsoft.com/devcontainers/php:4.0.1-8` (or `4.0.1-8-trixie`, `4.0.1-8-bookworm` )
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `4-8`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
