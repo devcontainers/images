@@ -29,7 +29,7 @@ You can decide how often you want updates by referencing a [semantic version](ht
 
 - `mcr.microsoft.com/devcontainers/typescript-node:5-24` (or `5-24-trixie`, `5-24-bookworm`, `5-24-bullseye`)
 - `mcr.microsoft.com/devcontainers/typescript-node:5.0-24` (or `5.0-24-trixie`,  `5.0-24-bookworm`, `5.0-24-bullseye`)
-- `mcr.microsoft.com/devcontainers/typescript-node:5.0.1-24` (or `5.0.1-24-trixie`, `5.0.1-24-bookworm`, `5.0.1-24-bullseye`)
+- `mcr.microsoft.com/devcontainers/typescript-node:5.0.2-24` (or `5.0.2-24-trixie`, `5.0.2-24-bookworm`, `5.0.2-24-bullseye`)
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `5-24`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
