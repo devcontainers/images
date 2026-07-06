@@ -6,6 +6,8 @@ source test-utils.sh vscode
 # Run common tests
 checkCommon
 
+check "lang-utf8" test "${LANG}" = "C.UTF-8"
+
 check "git" git --version
 check "git-location" sh -c "which git | grep /usr/local/bin/git"
 
