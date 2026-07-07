@@ -1,0 +1,41 @@
+name: Create dummy PR for base-alpine
+
+on:
+  workflow_dispatch:
+  pull_request:
+    types: [opened]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  create_dummy_pr:
+    runs-on: ubuntu-latest
+    env:
+      target_branch: dummy/base-alpine-${{ github.run_id }}
+    steps:
+      - uses: actions/checkout@v6
+      - name: Create dummy change and push branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.email github-actions@github.com
+          git config --global user.name github-actions
+          git checkout -b "$target_branch"
+          echo "Dummy change $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> src/base-alpine/README.md
+          git add -A
+          git commit -m "Dummy change for base-alpine"
+          git push origin "$target_branch"
+      - name: Create pull request
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api \
+                --method POST \
+                -H "Accept: application/vnd.github+json" \
+                /repos/${GITHUB_REPOSITORY}/pulls \
+                -f title="[Dummy PR] base-alpine" \
+                -f body="Automated dummy PR for base-alpine." \
+                -f head="$target_branch" \
+                -f base='main'
