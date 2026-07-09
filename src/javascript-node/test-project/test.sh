@@ -11,6 +11,7 @@ checkCommon
 
 # Image specific tests
 check "node" node --version
+check "lang-utf8" test "${LANG}" = "C.UTF-8"
 npm_version=$(npm --version)
 check-version-ge "npm-requirement" "${npm_version}" "9.8.1"
 sudo rm -f yarn.lock

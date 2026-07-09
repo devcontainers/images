@@ -50,8 +50,8 @@ You can use the [Java Feature](https://github.com/devcontainers/features/tree/ma
   "features": {
      "ghcr.io/devcontainers/features/java:1": {
         "version": "none",
-        "installGradle": "true",
-        "installMaven": "true"
+        "installGradle": true,
+        "installMaven": true
     }
   }
 }
