@@ -88,6 +88,8 @@ checkCondaPackageVersion "markdown" "3.8.1"
 checkCondaPackageVersion "python-dotenv" "1.2.2"
 checkCondaPackageVersion "pyasn1" "0.6.3"
 checkCondaPackageVersion "ujson" "5.12.1"
+checkCondaPackageVersion "click" "8.4.2"
+checkCondaPackageVersion "idna" "3.18"
 
 check "conda-update-conda" bash -c "conda update -y conda"
 check "conda-install-tensorflow" bash -c "conda create --name test-env -c conda-forge --yes tensorflow"
