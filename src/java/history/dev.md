@@ -16,7 +16,7 @@
 
 ## Variant: 25-trixie
 
-**Digest:** sha256:aee0c3dc6426bf77c61f78a9686127a7fa3385f3eec84ccfbbea9d1be4b7cb0b
+**Digest:** sha256:9e575599cf7134aae54930894effc0c9f89ed63687ab77831ae41f90edf23cba
 
 **Tags:**
 ```
@@ -38,20 +38,20 @@ mcr.microsoft.com/devcontainers/java:dev-trixie
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 25.0.2 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 25.0.4 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d26b91b3fe2030f1fcf9812025e4db5fd114ed29 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.54.0 | 
+| [git](https://github.com/git/git) | 2.55.0 | 
 
 **Additional linux tools and packages**
 
@@ -60,44 +60,44 @@ mcr.microsoft.com/devcontainers/java:dev-trixie
 | apt-transport-https | 3.0.3 |
 | apt-utils | 3.0.3 |
 | ca-certificates | 20250419 |
-| curl | 8.14.1-2+deb13u2 |
+| curl | 8.14.1-2+deb13u4 |
 | dialog | 1.3-20250116-1 |
 | git | 1:2.47.3-0+deb13u1 |
 | gnupg2 | 2.4.7-21+deb13u1 |
 | htop | 3.4.1-5 |
 | iproute2 | 6.15.0-1 |
-| jq | 1.7.1-6+deb13u1 |
+| jq | 1.7.1-6+deb13u2 |
 | less | 668-1 |
-| libc6 | 2.41-12+deb13u2 |
-| libgssapi-krb5-2 | 1.21.3-5 |
+| libc6 | 2.41-12+deb13u3 |
+| libgssapi-krb5-2 | 1.21.3-5+deb13u1 |
 | libicu76 | 76.1-4 |
-| libkrb5-3 | 1.21.3-5 |
+| libkrb5-3 | 1.21.3-5+deb13u1 |
 | libstdc++6 | 14.2.0-19 |
-| locales | 2.41-12+deb13u2 |
+| locales | 2.41-12+deb13u3 |
 | lsb-release | 12.1-1 |
 | lsof | 4.99.4+dfsg-2 |
 | man-db | 2.13.1-1 |
 | manpages | 6.9.1-1 |
 | manpages-dev | 6.9.1-1 |
-| nano | 8.4-1 |
+| nano | 8.4-1+deb13u1 |
 | ncdu | 1.22-1 |
 | net-tools | 2.10-1.3 |
-| openssh-client | 1:10.0p1-7+deb13u2 |
+| openssh-client | 1:10.0p1-7+deb13u4 |
 | procps | 2:4.0.4-9 |
 | psmisc | 23.7-2 |
-| rsync | 3.4.1+ds1-5+deb13u1 |
+| rsync | 3.4.1+ds1-5+deb13u4 |
 | strace | 6.13+ds-1 |
-| sudo | 1.9.16p2-3+deb13u1 |
+| sudo | 1.9.16p2-3+deb13u2 |
 | unzip | 6.0-29 |
 | vim-tiny | 2:9.1.1230-2 |
 | wget | 1.25.0-2 |
 | zip | 3.0-15 |
 | zlib1g | 1:1.3.dfsg+really1.3.1-1+b1 |
-| zsh | 5.9-8+b21 |
+| zsh | 5.9-8+b23 |
 
 ## Variant: 21-trixie
 
-**Digest:** sha256:7356e22fff61de9ecc969430f52c5357891a16cdd0235328e36d0e2585ba8c9f
+**Digest:** sha256:ef2c48582a0bd7b282ebc71bedb7209865ea7137c639ed7ac1168a3ae4c22360
 
 **Tags:**
 ```
@@ -118,20 +118,20 @@ mcr.microsoft.com/devcontainers/java:dev-21-jdk-trixie
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 21.0.10 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 21.0.12 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d26b91b3fe2030f1fcf9812025e4db5fd114ed29 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.54.0 | 
+| [git](https://github.com/git/git) | 2.55.0 | 
 
 **Additional linux tools and packages**
 
@@ -140,44 +140,44 @@ mcr.microsoft.com/devcontainers/java:dev-21-jdk-trixie
 | apt-transport-https | 3.0.3 |
 | apt-utils | 3.0.3 |
 | ca-certificates | 20250419 |
-| curl | 8.14.1-2+deb13u2 |
+| curl | 8.14.1-2+deb13u4 |
 | dialog | 1.3-20250116-1 |
 | git | 1:2.47.3-0+deb13u1 |
 | gnupg2 | 2.4.7-21+deb13u1 |
 | htop | 3.4.1-5 |
 | iproute2 | 6.15.0-1 |
-| jq | 1.7.1-6+deb13u1 |
+| jq | 1.7.1-6+deb13u2 |
 | less | 668-1 |
-| libc6 | 2.41-12+deb13u2 |
-| libgssapi-krb5-2 | 1.21.3-5 |
+| libc6 | 2.41-12+deb13u3 |
+| libgssapi-krb5-2 | 1.21.3-5+deb13u1 |
 | libicu76 | 76.1-4 |
-| libkrb5-3 | 1.21.3-5 |
+| libkrb5-3 | 1.21.3-5+deb13u1 |
 | libstdc++6 | 14.2.0-19 |
-| locales | 2.41-12+deb13u2 |
+| locales | 2.41-12+deb13u3 |
 | lsb-release | 12.1-1 |
 | lsof | 4.99.4+dfsg-2 |
 | man-db | 2.13.1-1 |
 | manpages | 6.9.1-1 |
 | manpages-dev | 6.9.1-1 |
-| nano | 8.4-1 |
+| nano | 8.4-1+deb13u1 |
 | ncdu | 1.22-1 |
 | net-tools | 2.10-1.3 |
-| openssh-client | 1:10.0p1-7+deb13u2 |
+| openssh-client | 1:10.0p1-7+deb13u4 |
 | procps | 2:4.0.4-9 |
 | psmisc | 23.7-2 |
-| rsync | 3.4.1+ds1-5+deb13u1 |
+| rsync | 3.4.1+ds1-5+deb13u4 |
 | strace | 6.13+ds-1 |
-| sudo | 1.9.16p2-3+deb13u1 |
+| sudo | 1.9.16p2-3+deb13u2 |
 | unzip | 6.0-29 |
 | vim-tiny | 2:9.1.1230-2 |
 | wget | 1.25.0-2 |
 | zip | 3.0-15 |
 | zlib1g | 1:1.3.dfsg+really1.3.1-1+b1 |
-| zsh | 5.9-8+b21 |
+| zsh | 5.9-8+b23 |
 
 ## Variant: 17-trixie
 
-**Digest:** sha256:0bb3fb7835025728c107b208ba2c85c3ef1656736a66752d514f755328dabc4d
+**Digest:** sha256:d3d74b7e9e29aa1aa2b9f5b37d396daeaddb3a8848c3c75200e3c6506982f480
 
 **Tags:**
 ```
@@ -198,20 +198,20 @@ mcr.microsoft.com/devcontainers/java:dev-17-jdk-trixie
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 17.0.18 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 17.0.20 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d26b91b3fe2030f1fcf9812025e4db5fd114ed29 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.54.0 | 
+| [git](https://github.com/git/git) | 2.55.0 | 
 
 **Additional linux tools and packages**
 
@@ -220,44 +220,44 @@ mcr.microsoft.com/devcontainers/java:dev-17-jdk-trixie
 | apt-transport-https | 3.0.3 |
 | apt-utils | 3.0.3 |
 | ca-certificates | 20250419 |
-| curl | 8.14.1-2+deb13u2 |
+| curl | 8.14.1-2+deb13u4 |
 | dialog | 1.3-20250116-1 |
 | git | 1:2.47.3-0+deb13u1 |
 | gnupg2 | 2.4.7-21+deb13u1 |
 | htop | 3.4.1-5 |
 | iproute2 | 6.15.0-1 |
-| jq | 1.7.1-6+deb13u1 |
+| jq | 1.7.1-6+deb13u2 |
 | less | 668-1 |
-| libc6 | 2.41-12+deb13u2 |
-| libgssapi-krb5-2 | 1.21.3-5 |
+| libc6 | 2.41-12+deb13u3 |
+| libgssapi-krb5-2 | 1.21.3-5+deb13u1 |
 | libicu76 | 76.1-4 |
-| libkrb5-3 | 1.21.3-5 |
+| libkrb5-3 | 1.21.3-5+deb13u1 |
 | libstdc++6 | 14.2.0-19 |
-| locales | 2.41-12+deb13u2 |
+| locales | 2.41-12+deb13u3 |
 | lsb-release | 12.1-1 |
 | lsof | 4.99.4+dfsg-2 |
 | man-db | 2.13.1-1 |
 | manpages | 6.9.1-1 |
 | manpages-dev | 6.9.1-1 |
-| nano | 8.4-1 |
+| nano | 8.4-1+deb13u1 |
 | ncdu | 1.22-1 |
 | net-tools | 2.10-1.3 |
-| openssh-client | 1:10.0p1-7+deb13u2 |
+| openssh-client | 1:10.0p1-7+deb13u4 |
 | procps | 2:4.0.4-9 |
 | psmisc | 23.7-2 |
-| rsync | 3.4.1+ds1-5+deb13u1 |
+| rsync | 3.4.1+ds1-5+deb13u4 |
 | strace | 6.13+ds-1 |
-| sudo | 1.9.16p2-3+deb13u1 |
+| sudo | 1.9.16p2-3+deb13u2 |
 | unzip | 6.0-29 |
 | vim-tiny | 2:9.1.1230-2 |
 | wget | 1.25.0-2 |
 | zip | 3.0-15 |
 | zlib1g | 1:1.3.dfsg+really1.3.1-1+b1 |
-| zsh | 5.9-8+b21 |
+| zsh | 5.9-8+b23 |
 
 ## Variant: 11-trixie
 
-**Digest:** sha256:890ac10d51b01cada7c5945cb68be8965b4b05e2a0f9307adb4ba02792f2761a
+**Digest:** sha256:d40030d6156ac103f6f8b7b6fe4abe0de7752ed21d50ecca6471156bf013f017
 
 **Tags:**
 ```
@@ -278,20 +278,20 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-trixie
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 11.0.30 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 11.0.32 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d26b91b3fe2030f1fcf9812025e4db5fd114ed29 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.54.0 | 
+| [git](https://github.com/git/git) | 2.55.0 | 
 
 **Additional linux tools and packages**
 
@@ -300,44 +300,44 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-trixie
 | apt-transport-https | 3.0.3 |
 | apt-utils | 3.0.3 |
 | ca-certificates | 20250419 |
-| curl | 8.14.1-2+deb13u2 |
+| curl | 8.14.1-2+deb13u4 |
 | dialog | 1.3-20250116-1 |
 | git | 1:2.47.3-0+deb13u1 |
 | gnupg2 | 2.4.7-21+deb13u1 |
 | htop | 3.4.1-5 |
 | iproute2 | 6.15.0-1 |
-| jq | 1.7.1-6+deb13u1 |
+| jq | 1.7.1-6+deb13u2 |
 | less | 668-1 |
-| libc6 | 2.41-12+deb13u2 |
-| libgssapi-krb5-2 | 1.21.3-5 |
+| libc6 | 2.41-12+deb13u3 |
+| libgssapi-krb5-2 | 1.21.3-5+deb13u1 |
 | libicu76 | 76.1-4 |
-| libkrb5-3 | 1.21.3-5 |
+| libkrb5-3 | 1.21.3-5+deb13u1 |
 | libstdc++6 | 14.2.0-19 |
-| locales | 2.41-12+deb13u2 |
+| locales | 2.41-12+deb13u3 |
 | lsb-release | 12.1-1 |
 | lsof | 4.99.4+dfsg-2 |
 | man-db | 2.13.1-1 |
 | manpages | 6.9.1-1 |
 | manpages-dev | 6.9.1-1 |
-| nano | 8.4-1 |
+| nano | 8.4-1+deb13u1 |
 | ncdu | 1.22-1 |
 | net-tools | 2.10-1.3 |
-| openssh-client | 1:10.0p1-7+deb13u2 |
+| openssh-client | 1:10.0p1-7+deb13u4 |
 | procps | 2:4.0.4-9 |
 | psmisc | 23.7-2 |
-| rsync | 3.4.1+ds1-5+deb13u1 |
+| rsync | 3.4.1+ds1-5+deb13u4 |
 | strace | 6.13+ds-1 |
-| sudo | 1.9.16p2-3+deb13u1 |
+| sudo | 1.9.16p2-3+deb13u2 |
 | unzip | 6.0-29 |
 | vim-tiny | 2:9.1.1230-2 |
 | wget | 1.25.0-2 |
 | zip | 3.0-15 |
 | zlib1g | 1:1.3.dfsg+really1.3.1-1+b1 |
-| zsh | 5.9-8+b21 |
+| zsh | 5.9-8+b23 |
 
 ## Variant: 25-bookworm
 
-**Digest:** sha256:41a11f18da1ae3df0bb49ac4f516275ce97c6d2d4a0f591976a6ae8b3d545a48
+**Digest:** sha256:c3923d3e04ab3f4a4cfefa76f05546118a9ec2b0f983dfb2ff3234f580859631
 
 **Tags:**
 ```
@@ -358,20 +358,20 @@ mcr.microsoft.com/devcontainers/java:dev-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 25.0.2 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 25.0.4 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d26b91b3fe2030f1fcf9812025e4db5fd114ed29 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.54.0 | 
+| [git](https://github.com/git/git) | 2.55.0 | 
 
 **Additional linux tools and packages**
 
@@ -380,21 +380,21 @@ mcr.microsoft.com/devcontainers/java:dev-bookworm
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
 | ca-certificates | 20230311+deb12u1 |
-| curl | 7.88.1-10+deb12u14 |
+| curl | 7.88.1-10+deb12u15 |
 | dialog | 1.3-20230209-1 |
 | git | 1:2.39.5-0+deb12u3 |
 | gnupg2 | 2.2.40-1.1+deb12u2 |
 | htop | 3.2.2-2 |
 | iproute2 | 6.1.0-3 |
-| jq | 1.6-2.1+deb12u1 |
+| jq | 1.6-2.1+deb12u2 |
 | less | 590-2.1~deb12u2 |
-| libc6 | 2.36-9+deb12u13 |
-| libgssapi-krb5-2 | 1.20.1-2+deb12u4 |
+| libc6 | 2.36-9+deb12u14 |
+| libgssapi-krb5-2 | 1.20.1-2+deb12u5 |
 | libicu72 | 72.1-3+deb12u1 |
-| libkrb5-3 | 1.20.1-2+deb12u4 |
+| libkrb5-3 | 1.20.1-2+deb12u5 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14+deb12u1 |
-| locales | 2.36-9+deb12u13 |
+| locales | 2.36-9+deb12u14 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
@@ -403,22 +403,22 @@ mcr.microsoft.com/devcontainers/java:dev-bookworm
 | nano | 7.2-1+deb12u1 |
 | ncdu | 1.18-0.2 |
 | net-tools | 2.10-0.1+deb12u2 |
-| openssh-client | 1:9.2p1-2+deb12u9 |
+| openssh-client | 1:9.2p1-2+deb12u10 |
 | procps | 2:4.0.2-3 |
 | psmisc | 23.6-1 |
-| rsync | 3.2.7-1+deb12u4 |
+| rsync | 3.2.7-1+deb12u6 |
 | strace | 6.1-0.1 |
-| sudo | 1.9.13p3-1+deb12u3 |
+| sudo | 1.9.13p3-1+deb12u4 |
 | unzip | 6.0-28 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
 | zip | 3.0-13 |
 | zlib1g | 1:1.2.13.dfsg-1 |
-| zsh | 5.9-4+b8 |
+| zsh | 5.9-4+b15 |
 
 ## Variant: 21-bookworm
 
-**Digest:** sha256:2cfebfdf5e648ac6dfbc395be9cfa4cc89c2ff49676fca563a6ddf26df1e9a0b
+**Digest:** sha256:4f7037473b45ce59e641b808c36fc798166e463ac753750d8d8becc46b5a6944
 
 **Tags:**
 ```
@@ -438,20 +438,20 @@ mcr.microsoft.com/devcontainers/java:dev-21-jdk-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 21.0.10 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 21.0.12 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d26b91b3fe2030f1fcf9812025e4db5fd114ed29 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.54.0 | 
+| [git](https://github.com/git/git) | 2.55.0 | 
 
 **Additional linux tools and packages**
 
@@ -460,21 +460,21 @@ mcr.microsoft.com/devcontainers/java:dev-21-jdk-bookworm
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
 | ca-certificates | 20230311+deb12u1 |
-| curl | 7.88.1-10+deb12u14 |
+| curl | 7.88.1-10+deb12u15 |
 | dialog | 1.3-20230209-1 |
 | git | 1:2.39.5-0+deb12u3 |
 | gnupg2 | 2.2.40-1.1+deb12u2 |
 | htop | 3.2.2-2 |
 | iproute2 | 6.1.0-3 |
-| jq | 1.6-2.1+deb12u1 |
+| jq | 1.6-2.1+deb12u2 |
 | less | 590-2.1~deb12u2 |
-| libc6 | 2.36-9+deb12u13 |
-| libgssapi-krb5-2 | 1.20.1-2+deb12u4 |
+| libc6 | 2.36-9+deb12u14 |
+| libgssapi-krb5-2 | 1.20.1-2+deb12u5 |
 | libicu72 | 72.1-3+deb12u1 |
-| libkrb5-3 | 1.20.1-2+deb12u4 |
+| libkrb5-3 | 1.20.1-2+deb12u5 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14+deb12u1 |
-| locales | 2.36-9+deb12u13 |
+| locales | 2.36-9+deb12u14 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
@@ -483,22 +483,22 @@ mcr.microsoft.com/devcontainers/java:dev-21-jdk-bookworm
 | nano | 7.2-1+deb12u1 |
 | ncdu | 1.18-0.2 |
 | net-tools | 2.10-0.1+deb12u2 |
-| openssh-client | 1:9.2p1-2+deb12u9 |
+| openssh-client | 1:9.2p1-2+deb12u10 |
 | procps | 2:4.0.2-3 |
 | psmisc | 23.6-1 |
-| rsync | 3.2.7-1+deb12u4 |
+| rsync | 3.2.7-1+deb12u6 |
 | strace | 6.1-0.1 |
-| sudo | 1.9.13p3-1+deb12u3 |
+| sudo | 1.9.13p3-1+deb12u4 |
 | unzip | 6.0-28 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
 | zip | 3.0-13 |
 | zlib1g | 1:1.2.13.dfsg-1 |
-| zsh | 5.9-4+b8 |
+| zsh | 5.9-4+b15 |
 
 ## Variant: 17-bookworm
 
-**Digest:** sha256:7643c0733317b53185da2ef637915f5b47c31bfcf7a51c29dde65761be128176
+**Digest:** sha256:6815183e47256e29c4cff7f49a0d5b4b6849557536a0943c4290171f8b3dae1e
 
 **Tags:**
 ```
@@ -518,20 +518,20 @@ mcr.microsoft.com/devcontainers/java:dev-17-jdk-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 17.0.18 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 17.0.20 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d26b91b3fe2030f1fcf9812025e4db5fd114ed29 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.54.0 | 
+| [git](https://github.com/git/git) | 2.55.0 | 
 
 **Additional linux tools and packages**
 
@@ -540,21 +540,21 @@ mcr.microsoft.com/devcontainers/java:dev-17-jdk-bookworm
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
 | ca-certificates | 20230311+deb12u1 |
-| curl | 7.88.1-10+deb12u14 |
+| curl | 7.88.1-10+deb12u15 |
 | dialog | 1.3-20230209-1 |
 | git | 1:2.39.5-0+deb12u3 |
 | gnupg2 | 2.2.40-1.1+deb12u2 |
 | htop | 3.2.2-2 |
 | iproute2 | 6.1.0-3 |
-| jq | 1.6-2.1+deb12u1 |
+| jq | 1.6-2.1+deb12u2 |
 | less | 590-2.1~deb12u2 |
-| libc6 | 2.36-9+deb12u13 |
-| libgssapi-krb5-2 | 1.20.1-2+deb12u4 |
+| libc6 | 2.36-9+deb12u14 |
+| libgssapi-krb5-2 | 1.20.1-2+deb12u5 |
 | libicu72 | 72.1-3+deb12u1 |
-| libkrb5-3 | 1.20.1-2+deb12u4 |
+| libkrb5-3 | 1.20.1-2+deb12u5 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14+deb12u1 |
-| locales | 2.36-9+deb12u13 |
+| locales | 2.36-9+deb12u14 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
@@ -563,22 +563,22 @@ mcr.microsoft.com/devcontainers/java:dev-17-jdk-bookworm
 | nano | 7.2-1+deb12u1 |
 | ncdu | 1.18-0.2 |
 | net-tools | 2.10-0.1+deb12u2 |
-| openssh-client | 1:9.2p1-2+deb12u9 |
+| openssh-client | 1:9.2p1-2+deb12u10 |
 | procps | 2:4.0.2-3 |
 | psmisc | 23.6-1 |
-| rsync | 3.2.7-1+deb12u4 |
+| rsync | 3.2.7-1+deb12u6 |
 | strace | 6.1-0.1 |
-| sudo | 1.9.13p3-1+deb12u3 |
+| sudo | 1.9.13p3-1+deb12u4 |
 | unzip | 6.0-28 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
 | zip | 3.0-13 |
 | zlib1g | 1:1.2.13.dfsg-1 |
-| zsh | 5.9-4+b8 |
+| zsh | 5.9-4+b15 |
 
 ## Variant: 11-bookworm
 
-**Digest:** sha256:3df36e06317cbaa210dd25bc20d8badd82b89584a5c5244cbfa1a90bf0556e89
+**Digest:** sha256:063a6f3ccf9868a51536a919aa348d8dd8c9d8311e8841469052e5684de6da3b
 
 **Tags:**
 ```
@@ -598,20 +598,20 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Java](https://adoptopenjdk.net/) | 11.0.30 | /usr/local/ |
+| [Java](https://adoptopenjdk.net/) | 11.0.32 | /usr/local/ |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 349b9e49ced7682e27927ffb34b6522f011f3e74 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | 62387b8f92aa012d48202747fd75c40850e5e261 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d26b91b3fe2030f1fcf9812025e4db5fd114ed29 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.54.0 | 
+| [git](https://github.com/git/git) | 2.55.0 | 
 
 **Additional linux tools and packages**
 
@@ -620,21 +620,21 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bookworm
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
 | ca-certificates | 20230311+deb12u1 |
-| curl | 7.88.1-10+deb12u14 |
+| curl | 7.88.1-10+deb12u15 |
 | dialog | 1.3-20230209-1 |
 | git | 1:2.39.5-0+deb12u3 |
 | gnupg2 | 2.2.40-1.1+deb12u2 |
 | htop | 3.2.2-2 |
 | iproute2 | 6.1.0-3 |
-| jq | 1.6-2.1+deb12u1 |
+| jq | 1.6-2.1+deb12u2 |
 | less | 590-2.1~deb12u2 |
-| libc6 | 2.36-9+deb12u13 |
-| libgssapi-krb5-2 | 1.20.1-2+deb12u4 |
+| libc6 | 2.36-9+deb12u14 |
+| libgssapi-krb5-2 | 1.20.1-2+deb12u5 |
 | libicu72 | 72.1-3+deb12u1 |
-| libkrb5-3 | 1.20.1-2+deb12u4 |
+| libkrb5-3 | 1.20.1-2+deb12u5 |
 | liblttng-ust1 | 2.13.5-1 |
 | libstdc++6 | 12.2.0-14+deb12u1 |
-| locales | 2.36-9+deb12u13 |
+| locales | 2.36-9+deb12u14 |
 | lsb-release | 12.0-1 |
 | lsof | 4.95.0-1 |
 | man-db | 2.11.2-2 |
@@ -643,16 +643,16 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bookworm
 | nano | 7.2-1+deb12u1 |
 | ncdu | 1.18-0.2 |
 | net-tools | 2.10-0.1+deb12u2 |
-| openssh-client | 1:9.2p1-2+deb12u9 |
+| openssh-client | 1:9.2p1-2+deb12u10 |
 | procps | 2:4.0.2-3 |
 | psmisc | 23.6-1 |
-| rsync | 3.2.7-1+deb12u4 |
+| rsync | 3.2.7-1+deb12u6 |
 | strace | 6.1-0.1 |
-| sudo | 1.9.13p3-1+deb12u3 |
+| sudo | 1.9.13p3-1+deb12u4 |
 | unzip | 6.0-28 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
 | zip | 3.0-13 |
 | zlib1g | 1:1.2.13.dfsg-1 |
-| zsh | 5.9-4+b8 |
+| zsh | 5.9-4+b15 |
 
