@@ -15,7 +15,6 @@
         "ORYX_ENV_TYPE": "vsonline-present",
         "PYTHONIOENCODING": "UTF-8",
         "NPM_GLOBAL": "/home/codespace/.npm-global",
-        "NVS_HOME": "/home/codespace/.nvs",
         "RVM_PATH": "/usr/local/rvm",
         "RAILS_DEVELOPMENT_HOSTS": ".githubpreview.dev,.preview.app.github.dev,.app.github.dev",
         "GOROOT": "/usr/local/go",
