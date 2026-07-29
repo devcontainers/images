@@ -31,8 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: publishing
     permissions:
-      contents: write
-      pull-requests: write
+      contents: read
     steps:
 
       - name: Generate a token
