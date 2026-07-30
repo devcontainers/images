@@ -31,90 +31,98 @@ jobs:
     runs-on: ubuntu-latest
     environment: publishing
     permissions:
-      contents: write
-      pull-requests: write
+      contents: read
     steps:
 
-    - name: Free more space
-      id: free_space 
-      run: |
-        set -e
-        # Ensure enough space is available for build
-        sudo apt-get autoremove -y
-        sudo apt-get clean -y
-        sudo rm -rf /usr/share/dotnet
+      - name: Generate a token
+        id: app-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ vars.DEVCONTAINERS_REPO_AUTOMATION_ID }}
+          private-key: ${{ secrets.DEVCONTAINERS_REPO_AUTOMATION_PRIVATE_KEY }}
 
-    - name: Checkout
-      id: checkout
-      uses: actions/checkout@v6
+      - name: Free more space
+        id: free_space 
+        run: |
+          set -e
+          # Ensure enough space is available for build
+          sudo apt-get autoremove -y
+          sudo apt-get clean -y
+          sudo rm -rf /usr/share/dotnet
 
-    - name: Get image info
-      id: Get_image_info
-      env:
-        REGISTRY: ${{ secrets.REGISTRY }}
-        REGISTRY_BASE_PATH: ${{ secrets.REGISTRY_BASE_PATH }}
-        STUB_REGISTRY: ${{ secrets.STUB_REGISTRY }}
-        STUB_REGISTRY_BASE_PATH: ${{ secrets.STUB_REGISTRY_BASE_PATH }}
-        TOKEN_NAME: ${{ secrets.TOKEN_NAME }}
-        PASSWORD: ${{ secrets.PASSWORD }}
-      run: |
-        set -e
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v6
+        with:
+          token: ${{ steps.app-token.outputs.token }}
 
-        # ACR login
-        ACR_REGISTRY_NAME=$(echo "$REGISTRY" | grep -oP '(.+)(?=\.azurecr\.io)')
-        az acr login --name $ACR_REGISTRY_NAME --username $TOKEN_NAME --password $PASSWORD
+      - name: Get image info
+        id: Get_image_info
+        env:
+          REGISTRY: ${{ secrets.REGISTRY }}
+          REGISTRY_BASE_PATH: ${{ secrets.REGISTRY_BASE_PATH }}
+          STUB_REGISTRY: ${{ secrets.STUB_REGISTRY }}
+          STUB_REGISTRY_BASE_PATH: ${{ secrets.STUB_REGISTRY_BASE_PATH }}
+          TOKEN_NAME: ${{ secrets.TOKEN_NAME }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+        run: |
+          set -e
 
-        # This is required to set yarn 4.9.4 as the global yarn version in the runner is 1.22.22
-        sudo corepack enable
-        sudo corepack prepare yarn@4.9.4 --activate
-        yarn install
-        RELEASE_STRING=$(echo "${{ inputs.release }}" | grep -oP 'refs/(heads|tags)/\K(.+)')
-        OVERWRITE_STRING=$(if [ "${{ inputs.overwrite }}" = "false" ]; then echo '--no-overwrite'; else echo '--overwrite'; fi)
-        CG_STRING=$(if [ ${{ inputs.cg }} = "false" ]; then echo '--no-cg'; else echo '--cg'; fi)
+          # ACR login
+          ACR_REGISTRY_NAME=$(echo "$REGISTRY" | grep -oP '(.+)(?=\.azurecr\.io)')
+          az acr login --name $ACR_REGISTRY_NAME --username $TOKEN_NAME --password $PASSWORD
 
-        # Pull images and update cgmanifest.json
-        build/vscdc info  --no-build \
-                          --markdown \
-                          --prune \
-                          --release "$RELEASE_STRING" \
-                          --registry "$REGISTRY" \
-                          --registry-path "$REGISTRY_BASE_PATH" \
-                          --stub-registry "$STUB_REGISTRY" \
-                          --stub-registry-path "$STUB_REGISTRY_BASE_PATH" \
-                          --output-path "$GITHUB_WORKSPACE" \
-                          "$OVERWRITE_STRING" \
-                          "$CG_STRING"
+          # This is required to set yarn 4.9.4 as the global yarn version in the runner is 1.22.22
+          sudo corepack enable
+          sudo corepack prepare yarn@4.9.4 --activate
+          yarn install
+          RELEASE_STRING=$(echo "${{ inputs.release }}" | grep -oP 'refs/(heads|tags)/\K(.+)')
+          OVERWRITE_STRING=$(if [ "${{ inputs.overwrite }}" = "false" ]; then echo '--no-overwrite'; else echo '--overwrite'; fi)
+          CG_STRING=$(if [ ${{ inputs.cg }} = "false" ]; then echo '--no-cg'; else echo '--cg'; fi)
 
-    - name: Create PR with updated image information
-      id: push_image_info
-      env:
-        GITHUB_TOKEN: ${{ secrets.PAT }}
-      run: |
-        set -e
+          # Pull images and update cgmanifest.json
+          build/vscdc info  --no-build \
+                            --markdown \
+                            --prune \
+                            --release "$RELEASE_STRING" \
+                            --registry "$REGISTRY" \
+                            --registry-path "$REGISTRY_BASE_PATH" \
+                            --stub-registry "$STUB_REGISTRY" \
+                            --stub-registry-path "$STUB_REGISTRY_BASE_PATH" \
+                            --output-path "$GITHUB_WORKSPACE" \
+                            "$OVERWRITE_STRING" \
+                            "$CG_STRING"
 
-        # Configure git and Push updates
+      - name: Create PR with updated image information
+        id: push_image_info
+        env:
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          set -e
 
-        git config --global user.email github-actions@github.com
-        git config --global user.name github-actions
-        git config pull.rebase false
+          # Configure git and Push updates
 
-        branch=automated-update-for-image-history-$GITHUB_RUN_ID
-        git checkout -b $branch
-        message='Automated update for image history'
+          git config --global user.email github-actions@github.com
+          git config --global user.name github-actions
+          git config pull.rebase false
 
-        # Add / update and commit
-        git add -A
-        git commit -m "$message" || export NO_UPDATES=true
+          branch=automated-update-for-image-history-$GITHUB_RUN_ID
+          git checkout -b $branch
+          message='Automated update for image history'
 
-        # Push (unless disabled for testing)
-        if [ "$NO_UPDATES" != "true" ] && [ "${{ inputs.push }}" = "true" ]; then
-            git push origin "$branch"
-            gh api \
-                --method POST \
-                -H "Accept: application/vnd.github+json" \
-                /repos/${GITHUB_REPOSITORY}/pulls \
-                -f title="$message" \
-              -f body="$message" \
-              -f head="$branch" \
-              -f base='main'
-        fi
+          # Add / update and commit
+          git add -A
+          git commit -m "$message" || export NO_UPDATES=true
+
+          # Push (unless disabled for testing)
+          if [ "$NO_UPDATES" != "true" ] && [ "${{ inputs.push }}" = "true" ]; then
+              git push origin "$branch"
+              gh api \
+                  --method POST \
+                  -H "Accept: application/vnd.github+json" \
+                  /repos/${GITHUB_REPOSITORY}/pulls \
+                  -f title="$message" \
+                -f body="$message" \
+                -f head="$branch" \
+                -f base='main'
+          fi
