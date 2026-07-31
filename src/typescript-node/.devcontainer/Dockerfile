@@ -2,6 +2,9 @@
 ARG VARIANT=24-trixie
 FROM mcr.microsoft.com/devcontainers/javascript-node:4-${VARIANT}
 
+# Set locale so Unicode characters render correctly in locale-aware tools (e.g. tmux).
+ENV LANG=C.UTF-8
+
 # Install tslint, typescript. eslint is installed by javascript image
 ARG NODE_MODULES="tslint-to-eslint-config typescript"
 RUN su node -c "umask 0002 && npm install -g ${NODE_MODULES}" \

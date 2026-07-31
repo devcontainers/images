@@ -82,7 +82,6 @@ checkDirectoryOwnership "codespace user has ownership over extension directory" 
 # Node.js
 check "node" node --version
 check "nvm" bash -c ". /usr/local/share/nvm/nvm.sh && nvm --version"
-check "nvs" bash -c ". /usr/local/nvs/nvs.sh && nvs --version"
 check "yarn" yarn --version
 check "npm" npm --version
 count=$(ls /usr/local/share/nvm/versions/node | wc -l)
@@ -136,9 +135,10 @@ check "default-node-version" bash -c "node --version | grep 24."
 check "default-node-location" bash -c "which node | grep /home/codespace/nvm/current/bin"
 check "oryx-build-node-project" bash -c "oryx build ./sample/node"
 check "oryx-configured-current-node-version" bash -c "ls -la /home/codespace/nvm/current | grep /opt/nodejs"
-check "nvm-install-node" bash -c ". /usr/local/share/nvm/nvm.sh && nvm install 8.0.0"
-check "nvm-works-in-node-project" bash -c "node --version | grep v8.0.0"
-check "default-node-location-remained-same" bash -c "which node | grep /home/codespace/nvm/current/bin"
+check "nvm-switches-to-additional-node-version" bash -c ". /usr/local/share/nvm/nvm.sh && nvm use 22 && node --version | grep v22."
+check "node-location-after-switching-to-22" bash -c "which node | grep /home/codespace/nvm/current/bin"
+check "nvm-switches-back-to-default-node-version" bash -c ". /usr/local/share/nvm/nvm.sh && nvm use default && node --version | grep v24."
+check "node-location-after-switching-back-to-default" bash -c "which node | grep /home/codespace/nvm/current/bin"
 
 # Ensures sdkman works in a Java Project
 check "default-java-version" bash -c "java --version"
@@ -170,6 +170,8 @@ check "php-version-on-path-is-8.1.30" php --version | grep 8.1.30
 # Test patches
 
 ls -la /home/codespace
+check "python-3.13.8-pip-version" checkPythonPipVersion "/usr/local/python/3.13.8/bin/python" "26.1.0"
+check "no-vulnerable-pip-cache-in-conda-pkgs" checkNoVulnerablePipCache "/opt/conda/pkgs" "26.1"
 
 ## Python - current
 checkPythonPackageVersion "python" "requests" "2.31.0"

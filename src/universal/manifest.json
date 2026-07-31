@@ -1,5 +1,5 @@
 {
-	"version": "6.0.8",
+	"version": "6.1.1",
 	"build": {
 		"latest": true,
 		"rootDistro": "debian",
@@ -87,7 +87,6 @@
 		"git": {
 			"Oh My Zsh!": "/home/codespace/.oh-my-zsh",
 			"nvm": "/usr/local/share/nvm",
-			"nvs": "/usr/local/nvs",
 			"rbenv": "/usr/local/share/rbenv",
 			"ruby-build": "/usr/local/share/ruby-build"
 		},
