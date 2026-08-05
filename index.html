@@ -1,0 +1,427 @@
+# Linux Universal Image
+
+## Summary
+
+*Use or extend the new Ubuntu-based default, large, and multi-language universal image which contains many popular languages/frameworks/SDKS/runtimes*
+
+| Metadata | Value |  
+|----------|-------|
+| *Categories* | Services, GitHub |
+| *Image type* | Dockerfile |
+| *Published image* | mcr.microsoft.com/devcontainers/universal:linux<br />mcr.microsoft.com/devcontainers/universal:noble |
+| *Published image architecture(s)* | x86-64 |
+| *Container host OS support* | Linux, macOS, Windows |
+| *Container OS* | Ubuntu |
+| *Languages, platforms* | Python, Node.js, JavaScript, TypeScript, C++, Java, C#, F#, .NET Core, PHP, Go, Ruby, Conda |
+
+See **[history](history)** for information on the contents of published images.
+
+## Description
+
+While language specific development containers can be useful, in some cases you may want to use more than one in a project without having to set them all up. In other cases you may be looking to create a general "sandbox" container you intend to use with multiple projects or repositories. The large container image generated here (`mcr.microsoft.com/devcontainers/universal:linux`) includes a number of runtime versions for popular languages like Python, Node, PHP, Java, Go, C++, Ruby, and .NET Core/C#.
+
+If you use GitHub Codespaces, this is the "universal" image that is used by default if no custom Dockerfile or image is specified. If you like what you see but want to make a few additions or changes, you can use a custom Dockerfile to extend it and add whatever you need.
+
+The container includes the `zsh` (and Oh My Zsh!) and `fish` shells that you can opt into using instead of the default `bash`. It also includes [nvm](https://github.com/nvm-sh/nvm), [rvm](https://rvm.io/), [rbenv](https://github.com/rbenv/rbenv), and [SDKMAN!](https://sdkman.io/) if you need to install a different version Node, Ruby, or Java tools than the container defaults. You can also set things up to access the container [via SSH](#accessing-the-container-using-ssh-scp-or-sshfs).
+
+You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image.
+For example:
+
+- `mcr.microsoft.com/devcontainers/universal:6-noble`
+- `mcr.microsoft.com/devcontainers/universal:6.1-noble`
+- `mcr.microsoft.com/devcontainers/universal:6.1.1-noble`
+
+See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/universal/tags/list).
+
+## Accessing the container using SSH, or SSHFS
+
+This container also includes a running SSH server that you can use to access the contents if needed. To use it, refer to the [SSHD Feature](https://github.com/devcontainers/features/tree/main/src/sshd#usage) for instructions.
+
+
+## Using Conda
+This dev container and its associated image includes [the `conda` package manager](https://aka.ms/vscode-remote/conda/about). Additional packages installed using Conda will be downloaded from Anaconda or another repository if you configure one. To reconfigure Conda in this container to access an alternative repository, please see information on [configuring Conda channels here](https://aka.ms/vscode-remote/conda/channel-setup).
+
+Access to the Anaconda repository is <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اللجنة العلمية - الكلية الوطنية الجامعية للعلوم الصحية</title>
+    <style>
+        :root {
+            --primary-color: #0077b6;
+            --secondary-color: #00b4d8;
+            --dark-color: #03045e;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+            --text-color: #2b2d42;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--dark-color), var(--primary-color));
+            color: var(--white);
+            text-align: center;
+            padding: 3rem 1rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--dark-color);
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            border-bottom: 3px solid var(--secondary-color);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .center-wrapper {
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 1.8rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            text-align: center;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 8px;
+        }
+
+        .semester-title {
+            color: var(--primary-color);
+            font-weight: bold;
+            margin: 1rem 0 0.5rem 0;
+            font-size: 1.05rem;
+        }
+
+        .course-list {
+            list-style: none;
+            padding-right: 0;
+            margin-bottom: 1rem;
+        }
+
+        .course-list li {
+            position: relative;
+            padding-right: 20px;
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+            color: #495057;
+        }
+
+        .course-list li::before {
+            content: "•";
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            right: 0;
+            top: -2px;
+        }
+
+        .internship-card {
+            background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+            border-top: 4px solid var(--secondary-color);
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            padding: 0.6rem 1.4rem;
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background 0.3s;
+            margin-top: 1rem;
+        }
+
+        .btn:hover {
+            background-color: var(--dark-color);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary-color);
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .resource-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-right: 5px solid var(--secondary-color);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .resource-card h4 {
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background-color: var(--dark-color);
+            color: var(--white);
+            text-align: center;
+            padding: 1.8rem 1rem;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            margin: 0.4rem 0;
+            font-size: 0.95rem;
+        }
+
+        .developer-credit {
+            color: #4ea8de;
+            font-weight: bold;
+            text-decoration: none;
+            direction: ltr;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>اللجنة العلمية - الكلية الوطنية الجامعية للعلوم الصحية</h1>
+        <p>المكتبة الإلكترونية الشاملة للملازم، بنوك الأسئلة، والجداول الدراسية</p>
+    </header>
+
+    <div class="container">
+
+        <div class="center-wrapper">
+            <h2 class="section-title">مقررات قسم المختبرات الطبية</h2>
+        </div>
+
+        <div class="grid">
+            <!-- السنة الأولى -->
+            <div class="card">
+                <h3>السنة الأولى</h3>
+                
+                <div class="semester-title">الفصل الدراسي الأول:</div>
+                <ul class="course-list">
+                    <li>مهارات اللغة العربية (1)</li>
+                    <li>مهارات اللغة الإنجليزية (1)</li>
+                    <li>الثقافة الإسلامية</li>
+                    <li>علم الأحياء</li>
+                    <li>مهارات التواصل</li>
+                    <li>الفيزياء الطبية</li>
+                    <li>كيمياء عامة وعضوية</li>
+                </ul>
+
+                <div class="semester-title">الفصل الدراسي الثاني:</div>
+                <ul class="course-list">
+                    <li>مهارات الحاسوب</li>
+                    <li>مهارات اللغة الإنجليزية (2)</li>
+                    <li>مهارات اللغة العربية (2)</li>
+                    <li>تشريح</li>
+                    <li>كيمياء تحليلية</li>
+                    <li>علم الأنسجة</li>
+                    <li>أخلاقيات طبية</li>
+                </ul>
+                <a href="#resources" class="btn">عرض المحتوى الأكاديمي</a>
+            </div>
+
+            <!-- السنة الثانية -->
+            <div class="card">
+                <h3>السنة الثانية</h3>
+                
+                <div class="semester-title">الفصل الدراسي الأول:</div>
+                <ul class="course-list">
+                    <li>الثقافة الوطنية</li>
+                    <li>علم وظائف الأعضاء (1)</li>
+                    <li>كيمياء حيوية (1)</li>
+                    <li>بكتيريا عامة</li>
+                    <li>علم الطفيليات (1)</li>
+                    <li>علم الدم (1)</li>
+                </ul>
+
+                <div class="semester-title">الفصل الدراسي الثاني:</div>
+                <ul class="course-list">
+                    <li>علم وظائف الأعضاء (2)</li>
+                    <li>كيمياء حيوية (2)</li>
+                    <li>علم الطفيليات (2)</li>
+                    <li>علم الدم (2)</li>
+                    <li>مناعة أساسية</li>
+                    <li>البيولوجيا الجزيئية ووراثة الإنسان</li>
+                </ul>
+                <a href="#resources" class="btn">عرض المحتوى الأكاديمي</a>
+            </div>
+
+            <!-- السنة الثالثة -->
+            <div class="card">
+                <h3>السنة الثالثة</h3>
+                
+                <div class="semester-title">الفصل الدراسي الأول:</div>
+                <ul class="course-list">
+                    <li>الصراع مع العدو الإسرائيلي</li>
+                    <li>علم الفيروسات الطبية</li>
+                    <li>بنك الدم</li>
+                    <li>علم الدم (3)</li>
+                    <li>البكتيريا الطبية (1)</li>
+                    <li>علم الطفيليات (3)</li>
+                    <li>الإنزيمات السريرية</li>
+                </ul>
+
+                <div class="semester-title">الفصل الدراسي الثاني:</div>
+                <ul class="course-list">
+                    <li>علم الدم (4)</li>
+                    <li>المناعة السريرية</li>
+                    <li>الفطريات الطبية</li>
+                    <li>الغدد الصماء</li>
+                    <li>علم الأوبئة</li>
+                    <li>البكتيريا الطبية (2)</li>
+                    <li>علم الأنسجة المرضية</li>
+                </ul>
+                <a href="#resources" class="btn">عرض المحتوى الأكاديمي</a>
+            </div>
+
+            <!-- السنة الرابعة -->
+            <div class="card">
+                <h3>السنة الرابعة</h3>
+                
+                <div class="semester-title">الفصل الدراسي الأول:</div>
+                <ul class="course-list">
+                    <li>الإحصاء الحيوي وطرق البحث</li>
+                    <li>سوائل الجسم</li>
+                    <li>علم الميكروبيولوجي الصحي</li>
+                    <li>تشخيص الأحياء الدقيقة الطبية (1)</li>
+                    <li>علم الدم المناعي</li>
+                    <li>تشخيص الطفيليات (1)</li>
+                    <li>تشخيص الدم (1)</li>
+                    <li>تقنيات أمراض الأنسجة</li>
+                </ul>
+
+                <div class="semester-title">الفصل الدراسي الثاني:</div>
+                <ul class="course-list">
+                    <li>تشخيص الأحياء الدقيقة الطبية (2)</li>
+                    <li>تشخيص الطفيليات (2)</li>
+                    <li>تشخيص الدم (2)</li>
+                    <li>مشروع البحث</li>
+                    <li>الكيمياء السريرية</li>
+                    <li>إدارة المختبر وضمان الجودة</li>
+                    <li>علم الأدوية والتداخل الدوائي والسموم</li>
+                </ul>
+                <a href="#resources" class="btn">عرض المحتوى الأكاديمي</a>
+            </div>
+        </div>
+
+        <!-- فترة الامتياز -->
+        <div class="card internship-card" style="margin-bottom: 3rem;">
+            <h3 style="border-bottom: none; margin-bottom: 0.5rem;">🎓 فترة الامتياز</h3>
+            <p><strong>المدة:</strong> ستة أشهر من التدريب الميداني والعملي الشامل في المستشفيات والمختبرات الطبية.</p>
+        </div>
+
+        <!-- الأدوات الأكاديمية -->
+        <div id="resources" class="center-wrapper" style="margin-top: 3rem;">
+            <h2 class="section-title">المحاور والأدوات الأكاديمية</h2>
+        </div>
+
+        <div class="resources-grid">
+            <div class="resource-card">
+                <h4>📚 الملازم والمراجع والأطالس</h4>
+                <p>تحميل ملازم المحاضرات النظرية والعملية والأطالس الميكروسكوبية التشخيصية.</p>
+                <br>
+                <a href="https://drive.google.com" target="_blank" class="btn btn-secondary">فتح مجلد الملازم</a>
+            </div>
+
+            <div class="resource-card">
+                <h4>📝 بنوك الأسئلة والنماذج</h4>
+                <p>نماذج الامتحانات النصفية والنهائية والتجميعات الشاملة للاختبارات.</p>
+                <br>
+                <a href="https://drive.google.com" target="_blank" class="btn btn-secondary">فتح بنك الأسئلة</a>
+            </div>
+
+            <div class="resource-card">
+                <h4>📅 جدول المحاضرات والاختبارات</h4>
+                <p>مواعيد المحاضرات الأسبوعية وجداول الامتحانات الفصلية.</p>
+                <br>
+                <a href="https://drive.google.com" target="_blank" class="btn btn-secondary">عرض الجدول الدراسي</a>
+            </div>
+        </div>
+
+        <!-- باقي التخصصات -->
+        <div class="center-wrapper" style="margin-top: 4rem;">
+            <h2 class="section-title">باقي التخصصات</h2>
+        </div>
+
+        <div class="grid">
+            <div class="card" style="text-align: center;">
+                <h3>قسم الصيدلة</h3>
+                <p>الملازم والملخصات الخاصة بطلاب الصيدلة.</p>
+                <a href="#" class="btn" style="background-color: #6c757d;">قريباً</a>
+            </div>
+            <div class="card" style="text-align: center;">
+                <h3>قسم التمريض</h3>
+                <p>الملازم والبنوك المخصصة لطلاب التمريض.</p>
+                <a href="#" class="btn" style="background-color: #6c757d;">قريباً</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © اللجنة العلمية - الكلية الوطنية الجامعية للعلوم الصحية</p>
+        <p>تصميم وتطوير: <strong>أ/ بسام عبدالله ناجي قادر</strong> | للتواصل: <a href="tel:776750732" class="developer-credit">776750732</a></p>
+    </footer>
+
+</body>
+</html>
