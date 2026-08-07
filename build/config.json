@@ -183,7 +183,7 @@
 			"downloadUrl": "https://github.com/cli/cli"
 		},
 		"yarn": {
-			"versionCommand": "yarn --version",
+			"versionCommand": "yarn --version 2>/dev/null | grep -oE '[0-9]+\\.[0-9]+\\.[0-9]+'",
 			"downloadUrl": "https://yarnpkg.com/"
 		},
 		"Maven": {
