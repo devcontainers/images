@@ -7,9 +7,11 @@
         "ghcr.io/devcontainers/features/node:1": {
             "version": "none"
         },
+		// This is only anaconda and miniconda specific setting for git feature config.
+		// As the git installation from source has been broken for these images since the
+		// advent of git 2.51.0 in Aug, 2025.
 		"ghcr.io/devcontainers/features/git:1": {
-            "version": "latest",
-            "ppa": "false"
+            "version": "os-provided"
         }
     },
 	// Configure tool-specific properties.

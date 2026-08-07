@@ -44,6 +44,37 @@ check-version-ge() {
     fi
 }
 
+# Fails if any copy of a package below the required version is bundled anywhere on
+# the filesystem. These can be vendored inside setuptools/_vendor or other virtual
+# envs (e.g. pipenv), which a top-level importlib.metadata version lookup misses.
+checkNoVulnerablePackage() {
+    LABEL=$1
+    PACKAGE_PREFIX=$2
+    REQUIRED_VERSION=$3
+    echo -e "\n🧪 Testing $LABEL: no '$PACKAGE_PREFIX' < '$REQUIRED_VERSION' on the filesystem"
+    local found_vulnerable=0
+    while IFS= read -r dist_info; do
+        local name version greater
+        name="$(basename "${dist_info}")"
+        version="${name##*-}"
+        version="${version%.dist-info}"
+        greater="$( (echo "${version}"; echo "${REQUIRED_VERSION}") | sort -V | tail -1 )"
+        if [ "${version}" != "${greater}" ]; then
+            echoStderr "Found vulnerable ${PACKAGE_PREFIX} ${version} at: ${dist_info}"
+            found_vulnerable=1
+        fi
+    done < <(find / -xdev \( -path /proc -o -path /sys -o -path /dev -o -path /run \) -prune -o \
+    -type d -name "${PACKAGE_PREFIX}-*.dist-info" -print 2>/dev/null)
+    if [ ${found_vulnerable} -eq 0 ]; then
+        echo "✅  Passed!"
+        return 0
+    else
+        echoStderr "❌ $LABEL check failed."
+        FAILED+=("$LABEL")
+        return 1
+    fi
+}
+
 checkMultiple() {
     PASSED=0
     LABEL="$1"

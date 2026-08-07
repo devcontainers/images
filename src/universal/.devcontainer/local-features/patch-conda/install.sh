@@ -48,13 +48,32 @@ update_conda_package() {
 
 sudo_if /opt/conda/bin/python3 -m pip install --upgrade pip
 
+# Remove any cached pip packages under /opt/conda/pkgs vulnerable to GHSA-jp4c-xjxw-mgf9
+# (pip < 26.1). Only pip cache entries older than 26.1 are removed; this does not touch
+# the active pip install in site-packages (upgraded above via pip).
+for pkg_path in /opt/conda/pkgs/pip-[0-9]*; do
+    [ -e "$pkg_path" ] || continue
+    pkg_name="$(basename "$pkg_path")"
+    pkg_version="${pkg_name#pip-}"
+    pkg_version="${pkg_version%%-*}"
+    greater_version="$(printf '%s\n%s\n' "$pkg_version" "26.1" | sort -V | tail -1)"
+    if [ "$pkg_version" != "$greater_version" ]; then
+        sudo_if "rm -rf $pkg_path"
+    fi
+done
+
 # Temporary: Upgrade python packages due to security vulnerabilities
 # They are installed by the conda feature and Conda distribution does not have the patches
 
 # https://github.com/advisories/GHSA-r6ph-v2qm-q3c2
 update_conda_package pyopenssl "26.0.0"
 
-update_conda_package cryptography "46.0.5"
+# https://github.com/advisories/GHSA-p423-j2cm-9vmq
+update_conda_package cryptography "46.0.7"
 
 # https://nvd.nist.gov/vuln/detail/CVE-2025-6176
 update_conda_package brotli "1.2.0"
+
+# https://github.com/advisories/GHSA-mf9w-mj56-hr94
+update_python_package /opt/conda/bin/python3 python-dotenv "1.2.2"
+

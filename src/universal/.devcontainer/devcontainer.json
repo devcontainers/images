@@ -17,11 +17,10 @@
         "ghcr.io/devcontainers/features/hugo:1": {
             "version": "latest"
         },
-        "ghcr.io/devcontainers/features/node:1": {
+        "ghcr.io/devcontainers/features/node:2": {
             "version": "24",
             "additionalVersions": "22"
         },
-        "./local-features/nvs": "latest",
         "ghcr.io/devcontainers/features/python:1": {
             "version": "3.14.2",
             "additionalVersions": "3.13.8",
@@ -63,7 +62,7 @@
         "ghcr.io/devcontainers/features/copilot-cli:1": {
             "version": "latest"
         },
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {
+        "ghcr.io/devcontainers/features/docker-in-docker:3": {
             "version": "latest"
         },
         "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
@@ -84,7 +83,6 @@
         "ghcr.io/devcontainers/features/dotnet",
         "ghcr.io/devcontainers/features/hugo",
         "ghcr.io/devcontainers/features/node",
-        "./local-features/nvs",
         "ghcr.io/devcontainers/features/conda",
         "./local-features/patch-conda",
         "ghcr.io/devcontainers/features/python",
