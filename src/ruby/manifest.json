@@ -62,7 +62,9 @@
 				"ruby:${VERSION}-bookworm"
 			],
 			"3.4-trixie": [
+				"ruby:${VERSION}-3",
 				"ruby:${VERSION}-3.4",
+				"ruby:${VERSION}-3-trixie",
 				"ruby:${VERSION}-3.4-trixie"
 			],
 			"3.3-trixie": [
@@ -70,12 +72,14 @@
 				"ruby:${VERSION}-3.3-trixie"
 			],			
 			"3.4-bookworm": [
+				"ruby:${VERSION}-3-bookworm",
 				"ruby:${VERSION}-3.4-bookworm"
 			],
 			"3.3-bookworm": [
 				"ruby:${VERSION}-3.3-bookworm"
 			],			
 			"3.4-bullseye": [
+				"ruby:${VERSION}-3-bullseye",
 				"ruby:${VERSION}-3.4-bullseye"
 			],
 			"3.3-bullseye": [

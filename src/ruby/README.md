@@ -9,7 +9,7 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/ruby |
-| *Available image variants* | 4 / 4-trixie, 4-bookworm, 3.4 / 3.4-trixie, 3.3 / 3.3-trixie, 3.4-bookworm, 3.3-bookworm, 3.4-bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/ruby/tags/list)) |
+| *Available image variants* | 4 / 4-trixie, 4-bookworm, 3 / 3-trixie, 3-bookworm, 3-bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/ruby/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `trixie`, `bookworm` , and `bullseye` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
@@ -31,6 +31,7 @@ Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
 - `mcr.microsoft.com/devcontainers/ruby:3-4`     (or `3-4-trixie`, `3-4-bookworm`, `3-4-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/ruby:3-3`     (or `3-3-trixie`, `3-3-bookworm` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/ruby:3.0-4`   (or `3.0-4-trixie`, `3.0-4-bookworm`, `3.0-4-bullseye` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/ruby:3.0.9-4` (or `3.0.9-4-trixie`, `3.0.9-4-bookworm`, `3.0.9-4-bullseye` to pin to an OS version)
 
