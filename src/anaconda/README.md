@@ -30,7 +30,7 @@ You can decide how often you want updates by referencing a [semantic version](ht
 
 - `mcr.microsoft.com/devcontainers/anaconda:1-3`
 - `mcr.microsoft.com/devcontainers/anaconda:1.3-3`
-- `mcr.microsoft.com/devcontainers/anaconda:1.3.24-3`
+- `mcr.microsoft.com/devcontainers/anaconda:1.4.0-3`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/anaconda/tags/list).
 
@@ -59,7 +59,7 @@ Given JavaScript front-end web client code written for use in conjunction with a
 ```json
 {
   "features": {
-    "ghcr.io/devcontainers/features/node:1": {
+    "ghcr.io/devcontainers/features/node:2": {
       "version": "latest"
     }
   }
