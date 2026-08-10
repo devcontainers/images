@@ -35,7 +35,7 @@ Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
 - `mcr.microsoft.com/devcontainers/python:3-3.14` (or `3-3.14-trixie`)
-- `mcr.microsoft.com/devcontainers/python:3.1-3.14` (or `3.1-3.14-trixie`)
+- `mcr.microsoft.com/devcontainers/python:3.2-3.14` (or `3.2-3.14-trixie`)
 - `mcr.microsoft.com/devcontainers/python:3.2.0-3.14` (or `3.2.0-3.14-trixie`)
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `2-3`). 
