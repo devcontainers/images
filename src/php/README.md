@@ -32,8 +32,8 @@ Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
 - `mcr.microsoft.com/devcontainers/php:4-8` (or `4-8-trixie`, `4-8-bookworm` )
-- `mcr.microsoft.com/devcontainers/php:4.0-8` (or `4.0-8-trixie`, `4.0-8-bookworm` )
-- `mcr.microsoft.com/devcontainers/php:4.0.2-8` (or `4.0.2-8-trixie`, `4.0.2-8-bookworm` )
+- `mcr.microsoft.com/devcontainers/php:4.1-8` (or `4.1-8-trixie`, `4.1-8-bookworm` )
+- `mcr.microsoft.com/devcontainers/php:4.1.0-8` (or `4.1.0-8-trixie`, `4.1.0-8-bookworm` )
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `4-8`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
@@ -50,7 +50,7 @@ Also, you can use a [Node feature](https://github.com/devcontainers/features/tre
 ```json
 {
   "features": {
-    "ghcr.io/devcontainers/features/node:1": {
+    "ghcr.io/devcontainers/features/node:2": {
       "version": "latest"
     }
   }
