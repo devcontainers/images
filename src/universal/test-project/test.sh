@@ -66,18 +66,16 @@ echo $(echo "java versions" && ls -a /usr/local/sdkman/candidates/java)
 
 # Check Ruby tools
 check "ruby" ruby --version
-check "rvm" bash -c ". /usr/local/rvm/scripts/rvm && rvm --version"
-check "rbenv" bash -c 'eval "$(rbenv init -)" && rbenv --version'
+check "ruby-build" ruby-build --version
 check "gems" gem --version
 check "rake" rake --version
 check "jekyll" jekyll --version
-count=$(ls /usr/local/rvm/gems | wc -l)
-expectedCount=6 # 2 version folders + 2 global folders for each version + 1 default folder which links to either one of the version + 1 cache folder
+count=$(ls /usr/local/rubies | wc -l)
+expectedCount=3 # 2 version folders + 1 current folder which links to either one of the version
 checkVersionCount "two versions of ruby are present" $count $expectedCount
-echo $(echo "ruby versions" && ls -a /usr/local/rvm/rubies)
-rvmExtensions="/usr/local/rvm/gems/default/extensions"
-rvmPlatform=$(rvm info default ruby | grep -w "platform" | cut -d'"' -f 2)
-checkDirectoryOwnership "codespace user has ownership over extension directory" "$rvmExtensions/$rvmPlatform" "codespace" "rvm"
+echo $(echo "ruby versions" && ls -a /usr/local/rubies)
+rubyGemsDir=$(ls -d /usr/local/rubies/current/lib/ruby/gems/*/extensions | head -n 1)
+checkDirectoryOwnership "codespace user has ownership over extension directory" "$rubyGemsDir" "codespace" "ruby"
 
 # Node.js
 check "node" node --version

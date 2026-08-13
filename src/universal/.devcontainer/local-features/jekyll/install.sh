@@ -10,7 +10,7 @@ USERNAME=${2:-"codespace"}
 set -e
 
 # If we don't yet have Ruby installed, exit.
-if ! /usr/local/rvm/rubies/default/bin/ruby --version > /dev/null ; then
+if ! /usr/local/rubies/current/bin/ruby --version > /dev/null ; then
     echo "You need to install Ruby before installing Jekyll."
     exit 1
 fi
@@ -19,7 +19,7 @@ fi
 if ! jekyll --version > /dev/null ; then
     echo "Installing Jekyll..."
     
-    GEMS_DIR=/usr/local/rvm/rubies/default/bin
+    GEMS_DIR=/usr/local/rubies/current/bin
     PATH=$GEMS_DIR/gem:$PATH
     if [ "${VERSION}" = "latest" ]; then
         gem install jekyll
@@ -27,14 +27,14 @@ if ! jekyll --version > /dev/null ; then
         gem install jekyll -v "${VERSION}"
     fi
 
-    chown -R "${USERNAME}:rvm" "${GEMS_DIR}/"
+    chown -R "${USERNAME}:ruby" "${GEMS_DIR}/"
     chmod -R g+r+w "${GEMS_DIR}/"
     find "${GEMS_DIR}" -type d | xargs -n 1 chmod g+s
 
     # Make sure the user has the necessary permissions to install the gems
-    RVM_GEMS_DIR=/usr/local/rvm/gems/default/extensions
+    RUBY_GEMS_DIR=/usr/local/rubies/current/lib/ruby/gems
     
-    chown -R "${USERNAME}:rvm" "${RVM_GEMS_DIR}/"
-    chmod -R g+r+w "${RVM_GEMS_DIR}/"
-    find "${RVM_GEMS_DIR}" -type d | xargs -n 1 chmod g+s
+    chown -R "${USERNAME}:ruby" "${RUBY_GEMS_DIR}/"
+    chmod -R g+r+w "${RUBY_GEMS_DIR}/"
+    find "${RUBY_GEMS_DIR}" -type d | xargs -n 1 chmod g+s
 fi
