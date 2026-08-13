@@ -74,7 +74,8 @@ count=$(ls /usr/local/rubies | wc -l)
 expectedCount=3 # 2 version folders + 1 current folder which links to either one of the version
 checkVersionCount "two versions of ruby are present" $count $expectedCount
 echo $(echo "ruby versions" && ls -a /usr/local/rubies)
-rubyGemsDir=$(ls -d /usr/local/rubies/current/lib/ruby/gems/*/extensions | head -n 1)
+rubyGemsDir=$(ruby -e 'require "rubygems"; puts File.join(Gem.default_dir, "extensions")')
+check "ruby extensions dir exists" test -d "$rubyGemsDir"
 checkDirectoryOwnership "codespace user has ownership over extension directory" "$rubyGemsDir" "codespace" "ruby"
 
 # Node.js
