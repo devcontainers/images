@@ -8,7 +8,7 @@ checkCommon
 
 # Image specific tests
 check "ruby" ruby --version
-check "rvm" rvm --version
+check "ruby-build" ruby-build --version
 check "gem" gem --version
 
 check "nvm" bash -c ". /usr/local/share/nvm/nvm.sh && nvm install 24"
