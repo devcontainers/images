@@ -29,8 +29,8 @@ Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
 - `mcr.microsoft.com/devcontainers/miniconda:1-3`
-- `mcr.microsoft.com/devcontainers/miniconda:1.2-3`
-- `mcr.microsoft.com/devcontainers/miniconda:1.2.11-3`
+- `mcr.microsoft.com/devcontainers/miniconda:1.3-3`
+- `mcr.microsoft.com/devcontainers/miniconda:1.3.0-3`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/miniconda/tags/list).
 
@@ -60,7 +60,7 @@ Given JavaScript front-end web client code written for use in conjunction with a
 ```json
 {
   "features": {
-    "ghcr.io/devcontainers/features/node:1": {
+    "ghcr.io/devcontainers/features/node:2": {
       "version": "latest"
     }
   }
