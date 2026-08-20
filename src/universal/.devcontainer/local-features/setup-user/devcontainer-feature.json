@@ -2,7 +2,7 @@
     "id": "setup-user",
     "name": "Setup user configs",
     "containerEnv": {
-        "RUBY_HOME": "/usr/local/rvm/rubies/default",
+        "RUBY_HOME": "/usr/local/rubies/current",
         "JAVA_ROOT": "/home/codespace/java",
         "NODE_ROOT": "/home/codespace/nvm",
         "PHP_ROOT": "/home/codespace/.php",
@@ -15,7 +15,6 @@
         "ORYX_ENV_TYPE": "vsonline-present",
         "PYTHONIOENCODING": "UTF-8",
         "NPM_GLOBAL": "/home/codespace/.npm-global",
-        "RVM_PATH": "/usr/local/rvm",
         "RAILS_DEVELOPMENT_HOSTS": ".githubpreview.dev,.preview.app.github.dev,.app.github.dev",
         "GOROOT": "/usr/local/go",
         "JUPYTERLAB_PATH": "/home/codespace/.local/bin",
