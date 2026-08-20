@@ -1,5 +1,5 @@
 {
-	"version": "2.3.0",
+	"version": "2.3.1",
 	"variants": [
 		"3.4-bookworm",
 		"3.3-bookworm",
@@ -63,8 +63,7 @@
 			"github-pages"
 		],
 		"other": {
-			"git": {},
-			"rvm": null
+			"git": {}
 		},
 		"languages": {
 			"Ruby": {
