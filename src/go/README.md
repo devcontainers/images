@@ -10,7 +10,7 @@
 | *Categories* | Core, Languages |
 | *Definition type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/go |
-| *Available image variants* | 1 / 1-trixie, 1.27 / 1.27-trixie, 1.26 / 1.26-bookworm, 1-bookworm ([full list](https://mcr.microsoft.com/v2/devcontainers/go/tags/list)) |
+| *Available image variants* | 1 / 1-trixie, 1.27 / 1.27-trixie, 1.26 / 1.26-trixie, 1-bookworm, 1.27 / 1.27-bookworm, 1.26 / 1.26-bookworm ([full list](https://mcr.microsoft.com/v2/devcontainers/go/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `trixie`, `bookworm` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
