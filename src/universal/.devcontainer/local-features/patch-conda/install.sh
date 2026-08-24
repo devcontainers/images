@@ -25,7 +25,7 @@ sudo_if() {
     if [ "$(id -u)" -eq 0 ] && [ "$USERNAME" != "root" ]; then
         su - "$USERNAME" -c "$COMMAND"
     else
-        "$COMMAND"
+        bash -c "$COMMAND"
     fi
 }
 
