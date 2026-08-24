@@ -44,7 +44,8 @@
             "version": "25",
             "additionalVersions": "21",
             "installGradle": "true",
-            "installMaven": "true"
+            "installMaven": "true",
+			"jdkDistro": "open"
         },
         "ghcr.io/devcontainers/features/sshd:1": {
             "version": "latest"
