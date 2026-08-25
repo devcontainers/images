@@ -19,6 +19,8 @@ See **[history](history)** for information on the contents of published images.
 
 ## Using this image
 
+### Release tags
+
 In addition to Ruby and Bundler, this development container installs Jekyll and the required tools at startup:
 
 - If your Jekyll project contains a `Gemfile` in the root folder, the development container will install all gems at startup by running `bundle install`. This is the [recommended](https://jekyllrb.com/docs/step-by-step/10-deployment/#gemfile) approach as it allows you to specify the exact Jekyll version your project requires and list all additional Jekyll plugins.
@@ -33,6 +35,12 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 - `mcr.microsoft.com/devcontainers/jekyll:bookworm`
 - `mcr.microsoft.com/devcontainers/jekyll:bullseye`
 - `mcr.microsoft.com/devcontainers/jekyll:buster`
+
+### Development tags (`dev-*`)
+
+Development tags are preview builds from `main`. Use `mcr.microsoft.com/devcontainers/jekyll:dev` to test the current image definition before its next stable release.
+
+### Pinned release tags
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 - `mcr.microsoft.com/devcontainers/jekyll:2` (or `2-bookworm`, `2-bullseye` to pin to an OS version)

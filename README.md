@@ -39,6 +39,8 @@ This repository contains a select set of images, and we encourage the community 
 
 ## Feedback
 
+Before opening an issue about a stable image tag, check the matching development tag (`dev-*`) first: it is built from `main` and may already include a fix that has not reached a stable release.
+
 Issues related to these images can be reported in [an issue](https://github.com/devcontainers/images/issues) in this repository.
 
 # License

@@ -45,20 +45,36 @@ run_test() {
 }
 
 # ---------------------------------------------------------------------------
-# Test 1: Go-style tags – major tag (2-1.26) must NOT be touched; only the
-# patch tag (2.1.3-1.26) should become the new version (2.1.4-1.26).
-# This is the regression case: unescaped dots in the sed pattern caused
-# `2-1.26` to match `2.1` (dot = any char) and get incorrectly rewritten.
+# Test 1: Only semantic tags in the pinned release section are updated.
+# Development tags and major release tags must remain unchanged.
 # ---------------------------------------------------------------------------
-run_test "go_major_tag_not_rewritten" \
+run_test "updates_only_pinned_release_tags" \
 	"2.1.3" \
 	"2.1.4" \
-	"- \`mcr.microsoft.com/devcontainers/go:2-1.26\` (or \`2-1.26-trixie\`, \`2-1.26-bookworm\`)
+	"### Release tags
+- \`mcr.microsoft.com/devcontainers/go:2-1.26\`
+
+### Development tags (\`dev-*\`)
+- \`mcr.microsoft.com/devcontainers/go:dev-1.26\`
+
+### Pinned release tags
 - \`mcr.microsoft.com/devcontainers/go:2.1-1.26\` (or \`2.1-1.26-trixie\`, \`2.1-1.26-bookworm\`)
-- \`mcr.microsoft.com/devcontainers/go:2.1.3-1.26\` (or \`2.1.3-1.26-trixie\`, \`2.1.3-1.26-bookworm\`)" \
-	"- \`mcr.microsoft.com/devcontainers/go:2-1.26\` (or \`2-1.26-trixie\`, \`2-1.26-bookworm\`)
+- \`mcr.microsoft.com/devcontainers/go:2.1.3-1.26\` (or \`2.1.3-1.26-trixie\`, \`2.1.3-1.26-bookworm\`)
+
+## Other guidance
+- \`mcr.microsoft.com/devcontainers/go:2.1.3-unchanged\`" \
+	"### Release tags
+- \`mcr.microsoft.com/devcontainers/go:2-1.26\`
+
+### Development tags (\`dev-*\`)
+- \`mcr.microsoft.com/devcontainers/go:dev-1.26\`
+
+### Pinned release tags
 - \`mcr.microsoft.com/devcontainers/go:2.1-1.26\` (or \`2.1-1.26-trixie\`, \`2.1-1.26-bookworm\`)
-- \`mcr.microsoft.com/devcontainers/go:2.1.4-1.26\` (or \`2.1.4-1.26-trixie\`, \`2.1.4-1.26-bookworm\`)"
+- \`mcr.microsoft.com/devcontainers/go:2.1.4-1.26\` (or \`2.1.4-1.26-trixie\`, \`2.1.4-1.26-bookworm\`)
+
+## Other guidance
+- \`mcr.microsoft.com/devcontainers/go:2.1.3-unchanged\`"
 
 # ---------------------------------------------------------------------------
 # Test 2: Standard backtick-terminated patch tag is updated correctly.
@@ -66,8 +82,10 @@ run_test "go_major_tag_not_rewritten" \
 run_test "patch_backtick_tag_updated" \
 	"2.1.3" \
 	"2.1.4" \
-	"- \`mcr.microsoft.com/devcontainers/go:2.1.3\` (latest patch)" \
-	"- \`mcr.microsoft.com/devcontainers/go:2.1.4\` (latest patch)"
+	"### Pinned release tags
+- \`mcr.microsoft.com/devcontainers/go:2.1.3\` (latest patch)" \
+	"### Pinned release tags
+- \`mcr.microsoft.com/devcontainers/go:2.1.4\` (latest patch)"
 
 # ---------------------------------------------------------------------------
 # Test 3: Colon-prefixed patch tag with variant suffix is updated.
@@ -75,8 +93,10 @@ run_test "patch_backtick_tag_updated" \
 run_test "patch_colon_variant_tag_updated" \
 	"1.3.5" \
 	"1.3.6" \
-	"mcr.microsoft.com/devcontainers/python:1.3.5-bullseye" \
-	"mcr.microsoft.com/devcontainers/python:1.3.6-bullseye"
+	"### Pinned release tags
+mcr.microsoft.com/devcontainers/python:1.3.5-bullseye" \
+	"### Pinned release tags
+mcr.microsoft.com/devcontainers/python:1.3.6-bullseye"
 
 # ---------------------------------------------------------------------------
 # Test 4: mid-line backtick-prefixed patch tag with variant is updated.
@@ -85,9 +105,11 @@ run_test "patch_colon_variant_tag_updated" \
 run_test "patch_backtick_variant_tag_updated" \
 	"3.0.1" \
 	"3.0.2" \
-	"- \`mcr.microsoft.com/devcontainers/base:3.0.1-bookworm\`
+	"### Pinned release tags
+- \`mcr.microsoft.com/devcontainers/base:3.0.1-bookworm\`
 - Use \`3.0.1-bookworm\` for the stable variant." \
-	"- \`mcr.microsoft.com/devcontainers/base:3.0.2-bookworm\`
+	"### Pinned release tags
+- \`mcr.microsoft.com/devcontainers/base:3.0.2-bookworm\`
 - Use \`3.0.2-bookworm\` for the stable variant."
 
 # ---------------------------------------------------------------------------

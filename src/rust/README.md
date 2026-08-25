@@ -19,12 +19,20 @@ See **[history](history)** for information on the contents of published images.
 
 ## Using this image
 
+### Release tags
+
 You can directly reference pre-built versions of `.devcontainer/Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` to the following. An example `Dockerfile` is included in this repository.
 
 - `mcr.microsoft.com/devcontainers/rust:latest` (or `trixie` `bookworm`, `bullseye` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/rust:1` (or `1-trixie` `1-bookworm`, `1-bullseye` to pin to an OS version)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
+
+### Development tags (`dev-*`)
+
+Development tags are preview builds from `main`. Use `mcr.microsoft.com/devcontainers/rust:dev-1` to test the current image definition before its next stable release.
+
+### Pinned release tags
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 

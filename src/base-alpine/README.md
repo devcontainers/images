@@ -19,6 +19,8 @@ See **[history](history)** for information on the contents of published images.
 
 ## Using this image
 
+### Release tags
+
 You can also directly reference pre-built versions of `.devcontainer/Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
 - `mcr.microsoft.com/devcontainers/base:alpine` (latest)
@@ -28,6 +30,12 @@ You can also directly reference pre-built versions of `.devcontainer/Dockerfile`
 
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
+
+### Development tags (`dev-*`)
+
+Development tags are preview builds from `main`. Use `mcr.microsoft.com/devcontainers/base:dev-alpine` to test the current Alpine image definition before its next stable release.
+
+### Pinned release tags
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 

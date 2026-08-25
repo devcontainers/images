@@ -19,6 +19,8 @@ See **[history](history)** for information on the contents of published images.
 
 ## Using this image
 
+### Release tags
+
 ### Configuration
 
 You can directly reference [pre-built](https://containers.dev/implementors/reference/#prebuilding) versions of this image by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` with one of the following:
@@ -31,6 +33,12 @@ You can directly reference [pre-built](https://containers.dev/implementors/refer
 - `mcr.microsoft.com/devcontainers/python:3.14` (or `3.14-trixie`, `3.14-bookworm` to pin to an OS version)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
+
+### Development tags (`dev-*`)
+
+Development tags are preview builds from `main`. Use `mcr.microsoft.com/devcontainers/python:dev-3.14` to test the current image definition before its next stable release.
+
+### Pinned release tags
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
