@@ -22,9 +22,9 @@ if ! jekyll --version > /dev/null ; then
     GEMS_DIR=/usr/local/rubies/current/bin
     PATH="${GEMS_DIR}:${PATH}"
     if [ "${VERSION}" = "latest" ]; then
-        gem install jekyll
+        gem install jekyll --no-document
     else
-        gem install jekyll -v "${VERSION}"
+        gem install jekyll -v "${VERSION}" --no-document
     fi
 
     chown -R "${USERNAME}:ruby" "${GEMS_DIR}/"
@@ -33,7 +33,8 @@ if ! jekyll --version > /dev/null ; then
 
     # Make sure the user has the necessary permissions to install the gems
     RUBY_GEMS_DIR=/usr/local/rubies/current/lib/ruby/gems
-    
+
+    find "${RUBY_GEMS_DIR}" -type f -path '*/cache/*.gem' -delete
     chown -R "${USERNAME}:ruby" "${RUBY_GEMS_DIR}/"
     chmod -R g+r+w "${RUBY_GEMS_DIR}/"
     find "${RUBY_GEMS_DIR}" -type d | xargs -n 1 chmod g+s
