@@ -30,15 +30,15 @@ Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 ### Development tags (`dev-*`)
 
-Preview tags are published builds of `main`, not stable release artifacts. The current development image definition (version `1.4.0`) is available as a preview through `mcr.microsoft.com/devcontainers/anaconda:dev-3`. Before reporting an issue or reviewing a fix against a stable tag, check the preview tag because a merged change may already be available there.
+Preview tags are published builds of `main`, not stable release artifacts. The current development image definition (version `1.4.1`) is available as a preview through `mcr.microsoft.com/devcontainers/anaconda:dev-3`. Before reporting an issue or reviewing a fix against a stable tag, check the preview tag because a merged change may already be available there.
 
 ### Pinned release tags
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
 - `mcr.microsoft.com/devcontainers/anaconda:1-3`
-- `mcr.microsoft.com/devcontainers/anaconda:1.3-3`
-- `mcr.microsoft.com/devcontainers/anaconda:1.3.24-3`
+- `mcr.microsoft.com/devcontainers/anaconda:1.4-3`
+- `mcr.microsoft.com/devcontainers/anaconda:1.4.1-3`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/anaconda/tags/list).
 
