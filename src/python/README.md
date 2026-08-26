@@ -21,10 +21,6 @@ See **[history](history)** for information on the contents of published images.
 
 ### Release tags
 
-### Configuration
-
-You can directly reference [pre-built](https://containers.dev/implementors/reference/#prebuilding) versions of this image by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` with one of the following:
-
 - `mcr.microsoft.com/devcontainers/python:3`    (latest)
 - `mcr.microsoft.com/devcontainers/python:3.10` (or `3.10-trixie`, `3.10-bookworm` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/python:3.11` (or `3.11-trixie`, `3.11-bookworm` to pin to an OS version)
@@ -32,19 +28,23 @@ You can directly reference [pre-built](https://containers.dev/implementors/refer
 - `mcr.microsoft.com/devcontainers/python:3.13` (or `3.13-trixie`, `3.13-bookworm` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/python:3.14` (or `3.14-trixie`, `3.14-bookworm` to pin to an OS version)
 
+#### Configuration
+
+You can directly reference [pre-built](https://containers.dev/implementors/reference/#prebuilding) versions of this image by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` with one of the above.
+
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 ### Development tags (`dev-*`)
 
-Development tags are preview builds from `main`. Use `mcr.microsoft.com/devcontainers/python:dev-3.14` to test the current image definition before its next stable release.
+Preview tags are published builds of `main`, not stable release artifacts. The current development image definition (version `3.2.0`) is available as a preview through `mcr.microsoft.com/devcontainers/python:dev-3.14` (or `dev-3.14-trixie`, `dev-3.14-bookworm`). Before reporting an issue or reviewing a fix against a stable tag, check the preview tag because a merged change may already be available there.
 
 ### Pinned release tags
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
 - `mcr.microsoft.com/devcontainers/python:3-3.14` (or `3-3.14-trixie`)
-- `mcr.microsoft.com/devcontainers/python:3.2-3.14` (or `3.2-3.14-trixie`)
-- `mcr.microsoft.com/devcontainers/python:3.2.0-3.14` (or `3.2.0-3.14-trixie`)
+- `mcr.microsoft.com/devcontainers/python:3.1-3.14` (or `3.1-3.14-trixie`)
+- `mcr.microsoft.com/devcontainers/python:3.1.6-3.14` (or `3.1.6-3.14-trixie`)
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `2-3`). 
 You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
