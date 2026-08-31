@@ -1,0 +1,16 @@
+target:images:
+  - 'target:images'
+target:docs-only:
+  - 'target:docs-only'
+target:other:
+  - 'target:other'
+change:bugfix:
+  - 'change:bugfix'
+change:feature:
+  - 'change:feature'
+change:breaking:
+  - 'change:breaking'
+change:other:
+  - 'change:other'
+change:na:
+  - 'change:na'
