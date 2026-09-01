@@ -1,53 +1,53 @@
 {
-  "version": "2.2.2",
+  "version": "2.3.0",
   "variants": [
+    "1.27-trixie",
     "1.26-trixie",
-    "1.25-trixie",
-    "1.26-bookworm",
-    "1.25-bookworm"
+    "1.27-bookworm",
+    "1.26-bookworm"
   ],
   "build": {
-    "latest": "1.26-trixie",
+    "latest": "1.27-trixie",
     "rootDistro": "debian",
     "tags": [
       "go:${VERSION}-${VARIANT}"
     ],
     "architectures": {
+      "1.27-trixie": [
+        "linux/amd64",
+        "linux/arm64"
+      ],
       "1.26-trixie": [
         "linux/amd64",
         "linux/arm64"
       ],
-      "1.25-trixie": [
+      "1.27-bookworm": [
         "linux/amd64",
         "linux/arm64"
       ],
       "1.26-bookworm": [
         "linux/amd64",
         "linux/arm64"
-      ],
-      "1.25-bookworm": [
-        "linux/amd64",
-        "linux/arm64"
       ]
     },
     "variantTags": {
+      "1.27-trixie": [
+        "go:${VERSION}-1.27",
+        "go:${VERSION}-1",
+        "go:${VERSION}-1-trixie",
+        "go:${VERSION}-trixie"
+      ],
       "1.26-trixie": [
         "go:${VERSION}-1.26",
         "go:${VERSION}-1",
         "go:${VERSION}-1-trixie",
         "go:${VERSION}-trixie"
       ],
-      "1.25-trixie": [
-        "go:${VERSION}-1.25",
-        "go:${VERSION}-1",
-        "go:${VERSION}-1-trixie",
-        "go:${VERSION}-trixie"
-      ],
-      "1.26-bookworm": [
+      "1.27-bookworm": [
         "go:${VERSION}-1-bookworm",
         "go:${VERSION}-bookworm"
       ],
-      "1.25-bookworm": [
+      "1.26-bookworm": [
         "go:${VERSION}-1-bookworm",
         "go:${VERSION}-bookworm"
       ]
