@@ -33,7 +33,7 @@ For example:
 
 - `mcr.microsoft.com/devcontainers/universal:6-noble`
 - `mcr.microsoft.com/devcontainers/universal:6.1-noble`
-- `mcr.microsoft.com/devcontainers/universal:6.1.5-noble`
+- `mcr.microsoft.com/devcontainers/universal:6.1.6-noble`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/universal/tags/list).
 
