@@ -38,10 +38,7 @@
         "go:${VERSION}-trixie"
       ],
       "1.26-trixie": [
-        "go:${VERSION}-1.26",
-        "go:${VERSION}-1",
-        "go:${VERSION}-1-trixie",
-        "go:${VERSION}-trixie"
+        "go:${VERSION}-1.26"
       ],
       "1.27-bookworm": [
         "go:${VERSION}-1-bookworm",
