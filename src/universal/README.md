@@ -24,6 +24,10 @@ If you use GitHub Codespaces, this is the "universal" image that is used by defa
 
 The container includes the `zsh` (and Oh My Zsh!) and `fish` shells that you can opt into using instead of the default `bash`. It also includes [nvm](https://github.com/nvm-sh/nvm), [ruby-build](https://github.com/rbenv/ruby-build)/[rbenv](https://github.com/rbenv/rbenv), and [SDKMAN!](https://sdkman.io/) if you need to install a different version Node, Ruby, or Java tools than the container defaults. You can also set things up to access the container [via SSH](#accessing-the-container-using-ssh-scp-or-sshfs).
 
+## Release tags
+
+### Pinned release tags
+
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image.
 For example:
 
@@ -32,6 +36,10 @@ For example:
 - `mcr.microsoft.com/devcontainers/universal:6.1.6-noble`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/universal/tags/list).
+
+### Development tags (`dev-*`)
+
+Development tags are preview builds from `main`. Use `mcr.microsoft.com/devcontainers/universal:dev` to test the current image definition before its next stable release.
 
 ## Accessing the container using SSH, or SSHFS
 

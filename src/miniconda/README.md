@@ -18,13 +18,21 @@ See **[history](history)** for information on the contents of published images.
 
 ## Using this image
 
-### Configuration
-
-You can directly reference pre-built versions of `.devcontainer/Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` to the following. An example `Dockerfile` is included in this repository.
+### Release tags
 
 - `mcr.microsoft.com/devcontainers/miniconda` (or `miniconda:3`)
 
+#### Configuration
+
+You can directly reference pre-built versions of `.devcontainer/Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` to the above. An example `Dockerfile` is included in this repository.
+
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
+
+### Development tags (`dev-*`)
+
+Preview tags are published builds of `main`, not stable release artifacts. The current development image definition (version `1.3.2`) is available as a preview through `mcr.microsoft.com/devcontainers/miniconda:dev-3`. Before reporting an issue or reviewing a fix against a stable tag, check the preview tag because a merged change may already be available there.
+
+### Pinned release tags
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 

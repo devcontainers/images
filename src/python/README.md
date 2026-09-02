@@ -19,9 +19,7 @@ See **[history](history)** for information on the contents of published images.
 
 ## Using this image
 
-### Configuration
-
-You can directly reference [pre-built](https://containers.dev/implementors/reference/#prebuilding) versions of this image by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` with one of the following:
+### Release tags
 
 - `mcr.microsoft.com/devcontainers/python:3`    (latest)
 - `mcr.microsoft.com/devcontainers/python:3.10` (or `3.10-trixie`, `3.10-bookworm` to pin to an OS version)
@@ -30,7 +28,17 @@ You can directly reference [pre-built](https://containers.dev/implementors/refer
 - `mcr.microsoft.com/devcontainers/python:3.13` (or `3.13-trixie`, `3.13-bookworm` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/python:3.14` (or `3.14-trixie`, `3.14-bookworm` to pin to an OS version)
 
+#### Configuration
+
+You can directly reference [pre-built](https://containers.dev/implementors/reference/#prebuilding) versions of this image by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` with one of the above.
+
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
+
+### Development tags (`dev-*`)
+
+Preview tags are published builds of `main`, not stable release artifacts. The current development image definition (version `3.2.2`) is available as a preview through `mcr.microsoft.com/devcontainers/python:dev-3.14` (or `dev-3.14-trixie`, `dev-3.14-bookworm`). Before reporting an issue or reviewing a fix against a stable tag, check the preview tag because a merged change may already be available there.
+
+### Pinned release tags
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
