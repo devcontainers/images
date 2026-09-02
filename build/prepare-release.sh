@@ -54,33 +54,28 @@ update_readme_version() {
 		return
 	fi
 	
-	# Extract major.minor from the version
-	majorMinor=$(echo "$oldVersion" | cut -d. -f1,2)
-	# Escape dots for use in sed/grep regex patterns so they match literal dots only
-	majorMinorEscaped=$(echo "$majorMinor" | sed 's/\./\\./g')
-	
 	# Only stable, pinned tags are release-versioned. Development tags describe main.
 	if ! awk '
 		/^### Pinned release tags$/ { in_pinned_section = 1; next }
 		in_pinned_section && /^#/ { exit }
 		in_pinned_section { print }
-	' "$readmePath" | grep -qE ":${majorMinorEscaped}\.[0-9]+[-\`]"; then
-		echo "ERROR: Pinned release version pattern ${majorMinor}.x not found in $readmePath"
+	' "$readmePath" | grep -qE ":[0-9]+\.[0-9]+\.[0-9]+[-\`]"; then
+		echo "ERROR: Pinned release version pattern not found in $readmePath"
 		exit 1
 	fi
 	
-	awk -v oldVersion="$majorMinorEscaped" -v newVersion="$newVersion" '
+	awk -v newVersion="$newVersion" '
 		/^### Pinned release tags$/ { in_pinned_section = 1 }
 		in_pinned_section && /^#/ && $0 != "### Pinned release tags" { in_pinned_section = 0 }
 		in_pinned_section {
-			gsub(":" oldVersion "\\.[0-9][0-9]*-", ":" newVersion "-")
-			gsub(":" oldVersion "\\.[0-9][0-9]*`", ":" newVersion "`")
-			gsub("`" oldVersion "\\.[0-9][0-9]*-", "`" newVersion "-")
+			gsub(":[0-9]+\\.[0-9]+\\.[0-9]+-", ":" newVersion "-")
+			gsub(":[0-9]+\\.[0-9]+\\.[0-9]+`", ":" newVersion "`")
+			gsub("`[0-9]+\\.[0-9]+\\.[0-9]+-", "`" newVersion "-")
 		}
 		{ print }
 	' "$readmePath" > "$readmePath.tmp" && mv "$readmePath.tmp" "$readmePath"
 	
-	echo "Updated pinned README.md version references from ${majorMinor}.x to $newVersion"
+	echo "Updated pinned README.md version references to $newVersion"
 }
 
 release_image() {

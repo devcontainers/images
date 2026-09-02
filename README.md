@@ -37,6 +37,8 @@ If you want to create your own image or add functionality on top of the images a
 
 This repository contains a select set of images, and we encourage the community to host and share additional images, and features rather than adding them here. You may learn more about this process in [the guidance](https://containers.dev/implementors/features-distribution/) in our spec repo. You may also check out the [features](https://github.com/devcontainers/features) repo for additional customizations you may adopt or modify for your dev containers.
 
+When changing an existing image, update its `manifest.json` version as required by the change, but do not manually update fully pinned release-tag examples in the image README, including for security and bug-fix updates. Release preparation applies the final patch bump and updates the README's pinned release tags to match the final manifest version. Development tags use the `dev-*` channel from `main`; update the Development tags section only when an available development tag name or variant changes.
+
 ## Feedback
 
 Before opening an issue about a stable image tag, check the matching development tag (`dev-*`) first: it is built from `main` and may already include a fix that has not reached a stable release.

@@ -113,6 +113,18 @@ run_test "patch_backtick_variant_tag_updated" \
 - Use \`3.0.2-bookworm\` for the stable variant."
 
 # ---------------------------------------------------------------------------
+# Test 5: The updater replaces the previous semantic tag with the final manifest
+# version even when a contributor made a major or minor version change first.
+# ---------------------------------------------------------------------------
+run_test "arbitrary_manifest_version_transition" \
+	"3.1.6" \
+	"4.0.1" \
+	"### Pinned release tags
+- \`mcr.microsoft.com/devcontainers/anaconda:3.1.6-3\`" \
+	"### Pinned release tags
+- \`mcr.microsoft.com/devcontainers/anaconda:4.0.1-3\`"
+
+# ---------------------------------------------------------------------------
 # Summary
 # ---------------------------------------------------------------------------
 echo ""
