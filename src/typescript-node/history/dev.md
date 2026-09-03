@@ -16,7 +16,7 @@
 
 ## Variant: 26-trixie
 
-**Digest:** sha256:ad269c134d2c524827a0ff9b824d33ba801eaa7806191af0fa3a97cce4d8dc2e
+**Digest:** sha256:762b93586c67991e04c229d554b0a296fc05c8f549ce699733b1968d9984efd5
 
 **Tags:**
 ```
@@ -36,21 +36,21 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-26
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 26.7.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 26.8.1 | /usr/local |
 | [TypeScript](https://www.typescriptlang.org/) | 7.0.2 | /usr/local/share/npm-global |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/node/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9112b53fa8b5ab556c7c893aa8be8a247ac512a0 | /home/node/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 10.8.1 |
+| eslint | 10.9.1 |
 | tslint-to-eslint-config | 2.16.0 |
 | typescript | 7.0.2 |
 
@@ -95,16 +95,16 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-26
 | rsync | 3.4.1+ds1-5+deb13u4 |
 | strace | 6.13+ds-1 |
 | sudo | 1.9.16p2-3+deb13u2 |
-| unzip | 6.0-29 |
+| unzip | 6.0-29+deb13u1 |
 | vim-tiny | 2:9.1.1230-2 |
 | wget | 1.25.0-2 |
-| zip | 3.0-15 |
+| zip | 3.0-15+deb13u1 |
 | zlib1g | 1:1.3.dfsg+really1.3.1-1+b1 |
 | zsh | 5.9-8+b23 |
 
 ## Variant: 24-trixie
 
-**Digest:** sha256:6e88b3fcf428feb6f1e4d0e14c6cb7fe209a8a08536a68909c260d124f9e1846
+**Digest:** sha256:666a8fe672536a75d07c87c06b8b245e1342774127100dc2f52d0c9b5eb1f535
 
 **Tags:**
 ```
@@ -125,21 +125,21 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-trixie
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 24.19.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 24.20.0 | /usr/local |
 | [TypeScript](https://www.typescriptlang.org/) | 7.0.2 | /usr/local/share/npm-global |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/node/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9112b53fa8b5ab556c7c893aa8be8a247ac512a0 | /home/node/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 10.8.1 |
+| eslint | 10.9.1 |
 | tslint-to-eslint-config | 2.16.0 |
 | typescript | 7.0.2 |
 
@@ -184,16 +184,16 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-trixie
 | rsync | 3.4.1+ds1-5+deb13u4 |
 | strace | 6.13+ds-1 |
 | sudo | 1.9.16p2-3+deb13u2 |
-| unzip | 6.0-29 |
+| unzip | 6.0-29+deb13u1 |
 | vim-tiny | 2:9.1.1230-2 |
 | wget | 1.25.0-2 |
-| zip | 3.0-15 |
+| zip | 3.0-15+deb13u1 |
 | zlib1g | 1:1.3.dfsg+really1.3.1-1+b1 |
 | zsh | 5.9-8+b23 |
 
 ## Variant: 22-trixie
 
-**Digest:** sha256:ca0615cfb0575dc9638c0470486ffb6591288eebe714646f1d6ffaebb62f6304
+**Digest:** sha256:c9352c96449645f084608a85bed1e362952f95242b78dba867656b551ca5bc5c
 
 **Tags:**
 ```
@@ -220,14 +220,14 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-22
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/node/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9112b53fa8b5ab556c7c893aa8be8a247ac512a0 | /home/node/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 10.8.1 |
+| eslint | 10.9.1 |
 | tslint-to-eslint-config | 2.16.0 |
 | typescript | 7.0.2 |
 
@@ -272,16 +272,16 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-22
 | rsync | 3.4.1+ds1-5+deb13u4 |
 | strace | 6.13+ds-1 |
 | sudo | 1.9.16p2-3+deb13u2 |
-| unzip | 6.0-29 |
+| unzip | 6.0-29+deb13u1 |
 | vim-tiny | 2:9.1.1230-2 |
 | wget | 1.25.0-2 |
-| zip | 3.0-15 |
+| zip | 3.0-15+deb13u1 |
 | zlib1g | 1:1.3.dfsg+really1.3.1-1+b1 |
 | zsh | 5.9-8+b23 |
 
 ## Variant: 26-bookworm
 
-**Digest:** sha256:10cb9579a4a9586074c6df41a85117466e586b08119586d63626c7d6c39768ff
+**Digest:** sha256:79f5cd968333ab4f2eeb2c94b7c205d81a6cdad8327838215418cb93235b5214
 
 **Tags:**
 ```
@@ -300,21 +300,21 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-26-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 26.7.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 26.8.1 | /usr/local |
 | [TypeScript](https://www.typescriptlang.org/) | 7.0.2 | /usr/local/share/npm-global |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/node/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9112b53fa8b5ab556c7c893aa8be8a247ac512a0 | /home/node/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 10.8.1 |
+| eslint | 10.9.1 |
 | tslint-to-eslint-config | 2.16.0 |
 | typescript | 7.0.2 |
 
@@ -360,7 +360,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-26-bookworm
 | rsync | 3.2.7-1+deb12u6 |
 | strace | 6.1-0.1 |
 | sudo | 1.9.13p3-1+deb12u4 |
-| unzip | 6.0-28 |
+| unzip | 6.0-28+deb12u1 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
 | zip | 3.0-13 |
@@ -369,7 +369,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-26-bookworm
 
 ## Variant: 24-bookworm
 
-**Digest:** sha256:b1dc2cb2c01860068c4e3767e412375258517dafbaec335cffd896ce93b8ad36
+**Digest:** sha256:2aaec3450ce0301aedfe4e931dfbff3c0b324c8f3e194f32c4130d2da87ac543
 
 **Tags:**
 ```
@@ -389,21 +389,21 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 24.19.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 24.20.0 | /usr/local |
 | [TypeScript](https://www.typescriptlang.org/) | 7.0.2 | /usr/local/share/npm-global |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/node/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9112b53fa8b5ab556c7c893aa8be8a247ac512a0 | /home/node/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 10.8.1 |
+| eslint | 10.9.1 |
 | tslint-to-eslint-config | 2.16.0 |
 | typescript | 7.0.2 |
 
@@ -449,7 +449,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bookworm
 | rsync | 3.2.7-1+deb12u6 |
 | strace | 6.1-0.1 |
 | sudo | 1.9.13p3-1+deb12u4 |
-| unzip | 6.0-28 |
+| unzip | 6.0-28+deb12u1 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
 | zip | 3.0-13 |
@@ -458,7 +458,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bookworm
 
 ## Variant: 22-bookworm
 
-**Digest:** sha256:e3e0bbb343fc04438796d7f51ebf79a0948616c3985aeed364ac6b4a85a9b834
+**Digest:** sha256:96f037cafc84f2934b16687da6e244aaa56046015c17d51bc8da8ba898c1e9d8
 
 **Tags:**
 ```
@@ -484,14 +484,14 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-22-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/node/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9112b53fa8b5ab556c7c893aa8be8a247ac512a0 | /home/node/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 10.8.1 |
+| eslint | 10.9.1 |
 | tslint-to-eslint-config | 2.16.0 |
 | typescript | 7.0.2 |
 
@@ -537,7 +537,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-22-bookworm
 | rsync | 3.2.7-1+deb12u6 |
 | strace | 6.1-0.1 |
 | sudo | 1.9.13p3-1+deb12u4 |
-| unzip | 6.0-28 |
+| unzip | 6.0-28+deb12u1 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
 | zip | 3.0-13 |
@@ -546,7 +546,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-22-bookworm
 
 ## Variant: 24-bullseye
 
-**Digest:** sha256:cc68d80680aaba7dc7b4c17ae28a5c4c6a5643731c88c6a6f33f550d26b2d903
+**Digest:** sha256:00f9fb65e567ebfa21c1bde709610f13c0a7f05834c48b1cb95f2f4b4b77d433
 
 **Tags:**
 ```
@@ -566,21 +566,21 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 24.19.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 24.20.0 | /usr/local |
 | [TypeScript](https://www.typescriptlang.org/) | 7.0.2 | /usr/local/share/npm-global |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/node/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9112b53fa8b5ab556c7c893aa8be8a247ac512a0 | /home/node/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 10.8.1 |
+| eslint | 10.9.1 |
 | tslint-to-eslint-config | 2.16.0 |
 | typescript | 7.0.2 |
 
@@ -627,7 +627,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bullseye
 | rsync | 3.2.3-4+deb11u4 |
 | strace | 5.10-1 |
 | sudo | 1.9.5p2-3+deb11u4 |
-| unzip | 6.0-26+deb11u1 |
+| unzip | 6.0-26+deb11u2 |
 | vim-tiny | 2:8.2.2434-3+deb11u3 |
 | wget | 1.21-1+deb11u2 |
 | zip | 3.0-12 |
@@ -636,7 +636,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-bullseye
 
 ## Variant: 22-bullseye
 
-**Digest:** sha256:de6ef0304c8a341e912cafae56da09a0c9589198cabdc70f4f0a1d54cf222983
+**Digest:** sha256:2331620aa1cf2e4ceda46cc42b00bfa469c056f70e0ef4a4f2b3ddd405a174b8
 
 **Tags:**
 ```
@@ -662,14 +662,14 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-22-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/node/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9112b53fa8b5ab556c7c893aa8be8a247ac512a0 | /home/node/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 10.8.1 |
+| eslint | 10.9.1 |
 | tslint-to-eslint-config | 2.16.0 |
 | typescript | 7.0.2 |
 
@@ -716,7 +716,7 @@ mcr.microsoft.com/devcontainers/typescript-node:dev-22-bullseye
 | rsync | 3.2.3-4+deb11u4 |
 | strace | 5.10-1 |
 | sudo | 1.9.5p2-3+deb11u4 |
-| unzip | 6.0-26+deb11u1 |
+| unzip | 6.0-26+deb11u2 |
 | vim-tiny | 2:8.2.2434-3+deb11u3 |
 | wget | 1.21-1+deb11u2 |
 | zip | 3.0-12 |

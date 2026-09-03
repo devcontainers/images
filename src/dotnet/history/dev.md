@@ -15,7 +15,7 @@
 
 ## Variant: 11.0-preview-resolute
 
-**Digest:** sha256:a2d1d59047eab157bb4974f8e86e2d56ada88c227eef2feb5dbebfdc706ea822
+**Digest:** sha256:f4b873f77e32d4cb68b7f63962399f68ff28c09e5f23f660d77984b6852e2d9e
 
 **Tags:**
 ```
@@ -24,7 +24,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-11.0-preview
 ```
 > *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
 
-**Linux distribution:** Ubuntu 26.04 LTS (debian-like distro)
+**Linux distribution:** Ubuntu 26.04.1 LTS (debian-like distro)
 
 **Architectures:** linux/amd64, linux/arm64
 
@@ -35,14 +35,14 @@ mcr.microsoft.com/devcontainers/dotnet:dev-11.0-preview
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [.NET](https://dotnet.microsoft.com/) | 11.0.1006.26359.118 (11.0.0) | /usr |
+| [.NET](https://dotnet.microsoft.com/) | 11.0.1007.26381.103 (11.0.0) | /usr |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9112b53fa8b5ab556c7c893aa8be8a247ac512a0 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -57,10 +57,10 @@ mcr.microsoft.com/devcontainers/dotnet:dev-11.0-preview
 | apt-transport-https | 3.2.0 |
 | apt-utils | 3.2.0 |
 | ca-certificates | 20260601~26.04.1 |
-| curl | 8.18.0-1ubuntu2.3 |
+| curl | 8.18.0-1ubuntu2.4 |
 | dialog | 1.3-20260107-1 |
 | git | 1:2.53.0-1ubuntu1 |
-| gnupg2 | 2.4.8-4ubuntu3 |
+| gnupg2 | 2.4.8-4ubuntu3.1 |
 | htop | 3.4.1-5build2 |
 | iproute2 | 6.19.0-1ubuntu1.1 |
 | jq | 1.8.1-4ubuntu2 |
@@ -79,22 +79,22 @@ mcr.microsoft.com/devcontainers/dotnet:dev-11.0-preview
 | nano | 8.7.1-1ubuntu0.1 |
 | ncdu | 1.22-1build1 |
 | net-tools | 2.10-2ubuntu1 |
-| openssh-client | 1:10.2p1-2ubuntu3.5 |
+| openssh-client | 1:10.2p1-2ubuntu3.6 |
 | procps | 2:4.0.4-9ubuntu1 |
 | psmisc | 23.7-2ubuntu2 |
 | rsync | 3.4.1+ds1-7ubuntu0.3 |
 | strace | 6.19+ds-0ubuntu5 |
 | sudo | 1.9.17p2-1ubuntu3 |
 | unzip | 6.0-29ubuntu1 |
-| vim-tiny | 2:9.1.2141-1ubuntu4.7 |
-| wget | 1.25.0-2ubuntu4.3 |
+| vim-tiny | 2:9.1.2141-1ubuntu4.8 |
+| wget | 1.25.0-2ubuntu4.4 |
 | zip | 3.0-15ubuntu3 |
-| zlib1g | 1:1.3.dfsg+really1.3.1-1ubuntu3 |
+| zlib1g | 1:1.3.dfsg+really1.3.1-1ubuntu3.1 |
 | zsh | 5.9-8ubuntu3 |
 
 ## Variant: 10.0-noble
 
-**Digest:** sha256:89a07acadcad49db41a6ff7e88106ec69cc1cf0fb3aa35552f083f504f6bc4d2
+**Digest:** sha256:859b81ee8d2322e31a276795cae212ee836f25a2d9346e489ce186d966e6c6f7
 
 **Tags:**
 ```
@@ -114,14 +114,14 @@ mcr.microsoft.com/devcontainers/dotnet:dev-10.0
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [.NET](https://dotnet.microsoft.com/) | 10.0.302 (10.0.10) | /usr |
+| [.NET](https://dotnet.microsoft.com/) | 10.0.400 (10.0.11) | /usr |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9112b53fa8b5ab556c7c893aa8be8a247ac512a0 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -136,18 +136,18 @@ mcr.microsoft.com/devcontainers/dotnet:dev-10.0
 | apt-transport-https | 2.8.3 |
 | apt-utils | 2.8.3 |
 | ca-certificates | 20260601~24.04.1 |
-| curl | 8.5.0-2ubuntu10.11 |
+| curl | 8.5.0-2ubuntu10.13 |
 | dialog | 1.3-20240101-1 |
 | git | 1:2.43.0-1ubuntu7.3 |
-| gnupg2 | 2.4.4-2ubuntu17.4 |
+| gnupg2 | 2.4.4-2ubuntu17.6 |
 | htop | 3.3.0-4build1 |
 | iproute2 | 6.1.0-1ubuntu6.4 |
 | jq | 1.7.1-3ubuntu0.24.04.2 |
 | less | 590-2ubuntu2.1 |
 | libc6 | 2.39-0ubuntu8.8 |
-| libgssapi-krb5-2 | 1.20.1-6ubuntu2.7 |
+| libgssapi-krb5-2 | 1.20.1-6ubuntu2.8 |
 | libicu74 | 74.2-1ubuntu3.1 |
-| libkrb5-3 | 1.20.1-6ubuntu2.7 |
+| libkrb5-3 | 1.20.1-6ubuntu2.8 |
 | libstdc++6 | 14.2.0-4ubuntu2~24.04.1 |
 | locales | 2.39-0ubuntu8.8 |
 | lsb-release | 12.0-2 |
@@ -158,22 +158,22 @@ mcr.microsoft.com/devcontainers/dotnet:dev-10.0
 | nano | 7.2-2ubuntu0.2 |
 | ncdu | 1.19-0.1 |
 | net-tools | 2.10-0.1ubuntu4.4 |
-| openssh-client | 1:9.6p1-3ubuntu13.18 |
-| procps | 2:4.0.4-4ubuntu3.2 |
+| openssh-client | 1:9.6p1-3ubuntu13.19 |
+| procps | 2:4.0.4-4ubuntu3.3 |
 | psmisc | 23.7-1build1 |
 | rsync | 3.2.7-1ubuntu1.5 |
 | strace | 6.8-0ubuntu2 |
 | sudo | 1.9.15p5-3ubuntu5.24.04.2 |
 | unzip | 6.0-28ubuntu4.1 |
-| vim-tiny | 2:9.1.0016-1ubuntu7.18 |
-| wget | 1.21.4-1ubuntu4.4 |
+| vim-tiny | 2:9.1.0016-1ubuntu7.20 |
+| wget | 1.21.4-1ubuntu4.5 |
 | zip | 3.0-13ubuntu0.2 |
-| zlib1g | 1:1.3.dfsg-3.1ubuntu2.1 |
+| zlib1g | 1:1.3.dfsg-3.1ubuntu2.2 |
 | zsh | 5.9-6ubuntu2 |
 
 ## Variant: 9.0-bookworm-slim
 
-**Digest:** sha256:66e020315cec8d6de6dcb820a05b57984252dccc0f4ad158bccae6b39ddb6cad
+**Digest:** sha256:7274466617ee796033127d5a01433d0e0b8df68e512161a05e28add8f4ee6e49
 
 **Tags:**
 ```
@@ -194,14 +194,14 @@ mcr.microsoft.com/devcontainers/dotnet:dev-9.0-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [.NET](https://dotnet.microsoft.com/) | 9.0.316 (9.0.18) | /usr |
+| [.NET](https://dotnet.microsoft.com/) | 9.0.317 (9.0.19) | /usr |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9112b53fa8b5ab556c7c893aa8be8a247ac512a0 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -245,7 +245,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-9.0-bookworm
 | rsync | 3.2.7-1+deb12u6 |
 | strace | 6.1-0.1 |
 | sudo | 1.9.13p3-1+deb12u4 |
-| unzip | 6.0-28 |
+| unzip | 6.0-28+deb12u1 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
 | zip | 3.0-13 |
@@ -254,7 +254,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-9.0-bookworm
 
 ## Variant: 9.0-noble
 
-**Digest:** sha256:f012f602f045b322db3215bcff4f5ff138d3553b93361e57d3b22c9669ad4526
+**Digest:** sha256:faea329492e0d746bac4de6429741a2d767065c8e67a7981d8aff42f73ef00ff
 
 **Tags:**
 ```
@@ -273,14 +273,14 @@ mcr.microsoft.com/devcontainers/dotnet:dev-9.0-noble
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [.NET](https://dotnet.microsoft.com/) | 9.0.316 (9.0.18) | /usr |
+| [.NET](https://dotnet.microsoft.com/) | 9.0.317 (9.0.19) | /usr |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9112b53fa8b5ab556c7c893aa8be8a247ac512a0 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -295,18 +295,18 @@ mcr.microsoft.com/devcontainers/dotnet:dev-9.0-noble
 | apt-transport-https | 2.8.3 |
 | apt-utils | 2.8.3 |
 | ca-certificates | 20260601~24.04.1 |
-| curl | 8.5.0-2ubuntu10.11 |
+| curl | 8.5.0-2ubuntu10.13 |
 | dialog | 1.3-20240101-1 |
 | git | 1:2.43.0-1ubuntu7.3 |
-| gnupg2 | 2.4.4-2ubuntu17.4 |
+| gnupg2 | 2.4.4-2ubuntu17.6 |
 | htop | 3.3.0-4build1 |
 | iproute2 | 6.1.0-1ubuntu6.4 |
 | jq | 1.7.1-3ubuntu0.24.04.2 |
 | less | 590-2ubuntu2.1 |
 | libc6 | 2.39-0ubuntu8.8 |
-| libgssapi-krb5-2 | 1.20.1-6ubuntu2.7 |
+| libgssapi-krb5-2 | 1.20.1-6ubuntu2.8 |
 | libicu74 | 74.2-1ubuntu3.1 |
-| libkrb5-3 | 1.20.1-6ubuntu2.7 |
+| libkrb5-3 | 1.20.1-6ubuntu2.8 |
 | libstdc++6 | 14.2.0-4ubuntu2~24.04.1 |
 | locales | 2.39-0ubuntu8.8 |
 | lsb-release | 12.0-2 |
@@ -317,22 +317,22 @@ mcr.microsoft.com/devcontainers/dotnet:dev-9.0-noble
 | nano | 7.2-2ubuntu0.2 |
 | ncdu | 1.19-0.1 |
 | net-tools | 2.10-0.1ubuntu4.4 |
-| openssh-client | 1:9.6p1-3ubuntu13.18 |
-| procps | 2:4.0.4-4ubuntu3.2 |
+| openssh-client | 1:9.6p1-3ubuntu13.19 |
+| procps | 2:4.0.4-4ubuntu3.3 |
 | psmisc | 23.7-1build1 |
 | rsync | 3.2.7-1ubuntu1.5 |
 | strace | 6.8-0ubuntu2 |
 | sudo | 1.9.15p5-3ubuntu5.24.04.2 |
 | unzip | 6.0-28ubuntu4.1 |
-| vim-tiny | 2:9.1.0016-1ubuntu7.18 |
-| wget | 1.21.4-1ubuntu4.4 |
+| vim-tiny | 2:9.1.0016-1ubuntu7.20 |
+| wget | 1.21.4-1ubuntu4.5 |
 | zip | 3.0-13ubuntu0.2 |
-| zlib1g | 1:1.3.dfsg-3.1ubuntu2.1 |
+| zlib1g | 1:1.3.dfsg-3.1ubuntu2.2 |
 | zsh | 5.9-6ubuntu2 |
 
 ## Variant: 8.0-bookworm-slim
 
-**Digest:** sha256:c4f68e7eb937b4143c547eccf030ddf331e13b59a4f4bafc3b5401b8923e69d0
+**Digest:** sha256:22f25aeaec8b128b403b340468c7d0107d138b99d29b75957a89ccec20e19eec
 
 **Tags:**
 ```
@@ -353,14 +353,14 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [.NET](https://dotnet.microsoft.com/) | 8.0.423 (8.0.29) | /usr |
+| [.NET](https://dotnet.microsoft.com/) | 8.0.424 (8.0.30) | /usr |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9112b53fa8b5ab556c7c893aa8be8a247ac512a0 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -404,7 +404,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-bookworm
 | rsync | 3.2.7-1+deb12u6 |
 | strace | 6.1-0.1 |
 | sudo | 1.9.13p3-1+deb12u4 |
-| unzip | 6.0-28 |
+| unzip | 6.0-28+deb12u1 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
 | zip | 3.0-13 |
@@ -413,7 +413,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-bookworm
 
 ## Variant: 8.0-noble
 
-**Digest:** sha256:0480b39ec8218553a17c75af6ffef63e83132703c177f03dd89ce96075db674d
+**Digest:** sha256:684959710e899e7049dcabd3ee9d15d16fd218c35cf1358fe76f1898dcab2dbb
 
 **Tags:**
 ```
@@ -432,14 +432,14 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-noble
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [.NET](https://dotnet.microsoft.com/) | 8.0.423 (8.0.29) | /usr |
+| [.NET](https://dotnet.microsoft.com/) | 8.0.424 (8.0.30) | /usr |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9112b53fa8b5ab556c7c893aa8be8a247ac512a0 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -454,18 +454,18 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-noble
 | apt-transport-https | 2.8.3 |
 | apt-utils | 2.8.3 |
 | ca-certificates | 20260601~24.04.1 |
-| curl | 8.5.0-2ubuntu10.11 |
+| curl | 8.5.0-2ubuntu10.13 |
 | dialog | 1.3-20240101-1 |
 | git | 1:2.43.0-1ubuntu7.3 |
-| gnupg2 | 2.4.4-2ubuntu17.4 |
+| gnupg2 | 2.4.4-2ubuntu17.6 |
 | htop | 3.3.0-4build1 |
 | iproute2 | 6.1.0-1ubuntu6.4 |
 | jq | 1.7.1-3ubuntu0.24.04.2 |
 | less | 590-2ubuntu2.1 |
 | libc6 | 2.39-0ubuntu8.8 |
-| libgssapi-krb5-2 | 1.20.1-6ubuntu2.7 |
+| libgssapi-krb5-2 | 1.20.1-6ubuntu2.8 |
 | libicu74 | 74.2-1ubuntu3.1 |
-| libkrb5-3 | 1.20.1-6ubuntu2.7 |
+| libkrb5-3 | 1.20.1-6ubuntu2.8 |
 | libstdc++6 | 14.2.0-4ubuntu2~24.04.1 |
 | locales | 2.39-0ubuntu8.8 |
 | lsb-release | 12.0-2 |
@@ -476,22 +476,22 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-noble
 | nano | 7.2-2ubuntu0.2 |
 | ncdu | 1.19-0.1 |
 | net-tools | 2.10-0.1ubuntu4.4 |
-| openssh-client | 1:9.6p1-3ubuntu13.18 |
-| procps | 2:4.0.4-4ubuntu3.2 |
+| openssh-client | 1:9.6p1-3ubuntu13.19 |
+| procps | 2:4.0.4-4ubuntu3.3 |
 | psmisc | 23.7-1build1 |
 | rsync | 3.2.7-1ubuntu1.5 |
 | strace | 6.8-0ubuntu2 |
 | sudo | 1.9.15p5-3ubuntu5.24.04.2 |
 | unzip | 6.0-28ubuntu4.1 |
-| vim-tiny | 2:9.1.0016-1ubuntu7.18 |
-| wget | 1.21.4-1ubuntu4.4 |
+| vim-tiny | 2:9.1.0016-1ubuntu7.20 |
+| wget | 1.21.4-1ubuntu4.5 |
 | zip | 3.0-13ubuntu0.2 |
-| zlib1g | 1:1.3.dfsg-3.1ubuntu2.1 |
+| zlib1g | 1:1.3.dfsg-3.1ubuntu2.2 |
 | zsh | 5.9-6ubuntu2 |
 
 ## Variant: 8.0-jammy
 
-**Digest:** sha256:cf99002fcc9f5f4a196a72a323fb0702cc04383e86a17c20e196f3041fecda9c
+**Digest:** sha256:8f22487741389fdc9409b005a75a287f842b46d9056df99b7d2b473ea6c354a3
 
 **Tags:**
 ```
@@ -510,14 +510,14 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-jammy
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [.NET](https://dotnet.microsoft.com/) | 8.0.423 (8.0.29) | /usr |
+| [.NET](https://dotnet.microsoft.com/) | 8.0.424 (8.0.30) | /usr |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9112b53fa8b5ab556c7c893aa8be8a247ac512a0 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -532,7 +532,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-jammy
 | apt-transport-https | 2.4.14 |
 | apt-utils | 2.4.14 |
 | ca-certificates | 20260601~22.04.1 |
-| curl | 7.81.0-1ubuntu1.25 |
+| curl | 7.81.0-1ubuntu1.27 |
 | dialog | 1.3-20211214-1 |
 | git | 1:2.34.1-1ubuntu1.17 |
 | gnupg2 | 2.2.27-3ubuntu2.5 |
@@ -555,15 +555,15 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-jammy
 | nano | 6.2-1ubuntu0.2 |
 | ncdu | 1.15.1-1 |
 | net-tools | 1.60+git20181103.0eebece-1ubuntu5.4 |
-| openssh-client | 1:8.9p1-3ubuntu0.16 |
+| openssh-client | 1:8.9p1-3ubuntu0.17 |
 | procps | 2:3.3.17-6ubuntu2.1 |
 | psmisc | 23.4-2build3 |
 | rsync | 3.2.7-0ubuntu0.22.04.7 |
 | strace | 5.16-0ubuntu3 |
 | sudo | 1.9.9-1ubuntu2.6 |
 | unzip | 6.0-26ubuntu3.2 |
-| vim-tiny | 2:8.2.3995-1ubuntu2.34 |
-| wget | 1.21.2-2ubuntu1.4 |
+| vim-tiny | 2:8.2.3995-1ubuntu2.36 |
+| wget | 1.21.2-2ubuntu1.5 |
 | zip | 3.0-12build2 |
 | zlib1g | 1:1.2.11.dfsg-2ubuntu9.2 |
 | zsh | 5.8.1-1 |

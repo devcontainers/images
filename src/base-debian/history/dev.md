@@ -11,7 +11,7 @@
 
 ## Variant: trixie
 
-**Digest:** sha256:ace3321a6e7951f449709baa7c9d61b091295d2a8c427c1f69330ab7cce1be07
+**Digest:** sha256:73ff0f258b45537e64df09ce1d541fc0396981984fa29765669227b1a39de4c1
 
 **Tags:**
 ```
@@ -33,7 +33,7 @@ mcr.microsoft.com/devcontainers/base:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9112b53fa8b5ab556c7c893aa8be8a247ac512a0 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -76,16 +76,16 @@ mcr.microsoft.com/devcontainers/base:dev
 | rsync | 3.4.1+ds1-5+deb13u4 |
 | strace | 6.13+ds-1 |
 | sudo | 1.9.16p2-3+deb13u2 |
-| unzip | 6.0-29 |
+| unzip | 6.0-29+deb13u1 |
 | vim-tiny | 2:9.1.1230-2 |
 | wget | 1.25.0-2 |
-| zip | 3.0-15 |
+| zip | 3.0-15+deb13u1 |
 | zlib1g | 1:1.3.dfsg+really1.3.1-1+b1 |
 | zsh | 5.9-8+b23 |
 
 ## Variant: bookworm
 
-**Digest:** sha256:b59e06177d57887a98d4f3c7fcd291988ec3351b2a49abca010dd12836e39df1
+**Digest:** sha256:398e9f6387fc3b4588633ef985930fdc85ed88d178740cf378b9c8e2e8082e2e
 
 **Tags:**
 ```
@@ -105,7 +105,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian12
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9112b53fa8b5ab556c7c893aa8be8a247ac512a0 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -149,7 +149,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian12
 | rsync | 3.2.7-1+deb12u6 |
 | strace | 6.1-0.1 |
 | sudo | 1.9.13p3-1+deb12u4 |
-| unzip | 6.0-28 |
+| unzip | 6.0-28+deb12u1 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
 | zip | 3.0-13 |
@@ -158,7 +158,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian12
 
 ## Variant: bullseye
 
-**Digest:** sha256:165181d5ceda76861ce0e4c578801574f582dc9c339362a8537308a5ba4b4fdd
+**Digest:** sha256:3864d96e7d10268409cdba9b7e0d58a3cc5d6bf76fd763e89cd8d7af033e832e
 
 **Tags:**
 ```
@@ -178,7 +178,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian11
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9112b53fa8b5ab556c7c893aa8be8a247ac512a0 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -223,7 +223,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian11
 | rsync | 3.2.3-4+deb11u4 |
 | strace | 5.10-1 |
 | sudo | 1.9.5p2-3+deb11u4 |
-| unzip | 6.0-26+deb11u1 |
+| unzip | 6.0-26+deb11u2 |
 | vim-tiny | 2:8.2.2434-3+deb11u3 |
 | wget | 1.21-1+deb11u2 |
 | zip | 3.0-12 |
