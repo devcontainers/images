@@ -16,7 +16,7 @@
 
 ## Variant: 26-trixie
 
-**Digest:** sha256:830fa9b32f499346dd650c953e3e6b64522aaaf38d03c85ba182755910f4e613
+**Digest:** sha256:52a3bff97306db8a5ae576a5d611ed862ef765409a825b51704ca4048014896b
 
 **Tags:**
 ```
@@ -36,20 +36,20 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-26
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 26.7.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 26.8.1 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/node/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9112b53fa8b5ab556c7c893aa8be8a247ac512a0 | /home/node/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 10.8.1 |
+| eslint | 10.9.1 |
 
 **Other tools and utilities**
 
@@ -92,16 +92,16 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-26
 | rsync | 3.4.1+ds1-5+deb13u4 |
 | strace | 6.13+ds-1 |
 | sudo | 1.9.16p2-3+deb13u2 |
-| unzip | 6.0-29 |
+| unzip | 6.0-29+deb13u1 |
 | vim-tiny | 2:9.1.1230-2 |
 | wget | 1.25.0-2 |
-| zip | 3.0-15 |
+| zip | 3.0-15+deb13u1 |
 | zlib1g | 1:1.3.dfsg+really1.3.1-1+b1 |
 | zsh | 5.9-8+b23 |
 
 ## Variant: 24-trixie
 
-**Digest:** sha256:5c1f0853aae1826b9fa8b4a2add34939625136a89d3a8076137855e8d5e51110
+**Digest:** sha256:16824f9850684c40083fa59b44fe7a2ee2c747cb0c1009021ba6dd4cf2209445
 
 **Tags:**
 ```
@@ -122,20 +122,20 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-trixie
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 24.19.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 24.20.0 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/node/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9112b53fa8b5ab556c7c893aa8be8a247ac512a0 | /home/node/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 10.8.1 |
+| eslint | 10.9.1 |
 
 **Other tools and utilities**
 
@@ -178,16 +178,16 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-trixie
 | rsync | 3.4.1+ds1-5+deb13u4 |
 | strace | 6.13+ds-1 |
 | sudo | 1.9.16p2-3+deb13u2 |
-| unzip | 6.0-29 |
+| unzip | 6.0-29+deb13u1 |
 | vim-tiny | 2:9.1.1230-2 |
 | wget | 1.25.0-2 |
-| zip | 3.0-15 |
+| zip | 3.0-15+deb13u1 |
 | zlib1g | 1:1.3.dfsg+really1.3.1-1+b1 |
 | zsh | 5.9-8+b23 |
 
 ## Variant: 22-trixie
 
-**Digest:** sha256:e0f5909ae44aa4c340a94240c7ef7f4455c0a4565eff9b0e718dcb0e9115f9d4
+**Digest:** sha256:ad6747996b2f07e0e17808fcfca6bbf1767ac8ce8f7e14cfa0c0ea1af3c339da
 
 **Tags:**
 ```
@@ -213,14 +213,14 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-22
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/node/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9112b53fa8b5ab556c7c893aa8be8a247ac512a0 | /home/node/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 10.8.1 |
+| eslint | 10.9.1 |
 
 **Other tools and utilities**
 
@@ -263,16 +263,16 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-22
 | rsync | 3.4.1+ds1-5+deb13u4 |
 | strace | 6.13+ds-1 |
 | sudo | 1.9.16p2-3+deb13u2 |
-| unzip | 6.0-29 |
+| unzip | 6.0-29+deb13u1 |
 | vim-tiny | 2:9.1.1230-2 |
 | wget | 1.25.0-2 |
-| zip | 3.0-15 |
+| zip | 3.0-15+deb13u1 |
 | zlib1g | 1:1.3.dfsg+really1.3.1-1+b1 |
 | zsh | 5.9-8+b23 |
 
 ## Variant: 26-bookworm
 
-**Digest:** sha256:e24345abd8bdde0611cdce28cb6b1de953baf8b0610789108c32cf762f573a31
+**Digest:** sha256:1f44528a118d0a690f4f411856d06603d60f837adcd1a8db507e1b623f8d0414
 
 **Tags:**
 ```
@@ -291,20 +291,20 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-26-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 26.7.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 26.8.1 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/node/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9112b53fa8b5ab556c7c893aa8be8a247ac512a0 | /home/node/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 10.8.1 |
+| eslint | 10.9.1 |
 
 **Other tools and utilities**
 
@@ -348,7 +348,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-26-bookworm
 | rsync | 3.2.7-1+deb12u6 |
 | strace | 6.1-0.1 |
 | sudo | 1.9.13p3-1+deb12u4 |
-| unzip | 6.0-28 |
+| unzip | 6.0-28+deb12u1 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
 | zip | 3.0-13 |
@@ -357,7 +357,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-26-bookworm
 
 ## Variant: 24-bookworm
 
-**Digest:** sha256:34d06da34a68e1db8f6810b7ee22f37c99764a76876c7f4ec329ca9d36ffca4b
+**Digest:** sha256:ec94580bd934cf974cf1ce2ffa903a574c24985baee31c32a1918f243ffa8e3f
 
 **Tags:**
 ```
@@ -377,20 +377,20 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 24.19.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 24.20.0 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/node/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9112b53fa8b5ab556c7c893aa8be8a247ac512a0 | /home/node/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 10.8.1 |
+| eslint | 10.9.1 |
 
 **Other tools and utilities**
 
@@ -434,7 +434,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bookworm
 | rsync | 3.2.7-1+deb12u6 |
 | strace | 6.1-0.1 |
 | sudo | 1.9.13p3-1+deb12u4 |
-| unzip | 6.0-28 |
+| unzip | 6.0-28+deb12u1 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
 | zip | 3.0-13 |
@@ -443,7 +443,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bookworm
 
 ## Variant: 22-bookworm
 
-**Digest:** sha256:7fa9dd7cd61c4af9156fc5e21746d3212a4de45b8e7a78fa4ccf4b5dc3f8d846
+**Digest:** sha256:fa917e9264f03804651f66424aa205dd8eb2b4ae271be16a5fd6a88fdc7be31b
 
 **Tags:**
 ```
@@ -468,14 +468,14 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-22-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/node/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9112b53fa8b5ab556c7c893aa8be8a247ac512a0 | /home/node/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 10.8.1 |
+| eslint | 10.9.1 |
 
 **Other tools and utilities**
 
@@ -519,7 +519,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-22-bookworm
 | rsync | 3.2.7-1+deb12u6 |
 | strace | 6.1-0.1 |
 | sudo | 1.9.13p3-1+deb12u4 |
-| unzip | 6.0-28 |
+| unzip | 6.0-28+deb12u1 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
 | zip | 3.0-13 |
@@ -528,7 +528,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-22-bookworm
 
 ## Variant: 24-bullseye
 
-**Digest:** sha256:8d73541434d07606b1b8f33f1284b0f55da37af83191afda518aeb34c79a9e3f
+**Digest:** sha256:2e7abc0c5830a616a9c45433c364781ef11309ec01ee4eb6ad62993be26f20d0
 
 **Tags:**
 ```
@@ -548,20 +548,20 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 24.19.0 | /usr/local |
+| [Node.js](https://nodejs.org/en/) | 24.20.0 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/node/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9112b53fa8b5ab556c7c893aa8be8a247ac512a0 | /home/node/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 10.8.1 |
+| eslint | 10.9.1 |
 
 **Other tools and utilities**
 
@@ -606,7 +606,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 | rsync | 3.2.3-4+deb11u4 |
 | strace | 5.10-1 |
 | sudo | 1.9.5p2-3+deb11u4 |
-| unzip | 6.0-26+deb11u1 |
+| unzip | 6.0-26+deb11u2 |
 | vim-tiny | 2:8.2.2434-3+deb11u3 |
 | wget | 1.21-1+deb11u2 |
 | zip | 3.0-12 |
@@ -615,7 +615,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-bullseye
 
 ## Variant: 22-bullseye
 
-**Digest:** sha256:adece3b19b456651c27c4f6c1f3186c328da6f26dd845255e6ecff8931761f21
+**Digest:** sha256:5b0ce316fc9e0266975b09df5ddd6c7620293327f72221480cb17b025fdc4bdd
 
 **Tags:**
 ```
@@ -640,14 +640,14 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-22-bullseye
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/node/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 9112b53fa8b5ab556c7c893aa8be8a247ac512a0 | /home/node/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
 
 **Npm globally installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| eslint | 10.8.1 |
+| eslint | 10.9.1 |
 
 **Other tools and utilities**
 
@@ -692,7 +692,7 @@ mcr.microsoft.com/devcontainers/javascript-node:dev-22-bullseye
 | rsync | 3.2.3-4+deb11u4 |
 | strace | 5.10-1 |
 | sudo | 1.9.5p2-3+deb11u4 |
-| unzip | 6.0-26+deb11u1 |
+| unzip | 6.0-26+deb11u2 |
 | vim-tiny | 2:8.2.2434-3+deb11u3 |
 | wget | 1.21-1+deb11u2 |
 | zip | 3.0-12 |
