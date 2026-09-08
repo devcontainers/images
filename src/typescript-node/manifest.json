@@ -1,14 +1,12 @@
 {
-	"version": "5.1.2",
+	"version": "6.0.0",
 	"variants": [
 		"26-trixie",
 		"24-trixie",
 		"22-trixie",
 		"26-bookworm",
 		"24-bookworm",
-		"22-bookworm",
-		"24-bullseye",
-		"22-bullseye"
+		"22-bookworm"
 	],
 	"build": {
 		"latest": "24-trixie",
@@ -38,14 +36,6 @@
 			"22-bookworm": [
 				"linux/amd64",
 				"linux/arm64"
-			],
-			"24-bullseye": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"22-bullseye": [
-				"linux/amd64",
-				"linux/arm64"
 			]
 		},
 		"tags": [
@@ -64,9 +54,6 @@
 			],
 			"24-bookworm": [
 				"typescript-node:${VERSION}-bookworm"
-			],
-			"24-bullseye": [
-				"typescript-node:${VERSION}-bullseye"
 			]
 		}
 	},

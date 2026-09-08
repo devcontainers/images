@@ -9,8 +9,8 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/ruby |
-| *Available image variants* | 4 / 4-trixie, 4-bookworm, 3.4 / 3.4-trixie, 3.3 / 3.3-trixie, 3.4-bookworm, 3.3-bookworm, 3.4-bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/ruby/tags/list)) |
-| *Published image architecture(s)* | x86-64, arm64/aarch64 for `trixie`, `bookworm` , and `bullseye` variants |
+| *Available image variants* | 4 / 4-trixie, 4-bookworm, 3.4 / 3.4-trixie, 3.3 / 3.3-trixie, 3.4-bookworm, 3.3-bookworm ([full list](https://mcr.microsoft.com/v2/devcontainers/ruby/tags/list)) |
+| *Published image architecture(s)* | x86-64, arm64/aarch64 for `trixie` and `bookworm` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
 | *Languages, platforms* | Ruby |
@@ -23,16 +23,16 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 
 - `mcr.microsoft.com/devcontainers/ruby`     (latest)
 - `mcr.microsoft.com/devcontainers/ruby:4`   (or `4-trixie`, `4-bookworm` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/ruby:3.4` (or `3.4-trixie`, `3.4-bookworm`, `3.4-bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/ruby:3.3` (or `3.3-trixie`, `3.3-bookworm`, `3.3-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/ruby:3.4` (or `3.4-trixie`, `3.4-bookworm` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/ruby:3.3` (or `3.3-trixie`, `3.3-bookworm` to pin to an OS version)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/devcontainers/ruby:4-4`     (or `4-4-trixie`, `4-4-bookworm`, `4-4-bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/ruby:4.0-4`   (or `4.0-4-trixie`, `4.0-4-bookworm`, `4.0-4-bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/ruby:4.0.2-4` (or `4.0.2-4-trixie`, `4.0.2-4-bookworm`, `4.0.2-4-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/ruby:4-4`     (or `4-4-trixie`, `4-4-bookworm` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/ruby:5.0-4`   (or `5.0-4-trixie`, `5.0-4-bookworm` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/ruby:5.0.0-4` (or `5.0.0-4-trixie`, `5.0.0-4-bookworm` to pin to an OS version)
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `4-4.0`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 

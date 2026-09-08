@@ -1,14 +1,12 @@
 {
-	"version": "4.0.2",
+	"version": "5.0.0",
 	"variants": [
 		"4.0-trixie",
 		"3.4-trixie",		
 		"3.3-trixie",
 		"4.0-bookworm",		
 		"3.4-bookworm",		
-		"3.3-bookworm",
-		"3.4-bullseye",		
-		"3.3-bullseye"
+		"3.3-bookworm"
 	],
 	"build": {
 		"latest": "4.0-trixie",
@@ -35,14 +33,6 @@
 				"linux/arm64"
 			],			
 			"3.3-bookworm": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"3.4-bullseye": [
-				"linux/amd64",
-				"linux/arm64"
-			],			
-			"3.3-bullseye": [
 				"linux/amd64",
 				"linux/arm64"
 			]
@@ -74,12 +64,6 @@
 			],
 			"3.3-bookworm": [
 				"ruby:${VERSION}-3.3-bookworm"
-			],			
-			"3.4-bullseye": [
-				"ruby:${VERSION}-3.4-bullseye"
-			],
-			"3.3-bullseye": [
-				"ruby:${VERSION}-3.3-bullseye"
 			]
 		}
 	},

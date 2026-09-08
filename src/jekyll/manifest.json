@@ -1,9 +1,8 @@
 {
-	"version": "2.3.3",
+	"version": "3.0.0",
 	"variants": [
 		"3.4-bookworm",
-		"3.3-bookworm",
-		"3.3-bullseye"
+		"3.3-bookworm"
 	],
 	"build": {
 		"latest": "3.4-bookworm",
@@ -15,10 +14,6 @@
 				"linux/arm64"
 			],
 			"3.3-bookworm": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"3.3-bullseye": [
 				"linux/amd64",
 				"linux/arm64"
 			]
@@ -33,9 +28,6 @@
 			],
 			"3.3-bookworm": [
 				"jekyll:${VERSION}-bookworm"
-			],
-			"3.3-bullseye": [
-				"jekyll:${VERSION}-bullseye"
 			]
 		}
 	},
