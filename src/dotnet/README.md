@@ -10,9 +10,9 @@
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/dotnet |
 | *Available image variants* | 11.0-preview /11.0-preview-resolute, 10.0 /10.0-noble, 9.0 /9.0-bookworm, 8.0 /8.0-bookworm, 9.0-noble, 8.0-noble, 8.0-jammy ([full list](https://mcr.microsoft.com/v2/devcontainers/dotnet/tags/list)) |
-| *Published image architecture(s)* | x86-64, arm64/aarch64 for `resolute`, `bookworm`, `bullseye`, `noble`, `jammy` variants |
+| *Published image architecture(s)* | x86-64, arm64/aarch64 for `resolute`, `bookworm`, `noble`, `jammy` variants |
 | *Container host OS support* | Linux, macOS, Windows |
-| *Container OS* | Ubuntu (`-focal`, `-jammy`, `-noble`), Debian (`-bullseye`, `-bookworm`, `-resolute`) |
+| *Container OS* | Ubuntu (`-focal`, `-jammy`, `-noble`), Debian (`-bookworm`, `-resolute`) |
 | *Languages, platforms* | .NET, .NET Core, C# |
 
 See **[history](history)** for information on the contents of published images.
