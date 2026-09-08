@@ -1,9 +1,8 @@
 {
-	"version": "2.1.15",
+	"version": "2.2.0",
 	"variants": [
 		"trixie",
-		"bookworm",
-		"bullseye"
+		"bookworm"
 	],
 	"build": {
 		"latest": "trixie",
@@ -14,10 +13,6 @@
 				"linux/arm64"
 			],
 			"bookworm": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"bullseye": [
 				"linux/amd64",
 				"linux/arm64"
 			]
@@ -33,9 +28,6 @@
 			],
 			"bookworm": [
 				"base:${VERSION}-debian12"
-			],
-			"bullseye": [
-				"base:${VERSION}-debian11"
 			]
 		}
 	},
