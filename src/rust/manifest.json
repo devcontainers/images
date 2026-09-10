@@ -1,9 +1,8 @@
 {
-	"version": "2.0.16",
+	"version": "2.1.0",
 	"variants": [
 		"trixie",
-		"bookworm",
-		"bullseye"
+		"bookworm"
 	],
 	"build": {
 		"latest": "trixie",
@@ -16,10 +15,6 @@
 			"bookworm": [
 				"linux/amd64",
 				"linux/arm64"
-			],
-			"bullseye": [
-				"linux/amd64",
-				"linux/arm64"
 			]
 		},
 		"tags": [
@@ -29,9 +24,6 @@
 			"trixie": [
 				"rust:${VERSION}-1",
 				"rust:${VERSION}-1-trixie"
-			],
-			"bullseye": [
-				"rust:${VERSION}-1-bullseye"
 			],
 			"bookworm": [
 				"rust:${VERSION}-1-bookworm"
