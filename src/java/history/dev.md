@@ -16,7 +16,7 @@
 
 ## Variant: 25-trixie
 
-**Digest:** sha256:8ced2946427999157bef9eaf02a19fdf80aeda46cdb7df82b2430d22fb00d47a
+**Digest:** sha256:360bda129e2d1ebee8a233b13ab1011003b29e93162890fa3f2eb6d3afa8fe7f
 
 **Tags:**
 ```
@@ -44,8 +44,8 @@ mcr.microsoft.com/devcontainers/java:dev-trixie
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 129de5a05f9f234a3202fa5c8a13e15891149adc | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -88,16 +88,16 @@ mcr.microsoft.com/devcontainers/java:dev-trixie
 | rsync | 3.4.1+ds1-5+deb13u4 |
 | strace | 6.13+ds-1 |
 | sudo | 1.9.16p2-3+deb13u2 |
-| unzip | 6.0-29 |
+| unzip | 6.0-29+deb13u1 |
 | vim-tiny | 2:9.1.1230-2 |
 | wget | 1.25.0-2 |
-| zip | 3.0-15 |
+| zip | 3.0-15+deb13u1 |
 | zlib1g | 1:1.3.dfsg+really1.3.1-1+b1 |
 | zsh | 5.9-8+b23 |
 
 ## Variant: 21-trixie
 
-**Digest:** sha256:33456fd3bf77bb27c40d1f3e63d89a252cef91b5ea2502bef9887a21cd343713
+**Digest:** sha256:8e8207e274013b8a654f83c8a7b56b565bb4ac11de1dcc4a0a421833ee3e4a64
 
 **Tags:**
 ```
@@ -124,8 +124,8 @@ mcr.microsoft.com/devcontainers/java:dev-21-jdk-trixie
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 129de5a05f9f234a3202fa5c8a13e15891149adc | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -168,16 +168,16 @@ mcr.microsoft.com/devcontainers/java:dev-21-jdk-trixie
 | rsync | 3.4.1+ds1-5+deb13u4 |
 | strace | 6.13+ds-1 |
 | sudo | 1.9.16p2-3+deb13u2 |
-| unzip | 6.0-29 |
+| unzip | 6.0-29+deb13u1 |
 | vim-tiny | 2:9.1.1230-2 |
 | wget | 1.25.0-2 |
-| zip | 3.0-15 |
+| zip | 3.0-15+deb13u1 |
 | zlib1g | 1:1.3.dfsg+really1.3.1-1+b1 |
 | zsh | 5.9-8+b23 |
 
 ## Variant: 17-trixie
 
-**Digest:** sha256:c74693bd124cd0a8d5a7dcfe31103eb5d5017dbba74f2a759e365316808d89b6
+**Digest:** sha256:dc993a68876ceb9492a003ff957bf33d933756e67d9be9ae50ded22f9ac3d5cd
 
 **Tags:**
 ```
@@ -204,8 +204,8 @@ mcr.microsoft.com/devcontainers/java:dev-17-jdk-trixie
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 129de5a05f9f234a3202fa5c8a13e15891149adc | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -248,16 +248,16 @@ mcr.microsoft.com/devcontainers/java:dev-17-jdk-trixie
 | rsync | 3.4.1+ds1-5+deb13u4 |
 | strace | 6.13+ds-1 |
 | sudo | 1.9.16p2-3+deb13u2 |
-| unzip | 6.0-29 |
+| unzip | 6.0-29+deb13u1 |
 | vim-tiny | 2:9.1.1230-2 |
 | wget | 1.25.0-2 |
-| zip | 3.0-15 |
+| zip | 3.0-15+deb13u1 |
 | zlib1g | 1:1.3.dfsg+really1.3.1-1+b1 |
 | zsh | 5.9-8+b23 |
 
 ## Variant: 11-trixie
 
-**Digest:** sha256:11c27a86d6e31dad62aec974b012b38b1604324bb292c4900601dd09a52b0f73
+**Digest:** sha256:3700b7932310ff3a98f80f535ef8b76f7241d8d373dca86895172fa82d27c4ff
 
 **Tags:**
 ```
@@ -284,8 +284,8 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-trixie
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 129de5a05f9f234a3202fa5c8a13e15891149adc | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -328,16 +328,16 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-trixie
 | rsync | 3.4.1+ds1-5+deb13u4 |
 | strace | 6.13+ds-1 |
 | sudo | 1.9.16p2-3+deb13u2 |
-| unzip | 6.0-29 |
+| unzip | 6.0-29+deb13u1 |
 | vim-tiny | 2:9.1.1230-2 |
 | wget | 1.25.0-2 |
-| zip | 3.0-15 |
+| zip | 3.0-15+deb13u1 |
 | zlib1g | 1:1.3.dfsg+really1.3.1-1+b1 |
 | zsh | 5.9-8+b23 |
 
 ## Variant: 25-bookworm
 
-**Digest:** sha256:38df08d5c43639b9387e61b0930982b04421d6aaa6d0c9d461ac78ae67b2d752
+**Digest:** sha256:ff47093302b9305bb7d4b99f126c312bba1400faf32ca22cfb2436569e50750f
 
 **Tags:**
 ```
@@ -364,8 +364,8 @@ mcr.microsoft.com/devcontainers/java:dev-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 129de5a05f9f234a3202fa5c8a13e15891149adc | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -409,7 +409,7 @@ mcr.microsoft.com/devcontainers/java:dev-bookworm
 | rsync | 3.2.7-1+deb12u6 |
 | strace | 6.1-0.1 |
 | sudo | 1.9.13p3-1+deb12u4 |
-| unzip | 6.0-28 |
+| unzip | 6.0-28+deb12u1 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
 | zip | 3.0-13 |
@@ -418,7 +418,7 @@ mcr.microsoft.com/devcontainers/java:dev-bookworm
 
 ## Variant: 21-bookworm
 
-**Digest:** sha256:8c3a5019464b1a2223b8e247f8f88cf6cbdd7471db7b257a90cfc76aac8470ae
+**Digest:** sha256:2f6e5e24d9ce0985adf0264b7911ac35a7cc52003e5c68fd437658e04c97def4
 
 **Tags:**
 ```
@@ -444,8 +444,8 @@ mcr.microsoft.com/devcontainers/java:dev-21-jdk-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 129de5a05f9f234a3202fa5c8a13e15891149adc | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -489,7 +489,7 @@ mcr.microsoft.com/devcontainers/java:dev-21-jdk-bookworm
 | rsync | 3.2.7-1+deb12u6 |
 | strace | 6.1-0.1 |
 | sudo | 1.9.13p3-1+deb12u4 |
-| unzip | 6.0-28 |
+| unzip | 6.0-28+deb12u1 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
 | zip | 3.0-13 |
@@ -498,7 +498,7 @@ mcr.microsoft.com/devcontainers/java:dev-21-jdk-bookworm
 
 ## Variant: 17-bookworm
 
-**Digest:** sha256:8516abab537d5b3d60323d22b7cd2a69026ddb2d61f442bbd49e5f739589ac88
+**Digest:** sha256:43fbf343d993a6d8d1c612002310a92ec527f521fb162408b1ac370c50e29cb6
 
 **Tags:**
 ```
@@ -524,8 +524,8 @@ mcr.microsoft.com/devcontainers/java:dev-17-jdk-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 129de5a05f9f234a3202fa5c8a13e15891149adc | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -569,7 +569,7 @@ mcr.microsoft.com/devcontainers/java:dev-17-jdk-bookworm
 | rsync | 3.2.7-1+deb12u6 |
 | strace | 6.1-0.1 |
 | sudo | 1.9.13p3-1+deb12u4 |
-| unzip | 6.0-28 |
+| unzip | 6.0-28+deb12u1 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
 | zip | 3.0-13 |
@@ -578,7 +578,7 @@ mcr.microsoft.com/devcontainers/java:dev-17-jdk-bookworm
 
 ## Variant: 11-bookworm
 
-**Digest:** sha256:867854093e502bafae322bd225ec39059b6ae399709374f3a12de6d549522980
+**Digest:** sha256:6e04aac871d9d2b59e3f5931312de2658cc8e0a0f198eea0af8aa733d3839942
 
 **Tags:**
 ```
@@ -604,8 +604,8 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | b6cf55f6adf3b953d0e5e00a4049444e300e3af8 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 129de5a05f9f234a3202fa5c8a13e15891149adc | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -649,7 +649,7 @@ mcr.microsoft.com/devcontainers/java:dev-11-jdk-bookworm
 | rsync | 3.2.7-1+deb12u6 |
 | strace | 6.1-0.1 |
 | sudo | 1.9.13p3-1+deb12u4 |
-| unzip | 6.0-28 |
+| unzip | 6.0-28+deb12u1 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
 | zip | 3.0-13 |
