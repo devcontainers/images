@@ -34,7 +34,7 @@ You can decide how often you want updates by referencing a [semantic version](ht
 
 - `mcr.microsoft.com/devcontainers/go:2-1.27` (or `2-1.27-trixie`, `2-1.27-bookworm`)
 - `mcr.microsoft.com/devcontainers/go:2.3-1.27` (or `2.3-1.27-trixie`, `2.3-1.27-bookworm`)
-- `mcr.microsoft.com/devcontainers/go:2.3.0-1.27` (or `2.3.0-1.27-trixie`, `2.3.0-1.27-bookworm`)
+- `mcr.microsoft.com/devcontainers/go:2.3.1-1.27` (or `2.3.1-1.27-trixie`, `2.3.1-1.27-bookworm`)
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `2-1.27`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
