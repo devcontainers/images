@@ -10,7 +10,7 @@
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/java |
 | *Available image variants* | 11 / 11-trixie, 17 /17-trixie, 21 / 21-trixie, 21-bookworm, 25 / 25-trixie, 25-bookworm, 17-bookworm, 11-bookworm ([full list](https://mcr.microsoft.com/v2/devcontainers/java/tags/list)) |
-| *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm`, and `bullseye` variants |
+| *Published image architecture(s)* | x86-64, arm64/aarch64 for `trixie` and `bookworm` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
 | *Languages, platforms* | Java |
