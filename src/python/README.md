@@ -36,7 +36,7 @@ Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 ### Development tags (`dev-*`)
 
-Preview tags are published builds of `main`, not stable release artifacts. The current development image definition (version `3.2.2`) is available as a preview through `mcr.microsoft.com/devcontainers/python:dev-3.14` (or `dev-3.14-trixie`, `dev-3.14-bookworm`). Before reporting an issue or reviewing a fix against a stable tag, check the preview tag because a merged change may already be available there.
+Development tags are preview builds from `main`, not stable release artifacts. Use `mcr.microsoft.com/devcontainers/python:dev-3.14` (or `dev-3.14-trixie`, `dev-3.14-bookworm`) to test the current image definition before its next stable release. Before reporting an issue or reviewing a fix against a stable tag, check the development tag because a merged change may already be available there.
 
 ### Pinned release tags
 

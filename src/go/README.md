@@ -34,7 +34,7 @@ Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 ### Development tags (`dev-*`)
 
-Development tags are preview builds from `main`. Use `mcr.microsoft.com/devcontainers/go:dev-1.26` to test the current image definition before its next stable release.
+Development tags are preview builds from `main`. Use `mcr.microsoft.com/devcontainers/go:dev-1.27` to test the current image definition before its next stable release.
 
 ### Pinned release tags
 
