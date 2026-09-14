@@ -19,6 +19,17 @@ RUN gem install sass-embedded -v 1.62.1
 RUN gem install jekyll-sass-converter -v 3.0.0
 RUN gem install bundler jekyll github-pages
 
+# The gem installs above run as root and create/populate subdirectories of
+# GEM_HOME (/usr/local/bundle) with root-only permissions, even though the
+# Ruby base image sets GEM_HOME itself to 1777. This leaves the non-root
+# "vscode" user unable to run `bundle install` (Bundler::PermissionError).
+# Align /usr/local/bundle with the same group-writable + setgid pattern
+# already used for /usr/local/rubies so "vscode" (a member of the "ruby"
+# group) can write there too.
+RUN chgrp -R ruby "/usr/local/bundle" \
+    && chmod -R g+rwX "/usr/local/bundle" \
+    && find "/usr/local/bundle" -type d | xargs -n 1 chmod g+s
+
 COPY post-create.sh /usr/local/post-create.sh
 
 # Fixing vulnerability issue by upgrading svn to 1.14.5. Ref https://subversion.apache.org/security/CVE-2024-46901-advisory.txt
