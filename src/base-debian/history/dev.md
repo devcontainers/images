@@ -7,11 +7,10 @@
 **Image variations:**
 - [trixie](#variant-trixie)
 - [bookworm](#variant-bookworm)
-- [bullseye](#variant-bullseye)
 
 ## Variant: trixie
 
-**Digest:** sha256:ace3321a6e7951f449709baa7c9d61b091295d2a8c427c1f69330ab7cce1be07
+**Digest:** sha256:3df98c511777011f7e294c50b17e40c82a392b558e098afeae99e04d629b0e3e
 
 **Tags:**
 ```
@@ -33,7 +32,7 @@ mcr.microsoft.com/devcontainers/base:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 129de5a05f9f234a3202fa5c8a13e15891149adc | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -76,16 +75,16 @@ mcr.microsoft.com/devcontainers/base:dev
 | rsync | 3.4.1+ds1-5+deb13u4 |
 | strace | 6.13+ds-1 |
 | sudo | 1.9.16p2-3+deb13u2 |
-| unzip | 6.0-29 |
+| unzip | 6.0-29+deb13u1 |
 | vim-tiny | 2:9.1.1230-2 |
 | wget | 1.25.0-2 |
-| zip | 3.0-15 |
+| zip | 3.0-15+deb13u1 |
 | zlib1g | 1:1.3.dfsg+really1.3.1-1+b1 |
 | zsh | 5.9-8+b23 |
 
 ## Variant: bookworm
 
-**Digest:** sha256:b59e06177d57887a98d4f3c7fcd291988ec3351b2a49abca010dd12836e39df1
+**Digest:** sha256:71b65c23b6cf76d2c8eb6d70393b7fec845f24794ed578a492d8d843cb724265
 
 **Tags:**
 ```
@@ -105,7 +104,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian12
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 129de5a05f9f234a3202fa5c8a13e15891149adc | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -149,84 +148,10 @@ mcr.microsoft.com/devcontainers/base:dev-debian12
 | rsync | 3.2.7-1+deb12u6 |
 | strace | 6.1-0.1 |
 | sudo | 1.9.13p3-1+deb12u4 |
-| unzip | 6.0-28 |
+| unzip | 6.0-28+deb12u1 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
 | zip | 3.0-13 |
 | zlib1g | 1:1.2.13.dfsg-1 |
 | zsh | 5.9-4+b15 |
-
-## Variant: bullseye
-
-**Digest:** sha256:165181d5ceda76861ce0e4c578801574f582dc9c339362a8537308a5ba4b4fdd
-
-**Tags:**
-```
-mcr.microsoft.com/devcontainers/base:dev-bullseye
-mcr.microsoft.com/devcontainers/base:dev-debian11
-```
-> *To keep up to date, we recommend using partial version numbers. Use the major version number to get all non-breaking changes (e.g. `0-`) or major and minor to only get fixes (e.g. `0.200-`).*
-
-**Linux distribution:** Debian GNU/Linux 11 (bullseye)
-
-**Architectures:** linux/amd64, linux/arm64
-
-**Available (non-root) user:** vscode
-
-### Contents
-**Tools installed using git**
-
-| Tool | Commit | Path |
-|------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 97b27bb2ec0701330b18c2d3e340b22e742b3fa8 | /home/vscode/.oh-my-zsh |
-
-**Other tools and utilities**
-
-| Tool | Version | Path |
-|------|---------|------|
-| [git](https://github.com/git/git) | 2.55.0 | 
-
-**Additional linux tools and packages**
-
-| Tool / library | Version |
-|----------------|---------|
-| apt-transport-https | 2.2.4 |
-| apt-utils | 2.2.4 |
-| ca-certificates | 20250419~deb12u1~deb11u1 |
-| curl | 7.74.0-1.3+deb11u16 |
-| dialog | 1.3-20201126-1 |
-| git | 1:2.30.2-1+deb11u5 |
-| gnupg2 | 2.2.27-2+deb11u3 |
-| htop | 3.0.5-7 |
-| iproute2 | 5.10.0-4 |
-| jq | 1.6-2.1+deb11u3 |
-| less | 551-2+deb11u2 |
-| libc6 | 2.31-13+deb11u14 |
-| libgssapi-krb5-2 | 1.18.3-6+deb11u8 |
-| libicu67 | 67.1-7+deb11u1 |
-| libkrb5-3 | 1.18.3-6+deb11u8 |
-| liblttng-ust0 | 2.12.1-1 |
-| libssl1.1 | 1.1.1w-0+deb11u8 |
-| libstdc++6 | 10.2.1-6 |
-| locales | 2.31-13+deb11u14 |
-| lsb-release | 11.1.0 |
-| lsof | 4.93.2+dfsg-1.1 |
-| man-db | 2.9.4-2 |
-| manpages | 5.10-1 |
-| manpages-dev | 5.10-1 |
-| nano | 5.4-2+deb11u3 |
-| ncdu | 1.15.1-1 |
-| net-tools | 1.60+git20181103.0eebece-1+deb11u2 |
-| openssh-client | 1:8.4p1-5+deb11u7 |
-| procps | 2:3.3.17-5 |
-| psmisc | 23.4-2 |
-| rsync | 3.2.3-4+deb11u4 |
-| strace | 5.10-1 |
-| sudo | 1.9.5p2-3+deb11u4 |
-| unzip | 6.0-26+deb11u1 |
-| vim-tiny | 2:8.2.2434-3+deb11u3 |
-| wget | 1.21-1+deb11u2 |
-| zip | 3.0-12 |
-| zlib1g | 1:1.2.11.dfsg-2+deb11u2 |
-| zsh | 5.8-6+deb11u1 |
 
