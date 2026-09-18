@@ -65,11 +65,9 @@ done
 # Temporary: Upgrade python packages due to security vulnerabilities
 # They are installed by the conda feature and Conda distribution does not have the patches
 
-# https://github.com/advisories/GHSA-r6ph-v2qm-q3c2
-update_conda_package pyopenssl "26.0.0"
-
-# https://github.com/advisories/GHSA-p423-j2cm-9vmq
-update_conda_package cryptography "46.0.7"
+# https://github.com/advisories/GHSA-537c-gmf6-5ccf
+update_conda_package cryptography "48.0.1"
+update_conda_package pyopenssl "26.2.0"
 
 # https://nvd.nist.gov/vuln/detail/CVE-2025-6176
 update_conda_package brotli "1.2.0"
