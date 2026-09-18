@@ -1,7 +1,7 @@
 {
 	"version": "2.2.3",
 	"variants": [
-		"11.0-preview-resolute",
+		"11.0-resolute",
 		"10.0-noble",
 		"9.0-bookworm-slim",
 		"9.0-noble",
@@ -16,7 +16,7 @@
 			"dotnet:${VERSION}-${VARIANT}"
 		],
 		"architectures": {
-			"11.0-preview-resolute": [
+			"11.0-resolute": [
 				"linux/amd64",
 				"linux/arm64"
 			],
@@ -46,9 +46,9 @@
 			]
 		},
 		"variantTags": {
-			"11.0-preview-resolute": [
-				"dotnet:${VERSION}-11.0-preview",
-				"dotnet:${VERSION}-11.0-preview-resolute"
+			"11.0-resolute": [
+				"dotnet:${VERSION}-11.0",
+				"dotnet:${VERSION}-11.0-resolute"
 			],
 			"10.0-noble": [
 				"dotnet:${VERSION}-10.0",
