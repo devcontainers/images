@@ -66,8 +66,9 @@ done
 # They are installed by the conda feature and Conda distribution does not have the patches
 
 # https://github.com/advisories/GHSA-537c-gmf6-5ccf
-update_conda_package cryptography "48.0.1"
-update_conda_package pyopenssl "26.2.0"
+update_conda_package cryptography "50.0.0"
+update_conda_package pyopenssl "26.4.0"
+update_conda_package openssl "3.5.8"
 
 # https://nvd.nist.gov/vuln/detail/CVE-2025-6176
 update_conda_package brotli "1.2.0"
