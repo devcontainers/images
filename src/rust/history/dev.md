@@ -10,7 +10,7 @@
 
 ## Variant: trixie
 
-**Digest:** sha256:d96fc08fed4f2378a5af5e02ad2d4969b8212ed40cbd6ac0b3af196d3cb89c65
+**Digest:** sha256:433022a33bcd49f92418a1571de30e9cd4791484ac8c04a5ac005f76136920d4
 
 **Tags:**
 ```
@@ -37,7 +37,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-trixie
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 129de5a05f9f234a3202fa5c8a13e15891149adc | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6421f8e104e4e87f2373362cbf61e46a918612a7 | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 
@@ -61,7 +61,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-trixie
 | apt-transport-https | 3.0.3 |
 | apt-utils | 3.0.3 |
 | ca-certificates | 20250419 |
-| curl | 8.14.1-2+deb13u4 |
+| curl | 8.14.1-2+deb13u5 |
 | dialog | 1.3-20250116-1 |
 | gcc | 4:14.2.0-1 |
 | git | 1:2.47.3-0+deb13u1 |
@@ -70,14 +70,14 @@ mcr.microsoft.com/devcontainers/rust:dev-1-trixie
 | iproute2 | 6.15.0-1 |
 | jq | 1.7.1-6+deb13u3 |
 | less | 668-1 |
-| libc6 | 2.41-12+deb13u3 |
-| libc6-dev | 2.41-12+deb13u3 |
+| libc6 | 2.41-12+deb13u4 |
+| libc6-dev | 2.41-12+deb13u4 |
 | libgssapi-krb5-2 | 1.21.3-5+deb13u1 |
 | libicu76 | 76.1-4 |
 | libkrb5-3 | 1.21.3-5+deb13u1 |
 | libstdc++6 | 14.2.0-19 |
 | lldb | 1:19.0-63 |
-| locales | 2.41-12+deb13u3 |
+| locales | 2.41-12+deb13u4 |
 | lsb-release | 12.1-1 |
 | lsof | 4.99.4+dfsg-2 |
 | man-db | 2.13.1-1 |
@@ -98,11 +98,11 @@ mcr.microsoft.com/devcontainers/rust:dev-1-trixie
 | wget | 1.25.0-2 |
 | zip | 3.0-15+deb13u1 |
 | zlib1g | 1:1.3.dfsg+really1.3.1-1+b1 |
-| zsh | 5.9-8+b23 |
+| zsh | 5.9-8+b24 |
 
 ## Variant: bookworm
 
-**Digest:** sha256:82d8292355b5c05a970c09c0a488c8f659013b873b046c88998ab098c66ad863
+**Digest:** sha256:944371cc9b19f6ee2e29814667727b0dc7d3304bf8241bcdaeb4ce5544e055ce
 
 **Tags:**
 ```
@@ -128,7 +128,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 129de5a05f9f234a3202fa5c8a13e15891149adc | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6421f8e104e4e87f2373362cbf61e46a918612a7 | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 
@@ -188,7 +188,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bookworm
 | unzip | 6.0-28+deb12u1 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
-| zip | 3.0-13 |
+| zip | 3.0-13+deb12u1 |
 | zlib1g | 1:1.2.13.dfsg-1 |
 | zsh | 5.9-4+b15 |
 

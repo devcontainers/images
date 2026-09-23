@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:34f9b06463e0042e721cd78c92dbb7337690c795aeab3720dbc049600308c15a
+**Digest:** sha256:f87b8eef84015fe257620b013fc1edda52b05788259c3be9b1f9b2316f28dfd8
 
 **Tags:**
 ```
@@ -42,9 +42,9 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 129de5a05f9f234a3202fa5c8a13e15891149adc | /home/codespace/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | a1c1a851371ba08a2dbfee83bee94a97e5e577ca | /usr/local/share/ruby-build |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6421f8e104e4e87f2373362cbf61e46a918612a7 | /home/codespace/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | a885b885fef16fac4bc544188fb25e9e37ae83e8 | /usr/local/share/nvm |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 01800b0594bbac54feab233b5bd9a3215fc2ff65 | /usr/local/share/ruby-build |
 
 **Pip / pipx installed tools and packages**
 
@@ -62,8 +62,8 @@ mcr.microsoft.com/devcontainers/universal:dev
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.14.0 |
 | bandit | 1.9.4 |
-| virtualenv | 21.7.9 |
-| pipx | 1.17.2 |
+| virtualenv | 21.9.0 |
+| pipx | 1.17.5 |
 
 **Go tools and modules**
 
@@ -75,7 +75,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | github.com/mgechev/revive | 1.16.0 |
 | github.com/uudashr/gopkgs | latest |
 | github.com/ramya-rao-a/go-outline | latest |
-| github.com/go-delve/delve | 1.27.1 |
+| github.com/go-delve/delve | 1.27.2 |
 | github.com/golangci/golangci-lint | latest |
 
 **Ruby gems and tools**
@@ -93,13 +93,13 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [Xdebug](https://xdebug.org/) | 3.5.3 | /usr/local/php/current |
 | [Composer](https://getcomposer.org/) | 2.10.3 | /usr/local/php/current/bin |
 | [kubectl](https://github.com/kubernetes/kubectl) | v1.37.0 | /usr/local/bin |
-| [Helm](https://github.com/helm/helm) | 4.2.4 | /usr/local/bin |
+| [Helm](https://github.com/helm/helm) | 4.3.0 | /usr/local/bin |
 | [Docker Compose](https://github.com/docker/compose) | 5.5.1 | /usr/local/bin |
-| [GitHub CLI](https://github.com/cli/cli) | 2.100.0 | 
+| [GitHub CLI](https://github.com/cli/cli) | 2.101.0 | 
 | [yarn](https://yarnpkg.com/) | 1.22.22 | /usr/bin |
 | [Maven](https://maven.apache.org/) | 3.9.16 | /usr/local/sdkman/candidates/maven/current/bin |
 | [Gradle](https://gradle.org/) | 9.7.1 | /usr/local/sdkman/candidates/gradle/current/bin |
-| Docker (Moby) CLI &amp; Engine | 29.7.2 | 
+| Docker (Moby) CLI &amp; Engine | 29.8.1 | 
 | [conda](https://github.com/conda/conda) | 26.7.2 | /opt/conda/bin |
 
 **Additional linux tools and packages**
@@ -125,11 +125,11 @@ mcr.microsoft.com/devcontainers/universal:dev
 | iptables | 1.8.10-3ubuntu2 |
 | jq | 1.7.1-3ubuntu0.24.04.2 |
 | less | 590-2ubuntu2.1 |
-| libc6 | 2.39-0ubuntu8.8 |
-| libc6-dev | 2.39-0ubuntu8.8 |
-| libgssapi-krb5-2 | 1.20.1-6ubuntu2.8 |
+| libc6 | 2.39-0ubuntu8.9 |
+| libc6-dev | 2.39-0ubuntu8.9 |
+| libgssapi-krb5-2 | 1.20.1-6ubuntu2.10 |
 | libicu74 | 74.2-1ubuntu3.1 |
-| libkrb5-3 | 1.20.1-6ubuntu2.8 |
+| libkrb5-3 | 1.20.1-6ubuntu2.10 |
 | libnspr4 | 2:4.35-1.1build1 |
 | libnss3 | 2:3.98-1ubuntu0.2 |
 | libpango-1.0-0 | 1.52.1+ds-1build1 |
@@ -139,15 +139,15 @@ mcr.microsoft.com/devcontainers/universal:dev
 | libx11-6 | 2:1.8.7-1build1 |
 | lldb | 1:18.0-59~exp2 |
 | llvm | 1:18.0-59~exp2 |
-| locales | 2.39-0ubuntu8.8 |
+| locales | 2.39-0ubuntu8.9 |
 | lsb-release | 12.0-2 |
 | lsof | 4.95.0-1build3 |
 | make | 4.3-4.1build2 |
 | man-db | 2.12.0-4build2 |
 | manpages | 6.7-2 |
 | manpages-dev | 6.7-2 |
-| moby-cli (Docker CLI) | 29.7.2-ubuntu24.04u2 |
-| moby-engine (Docker Engine) | 29.7.2-ubuntu24.04u2 |
+| moby-cli (Docker CLI) | 29.8.1-ubuntu24.04u1 |
+| moby-engine (Docker Engine) | 29.8.1-ubuntu24.04u1 |
 | nano | 7.2-2ubuntu0.2 |
 | ncdu | 1.19-0.1 |
 | net-tools | 2.10-0.1ubuntu4.4 |

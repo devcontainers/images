@@ -15,7 +15,7 @@
 
 ## Variant: 11.0-preview-resolute
 
-**Digest:** sha256:5cf0cc4ffd0d32753c827c4b66381fcaa7ef8d52e879db2863620e681b60a023
+**Digest:** sha256:c79e5f2088c0665784b30a69ce7103737e8312454e48b43ad8263d069437b754
 
 **Tags:**
 ```
@@ -41,8 +41,8 @@ mcr.microsoft.com/devcontainers/dotnet:dev-11.0-preview
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 129de5a05f9f234a3202fa5c8a13e15891149adc | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6421f8e104e4e87f2373362cbf61e46a918612a7 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | a885b885fef16fac4bc544188fb25e9e37ae83e8 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -94,7 +94,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-11.0-preview
 
 ## Variant: 10.0-noble
 
-**Digest:** sha256:4f393db2dd0505060e7edb3fbf1b67ca62e49a942bc7cad31287123897550bad
+**Digest:** sha256:e32a950d5534e2463bd79e1307d3be5fa89c7622a43dd50e12dbe3ac6b4a6643
 
 **Tags:**
 ```
@@ -120,8 +120,8 @@ mcr.microsoft.com/devcontainers/dotnet:dev-10.0
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 129de5a05f9f234a3202fa5c8a13e15891149adc | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6421f8e104e4e87f2373362cbf61e46a918612a7 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | a885b885fef16fac4bc544188fb25e9e37ae83e8 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -144,12 +144,12 @@ mcr.microsoft.com/devcontainers/dotnet:dev-10.0
 | iproute2 | 6.1.0-1ubuntu6.4 |
 | jq | 1.7.1-3ubuntu0.24.04.2 |
 | less | 590-2ubuntu2.1 |
-| libc6 | 2.39-0ubuntu8.8 |
-| libgssapi-krb5-2 | 1.20.1-6ubuntu2.8 |
+| libc6 | 2.39-0ubuntu8.9 |
+| libgssapi-krb5-2 | 1.20.1-6ubuntu2.10 |
 | libicu74 | 74.2-1ubuntu3.1 |
-| libkrb5-3 | 1.20.1-6ubuntu2.8 |
+| libkrb5-3 | 1.20.1-6ubuntu2.10 |
 | libstdc++6 | 14.2.0-4ubuntu2~24.04.1 |
-| locales | 2.39-0ubuntu8.8 |
+| locales | 2.39-0ubuntu8.9 |
 | lsb-release | 12.0-2 |
 | lsof | 4.95.0-1build3 |
 | man-db | 2.12.0-4build2 |
@@ -173,7 +173,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-10.0
 
 ## Variant: 9.0-bookworm-slim
 
-**Digest:** sha256:5bf9e90a59a7668774b7193e1576f8e14db5ef4a0624de72821c15e707b30b7e
+**Digest:** sha256:cacb79671d1bc79b4efd15f92a6c3726e67a05e37117b88b9211afe280577497
 
 **Tags:**
 ```
@@ -200,8 +200,8 @@ mcr.microsoft.com/devcontainers/dotnet:dev-9.0-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 129de5a05f9f234a3202fa5c8a13e15891149adc | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6421f8e104e4e87f2373362cbf61e46a918612a7 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | a885b885fef16fac4bc544188fb25e9e37ae83e8 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -248,13 +248,13 @@ mcr.microsoft.com/devcontainers/dotnet:dev-9.0-bookworm
 | unzip | 6.0-28+deb12u1 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
-| zip | 3.0-13 |
+| zip | 3.0-13+deb12u1 |
 | zlib1g | 1:1.2.13.dfsg-1 |
 | zsh | 5.9-4+b15 |
 
 ## Variant: 9.0-noble
 
-**Digest:** sha256:7159e71cee3b45dc931362898ad0043daabc11563997f49e33947dc9e8290e80
+**Digest:** sha256:a4b398add8f2b98398e8f0984552d9067c7eef0f3496e029eb51a8286247d577
 
 **Tags:**
 ```
@@ -279,8 +279,8 @@ mcr.microsoft.com/devcontainers/dotnet:dev-9.0-noble
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 129de5a05f9f234a3202fa5c8a13e15891149adc | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6421f8e104e4e87f2373362cbf61e46a918612a7 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | a885b885fef16fac4bc544188fb25e9e37ae83e8 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -303,12 +303,12 @@ mcr.microsoft.com/devcontainers/dotnet:dev-9.0-noble
 | iproute2 | 6.1.0-1ubuntu6.4 |
 | jq | 1.7.1-3ubuntu0.24.04.2 |
 | less | 590-2ubuntu2.1 |
-| libc6 | 2.39-0ubuntu8.8 |
-| libgssapi-krb5-2 | 1.20.1-6ubuntu2.8 |
+| libc6 | 2.39-0ubuntu8.9 |
+| libgssapi-krb5-2 | 1.20.1-6ubuntu2.10 |
 | libicu74 | 74.2-1ubuntu3.1 |
-| libkrb5-3 | 1.20.1-6ubuntu2.8 |
+| libkrb5-3 | 1.20.1-6ubuntu2.10 |
 | libstdc++6 | 14.2.0-4ubuntu2~24.04.1 |
-| locales | 2.39-0ubuntu8.8 |
+| locales | 2.39-0ubuntu8.9 |
 | lsb-release | 12.0-2 |
 | lsof | 4.95.0-1build3 |
 | man-db | 2.12.0-4build2 |
@@ -332,7 +332,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-9.0-noble
 
 ## Variant: 8.0-bookworm-slim
 
-**Digest:** sha256:98eadb97f2bfbad1d498076dc191c31ed9c8debed96c13936447295df413f702
+**Digest:** sha256:0d1bbaa4f867c329993b158d9ed2f0c6442054358478437781722a72268cb809
 
 **Tags:**
 ```
@@ -359,8 +359,8 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 129de5a05f9f234a3202fa5c8a13e15891149adc | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6421f8e104e4e87f2373362cbf61e46a918612a7 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | a885b885fef16fac4bc544188fb25e9e37ae83e8 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -407,13 +407,13 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-bookworm
 | unzip | 6.0-28+deb12u1 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
-| zip | 3.0-13 |
+| zip | 3.0-13+deb12u1 |
 | zlib1g | 1:1.2.13.dfsg-1 |
 | zsh | 5.9-4+b15 |
 
 ## Variant: 8.0-noble
 
-**Digest:** sha256:6d6e04d4bfd4dcd89716906a332b237c603e1749b57b96fa7d80ce727f545e35
+**Digest:** sha256:a91d2ef5247c5e114ca2fa987183e71aa36983f1cb0776261c32793ea50beae4
 
 **Tags:**
 ```
@@ -438,8 +438,8 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-noble
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 129de5a05f9f234a3202fa5c8a13e15891149adc | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6421f8e104e4e87f2373362cbf61e46a918612a7 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | a885b885fef16fac4bc544188fb25e9e37ae83e8 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -462,12 +462,12 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-noble
 | iproute2 | 6.1.0-1ubuntu6.4 |
 | jq | 1.7.1-3ubuntu0.24.04.2 |
 | less | 590-2ubuntu2.1 |
-| libc6 | 2.39-0ubuntu8.8 |
-| libgssapi-krb5-2 | 1.20.1-6ubuntu2.8 |
+| libc6 | 2.39-0ubuntu8.9 |
+| libgssapi-krb5-2 | 1.20.1-6ubuntu2.10 |
 | libicu74 | 74.2-1ubuntu3.1 |
-| libkrb5-3 | 1.20.1-6ubuntu2.8 |
+| libkrb5-3 | 1.20.1-6ubuntu2.10 |
 | libstdc++6 | 14.2.0-4ubuntu2~24.04.1 |
-| locales | 2.39-0ubuntu8.8 |
+| locales | 2.39-0ubuntu8.9 |
 | lsb-release | 12.0-2 |
 | lsof | 4.95.0-1build3 |
 | man-db | 2.12.0-4build2 |
@@ -491,7 +491,7 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-noble
 
 ## Variant: 8.0-jammy
 
-**Digest:** sha256:c5f6df217e896b8410e8f2b9ed644556a5070c6da063e33b3244a594b9fbe0aa
+**Digest:** sha256:fb4dedd5323d0ef5e7e6f19273b82e2f9e139d91cc6584db28b734c77414e37a
 
 **Tags:**
 ```
@@ -516,8 +516,8 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-jammy
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 129de5a05f9f234a3202fa5c8a13e15891149adc | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6421f8e104e4e87f2373362cbf61e46a918612a7 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | a885b885fef16fac4bc544188fb25e9e37ae83e8 | /usr/local/share/nvm |
 
 **Other tools and utilities**
 
@@ -541,9 +541,9 @@ mcr.microsoft.com/devcontainers/dotnet:dev-8.0-jammy
 | jq | 1.6-2.1ubuntu3.2 |
 | less | 590-1ubuntu0.22.04.3 |
 | libc6 | 2.35-0ubuntu3.15 |
-| libgssapi-krb5-2 | 1.19.2-2ubuntu0.8 |
+| libgssapi-krb5-2 | 1.19.2-2ubuntu0.10 |
 | libicu70 | 70.1-2 |
-| libkrb5-3 | 1.19.2-2ubuntu0.8 |
+| libkrb5-3 | 1.19.2-2ubuntu0.10 |
 | liblttng-ust1 | 2.13.1-1ubuntu1 |
 | libstdc++6 | 12.3.0-1ubuntu1~22.04.3 |
 | locales | 2.35-0ubuntu3.15 |

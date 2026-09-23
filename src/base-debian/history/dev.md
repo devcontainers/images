@@ -10,7 +10,7 @@
 
 ## Variant: trixie
 
-**Digest:** sha256:3df98c511777011f7e294c50b17e40c82a392b558e098afeae99e04d629b0e3e
+**Digest:** sha256:589383093b38a731c6ff21a92ed3f3217ec863e27318df1ba0f6253f68a6e1a4
 
 **Tags:**
 ```
@@ -32,7 +32,7 @@ mcr.microsoft.com/devcontainers/base:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 129de5a05f9f234a3202fa5c8a13e15891149adc | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6421f8e104e4e87f2373362cbf61e46a918612a7 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -47,7 +47,7 @@ mcr.microsoft.com/devcontainers/base:dev
 | apt-transport-https | 3.0.3 |
 | apt-utils | 3.0.3 |
 | ca-certificates | 20250419 |
-| curl | 8.14.1-2+deb13u4 |
+| curl | 8.14.1-2+deb13u5 |
 | dialog | 1.3-20250116-1 |
 | git | 1:2.47.3-0+deb13u1 |
 | gnupg2 | 2.4.7-21+deb13u1 |
@@ -55,12 +55,12 @@ mcr.microsoft.com/devcontainers/base:dev
 | iproute2 | 6.15.0-1 |
 | jq | 1.7.1-6+deb13u3 |
 | less | 668-1 |
-| libc6 | 2.41-12+deb13u3 |
+| libc6 | 2.41-12+deb13u4 |
 | libgssapi-krb5-2 | 1.21.3-5+deb13u1 |
 | libicu76 | 76.1-4 |
 | libkrb5-3 | 1.21.3-5+deb13u1 |
 | libstdc++6 | 14.2.0-19 |
-| locales | 2.41-12+deb13u3 |
+| locales | 2.41-12+deb13u4 |
 | lsb-release | 12.1-1 |
 | lsof | 4.99.4+dfsg-2 |
 | man-db | 2.13.1-1 |
@@ -80,11 +80,11 @@ mcr.microsoft.com/devcontainers/base:dev
 | wget | 1.25.0-2 |
 | zip | 3.0-15+deb13u1 |
 | zlib1g | 1:1.3.dfsg+really1.3.1-1+b1 |
-| zsh | 5.9-8+b23 |
+| zsh | 5.9-8+b24 |
 
 ## Variant: bookworm
 
-**Digest:** sha256:71b65c23b6cf76d2c8eb6d70393b7fec845f24794ed578a492d8d843cb724265
+**Digest:** sha256:fedcc02d1d0f2765eaf4294f4e6ad31d8feff85a6d6fd35892e5d35bdec87c68
 
 **Tags:**
 ```
@@ -104,7 +104,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian12
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 129de5a05f9f234a3202fa5c8a13e15891149adc | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6421f8e104e4e87f2373362cbf61e46a918612a7 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -151,7 +151,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian12
 | unzip | 6.0-28+deb12u1 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
-| zip | 3.0-13 |
+| zip | 3.0-13+deb12u1 |
 | zlib1g | 1:1.2.13.dfsg-1 |
 | zsh | 5.9-4+b15 |
 
