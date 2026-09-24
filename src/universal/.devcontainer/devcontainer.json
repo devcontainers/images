@@ -36,7 +36,7 @@
         "ghcr.io/devcontainers/features/conda:2": {
             "version": "latest"
         },
-        "ghcr.io/devcontainers/features/ruby:1": {
+        "ghcr.io/devcontainers/features/ruby:2": {
             "version": "3.4.9",
             "additionalVersions": "3.3.11"
         },
@@ -62,7 +62,7 @@
         "ghcr.io/devcontainers/features/copilot-cli:1": {
             "version": "latest"
         },
-        "ghcr.io/devcontainers/features/docker-in-docker:3": {
+        "ghcr.io/devcontainers/features/docker-in-docker:4": {
             "version": "latest"
         },
         "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {

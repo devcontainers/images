@@ -1,9 +1,8 @@
 {
-	"version": "2.2.12",
+	"version": "2.4.1",
 	"variants": [
 		"3.4-bookworm",
-		"3.3-bookworm",
-		"3.3-bullseye"
+		"3.3-bookworm"
 	],
 	"build": {
 		"latest": "3.4-bookworm",
@@ -15,10 +14,6 @@
 				"linux/arm64"
 			],
 			"3.3-bookworm": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"3.3-bullseye": [
 				"linux/amd64",
 				"linux/arm64"
 			]
@@ -33,9 +28,6 @@
 			],
 			"3.3-bookworm": [
 				"jekyll:${VERSION}-bookworm"
-			],
-			"3.3-bullseye": [
-				"jekyll:${VERSION}-bullseye"
 			]
 		}
 	},
@@ -51,7 +43,6 @@
 		"git": {
 			"Oh My Zsh!": "/home/vscode/.oh-my-zsh",
 			"nvm": "/usr/local/share/nvm",
-			"rbenv": "/usr/local/share/rbenv",
 			"ruby-build": "/usr/local/share/ruby-build"
 		},
 		"gem": [
@@ -63,8 +54,7 @@
 			"github-pages"
 		],
 		"other": {
-			"git": {},
-			"rvm": null
+			"git": {}
 		},
 		"languages": {
 			"Ruby": {

@@ -1,4 +1,4 @@
-# [Choice] Debian OS version (use bookworm, or bullseye on local arm64/Apple Silicon): bookworm, buster, bullseye
+# [Choice] Debian OS version: trixie, bookworm
 ARG VARIANT="trixie"
 FROM rust:1-${VARIANT}
 

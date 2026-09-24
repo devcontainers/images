@@ -1,23 +1,31 @@
 {
-	"version": "5.0.3",
+	"version": "5.2.1",
 	"variants": [
+		"26-trixie",
 		"24-trixie",
 		"22-trixie",
+		"26-bookworm",
 		"24-bookworm",
-		"22-bookworm",
-		"24-bullseye",
-		"22-bullseye"
+		"22-bookworm"
 	],
 	"build": {
 		"latest": "24-trixie",
 		"rootDistro": "debian",
 		"parent": "javascript-node",
 		"architectures": {
+			"26-trixie": [
+				"linux/amd64",
+				"linux/arm64"
+			],
 			"24-trixie": [
 				"linux/amd64",
 				"linux/arm64"
 			],
 			"22-trixie": [
+				"linux/amd64",
+				"linux/arm64"
+			],
+			"26-bookworm": [
 				"linux/amd64",
 				"linux/arm64"
 			],
@@ -28,20 +36,15 @@
 			"22-bookworm": [
 				"linux/amd64",
 				"linux/arm64"
-			],
-			"24-bullseye": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"22-bullseye": [
-				"linux/amd64",
-				"linux/arm64"
 			]
 		},
 		"tags": [
 			"typescript-node:${VERSION}-${VARIANT}"
 		],
 		"variantTags": {
+			"26-trixie": [
+				"typescript-node:${VERSION}-26"
+			],
 			"24-trixie": [
 				"typescript-node:${VERSION}-24",
 				"typescript-node:${VERSION}-trixie"
@@ -51,9 +54,6 @@
 			],
 			"24-bookworm": [
 				"typescript-node:${VERSION}-bookworm"
-			],
-			"24-bullseye": [
-				"typescript-node:${VERSION}-bullseye"
 			]
 		}
 	},

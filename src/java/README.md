@@ -10,7 +10,7 @@
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/java |
 | *Available image variants* | 11 / 11-trixie, 17 /17-trixie, 21 / 21-trixie, 21-bookworm, 25 / 25-trixie, 25-bookworm, 17-bookworm, 11-bookworm ([full list](https://mcr.microsoft.com/v2/devcontainers/java/tags/list)) |
-| *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm`, and `bullseye` variants |
+| *Published image architecture(s)* | x86-64, arm64/aarch64 for `trixie` and `bookworm` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
 | *Languages, platforms* | Java |
@@ -32,8 +32,8 @@ Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
 - `mcr.microsoft.com/devcontainers/java:3-11` (or `3-11-trixie`, `3-11-bookworm` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/java:3.0-11` (or `3.0-11-trixie`, `3.0-11-bookworm` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/java:3.0.11-11` (or `3.0.11-11-trixie`, `3.0.11-11-bookworm` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/java:3.1-11` (or `3.1-11-trixie`, `3.1-11-bookworm` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/java:3.1.4-11` (or `3.1.4-11-trixie`, `3.1.4-11-bookworm` to pin to an OS version)
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `3-11`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
@@ -66,7 +66,7 @@ Also, you can use a [Node feature](https://github.com/devcontainers/features/tre
 ```json
 {
   "features": {
-    "ghcr.io/devcontainers/features/node:1": {
+    "ghcr.io/devcontainers/features/node:2": {
       "version": "latest"
     }
   }

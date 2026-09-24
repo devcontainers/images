@@ -56,7 +56,7 @@ ln -snf /usr/local/sdkman/candidates/java /home/codespace
 
 RUBY_PATH="/home/${USERNAME}/.ruby/current"
 mkdir -p /home/${USERNAME}/.ruby
-ln -snf /usr/local/rvm/rubies/default $RUBY_PATH
+ln -snf /usr/local/rubies/current $RUBY_PATH
 
 DOTNET_PATH="/home/${USERNAME}/.dotnet"
 

@@ -82,7 +82,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && printf "$FISH_PROMPT" >> /etc/fish/functions/fish_prompt.fish \
     && printf "if type code-insiders > /dev/null 2>&1; and not type code > /dev/null 2>&1\n  alias code=code-insiders\nend" >> /etc/fish/conf.d/code_alias.fish \   
     # Remove scripts now that we're done with them
-    && apt-get clean -y && rm -rf /tmp/scripts
+    && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/scripts
 
 # Default to bash shell (other shells available at /usr/bin/fish and /usr/bin/zsh)
 ENV SHELL=/bin/bash \

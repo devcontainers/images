@@ -9,8 +9,8 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/ruby |
-| *Available image variants* | 4 / 4-trixie, 4-bookworm, 3.4 / 3.4-trixie, 3.3 / 3.3-trixie, 3.4-bookworm, 3.3-bookworm, 3.4-bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/ruby/tags/list)) |
-| *Published image architecture(s)* | x86-64, arm64/aarch64 for `trixie`, `bookworm` , and `bullseye` variants |
+| *Available image variants* | 4 / 4-trixie, 4-bookworm, 3.4 / 3.4-trixie, 3.3 / 3.3-trixie, 3.4-bookworm, 3.3-bookworm ([full list](https://mcr.microsoft.com/v2/devcontainers/ruby/tags/list)) |
+| *Published image architecture(s)* | x86-64, arm64/aarch64 for `trixie` and `bookworm` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
 | *Languages, platforms* | Ruby |
@@ -23,18 +23,18 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 
 - `mcr.microsoft.com/devcontainers/ruby`     (latest)
 - `mcr.microsoft.com/devcontainers/ruby:4`   (or `4-trixie`, `4-bookworm` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/ruby:3.4` (or `3.4-trixie`, `3.4-bookworm`, `3.4-bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/ruby:3.3` (or `3.3-trixie`, `3.3-bookworm`, `3.3-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/ruby:3.4` (or `3.4-trixie`, `3.4-bookworm` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/ruby:3.3` (or `3.3-trixie`, `3.3-bookworm` to pin to an OS version)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
 
-- `mcr.microsoft.com/devcontainers/ruby:3-4`     (or `3-4-trixie`, `3-4-bookworm`, `3-4-bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/ruby:3.0-4`   (or `3.0-4-trixie`, `3.0-4-bookworm`, `3.0-4-bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/ruby:3.0.9-4` (or `3.0.9-4-trixie`, `3.0.9-4-bookworm`, `3.0.9-4-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/ruby:4-4`     (or `4-4-trixie`, `4-4-bookworm` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/ruby:4.1-4`   (or `4.1-4-trixie`, `4.1-4-bookworm` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/ruby:4.1.1-4` (or `4.1.1-4-trixie`, `4.1.1-4-bookworm` to pin to an OS version)
 
-However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `2-4.0`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
+However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `4-4.0`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/ruby/tags/list).
 
@@ -42,12 +42,25 @@ Alternatively, you can use the contents of [.devcontainer](.devcontainer) to ful
 
 ### Installing Node.js
 
-Given JavaScript front-end web client code written for use in conjunction with a Ruby back-end often requires the use of Node.js-based utilities to build, this container also includes `nvm` so that you can easily install Node.js. You can change the version of Node.js installed or disable its installation by updating the `args` property in `.devcontainer/devcontainer.json`.
+Given JavaScript front-end web client code written for use in conjunction with a Ruby back-end often requires the use of Node.js-based utilities to build, this container also includes `nvm` so that you can easily install Node.js.
 
-```jsonc
-"args": {
-    "VARIANT": "2",
-    "NODE_VERSION": "14" // Set to "none" to skip Node.js installation
+```json
+"features": {
+    "ghcr.io/devcontainers/features/node:2": {
+        "version": "latest"
+    }
+}
+```
+
+### Migrating from rvm
+
+Starting with image version 4.0, this image uses `ruby-build` instead of `rvm` for Ruby installation. If your workflow depends on `rvm`, add the following to your `devcontainer.json`:
+
+```json
+"features": {
+    "ghcr.io/devcontainers/features/ruby:2": {
+        "versionManager": "rvm"
+    }
 }
 ```
 

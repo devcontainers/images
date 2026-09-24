@@ -25,7 +25,7 @@ sudo_if() {
     if [ "$(id -u)" -eq 0 ] && [ "$USERNAME" != "root" ]; then
         su - "$USERNAME" -c "$COMMAND"
     else
-        "$COMMAND"
+        bash -c "$COMMAND"
     fi
 }
 
@@ -76,4 +76,6 @@ update_conda_package brotli "1.2.0"
 
 # https://github.com/advisories/GHSA-mf9w-mj56-hr94
 update_python_package /opt/conda/bin/python3 python-dotenv "1.2.2"
+
+sudo_if "conda clean --all --yes"
 
