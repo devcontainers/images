@@ -14,7 +14,7 @@
 
 ## Variant: 4.0-trixie
 
-**Digest:** sha256:a100087504d49877f0079fb731191f9256196a20b27cdd6539ac5faada73a4d7
+**Digest:** sha256:afa0fa7ef074bc258438801630c063862c7b4a700735fa2378f1ba9998e5b980
 
 **Tags:**
 ```
@@ -37,15 +37,15 @@ mcr.microsoft.com/devcontainers/ruby:dev-trixie
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Ruby](https://www.ruby-lang.org/en/) | 4.0.6 | /usr/local |
+| [Ruby](https://www.ruby-lang.org/en/) | 4.0.7 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 129de5a05f9f234a3202fa5c8a13e15891149adc | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | a1c1a851371ba08a2dbfee83bee94a97e5e577ca | /usr/local/share/ruby-build |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6421f8e104e4e87f2373362cbf61e46a918612a7 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | a885b885fef16fac4bc544188fb25e9e37ae83e8 | /usr/local/share/nvm |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 01800b0594bbac54feab233b5bd9a3215fc2ff65 | /usr/local/share/ruby-build |
 
 **Ruby gems and tools**
 
@@ -67,7 +67,7 @@ mcr.microsoft.com/devcontainers/ruby:dev-trixie
 | apt-utils | 3.0.3 |
 | build-essential | 12.12 |
 | ca-certificates | 20250419 |
-| curl | 8.14.1-2+deb13u4 |
+| curl | 8.14.1-2+deb13u5 |
 | dialog | 1.3-20250116-1 |
 | git | 1:2.47.3-0+deb13u1 |
 | gnupg2 | 2.4.7-21+deb13u1 |
@@ -75,12 +75,12 @@ mcr.microsoft.com/devcontainers/ruby:dev-trixie
 | iproute2 | 6.15.0-1 |
 | jq | 1.7.1-6+deb13u3 |
 | less | 668-1 |
-| libc6 | 2.41-12+deb13u3 |
+| libc6 | 2.41-12+deb13u4 |
 | libgssapi-krb5-2 | 1.21.3-5+deb13u1 |
 | libicu76 | 76.1-4 |
 | libkrb5-3 | 1.21.3-5+deb13u1 |
 | libstdc++6 | 14.2.0-19 |
-| locales | 2.41-12+deb13u3 |
+| locales | 2.41-12+deb13u4 |
 | lsb-release | 12.1-1 |
 | lsof | 4.99.4+dfsg-2 |
 | man-db | 2.13.1-1 |
@@ -100,11 +100,11 @@ mcr.microsoft.com/devcontainers/ruby:dev-trixie
 | wget | 1.25.0-2 |
 | zip | 3.0-15+deb13u1 |
 | zlib1g | 1:1.3.dfsg+really1.3.1-1+b1 |
-| zsh | 5.9-8+b23 |
+| zsh | 5.9-8+b24 |
 
 ## Variant: 3.4-trixie
 
-**Digest:** sha256:f2c91c99297f7050d06706afb0ddf23b060d41fb26d69638b3188c63f45ef407
+**Digest:** sha256:ab06918308edcb64b18577fd8ba7a766cdd6bef991bb51448b02ec1bc08df42d
 
 **Tags:**
 ```
@@ -130,9 +130,9 @@ mcr.microsoft.com/devcontainers/ruby:dev-3.4
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 129de5a05f9f234a3202fa5c8a13e15891149adc | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | a1c1a851371ba08a2dbfee83bee94a97e5e577ca | /usr/local/share/ruby-build |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6421f8e104e4e87f2373362cbf61e46a918612a7 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | a885b885fef16fac4bc544188fb25e9e37ae83e8 | /usr/local/share/nvm |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 01800b0594bbac54feab233b5bd9a3215fc2ff65 | /usr/local/share/ruby-build |
 
 **Ruby gems and tools**
 
@@ -154,7 +154,7 @@ mcr.microsoft.com/devcontainers/ruby:dev-3.4
 | apt-utils | 3.0.3 |
 | build-essential | 12.12 |
 | ca-certificates | 20250419 |
-| curl | 8.14.1-2+deb13u4 |
+| curl | 8.14.1-2+deb13u5 |
 | dialog | 1.3-20250116-1 |
 | git | 1:2.47.3-0+deb13u1 |
 | gnupg2 | 2.4.7-21+deb13u1 |
@@ -162,12 +162,12 @@ mcr.microsoft.com/devcontainers/ruby:dev-3.4
 | iproute2 | 6.15.0-1 |
 | jq | 1.7.1-6+deb13u3 |
 | less | 668-1 |
-| libc6 | 2.41-12+deb13u3 |
+| libc6 | 2.41-12+deb13u4 |
 | libgssapi-krb5-2 | 1.21.3-5+deb13u1 |
 | libicu76 | 76.1-4 |
 | libkrb5-3 | 1.21.3-5+deb13u1 |
 | libstdc++6 | 14.2.0-19 |
-| locales | 2.41-12+deb13u3 |
+| locales | 2.41-12+deb13u4 |
 | lsb-release | 12.1-1 |
 | lsof | 4.99.4+dfsg-2 |
 | man-db | 2.13.1-1 |
@@ -187,11 +187,11 @@ mcr.microsoft.com/devcontainers/ruby:dev-3.4
 | wget | 1.25.0-2 |
 | zip | 3.0-15+deb13u1 |
 | zlib1g | 1:1.3.dfsg+really1.3.1-1+b1 |
-| zsh | 5.9-8+b23 |
+| zsh | 5.9-8+b24 |
 
 ## Variant: 3.3-trixie
 
-**Digest:** sha256:9e086aed51316894fd851bb14af4d906dc7ae1b0b3b92d65cb0041981d9738a2
+**Digest:** sha256:2f07ffdb8ed619274aa6f3eb2d05a7795d2102432b04a6abdd889a364b1b5870
 
 **Tags:**
 ```
@@ -217,9 +217,9 @@ mcr.microsoft.com/devcontainers/ruby:dev-3.3
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 129de5a05f9f234a3202fa5c8a13e15891149adc | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | a1c1a851371ba08a2dbfee83bee94a97e5e577ca | /usr/local/share/ruby-build |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6421f8e104e4e87f2373362cbf61e46a918612a7 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | a885b885fef16fac4bc544188fb25e9e37ae83e8 | /usr/local/share/nvm |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 01800b0594bbac54feab233b5bd9a3215fc2ff65 | /usr/local/share/ruby-build |
 
 **Ruby gems and tools**
 
@@ -241,7 +241,7 @@ mcr.microsoft.com/devcontainers/ruby:dev-3.3
 | apt-utils | 3.0.3 |
 | build-essential | 12.12 |
 | ca-certificates | 20250419 |
-| curl | 8.14.1-2+deb13u4 |
+| curl | 8.14.1-2+deb13u5 |
 | dialog | 1.3-20250116-1 |
 | git | 1:2.47.3-0+deb13u1 |
 | gnupg2 | 2.4.7-21+deb13u1 |
@@ -249,12 +249,12 @@ mcr.microsoft.com/devcontainers/ruby:dev-3.3
 | iproute2 | 6.15.0-1 |
 | jq | 1.7.1-6+deb13u3 |
 | less | 668-1 |
-| libc6 | 2.41-12+deb13u3 |
+| libc6 | 2.41-12+deb13u4 |
 | libgssapi-krb5-2 | 1.21.3-5+deb13u1 |
 | libicu76 | 76.1-4 |
 | libkrb5-3 | 1.21.3-5+deb13u1 |
 | libstdc++6 | 14.2.0-19 |
-| locales | 2.41-12+deb13u3 |
+| locales | 2.41-12+deb13u4 |
 | lsb-release | 12.1-1 |
 | lsof | 4.99.4+dfsg-2 |
 | man-db | 2.13.1-1 |
@@ -274,11 +274,11 @@ mcr.microsoft.com/devcontainers/ruby:dev-3.3
 | wget | 1.25.0-2 |
 | zip | 3.0-15+deb13u1 |
 | zlib1g | 1:1.3.dfsg+really1.3.1-1+b1 |
-| zsh | 5.9-8+b23 |
+| zsh | 5.9-8+b24 |
 
 ## Variant: 4.0-bookworm
 
-**Digest:** sha256:af7b5ab2a83ec1913027767d005d6210b5c9a1f568cf7e4307ea8b4fbb5a43da
+**Digest:** sha256:0d8207077972a86600d37aa6fefddd3c20668e5b72f7830dab36046536a89d02
 
 **Tags:**
 ```
@@ -299,15 +299,15 @@ mcr.microsoft.com/devcontainers/ruby:dev-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Ruby](https://www.ruby-lang.org/en/) | 4.0.6 | /usr/local |
+| [Ruby](https://www.ruby-lang.org/en/) | 4.0.7 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 129de5a05f9f234a3202fa5c8a13e15891149adc | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | a1c1a851371ba08a2dbfee83bee94a97e5e577ca | /usr/local/share/ruby-build |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6421f8e104e4e87f2373362cbf61e46a918612a7 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | a885b885fef16fac4bc544188fb25e9e37ae83e8 | /usr/local/share/nvm |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 01800b0594bbac54feab233b5bd9a3215fc2ff65 | /usr/local/share/ruby-build |
 
 **Ruby gems and tools**
 
@@ -361,13 +361,13 @@ mcr.microsoft.com/devcontainers/ruby:dev-bookworm
 | unzip | 6.0-28+deb12u1 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
-| zip | 3.0-13 |
+| zip | 3.0-13+deb12u1 |
 | zlib1g | 1:1.2.13.dfsg-1 |
 | zsh | 5.9-4+b15 |
 
 ## Variant: 3.4-bookworm
 
-**Digest:** sha256:fd242dd5b82c68e8db54792808ea9cf8130e11f90cd4ce292e28750f33ca8c63
+**Digest:** sha256:b776a728f059c8fef6579b56a56f77fd90375be9c1a985b1e3403e8f326fc9eb
 
 **Tags:**
 ```
@@ -392,9 +392,9 @@ mcr.microsoft.com/devcontainers/ruby:dev-3.4-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 129de5a05f9f234a3202fa5c8a13e15891149adc | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | a1c1a851371ba08a2dbfee83bee94a97e5e577ca | /usr/local/share/ruby-build |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6421f8e104e4e87f2373362cbf61e46a918612a7 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | a885b885fef16fac4bc544188fb25e9e37ae83e8 | /usr/local/share/nvm |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 01800b0594bbac54feab233b5bd9a3215fc2ff65 | /usr/local/share/ruby-build |
 
 **Ruby gems and tools**
 
@@ -448,13 +448,13 @@ mcr.microsoft.com/devcontainers/ruby:dev-3.4-bookworm
 | unzip | 6.0-28+deb12u1 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
-| zip | 3.0-13 |
+| zip | 3.0-13+deb12u1 |
 | zlib1g | 1:1.2.13.dfsg-1 |
 | zsh | 5.9-4+b15 |
 
 ## Variant: 3.3-bookworm
 
-**Digest:** sha256:27ba5b2fa45ededaf634276d73b2c17e47ccebadc29d4584c06490d4e95b4710
+**Digest:** sha256:c0f472b7139d558c092399da1a318ac1c7cf56655d28f34d85f5990d8482c5d1
 
 **Tags:**
 ```
@@ -479,9 +479,9 @@ mcr.microsoft.com/devcontainers/ruby:dev-3.3-bookworm
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 129de5a05f9f234a3202fa5c8a13e15891149adc | /home/vscode/.oh-my-zsh |
-| [nvm](https://github.com/nvm-sh/nvm.git) | f0b0c6bb0b281ceeb106c8cf9ab8fde141215092 | /usr/local/share/nvm |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | a1c1a851371ba08a2dbfee83bee94a97e5e577ca | /usr/local/share/ruby-build |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6421f8e104e4e87f2373362cbf61e46a918612a7 | /home/vscode/.oh-my-zsh |
+| [nvm](https://github.com/nvm-sh/nvm.git) | a885b885fef16fac4bc544188fb25e9e37ae83e8 | /usr/local/share/nvm |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | 01800b0594bbac54feab233b5bd9a3215fc2ff65 | /usr/local/share/ruby-build |
 
 **Ruby gems and tools**
 
@@ -535,7 +535,7 @@ mcr.microsoft.com/devcontainers/ruby:dev-3.3-bookworm
 | unzip | 6.0-28+deb12u1 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
-| zip | 3.0-13 |
+| zip | 3.0-13+deb12u1 |
 | zlib1g | 1:1.2.13.dfsg-1 |
 | zsh | 5.9-4+b15 |
 

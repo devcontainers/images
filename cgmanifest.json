@@ -171,7 +171,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "129de5a05f9f234a3202fa5c8a13e15891149adc"
+                    "commitHash": "6421f8e104e4e87f2373362cbf61e46a918612a7"
                 }
             }
         },
@@ -237,6 +237,16 @@
         },
         {
             "Component": {
+                "Type": "git",
+                "Git": {
+                    "Name": "Oh My Zsh!",
+                    "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
+                    "commitHash": "74965c96098134b192f00084f966b4b02438a739"
+                }
+            }
+        },
+        {
+            "Component": {
                 "Type": "other",
                 "Other": {
                     "Name": "Docker Image: buildpack-deps",
@@ -271,7 +281,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "eda24550dc7d7df12fc3affdbf4ac4dba27a3331"
+                    "commitHash": "5f96cd15fd745122cf27e0524606d6c1efc5fd07"
                 }
             }
         },
@@ -281,7 +291,7 @@
                 "Git": {
                     "Name": "vcpkg",
                     "repositoryUrl": "https://github.com/microsoft/vcpkg",
-                    "commitHash": "f781d9387e4684783e69e136e2e124ff4660bffc"
+                    "commitHash": "33d78c1ed898a06938f31312167c7abefd229455"
                 }
             }
         },
@@ -341,7 +351,7 @@
                 "Git": {
                     "Name": "nvm",
                     "repositoryUrl": "https://github.com/nvm-sh/nvm.git",
-                    "commitHash": "f0b0c6bb0b281ceeb106c8cf9ab8fde141215092"
+                    "commitHash": "a885b885fef16fac4bc544188fb25e9e37ae83e8"
                 }
             }
         },
@@ -474,7 +484,7 @@
                 "Type": "go",
                 "Go": {
                     "Name": "github.com/go-delve/delve",
-                    "Version": "1.27.1"
+                    "Version": "1.27.2"
                 }
             }
         },
@@ -493,6 +503,16 @@
                 "Go": {
                     "Name": "honnef.co/go/tools",
                     "Version": "0.8.1"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "git",
+                "Git": {
+                    "Name": "Oh My Zsh!",
+                    "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
+                    "commitHash": "40bddc3c1a100feafccb01403f74c1d4e7380380"
                 }
             }
         },
@@ -580,6 +600,16 @@
             "Component": {
                 "Type": "other",
                 "Other": {
+                    "Name": "SDKMAN!",
+                    "Version": "cat: /usr/local/sdkman/var/version: No such file or directory",
+                    "DownloadUrl": "https://github.com/sdkman/sdkman-cli"
+                }
+            }
+        },
+        {
+            "Component": {
+                "Type": "other",
+                "Other": {
                     "Name": "Eclipse Temurin",
                     "Version": "1.8.0_504",
                     "DownloadUrl": "https://adoptium.net/"
@@ -591,7 +621,7 @@
                 "Type": "npm",
                 "Npm": {
                     "Name": "eslint",
-                    "Version": "10.10.0"
+                    "Version": "10.11.0"
                 }
             }
         },
@@ -601,7 +631,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "129de5a05f9f234a3202fa5c8a13e15891149adc"
+                    "commitHash": "6421f8e104e4e87f2373362cbf61e46a918612a7"
                 }
             }
         },
@@ -611,7 +641,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "cd320b5506998f32284d37799592cb2ba43a3188"
+                    "commitHash": "40bddc3c1a100feafccb01403f74c1d4e7380380"
                 }
             }
         },
@@ -695,7 +725,7 @@
                 "Type": "RubyGems",
                 "RubyGems": {
                     "Name": "bundler",
-                    "Version": "4.0.20"
+                    "Version": "4.0.21"
                 }
             }
         },
@@ -723,7 +753,7 @@
                 "Git": {
                     "Name": "ruby-build",
                     "repositoryUrl": "https://github.com/rbenv/ruby-build.git",
-                    "commitHash": "a1c1a851371ba08a2dbfee83bee94a97e5e577ca"
+                    "commitHash": "01800b0594bbac54feab233b5bd9a3215fc2ff65"
                 }
             }
         },
@@ -842,7 +872,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "virtualenv",
-                    "Version": "21.7.9"
+                    "Version": "21.9.0"
                 }
             }
         },
@@ -851,7 +881,7 @@
                 "Type": "Pip",
                 "Pip": {
                     "Name": "pipx",
-                    "Version": "1.17.2"
+                    "Version": "1.17.5"
                 }
             }
         },
@@ -861,7 +891,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "146461f7c6d95f4ba1220559d66eb113418b40a8"
+                    "commitHash": "24d629f7f1eda1eaa4c8918e5c838b330ff96f28"
                 }
             }
         },
@@ -979,16 +1009,6 @@
                 "Pip": {
                     "Name": "wheel",
                     "Version": "0.46.3"
-                }
-            }
-        },
-        {
-            "Component": {
-                "Type": "git",
-                "Git": {
-                    "Name": "Oh My Zsh!",
-                    "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "cd320b5506998f32284d37799592cb2ba43a3188"
                 }
             }
         },
@@ -1300,7 +1320,7 @@
                 "Type": "linux",
                 "Linux": {
                     "Name": "moby-cli",
-                    "Version": "29.7.2-ubuntu24.04u2",
+                    "Version": "29.8.1-ubuntu24.04u1",
                     "Distribution": "ubuntu",
                     "Release": "24.04",
                     "Pool-URL": "https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod",
@@ -1313,7 +1333,7 @@
                 "Type": "linux",
                 "Linux": {
                     "Name": "moby-engine",
-                    "Version": "29.7.2-ubuntu24.04u2",
+                    "Version": "29.8.1-ubuntu24.04u1",
                     "Distribution": "ubuntu",
                     "Release": "24.04",
                     "Pool-URL": "https://packages.microsoft.com/repos/microsoft-ubuntu-focal-prod",
@@ -1345,7 +1365,7 @@
                 "Git": {
                     "Name": "Oh My Zsh!",
                     "repositoryUrl": "https://github.com/ohmyzsh/ohmyzsh",
-                    "commitHash": "129de5a05f9f234a3202fa5c8a13e15891149adc"
+                    "commitHash": "6421f8e104e4e87f2373362cbf61e46a918612a7"
                 }
             }
         },
@@ -1374,7 +1394,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "Helm",
-                    "Version": "4.2.4",
+                    "Version": "4.3.0",
                     "DownloadUrl": "https://github.com/helm/helm"
                 }
             }
@@ -1394,7 +1414,7 @@
                 "Type": "other",
                 "Other": {
                     "Name": "GitHub CLI",
-                    "Version": "2.100.0",
+                    "Version": "2.101.0",
                     "DownloadUrl": "https://github.com/cli/cli"
                 }
             }
