@@ -11,7 +11,7 @@
 
 ## Variant: resolute
 
-**Digest:** sha256:ad0fec0b29d62987f88e7ae6a17afbbdd45205fe7c2118bb2e1a77ab1bbf0bc4
+**Digest:** sha256:d95706f00df6bec3703352e586649dbfe8130ec46e58854a23f266e5d3a41e7d
 
 **Tags:**
 ```
@@ -32,7 +32,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 129de5a05f9f234a3202fa5c8a13e15891149adc | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 83a0ec79ee3b1f64c6ae2e80dcb1fb27a55e5952 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -47,7 +47,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 | apt-transport-https | 3.2.0 |
 | apt-utils | 3.2.0 |
 | ca-certificates | 20260601~26.04.1 |
-| curl | 8.18.0-1ubuntu2.5 |
+| curl | 8.18.0-1ubuntu2.7 |
 | dialog | 1.3-20260107-1 |
 | git | 1:2.53.0-1ubuntu1 |
 | gnupg2 | 2.4.8-4ubuntu3.1 |
@@ -74,7 +74,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 | psmisc | 23.7-2ubuntu2 |
 | rsync | 3.4.1+ds1-7ubuntu0.3 |
 | strace | 6.19+ds-0ubuntu5 |
-| sudo | 1.9.17p2-1ubuntu3 |
+| sudo | 1.9.17p2-1ubuntu3.1 |
 | unzip | 6.0-29ubuntu1 |
 | vim-tiny | 2:9.1.2141-1ubuntu4.9 |
 | wget | 1.25.0-2ubuntu4.4 |
@@ -84,7 +84,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu
 
 ## Variant: noble
 
-**Digest:** sha256:ca4f3de49d273a754ec22c666eef69278f76e756d853cb1ca4b1b1cbd2cde10e
+**Digest:** sha256:94a0ca10d88cc36abc22d8604c2063ae57912d3de901733ed6b631bae5e313a5
 
 **Tags:**
 ```
@@ -104,7 +104,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu24.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 129de5a05f9f234a3202fa5c8a13e15891149adc | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 83a0ec79ee3b1f64c6ae2e80dcb1fb27a55e5952 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -119,7 +119,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu24.04
 | apt-transport-https | 2.8.3 |
 | apt-utils | 2.8.3 |
 | ca-certificates | 20260601~24.04.1 |
-| curl | 8.5.0-2ubuntu10.13 |
+| curl | 8.5.0-2ubuntu10.15 |
 | dialog | 1.3-20240101-1 |
 | git | 1:2.43.0-1ubuntu7.3 |
 | gnupg2 | 2.4.4-2ubuntu17.6 |
@@ -127,12 +127,12 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu24.04
 | iproute2 | 6.1.0-1ubuntu6.4 |
 | jq | 1.7.1-3ubuntu0.24.04.2 |
 | less | 590-2ubuntu2.1 |
-| libc6 | 2.39-0ubuntu8.8 |
-| libgssapi-krb5-2 | 1.20.1-6ubuntu2.8 |
+| libc6 | 2.39-0ubuntu8.9 |
+| libgssapi-krb5-2 | 1.20.1-6ubuntu2.10 |
 | libicu74 | 74.2-1ubuntu3.1 |
-| libkrb5-3 | 1.20.1-6ubuntu2.8 |
+| libkrb5-3 | 1.20.1-6ubuntu2.10 |
 | libstdc++6 | 14.2.0-4ubuntu2~24.04.1 |
-| locales | 2.39-0ubuntu8.8 |
+| locales | 2.39-0ubuntu8.9 |
 | lsb-release | 12.0-2 |
 | lsof | 4.95.0-1build3 |
 | man-db | 2.12.0-4build2 |
@@ -146,7 +146,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu24.04
 | psmisc | 23.7-1build1 |
 | rsync | 3.2.7-1ubuntu1.5 |
 | strace | 6.8-0ubuntu2 |
-| sudo | 1.9.15p5-3ubuntu5.24.04.2 |
+| sudo | 1.9.15p5-3ubuntu5.24.04.3 |
 | unzip | 6.0-28ubuntu4.1 |
 | vim-tiny | 2:9.1.0016-1ubuntu7.20 |
 | wget | 1.21.4-1ubuntu4.5 |
@@ -156,7 +156,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu24.04
 
 ## Variant: jammy
 
-**Digest:** sha256:c989ca2f007a822184c460365075041bc99cc267d284928f303cad6b6fca45e7
+**Digest:** sha256:6993b62175062ef93fc241b4fb147bde3766da8e63d75ef4ff06f22d31436e09
 
 **Tags:**
 ```
@@ -176,7 +176,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu22.04
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 129de5a05f9f234a3202fa5c8a13e15891149adc | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 83a0ec79ee3b1f64c6ae2e80dcb1fb27a55e5952 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -191,7 +191,7 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu22.04
 | apt-transport-https | 2.4.14 |
 | apt-utils | 2.4.14 |
 | ca-certificates | 20260601~22.04.1 |
-| curl | 7.81.0-1ubuntu1.27 |
+| curl | 7.81.0-1ubuntu1.29 |
 | dialog | 1.3-20211214-1 |
 | git | 1:2.34.1-1ubuntu1.17 |
 | gnupg2 | 2.2.27-3ubuntu2.5 |
@@ -200,9 +200,9 @@ mcr.microsoft.com/devcontainers/base:dev-ubuntu22.04
 | jq | 1.6-2.1ubuntu3.2 |
 | less | 590-1ubuntu0.22.04.3 |
 | libc6 | 2.35-0ubuntu3.15 |
-| libgssapi-krb5-2 | 1.19.2-2ubuntu0.8 |
+| libgssapi-krb5-2 | 1.19.2-2ubuntu0.10 |
 | libicu70 | 70.1-2 |
-| libkrb5-3 | 1.19.2-2ubuntu0.8 |
+| libkrb5-3 | 1.19.2-2ubuntu0.10 |
 | liblttng-ust1 | 2.13.1-1ubuntu1 |
 | libstdc++6 | 12.3.0-1ubuntu1~22.04.3 |
 | locales | 2.35-0ubuntu3.15 |
