@@ -177,8 +177,9 @@ checkPythonPackageVersion "python" "requests" "2.31.0"
 
 ## Conda Python
 checkCondaPackageVersion "requests" "2.31.0"
-checkCondaPackageVersion "cryptography" "46.0.7"
-checkCondaPackageVersion "pyopenssl" "26.0.0"
+checkCondaPackageVersion "cryptography" "50.0.0"
+checkCondaPackageVersion "pyopenssl" "26.4.0"
+checkCondaPackageVersion "openssl" "3.5.8"
 checkCondaPackageVersion "urllib3" "2.6.3"
 checkCondaPackageVersion "brotli" "1.2.0"
 checkCondaPackageVersion "python-dotenv" "1.2.2"

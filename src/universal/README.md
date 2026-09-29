@@ -45,7 +45,7 @@ For example:
 
 - `mcr.microsoft.com/devcontainers/universal:6-noble`
 - `mcr.microsoft.com/devcontainers/universal:6.1-noble`
-- `mcr.microsoft.com/devcontainers/universal:6.1.7-noble`
+- `mcr.microsoft.com/devcontainers/universal:6.1.8-noble`
 
 ## Accessing the container using SSH, or SSHFS
 
