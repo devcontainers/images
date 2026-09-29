@@ -40,8 +40,7 @@ if [[ "${IMAGE}" == "universal" && "${squash_universal_image}" == "true" ]]; the
     devcontainer up \
         --id-label "${id_label}" \
         --workspace-folder "src/${IMAGE}/" \
-        --override-config "${override_config}" \
-        --update-remote-user-uid-default never
+        --override-config "${override_config}"
 
     container_id="$(docker container ls -q --filter "label=${id_label}")"
     if [[ -z "${container_id}" ]]; then
