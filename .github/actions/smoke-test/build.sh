@@ -36,6 +36,10 @@ if [[ "${IMAGE}" == "universal" && "${squash_universal_image}" == "true" ]]; the
     override_config="${RUNNER_TEMP}/universal-squashed.devcontainer.json"
     printf '{ "image": "%s" }\n' "${id_image}" > "${override_config}"
 
+    echo "(*) Squashed image launch configuration"
+    cat "${override_config}"
+    docker image inspect --format 'ID={{.Id}} Layers={{len .RootFS.Layers}} Config={{json .Config}}' "${id_image}"
+
     echo "(*) Starting container from squashed image - ${IMAGE}"
     devcontainer up \
         --id-label "${id_label}" \
@@ -50,6 +54,17 @@ if [[ "${IMAGE}" == "universal" && "${squash_universal_image}" == "true" ]]; the
 
     expected_image_id="$(docker image inspect --format '{{.Id}}' "${id_image}")"
     actual_image_id="$(docker container inspect --format '{{.Image}}' "${container_id}")"
+    configured_image="$(docker container inspect --format '{{.Config.Image}}' "${container_id}")"
+
+    echo "(*) Universal test container details"
+    echo "Container ID: ${container_id}"
+    echo "Configured image: ${configured_image}"
+    echo "Expected image ID: ${expected_image_id}"
+    echo "Actual image ID: ${actual_image_id}"
+    docker container inspect --format 'Config={{json .Config}}' "${container_id}"
+    docker image inspect --format 'ID={{.Id}} Layers={{len .RootFS.Layers}} Config={{json .Config}}' "${actual_image_id}"
+    devcontainer exec --id-label "${id_label}" --workspace-folder "src/${IMAGE}/" /bin/sh -c 'echo "Remote user: $(id -un) ($(id -u):$(id -g))"' || true
+
     if [[ "${actual_image_id}" != "${expected_image_id}" ]]; then
         echo "Test container is not using the squashed ${id_image} image."
         exit 1
