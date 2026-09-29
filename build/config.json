@@ -27,6 +27,7 @@
 	],
 
 	"flattenBaseImage": [],
+	"squashUniversalImage": true,
 
 	"poolKeys": {
 		"https://dl.yarnpkg.com/debian": "https://dl.yarnpkg.com/debian/pubkey.gpg",

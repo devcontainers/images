@@ -36,6 +36,9 @@ jobs:
       with:
         path: 'release'
         ref: ${{ github.event.inputs.release }}
+
+    - name: Set up docker-squash
+      uses: ./ref/.github/actions/setup-docker-squash
       
     - name: Build and push
       id: build_and_push

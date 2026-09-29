@@ -707,6 +707,19 @@ function shouldFlattenDefinitionBaseImage(definitionId) {
     return (getConfig('flattenBaseImage', []).indexOf(definitionId) >= 0)
 }
 
+function shouldSquashUniversalImage(definitionId) {
+    if (definitionId !== 'universal') {
+        return false;
+    }
+
+    const environmentValue = process.env.SQUASH_UNIVERSAL_IMAGE;
+    if (typeof environmentValue !== 'undefined') {
+        return environmentValue.toLocaleLowerCase() === 'true';
+    }
+
+    return config.squashUniversalImage === true;
+}
+
 function getDefaultDependencies(dependencyType) {
     const packageManagerConfig = getConfig('commonDependencies');
     return packageManagerConfig ? packageManagerConfig[dependencyType] : null;
@@ -740,5 +753,6 @@ module.exports = {
     getPoolKeyForPoolUrl: getPoolKeyForPoolUrl,
     getConfig: getConfig,
     shouldFlattenDefinitionBaseImage: shouldFlattenDefinitionBaseImage,
+    shouldSquashUniversalImage: shouldSquashUniversalImage,
     getDefinitionList: getDefinitionList
 };
