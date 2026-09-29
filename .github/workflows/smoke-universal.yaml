@@ -8,7 +8,7 @@ on:
   pull_request:
     paths:
       - src/universal/**
-      - .github/universal/smoke-universal.yaml
+      - .github/workflows/smoke-universal.yaml
       - .github/actions/**
       - build/**
 jobs:
@@ -19,6 +19,8 @@ jobs:
     - name: Checkout
       id: checkout
       uses: actions/checkout@v6
+    - name: Set up docker-squash
+      uses: ./.github/actions/setup-docker-squash
     - name: Smoke test
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

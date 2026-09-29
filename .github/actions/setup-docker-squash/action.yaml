@@ -1,0 +1,49 @@
+name: 'Set up docker-squash'
+description: 'Configures Docker for docker-squash and installs the Python tool'
+
+runs:
+  using: composite
+  steps:
+    - name: Install Python and docker-squash
+      shell: bash
+      run: |
+        set -e
+        sudo apt-get update
+        sudo apt-get install -y python3 python3-venv
+        python3 -m venv "${RUNNER_TEMP}/docker-squash"
+        "${RUNNER_TEMP}/docker-squash/bin/pip" install docker-squash==1.3.0
+        echo "${RUNNER_TEMP}/docker-squash/bin" >> "${GITHUB_PATH}"
+        "${RUNNER_TEMP}/docker-squash/bin/docker-squash" --version
+
+    - name: Configure Docker image store
+      shell: bash
+      run: |
+        set -e
+        docker_version="$(docker version --format '{{.Server.Version}}')"
+        docker_major_version="${docker_version%%.*}"
+        echo "Docker Engine version: ${docker_version}"
+
+        if [[ "${docker_major_version}" -ge 29 ]]; then
+            daemon_config="${RUNNER_TEMP}/daemon.json"
+            python3 - "${daemon_config}" <<'PY'
+        import json
+        import os
+        import sys
+
+        source = "/etc/docker/daemon.json"
+        config = {}
+        if os.path.exists(source):
+            with open(source, encoding="utf-8") as handle:
+                config = json.load(handle)
+
+        config.setdefault("features", {})["containerd-snapshotter"] = False
+        with open(sys.argv[1], "w", encoding="utf-8") as handle:
+            json.dump(config, handle, indent=2)
+            handle.write("\n")
+        PY
+            sudo install -m 0644 "${daemon_config}" /etc/docker/daemon.json
+            sudo systemctl restart docker || sudo service docker restart
+            timeout 60 sh -c 'until docker info >/dev/null 2>&1; do sleep 1; done'
+        fi
+
+        echo "Docker storage driver: $(docker info --format '{{.Driver}}')"

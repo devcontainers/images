@@ -166,6 +166,9 @@ async function pushImage(definitionId, variant, repo, release, updateLatest,
             const secondaryImageNameParams = secondaryImageNamesWithVersionTags.reduce((prev, current) => prev.concat(['--image-name', current]), []);
             imageNameParams = imageNameParams.concat(secondaryImageNameParams);
 
+            const allImageNamesWithVersionTags = imageNamesWithVersionTags.concat(secondaryImageNamesWithVersionTags);
+            const squashUniversalImage = configUtils.shouldSquashUniversalImage(definitionId);
+
             const spawnOpts = { stdio: 'inherit', cwd: workingDir, shell: true };
             await asyncUtils.spawn('devcontainer', [
                 'build',
@@ -174,11 +177,13 @@ async function pushImage(definitionId, variant, repo, release, updateLatest,
                 ...imageNameParams,
                 '--no-cache', 'true',
                 platformParams,
-                pushImages ? '--push' : '',
+                getDevcontainerPushArgument(pushImages, squashUniversalImage),
                 '--skip-persisting-customizations-from-features', skipPersistingCustomizationsFromFeatures,
             ], spawnOpts);
 
-            if (!pushImages) {
+            if (squashUniversalImage) {
+                await squashAndPushImageTags(allImageNamesWithVersionTags, pushImages, spawnOpts);
+            } else if (!pushImages) {
                 console.log(`(*) Skipping push to registry.`);
             }
 
@@ -194,6 +199,40 @@ async function pushImage(definitionId, variant, repo, release, updateLatest,
         dotDevContainerPath, definitionId, repo, release, stubRegistry, stubRegistryPath);
 
     console.log('(*) Done!\n');
+}
+
+function getDevcontainerPushArgument(pushImages, squashImage) {
+    return pushImages && !squashImage ? '--push' : '';
+}
+
+async function squashAndPushImageTags(imageNames, pushImages, spawnOpts) {
+    await squashImage(imageNames, spawnOpts);
+    if (pushImages) {
+        await pushImageTags(imageNames, spawnOpts);
+    } else {
+        console.log(`(*) Skipping push to registry.`);
+    }
+}
+
+async function squashImage(imageNames, spawnOpts) {
+    const sourceImage = imageNames[0];
+    const squashedImage = `${sourceImage}-squashed`;
+
+    console.log(`(*) Squashing image ${sourceImage}...`);
+    await asyncUtils.spawn('docker-squash', ['--tag', squashedImage, sourceImage], spawnOpts);
+
+    for (const imageName of imageNames) {
+        await asyncUtils.spawn('docker', ['tag', squashedImage, imageName], spawnOpts);
+    }
+
+    await asyncUtils.spawn('docker', ['image', 'rm', squashedImage], spawnOpts);
+}
+
+async function pushImageTags(imageNames, spawnOpts) {
+    console.log('(*) Pushing squashed image tags...');
+    for (const imageName of imageNames) {
+        await asyncUtils.spawn('docker', ['push', imageName], spawnOpts);
+    }
 }
 
 async function flattenBaseImage(baseImageTag, flattenedBaseImageTag, pushImages) {
@@ -270,5 +309,9 @@ async function createOrUseBuilder() {
 
 
 module.exports = {
-    push: push
+    push: push,
+    getDevcontainerPushArgument: getDevcontainerPushArgument,
+    squashAndPushImageTags: squashAndPushImageTags,
+    squashImage: squashImage,
+    pushImageTags: pushImageTags
 }

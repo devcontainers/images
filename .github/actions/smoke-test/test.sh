@@ -19,6 +19,11 @@ docker images
 
 if [ $IMAGE == "universal" ]; then
     check_image_size $IMAGE $THRESHOLD_IN_GB $id_image
+    layer_count="$(docker image inspect --format '{{len .RootFS.Layers}}' "${id_image}")"
+    if [[ "${layer_count}" -ne 1 ]]; then
+        echo "Universal image has ${layer_count} filesystem layers; expected 1."
+        exit 1
+    fi
 fi
 
 # Clean up

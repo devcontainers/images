@@ -20,6 +20,20 @@ id_label="test-container=${IMAGE}"
 id_image="${IMAGE}-test-image"
 echo "(*) Building image - ${IMAGE}"
 devcontainer build --image-name ${id_image} --workspace-folder "src/${IMAGE}/"
+
+squash_universal_image="$(node -p "require('./build/config.json').squashUniversalImage === true")"
+if [[ -n "${SQUASH_UNIVERSAL_IMAGE+x}" ]]; then
+    squash_universal_image="$(echo "${SQUASH_UNIVERSAL_IMAGE}" | tr '[:upper:]' '[:lower:]')"
+fi
+
+if [[ "${IMAGE}" == "universal" && "${squash_universal_image}" == "true" ]]; then
+    squashed_image="${id_image}-squashed"
+    echo "(*) Squashing image - ${IMAGE}"
+    docker-squash --tag "${squashed_image}" "${id_image}"
+    docker tag "${squashed_image}" "${id_image}"
+    docker image rm "${squashed_image}"
+fi
+
 echo "(*) Starting container - ${IMAGE}"
 devcontainer up --id-label ${id_label} --workspace-folder "src/${IMAGE}/"
 
