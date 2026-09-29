@@ -32,8 +32,31 @@ if [[ "${IMAGE}" == "universal" && "${squash_universal_image}" == "true" ]]; the
     docker-squash --tag "${squashed_image}" "${id_image}"
     docker tag "${squashed_image}" "${id_image}"
     docker image rm "${squashed_image}"
-fi
 
-echo "(*) Starting container - ${IMAGE}"
-devcontainer up --id-label ${id_label} --workspace-folder "src/${IMAGE}/"
+    override_config="${RUNNER_TEMP}/universal-squashed.devcontainer.json"
+    printf '{ "image": "%s" }\n' "${id_image}" > "${override_config}"
+
+    echo "(*) Starting container from squashed image - ${IMAGE}"
+    devcontainer up \
+        --id-label "${id_label}" \
+        --workspace-folder "src/${IMAGE}/" \
+        --override-config "${override_config}" \
+        --update-remote-user-uid-default never
+
+    container_id="$(docker container ls -q --filter "label=${id_label}")"
+    if [[ -z "${container_id}" ]]; then
+        echo "Could not find the universal test container."
+        exit 1
+    fi
+
+    expected_image_id="$(docker image inspect --format '{{.Id}}' "${id_image}")"
+    actual_image_id="$(docker container inspect --format '{{.Image}}' "${container_id}")"
+    if [[ "${actual_image_id}" != "${expected_image_id}" ]]; then
+        echo "Test container is not using the squashed ${id_image} image."
+        exit 1
+    fi
+else
+    echo "(*) Starting container - ${IMAGE}"
+    devcontainer up --id-label "${id_label}" --workspace-folder "src/${IMAGE}/"
+fi
 
