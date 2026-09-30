@@ -35,6 +35,8 @@ Each `RUN` statement creates a Docker image "layer". If one `RUN` statement adds
 
 If you want to create your own image or add functionality on top of the images available in this repository, then see [How to write Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) and the [dev container features reference](https://containers.dev/implementors/features/). 
 
+Use semantic versioning when changing an existing image, and always bump the version in `manifest.json` according to the change. Update pinned version examples in the image README only for major or minor version bumps. Do not update README version pins for security patch bumps.
+
 This repository contains a select set of images, and we encourage the community to host and share additional images, and features rather than adding them here. You may learn more about this process in [the guidance](https://containers.dev/implementors/features-distribution/) in our spec repo. You may also check out the [features](https://github.com/devcontainers/features) repo for additional customizations you may adopt or modify for your dev containers.
 
 ## Feedback
