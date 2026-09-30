@@ -18,11 +18,13 @@ See **[history](history)** for information on the contents of published images.
 
 ## Using this image
 
-### Configuration
-
-You can directly reference pre-built versions of `.devcontainer/Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` to the following. An example `Dockerfile` is included in this repository.
+### Release tags
 
 - `mcr.microsoft.com/devcontainers/miniconda` (or `miniconda:3`)
+
+#### Configuration
+
+You can directly reference pre-built versions of `.devcontainer/Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` to the above. An example `Dockerfile` is included in this repository.
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 

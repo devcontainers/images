@@ -32,8 +32,6 @@ The examples below demonstrate stable image [semantic versioning](https://semver
 - `mcr.microsoft.com/devcontainers/universal:6.1-noble`
 - `mcr.microsoft.com/devcontainers/universal:6.1.8-noble`
 
-See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/universal/tags/list).
-
 ## Accessing the container using SSH, or SSHFS
 
 This container also includes a running SSH server that you can use to access the contents if needed. To use it, refer to the [SSHD Feature](https://github.com/devcontainers/features/tree/main/src/sshd#usage) for instructions.

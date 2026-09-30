@@ -26,6 +26,8 @@ In addition to Ruby and Bundler, this development container installs Jekyll and 
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
+### Release tags
+
 You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
 
