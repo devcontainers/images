@@ -1,6 +1,5 @@
 # For Copilot Code Review
-- Every image change must bump the version in the image's `manifest.json` using semantic versioning.
-- Breaking changes (for example, swapping the base OS) require a major bump; new non-breaking features require a minor bump; security or bug fixes require a patch bump.
+- Every image change in a contributor PR requires a manifest bump: use `+1.0.0` for breaking changes such as a base OS change, `+0.1.0` for new features, and `+0.0.1` for security or bug fixes. Copilot should flag a missing or incorrect bump.
+- Release preparation applies its own `+0.0.1` bump regardless, then transfers the resulting version to the README. Contributors must update README pins for major/minor changes only and do not touch README for security or bug fix bumps; patch PRs may leave README patch references out of sync until release preparation.
 - Adding a variant means updating the architecture entry in `manifest.json`, listing the variant in `variantTags`, and setting it as `latest` unless it is a preview.
-- Keep the README in sync: update variant tables, tags, and version references to match the manifest.
 - Example: PR #1548 switched `src/typescript-node/.devcontainer/Dockerfile` to the `4-*` JavaScript base, so `src/typescript-node/manifest.json` moved from 3.0.3 to 4.0.0, added the `*-trixie` variants to both `variants` and `build.architectures`, updated `variantTags`, and set `build.latest` to `24-trixie`; `src/typescript-node/README.md` then reflected the new default tags.
