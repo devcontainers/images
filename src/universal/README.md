@@ -70,5 +70,5 @@ Codespaces will automatically perform some default setup when the `universal` im
 
 Copyright (c) Microsoft Corporation. All rights reserved.
 
-Licensed under the MIT License. See [LICENSE](https://github.com/devcontainers/images/blob/main/LI
+Licensed under the MIT License. See [LICENSE](https://github.com/devcontainers/images/blob/main/LICENSE).
 
