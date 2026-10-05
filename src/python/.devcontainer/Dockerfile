@@ -6,7 +6,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     # Remove imagemagick due to https://security-tracker.debian.org/tracker/CVE-2019-10131
     && apt-get purge -y imagemagick imagemagick-6-common
 
-# Temporary: Upgrade python packages due to https://nvd.nist.gov/vuln/detail/cve-2026-59890 and https://github.com/advisories/GHSA-g5vv-9gxw-82hx 
+# Temporary: Upgrade python packages due to https://nvd.nist.gov/vuln/detail/cve-2026-59890 and https://github.com/advisories/GHSA-g5vv-9gxw-82hx
 # They are installed by the base image (python) which does not have the patch.
 RUN python3 -m pip install --upgrade \
     gitpython==3.1.60 \
