@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Upgrading pip to fix the vulnerability (GHSA-jp4c-xjxw-mgf9)
+# Upgrading pip to fix the vulnerability (GHSA-qwm4-qh6w-59xr)
 python3 -m pip install --upgrade --no-cache-dir "pip==26.2.0" || exit $?
 
 # vulnerabilities:
@@ -13,6 +13,9 @@ python3 -m pip install --upgrade --no-cache-dir "pip==26.2.0" || exit $?
 # idna - [GHSA-65pc-fj4g-8rjx]
 # click - [GHSA-47fr-3ffg-hgmw]
 # bleach - [GHSA-gj48-438w-jh9v]
+# transformers - [GHSA-xrqw-3rrv-vx5w]
+# anyio - [GHSA-82r6-8w77-94w6]
+# soupsieve - [GHSA-gjv8-xp57-g29c]
 
 patched_package_versions=( "mistune=3.2.1" "aiohttp=3.10.11" "cryptography=44.0.1" "h11=0.16.0" "jinja2=3.1.6" "jupyter_core=5.8.1" "protobuf=6.33.5" "requests=2.32.4" "setuptools=78.1.1" "transformers=5.10.0" "urllib3=2.5.0" "werkzeug=3.1.5" "jupyter-lsp=2.2.2" "scrapy=2.14.2"
                       "zipp=3.19.1" "tornado=6.5.5" "jupyterlab=4.5.3" "notebook=7.5.7" "imagecodecs=2024.9.22" "fonttools=4.60.2" "pyarrow=17.0.0" "brotli=1.2.0" "filelock=3.20.1" "panel=1.9.4" "distributed=2026.1.0" "wheel=0.46.2" "nltk=3.9.3" "black=26.3.1" "pyjwt=2.12.0" "pillow=12.1.1" "pyopenssl=26.0.0" "nbconvert=7.17.1" "markdown=3.8.1" "python-dotenv=1.2.2" "lxml=6.1.0"
