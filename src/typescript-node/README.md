@@ -26,13 +26,15 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
-You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
+We publish stable releases and experimental development images (`dev-*`, which contain the latest available changes from `main`). Latest stable: `mcr.microsoft.com/devcontainers/typescript-node:latest` ([MCR](https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/typescript-node/tag/latest)). Other stable releases can be found at: [MCR Tags](https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/typescript-node/tags). Development images use the `dev-` prefix, for example `mcr.microsoft.com/devcontainers/typescript-node:dev-26`, and may be updated in place; pin the image for reproducibility.
 
-- `mcr.microsoft.com/devcontainers/typescript-node:5-24` (or `5-24-trixie`, `5-24-bookworm`)
-- `mcr.microsoft.com/devcontainers/typescript-node:5.2-24` (or `5.2-24-trixie`, `5.2-24-bookworm`)
-- `mcr.microsoft.com/devcontainers/typescript-node:5.2.1-24` (or `5.2.1-24-trixie`, `5.2.1-24-bookworm`)
+The examples below demonstrate stable image [semantic versioning](https://semver.org/); see the links above for current tags.
 
-However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `5-24`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
+- `mcr.microsoft.com/devcontainers/typescript-node:5-26` (or `5-26-trixie`, `5-26-bookworm`)
+- `mcr.microsoft.com/devcontainers/typescript-node:5.2-26` (or `5.2-26-trixie`, `5.2-26-bookworm`)
+- `mcr.microsoft.com/devcontainers/typescript-node:5.2.1-26` (or `5.2.1-26-trixie`, `5.2.1-26-bookworm`)
+
+However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `5-26`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
 Beyond TypeScript, Node.js, and `git`, this image / `Dockerfile` includes `eslint`, `zsh`, [Oh My Zsh!](https://ohmyz.sh/), a non-root `node` user with `sudo` access, and a set of common dependencies for development. Since `tslint` is [now fully deprecated](https://github.com/palantir/tslint/issues/4534), the image includes `tslint-to-eslint-config` globally to help you migrate.
 
