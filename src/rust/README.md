@@ -32,7 +32,7 @@ The examples below demonstrate stable image [semantic versioning](https://semver
 
 - `mcr.microsoft.com/devcontainers/rust:2-1` (or `2-1-trixie`, `2-1-bookworm` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/rust:2.1-1` (or `2.1-1-trixie`, `2.1-1-bookworm` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/rust:2.1.1-1` (or `2.1.1-1-trixie`, `2.1.1-1-bookworm` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/rust:2.1.2-1` (or `2.1.2-1-trixie`, `2.1.2-1-bookworm` to pin to an OS version)
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `2-1`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
