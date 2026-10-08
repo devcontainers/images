@@ -32,7 +32,7 @@ The examples below demonstrate stable image [semantic versioning](https://semver
 
 - `mcr.microsoft.com/devcontainers/typescript-node:5-26` (or `5-26-trixie`, `5-26-bookworm`)
 - `mcr.microsoft.com/devcontainers/typescript-node:5.2-26` (or `5.2-26-trixie`, `5.2-26-bookworm`)
-- `mcr.microsoft.com/devcontainers/typescript-node:5.2.1-26` (or `5.2.1-26-trixie`, `5.2.1-26-bookworm`)
+- `mcr.microsoft.com/devcontainers/typescript-node:5.2.2-26` (or `5.2.2-26-trixie`, `5.2.2-26-bookworm`)
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `5-26`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
