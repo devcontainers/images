@@ -35,7 +35,7 @@ The examples below demonstrate stable image [semantic versioning](https://semver
 
 - `mcr.microsoft.com/devcontainers/java:3-11` (or `3-11-trixie`, `3-11-bookworm` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/java:3.1-11` (or `3.1-11-trixie`, `3.1-11-bookworm` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/java:3.1.4-11` (or `3.1.4-11-trixie`, `3.1.4-11-bookworm` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/java:3.1.5-11` (or `3.1.5-11-trixie`, `3.1.5-11-bookworm` to pin to an OS version)
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `3-11`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
