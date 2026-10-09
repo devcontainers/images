@@ -24,7 +24,7 @@ checkPythonPackageVersion "wheel" "0.38.1"
 checkPythonPackageVersion "anyio" "4.14.2"
 checkPythonPackageVersion "pyjwt" "2.14.0"
 checkPythonPackageVersion "urllib3" "2.8.0"
-checkPythonPackageVersion "pip" "26.2.0"
+checkPythonPackageVersion "pip" "26.2"
 checkPythonPackageVersion "python-dotenv" "1.2.2"
 
 checkCondaPackageVersion "cryptography" "46.0.6"
