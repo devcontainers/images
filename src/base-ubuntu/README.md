@@ -34,7 +34,7 @@ The examples below demonstrate stable image [semantic versioning](https://semver
 
 - `mcr.microsoft.com/devcontainers/base:3-jammy`
 - `mcr.microsoft.com/devcontainers/base:3.0-jammy`
-- `mcr.microsoft.com/devcontainers/base:3.0.9-jammy`
+- `mcr.microsoft.com/devcontainers/base:3.0.10-jammy`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/base/tags/list).
 

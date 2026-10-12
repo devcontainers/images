@@ -32,7 +32,7 @@ The examples below demonstrate stable image [semantic versioning](https://semver
 
 - `mcr.microsoft.com/devcontainers/miniconda:1-3`
 - `mcr.microsoft.com/devcontainers/miniconda:1.3-3`
-- `mcr.microsoft.com/devcontainers/miniconda:1.3.4-3`
+- `mcr.microsoft.com/devcontainers/miniconda:1.3.5-3`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/miniconda/tags/list).
 

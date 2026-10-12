@@ -36,10 +36,10 @@ The examples below demonstrate stable image [semantic versioning](https://semver
 
 - `mcr.microsoft.com/devcontainers/dotnet:2-10.0-noble`
 - `mcr.microsoft.com/devcontainers/dotnet:2.3-10.0-noble`
-- `mcr.microsoft.com/devcontainers/dotnet:2.3.1-10.0-noble`
+- `mcr.microsoft.com/devcontainers/dotnet:2.3.2-10.0-noble`
 - `mcr.microsoft.com/devcontainers/dotnet:2-9.0`
 - `mcr.microsoft.com/devcontainers/dotnet:2.3-9.0`
-- `mcr.microsoft.com/devcontainers/dotnet:2.3.1-9.0`
+- `mcr.microsoft.com/devcontainers/dotnet:2.3.2-9.0`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/dotnet/tags/list).
 
