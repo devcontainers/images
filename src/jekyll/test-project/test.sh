@@ -33,5 +33,18 @@ check-version-ge "svn-requirement" "${svn_version}" "1.14.5"
 
 check "post-create-exists" test -f /usr/local/post-create.sh
 
+# Regression test for the non-root "bundle install" permission error: gem
+# installs during the image build run as root and previously left
+# subdirectories of GEM_HOME (/usr/local/bundle) non-writable by the
+# "vscode" user, even though the top-level directory itself is 1777.
+check "gem-home-subdirs-writable" bash -c '
+  set -e
+  for d in cache gems specifications bin extensions doc build_info plugins; do
+    mkdir -p "$GEM_HOME/$d"
+    touch "$GEM_HOME/$d/.write-test-$$"
+    rm -f "$GEM_HOME/$d/.write-test-$$"
+  done
+'
+
 # Report result
 reportResults

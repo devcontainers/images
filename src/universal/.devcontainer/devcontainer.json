@@ -17,14 +17,13 @@
         "ghcr.io/devcontainers/features/hugo:1": {
             "version": "latest"
         },
-        "ghcr.io/devcontainers/features/node:1": {
+        "ghcr.io/devcontainers/features/node:2": {
             "version": "24",
             "additionalVersions": "22"
         },
-        "./local-features/nvs": "latest",
         "ghcr.io/devcontainers/features/python:1": {
-            "version": "3.12.1",
-            "additionalVersions": "3.11.9",
+            "version": "3.14.2",
+            "additionalVersions": "3.13.8",
             "installJupyterlab": "true",
             "configureJupyterlabAllowOrigin": "*",
             "useOryxIfAvailable": "false"
@@ -34,12 +33,12 @@
             "additionalVersions": "8.4.15",
             "installComposer": "true"
         },
-        "ghcr.io/devcontainers/features/conda:1": {
+        "ghcr.io/devcontainers/features/conda:2": {
             "version": "latest"
         },
-        "ghcr.io/devcontainers/features/ruby:1": {
-            "version": "3.4.7",
-            "additionalVersions": "3.3.10"
+        "ghcr.io/devcontainers/features/ruby:2": {
+            "version": "3.4.9",
+            "additionalVersions": "3.3.11"
         },
         "ghcr.io/devcontainers/features/java:1": {
             "version": "25",
@@ -63,7 +62,7 @@
         "ghcr.io/devcontainers/features/copilot-cli:1": {
             "version": "latest"
         },
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {
+        "ghcr.io/devcontainers/features/docker-in-docker:4": {
             "version": "latest"
         },
         "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
@@ -73,7 +72,7 @@
             "version": "latest"
         },
         "./local-features/jekyll": "latest",
-        "ghcr.io/devcontainers/features/oryx:1": "latest",
+        "ghcr.io/devcontainers/features/oryx:2": "latest",
         "./local-features/setup-user": "latest",
         "./local-features/patch-conda": {},
         "./local-features/patch-python": {}
@@ -84,7 +83,6 @@
         "ghcr.io/devcontainers/features/dotnet",
         "ghcr.io/devcontainers/features/hugo",
         "ghcr.io/devcontainers/features/node",
-        "./local-features/nvs",
         "ghcr.io/devcontainers/features/conda",
         "./local-features/patch-conda",
         "ghcr.io/devcontainers/features/python",

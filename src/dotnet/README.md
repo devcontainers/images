@@ -9,10 +9,10 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/dotnet |
-| *Available image variants* | 10.0 /10.0-noble, 9.0 /9.0-bookworm, 8.0 /8.0-bookworm, 9.0-noble, 8.0-noble, 8.0-jammy ([full list](https://mcr.microsoft.com/v2/devcontainers/dotnet/tags/list)) |
-| *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm`, `bullseye`, `noble`, `jammy` variants |
+| *Available image variants* | 11.0 /11.0-resolute, 10.0 /10.0-noble, 9.0 /9.0-bookworm, 8.0 /8.0-bookworm, 9.0-noble, 8.0-noble, 8.0-jammy ([full list](https://mcr.microsoft.com/v2/devcontainers/dotnet/tags/list)) |
+| *Published image architecture(s)* | x86-64, arm64/aarch64 for `resolute`, `bookworm`, `noble`, `jammy` variants |
 | *Container host OS support* | Linux, macOS, Windows |
-| *Container OS* | Ubuntu (`-focal`, `-jammy`, `-noble`), Debian (`-bullseye`, `-bookworm`) |
+| *Container OS* | Ubuntu (`-focal`, `-jammy`, `-noble`), Debian (`-bookworm`, `-resolute`) |
 | *Languages, platforms* | .NET, .NET Core, C# |
 
 See **[history](history)** for information on the contents of published images.
@@ -22,6 +22,7 @@ See **[history](history)** for information on the contents of published images.
 You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
 - `mcr.microsoft.com/devcontainers/dotnet` (latest)
+- `mcr.microsoft.com/devcontainers/dotnet:11.0` (or `11.0-resolute` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/dotnet:10.0` (or `10.0-noble` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/dotnet:9.0` (or `9.0-bookworm`, `9.0-noble` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/dotnet:8.0` (or `8.0-bookworm`, `8.0-noble`, `8.0-jammy` to pin to an OS version)
@@ -29,14 +30,16 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
-You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
+We publish stable releases and experimental development images (`dev-*`, which contain the latest available changes from `main`). Latest stable: `mcr.microsoft.com/devcontainers/dotnet:latest` ([MCR](https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/dotnet/tag/latest)). Other stable releases can be found at: [MCR Tags](https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/dotnet/tags). Development images use the `dev-` prefix, for example `mcr.microsoft.com/devcontainers/dotnet:dev-10.0-noble`, and may be updated in place; pin the image for reproducibility.
+
+The examples below demonstrate stable image [semantic versioning](https://semver.org/); see the links above for current tags.
 
 - `mcr.microsoft.com/devcontainers/dotnet:2-10.0-noble`
-- `mcr.microsoft.com/devcontainers/dotnet:2.0-10.0-noble`
-- `mcr.microsoft.com/devcontainers/dotnet:2.0.5-10.0-noble`
+- `mcr.microsoft.com/devcontainers/dotnet:2.3-10.0-noble`
+- `mcr.microsoft.com/devcontainers/dotnet:2.3.2-10.0-noble`
 - `mcr.microsoft.com/devcontainers/dotnet:2-9.0`
-- `mcr.microsoft.com/devcontainers/dotnet:2.0-9.0`
-- `mcr.microsoft.com/devcontainers/dotnet:2.0.5-9.0`
+- `mcr.microsoft.com/devcontainers/dotnet:2.3-9.0`
+- `mcr.microsoft.com/devcontainers/dotnet:2.3.2-9.0`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/dotnet/tags/list).
 

@@ -10,7 +10,7 @@
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/java |
 | *Available image variants* | 11 / 11-trixie, 17 /17-trixie, 21 / 21-trixie, 21-bookworm, 25 / 25-trixie, 25-bookworm, 17-bookworm, 11-bookworm ([full list](https://mcr.microsoft.com/v2/devcontainers/java/tags/list)) |
-| *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm`, and `bullseye` variants |
+| *Published image architecture(s)* | x86-64, arm64/aarch64 for `trixie` and `bookworm` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
 | *Languages, platforms* | Java |
@@ -29,11 +29,13 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
-You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
+We publish stable releases and experimental development images (`dev-*`, which contain the latest available changes from `main`). Latest stable: `mcr.microsoft.com/devcontainers/java:latest` ([MCR](https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/java/tag/latest)). Other stable releases can be found at: [MCR Tags](https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/java/tags). Development images use the `dev-` prefix, for example `mcr.microsoft.com/devcontainers/java:dev-25`, and may be updated in place; pin the image for reproducibility.
+
+The examples below demonstrate stable image [semantic versioning](https://semver.org/); see the links above for current tags.
 
 - `mcr.microsoft.com/devcontainers/java:3-11` (or `3-11-trixie`, `3-11-bookworm` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/java:3.0-11` (or `3.0-11-trixie`, `3.0-11-bookworm` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/java:3.0.5-11` (or `3.0.5-11-trixie`, `3.0.5-11-bookworm` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/java:3.1-11` (or `3.1-11-trixie`, `3.1-11-bookworm` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/java:3.1.6-11` (or `3.1.6-11-trixie`, `3.1.6-11-bookworm` to pin to an OS version)
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `3-11`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
@@ -50,8 +52,8 @@ You can use the [Java Feature](https://github.com/devcontainers/features/tree/ma
   "features": {
      "ghcr.io/devcontainers/features/java:1": {
         "version": "none",
-        "installGradle": "true",
-        "installMaven": "true"
+        "installGradle": true,
+        "installMaven": true
     }
   }
 }
@@ -66,7 +68,7 @@ Also, you can use a [Node feature](https://github.com/devcontainers/features/tre
 ```json
 {
   "features": {
-    "ghcr.io/devcontainers/features/node:1": {
+    "ghcr.io/devcontainers/features/node:2": {
       "version": "latest"
     }
   }

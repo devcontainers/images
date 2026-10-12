@@ -1,4 +1,4 @@
-# [Choice] Debian OS version (use bullseye on local arm64/Apple Silicon): bookworm, buster, bullseye
+# [Choice] Debian OS version: bookworm, trixie
 ARG VARIANT="trixie"
 FROM mcr.microsoft.com/devcontainers/base:${VARIANT}
 

@@ -9,8 +9,8 @@
 | *Categories* | Core, Other |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/base:debian |
-| *Available image variants* | trixie, bookworm, bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/base/tags/list)) |
-| *Published image architecture(s)* | x86-64, aarch64/arm64 for `trixie`, `bookworm`, and `bullseye` variant |
+| *Available image variants* | trixie, bookworm ([full list](https://mcr.microsoft.com/v2/devcontainers/base/tags/list)) |
+| *Published image architecture(s)* | x86-64, aarch64/arm64 for `trixie` and `bookworm` variant |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
 | *Languages, platforms* | Any |
@@ -24,15 +24,16 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 - `mcr.microsoft.com/devcontainers/base:debian` (latest)
 - `mcr.microsoft.com/devcontainers/base:trixie` (or `debian13`)
 - `mcr.microsoft.com/devcontainers/base:bookworm` (or `debian12`)
-- `mcr.microsoft.com/devcontainers/base:bullseye` (or `debian11`)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
-You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
+We publish stable releases and experimental development images (`dev-*`, which contain the latest available changes from `main`). Latest stable: `mcr.microsoft.com/devcontainers/base:latest` ([MCR](https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/base/tag/latest)). Other stable releases can be found at: [MCR Tags](https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/base/tags). Development images use the `dev-` prefix, for example `mcr.microsoft.com/devcontainers/base:dev-trixie`, and may be updated in place; pin the image for reproducibility.
+
+The examples below demonstrate stable image [semantic versioning](https://semver.org/); see the links above for current tags.
 
 - `mcr.microsoft.com/devcontainers/base:2-trixie`
-- `mcr.microsoft.com/devcontainers/base:2.1-trixie`
-- `mcr.microsoft.com/devcontainers/base:2.1.6-trixie`
+- `mcr.microsoft.com/devcontainers/base:2.2-trixie`
+- `mcr.microsoft.com/devcontainers/base:2.2.3-trixie`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/base/tags/list).
 

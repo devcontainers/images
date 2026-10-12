@@ -9,8 +9,8 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/cpp |
-| *Available image variants* | debian13, debian12, ubuntu24.04, ubuntu22.04 ([full list](https://mcr.microsoft.com/v2/devcontainers/cpp/tags/list)) |
-| *Published image architecture(s)* | x86-64, aarch64/arm64 for `debian13`, `debian12`, `ubuntu24.04` and `ubuntu22.04` variants |
+| *Available image variants* | debian13, debian12, ubuntu26.04, ubuntu24.04, ubuntu22.04 ([full list](https://mcr.microsoft.com/v2/devcontainers/cpp/tags/list)) |
+| *Published image architecture(s)* | x86-64, aarch64/arm64 for `debian13`, `debian12`, `ubuntu26.04`, `ubuntu24.04` and `ubuntu22.04` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian, Ubuntu |
 | *Languages, platforms* | C++ |
@@ -26,18 +26,21 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 - `mcr.microsoft.com/devcontainers/cpp:debian13` (or `trixie`)
 - `mcr.microsoft.com/devcontainers/cpp:debian12` (or `bookworm`)
 - `mcr.microsoft.com/devcontainers/cpp:ubuntu` (latest Ubuntu LTS)
+- `mcr.microsoft.com/devcontainers/cpp:ubuntu26.04` (or `resolute`)
 - `mcr.microsoft.com/devcontainers/cpp:ubuntu24.04` (or `noble`)
 - `mcr.microsoft.com/devcontainers/cpp:ubuntu22.04` (or `jammy`)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
-You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
-- `mcr.microsoft.com/devcontainers/cpp:2-trixie`
-- `mcr.microsoft.com/devcontainers/cpp:2.1-trixie`
-- `mcr.microsoft.com/devcontainers/cpp:2.1.5-trixie`
-- `mcr.microsoft.com/devcontainers/cpp:2-bookworm`
-- `mcr.microsoft.com/devcontainers/cpp:2.1-bookworm`
-- `mcr.microsoft.com/devcontainers/cpp:2.1.5-bookworm`
+We publish stable releases and experimental development images (`dev-*`, which contain the latest available changes from `main`). Latest stable: `mcr.microsoft.com/devcontainers/cpp:latest` ([MCR](https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/cpp/tag/latest)). Other stable releases can be found at: [MCR Tags](https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/cpp/tags). Development images use the `dev-` prefix, for example `mcr.microsoft.com/devcontainers/cpp:dev-trixie`, and may be updated in place; pin the image for reproducibility.
+
+The examples below demonstrate stable image [semantic versioning](https://semver.org/); see the links above for current tags.
+- `mcr.microsoft.com/devcontainers/cpp:3-trixie`
+- `mcr.microsoft.com/devcontainers/cpp:3.0-trixie`
+- `mcr.microsoft.com/devcontainers/cpp:3.0.7-trixie`
+- `mcr.microsoft.com/devcontainers/cpp:3-bookworm`
+- `mcr.microsoft.com/devcontainers/cpp:3.0-bookworm`
+- `mcr.microsoft.com/devcontainers/cpp:3.0.7-bookworm`
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `0-debian-12`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 

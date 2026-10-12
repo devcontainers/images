@@ -5,6 +5,7 @@
 #-------------------------------------------------------------------------------------------------------------
 
 USERNAME=${USERNAME:-"codespace"}
+PATCH_PYTHON_PIP_UPGRADE_PATH=${PATCH_PYTHON_PIP_UPGRADE_PATH:-"/usr/local/python/3.13.8/bin/python"}
 
 set -eux
 
@@ -38,9 +39,9 @@ update_package() {
     sudo_if "$PYTHON_PATH -m pip install --upgrade --no-cache-dir $PACKAGE==$VERSION"
     sudo_if "$PYTHON_PATH -m pip show --no-python-version-warning $PACKAGE"
 }
-# Updating pip version for python 3.11. Must be removed when pinned version 3.11 is updated to a different python version.
-sudo_if /usr/local/python/3.11.*/bin/python -m pip install --upgrade pip
 
-# https://github.com/advisories/GHSA-5rjg-fvgr-3xxf
-# Updating setuptools version for python 3.11. Must be removed when pinned version 3.11 is updated to a different python version.
-update_package /usr/local/python/3.11.*/bin/python setuptools "78.1.1"
+# Updating pip version for python 3.13.8. Must be removed when pinned version 3.13.8 is updated to a different python version.
+# https://github.com/advisories/GHSA-jp4c-xjxw-mgf9
+if [ -x "$PATCH_PYTHON_PIP_UPGRADE_PATH" ]; then
+    sudo_if "$PATCH_PYTHON_PIP_UPGRADE_PATH -m pip install --upgrade pip"
+fi

@@ -1,16 +1,17 @@
-# [Choice] Python version (use -bookworm or -bullseye variants on local arm64/Apple Silicon): 3, 3.13, 3.12, 3.11, 3.10, 3.9, 3-bookworm, 3.13-bookworm, 3.12-bookworm, 3.11-bookworm, 3.10-bookworm, 3.9-bookworm, 3-bullseye, 3.13-bullseye, 3.12-bullseye, 3.11-bullseye, 3.10-bullseye, 3.9-bullseye, 3-buster, 3.12-buster, 3.11-buster, 3.10-buster, 3.9-buster
+# [Choice] Python version (use -bookworm variants on local arm64/Apple Silicon): 3, 3.14, 3.13, 3.12, 3.11, 3.10, 3-bookworm, 3.14-bookworm, 3.13-bookworm, 3.12-bookworm, 3.11-bookworm, 3.10-bookworm
 ARG VARIANT=3-trixie
 FROM python:${VARIANT}
 
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     # Remove imagemagick due to https://security-tracker.debian.org/tracker/CVE-2019-10131
-    && apt-get purge -y imagemagick imagemagick-6-common 
+    && apt-get purge -y imagemagick imagemagick-6-common
 
-# Temporary: Upgrade python packages due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40897 and https://github.com/advisories/GHSA-2mqj-m65w-jghx
+# Temporary: Upgrade python packages due to https://nvd.nist.gov/vuln/detail/cve-2026-59890 and https://github.com/advisories/GHSA-g5vv-9gxw-82hx
 # They are installed by the base image (python) which does not have the patch.
 RUN python3 -m pip install --upgrade \
-    setuptools==78.1.1 \
-    gitpython==3.1.41
+    gitpython==3.1.60 \
+    setuptools==83.0.0 \
+    wheel==0.46.3
 
 # Fixing vulnerability issue by upgrading svn to 1.14.5. Ref https://subversion.apache.org/security/CVE-2024-46901-advisory.txt
 COPY ./scripts/install-subversion.sh /tmp/install-subversion.sh

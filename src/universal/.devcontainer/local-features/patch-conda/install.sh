@@ -25,7 +25,7 @@ sudo_if() {
     if [ "$(id -u)" -eq 0 ] && [ "$USERNAME" != "root" ]; then
         su - "$USERNAME" -c "$COMMAND"
     else
-        "$COMMAND"
+        bash -c "$COMMAND"
     fi
 }
 
@@ -48,25 +48,33 @@ update_conda_package() {
 
 sudo_if /opt/conda/bin/python3 -m pip install --upgrade pip
 
+# Remove any cached pip packages under /opt/conda/pkgs vulnerable to GHSA-jp4c-xjxw-mgf9
+# (pip < 26.1). Only pip cache entries older than 26.1 are removed; this does not touch
+# the active pip install in site-packages (upgraded above via pip).
+for pkg_path in /opt/conda/pkgs/pip-[0-9]*; do
+    [ -e "$pkg_path" ] || continue
+    pkg_name="$(basename "$pkg_path")"
+    pkg_version="${pkg_name#pip-}"
+    pkg_version="${pkg_version%%-*}"
+    greater_version="$(printf '%s\n%s\n' "$pkg_version" "26.1" | sort -V | tail -1)"
+    if [ "$pkg_version" != "$greater_version" ]; then
+        sudo_if "rm -rf $pkg_path"
+    fi
+done
+
 # Temporary: Upgrade python packages due to security vulnerabilities
 # They are installed by the conda feature and Conda distribution does not have the patches
 
-# https://github.com/advisories/GHSA-79v4-65xg-pq4g
-update_python_package /opt/conda/bin/python3 cryptography "44.0.1"
-
-update_conda_package pyopenssl "25.0.0"
-
-# https://github.com/advisories/GHSA-9hjg-9r4m-mvj7
-update_conda_package requests "2.32.4"
-
-# https://github.com/advisories/GHSA-5rjg-fvgr-3xxf
-update_conda_package setuptools "78.1.1"
-
-# https://github.com/advisories/GHSA-g7vv-2v7x-gj9p
-update_python_package /opt/conda/bin/python3 tqdm "4.66.3"
-
-# https://github.com/advisories/GHSA-38jv-5279-wg99
-update_conda_package urllib3 "2.6.3"
+# https://github.com/advisories/GHSA-537c-gmf6-5ccf
+update_conda_package cryptography "50.0.0"
+update_conda_package pyopenssl "26.4.0"
+update_conda_package openssl "3.5.8"
 
 # https://nvd.nist.gov/vuln/detail/CVE-2025-6176
 update_conda_package brotli "1.2.0"
+
+# https://github.com/advisories/GHSA-mf9w-mj56-hr94
+update_python_package /opt/conda/bin/python3 python-dotenv "1.2.2"
+
+sudo_if "conda clean --all --yes"
+

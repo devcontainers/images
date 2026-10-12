@@ -9,7 +9,7 @@
 			"username": "node",
 			"upgradePackages": "true"
 		},
-		"ghcr.io/devcontainers/features/node:1": {
+		"ghcr.io/devcontainers/features/node:2": {
 			"version": "none"
 		},
 		"ghcr.io/devcontainers/features/git:1": {

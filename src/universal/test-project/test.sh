@@ -66,23 +66,21 @@ echo $(echo "java versions" && ls -a /usr/local/sdkman/candidates/java)
 
 # Check Ruby tools
 check "ruby" ruby --version
-check "rvm" bash -c ". /usr/local/rvm/scripts/rvm && rvm --version"
-check "rbenv" bash -c 'eval "$(rbenv init -)" && rbenv --version'
+check "ruby-build" ruby-build --version
 check "gems" gem --version
 check "rake" rake --version
 check "jekyll" jekyll --version
-count=$(ls /usr/local/rvm/gems | wc -l)
-expectedCount=6 # 2 version folders + 2 global folders for each version + 1 default folder which links to either one of the version + 1 cache folder
+count=$(ls /usr/local/rubies | wc -l)
+expectedCount=3 # 2 version folders + 1 current folder which links to either one of the version
 checkVersionCount "two versions of ruby are present" $count $expectedCount
-echo $(echo "ruby versions" && ls -a /usr/local/rvm/rubies)
-rvmExtensions="/usr/local/rvm/gems/default/extensions"
-rvmPlatform=$(rvm info default ruby | grep -w "platform" | cut -d'"' -f 2)
-checkDirectoryOwnership "codespace user has ownership over extension directory" "$rvmExtensions/$rvmPlatform" "codespace" "rvm"
+echo $(echo "ruby versions" && ls -a /usr/local/rubies)
+rubyGemsDir=$(ruby -e 'require "rubygems"; puts File.join(Gem.default_dir, "extensions")')
+check "ruby extensions dir exists" test -d "$rubyGemsDir"
+checkDirectoryOwnership "codespace user has ownership over extension directory" "$rubyGemsDir" "codespace" "ruby"
 
 # Node.js
 check "node" node --version
 check "nvm" bash -c ". /usr/local/share/nvm/nvm.sh && nvm --version"
-check "nvs" bash -c ". /usr/local/nvs/nvs.sh && nvs --version"
 check "yarn" yarn --version
 check "npm" npm --version
 count=$(ls /usr/local/share/nvm/versions/node | wc -l)
@@ -136,15 +134,14 @@ check "default-node-version" bash -c "node --version | grep 24."
 check "default-node-location" bash -c "which node | grep /home/codespace/nvm/current/bin"
 check "oryx-build-node-project" bash -c "oryx build ./sample/node"
 check "oryx-configured-current-node-version" bash -c "ls -la /home/codespace/nvm/current | grep /opt/nodejs"
-check "nvm-install-node" bash -c ". /usr/local/share/nvm/nvm.sh && nvm install 8.0.0"
-check "nvm-works-in-node-project" bash -c "node --version | grep v8.0.0"
-check "default-node-location-remained-same" bash -c "which node | grep /home/codespace/nvm/current/bin"
+check "nvm-switches-to-additional-node-version" bash -c ". /usr/local/share/nvm/nvm.sh && nvm use 22 && node --version | grep v22."
+check "node-location-after-switching-to-22" bash -c "which node | grep /home/codespace/nvm/current/bin"
+check "nvm-switches-back-to-default-node-version" bash -c ". /usr/local/share/nvm/nvm.sh && nvm use default && node --version | grep v24."
+check "node-location-after-switching-back-to-default" bash -c "which node | grep /home/codespace/nvm/current/bin"
 
 # Ensures sdkman works in a Java Project
 check "default-java-version" bash -c "java --version"
 check "default-java-location" bash -c "which java | grep /home/codespace/java/current/bin"
-check "oryx-build-java-project" bash -c "oryx build ./sample/java"
-check "oryx-configured-current-java-version" bash -c "ls -la /home/codespace/java/current | grep /opt/java"
 check "sdk-install-java" bash -c ". /usr/local/sdkman/bin/sdkman-init.sh && sdk install java 19.0.1-oracle < /dev/null"
 check "sdkman-works-in-java-project" bash -c "java --version | grep 19.0.1"
 check "default-java-location-remained-same" bash -c "which java | grep /home/codespace/java/current/bin"
@@ -157,41 +154,35 @@ check "oryx-build-python-installed" python3 -m pip list | grep mpmath
 check "oryx-build-python-result" python3 ./sample/python/src/solve.py
 
 # Install platforms with oryx build tool
-check "oryx-install-dotnet-2.1" oryx prep --skip-detection --platforms-and-versions dotnet=2.1.30
-check "dotnet-2-installed-by-oryx" ls /opt/dotnet/ | grep 2.1
-check "dotnet-version-on-path-is-2.1.12" dotnet --version | grep 2.1
+check "oryx-install-dotnet-8.0" oryx prep --skip-detection --platforms-and-versions dotnet=8.0.23
+check "dotnet-8-installed-by-oryx" ls /opt/dotnet/ | grep 8.0
+check "dotnet-version-on-path-is-8.0.23" dotnet --version | grep 8.0
 
-check "oryx-install-nodejs-12.22.11" oryx prep --skip-detection --platforms-and-versions nodejs=12.22.11
-check "nodejs-12.22.11-installed-by-oryx" ls /opt/nodejs/ | grep 12.22.11
-check "nodejs-version-on-path-is-2.1.12" node --version | grep v12.22.11
+check "oryx-install-nodejs-20.11.0" oryx prep --skip-detection --platforms-and-versions nodejs=20.11.0
+check "nodejs-20.11.0-installed-by-oryx" ls /opt/nodejs/ | grep 20.11.0
+check "nodejs-version-on-path-is-20.11.0" node --version | grep v20.11.0
 
-check "oryx-install-php-7.3.25" oryx prep --skip-detection --platforms-and-versions php=7.3.25
-check "php-7.3.25-installed-by-oryx" ls /opt/php/ | grep 7.3.25
-check "php-version-on-path-is-2.1.12" php --version | grep 7.3.25
-
-check "oryx-install-java-12.0.2" oryx prep --skip-detection --platforms-and-versions java=12.0.2
-check "java-12.0.2-installed-by-oryx" ls /opt/java/ | grep 12.0.2
-check "java-version-on-path-is-12.0.2" java --version | grep 12.0.2
+check "oryx-install-php-8.1.30" oryx prep --skip-detection --platforms-and-versions php=8.1.30
+check "php-8.1.30-installed-by-oryx" ls /opt/php/ | grep 8.1.30
+check "php-version-on-path-is-8.1.30" php --version | grep 8.1.30
 
 # Test patches
 
 ls -la /home/codespace
+check "python-3.13.8-pip-version" checkPythonPipVersion "/usr/local/python/3.13.8/bin/python" "26.1.0"
+check "no-vulnerable-pip-cache-in-conda-pkgs" checkNoVulnerablePipCache "/opt/conda/pkgs" "26.1"
 
 ## Python - current
-checkPythonPackageVersion "python" "setuptools" "78.1.1"
 checkPythonPackageVersion "python" "requests" "2.31.0"
-
-## Python -alternative version 3.11. Must be removed when pinned version 3.11 is updated to a different python version.
-checkPythonPackageVersion "/usr/local/python/3.11.*/bin/python" "setuptools" "78.1.1"
-pip_version_3_11=$(/usr/local/python/3.11.*/bin/python -m pip --version)
-check-version-ge "pip-version-for-3.11" "${pip_version_3_11}" "pip 25.3"
 
 ## Conda Python
 checkCondaPackageVersion "requests" "2.31.0"
-checkCondaPackageVersion "cryptography" "44.0.1"
-checkCondaPackageVersion "pyopenssl" "25.0.0"
+checkCondaPackageVersion "cryptography" "50.0.0"
+checkCondaPackageVersion "pyopenssl" "26.4.0"
+checkCondaPackageVersion "openssl" "3.5.8"
 checkCondaPackageVersion "urllib3" "2.6.3"
 checkCondaPackageVersion "brotli" "1.2.0"
+checkCondaPackageVersion "python-dotenv" "1.2.2"
 
 ## Test Conda
 check "conda-update-conda" bash -c "conda update -c defaults -y conda"

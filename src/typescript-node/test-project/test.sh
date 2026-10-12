@@ -11,6 +11,7 @@ checkCommon
 
 # Image specific tests
 check "node" node --version
+check "lang-utf8" test "${LANG}" = "C.UTF-8"
 sudo rm -f yarn.lock
 sudo rm -rf .yarn/*
 sudo touch yarn.lock

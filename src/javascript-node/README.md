@@ -9,8 +9,8 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published image* | mcr.microsoft.com/devcontainers/javascript-node |
-| *Available image variants* | 24 / 24-trixie, 22 / 22-trixie, 20 / 20-trixie, 24-bookworm, 22-bookworm, 20-bookworm, 24-bullseye, 22-bullseye, 20-bullseye, ([full list](https://mcr.microsoft.com/v2/devcontainers/javascript-node/tags/list)) |
-| *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm`, and `bullseye` variants |
+| *Available image variants* | 26 / 26-trixie, 24 / 24-trixie, 22 / 22-trixie, 26-bookworm, 24-bookworm, 22-bookworm, ([full list](https://mcr.microsoft.com/v2/devcontainers/javascript-node/tags/list)) |
+| *Published image architecture(s)* | x86-64, arm64/aarch64 for `trixie` and `bookworm` variants |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
 | *Languages, platforms* | Node.js, JavaScript |
@@ -20,19 +20,21 @@
 You can directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
 - `mcr.microsoft.com/devcontainers/javascript-node` (latest)
-- `mcr.microsoft.com/devcontainers/javascript-node:24` (or `24-trixie`, `24-bookworm`, `24-bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/javascript-node:22` (or `22-trixie`, `22-bookworm`, `22-bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/javascript-node:20` (or `20-trixie`, `20-bookworm`, `20-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/javascript-node:26` (or `26-trixie`, `26-bookworm` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/javascript-node:24` (or `24-trixie`, `24-bookworm` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/javascript-node:22` (or `22-trixie`, `22-bookworm` to pin to an OS version)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
-You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
+We publish stable releases and experimental development images (`dev-*`, which contain the latest available changes from `main`). Latest stable: `mcr.microsoft.com/devcontainers/javascript-node:latest` ([MCR](https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/javascript-node/tag/latest)). Other stable releases can be found at: [MCR Tags](https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/javascript-node/tags). Development images use the `dev-` prefix, for example `mcr.microsoft.com/devcontainers/javascript-node:dev-24`, and may be updated in place; pin the image for reproducibility.
 
-- `mcr.microsoft.com/devcontainers/javascript-node:4-24` (or `4-24-trixie`, `4-24-bookworm`, `4-24-bullseye`)
-- `mcr.microsoft.com/devcontainers/javascript-node:4.0-24` (or `4.0-24-trixie`, `4.0-24-bookworm`, `3.0-24-bullseye`)
-- `mcr.microsoft.com/devcontainers/javascript-node:4.0.8-24` (or `4.0.8-24-trixie`, `4.0.8-24-bookworm`, `4.0.8-24-bullseye`)
+The examples below demonstrate stable image [semantic versioning](https://semver.org/); see the links above for current tags.
 
-However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `4-24`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
+- `mcr.microsoft.com/devcontainers/javascript-node:5-24` (or `5-24-trixie`, `5-24-bookworm`)
+- `mcr.microsoft.com/devcontainers/javascript-node:5.2-24` (or `5.2-24-trixie`, `5.2-24-bookworm`)
+- `mcr.microsoft.com/devcontainers/javascript-node:5.2.3-24` (or `5.2.3-24-trixie`, `5.2.3-24-bookworm`)
+
+However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `5-24`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
 Beyond Node.js and `git`, this image / `Dockerfile` includes `eslint`, `zsh`, [Oh My Zsh!](https://ohmyz.sh/), a non-root `node` user with `sudo` access, and a set of common dependencies for development. [Node Version Manager](https://github.com/nvm-sh/nvm) (`nvm`) is also included in case you need to use a different version of Node.js than the one included in the image.
 

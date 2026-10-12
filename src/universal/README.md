@@ -22,14 +22,15 @@ While language specific development containers can be useful, in some cases you 
 
 If you use GitHub Codespaces, this is the "universal" image that is used by default if no custom Dockerfile or image is specified. If you like what you see but want to make a few additions or changes, you can use a custom Dockerfile to extend it and add whatever you need.
 
-The container includes the `zsh` (and Oh My Zsh!) and `fish` shells that you can opt into using instead of the default `bash`. It also includes [nvm](https://github.com/nvm-sh/nvm), [rvm](https://rvm.io/), [rbenv](https://github.com/rbenv/rbenv), and [SDKMAN!](https://sdkman.io/) if you need to install a different version Node, Ruby, or Java tools than the container defaults. You can also set things up to access the container [via SSH](#accessing-the-container-using-ssh-scp-or-sshfs).
+The container includes the `zsh` (and Oh My Zsh!) and `fish` shells that you can opt into using instead of the default `bash`. It also includes [nvm](https://github.com/nvm-sh/nvm), [ruby-build](https://github.com/rbenv/ruby-build)/[rbenv](https://github.com/rbenv/rbenv), and [SDKMAN!](https://sdkman.io/) if you need to install a different version Node, Ruby, or Java tools than the container defaults. You can also set things up to access the container [via SSH](#accessing-the-container-using-ssh-scp-or-sshfs).
 
-You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image.
-For example:
+We publish stable releases and experimental development images (`dev-*`, which contain the latest available changes from `main`). Latest stable: `mcr.microsoft.com/devcontainers/universal:latest` ([MCR](https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/universal/tag/latest)). Other stable releases can be found at: [MCR Tags](https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/universal/tags). Development images use the `dev-` prefix, for example `mcr.microsoft.com/devcontainers/universal:dev-noble`, and may be updated in place; pin the image for reproducibility.
 
-- `mcr.microsoft.com/devcontainers/universal:5-noble`
-- `mcr.microsoft.com/devcontainers/universal:5.1-noble`
-- `mcr.microsoft.com/devcontainers/universal:5.1.4-noble`
+The examples below demonstrate stable image [semantic versioning](https://semver.org/); see the links above for current tags.
+
+- `mcr.microsoft.com/devcontainers/universal:6-noble`
+- `mcr.microsoft.com/devcontainers/universal:6.1-noble`
+- `mcr.microsoft.com/devcontainers/universal:6.1.10-noble`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/universal/tags/list).
 
@@ -47,7 +48,7 @@ Access to the Anaconda repository is covered by the [Anaconda Terms of Service](
 
 While the image itself works unmodified, you can also directly reference pre-built versions of `Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` to:
 
-`mcr.microsoft.com/devcontainers/universal:5.1-linux`
+`mcr.microsoft.com/devcontainers/universal:6.1-linux`
 
 Alternatively, you can use the contents of [.devcontainer](.devcontainer) to fully customize your container's contents or to build it for a container host architecture not supported by the image.
 

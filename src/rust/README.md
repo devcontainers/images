@@ -9,8 +9,8 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/rust |
-| *Available image variants* | bookworm, bullseye ([full list](https://mcr.microsoft.com/v2/devcontainers/rust/tags/list)) |
-| *Published image architecture(s)* | x86-64, arm64/aarch64 for `bookworm`, and  `bullseye` and `trixie` variant |
+| *Available image variants* | trixie, bookworm ([full list](https://mcr.microsoft.com/v2/devcontainers/rust/tags/list)) |
+| *Published image architecture(s)* | x86-64, arm64/aarch64 for `trixie` and `bookworm` variant |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
 | *Languages, platforms* | Rust |
@@ -21,16 +21,18 @@ See **[history](history)** for information on the contents of published images.
 
 You can directly reference pre-built versions of `.devcontainer/Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own `Dockerfile` to the following. An example `Dockerfile` is included in this repository.
 
-- `mcr.microsoft.com/devcontainers/rust:latest` (or `trixie` `bookworm`, `bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/rust:1` (or `1-trixie` `1-bookworm`, `1-bullseye` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/rust:latest` (or `trixie` `bookworm` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/rust:1` (or `1-trixie` `1-bookworm` to pin to an OS version)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
-You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
+We publish stable releases and experimental development images (`dev-*`, which contain the latest available changes from `main`). Latest stable: `mcr.microsoft.com/devcontainers/rust:latest` ([MCR](https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/rust/tag/latest)). Other stable releases can be found at: [MCR Tags](https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/rust/tags). Development images use the `dev-` prefix, for example `mcr.microsoft.com/devcontainers/rust:dev-1`, and may be updated in place; pin the image for reproducibility.
 
-- `mcr.microsoft.com/devcontainers/rust:2-1` (or `2-1-trixie`, `2-1-bookworm`, `2-1-bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/rust:2.0-1` (or `2.0-1-trixie`, `2.0-1-bookworm`, `2.0-1-bullseye` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/rust:2.0.8-1` (or `2.0.8-1-trixie`, `2.0.8-1-bookworm`, `2.0.8-1-bullseye` to pin to an OS version)
+The examples below demonstrate stable image [semantic versioning](https://semver.org/); see the links above for current tags.
+
+- `mcr.microsoft.com/devcontainers/rust:2-1` (or `2-1-trixie`, `2-1-bookworm` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/rust:2.1-1` (or `2.1-1-trixie`, `2.1-1-bookworm` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/rust:2.1.3-1` (or `2.1.3-1-trixie`, `2.1.3-1-bookworm` to pin to an OS version)
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `2-1`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 
