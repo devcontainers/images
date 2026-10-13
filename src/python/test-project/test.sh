@@ -44,12 +44,13 @@ check "usr-local-etc-config-does-not-exist" test ! -f "/usr/local/etc/gitconfig"
 svn_version=$(svn --version --quiet)
 check-version-ge "svn-requirement" "${svn_version}" "1.14.5"
 
+# https://github.com/advisories/GHSA-h35f-9h28-mq5c
 setuptools_version=$(python -c "import setuptools; print(setuptools.__version__)")
-check-version-ge "setuptools-requirement" "${setuptools_version}" "78.1.1"
+check-version-ge "setuptools-requirement" "${setuptools_version}" "83.0.0"
 
-# https://github.com/advisories/GHSA-v87r-6q3f-2j67
+# https://github.com/advisories/GHSA-g5vv-9gxw-82hx
 gitpython_version=$(python -c "import git; print(git.__version__)")
-check-version-ge "gitpython-requirement" "${gitpython_version}" "3.1.50"
+check-version-ge "gitpython-requirement" "${gitpython_version}" "3.1.60"
 
 # https://github.com/advisories/GHSA-8rrh-rw8j-w5fx
 wheel_version=$(python -c "from importlib.metadata import version; print(version('wheel'))")

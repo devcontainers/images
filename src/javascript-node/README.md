@@ -26,11 +26,13 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
-You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
+We publish stable releases and experimental development images (`dev-*`, which contain the latest available changes from `main`). Latest stable: `mcr.microsoft.com/devcontainers/javascript-node:latest` ([MCR](https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/javascript-node/tag/latest)). Other stable releases can be found at: [MCR Tags](https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/javascript-node/tags). Development images use the `dev-` prefix, for example `mcr.microsoft.com/devcontainers/javascript-node:dev-24`, and may be updated in place; pin the image for reproducibility.
+
+The examples below demonstrate stable image [semantic versioning](https://semver.org/); see the links above for current tags.
 
 - `mcr.microsoft.com/devcontainers/javascript-node:5-24` (or `5-24-trixie`, `5-24-bookworm`)
 - `mcr.microsoft.com/devcontainers/javascript-node:5.2-24` (or `5.2-24-trixie`, `5.2-24-bookworm`)
-- `mcr.microsoft.com/devcontainers/javascript-node:5.2.1-24` (or `5.2.1-24-trixie`, `5.2.1-24-bookworm`)
+- `mcr.microsoft.com/devcontainers/javascript-node:5.2.3-24` (or `5.2.3-24-trixie`, `5.2.3-24-bookworm`)
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `5-24`). You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
 

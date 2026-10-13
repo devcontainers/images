@@ -29,11 +29,13 @@ You can also directly reference pre-built versions of `.devcontainer/Dockerfile`
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
-You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
+We publish stable releases and experimental development images (`dev-*`, which contain the latest available changes from `main`). Latest stable: `mcr.microsoft.com/devcontainers/base:alpine` ([MCR](https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/base/tag/alpine)). Other stable releases can be found at: [MCR Tags](https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/base/tags). Development images use the `dev-` prefix, for example `mcr.microsoft.com/devcontainers/base:dev-alpine3.23`, and may be updated in place; pin the image for reproducibility.
+
+The examples below demonstrate stable image [semantic versioning](https://semver.org/); see the links above for current tags.
 
 - `mcr.microsoft.com/devcontainers/base:4-alpine`
 - `mcr.microsoft.com/devcontainers/base:4.0-alpine`
-- `mcr.microsoft.com/devcontainers/base:4.0.5-alpine`
+- `mcr.microsoft.com/devcontainers/base:4.0.7-alpine`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/base/tags/list).
 

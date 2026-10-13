@@ -4,13 +4,13 @@ FROM python:${VARIANT}
 
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     # Remove imagemagick due to https://security-tracker.debian.org/tracker/CVE-2019-10131
-    && apt-get purge -y imagemagick imagemagick-6-common 
+    && apt-get purge -y imagemagick imagemagick-6-common
 
-# Temporary: Upgrade python packages due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40897 and https://github.com/advisories/GHSA-2mqj-m65w-jghx
+# Temporary: Upgrade python packages due to https://nvd.nist.gov/vuln/detail/cve-2026-59890 and https://github.com/advisories/GHSA-g5vv-9gxw-82hx
 # They are installed by the base image (python) which does not have the patch.
 RUN python3 -m pip install --upgrade \
-    gitpython==3.1.50 \
-    setuptools==82.0.1 \
+    gitpython==3.1.60 \
+    setuptools==83.0.0 \
     wheel==0.46.3
 
 # Fixing vulnerability issue by upgrading svn to 1.14.5. Ref https://subversion.apache.org/security/CVE-2024-46901-advisory.txt

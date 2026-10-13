@@ -27,11 +27,13 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
-You can decide how often you want updates by referencing a [semantic version](https://semver.org/) of each image. For example:
+We publish stable releases and experimental development images (`dev-*`, which contain the latest available changes from `main`). Latest stable: `mcr.microsoft.com/devcontainers/base:latest` ([MCR](https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/base/tag/latest)). Other stable releases can be found at: [MCR Tags](https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/base/tags). Development images use the `dev-` prefix, for example `mcr.microsoft.com/devcontainers/base:dev-trixie`, and may be updated in place; pin the image for reproducibility.
+
+The examples below demonstrate stable image [semantic versioning](https://semver.org/); see the links above for current tags.
 
 - `mcr.microsoft.com/devcontainers/base:2-trixie`
 - `mcr.microsoft.com/devcontainers/base:2.2-trixie`
-- `mcr.microsoft.com/devcontainers/base:2.2.1-trixie`
+- `mcr.microsoft.com/devcontainers/base:2.2.3-trixie`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/base/tags/list).
 
