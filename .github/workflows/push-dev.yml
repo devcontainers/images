@@ -16,6 +16,8 @@ jobs:
       fail-fast: false
     runs-on: devcontainer-image-builder-ubuntu
     environment: publishing
+    env:
+      SQUASH_UNIVERSAL_IMAGE: ${{ vars.SQUASH_UNIVERSAL_IMAGE }}
     steps:
     - name: Free more space
       id: free_space 

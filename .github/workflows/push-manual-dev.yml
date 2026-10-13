@@ -13,6 +13,8 @@ jobs:
     if: ${{ startsWith(github.ref, 'refs/heads/') }}
     runs-on: devcontainer-image-builder-ubuntu
     environment: publishing
+    env:
+      SQUASH_UNIVERSAL_IMAGE: ${{ vars.SQUASH_UNIVERSAL_IMAGE }}
     steps:
     - name: Free more space
       id: free_space 
@@ -38,6 +40,7 @@ jobs:
         ref: ${{ github.event.inputs.release }}
 
     - name: Set up docker-squash
+      if: ${{ github.event.inputs.image == 'universal' }}
       uses: ./ref/.github/actions/setup-docker-squash
       
     - name: Build and push

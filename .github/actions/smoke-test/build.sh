@@ -21,10 +21,7 @@ id_image="${IMAGE}-test-image"
 echo "(*) Building image - ${IMAGE}"
 devcontainer build --image-name ${id_image} --workspace-folder "src/${IMAGE}/"
 
-squash_universal_image="$(node -p "require('./build/config.json').squashUniversalImage === true")"
-if [[ -n "${SQUASH_UNIVERSAL_IMAGE+x}" ]]; then
-    squash_universal_image="$(echo "${SQUASH_UNIVERSAL_IMAGE}" | tr '[:upper:]' '[:lower:]')"
-fi
+squash_universal_image="$(node -e "process.stdout.write(String(require('./build/src/utils/config').shouldSquashUniversalImage(process.argv[1])))" "${IMAGE}")"
 
 if [[ "${IMAGE}" == "universal" && "${squash_universal_image}" == "true" ]]; then
     squashed_image="${id_image}-squashed"

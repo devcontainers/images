@@ -169,6 +169,11 @@ async function pushImage(definitionId, variant, repo, release, updateLatest,
             const allImageNamesWithVersionTags = imageNamesWithVersionTags.concat(secondaryImageNamesWithVersionTags);
             const squashUniversalImage = configUtils.shouldSquashUniversalImage(definitionId);
 
+            if (definitionId === 'universal') {
+                console.log(`(*) Universal build mode: squash=${squashUniversalImage}, push=${pushImages}, tags=${allImageNamesWithVersionTags.length}.`);
+                console.log(`(*) Universal devcontainer build output: ${squashUniversalImage ? 'local image for post-build squashing' : 'standard build/push flow'}.`);
+            }
+
             const spawnOpts = { stdio: 'inherit', cwd: workingDir, shell: true };
             await asyncUtils.spawn('devcontainer', [
                 'build',
@@ -180,6 +185,7 @@ async function pushImage(definitionId, variant, repo, release, updateLatest,
                 getDevcontainerPushArgument(pushImages, squashUniversalImage),
                 '--skip-persisting-customizations-from-features', skipPersistingCustomizationsFromFeatures,
             ], spawnOpts);
+            console.log(`(*) devcontainer build completed for ${definitionId}.`);
 
             if (squashUniversalImage) {
                 await squashAndPushImageTags(allImageNamesWithVersionTags, pushImages, spawnOpts);
@@ -206,6 +212,7 @@ function getDevcontainerPushArgument(pushImages, squashImage) {
 }
 
 async function squashAndPushImageTags(imageNames, pushImages, spawnOpts) {
+    console.log(`(*) Starting squash workflow for ${imageNames.length} image tag(s). Push enabled: ${pushImages}.`);
     await squashImage(imageNames, spawnOpts);
     if (pushImages) {
         await pushImageTags(imageNames, spawnOpts);
@@ -220,12 +227,15 @@ async function squashImage(imageNames, spawnOpts) {
 
     console.log(`(*) Squashing image ${sourceImage}...`);
     await asyncUtils.spawn('docker-squash', ['--tag', squashedImage, sourceImage], spawnOpts);
+    console.log(`(*) docker-squash completed. Applying ${imageNames.length} tag(s).`);
 
     for (const imageName of imageNames) {
         await asyncUtils.spawn('docker', ['tag', squashedImage, imageName], spawnOpts);
     }
+    console.log('(*) Squashed image tags applied.');
 
     await asyncUtils.spawn('docker', ['image', 'rm', squashedImage], spawnOpts);
+    console.log(`(*) Removed temporary squashed image tag ${squashedImage}.`);
 }
 
 async function pushImageTags(imageNames, spawnOpts) {
@@ -233,6 +243,7 @@ async function pushImageTags(imageNames, spawnOpts) {
     for (const imageName of imageNames) {
         await asyncUtils.spawn('docker', ['push', imageName], spawnOpts);
     }
+    console.log(`(*) Pushed ${imageNames.length} squashed image tag(s).`);
 }
 
 async function flattenBaseImage(baseImageTag, flattenedBaseImageTag, pushImages) {

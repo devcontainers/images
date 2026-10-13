@@ -712,12 +712,24 @@ function shouldSquashUniversalImage(definitionId) {
         return false;
     }
 
-    const environmentValue = process.env.SQUASH_UNIVERSAL_IMAGE;
-    if (typeof environmentValue !== 'undefined') {
-        return environmentValue.toLocaleLowerCase() === 'true';
+    const rawEnvironmentValue = process.env.SQUASH_UNIVERSAL_IMAGE;
+    const environmentValue = rawEnvironmentValue?.trim().toLocaleLowerCase();
+    if (environmentValue === 'true') {
+        console.log('(*) Universal image squashing enabled by SQUASH_UNIVERSAL_IMAGE.');
+        return true;
+    }
+    if (environmentValue === 'false') {
+        console.log('(*) Universal image squashing disabled by SQUASH_UNIVERSAL_IMAGE.');
+        return false;
     }
 
-    return config.squashUniversalImage === true;
+    const configValue = config.squashUniversalImage === true;
+    if (typeof rawEnvironmentValue === 'undefined') {
+        console.log(`(*) SQUASH_UNIVERSAL_IMAGE is not set. Using build/config.json value: ${configValue}.`);
+    } else {
+        console.log(`(*) Invalid SQUASH_UNIVERSAL_IMAGE value ${JSON.stringify(rawEnvironmentValue)}. Using build/config.json value: ${configValue}.`);
+    }
+    return configValue;
 }
 
 function getDefaultDependencies(dependencyType) {

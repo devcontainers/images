@@ -21,6 +21,17 @@ async function testConfigFlag() {
 
         process.env.SQUASH_UNIVERSAL_IMAGE = 'TRUE';
         assert.strictEqual(configUtils.shouldSquashUniversalImage('universal'), true);
+
+        process.env.SQUASH_UNIVERSAL_IMAGE = ' false ';
+        assert.strictEqual(configUtils.shouldSquashUniversalImage('universal'), false);
+
+        for (const value of ['', ' ', 'invalid']) {
+            process.env.SQUASH_UNIVERSAL_IMAGE = value;
+            assert.strictEqual(configUtils.shouldSquashUniversalImage('universal'), true);
+        }
+
+        process.env.SQUASH_UNIVERSAL_IMAGE = 'true';
+        assert.strictEqual(configUtils.shouldSquashUniversalImage('python'), false);
     } finally {
         if (typeof originalValue === 'undefined') {
             delete process.env.SQUASH_UNIVERSAL_IMAGE;
@@ -106,13 +117,19 @@ async function testSquashFailurePreventsPush() {
     }
 }
 
+async function runTest(name, test) {
+    console.log(`- ${name}`);
+    await test();
+    console.log('  PASS');
+}
+
 async function main() {
-    await testConfigFlag();
-    testDevcontainerPushArgument();
-    await testSquashAndPushAllTags();
-    await testLocalSquashSkipsPush();
-    await testSquashFailurePreventsPush();
-    console.log('push tests passed');
+    await runTest('config flag resolution', testConfigFlag);
+    await runTest('devcontainer push argument', testDevcontainerPushArgument);
+    await runTest('squash and push all tags', testSquashAndPushAllTags);
+    await runTest('local squash skips push', testLocalSquashSkipsPush);
+    await runTest('squash failure prevents push', testSquashFailurePreventsPush);
+    console.log('All push tests passed.');
 }
 
 main().catch((error) => {
