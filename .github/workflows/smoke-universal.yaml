@@ -23,8 +23,8 @@ jobs:
       uses: ./.github/actions/setup-docker-squash
     - name: Smoke test
       env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      SQUASH_UNIVERSAL_IMAGE: ${{ vars.SQUASH_UNIVERSAL_IMAGE }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SQUASH_UNIVERSAL_IMAGE: ${{ vars.SQUASH_UNIVERSAL_IMAGE }}
       id: smoke_test
       uses: ./.github/actions/smoke-test
       with:
