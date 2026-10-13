@@ -19,7 +19,7 @@ docker images
 
 if [[ "${IMAGE}" == "universal" ]]; then
     check_image_size "${IMAGE}" "${THRESHOLD_IN_GB}" "${id_image}"
-    squash_universal_image="$(node -e "process.stdout.write(String(require('./build/src/utils/config').shouldSquashUniversalImage(process.argv[1])))" "${IMAGE}")"
+    squash_universal_image="$(node -e "console.log = console.error; process.stdout.write(String(require('./build/src/utils/squash').shouldSquashUniversalImage(process.argv[1])))" "${IMAGE}")"
     if [[ "${squash_universal_image}" == "true" ]]; then
         layer_count="$(docker image inspect --format '{{len .RootFS.Layers}}' "${id_image}")"
         if [[ "${layer_count}" -ne 1 ]]; then

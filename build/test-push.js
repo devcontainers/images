@@ -6,32 +6,34 @@
 const assert = require('assert');
 const asyncUtils = require('./src/utils/async');
 const configUtils = require('./src/utils/config');
+const squashUtils = require('./src/utils/squash');
 const push = require('./src/push');
 
 async function testConfigFlag() {
     const originalValue = process.env.SQUASH_UNIVERSAL_IMAGE;
+    assert.strictEqual(configUtils.shouldSquashUniversalImage, squashUtils.shouldSquashUniversalImage);
 
     try {
         delete process.env.SQUASH_UNIVERSAL_IMAGE;
-        assert.strictEqual(configUtils.shouldSquashUniversalImage('universal'), true);
-        assert.strictEqual(configUtils.shouldSquashUniversalImage('python'), false);
+        assert.strictEqual(squashUtils.shouldSquashUniversalImage('universal'), true);
+        assert.strictEqual(squashUtils.shouldSquashUniversalImage('python'), false);
 
         process.env.SQUASH_UNIVERSAL_IMAGE = 'false';
-        assert.strictEqual(configUtils.shouldSquashUniversalImage('universal'), false);
+        assert.strictEqual(squashUtils.shouldSquashUniversalImage('universal'), false);
 
         process.env.SQUASH_UNIVERSAL_IMAGE = 'TRUE';
-        assert.strictEqual(configUtils.shouldSquashUniversalImage('universal'), true);
+        assert.strictEqual(squashUtils.shouldSquashUniversalImage('universal'), true);
 
         process.env.SQUASH_UNIVERSAL_IMAGE = ' false ';
-        assert.strictEqual(configUtils.shouldSquashUniversalImage('universal'), false);
+        assert.strictEqual(squashUtils.shouldSquashUniversalImage('universal'), false);
 
         for (const value of ['', ' ', 'invalid']) {
             process.env.SQUASH_UNIVERSAL_IMAGE = value;
-            assert.strictEqual(configUtils.shouldSquashUniversalImage('universal'), true);
+            assert.strictEqual(squashUtils.shouldSquashUniversalImage('universal'), true);
         }
 
         process.env.SQUASH_UNIVERSAL_IMAGE = 'true';
-        assert.strictEqual(configUtils.shouldSquashUniversalImage('python'), false);
+        assert.strictEqual(squashUtils.shouldSquashUniversalImage('python'), false);
     } finally {
         if (typeof originalValue === 'undefined') {
             delete process.env.SQUASH_UNIVERSAL_IMAGE;

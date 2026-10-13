@@ -7,6 +7,7 @@ const os = require('os');
 const path = require('path');
 const asyncUtils = require('./async');
 const jsonc = require('jsonc').jsonc;
+const squashUtils = require('./squash');
 const config = require('../../config.json');
 
 config.definitionDependencies = config.definitionDependencies || {};
@@ -707,31 +708,6 @@ function shouldFlattenDefinitionBaseImage(definitionId) {
     return (getConfig('flattenBaseImage', []).indexOf(definitionId) >= 0)
 }
 
-function shouldSquashUniversalImage(definitionId) {
-    if (definitionId !== 'universal') {
-        return false;
-    }
-
-    const rawEnvironmentValue = process.env.SQUASH_UNIVERSAL_IMAGE;
-    const environmentValue = rawEnvironmentValue?.trim().toLocaleLowerCase();
-    if (environmentValue === 'true') {
-        console.log('(*) Universal image squashing enabled by SQUASH_UNIVERSAL_IMAGE.');
-        return true;
-    }
-    if (environmentValue === 'false') {
-        console.log('(*) Universal image squashing disabled by SQUASH_UNIVERSAL_IMAGE.');
-        return false;
-    }
-
-    const configValue = config.squashUniversalImage === true;
-    if (typeof rawEnvironmentValue === 'undefined') {
-        console.log(`(*) SQUASH_UNIVERSAL_IMAGE is not set. Using build/config.json value: ${configValue}.`);
-    } else {
-        console.log(`(*) Invalid SQUASH_UNIVERSAL_IMAGE value ${JSON.stringify(rawEnvironmentValue)}. Using build/config.json value: ${configValue}.`);
-    }
-    return configValue;
-}
-
 function getDefaultDependencies(dependencyType) {
     const packageManagerConfig = getConfig('commonDependencies');
     return packageManagerConfig ? packageManagerConfig[dependencyType] : null;
@@ -765,6 +741,6 @@ module.exports = {
     getPoolKeyForPoolUrl: getPoolKeyForPoolUrl,
     getConfig: getConfig,
     shouldFlattenDefinitionBaseImage: shouldFlattenDefinitionBaseImage,
-    shouldSquashUniversalImage: shouldSquashUniversalImage,
+    shouldSquashUniversalImage: squashUtils.shouldSquashUniversalImage,
     getDefinitionList: getDefinitionList
 };
