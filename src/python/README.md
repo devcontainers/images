@@ -9,7 +9,7 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published image* | mcr.microsoft.com/devcontainers/python |
-| *Available image variants* | 3 / 3-trixie, 3.9 / 3.9-trixie, 3.10 / 3.10-trixie, 3.11-trixie / 3.11, 3.12-trixie / 3.12, 3.13-trixie / 3.13,  3.14-trixie / 3.14, 3-bookworm, 3.10-bookworm, 3.11-bookworm, 3.12-bookworm, 3.13-bookworm, 3.14-bookworm ([full list](https://mcr.microsoft.com/v2/devcontainers/python/tags/list)) |
+| *Available image variants* | 3 / 3-trixie, 3.9 / 3.9-trixie, 3.10 / 3.10-trixie, 3.11-trixie / 3.11, 3.12-trixie / 3.12, 3.13-trixie / 3.13,  3.14-trixie / 3.14, 3.15-trixie / 3.15, 3-bookworm, 3.10-bookworm, 3.11-bookworm, 3.12-bookworm, 3.13-bookworm, 3.14-bookworm, 3.15-bookworm ([full list](https://mcr.microsoft.com/v2/devcontainers/python/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `trixie` and `bookworm` variants |
 | *Container Host OS Support* | Linux, macOS, Windows |
 | *Container OS* | Debian |
@@ -29,16 +29,17 @@ You can directly reference [pre-built](https://containers.dev/implementors/refer
 - `mcr.microsoft.com/devcontainers/python:3.12` (or `3.12-trixie`, `3.12-bookworm` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/python:3.13` (or `3.13-trixie`, `3.13-bookworm` to pin to an OS version)
 - `mcr.microsoft.com/devcontainers/python:3.14` (or `3.14-trixie`, `3.14-bookworm` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/python:3.15` (or `3.15-trixie`, `3.15-bookworm` to pin to an OS version)
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
 We publish stable releases and experimental development images (`dev-*`, which contain the latest available changes from `main`). Latest stable: `mcr.microsoft.com/devcontainers/python:latest` ([MCR](https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/python/tag/latest)). Other stable releases can be found at: [MCR Tags](https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/python/tags). Development images use the `dev-` prefix, for example `mcr.microsoft.com/devcontainers/python:dev-3.14`, and may be updated in place; pin the image for reproducibility.
 
-The examples below demonstrate stable image [semantic versioning](https://semver.org/); see the links above for current tags.
+The examples below demonstrate image [semantic versioning](https://semver.org/) for the next release; see the links above for current stable tags.
 
-- `mcr.microsoft.com/devcontainers/python:3-3.14` (or `3-3.14-trixie`)
-- `mcr.microsoft.com/devcontainers/python:3.2-3.14` (or `3.2-3.14-trixie`)
-- `mcr.microsoft.com/devcontainers/python:3.2.6-3.14` (or `3.2.6-3.14-trixie`)
+- `mcr.microsoft.com/devcontainers/python:3-3.15` (or `3-3.15-trixie`)
+- `mcr.microsoft.com/devcontainers/python:3.3-3.15` (or `3.3-3.15-trixie`)
+- `mcr.microsoft.com/devcontainers/python:3.3.0-3.15` (or `3.3.0-3.15-trixie`)
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `2-3`). 
 You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
