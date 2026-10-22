@@ -1,7 +1,9 @@
 {
     "image": "mcr.microsoft.com/devcontainers/javascript-node:3-22",
     "features": {
-        "ghcr.io/devcontainers/features/docker-in-docker:4": {},
+        "ghcr.io/devcontainers/features/docker-in-docker:4": {
+            "version": "28"
+        },
         "ghcr.io/devcontainers/features/azure-cli:1": {}
     },
     "postCreateCommand": "sudo corepack enable && corepack prepare yarn@4.9.4 --activate && npm install -g @devcontainers/cli",
