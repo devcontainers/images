@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:2a9d50ef161cde32bda64a579becfca1dc8db7a17545bd6f4728131641f7eb03
+**Digest:** sha256:5d56b875941024d123e2ce05497d746e3c2ff4fb53815bbe3fe9dcc52cb223bb
 
 **Tags:**
 ```
@@ -24,8 +24,8 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
 | [Python](https://www.python.org/) | 3.12.14 | /opt/conda |
-| [Jupyter Notebooks](https://jupyter.org/) | 7.5.7 | /opt/conda |
-| [Jupyter Lab](https://jupyter.org/) | 4.5.9 | /opt/conda |
+| [Jupyter Notebooks](https://jupyter.org/) | 7.6.2 | /opt/conda |
+| [Jupyter Lab](https://jupyter.org/) | 4.6.4 | /opt/conda |
 
 **Tools installed using git**
 
@@ -51,7 +51,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | requests | 2.34.2 |
 | tornado | 6.5.8 |
 | transformers | 4.53.0 |
-| jupyter_server | 2.14.1 |
+| jupyter_server | 2.21.1 |
 
 **Other tools and utilities**
 
@@ -99,7 +99,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | unzip | 6.0-28+deb12u1 |
 | vim-tiny | 2:9.0.1378-2+deb12u2 |
 | wget | 1.21.3-1+deb12u1 |
-| zip | 3.0-13 |
+| zip | 3.0-13+deb12u1 |
 | zlib1g | 1:1.2.13.dfsg-1 |
 | zsh | 5.9-4+b15 |
 
