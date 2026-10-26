@@ -29,11 +29,11 @@
             "useOryxIfAvailable": "false"
         },
         "ghcr.io/devcontainers/features/php:1": {
-            "version": "8.5.0",
-            "additionalVersions": "8.4.15",
+            "version": "8.5.12",
+            "additionalVersions": "8.4.27",
             "installComposer": "true"
         },
-        "ghcr.io/devcontainers/features/conda:2": {
+        "./local-features/conda": {
             "version": "latest"
         },
         "ghcr.io/devcontainers/features/ruby:2": {
@@ -72,9 +72,8 @@
             "version": "latest"
         },
         "./local-features/jekyll": "latest",
-        "ghcr.io/devcontainers/features/oryx:2": "latest",
+        "./local-features/oryx": "latest",
         "./local-features/setup-user": "latest",
-        "./local-features/patch-conda": {},
         "./local-features/patch-python": {}
     },
     "overrideFeatureInstallOrder": [
@@ -83,8 +82,7 @@
         "ghcr.io/devcontainers/features/dotnet",
         "ghcr.io/devcontainers/features/hugo",
         "ghcr.io/devcontainers/features/node",
-        "ghcr.io/devcontainers/features/conda",
-        "./local-features/patch-conda",
+        "./local-features/conda",
         "ghcr.io/devcontainers/features/python",
         "./local-features/patch-python",
         "ghcr.io/devcontainers/features/php",
@@ -97,7 +95,7 @@
         "ghcr.io/devcontainers/features/kubectl-helm-minikube",
         "ghcr.io/devcontainers/features/go",
         "./local-features/jekyll",
-        "ghcr.io/devcontainers/features/oryx",
+        "./local-features/oryx",
         "./local-features/setup-user"
     ],
     "remoteUser": "codespace",

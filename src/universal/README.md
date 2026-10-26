@@ -42,6 +42,8 @@ This container also includes a running SSH server that you can use to access the
 ## Using Conda
 This dev container and its associated image includes [the `conda` package manager](https://aka.ms/vscode-remote/conda/about). Additional packages installed using Conda will be downloaded from Anaconda or another repository if you configure one. To reconfigure Conda in this container to access an alternative repository, please see information on [configuring Conda channels here](https://aka.ms/vscode-remote/conda/channel-setup).
 
+The [local Conda Feature](.devcontainer/local-features/conda) installs Miniconda and applies the required security updates in the same image layer. Conda package updates use a single transaction, pip upgrades disable download caching, and package caches and Python bytecode are removed before the layer is committed.
+
 Access to the Anaconda repository is covered by the [Anaconda Terms of Service](https://aka.ms/vscode-remote/conda/terms), which may require some organizations to obtain a commercial license from Anaconda. **However**, when this dev container or its associated image is used with GitHub Codespaces or GitHub Actions, **all users are permitted** to use the Anaconda Repository through the service, including organizations normally required by Anaconda to obtain a paid license for commercial activities. Note that third-party packages may be licensed by their publishers in ways that impact your intellectual property, and are used at your own risk.
 
 ## Using this image
@@ -51,6 +53,8 @@ While the image itself works unmodified, you can also directly reference pre-bui
 `mcr.microsoft.com/devcontainers/universal:6.1-linux`
 
 Alternatively, you can use the contents of [.devcontainer](.devcontainer) to fully customize your container's contents or to build it for a container host architecture not supported by the image.
+
+The [base Dockerfile](.devcontainer/Dockerfile) installs apt packages and removes apt lists, downloaded package archives, temporary files, and root build caches in the same layer. This housekeeping is separate from the Oryx and Conda layer-size optimizations.
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
@@ -72,4 +76,3 @@ Codespaces will automatically perform some default setup when the `universal` im
 Copyright (c) Microsoft Corporation. All rights reserved.
 
 Licensed under the MIT License. See [LICENSE](https://github.com/devcontainers/images/blob/main/LICENSE).
-

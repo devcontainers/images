@@ -1,0 +1,43 @@
+{
+  "id": "conda",
+  "version": "2.0.1",
+  "name": "Conda",
+  "description": "A cross-platform, language-agnostic binary package manager",
+  "documentationURL": "https://github.com/devcontainers/features/tree/main/src/conda",
+  "options": {
+    "version": {
+      "type": "string",
+      "proposals": [
+        "latest",
+        "24.11.3",
+        "24.7.1"
+      ],
+      "default": "latest",
+      "description": "Select or enter a conda version."
+    },
+    "addCondaForge": {
+      "type": "boolean",
+      "default": false,
+      "description": "Add conda-forge channel to the config?"
+    }
+  },
+  "containerEnv": {
+    "CONDA_DIR": "/opt/conda",
+    "CONDA_SCRIPT": "/opt/conda/etc/profile.d/conda.sh",
+    "PATH": "/opt/conda/bin:${PATH}"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "github.copilot.chat.codeGeneration.instructions": [
+          {
+            "text": "This dev container includes the conda package manager pre-installed and available on the `PATH` for data science and Python development. Additional packages installed using Conda will be downloaded from Anaconda or another repository configured by the user. A user can install different versions of Python than the one in this dev container by running a command like: conda install python=3.7"
+          }
+        ]
+      }
+    }
+  },
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/common-utils"
+  ]
+}

@@ -5,11 +5,6 @@
       "resolved": "ghcr.io/devcontainers/features/common-utils@sha256:e76a6a8a35d1ad824daad1540725e0ec9f8ed2dc00d2850e990a9830013c7d08",
       "integrity": "sha256:e76a6a8a35d1ad824daad1540725e0ec9f8ed2dc00d2850e990a9830013c7d08"
     },
-    "ghcr.io/devcontainers/features/conda:2": {
-      "version": "2.0.1",
-      "resolved": "ghcr.io/devcontainers/features/conda@sha256:f5f3e5b96a33a90377eba3be0fdba7aef6a128b5702571e1f586b2c9e0083840",
-      "integrity": "sha256:f5f3e5b96a33a90377eba3be0fdba7aef6a128b5702571e1f586b2c9e0083840"
-    },
     "ghcr.io/devcontainers/features/copilot-cli:1": {
       "version": "1.1.3",
       "resolved": "ghcr.io/devcontainers/features/copilot-cli@sha256:e10d091ae7ef9b8d2ed5f601d75f5a090bc04acbac1a26d4cd3c0d5edde4ea10",
@@ -64,11 +59,6 @@
       "version": "2.1.1",
       "resolved": "ghcr.io/devcontainers/features/node@sha256:2a19d3b0b3879437637cfd292eb29fee0afcfbe6364e33db9afc4f80c5c1f956",
       "integrity": "sha256:2a19d3b0b3879437637cfd292eb29fee0afcfbe6364e33db9afc4f80c5c1f956"
-    },
-    "ghcr.io/devcontainers/features/oryx:2": {
-      "version": "2.0.1",
-      "resolved": "ghcr.io/devcontainers/features/oryx@sha256:8ae830d9e0f1c456e33c5436110d3eb1720a4565e5fcef089352f7d3b4feb74f",
-      "integrity": "sha256:8ae830d9e0f1c456e33c5436110d3eb1720a4565e5fcef089352f7d3b4feb74f"
     },
     "ghcr.io/devcontainers/features/php:1": {
       "version": "1.1.5",

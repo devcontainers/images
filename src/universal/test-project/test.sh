@@ -111,6 +111,8 @@ check "go" go version
 
 # Check utilities
 checkOSPackages "additional-os-packages" vim xtail software-properties-common
+checkOSPackages "base-build-and-debug-packages" build-essential cmake cppcheck valgrind clang lldb llvm gdb python3-dev
+checkOSPackages "base-library-and-documentation-packages" vim-doc libsecret-1-dev
 check "gh" gh --version
 check "copilot" copilot --version
 check "git-lfs" git-lfs --version
@@ -170,6 +172,7 @@ check "php-version-on-path-is-8.1.30" php --version | grep 8.1.30
 
 ls -la /home/codespace
 check "python-3.13.8-pip-version" checkPythonPipVersion "/usr/local/python/3.13.8/bin/python" "26.1.0"
+check "conda-pip-version" checkPythonPipVersion "/opt/conda/bin/python3" "26.1.0"
 check "no-vulnerable-pip-cache-in-conda-pkgs" checkNoVulnerablePipCache "/opt/conda/pkgs" "26.1"
 
 ## Python - current
