@@ -25,8 +25,10 @@ jobs:
           set -uo pipefail
 
           results_file="${RUNNER_TEMP}/emudhra-results.tsv"
+          details_file="${RUNNER_TEMP}/emudhra-details.log"
           tags_file="${RUNNER_TEMP}/emudhra-tags.tsv"
           : > "${results_file}"
+          : > "${details_file}"
 
           python3 - "${tags_file}" <<'PY'
           import json
@@ -79,6 +81,7 @@ jobs:
                   -c '
                     set +e
                     if ! command -v curl >/dev/null 2>&1; then
+                      printf "WARNING\tcurl is not installed in this image\n"
                       for url in "$@"; do
                         printf "RESULT\t%s\tmissing-curl\t127\n" "${url}"
                       done
@@ -86,6 +89,7 @@ jobs:
                     fi
 
                     for url in "$@"; do
+                      printf "COMMAND\tcurl -sS --dump-header /tmp/emudhra-headers --output /tmp/emudhra-body --max-time 30 %s\n" "${url}"
                       : > /tmp/emudhra-headers
                       : > /tmp/emudhra-body
                       : > /tmp/emudhra-error
@@ -108,6 +112,14 @@ jobs:
                         classification=unknown
                       fi
 
+                      if [ -s /tmp/emudhra-error ]; then
+                        printf "ERROR/WARNING_BEGIN\t%s\n" "${url}"
+                        cat /tmp/emudhra-error
+                        printf "ERROR/WARNING_END\t%s\n" "${url}"
+                      else
+                        printf "ERROR/WARNING\t%s\t<none>\n" "${url}"
+                      fi
+
                       printf "RESULT\t%s\t%s\t%s\t%s\n" \
                         "${url}" "${classification}" "${curl_rc}" "${http_code:-}"
                     done
@@ -126,6 +138,14 @@ jobs:
                       "${classification}" "${curl_rc}" "${http_code}" >>"${results_file}"
                   result_count=$((result_count + 1))
               done < <(grep '^RESULT	' "${run_output}" || true)
+
+              {
+                  echo "=== ${ref} (${image}, ${variant}) ==="
+                  echo "Docker command: docker run --pull=always --rm --entrypoint /bin/sh \"${ref}\" -c '<probe script>' sh <disclosure-url-1> <disclosure-url-2>"
+                  echo "Cleanup commands: docker image rm -f \"${ref}\"; docker container prune -f; docker image prune -af"
+                  cat "${run_output}"
+                  echo
+              } >> "${details_file}"
 
               if [ "${result_count}" -eq 0 ]; then
                   for url in \
@@ -147,6 +167,7 @@ jobs:
               echo "## eMudhra CA trust check"
               echo
               echo "Each active dev tag was pulled with \`--pull=always\`, tested inside the image, and removed before the next tag."
+              echo "Complete Docker/curl commands, pull output, and error/warning messages are available in the \`emudhra-details.log\` artifact."
               echo
               echo "| Image tag | Endpoint | Result | curl | HTTP |"
               echo "|---|---|---:|---:|---:|"
@@ -154,6 +175,7 @@ jobs:
           } >> "${GITHUB_STEP_SUMMARY}"
 
           cp "${results_file}" emudhra-results.tsv
+          cp "${details_file}" emudhra-details.log
 
           vulnerable_count=$(awk -F '\t' '$5 == "vulnerable" { count++ } END { print count + 0 }' "${results_file}")
           unknown_count=$(awk -F '\t' '$5 == "unknown" || $5 == "missing-curl" { count++ } END { print count + 0 }' "${results_file}")
@@ -172,5 +194,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: emudhra-ca-results
-          path: emudhra-results.tsv
+          path: |
+            emudhra-results.tsv
+            emudhra-details.log
           if-no-files-found: error
