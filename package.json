@@ -2,6 +2,9 @@
   "files": [
     "src"
   ],
+  "scripts": {
+    "test:push": "node build/test-push.js"
+  },
   "devDependencies": {
     "copyfiles": "^2.4.1",
     "handlebars": "^4.7.7",
