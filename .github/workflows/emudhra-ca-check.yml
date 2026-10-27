@@ -1,0 +1,176 @@
+name: Check eMudhra CA trust in dev images
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: emudhra-ca-check-${{ github.event.pull_request.number || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  check-dev-images:
+    name: Test every active dev image tag
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Test disclosure endpoints
+        shell: bash
+        run: |
+          set -uo pipefail
+
+          results_file="${RUNNER_TEMP}/emudhra-results.tsv"
+          tags_file="${RUNNER_TEMP}/emudhra-tags.tsv"
+          : > "${results_file}"
+
+          python3 - "${tags_file}" <<'PY'
+          import json
+          import pathlib
+          import sys
+
+          output = pathlib.Path(sys.argv[1])
+          rows = set()
+
+          for manifest_path in sorted(pathlib.Path("src").glob("*/manifest.json")):
+              manifest = json.loads(manifest_path.read_text())
+              image = manifest_path.parent.name
+              variants = manifest.get("variants") or [None]
+
+              for variant in variants:
+                  for template in manifest["build"]["tags"]:
+                      tag = (
+                          template
+                          .replace("${VERSION}", "dev")
+                          .replace("${VARIANT}", variant or "")
+                          .replace("$VARIANT", variant or "")
+                          .replace(":-", ":")
+                          .replace("-NOVARIANT", "")
+                      )
+                      rows.add((image, variant or "<none>", f"mcr.microsoft.com/devcontainers/{tag}"))
+
+          output.write_text("".join(f"{image}\t{variant}\t{ref}\n" for image, variant, ref in sorted(rows)))
+          PY
+
+          cleanup_image() {
+              if [ -n "${CURRENT_REF:-}" ]; then
+                  docker image rm -f "${CURRENT_REF}" >/dev/null 2>&1 || true
+              fi
+              docker container prune -f >/dev/null 2>&1 || true
+              docker image prune -af >/dev/null 2>&1 || true
+          }
+          trap cleanup_image EXIT
+
+          while IFS=$'\t' read -r image variant ref; do
+              [ -n "${ref}" ] || continue
+              CURRENT_REF="${ref}"
+              run_output=$(mktemp)
+
+              echo "::group::${ref}"
+              docker run \
+                  --pull=always \
+                  --rm \
+                  --entrypoint /bin/sh \
+                  "${ref}" \
+                  -c '
+                    set +e
+                    if ! command -v curl >/dev/null 2>&1; then
+                      for url in "$@"; do
+                        printf "RESULT\t%s\tmissing-curl\t127\n" "${url}"
+                      done
+                      exit 0
+                    fi
+
+                    for url in "$@"; do
+                      : > /tmp/emudhra-headers
+                      : > /tmp/emudhra-body
+                      : > /tmp/emudhra-error
+                      curl -sS \
+                        --dump-header /tmp/emudhra-headers \
+                        --output /tmp/emudhra-body \
+                        --max-time 30 \
+                        "${url}" \
+                        2>/tmp/emudhra-error
+                      curl_rc=$?
+                      http_code=$(awk "/^HTTP\\// { code=\$2 } END { print code }" /tmp/emudhra-headers)
+
+                      if [ "${curl_rc}" -eq 60 ]; then
+                        classification=safe
+                      elif [ "${curl_rc}" -eq 0 ] \
+                          && [ "${http_code}" = "200" ] \
+                          && grep -Eiq "server[[:space:]]+configuration|configuration[[:space:]]+server" /tmp/emudhra-body; then
+                        classification=vulnerable
+                      else
+                        classification=unknown
+                      fi
+
+                      printf "RESULT\t%s\t%s\t%s\t%s\n" \
+                        "${url}" "${classification}" "${curl_rc}" "${http_code:-}"
+                    done
+                  ' \
+                  sh \
+                  https://dv-g3b-emudhra.we-have-a-problem.com/ \
+                  https://dv-g3b-aaa-emudhra.we-have-a-problem.com/ \
+                  >"${run_output}" 2>&1
+              run_rc=$?
+
+              result_count=0
+              while IFS=$'\t' read -r marker url classification curl_rc http_code; do
+                  [ "${marker}" = "RESULT" ] || continue
+                  printf '%s\t%s\t%s\t%s\t%s\t%s\t%s\n' \
+                      "${image}" "${variant}" "${ref}" "${url}" \
+                      "${classification}" "${curl_rc}" "${http_code}" >>"${results_file}"
+                  result_count=$((result_count + 1))
+              done < <(grep '^RESULT	' "${run_output}" || true)
+
+              if [ "${result_count}" -eq 0 ]; then
+                  for url in \
+                      https://dv-g3b-emudhra.we-have-a-problem.com/ \
+                      https://dv-g3b-aaa-emudhra.we-have-a-problem.com/; do
+                      printf '%s\t%s\t%s\t%s\tunknown\t%s\t\n' \
+                          "${image}" "${variant}" "${ref}" "${url}" "${run_rc}" >>"${results_file}"
+                  done
+              fi
+
+              cat "${run_output}"
+              rm -f "${run_output}"
+              cleanup_image
+              CURRENT_REF=
+              echo "::endgroup::"
+          done < "${tags_file}"
+
+          {
+              echo "## eMudhra CA trust check"
+              echo
+              echo "Each active dev tag was pulled with \`--pull=always\`, tested inside the image, and removed before the next tag."
+              echo
+              echo "| Image tag | Endpoint | Result | curl | HTTP |"
+              echo "|---|---|---:|---:|---:|"
+              awk -F '\t' '{ printf "| `%s` | `%s` | **%s** | %s | %s |\n", $3, $4, $5, $6, $7 }' "${results_file}"
+          } >> "${GITHUB_STEP_SUMMARY}"
+
+          cp "${results_file}" emudhra-results.tsv
+
+          vulnerable_count=$(awk -F '\t' '$5 == "vulnerable" { count++ } END { print count + 0 }' "${results_file}")
+          unknown_count=$(awk -F '\t' '$5 == "unknown" || $5 == "missing-curl" { count++ } END { print count + 0 }' "${results_file}")
+
+          if [ "${vulnerable_count}" -gt 0 ]; then
+              echo "::error::${vulnerable_count} vulnerable endpoint result(s) detected."
+              exit 1
+          fi
+          if [ "${unknown_count}" -gt 0 ]; then
+              echo "::error::${unknown_count} inconclusive endpoint result(s) detected."
+              exit 1
+          fi
+
+      - name: Upload detailed results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: emudhra-ca-results
+          path: emudhra-results.tsv
+          if-no-files-found: error
