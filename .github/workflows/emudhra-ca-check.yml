@@ -13,7 +13,7 @@ concurrency:
 jobs:
   check-dev-images:
     name: Test every active dev image tag
-    runs-on: ubuntu-latest
+    runs-on: devcontainer-image-builder-ubuntu
     timeout-minutes: 360
     steps:
       - name: Check out repository
