@@ -1,4 +1,4 @@
-# [Choice] Python version (use -bookworm variants on local arm64/Apple Silicon): 3, 3.14, 3.13, 3.12, 3.11, 3.10, 3-bookworm, 3.14-bookworm, 3.13-bookworm, 3.12-bookworm, 3.11-bookworm, 3.10-bookworm
+# [Choice] Python version (use -trixie or -bookworm variants to pin the OS): 3, 3.15, 3.14, 3.13, 3.12, 3.11, 3.10, 3-trixie, 3.15-trixie, 3.14-trixie, 3.13-trixie, 3.12-trixie, 3.11-trixie, 3.10-trixie, 3-bookworm, 3.15-bookworm, 3.14-bookworm, 3.13-bookworm, 3.12-bookworm, 3.11-bookworm, 3.10-bookworm
 ARG VARIANT=3-trixie
 FROM python:${VARIANT}
 
