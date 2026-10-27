@@ -14,3 +14,10 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get upgrade -y \
     && rm -rf /var/lib/apt/lists/*
 
+# CVE-2026-111943: force-upgrade ca-certificates — the locked common-utils
+# feature tarball predates the patched package, so its upgradePackages step
+# alone bakes in a stale trust store. Drop once the feature is republished.
+RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get install -y --only-upgrade ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
