@@ -91,6 +91,7 @@ jobs:
               run_output=$(mktemp)
 
               echo "::group::${ref}"
+              set +e
               docker run \
                   --pull=always \
                   --rm \
@@ -126,7 +127,7 @@ jobs:
                       elif [ "${curl_rc}" -eq 0 ] \
                           && [ "${http_code}" = "200" ] \
                           && printf "%s" "${body_text}" \
-                            | grep -Eiq "server.{0,80}configuration|configuration.{0,80}server"; then
+                            | grep -Fqi "Your client successfully connected to the site"; then
                         classification=vulnerable
                       else
                         classification=unknown
@@ -156,6 +157,7 @@ jobs:
                   https://dv-g3b-aaa-emudhra.we-have-a-problem.com/ \
                   >"${run_output}" 2>&1
               run_rc=$?
+              set -e
 
               result_count=0
               while IFS=$'\t' read -r marker url classification curl_rc http_code; do
