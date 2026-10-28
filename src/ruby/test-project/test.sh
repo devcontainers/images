@@ -23,7 +23,7 @@ check "git" git --version
 check "git-location" sh -c "which git | grep /usr/local/bin/git"
 
 git_version=$(git --version)
-check-version-ge "git-requirement" "${git_version}" "git version 2.40.1"
+check-version-ge "git-requirement" "${git_version}" "git version 2.56.0"
 
 # Testing vulnerability issue CVE-2024-46901 fix by upgrading svn to 1.14.5.
 svn_version=$(svn --version --quiet)
