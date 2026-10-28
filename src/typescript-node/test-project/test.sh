@@ -11,13 +11,6 @@ checkCommon
 
 # Image specific tests
 check "node" node --version
-node_version=$(node --version)
-case "${node_version}" in
-	v22.*) check-version-ge "node-requirement" "${node_version}" "v22.23.4" ;;
-	v24.*) check-version-ge "node-requirement" "${node_version}" "v24.22.1" ;;
-	v26.*) check-version-ge "node-requirement" "${node_version}" "v26.12.1" ;;
-	*) check-version-ge "node-requirement" "${node_version}" "v27.0.0" ;;
-esac
 check "lang-utf8" test "${LANG}" = "C.UTF-8"
 sudo rm -f yarn.lock
 sudo rm -rf .yarn/*

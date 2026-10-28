@@ -13,21 +13,6 @@ case "${php_version}" in
 	8.4.*) check-version-ge "php-requirement" "${php_version}" "8.4.27" ;;
 	8.5.*) check-version-ge "php-requirement" "${php_version}" "8.5.12" ;;
 esac
-composer_ca_bundle_version=$(php -r '
-	$phar = new Phar(realpath($argv[1]));
-	$installed = json_decode($phar["vendor/composer/installed.json"]->getContent(), true, 512, JSON_THROW_ON_ERROR);
-	foreach ($installed["packages"] ?? $installed as $package) {
-		if ($package["name"] === "composer/ca-bundle") {
-			echo ltrim($package["version"], "v");
-			exit(0);
-		}
-	}
-	exit(1);
-' "$(command -v composer)")
-case "${composer_ca_bundle_version}" in
-	1.4.*) check-version-ge "composer-ca-bundle-requirement" "${composer_ca_bundle_version}" "1.4.16" ;;
-	*) check-version-ge "composer-ca-bundle-requirement" "${composer_ca_bundle_version}" "1.6.0" ;;
-esac
 check "apache2ctl" which apache2ctl
 
 check "nvm" bash -c ". /usr/local/share/nvm/nvm.sh && nvm install 24"

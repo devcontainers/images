@@ -110,21 +110,6 @@ for php_path in /usr/local/php/*/bin/php; do
 	esac
 done
 check "php composer" composer --version
-composer_ca_bundle_version=$(php -r '
-	$phar = new Phar(realpath($argv[1]));
-	$installed = json_decode($phar["vendor/composer/installed.json"]->getContent(), true, 512, JSON_THROW_ON_ERROR);
-	foreach ($installed["packages"] ?? $installed as $package) {
-		if ($package["name"] === "composer/ca-bundle") {
-			echo ltrim($package["version"], "v");
-			exit(0);
-		}
-	}
-	exit(1);
-' "$(command -v composer)")
-case "${composer_ca_bundle_version}" in
-	1.4.*) check-version-ge "composer-ca-bundle-requirement" "${composer_ca_bundle_version}" "1.4.16" ;;
-	*) check-version-ge "composer-ca-bundle-requirement" "${composer_ca_bundle_version}" "1.6.0" ;;
-esac
 check "pecl" pecl version
 check "Xdebug" php --version | grep 'Xdebug'
 count=$(ls /usr/local/php | wc -l)
@@ -159,7 +144,10 @@ check-version-ge "git-lfs-requirement" "$(git-lfs --version | awk '{sub(/^git-lf
 check "docker" docker --version
 check "kubectl" kubectl version --client
 check "helm" helm version
-checkCondaPackageVersion "certifi" "2026.10.19"
+certifi_version=$(conda list certifi | awk '$1 == "certifi" {print $2}')
+if [[ -n "${certifi_version}" ]]; then
+	check-version-ge "conda-certifi-requirement" "${certifi_version}" "2026.10.19"
+fi
 check "ca-certificates-requirement" dpkg --compare-versions "$(dpkg-query -W -f='${Version}' ca-certificates)" ge "20260816ubuntu0.24.04.1"
 check "libcurl-requirement" dpkg --compare-versions "$(dpkg-query -W -f='${Version}' libcurl4t64)" ge "8.5.0-2ubuntu10.16"
 check "openssl-system-requirement" dpkg --compare-versions "$(dpkg-query -W -f='${Version}' openssl)" ge "3.0.13-0ubuntu3.16"

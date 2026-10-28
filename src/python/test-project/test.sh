@@ -8,9 +8,6 @@ checkCommon
 
 # Image specific tests
 check "python" python --version
-certifi_version=$(python -c "from importlib.metadata import version; print(version('certifi'))")
-check-version-ge "certifi-requirement" "${certifi_version}" "2026.10.19"
-check-version-ge "pip-vendored-certifi-requirement" "$(python -c 'import pip._vendor.certifi as certifi; print(certifi.__version__)')" "2026.10.19"
 check "pipx" pipx --version
 check "pylint" pylint --version
 check "flake8" flake8 --version

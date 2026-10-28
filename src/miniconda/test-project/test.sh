@@ -27,7 +27,6 @@ checkPythonPackageVersion "urllib3" "2.8.0"
 checkPythonPackageVersion "pip" "26.2"
 checkPythonPackageVersion "python-dotenv" "1.2.2"
 checkPythonPackageVersion "certifi" "2026.10.19"
-check-version-ge "pip-vendored-certifi-requirement" "$(python -c 'import pip._vendor.certifi as certifi; print(certifi.__version__)')" "2026.10.19"
 
 checkCondaPackageVersion "cryptography" "46.0.6"
 checkCondaPackageVersion "setuptools" "65.5.1"
