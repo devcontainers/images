@@ -119,16 +119,25 @@ jobs:
                         2>/tmp/emudhra-error
                       curl_rc=$?
                       http_code=$(awk "/^HTTP\\// { code=\$2 } END { print code }" /tmp/emudhra-headers)
+                      body_text=$(tr "\r\n\t" " " < /tmp/emudhra-body)
 
                       if [ "${curl_rc}" -eq 60 ]; then
                         classification=safe
                       elif [ "${curl_rc}" -eq 0 ] \
                           && [ "${http_code}" = "200" ] \
-                          && grep -Eiq "server[[:space:]]+configuration|configuration[[:space:]]+server" /tmp/emudhra-body; then
+                          && printf "%s" "${body_text}" \
+                            | grep -Eiq "server.{0,80}configuration|configuration.{0,80}server"; then
                         classification=vulnerable
                       else
                         classification=unknown
                       fi
+
+                      printf "HEADERS_BEGIN\t%s\n" "${url}"
+                      sed -n "1,20p" /tmp/emudhra-headers
+                      printf "HEADERS_END\t%s\n" "${url}"
+                      printf "BODY_BEGIN\t%s\n" "${url}"
+                      printf "%.500s\n" "${body_text}"
+                      printf "BODY_END\t%s\n" "${url}"
 
                       if [ -s /tmp/emudhra-error ]; then
                         printf "ERROR/WARNING_BEGIN\t%s\n" "${url}"
@@ -187,7 +196,7 @@ jobs:
               echo
               echo "Release source: workflow run [${RELEASE_RUN}](https://github.com/devcontainers/images/actions/runs/${RELEASE_RUN})."
               echo "Each release variant tag was pulled with \`--pull=always\`, tested inside the image, and removed before the next tag."
-              echo "Complete Docker/curl commands, pull output, and error/warning messages are available in the \`emudhra-release-details.log\` artifact."
+              echo "Complete Docker/curl commands, pull output, response headers, body excerpts, and error/warning messages are available in the \`emudhra-release-details.log\` artifact."
               echo
               echo "| Image tag | Endpoint | Result | curl | HTTP |"
               echo "|---|---|---:|---:|---:|"
