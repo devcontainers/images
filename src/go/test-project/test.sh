@@ -8,6 +8,12 @@ checkCommon
 
 # Image specific tests
 check "go" go version
+go_version=$(go version | awk '{sub(/^go/, "", $3); print $3}')
+case "${go_version}" in
+	1.26.*) check-version-ge "go-requirement" "${go_version}" "1.26.10" ;;
+	1.27.*) check-version-ge "go-requirement" "${go_version}" "1.27.3" ;;
+	*) check-version-ge "go-requirement" "${go_version}" "1.28.0" ;;
+esac
 check "nvm" bash -c ". /usr/local/share/nvm/nvm.sh && nvm install 24"
 check "corepack" bash -c ". /usr/local/share/nvm/nvm.sh && corepack enable"
 check "nvm-node" bash -c ". /usr/local/share/nvm/nvm.sh && node --version"

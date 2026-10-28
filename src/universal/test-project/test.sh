@@ -80,6 +80,15 @@ checkDirectoryOwnership "codespace user has ownership over extension directory" 
 
 # Node.js
 check "node" node --version
+for node_path in /usr/local/share/nvm/versions/node/*/bin/node; do
+	node_version=$("${node_path}" --version)
+	case "${node_version}" in
+		v22.*) check-version-ge "${node_path}-requirement" "${node_version}" "v22.23.4" ;;
+		v24.*) check-version-ge "${node_path}-requirement" "${node_version}" "v24.22.1" ;;
+		v26.*) check-version-ge "${node_path}-requirement" "${node_version}" "v26.12.1" ;;
+		*) check-version-ge "${node_path}-requirement" "${node_version}" "v27.0.0" ;;
+	esac
+done
 check "nvm" bash -c ". /usr/local/share/nvm/nvm.sh && nvm --version"
 check "yarn" yarn --version
 check "npm" npm --version
@@ -92,7 +101,30 @@ checkBundledNpmVersion "22" "9.8.1"
 
 # PHP
 check "php" php --version
+for php_path in /usr/local/php/*/bin/php; do
+	php_version=$("${php_path}" -r 'echo PHP_VERSION;')
+	check "${php_path}-version" test -n "${php_version}"
+	case "${php_version}" in
+		8.4.*) check-version-ge "${php_path}-requirement" "${php_version}" "8.4.27" ;;
+		8.5.*) check-version-ge "${php_path}-requirement" "${php_version}" "8.5.12" ;;
+	esac
+done
 check "php composer" composer --version
+composer_ca_bundle_version=$(php -r '
+	$phar = new Phar(realpath($argv[1]));
+	$installed = json_decode($phar["vendor/composer/installed.json"]->getContent(), true, 512, JSON_THROW_ON_ERROR);
+	foreach ($installed["packages"] ?? $installed as $package) {
+		if ($package["name"] === "composer/ca-bundle") {
+			echo ltrim($package["version"], "v");
+			exit(0);
+		}
+	}
+	exit(1);
+' "$(command -v composer)")
+case "${composer_ca_bundle_version}" in
+	1.4.*) check-version-ge "composer-ca-bundle-requirement" "${composer_ca_bundle_version}" "1.4.16" ;;
+	*) check-version-ge "composer-ca-bundle-requirement" "${composer_ca_bundle_version}" "1.6.0" ;;
+esac
 check "pecl" pecl version
 check "Xdebug" php --version | grep 'Xdebug'
 count=$(ls /usr/local/php | wc -l)
@@ -108,17 +140,31 @@ check "conda" conda --version
 
 # Go
 check "go" go version
+go_version=$(go version | awk '{sub(/^go/, "", $3); print $3}')
+case "${go_version}" in
+	1.26.*) check-version-ge "go-requirement" "${go_version}" "1.26.10" ;;
+	1.27.*) check-version-ge "go-requirement" "${go_version}" "1.27.3" ;;
+	*) check-version-ge "go-requirement" "${go_version}" "1.28.0" ;;
+esac
 
 # Check utilities
 checkOSPackages "additional-os-packages" vim xtail software-properties-common
 checkOSPackages "base-build-and-debug-packages" build-essential cmake cppcheck valgrind clang lldb llvm gdb python3-dev
 checkOSPackages "base-library-and-documentation-packages" vim-doc libsecret-1-dev
 check "gh" gh --version
+check-version-ge "gh-requirement" "$(gh --version | awk 'NR == 1 {print $3}')" "2.102.1"
 check "copilot" copilot --version
 check "git-lfs" git-lfs --version
+check-version-ge "git-lfs-requirement" "$(git-lfs --version | awk '{sub(/^git-lfs\//, "", $1); print $1}')" "3.8.1"
 check "docker" docker --version
 check "kubectl" kubectl version --client
 check "helm" helm version
+checkCondaPackageVersion "certifi" "2026.10.19"
+check "ca-certificates-requirement" dpkg --compare-versions "$(dpkg-query -W -f='${Version}' ca-certificates)" ge "20260816ubuntu0.24.04.1"
+check "libcurl-requirement" dpkg --compare-versions "$(dpkg-query -W -f='${Version}' libcurl4t64)" ge "8.5.0-2ubuntu10.16"
+check "openssl-system-requirement" dpkg --compare-versions "$(dpkg-query -W -f='${Version}' openssl)" ge "3.0.13-0ubuntu3.16"
+check "libssl-system-requirement" dpkg --compare-versions "$(dpkg-query -W -f='${Version}' libssl3t64)" ge "3.0.13-0ubuntu3.16"
+check-version-ge "openssl-runtime-requirement" "$(openssl version | awk '{print $2}')" "3.5.8"
 
 # Check expected shells
 check "bash" bash --version
