@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:a84bb35608df2af941e4d402ae33cf5712cb25279c7ed8d5b11f1183989401c8
+**Digest:** sha256:03ed77ec657a2aba233262713efb27f7410057e8b30706255edeeb30726f8ad2
 
 **Tags:**
 ```
@@ -40,14 +40,14 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | joblib | 1.4.2 |
 | cookiecutter | 2.6.0 |
 | cryptography | 50.0.0 |
-| mistune | 3.3.3 |
+| mistune | 3.3.4 |
 | numpy | 1.26.4 |
-| certifi | 2026.7.22 |
+| certifi | 2026.10.23 |
 | setuptools | 84.0.0 |
-| wheel | 0.47.0 |
+| wheel | 0.48.0 |
 | nbconvert | 7.17.1 |
 | pyOpenssl | 26.4.0 |
-| Werkzeug | 3.1.6 |
+| Werkzeug | 3.1.9 |
 | requests | 2.34.2 |
 | tornado | 6.5.10 |
 | transformers | 4.53.0 |
@@ -66,14 +66,14 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 |----------------|---------|
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
-| ca-certificates | 20250419~deb12u1 |
+| ca-certificates | 20250419~deb12u2 |
 | curl | 7.88.1-10+deb12u15 |
 | dialog | 1.3-20230209-1 |
 | git | 1:2.39.5-0+deb12u3 |
 | gnupg2 | 2.2.40-1.1+deb12u2 |
 | htop | 3.2.2-2 |
 | iproute2 | 6.1.0-3 |
-| jq | 1.6-2.1+deb12u2 |
+| jq | 1.6-2.1+deb12u3 |
 | less | 590-2.1~deb12u2 |
 | libc6 | 2.36-9+deb12u14 |
 | libgssapi-krb5-2 | 1.20.1-2+deb12u5 |
