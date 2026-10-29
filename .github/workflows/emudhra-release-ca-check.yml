@@ -11,8 +11,8 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  RELEASE_TAG: v0.4.35
-  RELEASE_RUN: "37976392616"
+  RELEASE_TAG: v0.4.37
+  RELEASE_RUN: "40745892149"
 
 jobs:
   check-release-images:
