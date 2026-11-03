@@ -1,6 +1,6 @@
 
 ARG VARIANT=24-trixie
-FROM mcr.microsoft.com/devcontainers/javascript-node:4-${VARIANT}
+FROM mcr.microsoft.com/devcontainers/javascript-node:5-${VARIANT}
 
 # Set locale so Unicode characters render correctly in locale-aware tools (e.g. tmux).
 ENV LANG=C.UTF-8

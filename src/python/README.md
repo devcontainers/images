@@ -39,7 +39,7 @@ The examples below demonstrate image [semantic versioning](https://semver.org/) 
 
 - `mcr.microsoft.com/devcontainers/python:3-3.15` (or `3-3.15-trixie`)
 - `mcr.microsoft.com/devcontainers/python:3.3-3.15` (or `3.3-3.15-trixie`)
-- `mcr.microsoft.com/devcontainers/python:3.3.1-3.15` (or `3.3.1-3.15-trixie`)
+- `mcr.microsoft.com/devcontainers/python:3.3.2-3.15` (or `3.3.2-3.15-trixie`)
 
 However, we only do security patching on the latest [non-breaking, in support](https://github.com/devcontainers/images/issues/90) versions of images (e.g. `2-3`). 
 You may want to run `apt-get update && apt-get upgrade` in your Dockerfile if you lock to a more specific version to at least pick up OS security updates.
