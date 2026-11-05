@@ -197,17 +197,21 @@ check "oryx-build-python-installed" python3 -m pip list | grep mpmath
 check "oryx-build-python-result" python3 ./sample/python/src/solve.py
 
 # Install platforms with oryx build tool
-check "oryx-install-dotnet-8.0" oryx prep --skip-detection --platforms-and-versions dotnet=8.0.23
-check "dotnet-8-installed-by-oryx" ls /opt/dotnet/ | grep 8.0
-check "dotnet-version-on-path-is-8.0.23" dotnet --version | grep 8.0
+# These versions are not preinstalled, so they come from Oryx's dynamic SDK install,
+# which only serves x86-64 binaries (see the Oryx note above).
+if [ "$(uname -m)" = "x86_64" ]; then
+	check "oryx-install-dotnet-8.0" oryx prep --skip-detection --platforms-and-versions dotnet=8.0.23
+	check "dotnet-8-installed-by-oryx" ls /opt/dotnet/ | grep 8.0
+	check "dotnet-version-on-path-is-8.0.23" dotnet --version | grep 8.0
 
-check "oryx-install-nodejs-20.11.0" oryx prep --skip-detection --platforms-and-versions nodejs=20.11.0
-check "nodejs-20.11.0-installed-by-oryx" ls /opt/nodejs/ | grep 20.11.0
-check "nodejs-version-on-path-is-20.11.0" node --version | grep v20.11.0
+	check "oryx-install-nodejs-20.11.0" oryx prep --skip-detection --platforms-and-versions nodejs=20.11.0
+	check "nodejs-20.11.0-installed-by-oryx" ls /opt/nodejs/ | grep 20.11.0
+	check "nodejs-version-on-path-is-20.11.0" node --version | grep v20.11.0
 
-check "oryx-install-php-8.1.30" oryx prep --skip-detection --platforms-and-versions php=8.1.30
-check "php-8.1.30-installed-by-oryx" ls /opt/php/ | grep 8.1.30
-check "php-version-on-path-is-8.1.30" php --version | grep 8.1.30
+	check "oryx-install-php-8.1.30" oryx prep --skip-detection --platforms-and-versions php=8.1.30
+	check "php-8.1.30-installed-by-oryx" ls /opt/php/ | grep 8.1.30
+	check "php-version-on-path-is-8.1.30" php --version | grep 8.1.30
+fi
 
 # Test patches
 
