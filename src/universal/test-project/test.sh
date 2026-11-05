@@ -168,8 +168,15 @@ check "oryx" oryx --version
 # Ensures nvm works in a Node Project
 check "default-node-version" bash -c "node --version | grep 24."
 check "default-node-location" bash -c "which node | grep /home/codespace/nvm/current/bin"
-check "oryx-build-node-project" bash -c "oryx build ./sample/node"
-check "oryx-configured-current-node-version" bash -c "ls -la /home/codespace/nvm/current | grep /opt/nodejs"
+# Oryx's dynamic SDK install serves x86-64 binaries regardless of host architecture
+# (https://github.com/microsoft/Oryx/issues/3126), so on arm64 the Node SDK that
+# `oryx build` downloads cannot be executed. The following check asserts on the
+# current-node-version symlink that this build leaves behind, so both are skipped
+# together on arm64.
+if [ "$(uname -m)" = "x86_64" ]; then
+	check "oryx-build-node-project" bash -c "oryx build ./sample/node"
+	check "oryx-configured-current-node-version" bash -c "ls -la /home/codespace/nvm/current | grep /opt/nodejs"
+fi
 check "nvm-switches-to-additional-node-version" bash -c ". /usr/local/share/nvm/nvm.sh && nvm use 22 && node --version | grep v22."
 check "node-location-after-switching-to-22" bash -c "which node | grep /home/codespace/nvm/current/bin"
 check "nvm-switches-back-to-default-node-version" bash -c ". /usr/local/share/nvm/nvm.sh && nvm use default && node --version | grep v24."
@@ -190,17 +197,21 @@ check "oryx-build-python-installed" python3 -m pip list | grep mpmath
 check "oryx-build-python-result" python3 ./sample/python/src/solve.py
 
 # Install platforms with oryx build tool
-check "oryx-install-dotnet-8.0" oryx prep --skip-detection --platforms-and-versions dotnet=8.0.23
-check "dotnet-8-installed-by-oryx" ls /opt/dotnet/ | grep 8.0
-check "dotnet-version-on-path-is-8.0.23" dotnet --version | grep 8.0
+# These versions are not preinstalled, so they come from Oryx's dynamic SDK install,
+# which only serves x86-64 binaries (see the Oryx note above).
+if [ "$(uname -m)" = "x86_64" ]; then
+	check "oryx-install-dotnet-8.0" oryx prep --skip-detection --platforms-and-versions dotnet=8.0.23
+	check "dotnet-8-installed-by-oryx" ls /opt/dotnet/ | grep 8.0
+	check "dotnet-version-on-path-is-8.0.23" dotnet --version | grep 8.0
 
-check "oryx-install-nodejs-20.11.0" oryx prep --skip-detection --platforms-and-versions nodejs=20.11.0
-check "nodejs-20.11.0-installed-by-oryx" ls /opt/nodejs/ | grep 20.11.0
-check "nodejs-version-on-path-is-20.11.0" node --version | grep v20.11.0
+	check "oryx-install-nodejs-20.11.0" oryx prep --skip-detection --platforms-and-versions nodejs=20.11.0
+	check "nodejs-20.11.0-installed-by-oryx" ls /opt/nodejs/ | grep 20.11.0
+	check "nodejs-version-on-path-is-20.11.0" node --version | grep v20.11.0
 
-check "oryx-install-php-8.1.30" oryx prep --skip-detection --platforms-and-versions php=8.1.30
-check "php-8.1.30-installed-by-oryx" ls /opt/php/ | grep 8.1.30
-check "php-version-on-path-is-8.1.30" php --version | grep 8.1.30
+	check "oryx-install-php-8.1.30" oryx prep --skip-detection --platforms-and-versions php=8.1.30
+	check "php-8.1.30-installed-by-oryx" ls /opt/php/ | grep 8.1.30
+	check "php-version-on-path-is-8.1.30" php --version | grep 8.1.30
+fi
 
 # Test patches
 

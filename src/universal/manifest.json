@@ -1,8 +1,12 @@
 {
-	"version": "6.1.12",
+	"version": "6.2.0",
 	"build": {
 		"latest": true,
 		"rootDistro": "debian",
+		"architectures": [
+			"linux/amd64",
+			"linux/arm64"
+		],
 		"tags": [
 			"universal:${VERSION}-noble",
 			"universal:${VERSION}-linux",
