@@ -14,7 +14,7 @@
 
 ## Variant: 8.5-apache-trixie
 
-**Digest:** sha256:0ab75b4b66601d7fe0817b74f16f5b964d61a04527ea3d7aa68d649e4fd1d9bc
+**Digest:** sha256:32cbba2da584b27a5aaf20729ca188d9e7c7920da509528e69860953140ea863
 
 **Tags:**
 ```
@@ -38,13 +38,13 @@ mcr.microsoft.com/devcontainers/php:dev-trixie
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [PHP](https://xdebug.org/) | 8.5.11 | /usr/local |
+| [PHP](https://xdebug.org/) | 8.5.12 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 083c339e0622bfc144b66ebf1a2e8dbe7d2ada0d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d2b7f557cceaddb16ba89bbf8200d8a8df35c4d8 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | a885b885fef16fac4bc544188fb25e9e37ae83e8 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -61,8 +61,8 @@ mcr.microsoft.com/devcontainers/php:dev-trixie
 |----------------|---------|
 | apt-transport-https | 3.0.3 |
 | apt-utils | 3.0.3 |
-| ca-certificates | 20250419 |
-| curl | 8.14.1-2+deb13u5 |
+| ca-certificates | 20250419+deb13u1 |
+| curl | 8.14.1-2+deb13u7 |
 | dialog | 1.3-20250116-1 |
 | git | 1:2.47.3-0+deb13u1 |
 | gnupg2 | 2.4.7-21+deb13u1 |
@@ -99,7 +99,7 @@ mcr.microsoft.com/devcontainers/php:dev-trixie
 
 ## Variant: 8.4-apache-trixie
 
-**Digest:** sha256:14e1bf8f7b270791195bb5d71122623138816ff7972b5607081567bb2353d84c
+**Digest:** sha256:976ec1f769c4aacdda78b9a81ea7a9f1e681bbf35edffb2819d0446ebf994d0d
 
 **Tags:**
 ```
@@ -120,13 +120,13 @@ mcr.microsoft.com/devcontainers/php:dev-8.4-trixie
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [PHP](https://xdebug.org/) | 8.4.26 | /usr/local |
+| [PHP](https://xdebug.org/) | 8.4.27 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 083c339e0622bfc144b66ebf1a2e8dbe7d2ada0d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d2b7f557cceaddb16ba89bbf8200d8a8df35c4d8 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | a885b885fef16fac4bc544188fb25e9e37ae83e8 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -143,8 +143,8 @@ mcr.microsoft.com/devcontainers/php:dev-8.4-trixie
 |----------------|---------|
 | apt-transport-https | 3.0.3 |
 | apt-utils | 3.0.3 |
-| ca-certificates | 20250419 |
-| curl | 8.14.1-2+deb13u5 |
+| ca-certificates | 20250419+deb13u1 |
+| curl | 8.14.1-2+deb13u7 |
 | dialog | 1.3-20250116-1 |
 | git | 1:2.47.3-0+deb13u1 |
 | gnupg2 | 2.4.7-21+deb13u1 |
@@ -181,7 +181,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.4-trixie
 
 ## Variant: 8.3-apache-trixie
 
-**Digest:** sha256:e186aa8e0055775a73c2be33fbda5f3a712897b883c3d84ac3f043d80cbd0d29
+**Digest:** sha256:d3f4f14a7f9b29d90250821b615dd3c98aa13a61b5c18e06b001efbd04a521e0
 
 **Tags:**
 ```
@@ -202,13 +202,13 @@ mcr.microsoft.com/devcontainers/php:dev-8.3-trixie
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [PHP](https://xdebug.org/) | 8.3.35 | /usr/local |
+| [PHP](https://xdebug.org/) | 8.3.36 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 083c339e0622bfc144b66ebf1a2e8dbe7d2ada0d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d2b7f557cceaddb16ba89bbf8200d8a8df35c4d8 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | a885b885fef16fac4bc544188fb25e9e37ae83e8 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -225,8 +225,8 @@ mcr.microsoft.com/devcontainers/php:dev-8.3-trixie
 |----------------|---------|
 | apt-transport-https | 3.0.3 |
 | apt-utils | 3.0.3 |
-| ca-certificates | 20250419 |
-| curl | 8.14.1-2+deb13u5 |
+| ca-certificates | 20250419+deb13u1 |
+| curl | 8.14.1-2+deb13u7 |
 | dialog | 1.3-20250116-1 |
 | git | 1:2.47.3-0+deb13u1 |
 | gnupg2 | 2.4.7-21+deb13u1 |
@@ -263,7 +263,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.3-trixie
 
 ## Variant: 8.5-apache-bookworm
 
-**Digest:** sha256:bde0e7045f0f9b971b688187aad5417257523c08a1781b00b496219a546e0692
+**Digest:** sha256:c9191763859b68bc42de6536d6ad5d47adfee8cd32de9edb6fd8eb9c1e8a164f
 
 **Tags:**
 ```
@@ -285,13 +285,13 @@ mcr.microsoft.com/devcontainers/php:dev-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [PHP](https://xdebug.org/) | 8.5.11 | /usr/local |
+| [PHP](https://xdebug.org/) | 8.5.12 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 083c339e0622bfc144b66ebf1a2e8dbe7d2ada0d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d2b7f557cceaddb16ba89bbf8200d8a8df35c4d8 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | a885b885fef16fac4bc544188fb25e9e37ae83e8 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -308,14 +308,14 @@ mcr.microsoft.com/devcontainers/php:dev-bookworm
 |----------------|---------|
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
-| ca-certificates | 20250419~deb12u1 |
+| ca-certificates | 20250419~deb12u2 |
 | curl | 7.88.1-10+deb12u15 |
 | dialog | 1.3-20230209-1 |
 | git | 1:2.39.5-0+deb12u3 |
 | gnupg2 | 2.2.40-1.1+deb12u2 |
 | htop | 3.2.2-2 |
 | iproute2 | 6.1.0-3 |
-| jq | 1.6-2.1+deb12u2 |
+| jq | 1.6-2.1+deb12u3 |
 | less | 590-2.1~deb12u2 |
 | libc6 | 2.36-9+deb12u14 |
 | libgssapi-krb5-2 | 1.20.1-2+deb12u5 |
@@ -347,7 +347,7 @@ mcr.microsoft.com/devcontainers/php:dev-bookworm
 
 ## Variant: 8.4-apache-bookworm
 
-**Digest:** sha256:f3682bc15b59d329d0dcc30e4382e28d5c4be3fc9f3abb2b5a6ef17dfac5d38c
+**Digest:** sha256:dad7ba9a8ef7905d0ee33265807d456b366d2030af8f0f87ecc8cb80e2d06d08
 
 **Tags:**
 ```
@@ -367,13 +367,13 @@ mcr.microsoft.com/devcontainers/php:dev-8.4-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [PHP](https://xdebug.org/) | 8.4.26 | /usr/local |
+| [PHP](https://xdebug.org/) | 8.4.27 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 083c339e0622bfc144b66ebf1a2e8dbe7d2ada0d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d2b7f557cceaddb16ba89bbf8200d8a8df35c4d8 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | a885b885fef16fac4bc544188fb25e9e37ae83e8 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -390,14 +390,14 @@ mcr.microsoft.com/devcontainers/php:dev-8.4-bookworm
 |----------------|---------|
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
-| ca-certificates | 20250419~deb12u1 |
+| ca-certificates | 20250419~deb12u2 |
 | curl | 7.88.1-10+deb12u15 |
 | dialog | 1.3-20230209-1 |
 | git | 1:2.39.5-0+deb12u3 |
 | gnupg2 | 2.2.40-1.1+deb12u2 |
 | htop | 3.2.2-2 |
 | iproute2 | 6.1.0-3 |
-| jq | 1.6-2.1+deb12u2 |
+| jq | 1.6-2.1+deb12u3 |
 | less | 590-2.1~deb12u2 |
 | libc6 | 2.36-9+deb12u14 |
 | libgssapi-krb5-2 | 1.20.1-2+deb12u5 |
@@ -429,7 +429,7 @@ mcr.microsoft.com/devcontainers/php:dev-8.4-bookworm
 
 ## Variant: 8.3-apache-bookworm
 
-**Digest:** sha256:14c2e212184f17c78d9c029fdb7d0b8e2d1ad8d943a456c2d378236094b166e0
+**Digest:** sha256:517989c8660fb6a2668cda943774a8631a7122687a3d5c83608a21209bfa4e09
 
 **Tags:**
 ```
@@ -449,13 +449,13 @@ mcr.microsoft.com/devcontainers/php:dev-8.3-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [PHP](https://xdebug.org/) | 8.3.35 | /usr/local |
+| [PHP](https://xdebug.org/) | 8.3.36 | /usr/local |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 083c339e0622bfc144b66ebf1a2e8dbe7d2ada0d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d2b7f557cceaddb16ba89bbf8200d8a8df35c4d8 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | a885b885fef16fac4bc544188fb25e9e37ae83e8 | /usr/local/share/nvm |
 
 **Other tools and utilities**
@@ -472,14 +472,14 @@ mcr.microsoft.com/devcontainers/php:dev-8.3-bookworm
 |----------------|---------|
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
-| ca-certificates | 20250419~deb12u1 |
+| ca-certificates | 20250419~deb12u2 |
 | curl | 7.88.1-10+deb12u15 |
 | dialog | 1.3-20230209-1 |
 | git | 1:2.39.5-0+deb12u3 |
 | gnupg2 | 2.2.40-1.1+deb12u2 |
 | htop | 3.2.2-2 |
 | iproute2 | 6.1.0-3 |
-| jq | 1.6-2.1+deb12u2 |
+| jq | 1.6-2.1+deb12u3 |
 | less | 590-2.1~deb12u2 |
 | libc6 | 2.36-9+deb12u14 |
 | libgssapi-krb5-2 | 1.20.1-2+deb12u5 |

@@ -10,7 +10,7 @@
 
 ## Variant: 3.4-bookworm
 
-**Digest:** sha256:ce6e0fa2a36abb31c221e5a574ca2d3f4b18da3dfadd5feb58f9a4ff099385cb
+**Digest:** sha256:4298d0bffef4ed46c09148782140da687e4a6a668aff59284d0e7c8ea6a7b506
 
 **Tags:**
 ```
@@ -31,23 +31,23 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Ruby](https://www.ruby-lang.org/en/) | 3.4.11 | /usr/local |
+| [Ruby](https://www.ruby-lang.org/en/) | 3.4.12 | /usr/local |
 | [Jekyll](https://jekyllrb.com/) | 4.4.1 | /usr/local/bundle/bin |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 083c339e0622bfc144b66ebf1a2e8dbe7d2ada0d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d2b7f557cceaddb16ba89bbf8200d8a8df35c4d8 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | a885b885fef16fac4bc544188fb25e9e37ae83e8 | /usr/local/share/nvm |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 36d503707cdf14ad6855ca3abbc05cea1500fa17 | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | b6a92c15f0df872047c74f7dfa0b92dfd4de8a92 | /usr/local/share/ruby-build |
 
 **Ruby gems and tools**
 
 | Tool / gem | Version |
 |------------|---------|
 | rake | 13.2.1 |
-| bundler | 4.0.22 |
+| bundler | 4.0.23 |
 | jekyll | 4.4.1 |
 | github-pages | 232 |
 
@@ -63,14 +63,14 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bookworm
 |----------------|---------|
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
-| ca-certificates | 20250419~deb12u1 |
+| ca-certificates | 20250419~deb12u2 |
 | curl | 7.88.1-10+deb12u15 |
 | dialog | 1.3-20230209-1 |
 | git | 1:2.39.5-0+deb12u3 |
 | gnupg2 | 2.2.40-1.1+deb12u2 |
 | htop | 3.2.2-2 |
 | iproute2 | 6.1.0-3 |
-| jq | 1.6-2.1+deb12u2 |
+| jq | 1.6-2.1+deb12u3 |
 | less | 590-2.1~deb12u2 |
 | libc6 | 2.36-9+deb12u14 |
 | libgssapi-krb5-2 | 1.20.1-2+deb12u5 |
@@ -102,7 +102,7 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bookworm
 
 ## Variant: 3.3-bookworm
 
-**Digest:** sha256:cd210b55e671a3ef77d4a7398ca9b3a0fb08c7987c9585378cc5b771e2a2c3ee
+**Digest:** sha256:fc927d74676a464757f2b48ae8f6d0feef4090d3e670fe8b806db3825fcb47f3
 
 **Tags:**
 ```
@@ -122,23 +122,23 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Ruby](https://www.ruby-lang.org/en/) | 3.3.12 | /usr/local |
+| [Ruby](https://www.ruby-lang.org/en/) | 3.3.13 | /usr/local |
 | [Jekyll](https://jekyllrb.com/) | 4.4.1 | /usr/local/bundle/bin |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 083c339e0622bfc144b66ebf1a2e8dbe7d2ada0d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d2b7f557cceaddb16ba89bbf8200d8a8df35c4d8 | /home/vscode/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | a885b885fef16fac4bc544188fb25e9e37ae83e8 | /usr/local/share/nvm |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 36d503707cdf14ad6855ca3abbc05cea1500fa17 | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | b6a92c15f0df872047c74f7dfa0b92dfd4de8a92 | /usr/local/share/ruby-build |
 
 **Ruby gems and tools**
 
 | Tool / gem | Version |
 |------------|---------|
 | rake | 13.1.0 |
-| bundler | 4.0.22 |
+| bundler | 4.0.23 |
 | jekyll | 4.4.1 |
 | github-pages | 232 |
 
@@ -154,14 +154,14 @@ mcr.microsoft.com/devcontainers/jekyll:dev-bookworm
 |----------------|---------|
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
-| ca-certificates | 20250419~deb12u1 |
+| ca-certificates | 20250419~deb12u2 |
 | curl | 7.88.1-10+deb12u15 |
 | dialog | 1.3-20230209-1 |
 | git | 1:2.39.5-0+deb12u3 |
 | gnupg2 | 2.2.40-1.1+deb12u2 |
 | htop | 3.2.2-2 |
 | iproute2 | 6.1.0-3 |
-| jq | 1.6-2.1+deb12u2 |
+| jq | 1.6-2.1+deb12u3 |
 | less | 590-2.1~deb12u2 |
 | libc6 | 2.36-9+deb12u14 |
 | libgssapi-krb5-2 | 1.20.1-2+deb12u5 |

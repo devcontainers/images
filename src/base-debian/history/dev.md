@@ -10,7 +10,7 @@
 
 ## Variant: trixie
 
-**Digest:** sha256:2f1513e1036cbed5a0d492d717f1039f3fcbcba0d7fff9b9ba5ba7b2bc811779
+**Digest:** sha256:5302b748d2f4e33981a0d28a5fcafb3edea3459a5a869d4325e48e993b4a8d60
 
 **Tags:**
 ```
@@ -32,7 +32,7 @@ mcr.microsoft.com/devcontainers/base:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 083c339e0622bfc144b66ebf1a2e8dbe7d2ada0d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d2b7f557cceaddb16ba89bbf8200d8a8df35c4d8 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -46,8 +46,8 @@ mcr.microsoft.com/devcontainers/base:dev
 |----------------|---------|
 | apt-transport-https | 3.0.3 |
 | apt-utils | 3.0.3 |
-| ca-certificates | 20250419 |
-| curl | 8.14.1-2+deb13u5 |
+| ca-certificates | 20250419+deb13u1 |
+| curl | 8.14.1-2+deb13u7 |
 | dialog | 1.3-20250116-1 |
 | git | 1:2.47.3-0+deb13u1 |
 | gnupg2 | 2.4.7-21+deb13u1 |
@@ -84,7 +84,7 @@ mcr.microsoft.com/devcontainers/base:dev
 
 ## Variant: bookworm
 
-**Digest:** sha256:ecdb7b37de786ac80b60b2d9d051a5d8aeee8c031fbf422c0895e46e8182309e
+**Digest:** sha256:9a0a58b9f87ec52e0fd2b73f801cafa7c359d52e2f5e2159998596c8381fe8a7
 
 **Tags:**
 ```
@@ -104,7 +104,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian12
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 083c339e0622bfc144b66ebf1a2e8dbe7d2ada0d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d2b7f557cceaddb16ba89bbf8200d8a8df35c4d8 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -118,14 +118,14 @@ mcr.microsoft.com/devcontainers/base:dev-debian12
 |----------------|---------|
 | apt-transport-https | 2.6.1 |
 | apt-utils | 2.6.1 |
-| ca-certificates | 20250419~deb12u1 |
+| ca-certificates | 20250419~deb12u2 |
 | curl | 7.88.1-10+deb12u15 |
 | dialog | 1.3-20230209-1 |
 | git | 1:2.39.5-0+deb12u3 |
 | gnupg2 | 2.2.40-1.1+deb12u2 |
 | htop | 3.2.2-2 |
 | iproute2 | 6.1.0-3 |
-| jq | 1.6-2.1+deb12u2 |
+| jq | 1.6-2.1+deb12u3 |
 | less | 590-2.1~deb12u2 |
 | libc6 | 2.36-9+deb12u14 |
 | libgssapi-krb5-2 | 1.20.1-2+deb12u5 |

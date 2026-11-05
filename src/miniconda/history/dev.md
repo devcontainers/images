@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/miniconda)
 
-**Digest:** sha256:ce96e069620fec0cc46852f93fb669d8a65e46d59268fde73f3de41f64a731b8
+**Digest:** sha256:bd66bc90772bc0811da123b0e9792520887ddf94ea165fd03f3b99548873484e
 
 **Tags:**
 ```
@@ -35,7 +35,7 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 
 | Tool / package | Version |
 |----------------|---------|
-| certifi | 2026.7.22 |
+| certifi | 2026.10.23 |
 | cryptography | 50.0.0 |
 | setuptools | 83.0.0 |
 | wheel | 0.47.0 |
@@ -49,15 +49,15 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.15.0 |
 | bandit | 1.9.4 |
-| virtualenv | 21.14.7 |
-| pipx | 1.17.14 |
+| virtualenv | 21.14.13 |
+| pipx | 1.18.4 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
 | [git](https://github.com/git/git) | 2.56.0 | 
-| [conda](https://github.com/conda/conda) | 26.7.1 | /opt/conda |
+| [conda](https://github.com/conda/conda) | 26.7.3 | /opt/conda |
 
 **Additional linux tools and packages**
 
@@ -65,8 +65,8 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 |----------------|---------|
 | apt-transport-https | 3.0.3 |
 | apt-utils | 3.0.3 |
-| ca-certificates | 20250419 |
-| curl | 8.14.1-2+deb13u5 |
+| ca-certificates | 20250419+deb13u1 |
+| curl | 8.14.1-2+deb13u7 |
 | dialog | 1.3-20250116-1 |
 | git | 1:2.47.3-0+deb13u1 |
 | gnupg2 | 2.4.7-21+deb13u1 |
