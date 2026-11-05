@@ -9,7 +9,7 @@
 | *Categories* | Services, GitHub |
 | *Image type* | Dockerfile |
 | *Published image* | mcr.microsoft.com/devcontainers/universal:linux<br />mcr.microsoft.com/devcontainers/universal:noble |
-| *Published image architecture(s)* | x86-64 |
+| *Published image architecture(s)* | x86-64, aarch64/arm64 |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Ubuntu |
 | *Languages, platforms* | Python, Node.js, JavaScript, TypeScript, C++, Java, C#, F#, .NET Core, PHP, Go, Ruby, Conda |
@@ -66,6 +66,12 @@ Codespaces will automatically perform some default setup when the `universal` im
 	}
 }
 ```
+
+## Architecture support
+
+This image is published for x86-64 and aarch64/arm64. Everything it installs at build time is native to the image architecture, including [Oryx](https://github.com/microsoft/Oryx), which is compiled for the host architecture by the [Oryx Feature](https://github.com/devcontainers/features/tree/main/src/oryx).
+
+One limitation applies to arm64: Oryx's *dynamic* SDK install downloads pre-built SDKs from `https://oryx-cdn.microsoft.io`, and those downloads are x86-64 regardless of the host architecture, so requesting a language version that is not already in the image will not work there. See [microsoft/Oryx#3126](https://github.com/microsoft/Oryx/issues/3126). Versions that ship in the image (see [history](history)) are installed natively and are unaffected.
 
 ## License
 
