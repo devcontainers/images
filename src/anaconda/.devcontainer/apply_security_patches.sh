@@ -86,7 +86,12 @@ for ((i=0; i<rows; i++)); do
         if [[ $CONDA_VERSION == $GREATER_VERSION_B ]]; then        
             echo -e "Found Version v${CONDA_VERSION} in the Conda channel which is greater than or equal to the required version: v${REQUIRED_VERSION}. \n";
             echo "Installing ${packages_array["$i,0"]} from source from conda channel for v${REQUIRED_VERSION}..."
-            conda install "${packages_array["$i,0"]}==${CONDA_VERSION}"        
+            # The newest channel build can require a different Python than the base image ships
+            # (e.g. filelock 4.2.7 is only built for Python 3.13), so fall back to pip if conda can't solve it.
+            if ! conda install "${packages_array["$i,0"]}==${CONDA_VERSION}"; then
+                echo "Could not install ${packages_array["$i,0"]} v${CONDA_VERSION} from the Conda channel; installing v${REQUIRED_VERSION} from pip instead..."
+                python3 -m pip install --upgrade --no-cache-dir "${packages_array["$i,0"]}==${REQUIRED_VERSION}"
+            fi
         elif [[ $REQUIRED_VERSION == $GREATER_VERSION_B ]]; then 
             echo -e "Required version: v${REQUIRED_VERSION} is greater than the version found in the Conda channel v${CONDA_VERSION}. \n";
             echo "Installing ${packages_array["$i,0"]} from source from pip package manager for v${REQUIRED_VERSION}..."
