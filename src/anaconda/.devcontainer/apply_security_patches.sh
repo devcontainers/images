@@ -90,7 +90,7 @@ for ((i=0; i<rows; i++)); do
             # (e.g. filelock 4.2.7 is only built for Python 3.13), so fall back to pip if conda can't solve it.
             if ! conda install "${packages_array["$i,0"]}==${CONDA_VERSION}"; then
                 echo "Could not install ${packages_array["$i,0"]} v${CONDA_VERSION} from the Conda channel; installing v${REQUIRED_VERSION} from pip instead..."
-                python3 -m pip install --upgrade --no-cache-dir "${packages_array["$i,0"]}==${REQUIRED_VERSION}"
+                python3 -m pip install --upgrade --no-cache-dir "${packages_array["$i,0"]}==${REQUIRED_VERSION}" || exit $?
             fi
         elif [[ $REQUIRED_VERSION == $GREATER_VERSION_B ]]; then 
             echo -e "Required version: v${REQUIRED_VERSION} is greater than the version found in the Conda channel v${CONDA_VERSION}. \n";
