@@ -19,7 +19,10 @@
         },
         "ghcr.io/devcontainers/features/node:2": {
             "version": "24",
-            "additionalVersions": "22"
+            "additionalVersions": "22",
+            // nvm 0.41.0 resolves /home/codespace/nvm (a symlink to NVM_DIR) as part of NVM_DIR, so
+            // after Oryx repoints nvm/current to /opt/nodejs/<version>, sourcing nvm.sh returns 3.
+            "nvmVersion": "0.40.8"
         },
         "ghcr.io/devcontainers/features/python:1": {
             "version": "3.14.2",
