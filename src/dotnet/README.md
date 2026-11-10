@@ -23,7 +23,7 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 
 - `mcr.microsoft.com/devcontainers/dotnet` (latest)
 - `mcr.microsoft.com/devcontainers/dotnet:11.0` (or `11.0-resolute` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/dotnet:10.0` (or `10.0-noble` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/dotnet:10.0` (or `10.0-noble`, `10.0-resolute` to pin to an OS version)
 
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.

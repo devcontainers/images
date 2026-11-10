@@ -2,6 +2,7 @@
 	"version": "3.0.0",
 	"variants": [
 		"11.0-resolute",
+		"10.0-resolute",
 		"10.0-noble"
 	],
 	"build": {
@@ -15,6 +16,10 @@
 				"linux/amd64",
 				"linux/arm64"
 			],
+			"10.0-resolute": [
+				"linux/amd64",
+				"linux/arm64"
+			],
 			"10.0-noble": [
 				"linux/amd64",
 				"linux/arm64"
@@ -25,9 +30,9 @@
 				"dotnet:${VERSION}-11.0",
 				"dotnet:${VERSION}-11.0-resolute"
 			],
-			"10.0-noble": [
+			"10.0-resolute": [
 				"dotnet:${VERSION}-10.0",
-				"dotnet:${VERSION}-10.0-noble"
+				"dotnet:${VERSION}-10.0-resolute"
 			]
 		}
 	},
