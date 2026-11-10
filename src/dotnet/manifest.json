@@ -1,16 +1,11 @@
 {
-	"version": "2.3.4",
+	"version": "2.4.0",
 	"variants": [
 		"11.0-resolute",
-		"10.0-noble",
-		"9.0-bookworm-slim",
-		"9.0-noble",
-		"8.0-bookworm-slim",
-		"8.0-noble",
-		"8.0-jammy"
+		"10.0-noble"
 	],
 	"build": {
-		"latest": "10.0-noble",
+		"latest": "11.0-resolute",
 		"rootDistro": "debian",
 		"tags": [
 			"dotnet:${VERSION}-${VARIANT}"
@@ -23,26 +18,6 @@
 			"10.0-noble": [
 				"linux/amd64",
 				"linux/arm64"
-			],
-			"9.0-bookworm-slim": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"9.0-noble": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"8.0-bookworm-slim": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"8.0-noble": [
-				"linux/amd64",
-				"linux/arm64"
-			],
-			"8.0-jammy": [
-				"linux/amd64",
-				"linux/arm64"
 			]
 		},
 		"variantTags": {
@@ -53,14 +28,6 @@
 			"10.0-noble": [
 				"dotnet:${VERSION}-10.0",
 				"dotnet:${VERSION}-10.0-noble"
-			],
-			"9.0-bookworm-slim": [
-				"dotnet:${VERSION}-9.0",
-				"dotnet:${VERSION}-9.0-bookworm"
-			],
-			"8.0-bookworm-slim": [
-				"dotnet:${VERSION}-8.0",
-				"dotnet:${VERSION}-8.0-bookworm"
 			]
 		}
 	},
