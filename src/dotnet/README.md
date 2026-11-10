@@ -12,7 +12,7 @@
 | *Available image variants* | 11.0 /11.0-resolute, 10.0 /10.0-noble ([full list](https://mcr.microsoft.com/v2/devcontainers/dotnet/tags/list)) |
 | *Published image architecture(s)* | x86-64, arm64/aarch64 for `resolute`, `noble` variants |
 | *Container host OS support* | Linux, macOS, Windows |
-| *Container OS* | Ubuntu (`-noble`), Debian (`-resolute`) |
+| *Container OS* | Ubuntu (`-resolute`, `-noble`) |
 | *Languages, platforms* | .NET, .NET Core, C# |
 
 See **[history](history)** for information on the contents of published images.
