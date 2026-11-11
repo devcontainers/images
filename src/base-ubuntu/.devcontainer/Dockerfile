@@ -22,6 +22,9 @@ ENV LANG=C.UTF-8
 # Local fix for issue with timezone data at 'buildpack-deps'. Ref# https://github.com/devcontainers/images/issues/1709
 RUN apt-get update \
     && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get -y install --no-install-recommends dnsutils \
+    && dig +short archive.ubuntu.com \
+    && dig +short security.ubuntu.com \
     && apt-get -y reinstall --no-install-recommends tzdata \
     && echo "Etc/UTC" > /etc/timezone \
     && rm -rf /var/lib/apt/lists/*

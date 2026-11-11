@@ -60,8 +60,11 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
         curl \
         gettext \
         inotify-tools \
+        dnsutils \
     && add-apt-repository --yes --no-update universe \
     && apt-get update \
+    && dig +short archive.ubuntu.com \
+    && dig +short security.ubuntu.com \
     # Install build and debug tools, utilities, and shells
     && apt-get install -yq \
         cmake \

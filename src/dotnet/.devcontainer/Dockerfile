@@ -2,6 +2,12 @@ ARG VARIANT=10.0-noble
 FROM mcr.microsoft.com/dotnet/sdk:${VARIANT}
 ENV PATH $PATH:/home/vscode/.dotnet:/home/vscode/.dotnet/tools
 
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends dnsutils \
+    && dig +short archive.ubuntu.com \
+    && dig +short security.ubuntu.com \
+    && rm -rf /var/lib/apt/lists/*
+
 RUN chmod -R a+w /usr/share/dotnet
 
 ARG VARIANT
