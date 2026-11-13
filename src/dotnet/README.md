@@ -9,10 +9,10 @@
 | *Categories* | Core, Languages |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/dotnet |
-| *Available image variants* | 11.0 /11.0-resolute, 10.0 /10.0-noble, 9.0 /9.0-bookworm, 8.0 /8.0-bookworm, 9.0-noble, 8.0-noble, 8.0-jammy ([full list](https://mcr.microsoft.com/v2/devcontainers/dotnet/tags/list)) |
-| *Published image architecture(s)* | x86-64, arm64/aarch64 for `resolute`, `bookworm`, `noble`, `jammy` variants |
+| *Available image variants* | 11.0 /11.0-resolute, 10.0 /10.0-resolute, 10.0-noble ([full list](https://mcr.microsoft.com/v2/devcontainers/dotnet/tags/list)) |
+| *Published image architecture(s)* | x86-64, arm64/aarch64 for `resolute`, `noble` variants |
 | *Container host OS support* | Linux, macOS, Windows |
-| *Container OS* | Ubuntu (`-focal`, `-jammy`, `-noble`), Debian (`-bookworm`, `-resolute`) |
+| *Container OS* | Ubuntu (`-resolute`, `-noble`) |
 | *Languages, platforms* | .NET, .NET Core, C# |
 
 See **[history](history)** for information on the contents of published images.
@@ -23,23 +23,21 @@ You can directly reference pre-built versions of `Dockerfile` by using the `imag
 
 - `mcr.microsoft.com/devcontainers/dotnet` (latest)
 - `mcr.microsoft.com/devcontainers/dotnet:11.0` (or `11.0-resolute` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/dotnet:10.0` (or `10.0-noble` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/dotnet:9.0` (or `9.0-bookworm`, `9.0-noble` to pin to an OS version)
-- `mcr.microsoft.com/devcontainers/dotnet:8.0` (or `8.0-bookworm`, `8.0-noble`, `8.0-jammy` to pin to an OS version)
+- `mcr.microsoft.com/devcontainers/dotnet:10.0` (or `10.0-resolute`, `10.0-noble` to pin to an OS version)
 
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
 
-We publish stable releases and experimental development images (`dev-*`, which contain the latest available changes from `main`). Latest stable: `mcr.microsoft.com/devcontainers/dotnet:latest` ([MCR](https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/dotnet/tag/latest)). Other stable releases can be found at: [MCR Tags](https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/dotnet/tags). Development images use the `dev-` prefix, for example `mcr.microsoft.com/devcontainers/dotnet:dev-10.0-noble`, and may be updated in place; pin the image for reproducibility.
+We publish stable releases and experimental development images (`dev-*`, which contain the latest available changes from `main`). Latest stable: `mcr.microsoft.com/devcontainers/dotnet:latest` ([MCR](https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/dotnet/tag/latest)). Other stable releases can be found at: [MCR Tags](https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/dotnet/tags). Development images use the `dev-` prefix, for example `mcr.microsoft.com/devcontainers/dotnet:dev-11.0-resolute`, and may be updated in place; pin the image for reproducibility.
 
 The examples below demonstrate stable image [semantic versioning](https://semver.org/); see the links above for current tags.
 
-- `mcr.microsoft.com/devcontainers/dotnet:2-10.0-noble`
-- `mcr.microsoft.com/devcontainers/dotnet:2.3-10.0-noble`
-- `mcr.microsoft.com/devcontainers/dotnet:2.3.5-10.0-noble`
-- `mcr.microsoft.com/devcontainers/dotnet:2-9.0`
-- `mcr.microsoft.com/devcontainers/dotnet:2.3-9.0`
-- `mcr.microsoft.com/devcontainers/dotnet:2.3.5-9.0`
+- `mcr.microsoft.com/devcontainers/dotnet:3-11.0-resolute`
+- `mcr.microsoft.com/devcontainers/dotnet:3.0-11.0-resolute`
+- `mcr.microsoft.com/devcontainers/dotnet:3.0.0-11.0-resolute`
+- `mcr.microsoft.com/devcontainers/dotnet:3-10.0`
+- `mcr.microsoft.com/devcontainers/dotnet:3.0-10.0`
+- `mcr.microsoft.com/devcontainers/dotnet:3.0.0-10.0`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/dotnet/tags/list).
 
