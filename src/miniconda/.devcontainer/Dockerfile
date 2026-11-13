@@ -23,6 +23,9 @@ RUN chmod =2775 /opt/conda
 
 USER root
 
+# Keep source builds on Debian's curl headers and libraries, not Conda's libiconv headers.
+ARG MAKEFLAGS="CURL_CONFIG=/usr/bin/curl-config"
+
 # Copy scripts to execute
 COPY add-notice.sh /tmp/library-scripts/
 

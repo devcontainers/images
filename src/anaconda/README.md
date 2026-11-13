@@ -32,13 +32,15 @@ The examples below demonstrate stable image [semantic versioning](https://semver
 
 - `mcr.microsoft.com/devcontainers/anaconda:1-3`
 - `mcr.microsoft.com/devcontainers/anaconda:1.4-3`
-- `mcr.microsoft.com/devcontainers/anaconda:1.4.9-3`
+- `mcr.microsoft.com/devcontainers/anaconda:1.4.11-3`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/anaconda/tags/list).
 
 Alternatively, you can use the contents of [.devcontainer](.devcontainer) to fully customize your container's contents or to build it for a container host architecture not supported by the image.
 
 ### Using Conda
+
+Git is built from source at version 2.56.1 using Debian's curl headers and libraries to avoid conflicts with Conda's libiconv headers.
 
 This dev container and its associated image includes [the `conda` package manager](https://aka.ms/vscode-remote/conda/about). Additional packages installed using Conda will be downloaded from Anaconda or another repository if you configure one. To reconfigure Conda in this container to access an alternative repository, please see information on [configuring Conda channels here](https://aka.ms/vscode-remote/conda/channel-setup).
 
