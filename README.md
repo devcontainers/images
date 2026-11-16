@@ -16,6 +16,7 @@ This repository contains a set of **dev container images** which are Docker imag
 ## Contents
  
 - [`src`](src) - Contains reusable dev container images.
+- [Dependency management](docs/DEPENDENCY-MANAGEMENT.md) - Dependabot setup, release/EOL reports, vulnerability scanning, and coverage limits.
 
 ## Common Questions
 ### How does this repo relate to the dev container spec? What is the dev container specification?

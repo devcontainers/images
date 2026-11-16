@@ -1,0 +1,143 @@
+name: Dependency lifecycle and vulnerability reports
+
+on:
+  schedule:
+    - cron: '30 8 * * 2'
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - .github/dependabot.yml
+      - .github/workflows/dependency-monitor.yml
+      - build/dependency-report.py
+      - build/test_dependency_report.py
+
+permissions:
+  contents: read
+
+concurrency:
+  group: dependency-monitor-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Test dependency reporting
+        run: python3 -m unittest discover -s build -p 'test_dependency_report.py' -v
+
+  lifecycle:
+    if: github.event_name != 'pull_request'
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Check released cycles and variant lifecycles
+        run: python3 build/dependency-report.py lifecycle --output lifecycle-report.md
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dependency-lifecycle-report
+          path: lifecycle-report.md
+          retention-days: 30
+      - name: Create or refresh lifecycle tracking issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >-
+          python3 build/dependency-report.py publish --output lifecycle-report.md
+          --title 'Dependency monitoring: upstream releases and EOL variants'
+
+  prepare:
+    if: github.event_name != 'pull_request'
+    needs: test
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.matrix.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - id: matrix
+        run: echo "matrix=$(python3 build/dependency-report.py matrix)" >> "$GITHUB_OUTPUT"
+
+  scan:
+    needs: prepare
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix: ${{ fromJSON(needs.prepare.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - run: mkdir -p reports
+      - name: Scan published image and embedded packages
+        id: trivy
+        continue-on-error: true
+        uses: aquasecurity/trivy-action@0.35.0
+        env:
+          TRIVY_PLATFORM: ${{ matrix.platform }}
+        with:
+          image-ref: ${{ matrix.image }}
+          format: json
+          output: reports/${{ matrix.id }}.json
+          scanners: vuln
+          vuln-type: os,library
+          severity: UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL
+          ignore-unfixed: 'false'
+          exit-code: '0'
+          timeout: 30m
+      - name: Record scanner coverage
+        if: always()
+        env:
+          SCAN_OUTCOME: ${{ steps.trivy.outcome }}
+          TARGET_ID: ${{ matrix.id }}
+        run: printf '%s\n' "$SCAN_OUTCOME" > "reports/$TARGET_ID.status"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reports-${{ matrix.id }}
+          path: reports/
+          retention-days: 14
+
+  vulnerabilities:
+    if: always() && needs.prepare.result == 'success'
+    needs: [prepare, scan]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - run: mkdir -p reports
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          pattern: reports-*
+          path: reports
+          merge-multiple: true
+      - name: Report vulnerabilities and missing scans
+        run: >-
+          python3 build/dependency-report.py vulnerabilities --reports reports
+          --output vulnerability-report.md
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dependency-security-report
+          path: vulnerability-report.md
+          retention-days: 30
+      - name: Create or refresh vulnerability tracking issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >-
+          python3 build/dependency-report.py publish --output vulnerability-report.md
+          --title 'Dependency monitoring: published image vulnerabilities'
