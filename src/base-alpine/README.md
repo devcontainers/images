@@ -33,9 +33,9 @@ We publish stable releases and experimental development images (`dev-*`, which c
 
 The examples below demonstrate stable image [semantic versioning](https://semver.org/); see the links above for current tags.
 
-- `mcr.microsoft.com/devcontainers/base:4-alpine`
-- `mcr.microsoft.com/devcontainers/base:4.1-alpine`
-- `mcr.microsoft.com/devcontainers/base:4.1.0-alpine`
+- `mcr.microsoft.com/devcontainers/base:5-alpine`
+- `mcr.microsoft.com/devcontainers/base:5.0-alpine`
+- `mcr.microsoft.com/devcontainers/base:5.0.0-alpine`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/base/tags/list).
 
