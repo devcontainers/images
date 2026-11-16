@@ -1,9 +1,9 @@
 {
-	"version": "4.0.10",
+	"version": "5.0.0",
 	"variants": [
+		"3.24",
 		"3.23",
-		"3.22",
-		"3.21"
+		"3.22"
 	],
 	"build": {
 		"latest": false,
@@ -16,7 +16,7 @@
 			"base:${VERSION}-alpine${VARIANT}"
 		],
 		"variantTags": {
-			"3.23": [
+			"3.24": [
 				"base:${VERSION}-alpine"
 			]
 		}
