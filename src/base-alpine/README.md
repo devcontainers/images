@@ -9,7 +9,7 @@
 | *Categories* | Core, Other |
 | *Image type* | Dockerfile |
 | *Published images* | mcr.microsoft.com/devcontainers/base:alpine |
-| *Available image variants* | alpine-3.23, alpine-3.22, alpine-3.21 ([full list](https://mcr.microsoft.com/v2/devcontainers/base/tags/list)) |
+| *Available image variants* | alpine-3.24, alpine-3.23, alpine-3.22 ([full list](https://mcr.microsoft.com/v2/devcontainers/base/tags/list)) |
 | *Published image architecture(s)* | x86-64, aarch64/arm64 |
 | *Container host OS support* | Linux, macOS, Windows |
 | *Container OS* | Alpine Linux |
@@ -22,9 +22,9 @@ See **[history](history)** for information on the contents of published images.
 You can also directly reference pre-built versions of `.devcontainer/Dockerfile` by using the `image` property in `.devcontainer/devcontainer.json` or updating the `FROM` statement in your own  `Dockerfile` to one of the following. An example `Dockerfile` is included in this repository.
 
 - `mcr.microsoft.com/devcontainers/base:alpine` (latest)
+- `mcr.microsoft.com/devcontainers/base:alpine-3.24`
 - `mcr.microsoft.com/devcontainers/base:alpine-3.23`
 - `mcr.microsoft.com/devcontainers/base:alpine-3.22`
-- `mcr.microsoft.com/devcontainers/base:alpine-3.21`
 
 
 Refer to [this guide](https://containers.dev/guide/dockerfile) for more details.
@@ -34,8 +34,8 @@ We publish stable releases and experimental development images (`dev-*`, which c
 The examples below demonstrate stable image [semantic versioning](https://semver.org/); see the links above for current tags.
 
 - `mcr.microsoft.com/devcontainers/base:4-alpine`
-- `mcr.microsoft.com/devcontainers/base:4.0-alpine`
-- `mcr.microsoft.com/devcontainers/base:4.0.10-alpine`
+- `mcr.microsoft.com/devcontainers/base:4.1-alpine`
+- `mcr.microsoft.com/devcontainers/base:4.1.0-alpine`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/base/tags/list).
 
