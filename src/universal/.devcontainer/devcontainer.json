@@ -19,7 +19,10 @@
         },
         "ghcr.io/devcontainers/features/node:2": {
             "version": "24",
-            "additionalVersions": "22"
+            "additionalVersions": "22",
+            // nvm 0.41.0 resolves /home/codespace/nvm (a symlink to NVM_DIR) as part of NVM_DIR, so
+            // after Oryx repoints nvm/current to /opt/nodejs/<version>, sourcing nvm.sh returns 3.
+            "nvmVersion": "0.40.8"
         },
         "ghcr.io/devcontainers/features/python:1": {
             "version": "3.14.2",
@@ -29,8 +32,8 @@
             "useOryxIfAvailable": "false"
         },
         "ghcr.io/devcontainers/features/php:1": {
-            "version": "8.5.0",
-            "additionalVersions": "8.4.15",
+            "version": "8.5.12",
+            "additionalVersions": "8.4.27",
             "installComposer": "true"
         },
         "ghcr.io/devcontainers/features/conda:2": {
@@ -74,7 +77,6 @@
         "./local-features/jekyll": "latest",
         "ghcr.io/devcontainers/features/oryx:2": "latest",
         "./local-features/setup-user": "latest",
-        "./local-features/patch-conda": {},
         "./local-features/patch-python": {}
     },
     "overrideFeatureInstallOrder": [
@@ -84,7 +86,6 @@
         "ghcr.io/devcontainers/features/hugo",
         "ghcr.io/devcontainers/features/node",
         "ghcr.io/devcontainers/features/conda",
-        "./local-features/patch-conda",
         "ghcr.io/devcontainers/features/python",
         "./local-features/patch-python",
         "ghcr.io/devcontainers/features/php",

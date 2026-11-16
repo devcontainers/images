@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Upgrading pip to fix the vulnerability (GHSA-qwm4-qh6w-59xr)
-python3 -m pip install --upgrade --no-cache-dir "pip==26.2.0" || exit $?
+# Upgrading pip to fix the vulnerability (GHSA-qwm4-qh6w-59xr); 26.2.2 bundles certifi 2026.10.19
+python3 -m pip install --upgrade --no-cache-dir "pip==26.2.2" || exit $?
 
 # vulnerabilities:
 # werkzeug - [GHSA-f9vj-2wh5-fj8j] 
@@ -15,8 +15,12 @@ python3 -m pip install --upgrade --no-cache-dir "pip==26.2.0" || exit $?
 # bleach - [GHSA-gj48-438w-jh9v]
 # anyio - [GHSA-82r6-8w77-94w6]
 # soupsieve - [GHSA-gjv8-xp57-g29c]
+# setuptools - [GHSA-h35f-9h28-mq5c]
 
-patched_package_versions=( "mistune=3.2.1" "aiohttp=3.10.11" "cryptography=44.0.1" "h11=0.16.0" "jinja2=3.1.6" "jupyter_core=5.8.1" "protobuf=6.33.5" "requests=2.32.4" "setuptools=78.1.1" "transformers=4.53.0" "urllib3=2.5.0" "werkzeug=3.1.5" "jupyter-lsp=2.2.2" "scrapy=2.14.2"
+# NSS is Conda-only and cannot be checked using pip show.
+conda install --yes "nss=3.131.1" || exit $?
+
+patched_package_versions=( "certifi=2026.10.19" "mistune=3.2.1" "aiohttp=3.10.11" "cryptography=44.0.1" "h11=0.16.0" "jinja2=3.1.6" "jupyter_core=5.8.1" "protobuf=6.33.5" "requests=2.32.4" "setuptools=83.0.0" "transformers=4.53.0" "urllib3=2.5.0" "werkzeug=3.1.5" "jupyter-lsp=2.2.2" "scrapy=2.14.2"
                       "zipp=3.19.1" "tornado=6.5.5" "jupyterlab=4.5.3" "notebook=7.5.7" "imagecodecs=2024.9.22" "fonttools=4.60.2" "pyarrow=17.0.0" "brotli=1.2.0" "filelock=3.20.1" "panel=1.9.4" "distributed=2026.1.0" "wheel=0.46.2" "nltk=3.9.3" "black=26.3.1" "pyjwt=2.12.0" "pillow=12.1.1" "pyopenssl=26.0.0" "nbconvert=7.17.1" "markdown=3.8.1" "python-dotenv=1.2.2" "lxml=6.1.0"
                       "pyasn1=0.6.3" "ujson=5.12.1" "twisted=26.4.0" "gitpython=3.1.60" "click=8.4.2" "idna=3.18" "bleach=6.4.0" "anyio=4.14.2" "soupsieve=2.9.0")
 
@@ -82,7 +86,12 @@ for ((i=0; i<rows; i++)); do
         if [[ $CONDA_VERSION == $GREATER_VERSION_B ]]; then        
             echo -e "Found Version v${CONDA_VERSION} in the Conda channel which is greater than or equal to the required version: v${REQUIRED_VERSION}. \n";
             echo "Installing ${packages_array["$i,0"]} from source from conda channel for v${REQUIRED_VERSION}..."
-            conda install "${packages_array["$i,0"]}==${CONDA_VERSION}"        
+            # The newest channel build can require a different Python than the base image ships
+            # (e.g. filelock 4.2.7 is only built for Python 3.13), so fall back to pip if conda can't solve it.
+            if ! conda install "${packages_array["$i,0"]}==${CONDA_VERSION}"; then
+                echo "Could not install ${packages_array["$i,0"]} v${CONDA_VERSION} from the Conda channel; installing the latest version >= v${REQUIRED_VERSION} from pip instead..."
+                python3 -m pip install --upgrade --no-cache-dir "${packages_array["$i,0"]}>=${REQUIRED_VERSION}" || exit $?
+            fi
         elif [[ $REQUIRED_VERSION == $GREATER_VERSION_B ]]; then 
             echo -e "Required version: v${REQUIRED_VERSION} is greater than the version found in the Conda channel v${CONDA_VERSION}. \n";
             echo "Installing ${packages_array["$i,0"]} from source from pip package manager for v${REQUIRED_VERSION}..."
