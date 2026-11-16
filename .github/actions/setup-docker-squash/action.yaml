@@ -1,0 +1,17 @@
+name: 'Set up docker-squash'
+description: 'Configures Docker for docker-squash and installs the Python tool'
+
+runs:
+  using: composite
+  steps:
+    - name: Install Python and docker-squash
+      shell: bash
+      run: |
+        set -e
+        sudo apt-get update
+        sudo apt-get install -y python3 python3-venv
+        python3 -m venv "${RUNNER_TEMP}/docker-squash"
+        "${RUNNER_TEMP}/docker-squash/bin/pip" install "git+https://github.com/goldmann/docker-squash.git"
+        echo "${RUNNER_TEMP}/docker-squash/bin" >> "${GITHUB_PATH}"
+        "${RUNNER_TEMP}/docker-squash/bin/docker-squash" --version
+
