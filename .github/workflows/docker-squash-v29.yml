@@ -1,0 +1,111 @@
+name: Compare squashed Universal image with Docker 29
+
+on:
+  workflow_dispatch:
+
+jobs:
+  compare-images:
+    name: Compare Docker 29 image sizes
+    runs-on: devcontainer-image-builder-ubuntu
+    env:
+      DOCKER_MAJOR_VERSION: "29"
+      IMAGE: mcr.microsoft.com/devcontainers/universal:6.1.14-noble
+      SQUASHED_IMAGE: devcontainers/universal:6.1.14-noble-squashed
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Verify Docker version
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          current_version="$(docker version --format '{{.Server.Version}}' 2>/dev/null || true)"
+          current_major="${current_version%%.*}"
+          echo "Docker version before setup: ${current_version:-unavailable}"
+
+          if [[ "$current_major" != "$DOCKER_MAJOR_VERSION" ]]; then
+            sudo apt-get update
+            sudo apt-get install -y ca-certificates curl
+            sudo install -m 0755 -d /etc/apt/keyrings
+            sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg \
+              -o /etc/apt/keyrings/docker.asc
+            sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+            . /etc/os-release
+            ubuntu_codename="${UBUNTU_CODENAME:-$VERSION_CODENAME}"
+            architecture="$(dpkg --print-architecture)"
+            echo \
+              "deb [arch=${architecture} signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu ${ubuntu_codename} stable" \
+              | sudo tee /etc/apt/sources.list.d/docker.list >/dev/null
+            sudo apt-get update
+
+            docker_ce_version="$(
+              apt-cache madison docker-ce |
+                awk -v major="$DOCKER_MAJOR_VERSION" '$3 ~ "^5:" major "\\." { print $3; exit }'
+            )"
+            docker_cli_version="$(
+              apt-cache madison docker-ce-cli |
+                awk -v major="$DOCKER_MAJOR_VERSION" '$3 ~ "^5:" major "\\." { print $3; exit }'
+            )"
+            if [[ -z "$docker_ce_version" || -z "$docker_cli_version" ]]; then
+              echo "Docker ${DOCKER_MAJOR_VERSION}.x is not available from the Docker APT repository." >&2
+              exit 1
+            fi
+
+            sudo apt-get install -y \
+              "docker-ce=${docker_ce_version}" \
+              "docker-ce-cli=${docker_cli_version}" \
+              containerd.io \
+              docker-buildx-plugin \
+              docker-compose-plugin
+            sudo systemctl enable --now docker
+          fi
+
+          installed_version="$(docker version --format '{{.Server.Version}}')"
+          installed_major="${installed_version%%.*}"
+          echo "Docker version after setup: ${installed_version}"
+          [[ "$installed_major" == "$DOCKER_MAJOR_VERSION" ]] || {
+            echo "Expected Docker ${DOCKER_MAJOR_VERSION}.x, got ${installed_version}." >&2
+            exit 1
+          }
+
+      - name: Install docker-squash
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y python3 python3-venv
+          python3 -m venv "${RUNNER_TEMP}/docker-squash"
+          "${RUNNER_TEMP}/docker-squash/bin/pip" install \
+            "git+https://github.com/goldmann/docker-squash.git"
+          echo "${RUNNER_TEMP}/docker-squash/bin" >> "${GITHUB_PATH}"
+          "${RUNNER_TEMP}/docker-squash/bin/docker-squash" --version
+
+      - name: Pull and squash Universal image
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker pull "$IMAGE"
+          docker-squash -t "$SQUASHED_IMAGE" "$IMAGE"
+
+      - name: Compare image sizes
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          original_size="$(docker image inspect "$IMAGE" --format '{{.Size}}')"
+          squashed_size="$(docker image inspect "$SQUASHED_IMAGE" --format '{{.Size}}')"
+          original_human="$(docker image ls "$IMAGE" --format '{{.Size}}')"
+          squashed_human="$(docker image ls "$SQUASHED_IMAGE" --format '{{.Size}}')"
+          size_difference=$((original_size - squashed_size))
+          percentage_saved="$(
+            awk -v original="$original_size" -v difference="$size_difference" \
+              'BEGIN { if (original == 0) print "0.00"; else printf "%.2f", difference * 100 / original }'
+          )"
+
+          echo "Original image: ${IMAGE}"
+          echo "  Size: ${original_size} bytes (${original_human})"
+          echo "Squashed image: ${SQUASHED_IMAGE}"
+          echo "  Size: ${squashed_size} bytes (${squashed_human})"
+          echo "Size difference: ${size_difference} bytes (${percentage_saved}% saved)"
