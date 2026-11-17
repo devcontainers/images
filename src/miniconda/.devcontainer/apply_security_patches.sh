@@ -7,10 +7,13 @@
 # anyio - [GHSA-5p39-cfhj-2xmp]
 # pyjwt - [GHSA-r6x4-923q-g947]
 # urllib3 - [GHSA-gh4c-6fx4-qh6g]
+# msgpack - [GHSA-j586-36cw-2gc2]
+# filelock - [GHSA-v4x8-3wr5-3wq8]
+# brotlicffi - [GHSA-9v8h-qqgm-4m35]
 
 # define array of packages for pinning to the patched versions
 # patched_package_versions=( "package1=version1" "package2=version2" "package3=version3" )
-patched_package_versions=( "anyio=4.14.2" "pyjwt=2.14.0" "urllib3=2.8.0")
+patched_package_versions=( "anyio=4.14.2" "pyjwt=2.14.0" "urllib3=2.8.0" "msgpack=1.2.3" "filelock=4.2.1" "brotlicffi=1.2.1.0")
 
 # Define the number of rows (based on the length of patched_package_versions)
 rows=${#patched_package_versions[@]}
@@ -61,3 +64,23 @@ if [ $rows -gt 0 ]; then
         fi
     done
 fi
+
+# List of packages whose patched version pip cannot install because the base image's older conda-owned copy blocks it.
+#  Format: "pip_name=required_version=conda_name"
+conda_overridden_packages=( "filelock=4.2.1=filelock" "msgpack=1.2.3=msgpack-python" )
+
+# Replace the outdated conda packages using pip with fallback to original in case of failure.
+for entry in "${conda_overridden_packages[@]}"; do
+    IFS='=' read -r pkg required conda_pkg <<< "$entry"
+    current=$(pip show "$pkg" --disable-pip-version-check 2>/dev/null | grep '^Version:' | awk '{print $2}')
+    if [[ "$(printf '%s\n%s\n' "$required" "$current" | sort -V | head -1)" != "$required" ]]; then
+        patch_dir=$(mktemp -d)
+        if python3 -m pip download --no-deps --no-cache-dir -d "$patch_dir" "${pkg}==${required}"; then
+            conda remove -y --force "$conda_pkg" || true
+            python3 -m pip install --no-index --find-links "$patch_dir" "${pkg}==${required}" || true
+        else
+            echo "Could not download ${pkg} ${required}, keeping v${current}"
+        fi
+        rm -rf "$patch_dir"
+    fi
+done
