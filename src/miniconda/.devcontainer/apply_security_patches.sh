@@ -81,7 +81,9 @@ for entry in "${conda_overridden_packages[@]}"; do
             installed=$(pip show "$pkg" --disable-pip-version-check 2>/dev/null | grep '^Version:' | awk '{print $2}')
             if [[ "$(printf '%s\n%s\n' "$required" "$installed" | sort -V | head -1)" != "$required" ]]; then
                 echo "${pkg} is ${installed:+v}${installed:-missing} after pip install, restoring conda ${conda_pkg} ${current}"
-                conda install -y --no-deps "${conda_pkg}==${current}" || true
+                conda install -y --no-deps "${conda_pkg}==${current}" || \
+                    printf 'WARNING: %s v%s (vulnerable) was removed, but installing the patched v%s failed and conda could not restore it. Install it manually: pip install "%s==%s"\n' \
+                        "$pkg" "$current" "$required" "$pkg" "$required" >&2
             fi
         else
             echo "Could not download ${pkg} ${required}, keeping v${current}"
