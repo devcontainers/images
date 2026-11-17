@@ -1,7 +1,7 @@
 name: Compare squashed Universal image with Docker 29
 
 on:
-  workflow_dispatch:
+  pull_request:
 
 jobs:
   compare-images:
