@@ -43,7 +43,7 @@ checkCondaPackageVersion "tqdm" "4.66.4"
 checkCondaPackageVersion "certifi" "2026.10.19"
 checkCondaPackageVersion "python-dotenv" "1.2.2"
 checkCondaPackageVersion "click" "8.4.1"
-checkCondaPackageVersion "msgpack" "1.2.3"
+checkCondaPackageVersion "msgpack-python" "1.2.3"
 checkCondaPackageVersion "filelock" "4.2.1"
 checkCondaPackageVersion "brotlicffi" "1.2.1.0"
 
