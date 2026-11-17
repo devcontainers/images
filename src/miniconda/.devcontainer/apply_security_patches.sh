@@ -78,6 +78,11 @@ for entry in "${conda_overridden_packages[@]}"; do
         if python3 -m pip download --no-deps --no-cache-dir -d "$patch_dir" "${pkg}==${required}"; then
             conda remove -y --force "$conda_pkg" || true
             python3 -m pip install --no-index --find-links "$patch_dir" "${pkg}==${required}" || true
+            installed=$(pip show "$pkg" --disable-pip-version-check 2>/dev/null | grep '^Version:' | awk '{print $2}')
+            if [[ "$(printf '%s\n%s\n' "$required" "$installed" | sort -V | head -1)" != "$required" ]]; then
+                echo "${pkg} is ${installed:+v}${installed:-missing} after pip install, restoring conda ${conda_pkg} ${current}"
+                conda install -y --no-deps "${conda_pkg}==${current}" || true
+            fi
         else
             echo "Could not download ${pkg} ${required}, keeping v${current}"
         fi
