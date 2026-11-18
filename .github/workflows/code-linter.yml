@@ -12,11 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
       with:
         fetch-depth: 0    
     
-    - uses: super-linter/super-linter/slim@v8
+    - uses: super-linter/super-linter/slim@v9
       env:
         MULTI_STATUS : false
         ENABLE_GITHUB_PULL_REQUEST_SUMMARY_COMMENT: false
