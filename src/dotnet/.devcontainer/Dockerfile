@@ -1,4 +1,4 @@
-ARG VARIANT=10.0-noble
+ARG VARIANT=11.0-resolute
 FROM mcr.microsoft.com/dotnet/sdk:${VARIANT}
 ENV PATH $PATH:/home/vscode/.dotnet:/home/vscode/.dotnet/tools
 
