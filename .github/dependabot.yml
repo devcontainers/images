@@ -1,0 +1,46 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 10
+    groups:
+      all-github-actions:
+        patterns:
+          - "*"
+
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 10
+    groups:
+      all-npm-dependencies:
+        patterns:
+          - "*"
+
+  - package-ecosystem: docker
+    directories:
+      - /.devcontainer
+      - /src/*/.devcontainer
+      - /build/assets
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 10
+    groups:
+      all-docker-updates:
+        patterns:
+          - "*"
+
+  - package-ecosystem: devcontainers
+    directories:
+      - /
+      - /src/*
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 10
+    groups:
+      all-devcontainer-updates:
+        patterns:
+          - "*"
