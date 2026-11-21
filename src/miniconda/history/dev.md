@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/miniconda)
 
-**Digest:** sha256:ce96e069620fec0cc46852f93fb669d8a65e46d59268fde73f3de41f64a731b8
+**Digest:** sha256:386f8808a44bdedf8859989a69b8a9c95da05e800a4a1b7aa46a69dc15af8fbd
 
 **Tags:**
 ```
@@ -29,44 +29,44 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 42a4ccb1b14dbeffe81259105a5243b4f4cb618e | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 17a2b4c3a5855524ad4772a17ada0dc474e2fdf3 | /home/vscode/.oh-my-zsh |
 
 **Pip / pipx installed tools and packages**
 
 | Tool / package | Version |
 |----------------|---------|
-| certifi | 2026.7.22 |
+| certifi | 2026.10.23 |
 | cryptography | 50.0.0 |
 | setuptools | 83.0.0 |
 | wheel | 0.47.0 |
 | requests | 2.34.2 |
 | pylint | 4.1.3 |
-| flake8 | 7.4.1 |
+| flake8 | 7.5.0 |
 | autopep8 | 2.3.2 |
 | black | 26.10.1 |
 | yapf | 0.43.0 |
-| mypy | 2.4.0 |
+| mypy | 2.4.1 |
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.15.0 |
 | bandit | 1.9.4 |
-| virtualenv | 21.14.7 |
-| pipx | 1.17.14 |
+| virtualenv | 21.15.6 |
+| pipx | 1.18.16 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.56.0 | 
-| [conda](https://github.com/conda/conda) | 26.7.1 | /opt/conda |
+| [git](https://github.com/git/git) | 2.56.1 | 
+| [conda](https://github.com/conda/conda) | 26.7.3 | /opt/conda |
 
 **Additional linux tools and packages**
 
 | Tool / library | Version |
 |----------------|---------|
-| apt-transport-https | 3.0.3 |
-| apt-utils | 3.0.3 |
-| ca-certificates | 20250419 |
-| curl | 8.14.1-2+deb13u5 |
+| apt-transport-https | 3.0.4 |
+| apt-utils | 3.0.4 |
+| ca-certificates | 20250419+deb13u1 |
+| curl | 8.14.1-2+deb13u7 |
 | dialog | 1.3-20250116-1 |
 | git | 1:2.47.3-0+deb13u1 |
 | gnupg2 | 2.4.7-21+deb13u1 |
@@ -95,9 +95,9 @@ mcr.microsoft.com/devcontainers/miniconda:dev-3
 | strace | 6.13+ds-1 |
 | sudo | 1.9.16p2-3+deb13u2 |
 | unzip | 6.0-29+deb13u1 |
-| vim-tiny | 2:9.1.1230-2 |
+| vim-tiny | 2:9.1.1230-2+deb13u2 |
 | wget | 1.25.0-2 |
 | zip | 3.0-15+deb13u1 |
-| zlib1g | 1:1.3.dfsg+really1.3.1-1+b1 |
+| zlib1g | 1:1.3.dfsg+really1.3.1-1+deb13u1 |
 | zsh | 5.9-8+b24 |
 

@@ -10,7 +10,7 @@
 
 ## Variant: trixie
 
-**Digest:** sha256:11620ce66815cfcc2d861064e18090e833422703bf7f26f71522b5002bb05d34
+**Digest:** sha256:e90d976ab99e22c8f4f1bf81bb1af54a7fbe5e489ed5ea3f570edbc539a2c5d3
 
 **Tags:**
 ```
@@ -31,37 +31,37 @@ mcr.microsoft.com/devcontainers/rust:dev-1-trixie
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Rust](https://github.com/rust-lang/rust) | 1.99.0 | /usr/local/cargo<br />/usr/local/rustup |
+| [Rust](https://github.com/rust-lang/rust) | 1.99.1 | /usr/local/cargo<br />/usr/local/rustup |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 083c339e0622bfc144b66ebf1a2e8dbe7d2ada0d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6010fb6260f359e71d99ba25f05f9215809b3ed2 | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 
 | Tool / crate | Version |
 |--------------|---------|
 | rustfmt | 1.10.0 |
-| rust-analysis | 1.99.0 |
-| rust-src | 1.99.0 |
-| clippy | 1.99.0 |
+| rust-analysis | 1.99.1 |
+| rust-src | 1.99.1 |
+| clippy | 1.99.1 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.56.0 | 
+| [git](https://github.com/git/git) | 2.56.1 | 
 
 **Additional linux tools and packages**
 
 | Tool / library | Version |
 |----------------|---------|
-| apt-transport-https | 3.0.3 |
-| apt-utils | 3.0.3 |
-| ca-certificates | 20250419 |
-| curl | 8.14.1-2+deb13u5 |
+| apt-transport-https | 3.0.4 |
+| apt-utils | 3.0.4 |
+| ca-certificates | 20250419+deb13u1 |
+| curl | 8.14.1-2+deb13u7 |
 | dialog | 1.3-20250116-1 |
 | gcc | 4:14.2.0-1 |
 | git | 1:2.47.3-0+deb13u1 |
@@ -94,15 +94,15 @@ mcr.microsoft.com/devcontainers/rust:dev-1-trixie
 | strace | 6.13+ds-1 |
 | sudo | 1.9.16p2-3+deb13u2 |
 | unzip | 6.0-29+deb13u1 |
-| vim-tiny | 2:9.1.1230-2 |
+| vim-tiny | 2:9.1.1230-2+deb13u2 |
 | wget | 1.25.0-2 |
 | zip | 3.0-15+deb13u1 |
-| zlib1g | 1:1.3.dfsg+really1.3.1-1+b1 |
+| zlib1g | 1:1.3.dfsg+really1.3.1-1+deb13u1 |
 | zsh | 5.9-8+b24 |
 
 ## Variant: bookworm
 
-**Digest:** sha256:f3ddbf3146bd0e267b33d149a158ad4801b9601e498f2cf860b52686832a5202
+**Digest:** sha256:e7de8026e262ade6307b7c1f7b28a32c033238ab235cb171788d9c6f50e94f7e
 
 **Tags:**
 ```
@@ -122,36 +122,36 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bookworm
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Rust](https://github.com/rust-lang/rust) | 1.99.0 | /usr/local/cargo<br />/usr/local/rustup |
+| [Rust](https://github.com/rust-lang/rust) | 1.99.1 | /usr/local/cargo<br />/usr/local/rustup |
 
 **Tools installed using git**
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 083c339e0622bfc144b66ebf1a2e8dbe7d2ada0d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6010fb6260f359e71d99ba25f05f9215809b3ed2 | /home/vscode/.oh-my-zsh |
 
 **Cargo / rustup (Rust) crates and tools**
 
 | Tool / crate | Version |
 |--------------|---------|
 | rustfmt | 1.10.0 |
-| rust-analysis | 1.99.0 |
-| rust-src | 1.99.0 |
-| clippy | 1.99.0 |
+| rust-analysis | 1.99.1 |
+| rust-src | 1.99.1 |
+| clippy | 1.99.1 |
 
 **Other tools and utilities**
 
 | Tool | Version | Path |
 |------|---------|------|
-| [git](https://github.com/git/git) | 2.56.0 | 
+| [git](https://github.com/git/git) | 2.56.1 | 
 
 **Additional linux tools and packages**
 
 | Tool / library | Version |
 |----------------|---------|
-| apt-transport-https | 2.6.1 |
-| apt-utils | 2.6.1 |
-| ca-certificates | 20250419~deb12u1 |
+| apt-transport-https | 2.6.2 |
+| apt-utils | 2.6.2 |
+| ca-certificates | 20250419~deb12u2 |
 | curl | 7.88.1-10+deb12u15 |
 | dialog | 1.3-20230209-1 |
 | gcc | 4:12.2.0-3 |
@@ -159,7 +159,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bookworm
 | gnupg2 | 2.2.40-1.1+deb12u2 |
 | htop | 3.2.2-2 |
 | iproute2 | 6.1.0-3 |
-| jq | 1.6-2.1+deb12u2 |
+| jq | 1.6-2.1+deb12u3 |
 | less | 590-2.1~deb12u2 |
 | libc6 | 2.36-9+deb12u14 |
 | libc6-dev | 2.36-9+deb12u14 |
@@ -182,7 +182,7 @@ mcr.microsoft.com/devcontainers/rust:dev-1-bookworm
 | procps | 2:4.0.2-3 |
 | psmisc | 23.6-1 |
 | python3-minimal | 3.11.2-1+b1 |
-| rsync | 3.2.7-1+deb12u6 |
+| rsync | 3.5.0+ds1-0+deb12u1 |
 | strace | 6.1-0.1 |
 | sudo | 1.9.13p3-1+deb12u4 |
 | unzip | 6.0-28+deb12u1 |
