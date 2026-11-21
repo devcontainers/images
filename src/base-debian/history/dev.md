@@ -10,7 +10,7 @@
 
 ## Variant: trixie
 
-**Digest:** sha256:2f1513e1036cbed5a0d492d717f1039f3fcbcba0d7fff9b9ba5ba7b2bc811779
+**Digest:** sha256:8f0142b8a097cb4f95e1107cae510edbc850aa29316f91b8c8ca27901527dc43
 
 **Tags:**
 ```
@@ -32,7 +32,7 @@ mcr.microsoft.com/devcontainers/base:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 083c339e0622bfc144b66ebf1a2e8dbe7d2ada0d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6010fb6260f359e71d99ba25f05f9215809b3ed2 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -44,10 +44,10 @@ mcr.microsoft.com/devcontainers/base:dev
 
 | Tool / library | Version |
 |----------------|---------|
-| apt-transport-https | 3.0.3 |
-| apt-utils | 3.0.3 |
-| ca-certificates | 20250419 |
-| curl | 8.14.1-2+deb13u5 |
+| apt-transport-https | 3.0.4 |
+| apt-utils | 3.0.4 |
+| ca-certificates | 20250419+deb13u1 |
+| curl | 8.14.1-2+deb13u7 |
 | dialog | 1.3-20250116-1 |
 | git | 1:2.47.3-0+deb13u1 |
 | gnupg2 | 2.4.7-21+deb13u1 |
@@ -76,15 +76,15 @@ mcr.microsoft.com/devcontainers/base:dev
 | strace | 6.13+ds-1 |
 | sudo | 1.9.16p2-3+deb13u2 |
 | unzip | 6.0-29+deb13u1 |
-| vim-tiny | 2:9.1.1230-2 |
+| vim-tiny | 2:9.1.1230-2+deb13u2 |
 | wget | 1.25.0-2 |
 | zip | 3.0-15+deb13u1 |
-| zlib1g | 1:1.3.dfsg+really1.3.1-1+b1 |
+| zlib1g | 1:1.3.dfsg+really1.3.1-1+deb13u1 |
 | zsh | 5.9-8+b24 |
 
 ## Variant: bookworm
 
-**Digest:** sha256:ecdb7b37de786ac80b60b2d9d051a5d8aeee8c031fbf422c0895e46e8182309e
+**Digest:** sha256:9713954d83d0c9cd9e8d65b28dee9246f9f200d31d323b02d896413346a29cc6
 
 **Tags:**
 ```
@@ -104,7 +104,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian12
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 083c339e0622bfc144b66ebf1a2e8dbe7d2ada0d | /home/vscode/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 6010fb6260f359e71d99ba25f05f9215809b3ed2 | /home/vscode/.oh-my-zsh |
 
 **Other tools and utilities**
 
@@ -116,16 +116,16 @@ mcr.microsoft.com/devcontainers/base:dev-debian12
 
 | Tool / library | Version |
 |----------------|---------|
-| apt-transport-https | 2.6.1 |
-| apt-utils | 2.6.1 |
-| ca-certificates | 20250419~deb12u1 |
+| apt-transport-https | 2.6.2 |
+| apt-utils | 2.6.2 |
+| ca-certificates | 20250419~deb12u2 |
 | curl | 7.88.1-10+deb12u15 |
 | dialog | 1.3-20230209-1 |
 | git | 1:2.39.5-0+deb12u3 |
 | gnupg2 | 2.2.40-1.1+deb12u2 |
 | htop | 3.2.2-2 |
 | iproute2 | 6.1.0-3 |
-| jq | 1.6-2.1+deb12u2 |
+| jq | 1.6-2.1+deb12u3 |
 | less | 590-2.1~deb12u2 |
 | libc6 | 2.36-9+deb12u14 |
 | libgssapi-krb5-2 | 1.20.1-2+deb12u5 |
@@ -145,7 +145,7 @@ mcr.microsoft.com/devcontainers/base:dev-debian12
 | openssh-client | 1:9.2p1-2+deb12u10 |
 | procps | 2:4.0.2-3 |
 | psmisc | 23.6-1 |
-| rsync | 3.2.7-1+deb12u6 |
+| rsync | 3.5.0+ds1-0+deb12u1 |
 | strace | 6.1-0.1 |
 | sudo | 1.9.13p3-1+deb12u4 |
 | unzip | 6.0-28+deb12u1 |

@@ -4,7 +4,7 @@
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/anaconda)
 
-**Digest:** sha256:a84bb35608df2af941e4d402ae33cf5712cb25279c7ed8d5b11f1183989401c8
+**Digest:** sha256:43db7290181c68ba60fe9f6ad60a1a57138da3a1e20942af167051ba781ddaad
 
 **Tags:**
 ```
@@ -23,7 +23,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Python](https://www.python.org/) | 3.12.15 | /opt/conda |
+| [Python](https://www.python.org/) | 3.12.16 | /opt/conda |
 | [Jupyter Notebooks](https://jupyter.org/) | 7.6.3 | /opt/conda |
 | [Jupyter Lab](https://jupyter.org/) | 4.6.4 | /opt/conda |
 
@@ -40,16 +40,16 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | joblib | 1.4.2 |
 | cookiecutter | 2.6.0 |
 | cryptography | 50.0.0 |
-| mistune | 3.3.3 |
+| mistune | 3.3.4 |
 | numpy | 1.26.4 |
-| certifi | 2026.7.22 |
-| setuptools | 84.0.0 |
-| wheel | 0.47.0 |
-| nbconvert | 7.17.1 |
+| certifi | 2026.10.23 |
+| setuptools | 84.2.1 |
+| wheel | 0.48.0 |
+| nbconvert | 7.17.2 |
 | pyOpenssl | 26.4.0 |
-| Werkzeug | 3.1.6 |
+| Werkzeug | 3.1.9 |
 | requests | 2.34.2 |
-| tornado | 6.5.10 |
+| tornado | 6.6 |
 | transformers | 4.53.0 |
 | jupyter_server | 2.21.1 |
 
@@ -64,16 +64,16 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 
 | Tool / library | Version |
 |----------------|---------|
-| apt-transport-https | 2.6.1 |
-| apt-utils | 2.6.1 |
-| ca-certificates | 20250419~deb12u1 |
+| apt-transport-https | 2.6.2 |
+| apt-utils | 2.6.2 |
+| ca-certificates | 20250419~deb12u2 |
 | curl | 7.88.1-10+deb12u15 |
 | dialog | 1.3-20230209-1 |
 | git | 1:2.39.5-0+deb12u3 |
 | gnupg2 | 2.2.40-1.1+deb12u2 |
 | htop | 3.2.2-2 |
 | iproute2 | 6.1.0-3 |
-| jq | 1.6-2.1+deb12u2 |
+| jq | 1.6-2.1+deb12u3 |
 | less | 590-2.1~deb12u2 |
 | libc6 | 2.36-9+deb12u14 |
 | libgssapi-krb5-2 | 1.20.1-2+deb12u5 |
@@ -93,7 +93,7 @@ mcr.microsoft.com/devcontainers/anaconda:dev-3
 | openssh-client | 1:9.2p1-2+deb12u10 |
 | procps | 2:4.0.2-3 |
 | psmisc | 23.6-1 |
-| rsync | 3.2.7-1+deb12u6 |
+| rsync | 3.5.0+ds1-0+deb12u1 |
 | strace | 6.1-0.1 |
 | sudo | 1.9.13p3-1+deb12u4 |
 | unzip | 6.0-28+deb12u1 |
