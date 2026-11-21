@@ -5,7 +5,7 @@ This document describes the base contents of the Universal image. Note that this
 
 **Source release/branch:** [main](https://github.com/devcontainers/images/tree/main/src/universal)
 
-**Digest:** sha256:8c9fe43d0ac7306623d06ae5531fe973995fbacc1f731bfd9bb6069e38e9c2a2
+**Digest:** sha256:45e2c1e4d2538613a9e2de0f81bf2c50797c910b46ded67aba3f93dd55f38751
 
 **Tags:**
 ```
@@ -26,15 +26,15 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Language / runtime | Version | Path |
 |--------------------|---------|------|
-| [Node.js](https://nodejs.org/en/) | 22.23.3<br />24.21.0 | /usr/local/share/nvm/versions/node/&lt;version&gt; |
+| [Node.js](https://nodejs.org/en/) | 22.23.4<br />24.22.1 | /usr/local/share/nvm/versions/node/&lt;version&gt; |
 | [Python](https://www.python.org/) | 3.13.8<br />3.14.2 | /usr/local/python/&lt;version&gt; |
 | [Java](https://adoptopenjdk.net/) | 21.0.0<br />25.0.1 | /usr/local/sdkman/candidates/java/&lt;version&gt; |
-| [.NET](https://dotnet.microsoft.com/) | 10.0.401 | /usr/share/dotnet/dotnet |
+| [.NET](https://dotnet.microsoft.com/) | 10.0.403 | /usr/share/dotnet/dotnet |
 | [Ruby](https://www.ruby-lang.org/en/) | 3.3.11<br />3.4.9 | /usr/local/rubies/&lt;version&gt; |
 | [PHP](https://xdebug.org/) | 8.4.15<br />8.5.0 | /usr/local/php/&lt;version&gt; |
 | GCC | 13.3.0-6ubuntu2~24.04.1 | 
 | Clang | 18.1.3 (1ubuntu1) | 
-| [Go](https://golang.org/dl) | 1.27.2 | /usr/local/go |
+| [Go](https://golang.org/dl) | 1.27.3 | /usr/local/go |
 | [Jekyll](https://jekyllrb.com/) | 4.4.1 | 
 | [Jupyter Lab](https://jupyter.org/) | 4.6.4 | /home/codespace/.local/bin/jupyter-lab |
 
@@ -42,9 +42,9 @@ mcr.microsoft.com/devcontainers/universal:dev
 
 | Tool | Commit | Path |
 |------|--------|------|
-| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | 083c339e0622bfc144b66ebf1a2e8dbe7d2ada0d | /home/codespace/.oh-my-zsh |
+| [Oh My Zsh!](https://github.com/ohmyzsh/ohmyzsh) | d2b7f557cceaddb16ba89bbf8200d8a8df35c4d8 | /home/codespace/.oh-my-zsh |
 | [nvm](https://github.com/nvm-sh/nvm.git) | a885b885fef16fac4bc544188fb25e9e37ae83e8 | /usr/local/share/nvm |
-| [ruby-build](https://github.com/rbenv/ruby-build.git) | 36d503707cdf14ad6855ca3abbc05cea1500fa17 | /usr/local/share/ruby-build |
+| [ruby-build](https://github.com/rbenv/ruby-build.git) | b6a92c15f0df872047c74f7dfa0b92dfd4de8a92 | /usr/local/share/ruby-build |
 
 **Pip / pipx installed tools and packages**
 
@@ -52,7 +52,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 |----------------|---------|
 | requests | 2.34.2 |
 | jupyterlab_git | 0.55.0 |
-| certifi | 2026.7.22 |
+| certifi | 2026.10.23 |
 | pylint | 4.1.3 |
 | flake8 | 7.4.1 |
 | autopep8 | 2.3.2 |
@@ -62,15 +62,15 @@ mcr.microsoft.com/devcontainers/universal:dev
 | pydocstyle | 6.3.0 |
 | pycodestyle | 2.15.0 |
 | bandit | 1.9.4 |
-| virtualenv | 21.14.7 |
-| pipx | 1.17.14 |
+| virtualenv | 21.14.13 |
+| pipx | 1.18.4 |
 
 **Go tools and modules**
 
 | Tool / module | Version |
 |---------------|---------|
-| golang.org/x/tools/gopls | 0.23.0 |
-| honnef.co/go/tools | 0.8.0-rc.1 |
+| golang.org/x/tools/gopls | 0.24.0 |
+| honnef.co/go/tools | 0.8.1 |
 | golang.org/x/lint | 0.0.0-20241112194109-818c5a804067 |
 | github.com/mgechev/revive | 1.17.1 |
 | github.com/uudashr/gopkgs | latest |
@@ -93,14 +93,14 @@ mcr.microsoft.com/devcontainers/universal:dev
 | [Xdebug](https://xdebug.org/) | 3.5.3 | /usr/local/php/current |
 | [Composer](https://getcomposer.org/) | 2.10.3 | /usr/local/php/current/bin |
 | [kubectl](https://github.com/kubernetes/kubectl) | v1.37.1 | /usr/local/bin |
-| [Helm](https://github.com/helm/helm) | 4.3.0 | /usr/local/bin |
-| [Docker Compose](https://github.com/docker/compose) | 5.6.0 | /usr/local/bin |
-| [GitHub CLI](https://github.com/cli/cli) | 2.102.0 | 
+| [Helm](https://github.com/helm/helm) | 4.3.1 | /usr/local/bin |
+| [Docker Compose](https://github.com/docker/compose) | 5.6.1 | /usr/local/bin |
+| [GitHub CLI](https://github.com/cli/cli) | 2.103.2 | 
 | [yarn](https://yarnpkg.com/) | 1.22.22 | /usr/bin |
 | [Maven](https://maven.apache.org/) | 3.10.0 | /usr/local/sdkman/candidates/maven/current/bin |
-| [Gradle](https://gradle.org/) | 9.8.1 | /usr/local/sdkman/candidates/gradle/current/bin |
-| Docker (Moby) CLI &amp; Engine | 29.8.2 | 
-| [conda](https://github.com/conda/conda) | 26.7.3 | /opt/conda/bin |
+| [Gradle](https://gradle.org/) | 9.8.2 | /usr/local/sdkman/candidates/gradle/current/bin |
+| Docker (Moby) CLI &amp; Engine | 29.9.2 | 
+| [conda](https://github.com/conda/conda) | 26.9.4 | /opt/conda/bin |
 
 **Additional linux tools and packages**
 
@@ -109,16 +109,16 @@ mcr.microsoft.com/devcontainers/universal:dev
 | apt-transport-https | 2.8.3 |
 | apt-utils | 2.8.3 |
 | build-essential | 12.10ubuntu1 |
-| ca-certificates | 20260601~24.04.1 |
+| ca-certificates | 20260816ubuntu0.24.04.1 |
 | clang | 1:18.0-59~exp2 |
 | cmake | 3.28.3-1build7 |
 | cppcheck | 2.13.0-2ubuntu3 |
-| curl | 8.5.0-2ubuntu10.15 |
+| curl | 8.5.0-2ubuntu10.16 |
 | dialog | 1.3-20240101-1 |
 | g++ | 4:13.2.0-7ubuntu1 |
 | gcc | 4:13.2.0-7ubuntu1 |
 | gdb | 15.1-1ubuntu1~24.04.1 |
-| git | 1:2.43.0-1ubuntu7.3 |
+| git | 1:2.43.0-1ubuntu7.4 |
 | gnupg2 | 2.4.4-2ubuntu17.6 |
 | htop | 3.3.0-4build1 |
 | iproute2 | 6.1.0-1ubuntu6.4 |
@@ -131,7 +131,7 @@ mcr.microsoft.com/devcontainers/universal:dev
 | libicu74 | 74.2-1ubuntu3.1 |
 | libkrb5-3 | 1.20.1-6ubuntu2.10 |
 | libnspr4 | 2:4.35-1.1build1 |
-| libnss3 | 2:3.98-1ubuntu0.2 |
+| libnss3 | 2:3.98-1ubuntu0.3 |
 | libpango-1.0-0 | 1.52.1+ds-1build1 |
 | libpangocairo-1.0-0 | 1.52.1+ds-1build1 |
 | libsecret-1-dev | 0.21.4-1build3 |
@@ -146,13 +146,13 @@ mcr.microsoft.com/devcontainers/universal:dev
 | man-db | 2.12.0-4build2 |
 | manpages | 6.7-2 |
 | manpages-dev | 6.7-2 |
-| moby-cli (Docker CLI) | 29.8.2-ubuntu24.04u1 |
-| moby-engine (Docker Engine) | 29.8.2-ubuntu24.04u1 |
+| moby-cli (Docker CLI) | 29.9.2-ubuntu24.04u2 |
+| moby-engine (Docker Engine) | 29.9.2-ubuntu24.04u2 |
 | nano | 7.2-2ubuntu0.2 |
 | ncdu | 1.19-0.1 |
 | net-tools | 2.10-0.1ubuntu4.4 |
-| openssh-client | 1:9.6p1-3ubuntu13.19 |
-| openssh-server | 1:9.6p1-3ubuntu13.19 |
+| openssh-client | 1:9.6p1-3ubuntu13.20 |
+| openssh-server | 1:9.6p1-3ubuntu13.20 |
 | pigz | 2.8-1 |
 | pkg-config | 1.8.1-2build1 |
 | procps | 2:4.0.4-4ubuntu3.3 |
@@ -173,6 +173,6 @@ mcr.microsoft.com/devcontainers/universal:dev
 | wget | 1.21.4-1ubuntu4.5 |
 | xtail | 2.1-9 |
 | zip | 3.0-13ubuntu0.2 |
-| zlib1g | 1:1.3.dfsg-3.1ubuntu2.2 |
+| zlib1g | 1:1.3.dfsg-3.1ubuntu2.3 |
 | zsh | 5.9-6ubuntu2 |
 
