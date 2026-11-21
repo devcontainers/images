@@ -11,6 +11,7 @@ const mkdirpCb = require('mkdirp');
 const copyFilesCb = require('copyfiles');
 const spawnCb = require('child_process').spawn;
 const execCb = require('child_process').exec;
+const execFileCb = require('child_process').execFile;
 
 module.exports = {
 
@@ -25,7 +26,11 @@ module.exports = {
     spawn: async (command, args, opts) => {
         console.log(`(*) Spawn: ${command}${args.reduce((prev, current) => `${prev} ${current}`, '')}`);
 
-        opts = opts || { stdio: 'inherit', shell: true };
+        opts = Object.assign({}, opts || { stdio: 'inherit' });
+        if (opts.shell === undefined) {
+            opts.shell = false;
+        }
+    
         let echo = false;
         if (opts.stdio === 'inherit') {
             opts.stdio = 'pipe';
@@ -70,13 +75,27 @@ module.exports = {
         });
     },
 
-    exec: async (command, opts) => {
-        console.log(`(*) Exec: ${command}`);
+    exec: async (file, args, opts) => {
+        console.log(`(*) Exec: ${file} ${args.join(' ')}`);
 
-        opts = opts || { stdio: 'inherit', shell: true };
+        opts = Object.assign({}, opts || { stdio: 'inherit' });
+        if (opts.shell === undefined) {
+            opts.shell = false;
+        }
+
+        let proc;
+        if (opts.shell) {
+            // Explicit shell opt-in: reconstruct command string for exec
+            const command = [file, ...args].join(' ');
+            proc = execCb(command, opts);
+        } else {
+            // Default safe path: execFile directly (no shell, no string parsing)
+            proc = execFileCb(file, args, opts);
+        }
+
         return new Promise((resolve, reject) => {
             let result = '';
-            const proc = execCb(command, opts);
+            // proc already created above
             proc.on('close', (code, signal) => {
                 if (code !== 0) {
                     console.log(result);
@@ -211,4 +230,3 @@ module.exports = {
         });
     }
 };
-
