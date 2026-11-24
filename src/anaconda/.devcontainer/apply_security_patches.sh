@@ -29,6 +29,9 @@ patched_package_versions=( "certifi=2026.10.19" "mistune=3.2.1" "aiohttp=3.10.11
                       "zipp=3.19.1" "tornado=6.5.5" "jupyterlab=4.5.3" "notebook=7.5.7" "imagecodecs=2024.9.22" "fonttools=4.60.2" "pyarrow=17.0.0" "brotli=1.2.1" "filelock=3.20.1" "panel=1.9.4" "distributed=2026.1.0" "wheel=0.46.2" "nltk=3.9.3" "black=26.3.1" "pyjwt=2.12.0" "pillow=13.0.0" "pyopenssl=26.0.0" "nbconvert=7.17.1" "markdown=3.8.1" "python-dotenv=1.2.2" "lxml=6.1.0"
                       "pyasn1=0.6.3" "ujson=5.12.1" "twisted=26.4.0" "gitpython=3.1.60" "click=8.4.2" "idna=3.18" "bleach=6.4.0" "anyio=4.14.2" "soupsieve=2.9.0" "protego=0.6.2" "fsspec=2026.6.0" "s3fs=2026.6.0")
 
+# Packages whose security patch failed to install (reported at the end; the build continues)
+failed_packages=()
+
 # Define the number of rows (based on the length of patched_package_versions)
 rows=${#patched_package_versions[@]}
 
@@ -100,7 +103,7 @@ for ((i=0; i<rows; i++)); do
         elif [[ $REQUIRED_VERSION == $GREATER_VERSION_B ]]; then 
             echo -e "Required version: v${REQUIRED_VERSION} is greater than the version found in the Conda channel v${CONDA_VERSION}. \n";
             echo "Installing ${packages_array["$i,0"]} from source from pip package manager for v${REQUIRED_VERSION}..."
-            python3 -m pip install --upgrade --no-cache-dir "${packages_array["$i,0"]}==${REQUIRED_VERSION}"
+            python3 -m pip install --upgrade --no-cache-dir "${packages_array["$i,0"]}==${REQUIRED_VERSION}" || failed_packages+=("${packages_array["$i,0"]}==${REQUIRED_VERSION}")
         fi
     fi
 done
@@ -115,6 +118,16 @@ for pkg in "${pin_to_required_version[@]}"; do
     CURRENT_VERSION=$(pip show "${pkg}" --disable-pip-version-check | grep '^Version:' | awk '{print $2}')
     if [[ "${CURRENT_VERSION}" != "${REQUIRED_VERSION}" ]]; then
         echo "Installing ${pkg} from pip for v${REQUIRED_VERSION}..."
-        python3 -m pip install --upgrade --no-cache-dir "${pkg}==${REQUIRED_VERSION}"
+        python3 -m pip install --upgrade --no-cache-dir "${pkg}==${REQUIRED_VERSION}" || failed_packages+=("${pkg}==${REQUIRED_VERSION}")
     fi
 done
+
+# Warn loudly if any security patch could not be applied (build continues: fail-open)
+if (( ${#failed_packages[@]} )); then
+    echo "####################################################################################"
+    echo "WARNING: The following security patches could NOT be installed in this build:"
+    printf '  - %s\n' "${failed_packages[@]}"
+    echo "As per the vulnerability database, the installed versions of these packages have known"
+    echo "vulnerabilities. Use the latest image, or check the build logs above and upgrade them manually."
+    echo "####################################################################################"
+fi
