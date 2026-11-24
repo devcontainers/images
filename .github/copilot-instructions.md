@@ -6,9 +6,11 @@
 
 ## Variant lifecycle report
 
-- Discussion #1464 is the lifecycle source. The scheduled extraction workflow
-  interprets its semi-structured table, and the deterministic report workflow
-  validates the result against non-deprecated `src/*/manifest.json` files.
+- Discussion #1464 is the lifecycle source. The scheduled gh-aw extraction
+  workflow interprets its semi-structured tables and proposes the checked-in
+  `.github/variant-lifecycle/versions.json`; its JSON Schema is validated before
+  the deterministic report compares it with non-deprecated `src/*/manifest.json`
+  files.
 - Treat report entries as maintainer review items, not automatic image changes.
   For an addition or removal, update `variants`, `build.architectures`,
   `build.variantTags`, `build.latest` when appropriate, related README tables,

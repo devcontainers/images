@@ -1,21 +1,24 @@
 name: Variant lifecycle report
 
 on:
-  workflow_run:
-    workflows:
-      - Variant lifecycle extraction
-    types:
-      - completed
+  schedule:
+    - cron: '0 7 * * 1'
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/variant-lifecycle/versions.json
+      - build/src/variant-lifecycle.js
+      - src/*/manifest.json
 
 permissions:
   contents: read
 
 jobs:
   report:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     permissions:
-      actions: read
       contents: read
       issues: write
     steps:
@@ -26,7 +29,6 @@ jobs:
           app-id: ${{ vars.DEVCONTAINERS_REPO_AUTOMATION_ID }}
           private-key: ${{ secrets.DEVCONTAINERS_REPO_AUTOMATION_PRIVATE_KEY }}
           repositories: ${{ github.repository }}
-          permission-actions: read
           permission-contents: read
           permission-issues: write
 
@@ -34,25 +36,22 @@ jobs:
         uses: actions/checkout@v6
         with:
           token: ${{ steps.app-token.outputs.token }}
-          ref: ${{ github.event.workflow_run.head_sha }}
 
-      - name: Download extraction artifact
-        uses: actions/download-artifact@v8
-        with:
-          name: variant-lifecycle-inputs
-          path: variant-lifecycle-inputs
-          repository: ${{ github.repository }}
-          run-id: ${{ github.event.workflow_run.id }}
-          github-token: ${{ steps.app-token.outputs.token }}
+      - name: Validate lifecycle JSON schema
+        run: |
+          set -euo pipefail
+          npx --yes ajv-cli@5 validate \
+            --spec=draft7 \
+            --all-errors \
+            --strict=false \
+            -s .github/variant-lifecycle/versions.schema.json \
+            -d .github/variant-lifecycle/versions.json
 
       - name: Validate and compare lifecycle data
         run: |
           set -euo pipefail
-          node build/src/variant-lifecycle.js validate \
-            --input variant-lifecycle-inputs/versions.json \
-            --output variant-lifecycle-inputs/versions.normalized.json
           node build/src/variant-lifecycle.js check \
-            --versions variant-lifecycle-inputs/versions.normalized.json \
+            --versions .github/variant-lifecycle/versions.json \
             --repo "$GITHUB_WORKSPACE" \
             --output variant-lifecycle-report.json \
             --markdown variant-lifecycle-report.md
