@@ -42,7 +42,7 @@ checkPythonPackageVersion "cryptography" "44.0.1"
 checkPythonPackageVersion "h11" "0.16.0"
 checkPythonPackageVersion "jupyter_core" "5.8.1"
 checkPythonPackageVersion "protobuf" "6.33.5"
-checkPythonPackageVersion "transformers" "5.10.0"
+checkPythonPackageVersion "transformers" "5.10.4"
 checkPythonPackageVersion "soupsieve" "2.9"
 checkPythonPackageVersion "anyio" "4.14.2"
 checkPythonPackageVersion "mpmath" "1.3.0"
@@ -78,6 +78,27 @@ checkPythonPackageVersion "twisted" "26.4.0"
 checkPythonPackageVersion "bleach" "6.4.0"
 checkPythonPackageVersion "protego" "0.6.2"
 checkPythonPackageVersion "fsspec" "2026.6.0"
+checkPythonPackageVersion "s3fs" "2026.6.0"
+
+# Transitive upgrades pulled in by the patched packages
+checkPythonPackageVersion "huggingface_hub" "1.5.0"    # required by transformers 5.10.x
+checkPythonPackageVersion "tokenizers" "0.22.0"        # required by transformers 5.10.x
+checkPythonPackageVersion "safetensors" "0.4.3"        # required by transformers 5.10.x
+checkPythonPackageVersion "brotlicffi" "1.2.1"         # alternate brotli binding used by urllib3/Scrapy
+checkPythonPackageVersion "dask" "2025.12.0"           # guards against conda re-solve downgrading dask (distributed 2026.1.0 requires dask 2025.12.x)
+
+# Packages that depend on, or are needed by, the patched packages: confirm they still import
+check "import-fsspec-dependents" python -c "import fsspec, s3fs, aiobotocore, botocore, intake, huggingface_hub"
+check "import-transformers-deps" python -c "import transformers, huggingface_hub, tokenizers, safetensors"
+# datashader excluded: datashader 0.16.3 is incompatible with dask 2025.12.0 (pre-existing, tracked separately)
+check "import-pillow-dependents" python -c "import PIL, bokeh, imageio, matplotlib, skimage, streamlit"
+check "import-bokeh-dependents" python -c "import panel, holoviews, hvplot, seaborn"
+check "import-scrapy-deps" python -c "import scrapy, protego, brotli, brotlicffi"
+check "import-dask-deps" python -c "import dask, distributed, dask.dataframe"
+
+# No pip dependency conflicts involving the patched/pinned packages or their dependents (the dask-expr conflict, present before this PR, is ignored)
+check "no-conflicts-patched-packages" bash -c "! python -m pip check | grep -iE 'fsspec|s3fs|aiobotocore|botocore|transformers|huggingface|tokenizers|safetensors|pillow|brotli|protego|scrapy|bokeh|panel|holoviews|hvplot|seaborn|datashader|imageio|matplotlib|scikit-image|streamlit|intake|distributed|imagecodecs|anyio|soupsieve'"
+
 
 checkCondaPackageVersion "pyopenssl" "26.0.0"
 checkCondaPackageVersion "requests" "2.32.4"
