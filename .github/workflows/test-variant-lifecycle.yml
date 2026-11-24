@@ -1,0 +1,38 @@
+name: Test variant lifecycle check
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - build/src/variant-lifecycle.js
+      - build/test/variant-lifecycle.test.js
+      - .github/variant-lifecycle/versions.schema.json
+      - package.json
+      - .github/workflows/test-variant-lifecycle.yml
+  pull_request:
+    paths:
+      - build/src/variant-lifecycle.js
+      - build/test/variant-lifecycle.test.js
+      - .github/variant-lifecycle/versions.schema.json
+      - package.json
+      - .github/workflows/test-variant-lifecycle.yml
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Validate lifecycle JSON schema
+        if: ${{ hashFiles('.github/variant-lifecycle/versions.json') != '' }}
+        run: |
+          npx --yes ajv-cli@5 validate \
+            --spec=draft7 \
+            --all-errors \
+            --strict=false \
+            -s .github/variant-lifecycle/versions.schema.json \
+            -d .github/variant-lifecycle/versions.json
+      - run: npm run test:variant-lifecycle
