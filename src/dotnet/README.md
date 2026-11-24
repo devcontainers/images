@@ -34,10 +34,10 @@ The examples below demonstrate stable image [semantic versioning](https://semver
 
 - `mcr.microsoft.com/devcontainers/dotnet:3-11.0-resolute`
 - `mcr.microsoft.com/devcontainers/dotnet:3.0-11.0-resolute`
-- `mcr.microsoft.com/devcontainers/dotnet:3.0.0-11.0-resolute`
+- `mcr.microsoft.com/devcontainers/dotnet:3.0.1-11.0-resolute`
 - `mcr.microsoft.com/devcontainers/dotnet:3-10.0`
 - `mcr.microsoft.com/devcontainers/dotnet:3.0-10.0`
-- `mcr.microsoft.com/devcontainers/dotnet:3.0.0-10.0`
+- `mcr.microsoft.com/devcontainers/dotnet:3.0.1-10.0`
 
 See [history](history) for information on the contents of each version and [here for a complete list of available tags](https://mcr.microsoft.com/v2/devcontainers/dotnet/tags/list).
 
