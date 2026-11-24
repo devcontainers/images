@@ -3,6 +3,10 @@ FROM continuumio/anaconda3 as upstream
 # Verify OS version is expected one
 RUN . /etc/os-release && if [ "${VERSION_CODENAME}" != "bookworm" ]; then exit 1; fi
 
+# A temp OpenSSL config update, so pip can reach PyPI on networks that drop the larger post-quantum ClientHello, not persisted into the runtime image.
+RUN printf "openssl_conf=d\n[d]\nssl_conf=s\n[s]\nsystem_default=g\n[g]\nGroups=X25519:P-256\n" > /tmp/o.cnf
+ENV OPENSSL_CONF=/tmp/o.cnf
+
 # Temporary: Upgrade python packages due to mentioned CVEs
 # They are installed by the base image (continuumio/anaconda3) which does not have the patch.
 COPY ./apply_security_patches.sh /tmp/apply_security_patches.sh
