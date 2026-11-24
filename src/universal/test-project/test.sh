@@ -90,6 +90,7 @@ for node_path in /usr/local/share/nvm/versions/node/*/bin/node; do
 	esac
 done
 check "nvm" bash -c ". /usr/local/share/nvm/nvm.sh && nvm --version"
+check "nvm-pinned-version" bash -c ". /usr/local/share/nvm/nvm.sh --no-use && [ \"\$(nvm --version)\" = '0.40.8' ]"
 check "yarn" yarn --version
 check "npm" npm --version
 count=$(ls /usr/local/share/nvm/versions/node | wc -l)
