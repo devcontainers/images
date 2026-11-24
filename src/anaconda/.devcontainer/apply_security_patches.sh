@@ -29,7 +29,8 @@ patched_package_versions=( "certifi=2026.10.19" "mistune=3.2.1" "aiohttp=3.10.11
                       "zipp=3.19.1" "tornado=6.5.5" "jupyterlab=4.5.3" "notebook=7.5.7" "imagecodecs=2024.9.22" "fonttools=4.60.2" "pyarrow=17.0.0" "brotli=1.2.1" "filelock=3.20.1" "panel=1.9.4" "distributed=2026.1.0" "wheel=0.46.2" "nltk=3.9.3" "black=26.3.1" "pyjwt=2.12.0" "pillow=13.0.0" "pyopenssl=26.0.0" "nbconvert=7.17.1" "markdown=3.8.1" "python-dotenv=1.2.2" "lxml=6.1.0"
                       "pyasn1=0.6.3" "ujson=5.12.1" "twisted=26.4.0" "gitpython=3.1.60" "click=8.4.2" "idna=3.18" "bleach=6.4.0" "anyio=4.14.2" "soupsieve=2.9.0" "protego=0.6.2" "fsspec=2026.6.0" "s3fs=2026.6.0")
 
-# Packages whose security patch failed to install (reported at the end; the build continues)
+# Failure policy: core tooling (pip upgrade, nss) is fail-closed via `|| exit $?`.
+# Per-package security patches are fail-open: failures are collected here and reported at the end.
 failed_packages=()
 
 # Define the number of rows (based on the length of patched_package_versions)
@@ -98,7 +99,7 @@ for ((i=0; i<rows; i++)); do
             # (e.g. filelock 4.2.7 is only built for Python 3.13), so fall back to pip if conda can't solve it.
             if ! conda install "${packages_array["$i,0"]}==${CONDA_VERSION}"; then
                 echo "Could not install ${packages_array["$i,0"]} v${CONDA_VERSION} from the Conda channel; installing the latest version >= v${REQUIRED_VERSION} from pip instead..."
-                python3 -m pip install --upgrade --no-cache-dir "${packages_array["$i,0"]}>=${REQUIRED_VERSION}" || exit $?
+                python3 -m pip install --upgrade --no-cache-dir "${packages_array["$i,0"]}>=${REQUIRED_VERSION}" || failed_packages+=("${packages_array["$i,0"]}>=${REQUIRED_VERSION}")
             fi
         elif [[ $REQUIRED_VERSION == $GREATER_VERSION_B ]]; then 
             echo -e "Required version: v${REQUIRED_VERSION} is greater than the version found in the Conda channel v${CONDA_VERSION}. \n";
@@ -113,6 +114,7 @@ for pkg in "${pin_to_required_version[@]}"; do
     REQUIRED_VERSION="${required_versions["$pkg"]}"
     if [[ -z "${REQUIRED_VERSION}" ]]; then
         echo "WARNING: Missing required version for ${pkg}. Skipping installation."
+        failed_packages+=("${pkg} (no required version set)")
         continue
     fi
     CURRENT_VERSION=$(pip show "${pkg}" --disable-pip-version-check | grep '^Version:' | awk '{print $2}')
