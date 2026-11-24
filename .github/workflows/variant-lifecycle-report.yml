@@ -1,0 +1,95 @@
+name: Variant lifecycle report
+
+on:
+  workflow_run:
+    workflows:
+      - Variant lifecycle extraction
+    types:
+      - completed
+
+permissions:
+  contents: read
+
+jobs:
+  report:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      issues: write
+    steps:
+      - name: Generate repository automation token
+        id: app-token
+        uses: actions/create-github-app-token@v3.4.0
+        with:
+          app-id: ${{ vars.DEVCONTAINERS_REPO_AUTOMATION_ID }}
+          private-key: ${{ secrets.DEVCONTAINERS_REPO_AUTOMATION_PRIVATE_KEY }}
+          repositories: ${{ github.repository }}
+          permission-actions: read
+          permission-contents: read
+          permission-issues: write
+
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          token: ${{ steps.app-token.outputs.token }}
+          ref: ${{ github.event.workflow_run.head_sha }}
+
+      - name: Download extraction artifact
+        uses: actions/download-artifact@v8
+        with:
+          name: variant-lifecycle-inputs
+          path: variant-lifecycle-inputs
+          repository: ${{ github.repository }}
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ steps.app-token.outputs.token }}
+
+      - name: Validate and compare lifecycle data
+        run: |
+          set -euo pipefail
+          node build/src/variant-lifecycle.js validate \
+            --input variant-lifecycle-inputs/versions.json \
+            --output variant-lifecycle-inputs/versions.normalized.json
+          node build/src/variant-lifecycle.js check \
+            --versions variant-lifecycle-inputs/versions.normalized.json \
+            --repo "$GITHUB_WORKSPACE" \
+            --output variant-lifecycle-report.json \
+            --markdown variant-lifecycle-report.md
+
+      - name: Publish workflow summary
+        run: cat variant-lifecycle-report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Update lifecycle report issue
+        uses: actions/github-script@v9
+        with:
+          github-token: ${{ steps.app-token.outputs.token }}
+          script: |
+            const fs = require('fs');
+            const marker = '<!-- devcontainers-variant-lifecycle-report:v1 -->';
+            const body = fs.readFileSync('variant-lifecycle-report.md', 'utf8');
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              per_page: 100
+            });
+            const existing = issues.find((issue) =>
+              !issue.pull_request && issue.body && issue.body.includes(marker)
+            );
+            const payload = {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: 'Variant lifecycle report',
+              body
+            };
+            if (existing) {
+              await github.rest.issues.update({
+                ...payload,
+                issue_number: existing.number
+              });
+              core.info(`Updated issue #${existing.number}`);
+            } else {
+              const created = await github.rest.issues.create(payload);
+              core.info(`Created issue #${created.data.number}`);
+            }

@@ -1,0 +1,27 @@
+name: Test variant lifecycle check
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - build/src/variant-lifecycle.js
+      - build/test/variant-lifecycle.test.js
+      - package.json
+      - .github/workflows/test-variant-lifecycle.yml
+  pull_request:
+    paths:
+      - build/src/variant-lifecycle.js
+      - build/test/variant-lifecycle.test.js
+      - package.json
+      - .github/workflows/test-variant-lifecycle.yml
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - run: npm run test:variant-lifecycle

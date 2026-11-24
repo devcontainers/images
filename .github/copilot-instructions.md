@@ -3,3 +3,16 @@
 - Release preparation applies its own `+0.0.1` bump regardless, then transfers the resulting version to the README. Contributors must update README version pins for major/minor changes; patch PRs must not update those pins, leaving them out of sync until release preparation. This restriction applies only to version pins, so unrelated README documentation edits remain valid.
 - Adding a variant means updating the architecture entry in `manifest.json`, listing the variant in `variantTags`, and setting it as `latest` unless it is a preview.
 - Example: PR #1548 switched `src/typescript-node/.devcontainer/Dockerfile` to the `4-*` JavaScript base, so `src/typescript-node/manifest.json` moved from 3.0.3 to 4.0.0, added the `*-trixie` variants to both `variants` and `build.architectures`, updated `variantTags`, and set `build.latest` to `24-trixie`; `src/typescript-node/README.md` then reflected the new default tags.
+
+## Variant lifecycle report
+
+- Discussion #1464 is the lifecycle source. The scheduled extraction workflow
+  interprets its semi-structured table, and the deterministic report workflow
+  validates the result against non-deprecated `src/*/manifest.json` files.
+- Treat report entries as maintainer review items, not automatic image changes.
+  For an addition or removal, update `variants`, `build.architectures`,
+  `build.variantTags`, `build.latest` when appropriate, related README tables,
+  and the image smoke-test coverage.
+- A report marked stale or ambiguous means the Discussion source must be
+  corrected before changing manifests. Do not infer an EOL date from an
+  external API or silently guess a mapping.

@@ -2,6 +2,9 @@
   "files": [
     "src"
   ],
+  "scripts": {
+    "test:variant-lifecycle": "node --test build/test/variant-lifecycle.test.js"
+  },
   "devDependencies": {
     "copyfiles": "^2.4.1",
     "handlebars": "^4.7.7",
