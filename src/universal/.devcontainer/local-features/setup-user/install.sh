@@ -39,6 +39,11 @@ ln -snf /usr/local/oryx/* /opt/oryx
 
 # For the universal image, oryx build tool installs the detected platforms in /home/codespace/*. Hence, linking current platforms to the /home/codespace/ path and adding it to the PATH.
 # This ensures that whatever platfornm versions oryx detects and installs are set as root.
+# The node feature can fall back to the latest nvm if downloading the pinned installer fails.
+if [ "$(bash -c '. /usr/local/share/nvm/nvm.sh --no-use && nvm --version')" != "0.40.8" ]; then
+    su "${USERNAME}" -c "git -C /usr/local/share/nvm fetch --depth=1 origin tag v0.40.8 && git -C /usr/local/share/nvm checkout --detach FETCH_HEAD"
+fi
+[ "$(bash -c '. /usr/local/share/nvm/nvm.sh --no-use && nvm --version')" = "0.40.8" ]
 NODE_PATH="/home/codespace/nvm/current"
 ln -snf /usr/local/share/nvm /home/codespace
 
