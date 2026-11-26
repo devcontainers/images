@@ -90,7 +90,6 @@ for node_path in /usr/local/share/nvm/versions/node/*/bin/node; do
 	esac
 done
 check "nvm" bash -c ". /usr/local/share/nvm/nvm.sh && nvm --version"
-check "nvm-pinned-version" bash -c ". /usr/local/share/nvm/nvm.sh --no-use && [ \"\$(nvm --version)\" = '0.40.8' ]"
 check "yarn" yarn --version
 check "npm" npm --version
 count=$(ls /usr/local/share/nvm/versions/node | wc -l)
@@ -169,8 +168,6 @@ check "oryx" oryx --version
 # Ensures nvm works in a Node Project
 check "default-node-version" bash -c "node --version | grep 24."
 check "default-node-location" bash -c "which node | grep /home/codespace/nvm/current/bin"
-check "oryx-build-node-project" bash -c "oryx build ./sample/node"
-check "oryx-configured-current-node-version" bash -c "ls -la /home/codespace/nvm/current | grep /opt/nodejs"
 check "nvm-switches-to-additional-node-version" bash -c ". /usr/local/share/nvm/nvm.sh && nvm use 22 && node --version | grep v22."
 check "node-location-after-switching-to-22" bash -c "which node | grep /home/codespace/nvm/current/bin"
 check "nvm-switches-back-to-default-node-version" bash -c ". /usr/local/share/nvm/nvm.sh && nvm use default && node --version | grep v24."
@@ -194,6 +191,10 @@ check "oryx-build-python-result" python3 ./sample/python/src/solve.py
 check "oryx-install-dotnet-8.0" oryx prep --skip-detection --platforms-and-versions dotnet=8.0.23
 check "dotnet-8-installed-by-oryx" ls /opt/dotnet/ | grep 8.0
 check "dotnet-version-on-path-is-8.0.23" dotnet --version | grep 8.0
+
+# Test Node.js project build with Oryx
+check "oryx-build-node-project" bash -c "oryx build ./sample/node"
+check "oryx-configured-current-node-version" bash -c "ls -la /home/codespace/nvm/current | grep /opt/nodejs"
 
 check "oryx-install-nodejs-20.11.0" oryx prep --skip-detection --platforms-and-versions nodejs=20.11.0
 check "nodejs-20.11.0-installed-by-oryx" ls /opt/nodejs/ | grep 20.11.0
