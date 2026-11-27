@@ -6,8 +6,8 @@
 const fs = require('fs');
 const https = require('https');
 const crypto = require('crypto');
-const rimrafCb = require('rimraf');
-const mkdirpCb = require('mkdirp');
+const { rimraf } = require('rimraf');
+const { mkdirp } = require('mkdirp');
 const copyFilesCb = require('copyfiles');
 const spawnCb = require('child_process').spawn;
 const execCb = require('child_process').exec;
@@ -122,17 +122,14 @@ module.exports = {
 
     // async mkdirp
     mkdirp: async (pathToMake) => {
-        return new Promise((resolve, reject) => {
-            mkdirpCb(pathToMake, (err, made) => err ? reject(err) : resolve(made));
-        });
+        return mkdirp(pathToMake);
     },
 
     // async rimraf
     rimraf: async (pathToRemove, opts) => {
         opts = opts || {};
-        return new Promise((resolve, reject) => {
-            rimrafCb(pathToRemove, opts, (err) => err ? reject(err) : resolve(pathToRemove));
-        });
+        await rimraf(pathToRemove, opts);
+        return pathToRemove;
     },
 
     // async copyfiles

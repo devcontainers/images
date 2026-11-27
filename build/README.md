@@ -11,6 +11,10 @@ The Node.js based build CLI (`build/vsdc`) has commands to:
 
 Run with the `--help` option to see inputs.
 
+The CLI runs directly from JavaScript; no compilation is required. Run `yarn install` from the repository root after updating dependencies. The `mkdirp` and `rimraf` adapters use the named, promise-based exports of the installed versions.
+
+> **Caution:** `jsonc` 3.0.0 is ESM-only and requires Node.js 22 or newer. This CLI currently loads it with CommonJS `require()`, which works natively only on Node.js 22.12 or newer. On older Node.js versions, loading the CLI will fail; see the [`jsonc` 3.0.0 release notes](https://github.com/onury/jsonc/releases/tag/v3.0.0).
+
 This CLI is used in the GitHub Actions workflows in this repository.
 
 - `push-dev.yml`: Pushes a "dev" tag for each image to be generated in this repository and fires repository dispatch to trigger cgmanifest.json generation.
