@@ -1,4 +1,4 @@
-ARG VARIANT=8.5-apache-trixie
+ARG VARIANT=8.6-apache-trixie
 FROM php:${VARIANT}
 
 # Install xdebug(3.5.0)

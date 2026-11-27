@@ -12,6 +12,7 @@ php_version=$(php -r 'echo PHP_VERSION;')
 case "${php_version}" in
 	8.4.*) check-version-ge "php-requirement" "${php_version}" "8.4.27" ;;
 	8.5.*) check-version-ge "php-requirement" "${php_version}" "8.5.12" ;;
+	8.6.*) check-version-ge "php-requirement" "${php_version}" "8.6.0" ;;
 esac
 check "apache2ctl" which apache2ctl
 
