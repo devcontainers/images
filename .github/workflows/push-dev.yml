@@ -16,6 +16,8 @@ jobs:
       fail-fast: false
     runs-on: devcontainer-image-builder-ubuntu
     environment: publishing
+    env:
+      SQUASH_UNIVERSAL_IMAGE: ${{ vars.SQUASH_UNIVERSAL_IMAGE }}
     steps:
     - name: Free more space
       id: free_space 
@@ -29,6 +31,9 @@ jobs:
     - name: Checkout
       id: checkout
       uses: actions/checkout@v6
+
+    - name: Set up docker-squash
+      uses: ./.github/actions/setup-docker-squash
 
     - name: Build and push dev tags
       id: build_and_push

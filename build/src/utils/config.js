@@ -7,6 +7,7 @@ const os = require('os');
 const path = require('path');
 const asyncUtils = require('./async');
 const jsonc = require('jsonc').jsonc;
+const squashUtils = require('./squash');
 const config = require('../../config.json');
 
 config.definitionDependencies = config.definitionDependencies || {};
@@ -740,5 +741,6 @@ module.exports = {
     getPoolKeyForPoolUrl: getPoolKeyForPoolUrl,
     getConfig: getConfig,
     shouldFlattenDefinitionBaseImage: shouldFlattenDefinitionBaseImage,
+    shouldSquashUniversalImage: squashUtils.shouldSquashUniversalImage,
     getDefinitionList: getDefinitionList
 };
